@@ -1,0 +1,122 @@
+grammar net.certware.argument.language.L with org.eclipse.xtext.common.Terminals
+
+generate l "http://www.certware.net/argument/language/L"
+
+
+
+Model:
+	sentences += Sentence*
+;
+	
+// identifier with first character lower
+terminal LID : ('a'..'z')('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+
+// identifier with first character upper
+terminal UID : ('A'..'Z')('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+
+Sentence:
+	Atom |
+	Expression
+;	
+
+// 1.1 Symbols
+Symbol:
+	IntegerNumeral |
+	Identifier |
+	SpecialCharacter
+;
+
+IntegerNumeral:
+	INT // provided by Terminals and returning ECore Integer type 
+;
+
+Identifier:
+	ID // provided by Terminals and returning ECore String type
+;
+
+SpecialCharacter:
+	'>' | '=' | '>' | '+' | '-' | '*' | '{' | '}' | '(' | ')' | ',' | '.' '|'	
+;
+
+
+// 1.2 Basic Terms
+BasicTerms:
+	Constant |
+	Variable |
+	TypedVariable |
+	ArithemticTerm |
+	FunctionalTerm	
+;
+
+Constant:
+	identifier = LID |
+	numeral=IntegerNumeral 
+;
+
+Variable:
+	identifier = UID
+;
+
+TypedVariable:
+	type=ID var=Variable	
+;
+
+ArithmeticTerm:
+	'-' '(' ArithmeticTermOperand ')' |
+	'(' lhs=ArithmeticTermOperand op=('+'|'-'|'*'|'/'|'%') rhs=ArithmeticTermOperand')'
+;
+
+ArithmeticTermOperand:
+	operand=(IntegerNumeral | Variable | Constant | ArithmeticTerm)
+;
+
+
+Atom:
+	PredicateAtom |
+	BuiltInAtom
+;
+
+PredicateAtom:
+	fid=ID(args+=Term*)	
+;
+
+BuiltInAtom:
+	lhs=Term op=SpecialOp rhs=Term 
+;
+
+SpecialOp:
+	'<' | 
+	'>' |
+	'>=' |
+	'<=' |
+	'=' |
+	'<>'	
+;
+
+Term:
+	bt=BasicTerm | 
+	qt=QuantifiedTerm 
+;
+	
+QuantifiedTerm:
+	Quantifier p=Type |
+	'some' tVar=TypedVariable
+;
+
+Type :
+	id=ID '=' exp=SetExpression '.' 
+;     
+
+// 1.4 Set Expressions
+SetExpression :
+	'{' car=Term (',' cdr+=Term)* '}' |
+	id=ID |
+	// Term 'where' ... I don't understand this one
+	'(' lhs=SetExpression ('+' | '*' | '/' ) rhs=SetExpression ')' 
+;
+
+Quantifier:
+	'every' | 
+	'some'
+;
+

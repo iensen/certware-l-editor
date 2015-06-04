@@ -148,13 +148,3 @@ MaybeLiteral:
 	'maybe' ID'('terms+=BasicTerm+')' '.'
 ;
 
-// 1.11 Cardinality Constraint
-CardinalityConstraint:
-	lhs=Bound '<=' '|' '{' '}' '|' '<=' rhs=Bound
-;
-
-Bound:
-	ArithmeticTerm | IntegerNumeral | Constant
-;
-
-
