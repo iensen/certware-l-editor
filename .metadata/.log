@@ -1,0 +1,41 @@
+!SESSION 2015-06-04 11:45:54.213 -----------------------------------------------
+eclipse.buildId=4.4.1.M20140925-0400
+java.version=1.8.0_40-ea
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -keyring /Users/mrb/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.cpp.product -keyring /Users/mrb/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2015-06-04 11:46:08.341
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2015-06-04 11:48:18.661 -----------------------------------------------
+eclipse.buildId=4.4.1.M20140925-0400
+java.version=1.8.0_40-ea
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.modeling.product -product org.eclipse.epp.package.modeling.product -keyring /Users/mrb/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.modeling.product -data /Users/mrb/git/certware-l-editor -product org.eclipse.epp.package.modeling.product -keyring /Users/mrb/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2015-06-04 11:48:22.474
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2015-06-04 15:31:16.415
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-06-04 15:31:16.415
+!MESSAGE A conflict occurred for COMMAND+W:
+Binding(COMMAND+W,
+	ParameterizedCommand(Command(org.eclipse.ui.cocoa.closeDialog,Close Dialog,
+		Closes the active Dialog,
+		Category(org.eclipse.ui.category.window,Window,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@36dc21b3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialog,,,system)
+Binding(COMMAND+W,
+	ParameterizedCommand(Command(org.eclipse.ui.file.close,Close,
+		Close the active editor,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@285c3c4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)

@@ -1,0 +1,26 @@
+grammar net.certware.argument.language.L with org.eclipse.xtext.common.Terminals
+
+generate l "http://www.certware.net/argument/language/L"
+
+Model:
+	sentences+=Sentence*
+	;
+	
+Sentence:
+	;	
+
+Term:
+	BasicTerm | 
+	QuantifiedTerm 
+	;
+	
+QuqntifiedTerm:
+	Quantifier type=p |
+	'some' variable=TypedVariable
+     ;
+     
+Quantifier:
+	'every' | 
+	'some'
+;
+
