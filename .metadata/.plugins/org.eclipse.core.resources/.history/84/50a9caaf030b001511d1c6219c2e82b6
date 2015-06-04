@@ -65,8 +65,8 @@ ArithmeticTerm:
 	'(' lhs=ArithmeticTermOperand op=('+'|'-'|'*'|'/'|'%') rhs=ArithmeticTermOperand')'
 ;
 
-ArithmeticTermOperand: // does not include arithmetic term itself as operand
-	operand=IntegerNumeral | Variable | Constant // | ArithmeticTerm
+ArithmeticTermOperand:
+	operand=(IntegerNumeral | Variable | Constant | ArithmeticTerm)
 ;
 
 FunctionalTerm:
@@ -84,7 +84,7 @@ GroundTerm:
 
 // 1.3 Constant Declaration
 ConstantDeclaration:
-	LID '=' Constant | IntegerNumeral | ArithmeticTerm '.'	
+	LID '=' value=(Constant | IntegerNumeral | ArithmeticTerm) '.'	
 ;
 
 // 1.4 Set Expression
@@ -134,27 +134,5 @@ Sentence:
 	Atom |
 	Expression
 ;	
-
-Expression:
-	'('? 
-	('not' rhs=Atom) | 
-	(lhs=Atom 'and' rhs=Atom) | 
-	(lhs=Atom 'or' rhs=Atom) 
-	')'?	
-;
-
-// 1.10 Maybe Literals
-MaybeLiteral:
-	'maybe' ID'('terms+=BasicTerm+')' '.'
-;
-
-// 1.11 Cardinality Constraint
-CardinalityConstraint:
-	lhs=Bound '<=' '|' '{' '}' '|' '<=' rhs=Bound
-;
-
-Bound:
-	ArithmeticTerm | IntegerNumeral | Constant
-;
 
 

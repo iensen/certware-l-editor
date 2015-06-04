@@ -154,7 +154,7 @@ CardinalityConstraint:
 ;
 
 Bound:
-	ArithmeticTerm | IntegerNumeral | Constant
+	value = ArithmeticTerm | IntegerNumeral | Constant
 ;
 
 
