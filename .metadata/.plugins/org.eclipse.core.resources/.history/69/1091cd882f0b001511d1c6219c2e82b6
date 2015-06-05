@@ -250,7 +250,7 @@ MaybeLiteral:
 
 // 1.11 Cardinality Constraint, 1.14.7 Cardinality Constraints
 CardinalityConstraint:
-	lhs=Bound '<=' '|' '{' id=Identifier '(' terms=BasicTerms ')' '}' '|' '<=' rhs=Bound
+	lhs=Bound '<=' '|' '{' Identifier '(' BasicTerms ')' '}' '|' '<=' rhs=Bound
 ;
 
 Bound:

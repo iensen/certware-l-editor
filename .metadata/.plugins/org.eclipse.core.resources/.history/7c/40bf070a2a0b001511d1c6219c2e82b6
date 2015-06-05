@@ -59,7 +59,15 @@ TypedVariable:
 	type=ID var=Variable	
 ;
 
-// our version of a left-factored equivalent of the recursive grammar from the spec
+//ArithmeticTerm:
+//	'-' '(' ArithmeticTermOperand ')' |
+//	'(' lhs=ArithmeticTermOperand op=('+'|'-'|'*'|'/'|'%') rhs=ArithmeticTermOperand')'
+//;
+
+//ArithmeticTermOperand: // does not include arithmetic term itself as operand
+//	operand=IntegerNumeral | Variable | NumericConstant // | ArithmeticTerm
+//;
+
 ArithmeticTerm:
 	Addition | Multiplication
 ;
@@ -134,10 +142,8 @@ Range:
 ;
 
 SetExpression:
-	SetAddition |
-	SetMultiplication
-;	
-
+	ST0	
+;
 
 SetConstruct:
 	lhs=BasicTerm 'where' rhs=TVars
@@ -151,23 +157,22 @@ TVar:
 	Variable 'in' Identifier
 ;
 
-SetAddition returns SetExpression:
-	SetMultiplication ({SetAddition.left=current} '+' right=SetMultiplication)* 	
+ST0:
+	ST1 |
+	lhs=ST0 '+' rhs=ST1 	
 ;
 
-SetMultiplication returns SetExpression:
-	SetPrimary ({SetMultiplication.left=current} ('*'|'\\') right=SetPrimary)*
+ST1:
+	ST2 |
+	lhs=ST1 '*' rhs=ST2 |
+	lhs=ST1 '\\' rhs=ST2
 ;
 
-SetPrimary returns SetExpression:
-	SetLiteral |
-	'(' SetAddition ')'
-;
-
-SetLiteral:
-	value=('set' |
-			'range' |
-			'set_constr')
+ST2:
+	'(' lhs=ST0 ')' |
+	mods='set' |
+	modr='range'
+	modc='set_constr'
 ;
 
 // 1.6 Quantified Terms, 1.14.1 Terms
@@ -207,33 +212,30 @@ AtomOp:
 
 // 1.9 Sentences, 1.14.5 Sentences
 Sentence:
-	OrSentence |
-	AndSentence |
-	NotSentence
+//	Atom |
+//	Expression
+	S3
 ;	
 
-// our left-factored version of the left-recursive grammar from specification
-OrSentence returns SentenceExpr:
-	AndSentence ({OrSentence.left=current} 'or' right=OrSentence)*
+S3:
+	S2 |
+	lhs=S3 'or' rhs=S2
 ;
 
-AndSentence returns SentenceExpr:
-	NotSentence ({AndSentence.left=current} 'and' right=AndSentence)*
+S2:
+	S1 |
+	lhs=S2 'and' rhs=S1
 ;
 
-NotSentence returns SentenceExpr:
-	PrimarySentence | 
-	'not' PrimarySentence
+S1:
+	S0 |
+	'not' rhs=S0
 ;
 
-PrimarySentence returns SentenceExpr:
-	SentenceLiteral |
-	'(' OrSentence ')'
+S0:
+	PredicateAtom |
+	'(' S3 ')'
 ;
-
-SentenceLiteral:
-	PredicateAtom
-;	 	
 
 Expression:
 	'('? 
@@ -245,12 +247,14 @@ Expression:
 
 // 1.10 Maybe Literals, 1.14.5 Maybe Literals
 MaybeLiteral:
+	// 'maybe' PredicateAtom
 	'maybe' Identifier'(' BasicTerms ')' 
 ;
 
 // 1.11 Cardinality Constraint, 1.14.7 Cardinality Constraints
 CardinalityConstraint:
-	lhs=Bound '<=' '|' '{' id=Identifier '(' terms=BasicTerms ')' '}' '|' '<=' rhs=Bound
+	// lhs=Bound '<=' '|' '{' atom=PredicateAtom '}' '|' '<=' rhs=Bound '.'
+	lhs=Bound '<=' '|' '{' Identifier '(' BasicTerms ')' '}' '|' '<=' rhs=Bound
 ;
 
 Bound:
@@ -264,6 +268,7 @@ Rule:
 ;
 
 Head:
+	// PredicateAtom | // should not contain quantified terms
 	Sentence |
 	MaybeLiteral | 
 	CardinalityConstraint
