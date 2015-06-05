@@ -296,6 +296,3 @@ Statement:
 	TypeDeclaration |
 	ConstantDeclaration
 ;
-
-// 1.15 Comments
-// by default the generated editor will enable /* */ and // comments

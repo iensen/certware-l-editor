@@ -240,15 +240,6 @@ S2:
 	lhs=S2 'and' rhs=S1
 ;
 
-S1:
-	S0 |
-	'not' rhs=S0
-;
-
-S0:
-	PredicateAtom |
-	'(' S3 ')'
-;
 
 Expression:
 	'('? 
@@ -258,44 +249,42 @@ Expression:
 	')'?	
 ;
 
-// 1.10 Maybe Literals, 1.14.5 Maybe Literals
+// 1.10 Maybe Literals
 MaybeLiteral:
-	// 'maybe' PredicateAtom
-	'maybe' Identifier'(' BasicTerms ')' 
+	'maybe' PredicateAtom '.'
 ;
 
-// 1.11 Cardinality Constraint, 1.14.7 Cardinality Constraints
+// 1.11 Cardinality Constraint
 CardinalityConstraint:
-	// lhs=Bound '<=' '|' '{' atom=PredicateAtom '}' '|' '<=' rhs=Bound '.'
-	lhs=Bound '<=' '|' '{' Identifier '(' BasicTerms ')' '}' '|' '<=' rhs=Bound
+	lhs=Bound '<=' '|' '{' atom=PredicateAtom '}' '|' '<=' rhs=Bound '.'
 ;
 
 Bound:
-	// av=ArithmeticTerm | iv=IntegerNumeral | cv=NumericConstant
-	av = ArithmeticTerm | cv=NumericConstant | id=Identifier
+	av=ArithmeticTerm | iv=IntegerNumeral | cv=NumericConstant
 ;
 
-// 1.12 Rules, 1.14.8 Rules
+// 1.12 Rules
 Rule:
 	head=Head ('if' body=Sentence)? '.'
 ;
 
 Head:
-	// PredicateAtom | // should not contain quantified terms
-	Sentence |
+	PredicateAtom | // should not contain quantified terms
 	MaybeLiteral | 
 	CardinalityConstraint
 ;
 
 
-// 1.13 Program, 1.14.9 Program
-// by 1.14.9 a program consists of const_decls, type_decls, and rules
-// these are our statements
+// 1.13 Program
+
 Statement:
 	Rule |
+	CardinalityConstraint |
+	MaybeLiteral |
+	Sentence |
+	Atom |
+	Term |
 	TypeDeclaration |
+	SetExpression |
 	ConstantDeclaration
 ;
-
-// 1.15 Comments
-// by default the generated editor will enable /* */ and // comments
