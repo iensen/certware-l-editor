@@ -1,6 +1,5 @@
 INDEX VERSION 1.127+/Users/mrb/git/certware-l-editor/.metadata/.plugins/org.eclipse.jdt.core
 3977480267.index
-2241056830.index
 66824587.index
 4120268390.index
 4255401283.index
@@ -65,8 +64,6 @@ INDEX VERSION 1.127+/Users/mrb/git/certware-l-editor/.metadata/.plugins/org.ecli
 4083160930.index
 1271342938.index
 2791896906.index
-1060835867.index
-2141941310.index
 156905802.index
 219212267.index
 2545238116.index
