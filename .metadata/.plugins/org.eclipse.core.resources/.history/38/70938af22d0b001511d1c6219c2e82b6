@@ -165,9 +165,9 @@ SetPrimary returns SetExpression:
 ;
 
 SetLiteral:
-	value=('set' |
-			'range' |
-			'set_constr')
+	mods="set" |
+	modr="range" |
+	modc="set_constr"
 ;
 
 // 1.6 Quantified Terms, 1.14.1 Terms
@@ -250,7 +250,7 @@ MaybeLiteral:
 
 // 1.11 Cardinality Constraint, 1.14.7 Cardinality Constraints
 CardinalityConstraint:
-	lhs=Bound '<=' '|' '{' id=Identifier '(' terms=BasicTerms ')' '}' '|' '<=' rhs=Bound
+	lhs=Bound '<=' '|' '{' Identifier '(' BasicTerms ')' '}' '|' '<=' rhs=Bound
 ;
 
 Bound:

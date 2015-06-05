@@ -6,92 +6,117 @@
         eType="#//Statement" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BasicTerm" eSuperTypes="#//SubTerm #//GroundTerm #//Term"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Constant" eSuperTypes="#//BasicTerm #//ArithmeticTermOperand">
+  <eClassifiers xsi:type="ecore:EClass" name="NumericConstant" eSuperTypes="#//BasicTerm">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="identifier" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numeral" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="#//BasicTerm #//ArithmeticTermOperand"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="#//BasicTerm #//TVar #//QuantifiedTerm">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="identifier" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TypedVariable" eSuperTypes="#//BasicTerm">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="var" eType="#//Variable"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ArithmeticTerm" eSuperTypes="#//BasicTerm">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="lhs" eType="#//ArithmeticTermOperand"
+  <eClassifiers xsi:type="ecore:EClass" name="ArithmeticTerm" eSuperTypes="#//BasicTerm"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ArithmeticLiteral" eSuperTypes="#//ArithmeticTerm">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="v" eType="#//Variable"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="rhs" eType="#//ArithmeticTermOperand"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nc" eType="#//NumericConstant"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="i" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tv" eType="#//TypedVariable"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ArithmeticTermOperand" eSuperTypes="#//ArithmeticTerm">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operand" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="identifier" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FunctionalTerm">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="terms" upperBound="-1"
-        eType="#//BasicTerm" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionalTerm" eSuperTypes="#//BasicTerm"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BasicTerms" eSuperTypes="#//FunctionalTerm #//MaybeLiteral">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="car" eType="#//BasicTerm"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cdr" upperBound="-1" eType="#//BasicTerm"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SubTerm"/>
   <eClassifiers xsi:type="ecore:EClass" name="GroundTerm"/>
   <eClassifiers xsi:type="ecore:EClass" name="ConstantDeclaration" eSuperTypes="#//Statement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="cv" eType="#//Constant"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cv" eType="#//NumericConstant"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="iv" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="av" eType="#//ArithmeticTerm"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SetExpression" eSuperTypes="#//Statement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="car" eType="#//GroundTerm"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="cdr" upperBound="-1" eType="#//GroundTerm"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="lhs" eType="#//SetExpression"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="rhs" eType="#//SetExpression"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Type" eSuperTypes="#//Statement">
+  <eClassifiers xsi:type="ecore:EClass" name="TypeDeclaration" eSuperTypes="#//Statement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="exp" eType="#//SetExpression"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="QuantifiedTerm" eSuperTypes="#//Term">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="quqntifier" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="p" eType="#//Type" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tVar" eType="#//TypedVariable"
+  <eClassifiers xsi:type="ecore:EClass" name="Limit">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nc" eType="#//NumericConstant"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="at" eType="#//ArithmeticTerm"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Term" eSuperTypes="#//Statement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Atom" eSuperTypes="#//Sentence"/>
-  <eClassifiers xsi:type="ecore:EClass" name="PredicateAtom" eSuperTypes="#//Atom #//MaybeLiteral #//Head">
+  <eClassifiers xsi:type="ecore:EClass" name="Set">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lhs" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="terms" eType="#//BasicTerms"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Range">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lhs" eType="#//Limit" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rhs" eType="#//Limit" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SetExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SetConstruct">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lhs" eType="#//BasicTerm"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rhs" eType="#//TVars" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TVars">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="car" eType="#//TVar" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cdr" upperBound="-1" eType="#//TVar"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TVar"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SetLiteral" eSuperTypes="#//SetExpression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QuantifiedTerm" eSuperTypes="#//Term"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Term"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Atom"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PredicateAtom" eSuperTypes="#//Atom #//SentenceLiteral">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fid" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="terms" upperBound="-1"
-        eType="#//Term" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="terms" eType="#//BasicTerms"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BuiltInAtom" eSuperTypes="#//Atom">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="lhs" eType="#//Term" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lhs" eType="#//BasicTerm"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="rhs" eType="#//Term" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rhs" eType="#//BasicTerm"
+        containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Sentence" eSuperTypes="#//Statement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Expression" eSuperTypes="#//Sentence">
+  <eClassifiers xsi:type="ecore:EClass" name="Sentence" eSuperTypes="#//Head"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SentenceExpr" eSuperTypes="#//Sentence"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SentenceLiteral" eSuperTypes="#//SentenceExpr"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Expression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rhs" eType="#//Atom" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="lhs" eType="#//Atom" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MaybeLiteral" eSuperTypes="#//Head #//Statement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="CardinalityConstraint" eSuperTypes="#//Head #//Statement">
+  <eClassifiers xsi:type="ecore:EClass" name="MaybeLiteral" eSuperTypes="#//Head"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CardinalityConstraint" eSuperTypes="#//Head">
     <eStructuralFeatures xsi:type="ecore:EReference" name="lhs" eType="#//Bound" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="atom" eType="#//PredicateAtom"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="terms" eType="#//BasicTerms"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="rhs" eType="#//Bound" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Bound">
     <eStructuralFeatures xsi:type="ecore:EReference" name="av" eType="#//ArithmeticTerm"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="iv" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="cv" eType="#//Constant"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cv" eType="#//NumericConstant"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Rule" eSuperTypes="#//Statement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="head" eType="#//Head" containment="true"/>
@@ -100,4 +125,40 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Head"/>
   <eClassifiers xsi:type="ecore:EClass" name="Statement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Addition" eSuperTypes="#//ArithmeticTerm">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lhs" eType="#//ArithmeticTerm"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rhs" eType="#//ArithmeticTerm"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Multiplication" eSuperTypes="#//ArithmeticTerm">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lhs" eType="#//ArithmeticTerm"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rhs" eType="#//ArithmeticTerm"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SetAddition" eSuperTypes="#//SetExpression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="#//SetExpression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="right" eType="#//SetExpression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SetMultiplication" eSuperTypes="#//SetExpression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="#//SetExpression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="right" eType="#//SetExpression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OrSentence" eSuperTypes="#//SentenceExpr">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="#//SentenceExpr"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="right" eType="#//SentenceExpr"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AndSentence" eSuperTypes="#//SentenceExpr">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="#//SentenceExpr"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="right" eType="#//SentenceExpr"
+        containment="true"/>
+  </eClassifiers>
 </ecore:EPackage>
