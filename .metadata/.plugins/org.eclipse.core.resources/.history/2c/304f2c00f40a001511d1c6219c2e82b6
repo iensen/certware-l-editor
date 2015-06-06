@@ -1,9 +1,0 @@
-grammar net.certware.argument.language.L with org.eclipse.xtext.common.Terminals
-
-generate l "http://www.certware.net/argument/language/L"
-
-Model:
-	greetings+=Greeting*;
-	
-Greeting:
-	'Hello' name=ID '!';

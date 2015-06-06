@@ -8,18 +8,19 @@ Program:
 ;
 	
 // identifier with first character lower
-terminal LID : ('a'..'z')('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+terminal LID : ('a'..'z')('a'..'z'|'A'..'Z'|'_'|'0'..'9')*
+;
 
 // identifier with first character upper
 terminal UID : ('A'..'Z')('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
 
 // 1.1 Symbols
-Symbol:
-	IntegerNumeral |
-	Identifier |
-	SpecialCharacter
-;
+//Symbol:
+//	IntegerNumeral |
+//	Identifier |
+//	SpecialCharacter
+//;
 
 IntegerNumeral:
 	INT // provided by Terminals and returning ECore Integer type 
@@ -29,26 +30,22 @@ Identifier:
 	ID // provided by Terminals and returning ECore String type
 ;
 
-SpecialCharacter:
-	'>' | '=' | '>' | '+' | '-' | '*' | '{' | '}' | '(' | ')' | ',' | '.' | '|'	
-;
+//SpecialCharacter:
+//	'>' | '=' | '>' | '+' | '-' | '*' | '{' | '}' | '(' | ')' | ',' | '.' | '|'	
+//;
 
 
-// 1.2 Basic Terms
-// Here parentheses are not optional
-// We have omitted FunctionalTerm as a category of BasicTerm to preclude recursion complaint
-// This omission likely is a problem owing to subterms; see page 3 of the specification.
+// 1.2 Basic Terms, 1.14.1 Terms
 BasicTerm:
-	NumericConstant |
-	Variable |
-	TypedVariable |
-	ArithmeticTerm |
-	FunctionalTerm 
+	NumericConstant |    // INT
+	Variable |           // UID
+	TypedVariable |      // ID UID
+	ArithmeticTerm |     // Addition | Multiplication
+	FunctionalTerm       // ID ( BasicTerms )
 ;
 
 NumericConstant:
-	identifier = LID |
-	numeral=IntegerNumeral 
+	value = IntegerNumeral 
 ;
 
 Variable:
@@ -56,7 +53,7 @@ Variable:
 ;
 
 TypedVariable:
-	type=ID var=Variable	
+	type=Identifier var=Variable	
 ;
 
 // our version of a left-factored equivalent of the recursive grammar from the spec
@@ -78,10 +75,15 @@ Primary returns ArithmeticTerm:
 ;
 
 ArithmeticLiteral:
-	v=Variable |
-	nc=NumericConstant |
-	i=Identifier |
-	tv=TypedVariable	
+//	v=Variable |			// UID
+//	nc=NumericConstant |	// INT
+//	tv=TypedVariable |		// ID UID
+//	i=Identifier			// ID
+
+	// below is minimalist version of above to be resolved at runtime
+	// ideally we recover the distinctions above for compile time resolution
+	identifier=ID | 
+	value=INT 
 ;
 
 
@@ -94,13 +96,13 @@ BasicTerms:
 	car=BasicTerm (',' cdr+=BasicTerm)*
 ;
 
-SubTerm:
-	BasicTerm	// technically incorrect, use adapter to inspect
-;
+//SubTerm:
+//	BasicTerm	// technically incorrect, use adapter to inspect
+//;
 
-GroundTerm:
-	BasicTerm	// technically incorrect, use adapter to inspect
-;
+//GroundTerm:
+//	BasicTerm	// technically incorrect, use adapter to inspect
+//;
 
 
 // 1.3 Constant Declaration
@@ -160,20 +162,15 @@ SetMultiplication returns SetExpression:
 ;
 
 SetPrimary returns SetExpression:
-	SetLiteral |
-	'(' SetAddition ')'
+	SetLiteral | '(' SetAddition ')'
 ;
 
 SetLiteral:
-	value=('set' |
-			'range' |
-			'set_constr')
+	value=('set' | 'range' | 'set_constr')
 ;
 
 // 1.6 Quantified Terms, 1.14.1 Terms
 QuantifiedTerm:
-//	quqntifier=('every' | 'some') p=Type |
-//	'some' tVar=TypedVariable
 	Quantifier Identifier Variable
 ;
 
@@ -235,13 +232,13 @@ SentenceLiteral:
 	PredicateAtom
 ;	 	
 
-Expression:
-	'('? 
-	('not' rhs=Atom) | 
-	(lhs=Atom 'and' rhs=Atom) | 
-	(lhs=Atom 'or' rhs=Atom) 
-	')'?	
-;
+//Expression:
+//	'('? 
+//	('not' rhs=Atom) | 
+//	(lhs=Atom 'and' rhs=Atom) | 
+//	(lhs=Atom 'or' rhs=Atom) 
+//	')'?	
+//;
 
 // 1.10 Maybe Literals, 1.14.5 Maybe Literals
 MaybeLiteral:
