@@ -4,5 +4,7 @@ source.. = src/,\
 bin.includes = model/,\
                META-INF/,\
                .,\
+               plugin.xml,\
                .antlr-generator-3.2.0-patch.jar
 
+src.includes = .antlr-generator-3.2.0-patch.jar

@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: CertWare L Language Specification
-Bundle-Vendor: Kestrel Technology LLC
+Bundle-Name: net.certware.argument.language
+Bundle-Vendor: My Company
 Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: net.certware.argument.language; singleton:=true
 Bundle-ActivationPolicy: lazy

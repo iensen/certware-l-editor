@@ -4,8 +4,8 @@
 .mtj.tmp/
 
 # build directories
-src-gen/
-xtend-gen/
+#src-gen/
+#xtend-gen/
 
 # Package Files #
 *.jar

@@ -6,3 +6,4 @@ bin.includes = model/,\
                .,\
                .antlr-generator-3.2.0-patch.jar
 
+src.includes = .antlr-generator-3.2.0-patch.jar
