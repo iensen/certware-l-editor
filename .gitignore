@@ -6,6 +6,7 @@
 # build directories
 #src-gen/
 #xtend-gen/
+.metadata/
 
 # Package Files #
 *.jar
