@@ -34,17 +34,13 @@
     <genClasses ecoreClass="L.ecore#//ConstantDeclaration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//ConstantDeclaration/id"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//ConstantDeclaration/cv"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//ConstantDeclaration/iv"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//ConstantDeclaration/av"/>
     </genClasses>
     <genClasses ecoreClass="L.ecore#//TypeDeclaration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//TypeDeclaration/id"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//TypeDeclaration/exp"/>
     </genClasses>
     <genClasses ecoreClass="L.ecore#//Limit">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//Limit/id"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//Limit/nc"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//Limit/at"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//Limit/cv"/>
     </genClasses>
     <genClasses ecoreClass="L.ecore#//Set">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//Set/lhs"/>
@@ -91,8 +87,6 @@
     </genClasses>
     <genClasses ecoreClass="L.ecore#//Bound">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//Bound/av"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//Bound/cv"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//Bound/id"/>
     </genClasses>
     <genClasses ecoreClass="L.ecore#//Rule">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//Rule/head"/>
