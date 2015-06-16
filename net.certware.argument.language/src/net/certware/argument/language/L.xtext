@@ -22,13 +22,13 @@ terminal UID : ('A'..'Z')('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 //	SpecialCharacter
 //;
 
-IntegerNumeral:
-	INT // provided by Terminals and returning ECore Integer type 
-;
+// IntegerNumeral:  MRB replaced with direct substitution of terminal INT
+//	INT // provided by Terminals and returning ECore Integer type 
+// ;
 
-Identifier:
-	ID // provided by Terminals and returning ECore String type
-;
+// Identifier:  MRB replaced with direct subsitution of terminal ID
+//	ID // provided by Terminals and returning ECore String type
+//;
 
 //SpecialCharacter:
 //	'>' | '=' | '>' | '+' | '-' | '*' | '{' | '}' | '(' | ')' | ',' | '.' | '|'	
@@ -37,15 +37,15 @@ Identifier:
 
 // 1.2 Basic Terms, 1.14.1 Terms
 BasicTerm:
-	NumericConstant |    // INT
-	Variable |           // UID
+	// NumericConstant |    // INT  covered by ArithmeticTerm
+	// Variable |           // UID  covered by ArithmeticTerm
 	TypedVariable |      // ID UID
 	ArithmeticTerm |     // Addition | Multiplication
 	FunctionalTerm       // ID ( BasicTerms )
 ;
 
 NumericConstant:
-	value = IntegerNumeral 
+	value = INT 
 ;
 
 Variable:
@@ -53,12 +53,12 @@ Variable:
 ;
 
 TypedVariable:
-	type=Identifier var=Variable	
+	type=ID var=Variable	
 ;
 
 // our version of a left-factored equivalent of the recursive grammar from the spec
 ArithmeticTerm:
-	Addition | Multiplication
+	Addition //| Multiplication
 ;
 
 Addition returns ArithmeticTerm:
@@ -78,7 +78,7 @@ ArithmeticLiteral:
 //	v=Variable |			// UID
 //	nc=NumericConstant |	// INT
 //	tv=TypedVariable |		// ID UID
-//	i=Identifier			// ID
+//	i=ID			// ID
 
 	// below is minimalist version of above to be resolved at runtime
 	// ideally we recover the distinctions above for compile time resolution
@@ -89,7 +89,7 @@ ArithmeticLiteral:
 
 FunctionalTerm:
 	// ID'('terms+=BasicTerm+')'
-	Identifier '(' BasicTerms ')'
+	ID '(' BasicTerms ')'
 ;
 
 BasicTerms:
@@ -107,7 +107,11 @@ BasicTerms:
 
 // 1.3 Constant Declaration
 ConstantDeclaration:
-	id=LID '=' (cv=NumericConstant | iv=IntegerNumeral | av=ArithmeticTerm ) '.'	
+	id=LID 
+	'=' 
+	// (cv=NumericConstant | iv=INT | av=ArithmeticTerm )
+	cv=ArithmeticTerm 
+	'.'	
 ;
 
 // 1.4 Set Expression
@@ -120,11 +124,13 @@ ConstantDeclaration:
 
 // 1.5 Type Declarations, 1.14.3 Type Declarations
 TypeDeclaration:
-	id=Identifier '=' exp=SetExpression '.' 
+	id=ID '=' exp=SetExpression '.' 
 ;
 
 Limit:
-	id=Identifier | nc=NumericConstant | at=ArithmeticTerm		
+	//id=ID | 
+	// nc=NumericConstant | at=ArithmeticTerm
+	cv=ArithmeticTerm		
 ;
 
 Set:
@@ -136,8 +142,7 @@ Range:
 ;
 
 SetExpression:
-	SetAddition |
-	SetMultiplication
+	SetAddition // | SetMultiplication
 ;	
 
 
@@ -150,7 +155,7 @@ TVars:
 ;     
 
 TVar:
-	Variable 'in' Identifier
+	Variable 'in' ID
 ;
 
 SetAddition returns SetExpression:
@@ -171,7 +176,7 @@ SetLiteral:
 
 // 1.6 Quantified Terms, 1.14.1 Terms
 QuantifiedTerm:
-	Quantifier Identifier Variable
+	Quantifier ID Variable
 ;
 
 Quantifier:
@@ -192,7 +197,7 @@ Atom:
 
 PredicateAtom:
 	// fid=ID(terms+=Term*)
-	fid=Identifier( '(' terms=BasicTerms ')' )?	
+	fid=ID( '(' terms=BasicTerms ')' )?	
 ;
 
 BuiltInAtom:
@@ -204,18 +209,16 @@ AtomOp:
 
 // 1.9 Sentences, 1.14.5 Sentences
 Sentence:
-	OrSentence |
-	AndSentence |
-	NotSentence
+	OrSentence // | AndSentence | NotSentence
 ;	
 
 // our left-factored version of the left-recursive grammar from specification
 OrSentence returns SentenceExpr:
-	AndSentence ({OrSentence.left=current} 'or' right=OrSentence)*
+	AndSentence ({OrSentence.left=current} 'or' right=AndSentence)* // right=OrSentence
 ;
 
 AndSentence returns SentenceExpr:
-	NotSentence ({AndSentence.left=current} 'and' right=AndSentence)*
+	NotSentence ({AndSentence.left=current} 'and' right=NotSentence)* // right=AndSentence
 ;
 
 NotSentence returns SentenceExpr:
@@ -242,17 +245,17 @@ SentenceLiteral:
 
 // 1.10 Maybe Literals, 1.14.5 Maybe Literals
 MaybeLiteral:
-	'maybe' Identifier'(' BasicTerms ')' 
+	'maybe' ID'(' BasicTerms ')' 
 ;
 
 // 1.11 Cardinality Constraint, 1.14.7 Cardinality Constraints
 CardinalityConstraint:
-	lhs=Bound '<=' '|' '{' id=Identifier '(' terms=BasicTerms ')' '}' '|' '<=' rhs=Bound
+	lhs=Bound '<=' '|' '{' id=ID '(' terms=BasicTerms ')' '}' '|' '<=' rhs=Bound
 ;
 
 Bound:
-	// av=ArithmeticTerm | iv=IntegerNumeral | cv=NumericConstant
-	av = ArithmeticTerm | cv=NumericConstant | id=Identifier
+	// av=ArithmeticTerm | iv=INT | cv=NumericConstant
+	av = ArithmeticTerm // | cv=NumericConstant | id=ID
 ;
 
 // 1.12 Rules, 1.14.8 Rules
@@ -261,7 +264,7 @@ Rule:
 ;
 
 Head:
-	Sentence |
+	// Sentence |
 	MaybeLiteral | 
 	CardinalityConstraint
 ;
