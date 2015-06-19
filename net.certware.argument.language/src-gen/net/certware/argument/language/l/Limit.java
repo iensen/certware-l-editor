@@ -1,0 +1,51 @@
+/**
+ */
+package net.certware.argument.language.l;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Limit</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link net.certware.argument.language.l.Limit#getCv <em>Cv</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see net.certware.argument.language.l.LPackage#getLimit()
+ * @model
+ * @generated
+ */
+public interface Limit extends EObject
+{
+  /**
+   * Returns the value of the '<em><b>Cv</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Cv</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Cv</em>' containment reference.
+   * @see #setCv(ArithmeticTerm)
+   * @see net.certware.argument.language.l.LPackage#getLimit_Cv()
+   * @model containment="true"
+   * @generated
+   */
+  ArithmeticTerm getCv();
+
+  /**
+   * Sets the value of the '{@link net.certware.argument.language.l.Limit#getCv <em>Cv</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Cv</em>' containment reference.
+   * @see #getCv()
+   * @generated
+   */
+  void setCv(ArithmeticTerm value);
+
+} // Limit
