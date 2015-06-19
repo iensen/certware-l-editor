@@ -4,8 +4,7 @@ Bundle-Name: net.certware.argument.language.tests
 Bundle-SymbolicName: net.certware.argument.language.tests;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: net.certware.argument.language.tests
-Bundle-Vendor: My Company
-Export-Package: net.certware.argument.language
+Bundle-Vendor: Kestrel Technology LLC
 Require-Bundle: net.certware.argument.language,
  net.certware.argument.language.ui,
  org.eclipse.core.runtime,
