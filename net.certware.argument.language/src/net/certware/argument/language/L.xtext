@@ -53,12 +53,12 @@ Variable:
 ;
 
 TypedVariable:
-	type=ID var=Variable	
+	type=LID var=Variable	
 ;
 
 // our version of a left-factored equivalent of the recursive grammar from the spec
 ArithmeticTerm:
-	Addition //| Multiplication
+	Addition 
 ;
 
 Addition returns ArithmeticTerm:
@@ -70,71 +70,115 @@ Multiplication returns ArithmeticTerm:
 ;
 
 Primary returns ArithmeticTerm:
-	ArithmeticLiteral |
-	'(' Addition ')'
+	(minus='-')? term= ArithmeticLiteral |
+	(minus='-')? '(' term = Addition ')'
 ;
 
 ArithmeticLiteral:
-//	v=Variable |			// UID
-//	nc=NumericConstant |	// INT
-//	tv=TypedVariable |		// ID UID
-//	i=ID			// ID
-
-	// below is minimalist version of above to be resolved at runtime
-	// ideally we recover the distinctions above for compile time resolution
-	identifier=ID | 
+	v= Variable |			// UID
+	tv=TypedVariable | 
+	const = LID | //CONST
 	value=INT 
 ;
 
 
+// ground arithmetic term from 1.2 and  1.14.1, 
+// reuse the definition of Arithmetic Term
+GroundArithmeticTerm:
+	GroundAddition 
+;
+
+GroundAddition returns ArithmeticTerm:
+	GroundMultiplication ({GroundAddition.lhs=current} ('+'|'-') rhs=GroundMultiplication)*
+;
+
+GroundMultiplication returns ArithmeticTerm:
+	GroundPrimary ({GroundMultiplication.lhs=current} ('*'|'/'|'%') rhs=Primary)*
+;
+
+GroundPrimary returns ArithmeticTerm:
+	(minus='-')? term= GroundArithmeticLiteral |
+	(minus='-')? '(' term = Addition ')'
+;
+
+GroundArithmeticLiteral:
+	identifier=LID | 
+	value=INT 
+;
+
+
+
+
+
 FunctionalTerm:
 	// ID'('terms+=BasicTerm+')'
-	ID '(' BasicTerms ')'
+	LID '(' Terms ')'
+;
+
+GroundFunctionalTerm:
+	// ID'('terms+=BasicTerm+')'
+	LID '(' GroundTerms ')'
 ;
 
 BasicTerms:
 	car=BasicTerm (',' cdr+=BasicTerm)*
 ;
 
-//SubTerm:
-//	BasicTerm	// technically incorrect, use adapter to inspect
-//;
-
-//GroundTerm:
-//	BasicTerm	// technically incorrect, use adapter to inspect
-//;
 
 
-// 1.3 Constant Declaration
+GroundTerms:
+	car=GroundTerm (',' cdr+=GroundTerm)*
+;
+
+GroundTerm:
+	GroundArithmeticTerm |
+	GroundFunctionalTerm
+;
+
+// 1.6 Quantified Terms, 1.14.1 Terms
+QuantifiedTerm:
+	Quantifier LID (Variable)?
+;
+
+Quantifier:
+	'every' | 'some'
+;
+
+// 1.7 Terms, 1.14.1 Terms
+Term:
+	BasicTerm | 
+	QuantifiedTerm 
+;
+
+Terms:
+	car=Term (',' cdr+=Term)*
+;
+
+// 1.14.2, 1.3 Constant Declaration
 ConstantDeclaration:
-	id=LID 
+	'const' id=LID 
 	'=' 
 	// (cv=NumericConstant | iv=INT | av=ArithmeticTerm )
-	cv=ArithmeticTerm 
+	cv=GroundArithmeticTerm 
 	'.'	
 ;
 
-// 1.4 Set Expression
-//SetExpression:
-//	 '{' car=GroundTerm (',' cdr+=GroundTerm)* '}' |
-//	id=ID |
-//	// Term 'where' ... I don't understand this one
-//	'(' lhs=SetExpression ('+' | '*' | '/' ) rhs=SetExpression ')' 
-//;
+
+
 
 // 1.5 Type Declarations, 1.14.3 Type Declarations
 TypeDeclaration:
-	id=ID '=' exp=SetExpression '.' 
+	'type' id=LID '=' exp=SetExpression '.' 
 ;
 
 Limit:
 	//id=ID | 
 	// nc=NumericConstant | at=ArithmeticTerm
-	cv=ArithmeticTerm		
+	cv=GroundArithmeticTerm		
 ;
 
 Set:
-	lhs='{' (terms=BasicTerms)? '}'
+	lhs = '{' (terms=GroundTerms)? '}'
 ;
 
 Range:
@@ -155,7 +199,7 @@ TVars:
 ;     
 
 TVar:
-	Variable 'in' ID
+	Variable 'in' LID
 ;
 
 SetAddition returns SetExpression:
@@ -170,24 +214,10 @@ SetPrimary returns SetExpression:
 	SetLiteral | '(' SetAddition ')'
 ;
 
-SetLiteral:
-	value=('set' | 'range' | 'set_constr')
+SetLiteral returns SetExpression:
+	Set | Range | SetConstruct | LID
 ;
 
-// 1.6 Quantified Terms, 1.14.1 Terms
-QuantifiedTerm:
-	Quantifier ID Variable
-;
-
-Quantifier:
-	'every' | 'some'
-;
-
-// 1.7 Terms, 1.14.1 Terms
-Term:
-	BasicTerm | 
-	QuantifiedTerm 
-;
 
 // 1.8 Atoms, 1.14.4 Atoms
 Atom:
@@ -196,9 +226,13 @@ Atom:
 ;
 
 PredicateAtom:
-	// fid=ID(terms+=Term*)
-	fid=ID( '(' terms=BasicTerms ')' )?	
+	fid=LID( '(' terms=Terms ')' )?	
 ;
+
+BasicPredicateAtom:
+	fid=LID( '(' terms=BasicTerms ')' )?	
+;
+
 
 BuiltInAtom:
 	lhs=BasicTerm op=AtomOp rhs=BasicTerm 
@@ -207,7 +241,9 @@ BuiltInAtom:
 AtomOp:
 	'>' | '<' | '>=' | '<=' | '=' | '!=' ; // note <> not used in 1.14.4
 
-// 1.9 Sentences, 1.14.5 Sentences
+
+// Sentences: 1.9. grammar section 1.14.5
+
 Sentence:
 	OrSentence // | AndSentence | NotSentence
 ;	
@@ -218,7 +254,7 @@ OrSentence returns SentenceExpr:
 ;
 
 AndSentence returns SentenceExpr:
-	NotSentence ({AndSentence.left=current} 'and' right=NotSentence)* // right=AndSentence
+	NotSentence ({AndSentence.left=current} ('and'|',') right=NotSentence)* // right=AndSentence
 ;
 
 NotSentence returns SentenceExpr:
@@ -232,25 +268,46 @@ PrimarySentence returns SentenceExpr:
 ;
 
 SentenceLiteral:
-	PredicateAtom
+	Atom
 ;	 	
 
-//Expression:
-//	'('? 
-//	('not' rhs=Atom) | 
-//	(lhs=Atom 'and' rhs=Atom) | 
-//	(lhs=Atom 'or' rhs=Atom) 
-//	')'?	
-//;
+// Predicate Sentences 
+pSentence:
+    pOrSentence 
+;	
+
+// our left-factored version of the left-recursive grammar from specification
+pOrSentence returns SentenceExpr:
+	pAndSentence ({pOrSentence.left=current} 'or' right=pAndSentence)* // right=OrSentence
+;
+
+pAndSentence returns SentenceExpr:
+	pNotSentence ({pAndSentence.left=current} 'and' right=pNotSentence)* // right=AndSentence
+;
+
+pNotSentence returns SentenceExpr:
+	pPrimarySentence | 
+	'not' pPrimarySentence
+;
+
+pPrimarySentence returns SentenceExpr:
+	pSentenceLiteral |
+	'(' OrSentence ')'
+;
+
+pSentenceLiteral:
+	PredicateAtom
+;	 
+
 
 // 1.10 Maybe Literals, 1.14.5 Maybe Literals
 MaybeLiteral:
-	'maybe' ID'(' BasicTerms ')' 
+	'maybe' BasicPredicateAtom
 ;
 
 // 1.11 Cardinality Constraint, 1.14.7 Cardinality Constraints
 CardinalityConstraint:
-	lhs=Bound '<=' '|' '{' id=ID '(' terms=BasicTerms ')' '}' '|' '<=' rhs=Bound
+	lhs=Bound '<=' '|' '{'  atom = BasicPredicateAtom '}' '|' '<=' rhs=Bound
 ;
 
 Bound:
@@ -264,10 +321,11 @@ Rule:
 ;
 
 Head:
-	// Sentence |
+	pSentence |
 	MaybeLiteral | 
 	CardinalityConstraint
 ;
+
 
 
 // 1.13 Program, 1.14.9 Program
