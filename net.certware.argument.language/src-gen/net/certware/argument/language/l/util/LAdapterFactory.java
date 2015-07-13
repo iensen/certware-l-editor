@@ -110,14 +110,54 @@ public class LAdapterFactory extends AdapterFactoryImpl
         return createArithmeticLiteralAdapter();
       }
       @Override
+      public Adapter caseGroundArithmeticTerm(GroundArithmeticTerm object)
+      {
+        return createGroundArithmeticTermAdapter();
+      }
+      @Override
+      public Adapter caseGroundArithmeticLiteral(GroundArithmeticLiteral object)
+      {
+        return createGroundArithmeticLiteralAdapter();
+      }
+      @Override
       public Adapter caseFunctionalTerm(FunctionalTerm object)
       {
         return createFunctionalTermAdapter();
       }
       @Override
+      public Adapter caseGroundFunctionalTerm(GroundFunctionalTerm object)
+      {
+        return createGroundFunctionalTermAdapter();
+      }
+      @Override
       public Adapter caseBasicTerms(BasicTerms object)
       {
         return createBasicTermsAdapter();
+      }
+      @Override
+      public Adapter caseGroundTerms(GroundTerms object)
+      {
+        return createGroundTermsAdapter();
+      }
+      @Override
+      public Adapter caseGroundTerm(GroundTerm object)
+      {
+        return createGroundTermAdapter();
+      }
+      @Override
+      public Adapter caseQuantifiedTerm(QuantifiedTerm object)
+      {
+        return createQuantifiedTermAdapter();
+      }
+      @Override
+      public Adapter caseTerm(Term object)
+      {
+        return createTermAdapter();
+      }
+      @Override
+      public Adapter caseTerms(Terms object)
+      {
+        return createTermsAdapter();
       }
       @Override
       public Adapter caseConstantDeclaration(ConstantDeclaration object)
@@ -165,21 +205,6 @@ public class LAdapterFactory extends AdapterFactoryImpl
         return createTVarAdapter();
       }
       @Override
-      public Adapter caseSetLiteral(SetLiteral object)
-      {
-        return createSetLiteralAdapter();
-      }
-      @Override
-      public Adapter caseQuantifiedTerm(QuantifiedTerm object)
-      {
-        return createQuantifiedTermAdapter();
-      }
-      @Override
-      public Adapter caseTerm(Term object)
-      {
-        return createTermAdapter();
-      }
-      @Override
       public Adapter caseAtom(Atom object)
       {
         return createAtomAdapter();
@@ -188,6 +213,11 @@ public class LAdapterFactory extends AdapterFactoryImpl
       public Adapter casePredicateAtom(PredicateAtom object)
       {
         return createPredicateAtomAdapter();
+      }
+      @Override
+      public Adapter caseBasicPredicateAtom(BasicPredicateAtom object)
+      {
+        return createBasicPredicateAtomAdapter();
       }
       @Override
       public Adapter caseBuiltInAtom(BuiltInAtom object)
@@ -208,6 +238,16 @@ public class LAdapterFactory extends AdapterFactoryImpl
       public Adapter caseSentenceLiteral(SentenceLiteral object)
       {
         return createSentenceLiteralAdapter();
+      }
+      @Override
+      public Adapter casepSentence(pSentence object)
+      {
+        return createpSentenceAdapter();
+      }
+      @Override
+      public Adapter casepSentenceLiteral(pSentenceLiteral object)
+      {
+        return createpSentenceLiteralAdapter();
       }
       @Override
       public Adapter caseMaybeLiteral(MaybeLiteral object)
@@ -250,6 +290,16 @@ public class LAdapterFactory extends AdapterFactoryImpl
         return createMultiplicationAdapter();
       }
       @Override
+      public Adapter caseGroundAddition(GroundAddition object)
+      {
+        return createGroundAdditionAdapter();
+      }
+      @Override
+      public Adapter caseGroundMultiplication(GroundMultiplication object)
+      {
+        return createGroundMultiplicationAdapter();
+      }
+      @Override
       public Adapter caseSetAddition(SetAddition object)
       {
         return createSetAdditionAdapter();
@@ -268,6 +318,16 @@ public class LAdapterFactory extends AdapterFactoryImpl
       public Adapter caseAndSentence(AndSentence object)
       {
         return createAndSentenceAdapter();
+      }
+      @Override
+      public Adapter casepOrSentence(pOrSentence object)
+      {
+        return createpOrSentenceAdapter();
+      }
+      @Override
+      public Adapter casepAndSentence(pAndSentence object)
+      {
+        return createpAndSentenceAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -397,6 +457,36 @@ public class LAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link net.certware.argument.language.l.GroundArithmeticTerm <em>Ground Arithmetic Term</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see net.certware.argument.language.l.GroundArithmeticTerm
+   * @generated
+   */
+  public Adapter createGroundArithmeticTermAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link net.certware.argument.language.l.GroundArithmeticLiteral <em>Ground Arithmetic Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see net.certware.argument.language.l.GroundArithmeticLiteral
+   * @generated
+   */
+  public Adapter createGroundArithmeticLiteralAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link net.certware.argument.language.l.FunctionalTerm <em>Functional Term</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -412,6 +502,21 @@ public class LAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link net.certware.argument.language.l.GroundFunctionalTerm <em>Ground Functional Term</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see net.certware.argument.language.l.GroundFunctionalTerm
+   * @generated
+   */
+  public Adapter createGroundFunctionalTermAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link net.certware.argument.language.l.BasicTerms <em>Basic Terms</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -422,6 +527,81 @@ public class LAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createBasicTermsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link net.certware.argument.language.l.GroundTerms <em>Ground Terms</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see net.certware.argument.language.l.GroundTerms
+   * @generated
+   */
+  public Adapter createGroundTermsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link net.certware.argument.language.l.GroundTerm <em>Ground Term</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see net.certware.argument.language.l.GroundTerm
+   * @generated
+   */
+  public Adapter createGroundTermAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link net.certware.argument.language.l.QuantifiedTerm <em>Quantified Term</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see net.certware.argument.language.l.QuantifiedTerm
+   * @generated
+   */
+  public Adapter createQuantifiedTermAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link net.certware.argument.language.l.Term <em>Term</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see net.certware.argument.language.l.Term
+   * @generated
+   */
+  public Adapter createTermAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link net.certware.argument.language.l.Terms <em>Terms</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see net.certware.argument.language.l.Terms
+   * @generated
+   */
+  public Adapter createTermsAdapter()
   {
     return null;
   }
@@ -562,51 +742,6 @@ public class LAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link net.certware.argument.language.l.SetLiteral <em>Set Literal</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see net.certware.argument.language.l.SetLiteral
-   * @generated
-   */
-  public Adapter createSetLiteralAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link net.certware.argument.language.l.QuantifiedTerm <em>Quantified Term</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see net.certware.argument.language.l.QuantifiedTerm
-   * @generated
-   */
-  public Adapter createQuantifiedTermAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link net.certware.argument.language.l.Term <em>Term</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see net.certware.argument.language.l.Term
-   * @generated
-   */
-  public Adapter createTermAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link net.certware.argument.language.l.Atom <em>Atom</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -632,6 +767,21 @@ public class LAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createPredicateAtomAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link net.certware.argument.language.l.BasicPredicateAtom <em>Basic Predicate Atom</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see net.certware.argument.language.l.BasicPredicateAtom
+   * @generated
+   */
+  public Adapter createBasicPredicateAtomAdapter()
   {
     return null;
   }
@@ -692,6 +842,36 @@ public class LAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createSentenceLiteralAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link net.certware.argument.language.l.pSentence <em>pSentence</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see net.certware.argument.language.l.pSentence
+   * @generated
+   */
+  public Adapter createpSentenceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link net.certware.argument.language.l.pSentenceLiteral <em>pSentence Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see net.certware.argument.language.l.pSentenceLiteral
+   * @generated
+   */
+  public Adapter createpSentenceLiteralAdapter()
   {
     return null;
   }
@@ -817,6 +997,36 @@ public class LAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link net.certware.argument.language.l.GroundAddition <em>Ground Addition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see net.certware.argument.language.l.GroundAddition
+   * @generated
+   */
+  public Adapter createGroundAdditionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link net.certware.argument.language.l.GroundMultiplication <em>Ground Multiplication</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see net.certware.argument.language.l.GroundMultiplication
+   * @generated
+   */
+  public Adapter createGroundMultiplicationAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link net.certware.argument.language.l.SetAddition <em>Set Addition</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -872,6 +1082,36 @@ public class LAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createAndSentenceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link net.certware.argument.language.l.pOrSentence <em>pOr Sentence</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see net.certware.argument.language.l.pOrSentence
+   * @generated
+   */
+  public Adapter createpOrSentenceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link net.certware.argument.language.l.pAndSentence <em>pAnd Sentence</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see net.certware.argument.language.l.pAndSentence
+   * @generated
+   */
+  public Adapter createpAndSentenceAdapter()
   {
     return null;
   }

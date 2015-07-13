@@ -2,8 +2,8 @@
  */
 package net.certware.argument.language.l.impl;
 
-import net.certware.argument.language.l.ArithmeticTerm;
 import net.certware.argument.language.l.ConstantDeclaration;
+import net.certware.argument.language.l.GroundArithmeticTerm;
 import net.certware.argument.language.l.LPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -58,7 +58,7 @@ public class ConstantDeclarationImpl extends StatementImpl implements ConstantDe
    * @generated
    * @ordered
    */
-  protected ArithmeticTerm cv;
+  protected GroundArithmeticTerm cv;
 
   /**
    * <!-- begin-user-doc -->
@@ -109,7 +109,7 @@ public class ConstantDeclarationImpl extends StatementImpl implements ConstantDe
    * <!-- end-user-doc -->
    * @generated
    */
-  public ArithmeticTerm getCv()
+  public GroundArithmeticTerm getCv()
   {
     return cv;
   }
@@ -119,9 +119,9 @@ public class ConstantDeclarationImpl extends StatementImpl implements ConstantDe
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetCv(ArithmeticTerm newCv, NotificationChain msgs)
+  public NotificationChain basicSetCv(GroundArithmeticTerm newCv, NotificationChain msgs)
   {
-    ArithmeticTerm oldCv = cv;
+    GroundArithmeticTerm oldCv = cv;
     cv = newCv;
     if (eNotificationRequired())
     {
@@ -136,7 +136,7 @@ public class ConstantDeclarationImpl extends StatementImpl implements ConstantDe
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setCv(ArithmeticTerm newCv)
+  public void setCv(GroundArithmeticTerm newCv)
   {
     if (newCv != cv)
     {
@@ -200,7 +200,7 @@ public class ConstantDeclarationImpl extends StatementImpl implements ConstantDe
         setId((String)newValue);
         return;
       case LPackage.CONSTANT_DECLARATION__CV:
-        setCv((ArithmeticTerm)newValue);
+        setCv((GroundArithmeticTerm)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -220,7 +220,7 @@ public class ConstantDeclarationImpl extends StatementImpl implements ConstantDe
         setId(ID_EDEFAULT);
         return;
       case LPackage.CONSTANT_DECLARATION__CV:
-        setCv((ArithmeticTerm)null);
+        setCv((GroundArithmeticTerm)null);
         return;
     }
     super.eUnset(featureID);

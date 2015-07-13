@@ -2,7 +2,6 @@
  */
 package net.certware.argument.language.l;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Set extends EObject
+public interface Set extends SetExpression
 {
   /**
    * Returns the value of the '<em><b>Lhs</b></em>' attribute.
@@ -58,12 +57,12 @@ public interface Set extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Terms</em>' containment reference.
-   * @see #setTerms(BasicTerms)
+   * @see #setTerms(GroundTerms)
    * @see net.certware.argument.language.l.LPackage#getSet_Terms()
    * @model containment="true"
    * @generated
    */
-  BasicTerms getTerms();
+  GroundTerms getTerms();
 
   /**
    * Sets the value of the '{@link net.certware.argument.language.l.Set#getTerms <em>Terms</em>}' containment reference.
@@ -73,6 +72,6 @@ public interface Set extends EObject
    * @see #getTerms()
    * @generated
    */
-  void setTerms(BasicTerms value);
+  void setTerms(GroundTerms value);
 
 } // Set

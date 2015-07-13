@@ -7,8 +7,6 @@ import net.certware.argument.language.l.LPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Atom</b></em>'.
@@ -18,7 +16,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class AtomImpl extends MinimalEObjectImpl.Container implements Atom
+public class AtomImpl extends SentenceLiteralImpl implements Atom
 {
   /**
    * <!-- begin-user-doc -->

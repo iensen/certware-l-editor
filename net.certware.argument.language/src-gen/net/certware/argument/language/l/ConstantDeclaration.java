@@ -57,12 +57,12 @@ public interface ConstantDeclaration extends Statement
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Cv</em>' containment reference.
-   * @see #setCv(ArithmeticTerm)
+   * @see #setCv(GroundArithmeticTerm)
    * @see net.certware.argument.language.l.LPackage#getConstantDeclaration_Cv()
    * @model containment="true"
    * @generated
    */
-  ArithmeticTerm getCv();
+  GroundArithmeticTerm getCv();
 
   /**
    * Sets the value of the '{@link net.certware.argument.language.l.ConstantDeclaration#getCv <em>Cv</em>}' containment reference.
@@ -72,6 +72,6 @@ public interface ConstantDeclaration extends Statement
    * @see #getCv()
    * @generated
    */
-  void setCv(ArithmeticTerm value);
+  void setCv(GroundArithmeticTerm value);
 
 } // ConstantDeclaration

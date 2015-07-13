@@ -2,7 +2,6 @@
  */
 package net.certware.argument.language.l;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,6 +13,6 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Atom extends EObject
+public interface Atom extends SentenceLiteral
 {
 } // Atom

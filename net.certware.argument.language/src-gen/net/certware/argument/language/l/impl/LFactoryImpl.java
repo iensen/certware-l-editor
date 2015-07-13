@@ -71,8 +71,16 @@ public class LFactoryImpl extends EFactoryImpl implements LFactory
       case LPackage.TYPED_VARIABLE: return createTypedVariable();
       case LPackage.ARITHMETIC_TERM: return createArithmeticTerm();
       case LPackage.ARITHMETIC_LITERAL: return createArithmeticLiteral();
+      case LPackage.GROUND_ARITHMETIC_TERM: return createGroundArithmeticTerm();
+      case LPackage.GROUND_ARITHMETIC_LITERAL: return createGroundArithmeticLiteral();
       case LPackage.FUNCTIONAL_TERM: return createFunctionalTerm();
+      case LPackage.GROUND_FUNCTIONAL_TERM: return createGroundFunctionalTerm();
       case LPackage.BASIC_TERMS: return createBasicTerms();
+      case LPackage.GROUND_TERMS: return createGroundTerms();
+      case LPackage.GROUND_TERM: return createGroundTerm();
+      case LPackage.QUANTIFIED_TERM: return createQuantifiedTerm();
+      case LPackage.TERM: return createTerm();
+      case LPackage.TERMS: return createTerms();
       case LPackage.CONSTANT_DECLARATION: return createConstantDeclaration();
       case LPackage.TYPE_DECLARATION: return createTypeDeclaration();
       case LPackage.LIMIT: return createLimit();
@@ -82,15 +90,15 @@ public class LFactoryImpl extends EFactoryImpl implements LFactory
       case LPackage.SET_CONSTRUCT: return createSetConstruct();
       case LPackage.TVARS: return createTVars();
       case LPackage.TVAR: return createTVar();
-      case LPackage.SET_LITERAL: return createSetLiteral();
-      case LPackage.QUANTIFIED_TERM: return createQuantifiedTerm();
-      case LPackage.TERM: return createTerm();
       case LPackage.ATOM: return createAtom();
       case LPackage.PREDICATE_ATOM: return createPredicateAtom();
+      case LPackage.BASIC_PREDICATE_ATOM: return createBasicPredicateAtom();
       case LPackage.BUILT_IN_ATOM: return createBuiltInAtom();
       case LPackage.SENTENCE: return createSentence();
       case LPackage.SENTENCE_EXPR: return createSentenceExpr();
       case LPackage.SENTENCE_LITERAL: return createSentenceLiteral();
+      case LPackage.PSENTENCE: return createpSentence();
+      case LPackage.PSENTENCE_LITERAL: return createpSentenceLiteral();
       case LPackage.MAYBE_LITERAL: return createMaybeLiteral();
       case LPackage.CARDINALITY_CONSTRAINT: return createCardinalityConstraint();
       case LPackage.BOUND: return createBound();
@@ -99,10 +107,14 @@ public class LFactoryImpl extends EFactoryImpl implements LFactory
       case LPackage.STATEMENT: return createStatement();
       case LPackage.ADDITION: return createAddition();
       case LPackage.MULTIPLICATION: return createMultiplication();
+      case LPackage.GROUND_ADDITION: return createGroundAddition();
+      case LPackage.GROUND_MULTIPLICATION: return createGroundMultiplication();
       case LPackage.SET_ADDITION: return createSetAddition();
       case LPackage.SET_MULTIPLICATION: return createSetMultiplication();
       case LPackage.OR_SENTENCE: return createOrSentence();
       case LPackage.AND_SENTENCE: return createAndSentence();
+      case LPackage.POR_SENTENCE: return createpOrSentence();
+      case LPackage.PAND_SENTENCE: return createpAndSentence();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -190,6 +202,28 @@ public class LFactoryImpl extends EFactoryImpl implements LFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public GroundArithmeticTerm createGroundArithmeticTerm()
+  {
+    GroundArithmeticTermImpl groundArithmeticTerm = new GroundArithmeticTermImpl();
+    return groundArithmeticTerm;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public GroundArithmeticLiteral createGroundArithmeticLiteral()
+  {
+    GroundArithmeticLiteralImpl groundArithmeticLiteral = new GroundArithmeticLiteralImpl();
+    return groundArithmeticLiteral;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public FunctionalTerm createFunctionalTerm()
   {
     FunctionalTermImpl functionalTerm = new FunctionalTermImpl();
@@ -201,10 +235,76 @@ public class LFactoryImpl extends EFactoryImpl implements LFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public GroundFunctionalTerm createGroundFunctionalTerm()
+  {
+    GroundFunctionalTermImpl groundFunctionalTerm = new GroundFunctionalTermImpl();
+    return groundFunctionalTerm;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public BasicTerms createBasicTerms()
   {
     BasicTermsImpl basicTerms = new BasicTermsImpl();
     return basicTerms;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public GroundTerms createGroundTerms()
+  {
+    GroundTermsImpl groundTerms = new GroundTermsImpl();
+    return groundTerms;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public GroundTerm createGroundTerm()
+  {
+    GroundTermImpl groundTerm = new GroundTermImpl();
+    return groundTerm;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public QuantifiedTerm createQuantifiedTerm()
+  {
+    QuantifiedTermImpl quantifiedTerm = new QuantifiedTermImpl();
+    return quantifiedTerm;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Term createTerm()
+  {
+    TermImpl term = new TermImpl();
+    return term;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Terms createTerms()
+  {
+    TermsImpl terms = new TermsImpl();
+    return terms;
   }
 
   /**
@@ -311,39 +411,6 @@ public class LFactoryImpl extends EFactoryImpl implements LFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public SetLiteral createSetLiteral()
-  {
-    SetLiteralImpl setLiteral = new SetLiteralImpl();
-    return setLiteral;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public QuantifiedTerm createQuantifiedTerm()
-  {
-    QuantifiedTermImpl quantifiedTerm = new QuantifiedTermImpl();
-    return quantifiedTerm;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Term createTerm()
-  {
-    TermImpl term = new TermImpl();
-    return term;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public Atom createAtom()
   {
     AtomImpl atom = new AtomImpl();
@@ -359,6 +426,17 @@ public class LFactoryImpl extends EFactoryImpl implements LFactory
   {
     PredicateAtomImpl predicateAtom = new PredicateAtomImpl();
     return predicateAtom;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BasicPredicateAtom createBasicPredicateAtom()
+  {
+    BasicPredicateAtomImpl basicPredicateAtom = new BasicPredicateAtomImpl();
+    return basicPredicateAtom;
   }
 
   /**
@@ -403,6 +481,28 @@ public class LFactoryImpl extends EFactoryImpl implements LFactory
   {
     SentenceLiteralImpl sentenceLiteral = new SentenceLiteralImpl();
     return sentenceLiteral;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public pSentence createpSentence()
+  {
+    pSentenceImpl pSentence = new pSentenceImpl();
+    return pSentence;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public pSentenceLiteral createpSentenceLiteral()
+  {
+    pSentenceLiteralImpl pSentenceLiteral = new pSentenceLiteralImpl();
+    return pSentenceLiteral;
   }
 
   /**
@@ -498,6 +598,28 @@ public class LFactoryImpl extends EFactoryImpl implements LFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public GroundAddition createGroundAddition()
+  {
+    GroundAdditionImpl groundAddition = new GroundAdditionImpl();
+    return groundAddition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public GroundMultiplication createGroundMultiplication()
+  {
+    GroundMultiplicationImpl groundMultiplication = new GroundMultiplicationImpl();
+    return groundMultiplication;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public SetAddition createSetAddition()
   {
     SetAdditionImpl setAddition = new SetAdditionImpl();
@@ -535,6 +657,28 @@ public class LFactoryImpl extends EFactoryImpl implements LFactory
   {
     AndSentenceImpl andSentence = new AndSentenceImpl();
     return andSentence;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public pOrSentence createpOrSentence()
+  {
+    pOrSentenceImpl pOrSentence = new pOrSentenceImpl();
+    return pOrSentence;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public pAndSentence createpAndSentence()
+  {
+    pAndSentenceImpl pAndSentence = new pAndSentenceImpl();
+    return pAndSentence;
   }
 
   /**

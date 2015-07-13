@@ -86,6 +86,24 @@ public interface LFactory extends EFactory
   ArithmeticLiteral createArithmeticLiteral();
 
   /**
+   * Returns a new object of class '<em>Ground Arithmetic Term</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ground Arithmetic Term</em>'.
+   * @generated
+   */
+  GroundArithmeticTerm createGroundArithmeticTerm();
+
+  /**
+   * Returns a new object of class '<em>Ground Arithmetic Literal</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ground Arithmetic Literal</em>'.
+   * @generated
+   */
+  GroundArithmeticLiteral createGroundArithmeticLiteral();
+
+  /**
    * Returns a new object of class '<em>Functional Term</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -95,6 +113,15 @@ public interface LFactory extends EFactory
   FunctionalTerm createFunctionalTerm();
 
   /**
+   * Returns a new object of class '<em>Ground Functional Term</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ground Functional Term</em>'.
+   * @generated
+   */
+  GroundFunctionalTerm createGroundFunctionalTerm();
+
+  /**
    * Returns a new object of class '<em>Basic Terms</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -102,6 +129,51 @@ public interface LFactory extends EFactory
    * @generated
    */
   BasicTerms createBasicTerms();
+
+  /**
+   * Returns a new object of class '<em>Ground Terms</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ground Terms</em>'.
+   * @generated
+   */
+  GroundTerms createGroundTerms();
+
+  /**
+   * Returns a new object of class '<em>Ground Term</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ground Term</em>'.
+   * @generated
+   */
+  GroundTerm createGroundTerm();
+
+  /**
+   * Returns a new object of class '<em>Quantified Term</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Quantified Term</em>'.
+   * @generated
+   */
+  QuantifiedTerm createQuantifiedTerm();
+
+  /**
+   * Returns a new object of class '<em>Term</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Term</em>'.
+   * @generated
+   */
+  Term createTerm();
+
+  /**
+   * Returns a new object of class '<em>Terms</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Terms</em>'.
+   * @generated
+   */
+  Terms createTerms();
 
   /**
    * Returns a new object of class '<em>Constant Declaration</em>'.
@@ -185,33 +257,6 @@ public interface LFactory extends EFactory
   TVar createTVar();
 
   /**
-   * Returns a new object of class '<em>Set Literal</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Set Literal</em>'.
-   * @generated
-   */
-  SetLiteral createSetLiteral();
-
-  /**
-   * Returns a new object of class '<em>Quantified Term</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Quantified Term</em>'.
-   * @generated
-   */
-  QuantifiedTerm createQuantifiedTerm();
-
-  /**
-   * Returns a new object of class '<em>Term</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Term</em>'.
-   * @generated
-   */
-  Term createTerm();
-
-  /**
    * Returns a new object of class '<em>Atom</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -228,6 +273,15 @@ public interface LFactory extends EFactory
    * @generated
    */
   PredicateAtom createPredicateAtom();
+
+  /**
+   * Returns a new object of class '<em>Basic Predicate Atom</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Basic Predicate Atom</em>'.
+   * @generated
+   */
+  BasicPredicateAtom createBasicPredicateAtom();
 
   /**
    * Returns a new object of class '<em>Built In Atom</em>'.
@@ -264,6 +318,24 @@ public interface LFactory extends EFactory
    * @generated
    */
   SentenceLiteral createSentenceLiteral();
+
+  /**
+   * Returns a new object of class '<em>pSentence</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>pSentence</em>'.
+   * @generated
+   */
+  pSentence createpSentence();
+
+  /**
+   * Returns a new object of class '<em>pSentence Literal</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>pSentence Literal</em>'.
+   * @generated
+   */
+  pSentenceLiteral createpSentenceLiteral();
 
   /**
    * Returns a new object of class '<em>Maybe Literal</em>'.
@@ -338,6 +410,24 @@ public interface LFactory extends EFactory
   Multiplication createMultiplication();
 
   /**
+   * Returns a new object of class '<em>Ground Addition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ground Addition</em>'.
+   * @generated
+   */
+  GroundAddition createGroundAddition();
+
+  /**
+   * Returns a new object of class '<em>Ground Multiplication</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ground Multiplication</em>'.
+   * @generated
+   */
+  GroundMultiplication createGroundMultiplication();
+
+  /**
    * Returns a new object of class '<em>Set Addition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -372,6 +462,24 @@ public interface LFactory extends EFactory
    * @generated
    */
   AndSentence createAndSentence();
+
+  /**
+   * Returns a new object of class '<em>pOr Sentence</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>pOr Sentence</em>'.
+   * @generated
+   */
+  pOrSentence createpOrSentence();
+
+  /**
+   * Returns a new object of class '<em>pAnd Sentence</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>pAnd Sentence</em>'.
+   * @generated
+   */
+  pAndSentence createpAndSentence();
 
   /**
    * Returns the package supported by this factory.

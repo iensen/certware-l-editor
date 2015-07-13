@@ -2,9 +2,9 @@
  */
 package net.certware.argument.language.l.impl;
 
-import net.certware.argument.language.l.BasicTerms;
 import net.certware.argument.language.l.LPackage;
 import net.certware.argument.language.l.PredicateAtom;
+import net.certware.argument.language.l.Terms;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -58,7 +58,7 @@ public class PredicateAtomImpl extends AtomImpl implements PredicateAtom
    * @generated
    * @ordered
    */
-  protected BasicTerms terms;
+  protected Terms terms;
 
   /**
    * <!-- begin-user-doc -->
@@ -109,7 +109,7 @@ public class PredicateAtomImpl extends AtomImpl implements PredicateAtom
    * <!-- end-user-doc -->
    * @generated
    */
-  public BasicTerms getTerms()
+  public Terms getTerms()
   {
     return terms;
   }
@@ -119,9 +119,9 @@ public class PredicateAtomImpl extends AtomImpl implements PredicateAtom
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetTerms(BasicTerms newTerms, NotificationChain msgs)
+  public NotificationChain basicSetTerms(Terms newTerms, NotificationChain msgs)
   {
-    BasicTerms oldTerms = terms;
+    Terms oldTerms = terms;
     terms = newTerms;
     if (eNotificationRequired())
     {
@@ -136,7 +136,7 @@ public class PredicateAtomImpl extends AtomImpl implements PredicateAtom
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setTerms(BasicTerms newTerms)
+  public void setTerms(Terms newTerms)
   {
     if (newTerms != terms)
     {
@@ -200,7 +200,7 @@ public class PredicateAtomImpl extends AtomImpl implements PredicateAtom
         setFid((String)newValue);
         return;
       case LPackage.PREDICATE_ATOM__TERMS:
-        setTerms((BasicTerms)newValue);
+        setTerms((Terms)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -220,7 +220,7 @@ public class PredicateAtomImpl extends AtomImpl implements PredicateAtom
         setFid(FID_EDEFAULT);
         return;
       case LPackage.PREDICATE_ATOM__TERMS:
-        setTerms((BasicTerms)null);
+        setTerms((Terms)null);
         return;
     }
     super.eUnset(featureID);

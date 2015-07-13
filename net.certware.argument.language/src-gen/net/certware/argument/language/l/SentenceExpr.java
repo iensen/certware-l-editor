@@ -13,6 +13,6 @@ package net.certware.argument.language.l;
  * @model
  * @generated
  */
-public interface SentenceExpr extends Sentence
+public interface SentenceExpr extends Sentence, pSentence
 {
 } // SentenceExpr

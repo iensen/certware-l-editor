@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class VariableImpl extends TVarImpl implements Variable
+public class VariableImpl extends QuantifiedTermImpl implements Variable
 {
   /**
    * The default value of the '{@link #getIdentifier() <em>Identifier</em>}' attribute.

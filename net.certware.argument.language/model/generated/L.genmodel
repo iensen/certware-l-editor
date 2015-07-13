@@ -21,15 +21,39 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//TypedVariable/type"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//TypedVariable/var"/>
     </genClasses>
-    <genClasses ecoreClass="L.ecore#//ArithmeticTerm"/>
+    <genClasses ecoreClass="L.ecore#//ArithmeticTerm">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//ArithmeticTerm/minus"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//ArithmeticTerm/term"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//ArithmeticTerm/lhs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//ArithmeticTerm/rhs"/>
+    </genClasses>
     <genClasses ecoreClass="L.ecore#//ArithmeticLiteral">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//ArithmeticLiteral/identifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//ArithmeticLiteral/v"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//ArithmeticLiteral/tv"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//ArithmeticLiteral/const"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//ArithmeticLiteral/value"/>
     </genClasses>
+    <genClasses ecoreClass="L.ecore#//GroundArithmeticTerm"/>
+    <genClasses ecoreClass="L.ecore#//GroundArithmeticLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//GroundArithmeticLiteral/identifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//GroundArithmeticLiteral/value"/>
+    </genClasses>
     <genClasses ecoreClass="L.ecore#//FunctionalTerm"/>
+    <genClasses ecoreClass="L.ecore#//GroundFunctionalTerm"/>
     <genClasses ecoreClass="L.ecore#//BasicTerms">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//BasicTerms/car"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//BasicTerms/cdr"/>
+    </genClasses>
+    <genClasses ecoreClass="L.ecore#//GroundTerms">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//GroundTerms/car"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//GroundTerms/cdr"/>
+    </genClasses>
+    <genClasses ecoreClass="L.ecore#//GroundTerm"/>
+    <genClasses ecoreClass="L.ecore#//QuantifiedTerm"/>
+    <genClasses ecoreClass="L.ecore#//Term"/>
+    <genClasses ecoreClass="L.ecore#//Terms">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//Terms/car"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//Terms/cdr"/>
     </genClasses>
     <genClasses ecoreClass="L.ecore#//ConstantDeclaration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//ConstantDeclaration/id"/>
@@ -60,15 +84,14 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//TVars/cdr"/>
     </genClasses>
     <genClasses ecoreClass="L.ecore#//TVar"/>
-    <genClasses ecoreClass="L.ecore#//SetLiteral">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//SetLiteral/value"/>
-    </genClasses>
-    <genClasses ecoreClass="L.ecore#//QuantifiedTerm"/>
-    <genClasses ecoreClass="L.ecore#//Term"/>
     <genClasses ecoreClass="L.ecore#//Atom"/>
     <genClasses ecoreClass="L.ecore#//PredicateAtom">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//PredicateAtom/fid"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//PredicateAtom/terms"/>
+    </genClasses>
+    <genClasses ecoreClass="L.ecore#//BasicPredicateAtom">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//BasicPredicateAtom/fid"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//BasicPredicateAtom/terms"/>
     </genClasses>
     <genClasses ecoreClass="L.ecore#//BuiltInAtom">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//BuiltInAtom/lhs"/>
@@ -78,11 +101,12 @@
     <genClasses ecoreClass="L.ecore#//Sentence"/>
     <genClasses ecoreClass="L.ecore#//SentenceExpr"/>
     <genClasses ecoreClass="L.ecore#//SentenceLiteral"/>
+    <genClasses ecoreClass="L.ecore#//pSentence"/>
+    <genClasses ecoreClass="L.ecore#//pSentenceLiteral"/>
     <genClasses ecoreClass="L.ecore#//MaybeLiteral"/>
     <genClasses ecoreClass="L.ecore#//CardinalityConstraint">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//CardinalityConstraint/lhs"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//CardinalityConstraint/id"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//CardinalityConstraint/terms"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//CardinalityConstraint/atom"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//CardinalityConstraint/rhs"/>
     </genClasses>
     <genClasses ecoreClass="L.ecore#//Bound">
@@ -94,14 +118,10 @@
     </genClasses>
     <genClasses ecoreClass="L.ecore#//Head"/>
     <genClasses ecoreClass="L.ecore#//Statement"/>
-    <genClasses ecoreClass="L.ecore#//Addition">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//Addition/lhs"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//Addition/rhs"/>
-    </genClasses>
-    <genClasses ecoreClass="L.ecore#//Multiplication">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//Multiplication/lhs"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//Multiplication/rhs"/>
-    </genClasses>
+    <genClasses ecoreClass="L.ecore#//Addition"/>
+    <genClasses ecoreClass="L.ecore#//Multiplication"/>
+    <genClasses ecoreClass="L.ecore#//GroundAddition"/>
+    <genClasses ecoreClass="L.ecore#//GroundMultiplication"/>
     <genClasses ecoreClass="L.ecore#//SetAddition">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//SetAddition/left"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//SetAddition/right"/>
@@ -117,6 +137,14 @@
     <genClasses ecoreClass="L.ecore#//AndSentence">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//AndSentence/left"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//AndSentence/right"/>
+    </genClasses>
+    <genClasses ecoreClass="L.ecore#//pOrSentence">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//pOrSentence/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//pOrSentence/right"/>
+    </genClasses>
+    <genClasses ecoreClass="L.ecore#//pAndSentence">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//pAndSentence/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//pAndSentence/right"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
