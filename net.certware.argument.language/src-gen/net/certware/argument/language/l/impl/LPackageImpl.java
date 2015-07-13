@@ -7,6 +7,7 @@ import net.certware.argument.language.l.AndSentence;
 import net.certware.argument.language.l.ArithmeticLiteral;
 import net.certware.argument.language.l.ArithmeticTerm;
 import net.certware.argument.language.l.Atom;
+import net.certware.argument.language.l.BasicPredicateAtom;
 import net.certware.argument.language.l.BasicTerm;
 import net.certware.argument.language.l.BasicTerms;
 import net.certware.argument.language.l.Bound;
@@ -14,6 +15,13 @@ import net.certware.argument.language.l.BuiltInAtom;
 import net.certware.argument.language.l.CardinalityConstraint;
 import net.certware.argument.language.l.ConstantDeclaration;
 import net.certware.argument.language.l.FunctionalTerm;
+import net.certware.argument.language.l.GroundAddition;
+import net.certware.argument.language.l.GroundArithmeticLiteral;
+import net.certware.argument.language.l.GroundArithmeticTerm;
+import net.certware.argument.language.l.GroundFunctionalTerm;
+import net.certware.argument.language.l.GroundMultiplication;
+import net.certware.argument.language.l.GroundTerm;
+import net.certware.argument.language.l.GroundTerms;
 import net.certware.argument.language.l.Head;
 import net.certware.argument.language.l.LFactory;
 import net.certware.argument.language.l.LPackage;
@@ -34,15 +42,19 @@ import net.certware.argument.language.l.Set;
 import net.certware.argument.language.l.SetAddition;
 import net.certware.argument.language.l.SetConstruct;
 import net.certware.argument.language.l.SetExpression;
-import net.certware.argument.language.l.SetLiteral;
 import net.certware.argument.language.l.SetMultiplication;
 import net.certware.argument.language.l.Statement;
 import net.certware.argument.language.l.TVar;
 import net.certware.argument.language.l.TVars;
 import net.certware.argument.language.l.Term;
+import net.certware.argument.language.l.Terms;
 import net.certware.argument.language.l.TypeDeclaration;
 import net.certware.argument.language.l.TypedVariable;
 import net.certware.argument.language.l.Variable;
+import net.certware.argument.language.l.pAndSentence;
+import net.certware.argument.language.l.pOrSentence;
+import net.certware.argument.language.l.pSentence;
+import net.certware.argument.language.l.pSentenceLiteral;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -113,6 +125,20 @@ public class LPackageImpl extends EPackageImpl implements LPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass groundArithmeticTermEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass groundArithmeticLiteralEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass functionalTermEClass = null;
 
   /**
@@ -120,7 +146,49 @@ public class LPackageImpl extends EPackageImpl implements LPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass groundFunctionalTermEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass basicTermsEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass groundTermsEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass groundTermEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass quantifiedTermEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass termEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass termsEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -190,27 +258,6 @@ public class LPackageImpl extends EPackageImpl implements LPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass setLiteralEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass quantifiedTermEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass termEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass atomEClass = null;
 
   /**
@@ -219,6 +266,13 @@ public class LPackageImpl extends EPackageImpl implements LPackage
    * @generated
    */
   private EClass predicateAtomEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass basicPredicateAtomEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -247,6 +301,20 @@ public class LPackageImpl extends EPackageImpl implements LPackage
    * @generated
    */
   private EClass sentenceLiteralEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass pSentenceEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass pSentenceLiteralEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -309,6 +377,20 @@ public class LPackageImpl extends EPackageImpl implements LPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass groundAdditionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass groundMultiplicationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass setAdditionEClass = null;
 
   /**
@@ -331,6 +413,20 @@ public class LPackageImpl extends EPackageImpl implements LPackage
    * @generated
    */
   private EClass andSentenceEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass pOrSentenceEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass pAndSentenceEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -510,6 +606,46 @@ public class LPackageImpl extends EPackageImpl implements LPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getArithmeticTerm_Minus()
+  {
+    return (EAttribute)arithmeticTermEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getArithmeticTerm_Term()
+  {
+    return (EReference)arithmeticTermEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getArithmeticTerm_Lhs()
+  {
+    return (EReference)arithmeticTermEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getArithmeticTerm_Rhs()
+  {
+    return (EReference)arithmeticTermEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getArithmeticLiteral()
   {
     return arithmeticLiteralEClass;
@@ -520,9 +656,29 @@ public class LPackageImpl extends EPackageImpl implements LPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getArithmeticLiteral_Identifier()
+  public EReference getArithmeticLiteral_V()
   {
-    return (EAttribute)arithmeticLiteralEClass.getEStructuralFeatures().get(0);
+    return (EReference)arithmeticLiteralEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getArithmeticLiteral_Tv()
+  {
+    return (EReference)arithmeticLiteralEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getArithmeticLiteral_Const()
+  {
+    return (EAttribute)arithmeticLiteralEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -532,7 +688,47 @@ public class LPackageImpl extends EPackageImpl implements LPackage
    */
   public EAttribute getArithmeticLiteral_Value()
   {
-    return (EAttribute)arithmeticLiteralEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)arithmeticLiteralEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getGroundArithmeticTerm()
+  {
+    return groundArithmeticTermEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getGroundArithmeticLiteral()
+  {
+    return groundArithmeticLiteralEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getGroundArithmeticLiteral_Identifier()
+  {
+    return (EAttribute)groundArithmeticLiteralEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getGroundArithmeticLiteral_Value()
+  {
+    return (EAttribute)groundArithmeticLiteralEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -543,6 +739,16 @@ public class LPackageImpl extends EPackageImpl implements LPackage
   public EClass getFunctionalTerm()
   {
     return functionalTermEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getGroundFunctionalTerm()
+  {
+    return groundFunctionalTermEClass;
   }
 
   /**
@@ -573,6 +779,96 @@ public class LPackageImpl extends EPackageImpl implements LPackage
   public EReference getBasicTerms_Cdr()
   {
     return (EReference)basicTermsEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getGroundTerms()
+  {
+    return groundTermsEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getGroundTerms_Car()
+  {
+    return (EReference)groundTermsEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getGroundTerms_Cdr()
+  {
+    return (EReference)groundTermsEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getGroundTerm()
+  {
+    return groundTermEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getQuantifiedTerm()
+  {
+    return quantifiedTermEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTerm()
+  {
+    return termEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTerms()
+  {
+    return termsEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTerms_Car()
+  {
+    return (EReference)termsEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTerms_Cdr()
+  {
+    return (EReference)termsEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -800,46 +1096,6 @@ public class LPackageImpl extends EPackageImpl implements LPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getSetLiteral()
-  {
-    return setLiteralEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getSetLiteral_Value()
-  {
-    return (EAttribute)setLiteralEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getQuantifiedTerm()
-  {
-    return quantifiedTermEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getTerm()
-  {
-    return termEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getAtom()
   {
     return atomEClass;
@@ -873,6 +1129,36 @@ public class LPackageImpl extends EPackageImpl implements LPackage
   public EReference getPredicateAtom_Terms()
   {
     return (EReference)predicateAtomEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getBasicPredicateAtom()
+  {
+    return basicPredicateAtomEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBasicPredicateAtom_Fid()
+  {
+    return (EAttribute)basicPredicateAtomEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getBasicPredicateAtom_Terms()
+  {
+    return (EReference)basicPredicateAtomEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -950,6 +1236,26 @@ public class LPackageImpl extends EPackageImpl implements LPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getpSentence()
+  {
+    return pSentenceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getpSentenceLiteral()
+  {
+    return pSentenceLiteralEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getMaybeLiteral()
   {
     return maybeLiteralEClass;
@@ -980,19 +1286,9 @@ public class LPackageImpl extends EPackageImpl implements LPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getCardinalityConstraint_Id()
+  public EReference getCardinalityConstraint_Atom()
   {
-    return (EAttribute)cardinalityConstraintEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getCardinalityConstraint_Terms()
-  {
-    return (EReference)cardinalityConstraintEClass.getEStructuralFeatures().get(2);
+    return (EReference)cardinalityConstraintEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1002,7 +1298,7 @@ public class LPackageImpl extends EPackageImpl implements LPackage
    */
   public EReference getCardinalityConstraint_Rhs()
   {
-    return (EReference)cardinalityConstraintEClass.getEStructuralFeatures().get(3);
+    return (EReference)cardinalityConstraintEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1090,26 +1386,6 @@ public class LPackageImpl extends EPackageImpl implements LPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getAddition_Lhs()
-  {
-    return (EReference)additionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getAddition_Rhs()
-  {
-    return (EReference)additionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getMultiplication()
   {
     return multiplicationEClass;
@@ -1120,9 +1396,9 @@ public class LPackageImpl extends EPackageImpl implements LPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getMultiplication_Lhs()
+  public EClass getGroundAddition()
   {
-    return (EReference)multiplicationEClass.getEStructuralFeatures().get(0);
+    return groundAdditionEClass;
   }
 
   /**
@@ -1130,9 +1406,9 @@ public class LPackageImpl extends EPackageImpl implements LPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getMultiplication_Rhs()
+  public EClass getGroundMultiplication()
   {
-    return (EReference)multiplicationEClass.getEStructuralFeatures().get(1);
+    return groundMultiplicationEClass;
   }
 
   /**
@@ -1260,6 +1536,66 @@ public class LPackageImpl extends EPackageImpl implements LPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getpOrSentence()
+  {
+    return pOrSentenceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getpOrSentence_Left()
+  {
+    return (EReference)pOrSentenceEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getpOrSentence_Right()
+  {
+    return (EReference)pOrSentenceEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getpAndSentence()
+  {
+    return pAndSentenceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getpAndSentence_Left()
+  {
+    return (EReference)pAndSentenceEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getpAndSentence_Right()
+  {
+    return (EReference)pAndSentenceEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public LFactory getLFactory()
   {
     return (LFactory)getEFactoryInstance();
@@ -1301,16 +1637,44 @@ public class LPackageImpl extends EPackageImpl implements LPackage
     createEReference(typedVariableEClass, TYPED_VARIABLE__VAR);
 
     arithmeticTermEClass = createEClass(ARITHMETIC_TERM);
+    createEAttribute(arithmeticTermEClass, ARITHMETIC_TERM__MINUS);
+    createEReference(arithmeticTermEClass, ARITHMETIC_TERM__TERM);
+    createEReference(arithmeticTermEClass, ARITHMETIC_TERM__LHS);
+    createEReference(arithmeticTermEClass, ARITHMETIC_TERM__RHS);
 
     arithmeticLiteralEClass = createEClass(ARITHMETIC_LITERAL);
-    createEAttribute(arithmeticLiteralEClass, ARITHMETIC_LITERAL__IDENTIFIER);
+    createEReference(arithmeticLiteralEClass, ARITHMETIC_LITERAL__V);
+    createEReference(arithmeticLiteralEClass, ARITHMETIC_LITERAL__TV);
+    createEAttribute(arithmeticLiteralEClass, ARITHMETIC_LITERAL__CONST);
     createEAttribute(arithmeticLiteralEClass, ARITHMETIC_LITERAL__VALUE);
 
+    groundArithmeticTermEClass = createEClass(GROUND_ARITHMETIC_TERM);
+
+    groundArithmeticLiteralEClass = createEClass(GROUND_ARITHMETIC_LITERAL);
+    createEAttribute(groundArithmeticLiteralEClass, GROUND_ARITHMETIC_LITERAL__IDENTIFIER);
+    createEAttribute(groundArithmeticLiteralEClass, GROUND_ARITHMETIC_LITERAL__VALUE);
+
     functionalTermEClass = createEClass(FUNCTIONAL_TERM);
+
+    groundFunctionalTermEClass = createEClass(GROUND_FUNCTIONAL_TERM);
 
     basicTermsEClass = createEClass(BASIC_TERMS);
     createEReference(basicTermsEClass, BASIC_TERMS__CAR);
     createEReference(basicTermsEClass, BASIC_TERMS__CDR);
+
+    groundTermsEClass = createEClass(GROUND_TERMS);
+    createEReference(groundTermsEClass, GROUND_TERMS__CAR);
+    createEReference(groundTermsEClass, GROUND_TERMS__CDR);
+
+    groundTermEClass = createEClass(GROUND_TERM);
+
+    quantifiedTermEClass = createEClass(QUANTIFIED_TERM);
+
+    termEClass = createEClass(TERM);
+
+    termsEClass = createEClass(TERMS);
+    createEReference(termsEClass, TERMS__CAR);
+    createEReference(termsEClass, TERMS__CDR);
 
     constantDeclarationEClass = createEClass(CONSTANT_DECLARATION);
     createEAttribute(constantDeclarationEClass, CONSTANT_DECLARATION__ID);
@@ -1343,18 +1707,15 @@ public class LPackageImpl extends EPackageImpl implements LPackage
 
     tVarEClass = createEClass(TVAR);
 
-    setLiteralEClass = createEClass(SET_LITERAL);
-    createEAttribute(setLiteralEClass, SET_LITERAL__VALUE);
-
-    quantifiedTermEClass = createEClass(QUANTIFIED_TERM);
-
-    termEClass = createEClass(TERM);
-
     atomEClass = createEClass(ATOM);
 
     predicateAtomEClass = createEClass(PREDICATE_ATOM);
     createEAttribute(predicateAtomEClass, PREDICATE_ATOM__FID);
     createEReference(predicateAtomEClass, PREDICATE_ATOM__TERMS);
+
+    basicPredicateAtomEClass = createEClass(BASIC_PREDICATE_ATOM);
+    createEAttribute(basicPredicateAtomEClass, BASIC_PREDICATE_ATOM__FID);
+    createEReference(basicPredicateAtomEClass, BASIC_PREDICATE_ATOM__TERMS);
 
     builtInAtomEClass = createEClass(BUILT_IN_ATOM);
     createEReference(builtInAtomEClass, BUILT_IN_ATOM__LHS);
@@ -1367,12 +1728,15 @@ public class LPackageImpl extends EPackageImpl implements LPackage
 
     sentenceLiteralEClass = createEClass(SENTENCE_LITERAL);
 
+    pSentenceEClass = createEClass(PSENTENCE);
+
+    pSentenceLiteralEClass = createEClass(PSENTENCE_LITERAL);
+
     maybeLiteralEClass = createEClass(MAYBE_LITERAL);
 
     cardinalityConstraintEClass = createEClass(CARDINALITY_CONSTRAINT);
     createEReference(cardinalityConstraintEClass, CARDINALITY_CONSTRAINT__LHS);
-    createEAttribute(cardinalityConstraintEClass, CARDINALITY_CONSTRAINT__ID);
-    createEReference(cardinalityConstraintEClass, CARDINALITY_CONSTRAINT__TERMS);
+    createEReference(cardinalityConstraintEClass, CARDINALITY_CONSTRAINT__ATOM);
     createEReference(cardinalityConstraintEClass, CARDINALITY_CONSTRAINT__RHS);
 
     boundEClass = createEClass(BOUND);
@@ -1387,12 +1751,12 @@ public class LPackageImpl extends EPackageImpl implements LPackage
     statementEClass = createEClass(STATEMENT);
 
     additionEClass = createEClass(ADDITION);
-    createEReference(additionEClass, ADDITION__LHS);
-    createEReference(additionEClass, ADDITION__RHS);
 
     multiplicationEClass = createEClass(MULTIPLICATION);
-    createEReference(multiplicationEClass, MULTIPLICATION__LHS);
-    createEReference(multiplicationEClass, MULTIPLICATION__RHS);
+
+    groundAdditionEClass = createEClass(GROUND_ADDITION);
+
+    groundMultiplicationEClass = createEClass(GROUND_MULTIPLICATION);
 
     setAdditionEClass = createEClass(SET_ADDITION);
     createEReference(setAdditionEClass, SET_ADDITION__LEFT);
@@ -1409,6 +1773,14 @@ public class LPackageImpl extends EPackageImpl implements LPackage
     andSentenceEClass = createEClass(AND_SENTENCE);
     createEReference(andSentenceEClass, AND_SENTENCE__LEFT);
     createEReference(andSentenceEClass, AND_SENTENCE__RIGHT);
+
+    pOrSentenceEClass = createEClass(POR_SENTENCE);
+    createEReference(pOrSentenceEClass, POR_SENTENCE__LEFT);
+    createEReference(pOrSentenceEClass, POR_SENTENCE__RIGHT);
+
+    pAndSentenceEClass = createEClass(PAND_SENTENCE);
+    createEReference(pAndSentenceEClass, PAND_SENTENCE__LEFT);
+    createEReference(pAndSentenceEClass, PAND_SENTENCE__RIGHT);
   }
 
   /**
@@ -1441,32 +1813,45 @@ public class LPackageImpl extends EPackageImpl implements LPackage
 
     // Add supertypes to classes
     basicTermEClass.getESuperTypes().add(this.getTerm());
-    variableEClass.getESuperTypes().add(this.getTVar());
     variableEClass.getESuperTypes().add(this.getQuantifiedTerm());
+    variableEClass.getESuperTypes().add(this.getTVar());
     typedVariableEClass.getESuperTypes().add(this.getBasicTerm());
     arithmeticTermEClass.getESuperTypes().add(this.getBasicTerm());
-    arithmeticLiteralEClass.getESuperTypes().add(this.getArithmeticTerm());
+    arithmeticTermEClass.getESuperTypes().add(this.getGroundArithmeticTerm());
+    groundArithmeticTermEClass.getESuperTypes().add(this.getGroundTerm());
     functionalTermEClass.getESuperTypes().add(this.getBasicTerm());
-    basicTermsEClass.getESuperTypes().add(this.getFunctionalTerm());
-    basicTermsEClass.getESuperTypes().add(this.getMaybeLiteral());
+    groundFunctionalTermEClass.getESuperTypes().add(this.getGroundTerm());
+    groundTermsEClass.getESuperTypes().add(this.getGroundFunctionalTerm());
+    quantifiedTermEClass.getESuperTypes().add(this.getTerm());
+    termsEClass.getESuperTypes().add(this.getFunctionalTerm());
     constantDeclarationEClass.getESuperTypes().add(this.getStatement());
     typeDeclarationEClass.getESuperTypes().add(this.getStatement());
-    setLiteralEClass.getESuperTypes().add(this.getSetExpression());
-    quantifiedTermEClass.getESuperTypes().add(this.getTerm());
+    setEClass.getESuperTypes().add(this.getSetExpression());
+    rangeEClass.getESuperTypes().add(this.getSetExpression());
+    setConstructEClass.getESuperTypes().add(this.getSetExpression());
+    atomEClass.getESuperTypes().add(this.getSentenceLiteral());
     predicateAtomEClass.getESuperTypes().add(this.getAtom());
-    predicateAtomEClass.getESuperTypes().add(this.getSentenceLiteral());
+    predicateAtomEClass.getESuperTypes().add(this.getpSentenceLiteral());
+    basicPredicateAtomEClass.getESuperTypes().add(this.getMaybeLiteral());
     builtInAtomEClass.getESuperTypes().add(this.getAtom());
     sentenceExprEClass.getESuperTypes().add(this.getSentence());
+    sentenceExprEClass.getESuperTypes().add(this.getpSentence());
     sentenceLiteralEClass.getESuperTypes().add(this.getSentenceExpr());
+    pSentenceEClass.getESuperTypes().add(this.getHead());
+    pSentenceLiteralEClass.getESuperTypes().add(this.getSentenceExpr());
     maybeLiteralEClass.getESuperTypes().add(this.getHead());
     cardinalityConstraintEClass.getESuperTypes().add(this.getHead());
     ruleEClass.getESuperTypes().add(this.getStatement());
     additionEClass.getESuperTypes().add(this.getArithmeticTerm());
     multiplicationEClass.getESuperTypes().add(this.getArithmeticTerm());
+    groundAdditionEClass.getESuperTypes().add(this.getArithmeticTerm());
+    groundMultiplicationEClass.getESuperTypes().add(this.getArithmeticTerm());
     setAdditionEClass.getESuperTypes().add(this.getSetExpression());
     setMultiplicationEClass.getESuperTypes().add(this.getSetExpression());
     orSentenceEClass.getESuperTypes().add(this.getSentenceExpr());
     andSentenceEClass.getESuperTypes().add(this.getSentenceExpr());
+    pOrSentenceEClass.getESuperTypes().add(this.getSentenceExpr());
+    pAndSentenceEClass.getESuperTypes().add(this.getSentenceExpr());
 
     // Initialize classes and features; add operations and parameters
     initEClass(programEClass, Program.class, "Program", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1485,31 +1870,59 @@ public class LPackageImpl extends EPackageImpl implements LPackage
     initEReference(getTypedVariable_Var(), this.getVariable(), null, "var", null, 0, 1, TypedVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(arithmeticTermEClass, ArithmeticTerm.class, "ArithmeticTerm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getArithmeticTerm_Minus(), ecorePackage.getEString(), "minus", null, 0, 1, ArithmeticTerm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getArithmeticTerm_Term(), ecorePackage.getEObject(), null, "term", null, 0, 1, ArithmeticTerm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getArithmeticTerm_Lhs(), this.getArithmeticTerm(), null, "lhs", null, 0, 1, ArithmeticTerm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getArithmeticTerm_Rhs(), this.getArithmeticTerm(), null, "rhs", null, 0, 1, ArithmeticTerm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(arithmeticLiteralEClass, ArithmeticLiteral.class, "ArithmeticLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getArithmeticLiteral_Identifier(), ecorePackage.getEString(), "identifier", null, 0, 1, ArithmeticLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getArithmeticLiteral_V(), this.getVariable(), null, "v", null, 0, 1, ArithmeticLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getArithmeticLiteral_Tv(), this.getTypedVariable(), null, "tv", null, 0, 1, ArithmeticLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getArithmeticLiteral_Const(), ecorePackage.getEString(), "const", null, 0, 1, ArithmeticLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getArithmeticLiteral_Value(), ecorePackage.getEInt(), "value", null, 0, 1, ArithmeticLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(groundArithmeticTermEClass, GroundArithmeticTerm.class, "GroundArithmeticTerm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(groundArithmeticLiteralEClass, GroundArithmeticLiteral.class, "GroundArithmeticLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getGroundArithmeticLiteral_Identifier(), ecorePackage.getEString(), "identifier", null, 0, 1, GroundArithmeticLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getGroundArithmeticLiteral_Value(), ecorePackage.getEInt(), "value", null, 0, 1, GroundArithmeticLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(functionalTermEClass, FunctionalTerm.class, "FunctionalTerm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(groundFunctionalTermEClass, GroundFunctionalTerm.class, "GroundFunctionalTerm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(basicTermsEClass, BasicTerms.class, "BasicTerms", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getBasicTerms_Car(), this.getBasicTerm(), null, "car", null, 0, 1, BasicTerms.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getBasicTerms_Cdr(), this.getBasicTerm(), null, "cdr", null, 0, -1, BasicTerms.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(groundTermsEClass, GroundTerms.class, "GroundTerms", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getGroundTerms_Car(), this.getGroundTerm(), null, "car", null, 0, 1, GroundTerms.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getGroundTerms_Cdr(), this.getGroundTerm(), null, "cdr", null, 0, -1, GroundTerms.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(groundTermEClass, GroundTerm.class, "GroundTerm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(quantifiedTermEClass, QuantifiedTerm.class, "QuantifiedTerm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(termEClass, Term.class, "Term", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(termsEClass, Terms.class, "Terms", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getTerms_Car(), this.getTerm(), null, "car", null, 0, 1, Terms.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTerms_Cdr(), this.getTerm(), null, "cdr", null, 0, -1, Terms.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(constantDeclarationEClass, ConstantDeclaration.class, "ConstantDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getConstantDeclaration_Id(), ecorePackage.getEString(), "id", null, 0, 1, ConstantDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getConstantDeclaration_Cv(), this.getArithmeticTerm(), null, "cv", null, 0, 1, ConstantDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getConstantDeclaration_Cv(), this.getGroundArithmeticTerm(), null, "cv", null, 0, 1, ConstantDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(typeDeclarationEClass, TypeDeclaration.class, "TypeDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getTypeDeclaration_Id(), ecorePackage.getEString(), "id", null, 0, 1, TypeDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTypeDeclaration_Exp(), this.getSetExpression(), null, "exp", null, 0, 1, TypeDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(limitEClass, Limit.class, "Limit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getLimit_Cv(), this.getArithmeticTerm(), null, "cv", null, 0, 1, Limit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getLimit_Cv(), this.getGroundArithmeticTerm(), null, "cv", null, 0, 1, Limit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(setEClass, Set.class, "Set", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getSet_Lhs(), ecorePackage.getEString(), "lhs", null, 0, 1, Set.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getSet_Terms(), this.getBasicTerms(), null, "terms", null, 0, 1, Set.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSet_Terms(), this.getGroundTerms(), null, "terms", null, 0, 1, Set.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(rangeEClass, Range.class, "Range", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getRange_Lhs(), this.getLimit(), null, "lhs", null, 0, 1, Range.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1527,18 +1940,15 @@ public class LPackageImpl extends EPackageImpl implements LPackage
 
     initEClass(tVarEClass, TVar.class, "TVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(setLiteralEClass, SetLiteral.class, "SetLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getSetLiteral_Value(), ecorePackage.getEString(), "value", null, 0, 1, SetLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(quantifiedTermEClass, QuantifiedTerm.class, "QuantifiedTerm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(termEClass, Term.class, "Term", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
     initEClass(atomEClass, Atom.class, "Atom", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(predicateAtomEClass, PredicateAtom.class, "PredicateAtom", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getPredicateAtom_Fid(), ecorePackage.getEString(), "fid", null, 0, 1, PredicateAtom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPredicateAtom_Terms(), this.getBasicTerms(), null, "terms", null, 0, 1, PredicateAtom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPredicateAtom_Terms(), this.getTerms(), null, "terms", null, 0, 1, PredicateAtom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(basicPredicateAtomEClass, BasicPredicateAtom.class, "BasicPredicateAtom", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getBasicPredicateAtom_Fid(), ecorePackage.getEString(), "fid", null, 0, 1, BasicPredicateAtom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBasicPredicateAtom_Terms(), this.getBasicTerms(), null, "terms", null, 0, 1, BasicPredicateAtom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(builtInAtomEClass, BuiltInAtom.class, "BuiltInAtom", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getBuiltInAtom_Lhs(), this.getBasicTerm(), null, "lhs", null, 0, 1, BuiltInAtom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1551,12 +1961,15 @@ public class LPackageImpl extends EPackageImpl implements LPackage
 
     initEClass(sentenceLiteralEClass, SentenceLiteral.class, "SentenceLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+    initEClass(pSentenceEClass, pSentence.class, "pSentence", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(pSentenceLiteralEClass, pSentenceLiteral.class, "pSentenceLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
     initEClass(maybeLiteralEClass, MaybeLiteral.class, "MaybeLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(cardinalityConstraintEClass, CardinalityConstraint.class, "CardinalityConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getCardinalityConstraint_Lhs(), this.getBound(), null, "lhs", null, 0, 1, CardinalityConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getCardinalityConstraint_Id(), ecorePackage.getEString(), "id", null, 0, 1, CardinalityConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getCardinalityConstraint_Terms(), this.getBasicTerms(), null, "terms", null, 0, 1, CardinalityConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCardinalityConstraint_Atom(), this.getBasicPredicateAtom(), null, "atom", null, 0, 1, CardinalityConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getCardinalityConstraint_Rhs(), this.getBound(), null, "rhs", null, 0, 1, CardinalityConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(boundEClass, Bound.class, "Bound", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1571,12 +1984,12 @@ public class LPackageImpl extends EPackageImpl implements LPackage
     initEClass(statementEClass, Statement.class, "Statement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(additionEClass, Addition.class, "Addition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getAddition_Lhs(), this.getArithmeticTerm(), null, "lhs", null, 0, 1, Addition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAddition_Rhs(), this.getArithmeticTerm(), null, "rhs", null, 0, 1, Addition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(multiplicationEClass, Multiplication.class, "Multiplication", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getMultiplication_Lhs(), this.getArithmeticTerm(), null, "lhs", null, 0, 1, Multiplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getMultiplication_Rhs(), this.getArithmeticTerm(), null, "rhs", null, 0, 1, Multiplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(groundAdditionEClass, GroundAddition.class, "GroundAddition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(groundMultiplicationEClass, GroundMultiplication.class, "GroundMultiplication", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(setAdditionEClass, SetAddition.class, "SetAddition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getSetAddition_Left(), this.getSetExpression(), null, "left", null, 0, 1, SetAddition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1593,6 +2006,14 @@ public class LPackageImpl extends EPackageImpl implements LPackage
     initEClass(andSentenceEClass, AndSentence.class, "AndSentence", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getAndSentence_Left(), this.getSentenceExpr(), null, "left", null, 0, 1, AndSentence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getAndSentence_Right(), this.getSentenceExpr(), null, "right", null, 0, 1, AndSentence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(pOrSentenceEClass, pOrSentence.class, "pOrSentence", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getpOrSentence_Left(), this.getSentenceExpr(), null, "left", null, 0, 1, pOrSentence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getpOrSentence_Right(), this.getSentenceExpr(), null, "right", null, 0, 1, pOrSentence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(pAndSentenceEClass, pAndSentence.class, "pAndSentence", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getpAndSentence_Left(), this.getSentenceExpr(), null, "left", null, 0, 1, pAndSentence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getpAndSentence_Right(), this.getSentenceExpr(), null, "right", null, 0, 1, pAndSentence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

@@ -317,7 +317,7 @@ Bound:
 
 // 1.12 Rules, 1.14.8 Rules
 Rule:
-	head=Head ('if' body=Sentence)? '.'
+	head=Head (condition='if' body=Sentence)? '.'
 ;
 
 Head:

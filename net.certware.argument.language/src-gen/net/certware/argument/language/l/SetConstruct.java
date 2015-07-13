@@ -2,7 +2,6 @@
  */
 package net.certware.argument.language.l;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface SetConstruct extends EObject
+public interface SetConstruct extends SetExpression
 {
   /**
    * Returns the value of the '<em><b>Lhs</b></em>' containment reference.

@@ -12,8 +12,7 @@ package net.certware.argument.language.l;
  * The following features are supported:
  * <ul>
  *   <li>{@link net.certware.argument.language.l.CardinalityConstraint#getLhs <em>Lhs</em>}</li>
- *   <li>{@link net.certware.argument.language.l.CardinalityConstraint#getId <em>Id</em>}</li>
- *   <li>{@link net.certware.argument.language.l.CardinalityConstraint#getTerms <em>Terms</em>}</li>
+ *   <li>{@link net.certware.argument.language.l.CardinalityConstraint#getAtom <em>Atom</em>}</li>
  *   <li>{@link net.certware.argument.language.l.CardinalityConstraint#getRhs <em>Rhs</em>}</li>
  * </ul>
  * </p>
@@ -51,56 +50,30 @@ public interface CardinalityConstraint extends Head
   void setLhs(Bound value);
 
   /**
-   * Returns the value of the '<em><b>Id</b></em>' attribute.
+   * Returns the value of the '<em><b>Atom</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Id</em>' attribute isn't clear,
+   * If the meaning of the '<em>Atom</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Id</em>' attribute.
-   * @see #setId(String)
-   * @see net.certware.argument.language.l.LPackage#getCardinalityConstraint_Id()
-   * @model
-   * @generated
-   */
-  String getId();
-
-  /**
-   * Sets the value of the '{@link net.certware.argument.language.l.CardinalityConstraint#getId <em>Id</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Id</em>' attribute.
-   * @see #getId()
-   * @generated
-   */
-  void setId(String value);
-
-  /**
-   * Returns the value of the '<em><b>Terms</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Terms</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Terms</em>' containment reference.
-   * @see #setTerms(BasicTerms)
-   * @see net.certware.argument.language.l.LPackage#getCardinalityConstraint_Terms()
+   * @return the value of the '<em>Atom</em>' containment reference.
+   * @see #setAtom(BasicPredicateAtom)
+   * @see net.certware.argument.language.l.LPackage#getCardinalityConstraint_Atom()
    * @model containment="true"
    * @generated
    */
-  BasicTerms getTerms();
+  BasicPredicateAtom getAtom();
 
   /**
-   * Sets the value of the '{@link net.certware.argument.language.l.CardinalityConstraint#getTerms <em>Terms</em>}' containment reference.
+   * Sets the value of the '{@link net.certware.argument.language.l.CardinalityConstraint#getAtom <em>Atom</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Terms</em>' containment reference.
-   * @see #getTerms()
+   * @param value the new value of the '<em>Atom</em>' containment reference.
+   * @see #getAtom()
    * @generated
    */
-  void setTerms(BasicTerms value);
+  void setAtom(BasicPredicateAtom value);
 
   /**
    * Returns the value of the '<em><b>Rhs</b></em>' containment reference.

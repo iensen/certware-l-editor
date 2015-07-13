@@ -4,6 +4,8 @@ package net.certware.argument.language.l;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.emf.ecore.EObject;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Basic Terms</b></em>'.
@@ -21,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface BasicTerms extends FunctionalTerm, MaybeLiteral
+public interface BasicTerms extends EObject
 {
   /**
    * Returns the value of the '<em><b>Car</b></em>' containment reference.

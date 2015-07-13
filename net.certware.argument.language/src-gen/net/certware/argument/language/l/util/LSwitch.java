@@ -98,8 +98,8 @@ public class LSwitch<T> extends Switch<T>
       {
         Variable variable = (Variable)theEObject;
         T result = caseVariable(variable);
-        if (result == null) result = caseTVar(variable);
         if (result == null) result = caseQuantifiedTerm(variable);
+        if (result == null) result = caseTVar(variable);
         if (result == null) result = caseTerm(variable);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -118,7 +118,9 @@ public class LSwitch<T> extends Switch<T>
         ArithmeticTerm arithmeticTerm = (ArithmeticTerm)theEObject;
         T result = caseArithmeticTerm(arithmeticTerm);
         if (result == null) result = caseBasicTerm(arithmeticTerm);
+        if (result == null) result = caseGroundArithmeticTerm(arithmeticTerm);
         if (result == null) result = caseTerm(arithmeticTerm);
+        if (result == null) result = caseGroundTerm(arithmeticTerm);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -126,9 +128,21 @@ public class LSwitch<T> extends Switch<T>
       {
         ArithmeticLiteral arithmeticLiteral = (ArithmeticLiteral)theEObject;
         T result = caseArithmeticLiteral(arithmeticLiteral);
-        if (result == null) result = caseArithmeticTerm(arithmeticLiteral);
-        if (result == null) result = caseBasicTerm(arithmeticLiteral);
-        if (result == null) result = caseTerm(arithmeticLiteral);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case LPackage.GROUND_ARITHMETIC_TERM:
+      {
+        GroundArithmeticTerm groundArithmeticTerm = (GroundArithmeticTerm)theEObject;
+        T result = caseGroundArithmeticTerm(groundArithmeticTerm);
+        if (result == null) result = caseGroundTerm(groundArithmeticTerm);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case LPackage.GROUND_ARITHMETIC_LITERAL:
+      {
+        GroundArithmeticLiteral groundArithmeticLiteral = (GroundArithmeticLiteral)theEObject;
+        T result = caseGroundArithmeticLiteral(groundArithmeticLiteral);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -141,15 +155,59 @@ public class LSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case LPackage.GROUND_FUNCTIONAL_TERM:
+      {
+        GroundFunctionalTerm groundFunctionalTerm = (GroundFunctionalTerm)theEObject;
+        T result = caseGroundFunctionalTerm(groundFunctionalTerm);
+        if (result == null) result = caseGroundTerm(groundFunctionalTerm);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case LPackage.BASIC_TERMS:
       {
         BasicTerms basicTerms = (BasicTerms)theEObject;
         T result = caseBasicTerms(basicTerms);
-        if (result == null) result = caseFunctionalTerm(basicTerms);
-        if (result == null) result = caseMaybeLiteral(basicTerms);
-        if (result == null) result = caseBasicTerm(basicTerms);
-        if (result == null) result = caseHead(basicTerms);
-        if (result == null) result = caseTerm(basicTerms);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case LPackage.GROUND_TERMS:
+      {
+        GroundTerms groundTerms = (GroundTerms)theEObject;
+        T result = caseGroundTerms(groundTerms);
+        if (result == null) result = caseGroundFunctionalTerm(groundTerms);
+        if (result == null) result = caseGroundTerm(groundTerms);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case LPackage.GROUND_TERM:
+      {
+        GroundTerm groundTerm = (GroundTerm)theEObject;
+        T result = caseGroundTerm(groundTerm);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case LPackage.QUANTIFIED_TERM:
+      {
+        QuantifiedTerm quantifiedTerm = (QuantifiedTerm)theEObject;
+        T result = caseQuantifiedTerm(quantifiedTerm);
+        if (result == null) result = caseTerm(quantifiedTerm);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case LPackage.TERM:
+      {
+        Term term = (Term)theEObject;
+        T result = caseTerm(term);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case LPackage.TERMS:
+      {
+        Terms terms = (Terms)theEObject;
+        T result = caseTerms(terms);
+        if (result == null) result = caseFunctionalTerm(terms);
+        if (result == null) result = caseBasicTerm(terms);
+        if (result == null) result = caseTerm(terms);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -180,6 +238,7 @@ public class LSwitch<T> extends Switch<T>
       {
         Set set = (Set)theEObject;
         T result = caseSet(set);
+        if (result == null) result = caseSetExpression(set);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -187,6 +246,7 @@ public class LSwitch<T> extends Switch<T>
       {
         Range range = (Range)theEObject;
         T result = caseRange(range);
+        if (result == null) result = caseSetExpression(range);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -201,6 +261,7 @@ public class LSwitch<T> extends Switch<T>
       {
         SetConstruct setConstruct = (SetConstruct)theEObject;
         T result = caseSetConstruct(setConstruct);
+        if (result == null) result = caseSetExpression(setConstruct);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -218,33 +279,15 @@ public class LSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case LPackage.SET_LITERAL:
-      {
-        SetLiteral setLiteral = (SetLiteral)theEObject;
-        T result = caseSetLiteral(setLiteral);
-        if (result == null) result = caseSetExpression(setLiteral);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case LPackage.QUANTIFIED_TERM:
-      {
-        QuantifiedTerm quantifiedTerm = (QuantifiedTerm)theEObject;
-        T result = caseQuantifiedTerm(quantifiedTerm);
-        if (result == null) result = caseTerm(quantifiedTerm);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case LPackage.TERM:
-      {
-        Term term = (Term)theEObject;
-        T result = caseTerm(term);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case LPackage.ATOM:
       {
         Atom atom = (Atom)theEObject;
         T result = caseAtom(atom);
+        if (result == null) result = caseSentenceLiteral(atom);
+        if (result == null) result = caseSentenceExpr(atom);
+        if (result == null) result = caseSentence(atom);
+        if (result == null) result = casepSentence(atom);
+        if (result == null) result = caseHead(atom);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -253,9 +296,21 @@ public class LSwitch<T> extends Switch<T>
         PredicateAtom predicateAtom = (PredicateAtom)theEObject;
         T result = casePredicateAtom(predicateAtom);
         if (result == null) result = caseAtom(predicateAtom);
+        if (result == null) result = casepSentenceLiteral(predicateAtom);
         if (result == null) result = caseSentenceLiteral(predicateAtom);
         if (result == null) result = caseSentenceExpr(predicateAtom);
         if (result == null) result = caseSentence(predicateAtom);
+        if (result == null) result = casepSentence(predicateAtom);
+        if (result == null) result = caseHead(predicateAtom);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case LPackage.BASIC_PREDICATE_ATOM:
+      {
+        BasicPredicateAtom basicPredicateAtom = (BasicPredicateAtom)theEObject;
+        T result = caseBasicPredicateAtom(basicPredicateAtom);
+        if (result == null) result = caseMaybeLiteral(basicPredicateAtom);
+        if (result == null) result = caseHead(basicPredicateAtom);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -264,6 +319,11 @@ public class LSwitch<T> extends Switch<T>
         BuiltInAtom builtInAtom = (BuiltInAtom)theEObject;
         T result = caseBuiltInAtom(builtInAtom);
         if (result == null) result = caseAtom(builtInAtom);
+        if (result == null) result = caseSentenceLiteral(builtInAtom);
+        if (result == null) result = caseSentenceExpr(builtInAtom);
+        if (result == null) result = caseSentence(builtInAtom);
+        if (result == null) result = casepSentence(builtInAtom);
+        if (result == null) result = caseHead(builtInAtom);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -279,6 +339,8 @@ public class LSwitch<T> extends Switch<T>
         SentenceExpr sentenceExpr = (SentenceExpr)theEObject;
         T result = caseSentenceExpr(sentenceExpr);
         if (result == null) result = caseSentence(sentenceExpr);
+        if (result == null) result = casepSentence(sentenceExpr);
+        if (result == null) result = caseHead(sentenceExpr);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -288,6 +350,27 @@ public class LSwitch<T> extends Switch<T>
         T result = caseSentenceLiteral(sentenceLiteral);
         if (result == null) result = caseSentenceExpr(sentenceLiteral);
         if (result == null) result = caseSentence(sentenceLiteral);
+        if (result == null) result = casepSentence(sentenceLiteral);
+        if (result == null) result = caseHead(sentenceLiteral);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case LPackage.PSENTENCE:
+      {
+        pSentence pSentence = (pSentence)theEObject;
+        T result = casepSentence(pSentence);
+        if (result == null) result = caseHead(pSentence);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case LPackage.PSENTENCE_LITERAL:
+      {
+        pSentenceLiteral pSentenceLiteral = (pSentenceLiteral)theEObject;
+        T result = casepSentenceLiteral(pSentenceLiteral);
+        if (result == null) result = caseSentenceExpr(pSentenceLiteral);
+        if (result == null) result = caseSentence(pSentenceLiteral);
+        if (result == null) result = casepSentence(pSentenceLiteral);
+        if (result == null) result = caseHead(pSentenceLiteral);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -342,7 +425,9 @@ public class LSwitch<T> extends Switch<T>
         T result = caseAddition(addition);
         if (result == null) result = caseArithmeticTerm(addition);
         if (result == null) result = caseBasicTerm(addition);
+        if (result == null) result = caseGroundArithmeticTerm(addition);
         if (result == null) result = caseTerm(addition);
+        if (result == null) result = caseGroundTerm(addition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -352,7 +437,33 @@ public class LSwitch<T> extends Switch<T>
         T result = caseMultiplication(multiplication);
         if (result == null) result = caseArithmeticTerm(multiplication);
         if (result == null) result = caseBasicTerm(multiplication);
+        if (result == null) result = caseGroundArithmeticTerm(multiplication);
         if (result == null) result = caseTerm(multiplication);
+        if (result == null) result = caseGroundTerm(multiplication);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case LPackage.GROUND_ADDITION:
+      {
+        GroundAddition groundAddition = (GroundAddition)theEObject;
+        T result = caseGroundAddition(groundAddition);
+        if (result == null) result = caseArithmeticTerm(groundAddition);
+        if (result == null) result = caseBasicTerm(groundAddition);
+        if (result == null) result = caseGroundArithmeticTerm(groundAddition);
+        if (result == null) result = caseTerm(groundAddition);
+        if (result == null) result = caseGroundTerm(groundAddition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case LPackage.GROUND_MULTIPLICATION:
+      {
+        GroundMultiplication groundMultiplication = (GroundMultiplication)theEObject;
+        T result = caseGroundMultiplication(groundMultiplication);
+        if (result == null) result = caseArithmeticTerm(groundMultiplication);
+        if (result == null) result = caseBasicTerm(groundMultiplication);
+        if (result == null) result = caseGroundArithmeticTerm(groundMultiplication);
+        if (result == null) result = caseTerm(groundMultiplication);
+        if (result == null) result = caseGroundTerm(groundMultiplication);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -378,6 +489,8 @@ public class LSwitch<T> extends Switch<T>
         T result = caseOrSentence(orSentence);
         if (result == null) result = caseSentenceExpr(orSentence);
         if (result == null) result = caseSentence(orSentence);
+        if (result == null) result = casepSentence(orSentence);
+        if (result == null) result = caseHead(orSentence);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -387,6 +500,30 @@ public class LSwitch<T> extends Switch<T>
         T result = caseAndSentence(andSentence);
         if (result == null) result = caseSentenceExpr(andSentence);
         if (result == null) result = caseSentence(andSentence);
+        if (result == null) result = casepSentence(andSentence);
+        if (result == null) result = caseHead(andSentence);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case LPackage.POR_SENTENCE:
+      {
+        pOrSentence pOrSentence = (pOrSentence)theEObject;
+        T result = casepOrSentence(pOrSentence);
+        if (result == null) result = caseSentenceExpr(pOrSentence);
+        if (result == null) result = caseSentence(pOrSentence);
+        if (result == null) result = casepSentence(pOrSentence);
+        if (result == null) result = caseHead(pOrSentence);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case LPackage.PAND_SENTENCE:
+      {
+        pAndSentence pAndSentence = (pAndSentence)theEObject;
+        T result = casepAndSentence(pAndSentence);
+        if (result == null) result = caseSentenceExpr(pAndSentence);
+        if (result == null) result = caseSentence(pAndSentence);
+        if (result == null) result = casepSentence(pAndSentence);
+        if (result == null) result = caseHead(pAndSentence);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -507,6 +644,38 @@ public class LSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Ground Arithmetic Term</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Ground Arithmetic Term</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGroundArithmeticTerm(GroundArithmeticTerm object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Ground Arithmetic Literal</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Ground Arithmetic Literal</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGroundArithmeticLiteral(GroundArithmeticLiteral object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Functional Term</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -523,6 +692,22 @@ public class LSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Ground Functional Term</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Ground Functional Term</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGroundFunctionalTerm(GroundFunctionalTerm object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Basic Terms</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -534,6 +719,86 @@ public class LSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseBasicTerms(BasicTerms object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Ground Terms</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Ground Terms</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGroundTerms(GroundTerms object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Ground Term</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Ground Term</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGroundTerm(GroundTerm object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Quantified Term</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Quantified Term</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseQuantifiedTerm(QuantifiedTerm object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Term</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Term</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTerm(Term object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Terms</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Terms</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTerms(Terms object)
   {
     return null;
   }
@@ -683,54 +948,6 @@ public class LSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Set Literal</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Set Literal</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseSetLiteral(SetLiteral object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Quantified Term</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Quantified Term</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseQuantifiedTerm(QuantifiedTerm object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Term</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Term</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseTerm(Term object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Atom</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -758,6 +975,22 @@ public class LSwitch<T> extends Switch<T>
    * @generated
    */
   public T casePredicateAtom(PredicateAtom object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Basic Predicate Atom</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Basic Predicate Atom</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBasicPredicateAtom(BasicPredicateAtom object)
   {
     return null;
   }
@@ -822,6 +1055,38 @@ public class LSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseSentenceLiteral(SentenceLiteral object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>pSentence</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>pSentence</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casepSentence(pSentence object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>pSentence Literal</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>pSentence Literal</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casepSentenceLiteral(pSentenceLiteral object)
   {
     return null;
   }
@@ -955,6 +1220,38 @@ public class LSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Ground Addition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Ground Addition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGroundAddition(GroundAddition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Ground Multiplication</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Ground Multiplication</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGroundMultiplication(GroundMultiplication object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Set Addition</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -1014,6 +1311,38 @@ public class LSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseAndSentence(AndSentence object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>pOr Sentence</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>pOr Sentence</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casepOrSentence(pOrSentence object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>pAnd Sentence</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>pAnd Sentence</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casepAndSentence(pAndSentence object)
   {
     return null;
   }

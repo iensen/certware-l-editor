@@ -13,7 +13,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +28,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class RangeImpl extends MinimalEObjectImpl.Container implements Range
+public class RangeImpl extends SetExpressionImpl implements Range
 {
   /**
    * The cached value of the '{@link #getLhs() <em>Lhs</em>}' containment reference.

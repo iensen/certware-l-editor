@@ -20,7 +20,7 @@ package net.certware.argument.language.l;
  * @model
  * @generated
  */
-public interface PredicateAtom extends Atom, SentenceLiteral
+public interface PredicateAtom extends Atom, pSentenceLiteral
 {
   /**
    * Returns the value of the '<em><b>Fid</b></em>' attribute.
@@ -57,12 +57,12 @@ public interface PredicateAtom extends Atom, SentenceLiteral
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Terms</em>' containment reference.
-   * @see #setTerms(BasicTerms)
+   * @see #setTerms(Terms)
    * @see net.certware.argument.language.l.LPackage#getPredicateAtom_Terms()
    * @model containment="true"
    * @generated
    */
-  BasicTerms getTerms();
+  Terms getTerms();
 
   /**
    * Sets the value of the '{@link net.certware.argument.language.l.PredicateAtom#getTerms <em>Terms</em>}' containment reference.
@@ -72,6 +72,6 @@ public interface PredicateAtom extends Atom, SentenceLiteral
    * @see #getTerms()
    * @generated
    */
-  void setTerms(BasicTerms value);
+  void setTerms(Terms value);
 
 } // PredicateAtom

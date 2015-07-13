@@ -5,11 +5,17 @@ import com.google.inject.Provider;
 import net.certware.argument.language.l.Addition;
 import net.certware.argument.language.l.AndSentence;
 import net.certware.argument.language.l.ArithmeticLiteral;
+import net.certware.argument.language.l.ArithmeticTerm;
+import net.certware.argument.language.l.BasicPredicateAtom;
 import net.certware.argument.language.l.BasicTerms;
 import net.certware.argument.language.l.Bound;
 import net.certware.argument.language.l.BuiltInAtom;
 import net.certware.argument.language.l.CardinalityConstraint;
 import net.certware.argument.language.l.ConstantDeclaration;
+import net.certware.argument.language.l.GroundAddition;
+import net.certware.argument.language.l.GroundArithmeticLiteral;
+import net.certware.argument.language.l.GroundMultiplication;
+import net.certware.argument.language.l.GroundTerms;
 import net.certware.argument.language.l.LPackage;
 import net.certware.argument.language.l.Limit;
 import net.certware.argument.language.l.Multiplication;
@@ -22,12 +28,14 @@ import net.certware.argument.language.l.Rule;
 import net.certware.argument.language.l.Set;
 import net.certware.argument.language.l.SetAddition;
 import net.certware.argument.language.l.SetConstruct;
-import net.certware.argument.language.l.SetLiteral;
 import net.certware.argument.language.l.SetMultiplication;
 import net.certware.argument.language.l.TVars;
+import net.certware.argument.language.l.Terms;
 import net.certware.argument.language.l.TypeDeclaration;
 import net.certware.argument.language.l.TypedVariable;
 import net.certware.argument.language.l.Variable;
+import net.certware.argument.language.l.pAndSentence;
+import net.certware.argument.language.l.pOrSentence;
 import net.certware.argument.language.services.LGrammarAccess;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.serializer.acceptor.ISemanticSequenceAcceptor;
@@ -54,9 +62,6 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				   context == grammarAccess.getAdditionAccess().getAdditionLhsAction_1_0() ||
 				   context == grammarAccess.getArithmeticTermRule() ||
 				   context == grammarAccess.getBasicTermRule() ||
-				   context == grammarAccess.getMultiplicationRule() ||
-				   context == grammarAccess.getMultiplicationAccess().getMultiplicationLhsAction_1_0() ||
-				   context == grammarAccess.getPrimaryRule() ||
 				   context == grammarAccess.getTermRule()) {
 					sequence_Addition(context, (Addition) semanticObject); 
 					return; 
@@ -65,36 +70,62 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case LPackage.AND_SENTENCE:
 				if(context == grammarAccess.getAndSentenceRule() ||
 				   context == grammarAccess.getAndSentenceAccess().getAndSentenceLeftAction_1_0() ||
+				   context == grammarAccess.getHeadRule() ||
 				   context == grammarAccess.getNotSentenceRule() ||
 				   context == grammarAccess.getOrSentenceRule() ||
 				   context == grammarAccess.getOrSentenceAccess().getOrSentenceLeftAction_1_0() ||
 				   context == grammarAccess.getPrimarySentenceRule() ||
-				   context == grammarAccess.getSentenceRule()) {
+				   context == grammarAccess.getSentenceRule() ||
+				   context == grammarAccess.getPAndSentenceRule() ||
+				   context == grammarAccess.getPAndSentenceAccess().getPAndSentenceLeftAction_1_0() ||
+				   context == grammarAccess.getPNotSentenceRule() ||
+				   context == grammarAccess.getPOrSentenceRule() ||
+				   context == grammarAccess.getPOrSentenceAccess().getPOrSentenceLeftAction_1_0() ||
+				   context == grammarAccess.getPPrimarySentenceRule() ||
+				   context == grammarAccess.getPSentenceRule()) {
 					sequence_AndSentence(context, (AndSentence) semanticObject); 
 					return; 
 				}
 				else break;
 			case LPackage.ARITHMETIC_LITERAL:
-				if(context == grammarAccess.getAdditionRule() ||
+				if(context == grammarAccess.getArithmeticLiteralRule()) {
+					sequence_ArithmeticLiteral(context, (ArithmeticLiteral) semanticObject); 
+					return; 
+				}
+				else break;
+			case LPackage.ARITHMETIC_TERM:
+				if(context == grammarAccess.getGroundAdditionRule() ||
+				   context == grammarAccess.getGroundAdditionAccess().getGroundAdditionLhsAction_1_0() ||
+				   context == grammarAccess.getGroundArithmeticTermRule() ||
+				   context == grammarAccess.getGroundMultiplicationRule() ||
+				   context == grammarAccess.getGroundMultiplicationAccess().getGroundMultiplicationLhsAction_1_0() ||
+				   context == grammarAccess.getGroundPrimaryRule() ||
+				   context == grammarAccess.getGroundTermRule()) {
+					sequence_GroundPrimary(context, (ArithmeticTerm) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getAdditionRule() ||
 				   context == grammarAccess.getAdditionAccess().getAdditionLhsAction_1_0() ||
-				   context == grammarAccess.getArithmeticLiteralRule() ||
 				   context == grammarAccess.getArithmeticTermRule() ||
 				   context == grammarAccess.getBasicTermRule() ||
 				   context == grammarAccess.getMultiplicationRule() ||
 				   context == grammarAccess.getMultiplicationAccess().getMultiplicationLhsAction_1_0() ||
 				   context == grammarAccess.getPrimaryRule() ||
 				   context == grammarAccess.getTermRule()) {
-					sequence_ArithmeticLiteral(context, (ArithmeticLiteral) semanticObject); 
+					sequence_Primary(context, (ArithmeticTerm) semanticObject); 
+					return; 
+				}
+				else break;
+			case LPackage.BASIC_PREDICATE_ATOM:
+				if(context == grammarAccess.getBasicPredicateAtomRule() ||
+				   context == grammarAccess.getHeadRule() ||
+				   context == grammarAccess.getMaybeLiteralRule()) {
+					sequence_BasicPredicateAtom(context, (BasicPredicateAtom) semanticObject); 
 					return; 
 				}
 				else break;
 			case LPackage.BASIC_TERMS:
-				if(context == grammarAccess.getBasicTermRule() ||
-				   context == grammarAccess.getBasicTermsRule() ||
-				   context == grammarAccess.getFunctionalTermRule() ||
-				   context == grammarAccess.getHeadRule() ||
-				   context == grammarAccess.getMaybeLiteralRule() ||
-				   context == grammarAccess.getTermRule()) {
+				if(context == grammarAccess.getBasicTermsRule()) {
 					sequence_BasicTerms(context, (BasicTerms) semanticObject); 
 					return; 
 				}
@@ -106,8 +137,24 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case LPackage.BUILT_IN_ATOM:
-				if(context == grammarAccess.getAtomRule() ||
-				   context == grammarAccess.getBuiltInAtomRule()) {
+				if(context == grammarAccess.getAndSentenceRule() ||
+				   context == grammarAccess.getAndSentenceAccess().getAndSentenceLeftAction_1_0() ||
+				   context == grammarAccess.getAtomRule() ||
+				   context == grammarAccess.getBuiltInAtomRule() ||
+				   context == grammarAccess.getHeadRule() ||
+				   context == grammarAccess.getNotSentenceRule() ||
+				   context == grammarAccess.getOrSentenceRule() ||
+				   context == grammarAccess.getOrSentenceAccess().getOrSentenceLeftAction_1_0() ||
+				   context == grammarAccess.getPrimarySentenceRule() ||
+				   context == grammarAccess.getSentenceRule() ||
+				   context == grammarAccess.getSentenceLiteralRule() ||
+				   context == grammarAccess.getPAndSentenceRule() ||
+				   context == grammarAccess.getPAndSentenceAccess().getPAndSentenceLeftAction_1_0() ||
+				   context == grammarAccess.getPNotSentenceRule() ||
+				   context == grammarAccess.getPOrSentenceRule() ||
+				   context == grammarAccess.getPOrSentenceAccess().getPOrSentenceLeftAction_1_0() ||
+				   context == grammarAccess.getPPrimarySentenceRule() ||
+				   context == grammarAccess.getPSentenceRule()) {
 					sequence_BuiltInAtom(context, (BuiltInAtom) semanticObject); 
 					return; 
 				}
@@ -126,6 +173,40 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
+			case LPackage.GROUND_ADDITION:
+				if(context == grammarAccess.getGroundAdditionRule() ||
+				   context == grammarAccess.getGroundAdditionAccess().getGroundAdditionLhsAction_1_0() ||
+				   context == grammarAccess.getGroundArithmeticTermRule() ||
+				   context == grammarAccess.getGroundTermRule()) {
+					sequence_GroundAddition(context, (GroundAddition) semanticObject); 
+					return; 
+				}
+				else break;
+			case LPackage.GROUND_ARITHMETIC_LITERAL:
+				if(context == grammarAccess.getGroundArithmeticLiteralRule()) {
+					sequence_GroundArithmeticLiteral(context, (GroundArithmeticLiteral) semanticObject); 
+					return; 
+				}
+				else break;
+			case LPackage.GROUND_MULTIPLICATION:
+				if(context == grammarAccess.getGroundAdditionRule() ||
+				   context == grammarAccess.getGroundAdditionAccess().getGroundAdditionLhsAction_1_0() ||
+				   context == grammarAccess.getGroundArithmeticTermRule() ||
+				   context == grammarAccess.getGroundMultiplicationRule() ||
+				   context == grammarAccess.getGroundMultiplicationAccess().getGroundMultiplicationLhsAction_1_0() ||
+				   context == grammarAccess.getGroundTermRule()) {
+					sequence_GroundMultiplication(context, (GroundMultiplication) semanticObject); 
+					return; 
+				}
+				else break;
+			case LPackage.GROUND_TERMS:
+				if(context == grammarAccess.getGroundFunctionalTermRule() ||
+				   context == grammarAccess.getGroundTermRule() ||
+				   context == grammarAccess.getGroundTermsRule()) {
+					sequence_GroundTerms(context, (GroundTerms) semanticObject); 
+					return; 
+				}
+				else break;
 			case LPackage.LIMIT:
 				if(context == grammarAccess.getLimitRule()) {
 					sequence_Limit(context, (Limit) semanticObject); 
@@ -139,7 +220,6 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				   context == grammarAccess.getBasicTermRule() ||
 				   context == grammarAccess.getMultiplicationRule() ||
 				   context == grammarAccess.getMultiplicationAccess().getMultiplicationLhsAction_1_0() ||
-				   context == grammarAccess.getPrimaryRule() ||
 				   context == grammarAccess.getTermRule()) {
 					sequence_Multiplication(context, (Multiplication) semanticObject); 
 					return; 
@@ -154,11 +234,19 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case LPackage.OR_SENTENCE:
 				if(context == grammarAccess.getAndSentenceRule() ||
 				   context == grammarAccess.getAndSentenceAccess().getAndSentenceLeftAction_1_0() ||
+				   context == grammarAccess.getHeadRule() ||
 				   context == grammarAccess.getNotSentenceRule() ||
 				   context == grammarAccess.getOrSentenceRule() ||
 				   context == grammarAccess.getOrSentenceAccess().getOrSentenceLeftAction_1_0() ||
 				   context == grammarAccess.getPrimarySentenceRule() ||
-				   context == grammarAccess.getSentenceRule()) {
+				   context == grammarAccess.getSentenceRule() ||
+				   context == grammarAccess.getPAndSentenceRule() ||
+				   context == grammarAccess.getPAndSentenceAccess().getPAndSentenceLeftAction_1_0() ||
+				   context == grammarAccess.getPNotSentenceRule() ||
+				   context == grammarAccess.getPOrSentenceRule() ||
+				   context == grammarAccess.getPOrSentenceAccess().getPOrSentenceLeftAction_1_0() ||
+				   context == grammarAccess.getPPrimarySentenceRule() ||
+				   context == grammarAccess.getPSentenceRule()) {
 					sequence_OrSentence(context, (OrSentence) semanticObject); 
 					return; 
 				}
@@ -167,13 +255,22 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				if(context == grammarAccess.getAndSentenceRule() ||
 				   context == grammarAccess.getAndSentenceAccess().getAndSentenceLeftAction_1_0() ||
 				   context == grammarAccess.getAtomRule() ||
+				   context == grammarAccess.getHeadRule() ||
 				   context == grammarAccess.getNotSentenceRule() ||
 				   context == grammarAccess.getOrSentenceRule() ||
 				   context == grammarAccess.getOrSentenceAccess().getOrSentenceLeftAction_1_0() ||
 				   context == grammarAccess.getPredicateAtomRule() ||
 				   context == grammarAccess.getPrimarySentenceRule() ||
 				   context == grammarAccess.getSentenceRule() ||
-				   context == grammarAccess.getSentenceLiteralRule()) {
+				   context == grammarAccess.getSentenceLiteralRule() ||
+				   context == grammarAccess.getPAndSentenceRule() ||
+				   context == grammarAccess.getPAndSentenceAccess().getPAndSentenceLeftAction_1_0() ||
+				   context == grammarAccess.getPNotSentenceRule() ||
+				   context == grammarAccess.getPOrSentenceRule() ||
+				   context == grammarAccess.getPOrSentenceAccess().getPOrSentenceLeftAction_1_0() ||
+				   context == grammarAccess.getPPrimarySentenceRule() ||
+				   context == grammarAccess.getPSentenceRule() ||
+				   context == grammarAccess.getPSentenceLiteralRule()) {
 					sequence_PredicateAtom(context, (PredicateAtom) semanticObject); 
 					return; 
 				}
@@ -185,7 +282,14 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case LPackage.RANGE:
-				if(context == grammarAccess.getRangeRule()) {
+				if(context == grammarAccess.getRangeRule() ||
+				   context == grammarAccess.getSetAdditionRule() ||
+				   context == grammarAccess.getSetAdditionAccess().getSetAdditionLeftAction_1_0() ||
+				   context == grammarAccess.getSetExpressionRule() ||
+				   context == grammarAccess.getSetLiteralRule() ||
+				   context == grammarAccess.getSetMultiplicationRule() ||
+				   context == grammarAccess.getSetMultiplicationAccess().getSetMultiplicationLeftAction_1_0() ||
+				   context == grammarAccess.getSetPrimaryRule()) {
 					sequence_Range(context, (Range) semanticObject); 
 					return; 
 				}
@@ -198,7 +302,14 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case LPackage.SET:
-				if(context == grammarAccess.getSetRule()) {
+				if(context == grammarAccess.getSetRule() ||
+				   context == grammarAccess.getSetAdditionRule() ||
+				   context == grammarAccess.getSetAdditionAccess().getSetAdditionLeftAction_1_0() ||
+				   context == grammarAccess.getSetExpressionRule() ||
+				   context == grammarAccess.getSetLiteralRule() ||
+				   context == grammarAccess.getSetMultiplicationRule() ||
+				   context == grammarAccess.getSetMultiplicationAccess().getSetMultiplicationLeftAction_1_0() ||
+				   context == grammarAccess.getSetPrimaryRule()) {
 					sequence_Set(context, (Set) semanticObject); 
 					return; 
 				}
@@ -215,20 +326,15 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case LPackage.SET_CONSTRUCT:
-				if(context == grammarAccess.getSetConstructRule()) {
-					sequence_SetConstruct(context, (SetConstruct) semanticObject); 
-					return; 
-				}
-				else break;
-			case LPackage.SET_LITERAL:
 				if(context == grammarAccess.getSetAdditionRule() ||
 				   context == grammarAccess.getSetAdditionAccess().getSetAdditionLeftAction_1_0() ||
+				   context == grammarAccess.getSetConstructRule() ||
 				   context == grammarAccess.getSetExpressionRule() ||
 				   context == grammarAccess.getSetLiteralRule() ||
 				   context == grammarAccess.getSetMultiplicationRule() ||
 				   context == grammarAccess.getSetMultiplicationAccess().getSetMultiplicationLeftAction_1_0() ||
 				   context == grammarAccess.getSetPrimaryRule()) {
-					sequence_SetLiteral(context, (SetLiteral) semanticObject); 
+					sequence_SetConstruct(context, (SetConstruct) semanticObject); 
 					return; 
 				}
 				else break;
@@ -246,6 +352,15 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case LPackage.TVARS:
 				if(context == grammarAccess.getTVarsRule()) {
 					sequence_TVars(context, (TVars) semanticObject); 
+					return; 
+				}
+				else break;
+			case LPackage.TERMS:
+				if(context == grammarAccess.getBasicTermRule() ||
+				   context == grammarAccess.getFunctionalTermRule() ||
+				   context == grammarAccess.getTermRule() ||
+				   context == grammarAccess.getTermsRule()) {
+					sequence_Terms(context, (Terms) semanticObject); 
 					return; 
 				}
 				else break;
@@ -273,6 +388,26 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
+			case LPackage.PAND_SENTENCE:
+				if(context == grammarAccess.getHeadRule() ||
+				   context == grammarAccess.getPAndSentenceRule() ||
+				   context == grammarAccess.getPAndSentenceAccess().getPAndSentenceLeftAction_1_0() ||
+				   context == grammarAccess.getPOrSentenceRule() ||
+				   context == grammarAccess.getPOrSentenceAccess().getPOrSentenceLeftAction_1_0() ||
+				   context == grammarAccess.getPSentenceRule()) {
+					sequence_pAndSentence(context, (pAndSentence) semanticObject); 
+					return; 
+				}
+				else break;
+			case LPackage.POR_SENTENCE:
+				if(context == grammarAccess.getHeadRule() ||
+				   context == grammarAccess.getPOrSentenceRule() ||
+				   context == grammarAccess.getPOrSentenceAccess().getPOrSentenceLeftAction_1_0() ||
+				   context == grammarAccess.getPSentenceRule()) {
+					sequence_pOrSentence(context, (pOrSentence) semanticObject); 
+					return; 
+				}
+				else break;
 			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
@@ -282,17 +417,7 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (lhs=Addition_Addition_1_0 rhs=Multiplication)
 	 */
 	protected void sequence_Addition(EObject context, Addition semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LPackage.Literals.ADDITION__LHS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LPackage.Literals.ADDITION__LHS));
-			if(transientValues.isValueTransient(semanticObject, LPackage.Literals.ADDITION__RHS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LPackage.Literals.ADDITION__RHS));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getAdditionAccess().getAdditionLhsAction_1_0(), semanticObject.getLhs());
-		feeder.accept(grammarAccess.getAdditionAccess().getRhsMultiplicationParserRuleCall_1_2_0(), semanticObject.getRhs());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -317,9 +442,18 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (identifier=ID | value=INT)
+	 *     (v=Variable | tv=TypedVariable | const=LID | value=INT)
 	 */
 	protected void sequence_ArithmeticLiteral(EObject context, ArithmeticLiteral semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (fid=LID terms=BasicTerms?)
+	 */
+	protected void sequence_BasicPredicateAtom(EObject context, BasicPredicateAtom semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -373,32 +507,29 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (lhs=Bound id=ID terms=BasicTerms rhs=Bound)
+	 *     (lhs=Bound atom=BasicPredicateAtom rhs=Bound)
 	 */
 	protected void sequence_CardinalityConstraint(EObject context, CardinalityConstraint semanticObject) {
 		if(errorAcceptor != null) {
 			if(transientValues.isValueTransient(semanticObject, LPackage.Literals.CARDINALITY_CONSTRAINT__LHS) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LPackage.Literals.CARDINALITY_CONSTRAINT__LHS));
-			if(transientValues.isValueTransient(semanticObject, LPackage.Literals.CARDINALITY_CONSTRAINT__ID) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LPackage.Literals.CARDINALITY_CONSTRAINT__ID));
-			if(transientValues.isValueTransient(semanticObject, LPackage.Literals.CARDINALITY_CONSTRAINT__TERMS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LPackage.Literals.CARDINALITY_CONSTRAINT__TERMS));
+			if(transientValues.isValueTransient(semanticObject, LPackage.Literals.CARDINALITY_CONSTRAINT__ATOM) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LPackage.Literals.CARDINALITY_CONSTRAINT__ATOM));
 			if(transientValues.isValueTransient(semanticObject, LPackage.Literals.CARDINALITY_CONSTRAINT__RHS) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LPackage.Literals.CARDINALITY_CONSTRAINT__RHS));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getCardinalityConstraintAccess().getLhsBoundParserRuleCall_0_0(), semanticObject.getLhs());
-		feeder.accept(grammarAccess.getCardinalityConstraintAccess().getIdIDTerminalRuleCall_4_0(), semanticObject.getId());
-		feeder.accept(grammarAccess.getCardinalityConstraintAccess().getTermsBasicTermsParserRuleCall_6_0(), semanticObject.getTerms());
-		feeder.accept(grammarAccess.getCardinalityConstraintAccess().getRhsBoundParserRuleCall_11_0(), semanticObject.getRhs());
+		feeder.accept(grammarAccess.getCardinalityConstraintAccess().getAtomBasicPredicateAtomParserRuleCall_4_0(), semanticObject.getAtom());
+		feeder.accept(grammarAccess.getCardinalityConstraintAccess().getRhsBoundParserRuleCall_8_0(), semanticObject.getRhs());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (id=LID cv=ArithmeticTerm)
+	 *     (id=LID cv=GroundArithmeticTerm)
 	 */
 	protected void sequence_ConstantDeclaration(EObject context, ConstantDeclaration semanticObject) {
 		if(errorAcceptor != null) {
@@ -409,15 +540,60 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getConstantDeclarationAccess().getIdLIDTerminalRuleCall_0_0(), semanticObject.getId());
-		feeder.accept(grammarAccess.getConstantDeclarationAccess().getCvArithmeticTermParserRuleCall_2_0(), semanticObject.getCv());
+		feeder.accept(grammarAccess.getConstantDeclarationAccess().getIdLIDTerminalRuleCall_1_0(), semanticObject.getId());
+		feeder.accept(grammarAccess.getConstantDeclarationAccess().getCvGroundArithmeticTermParserRuleCall_3_0(), semanticObject.getCv());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     cv=ArithmeticTerm
+	 *     (lhs=GroundAddition_GroundAddition_1_0 rhs=GroundMultiplication)
+	 */
+	protected void sequence_GroundAddition(EObject context, GroundAddition semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (identifier=LID | value=INT)
+	 */
+	protected void sequence_GroundArithmeticLiteral(EObject context, GroundArithmeticLiteral semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (lhs=GroundMultiplication_GroundMultiplication_1_0 rhs=Primary)
+	 */
+	protected void sequence_GroundMultiplication(EObject context, GroundMultiplication semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     ((minus='-'? term=GroundArithmeticLiteral) | (minus='-'? term=Addition))
+	 */
+	protected void sequence_GroundPrimary(EObject context, ArithmeticTerm semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (car=GroundTerm cdr+=GroundTerm*)
+	 */
+	protected void sequence_GroundTerms(EObject context, GroundTerms semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     cv=GroundArithmeticTerm
 	 */
 	protected void sequence_Limit(EObject context, Limit semanticObject) {
 		if(errorAcceptor != null) {
@@ -426,7 +602,7 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getLimitAccess().getCvArithmeticTermParserRuleCall_0(), semanticObject.getCv());
+		feeder.accept(grammarAccess.getLimitAccess().getCvGroundArithmeticTermParserRuleCall_0(), semanticObject.getCv());
 		feeder.finish();
 	}
 	
@@ -436,17 +612,7 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (lhs=Multiplication_Multiplication_1_0 rhs=Primary)
 	 */
 	protected void sequence_Multiplication(EObject context, Multiplication semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LPackage.Literals.MULTIPLICATION__LHS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LPackage.Literals.MULTIPLICATION__LHS));
-			if(transientValues.isValueTransient(semanticObject, LPackage.Literals.MULTIPLICATION__RHS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LPackage.Literals.MULTIPLICATION__RHS));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getMultiplicationAccess().getMultiplicationLhsAction_1_0(), semanticObject.getLhs());
-		feeder.accept(grammarAccess.getMultiplicationAccess().getRhsPrimaryParserRuleCall_1_2_0(), semanticObject.getRhs());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -487,9 +653,18 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (fid=ID terms=BasicTerms?)
+	 *     (fid=LID terms=Terms?)
 	 */
 	protected void sequence_PredicateAtom(EObject context, PredicateAtom semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     ((minus='-'? term=ArithmeticLiteral) | (minus='-'? term=Addition))
+	 */
+	protected void sequence_Primary(EObject context, ArithmeticTerm semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -571,15 +746,6 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (value='set' | value='range' | value='set_constr')
-	 */
-	protected void sequence_SetLiteral(EObject context, SetLiteral semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
 	 *     (left=SetMultiplication_SetMultiplication_1_0 right=SetPrimary)
 	 */
 	protected void sequence_SetMultiplication(EObject context, SetMultiplication semanticObject) {
@@ -599,7 +765,7 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (lhs='{' terms=BasicTerms?)
+	 *     (lhs='{' terms=GroundTerms?)
 	 */
 	protected void sequence_Set(EObject context, Set semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -617,7 +783,16 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (id=ID exp=SetExpression)
+	 *     (car=Term cdr+=Term*)
+	 */
+	protected void sequence_Terms(EObject context, Terms semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (id=LID exp=SetExpression)
 	 */
 	protected void sequence_TypeDeclaration(EObject context, TypeDeclaration semanticObject) {
 		if(errorAcceptor != null) {
@@ -628,15 +803,15 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getTypeDeclarationAccess().getIdIDTerminalRuleCall_0_0(), semanticObject.getId());
-		feeder.accept(grammarAccess.getTypeDeclarationAccess().getExpSetExpressionParserRuleCall_2_0(), semanticObject.getExp());
+		feeder.accept(grammarAccess.getTypeDeclarationAccess().getIdLIDTerminalRuleCall_1_0(), semanticObject.getId());
+		feeder.accept(grammarAccess.getTypeDeclarationAccess().getExpSetExpressionParserRuleCall_3_0(), semanticObject.getExp());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (type=ID var=Variable)
+	 *     (type=LID var=Variable)
 	 */
 	protected void sequence_TypedVariable(EObject context, TypedVariable semanticObject) {
 		if(errorAcceptor != null) {
@@ -647,7 +822,7 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getTypedVariableAccess().getTypeIDTerminalRuleCall_0_0(), semanticObject.getType());
+		feeder.accept(grammarAccess.getTypedVariableAccess().getTypeLIDTerminalRuleCall_0_0(), semanticObject.getType());
 		feeder.accept(grammarAccess.getTypedVariableAccess().getVarVariableParserRuleCall_1_0(), semanticObject.getVar());
 		feeder.finish();
 	}
@@ -665,6 +840,44 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getVariableAccess().getIdentifierUIDTerminalRuleCall_0(), semanticObject.getIdentifier());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (left=pAndSentence_pAndSentence_1_0 right=pNotSentence)
+	 */
+	protected void sequence_pAndSentence(EObject context, pAndSentence semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, LPackage.Literals.PAND_SENTENCE__LEFT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LPackage.Literals.PAND_SENTENCE__LEFT));
+			if(transientValues.isValueTransient(semanticObject, LPackage.Literals.PAND_SENTENCE__RIGHT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LPackage.Literals.PAND_SENTENCE__RIGHT));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getPAndSentenceAccess().getPAndSentenceLeftAction_1_0(), semanticObject.getLeft());
+		feeder.accept(grammarAccess.getPAndSentenceAccess().getRightPNotSentenceParserRuleCall_1_2_0(), semanticObject.getRight());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (left=pOrSentence_pOrSentence_1_0 right=pAndSentence)
+	 */
+	protected void sequence_pOrSentence(EObject context, pOrSentence semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, LPackage.Literals.POR_SENTENCE__LEFT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LPackage.Literals.POR_SENTENCE__LEFT));
+			if(transientValues.isValueTransient(semanticObject, LPackage.Literals.POR_SENTENCE__RIGHT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LPackage.Literals.POR_SENTENCE__RIGHT));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getPOrSentenceAccess().getPOrSentenceLeftAction_1_0(), semanticObject.getLeft());
+		feeder.accept(grammarAccess.getPOrSentenceAccess().getRightPAndSentenceParserRuleCall_1_2_0(), semanticObject.getRight());
 		feeder.finish();
 	}
 }

@@ -2,7 +2,7 @@
  */
 package net.certware.argument.language.l.impl;
 
-import net.certware.argument.language.l.BasicTerms;
+import net.certware.argument.language.l.GroundTerms;
 import net.certware.argument.language.l.LPackage;
 import net.certware.argument.language.l.Set;
 
@@ -13,7 +13,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +28,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class SetImpl extends MinimalEObjectImpl.Container implements Set
+public class SetImpl extends SetExpressionImpl implements Set
 {
   /**
    * The default value of the '{@link #getLhs() <em>Lhs</em>}' attribute.
@@ -59,7 +58,7 @@ public class SetImpl extends MinimalEObjectImpl.Container implements Set
    * @generated
    * @ordered
    */
-  protected BasicTerms terms;
+  protected GroundTerms terms;
 
   /**
    * <!-- begin-user-doc -->
@@ -110,7 +109,7 @@ public class SetImpl extends MinimalEObjectImpl.Container implements Set
    * <!-- end-user-doc -->
    * @generated
    */
-  public BasicTerms getTerms()
+  public GroundTerms getTerms()
   {
     return terms;
   }
@@ -120,9 +119,9 @@ public class SetImpl extends MinimalEObjectImpl.Container implements Set
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetTerms(BasicTerms newTerms, NotificationChain msgs)
+  public NotificationChain basicSetTerms(GroundTerms newTerms, NotificationChain msgs)
   {
-    BasicTerms oldTerms = terms;
+    GroundTerms oldTerms = terms;
     terms = newTerms;
     if (eNotificationRequired())
     {
@@ -137,7 +136,7 @@ public class SetImpl extends MinimalEObjectImpl.Container implements Set
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setTerms(BasicTerms newTerms)
+  public void setTerms(GroundTerms newTerms)
   {
     if (newTerms != terms)
     {
@@ -201,7 +200,7 @@ public class SetImpl extends MinimalEObjectImpl.Container implements Set
         setLhs((String)newValue);
         return;
       case LPackage.SET__TERMS:
-        setTerms((BasicTerms)newValue);
+        setTerms((GroundTerms)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -221,7 +220,7 @@ public class SetImpl extends MinimalEObjectImpl.Container implements Set
         setLhs(LHS_EDEFAULT);
         return;
       case LPackage.SET__TERMS:
-        setTerms((BasicTerms)null);
+        setTerms((GroundTerms)null);
         return;
     }
     super.eUnset(featureID);

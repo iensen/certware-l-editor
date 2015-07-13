@@ -92,7 +92,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getTerm()
    * @generated
    */
-  int TERM = 20;
+  int TERM = 15;
 
   /**
    * The number of structural features of the '<em>Term</em>' class.
@@ -151,23 +151,23 @@ public interface LPackage extends EPackage
   int NUMERIC_CONSTANT_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link net.certware.argument.language.l.impl.TVarImpl <em>TVar</em>}' class.
+   * The meta object id for the '{@link net.certware.argument.language.l.impl.QuantifiedTermImpl <em>Quantified Term</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see net.certware.argument.language.l.impl.TVarImpl
-   * @see net.certware.argument.language.l.impl.LPackageImpl#getTVar()
+   * @see net.certware.argument.language.l.impl.QuantifiedTermImpl
+   * @see net.certware.argument.language.l.impl.LPackageImpl#getQuantifiedTerm()
    * @generated
    */
-  int TVAR = 17;
+  int QUANTIFIED_TERM = 14;
 
   /**
-   * The number of structural features of the '<em>TVar</em>' class.
+   * The number of structural features of the '<em>Quantified Term</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TVAR_FEATURE_COUNT = 0;
+  int QUANTIFIED_TERM_FEATURE_COUNT = TERM_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link net.certware.argument.language.l.impl.VariableImpl <em>Variable</em>}' class.
@@ -186,7 +186,7 @@ public interface LPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VARIABLE__IDENTIFIER = TVAR_FEATURE_COUNT + 0;
+  int VARIABLE__IDENTIFIER = QUANTIFIED_TERM_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Variable</em>' class.
@@ -195,7 +195,7 @@ public interface LPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VARIABLE_FEATURE_COUNT = TVAR_FEATURE_COUNT + 1;
+  int VARIABLE_FEATURE_COUNT = QUANTIFIED_TERM_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link net.certware.argument.language.l.impl.TypedVariableImpl <em>Typed Variable</em>}' class.
@@ -245,13 +245,49 @@ public interface LPackage extends EPackage
   int ARITHMETIC_TERM = 5;
 
   /**
+   * The feature id for the '<em><b>Minus</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARITHMETIC_TERM__MINUS = BASIC_TERM_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Term</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARITHMETIC_TERM__TERM = BASIC_TERM_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Lhs</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARITHMETIC_TERM__LHS = BASIC_TERM_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Rhs</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARITHMETIC_TERM__RHS = BASIC_TERM_FEATURE_COUNT + 3;
+
+  /**
    * The number of structural features of the '<em>Arithmetic Term</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ARITHMETIC_TERM_FEATURE_COUNT = BASIC_TERM_FEATURE_COUNT + 0;
+  int ARITHMETIC_TERM_FEATURE_COUNT = BASIC_TERM_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link net.certware.argument.language.l.impl.ArithmeticLiteralImpl <em>Arithmetic Literal</em>}' class.
@@ -264,13 +300,31 @@ public interface LPackage extends EPackage
   int ARITHMETIC_LITERAL = 6;
 
   /**
-   * The feature id for the '<em><b>Identifier</b></em>' attribute.
+   * The feature id for the '<em><b>V</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ARITHMETIC_LITERAL__IDENTIFIER = ARITHMETIC_TERM_FEATURE_COUNT + 0;
+  int ARITHMETIC_LITERAL__V = 0;
+
+  /**
+   * The feature id for the '<em><b>Tv</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARITHMETIC_LITERAL__TV = 1;
+
+  /**
+   * The feature id for the '<em><b>Const</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARITHMETIC_LITERAL__CONST = 2;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -279,7 +333,7 @@ public interface LPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ARITHMETIC_LITERAL__VALUE = ARITHMETIC_TERM_FEATURE_COUNT + 1;
+  int ARITHMETIC_LITERAL__VALUE = 3;
 
   /**
    * The number of structural features of the '<em>Arithmetic Literal</em>' class.
@@ -288,7 +342,82 @@ public interface LPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ARITHMETIC_LITERAL_FEATURE_COUNT = ARITHMETIC_TERM_FEATURE_COUNT + 2;
+  int ARITHMETIC_LITERAL_FEATURE_COUNT = 4;
+
+  /**
+   * The meta object id for the '{@link net.certware.argument.language.l.impl.GroundTermImpl <em>Ground Term</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see net.certware.argument.language.l.impl.GroundTermImpl
+   * @see net.certware.argument.language.l.impl.LPackageImpl#getGroundTerm()
+   * @generated
+   */
+  int GROUND_TERM = 13;
+
+  /**
+   * The number of structural features of the '<em>Ground Term</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GROUND_TERM_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link net.certware.argument.language.l.impl.GroundArithmeticTermImpl <em>Ground Arithmetic Term</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see net.certware.argument.language.l.impl.GroundArithmeticTermImpl
+   * @see net.certware.argument.language.l.impl.LPackageImpl#getGroundArithmeticTerm()
+   * @generated
+   */
+  int GROUND_ARITHMETIC_TERM = 7;
+
+  /**
+   * The number of structural features of the '<em>Ground Arithmetic Term</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GROUND_ARITHMETIC_TERM_FEATURE_COUNT = GROUND_TERM_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link net.certware.argument.language.l.impl.GroundArithmeticLiteralImpl <em>Ground Arithmetic Literal</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see net.certware.argument.language.l.impl.GroundArithmeticLiteralImpl
+   * @see net.certware.argument.language.l.impl.LPackageImpl#getGroundArithmeticLiteral()
+   * @generated
+   */
+  int GROUND_ARITHMETIC_LITERAL = 8;
+
+  /**
+   * The feature id for the '<em><b>Identifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GROUND_ARITHMETIC_LITERAL__IDENTIFIER = 0;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GROUND_ARITHMETIC_LITERAL__VALUE = 1;
+
+  /**
+   * The number of structural features of the '<em>Ground Arithmetic Literal</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GROUND_ARITHMETIC_LITERAL_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link net.certware.argument.language.l.impl.FunctionalTermImpl <em>Functional Term</em>}' class.
@@ -298,7 +427,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getFunctionalTerm()
    * @generated
    */
-  int FUNCTIONAL_TERM = 7;
+  int FUNCTIONAL_TERM = 9;
 
   /**
    * The number of structural features of the '<em>Functional Term</em>' class.
@@ -310,6 +439,25 @@ public interface LPackage extends EPackage
   int FUNCTIONAL_TERM_FEATURE_COUNT = BASIC_TERM_FEATURE_COUNT + 0;
 
   /**
+   * The meta object id for the '{@link net.certware.argument.language.l.impl.GroundFunctionalTermImpl <em>Ground Functional Term</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see net.certware.argument.language.l.impl.GroundFunctionalTermImpl
+   * @see net.certware.argument.language.l.impl.LPackageImpl#getGroundFunctionalTerm()
+   * @generated
+   */
+  int GROUND_FUNCTIONAL_TERM = 10;
+
+  /**
+   * The number of structural features of the '<em>Ground Functional Term</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GROUND_FUNCTIONAL_TERM_FEATURE_COUNT = GROUND_TERM_FEATURE_COUNT + 0;
+
+  /**
    * The meta object id for the '{@link net.certware.argument.language.l.impl.BasicTermsImpl <em>Basic Terms</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -317,7 +465,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getBasicTerms()
    * @generated
    */
-  int BASIC_TERMS = 8;
+  int BASIC_TERMS = 11;
 
   /**
    * The feature id for the '<em><b>Car</b></em>' containment reference.
@@ -326,7 +474,7 @@ public interface LPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BASIC_TERMS__CAR = FUNCTIONAL_TERM_FEATURE_COUNT + 0;
+  int BASIC_TERMS__CAR = 0;
 
   /**
    * The feature id for the '<em><b>Cdr</b></em>' containment reference list.
@@ -335,7 +483,7 @@ public interface LPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BASIC_TERMS__CDR = FUNCTIONAL_TERM_FEATURE_COUNT + 1;
+  int BASIC_TERMS__CDR = 1;
 
   /**
    * The number of structural features of the '<em>Basic Terms</em>' class.
@@ -344,7 +492,81 @@ public interface LPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BASIC_TERMS_FEATURE_COUNT = FUNCTIONAL_TERM_FEATURE_COUNT + 2;
+  int BASIC_TERMS_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link net.certware.argument.language.l.impl.GroundTermsImpl <em>Ground Terms</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see net.certware.argument.language.l.impl.GroundTermsImpl
+   * @see net.certware.argument.language.l.impl.LPackageImpl#getGroundTerms()
+   * @generated
+   */
+  int GROUND_TERMS = 12;
+
+  /**
+   * The feature id for the '<em><b>Car</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GROUND_TERMS__CAR = GROUND_FUNCTIONAL_TERM_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Cdr</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GROUND_TERMS__CDR = GROUND_FUNCTIONAL_TERM_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Ground Terms</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GROUND_TERMS_FEATURE_COUNT = GROUND_FUNCTIONAL_TERM_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link net.certware.argument.language.l.impl.TermsImpl <em>Terms</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see net.certware.argument.language.l.impl.TermsImpl
+   * @see net.certware.argument.language.l.impl.LPackageImpl#getTerms()
+   * @generated
+   */
+  int TERMS = 16;
+
+  /**
+   * The feature id for the '<em><b>Car</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TERMS__CAR = FUNCTIONAL_TERM_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Cdr</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TERMS__CDR = FUNCTIONAL_TERM_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Terms</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TERMS_FEATURE_COUNT = FUNCTIONAL_TERM_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link net.certware.argument.language.l.impl.StatementImpl <em>Statement</em>}' class.
@@ -354,7 +576,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getStatement()
    * @generated
    */
-  int STATEMENT = 32;
+  int STATEMENT = 40;
 
   /**
    * The number of structural features of the '<em>Statement</em>' class.
@@ -373,7 +595,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getConstantDeclaration()
    * @generated
    */
-  int CONSTANT_DECLARATION = 9;
+  int CONSTANT_DECLARATION = 17;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -410,7 +632,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getTypeDeclaration()
    * @generated
    */
-  int TYPE_DECLARATION = 10;
+  int TYPE_DECLARATION = 18;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -447,7 +669,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getLimit()
    * @generated
    */
-  int LIMIT = 11;
+  int LIMIT = 19;
 
   /**
    * The feature id for the '<em><b>Cv</b></em>' containment reference.
@@ -468,80 +690,6 @@ public interface LPackage extends EPackage
   int LIMIT_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link net.certware.argument.language.l.impl.SetImpl <em>Set</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see net.certware.argument.language.l.impl.SetImpl
-   * @see net.certware.argument.language.l.impl.LPackageImpl#getSet()
-   * @generated
-   */
-  int SET = 12;
-
-  /**
-   * The feature id for the '<em><b>Lhs</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SET__LHS = 0;
-
-  /**
-   * The feature id for the '<em><b>Terms</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SET__TERMS = 1;
-
-  /**
-   * The number of structural features of the '<em>Set</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SET_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link net.certware.argument.language.l.impl.RangeImpl <em>Range</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see net.certware.argument.language.l.impl.RangeImpl
-   * @see net.certware.argument.language.l.impl.LPackageImpl#getRange()
-   * @generated
-   */
-  int RANGE = 13;
-
-  /**
-   * The feature id for the '<em><b>Lhs</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RANGE__LHS = 0;
-
-  /**
-   * The feature id for the '<em><b>Rhs</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RANGE__RHS = 1;
-
-  /**
-   * The number of structural features of the '<em>Range</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RANGE_FEATURE_COUNT = 2;
-
-  /**
    * The meta object id for the '{@link net.certware.argument.language.l.impl.SetExpressionImpl <em>Set Expression</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -549,7 +697,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getSetExpression()
    * @generated
    */
-  int SET_EXPRESSION = 14;
+  int SET_EXPRESSION = 22;
 
   /**
    * The number of structural features of the '<em>Set Expression</em>' class.
@@ -561,14 +709,51 @@ public interface LPackage extends EPackage
   int SET_EXPRESSION_FEATURE_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link net.certware.argument.language.l.impl.SetConstructImpl <em>Set Construct</em>}' class.
+   * The meta object id for the '{@link net.certware.argument.language.l.impl.SetImpl <em>Set</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see net.certware.argument.language.l.impl.SetConstructImpl
-   * @see net.certware.argument.language.l.impl.LPackageImpl#getSetConstruct()
+   * @see net.certware.argument.language.l.impl.SetImpl
+   * @see net.certware.argument.language.l.impl.LPackageImpl#getSet()
    * @generated
    */
-  int SET_CONSTRUCT = 15;
+  int SET = 20;
+
+  /**
+   * The feature id for the '<em><b>Lhs</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SET__LHS = SET_EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Terms</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SET__TERMS = SET_EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Set</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SET_FEATURE_COUNT = SET_EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link net.certware.argument.language.l.impl.RangeImpl <em>Range</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see net.certware.argument.language.l.impl.RangeImpl
+   * @see net.certware.argument.language.l.impl.LPackageImpl#getRange()
+   * @generated
+   */
+  int RANGE = 21;
 
   /**
    * The feature id for the '<em><b>Lhs</b></em>' containment reference.
@@ -577,7 +762,7 @@ public interface LPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SET_CONSTRUCT__LHS = 0;
+  int RANGE__LHS = SET_EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Rhs</b></em>' containment reference.
@@ -586,7 +771,44 @@ public interface LPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SET_CONSTRUCT__RHS = 1;
+  int RANGE__RHS = SET_EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Range</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RANGE_FEATURE_COUNT = SET_EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link net.certware.argument.language.l.impl.SetConstructImpl <em>Set Construct</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see net.certware.argument.language.l.impl.SetConstructImpl
+   * @see net.certware.argument.language.l.impl.LPackageImpl#getSetConstruct()
+   * @generated
+   */
+  int SET_CONSTRUCT = 23;
+
+  /**
+   * The feature id for the '<em><b>Lhs</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SET_CONSTRUCT__LHS = SET_EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Rhs</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SET_CONSTRUCT__RHS = SET_EXPRESSION_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Set Construct</em>' class.
@@ -595,7 +817,7 @@ public interface LPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SET_CONSTRUCT_FEATURE_COUNT = 2;
+  int SET_CONSTRUCT_FEATURE_COUNT = SET_EXPRESSION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link net.certware.argument.language.l.impl.TVarsImpl <em>TVars</em>}' class.
@@ -605,7 +827,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getTVars()
    * @generated
    */
-  int TVARS = 16;
+  int TVARS = 24;
 
   /**
    * The feature id for the '<em><b>Car</b></em>' containment reference.
@@ -635,51 +857,80 @@ public interface LPackage extends EPackage
   int TVARS_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link net.certware.argument.language.l.impl.SetLiteralImpl <em>Set Literal</em>}' class.
+   * The meta object id for the '{@link net.certware.argument.language.l.impl.TVarImpl <em>TVar</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see net.certware.argument.language.l.impl.SetLiteralImpl
-   * @see net.certware.argument.language.l.impl.LPackageImpl#getSetLiteral()
+   * @see net.certware.argument.language.l.impl.TVarImpl
+   * @see net.certware.argument.language.l.impl.LPackageImpl#getTVar()
    * @generated
    */
-  int SET_LITERAL = 18;
+  int TVAR = 25;
 
   /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * The number of structural features of the '<em>TVar</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SET_LITERAL__VALUE = SET_EXPRESSION_FEATURE_COUNT + 0;
+  int TVAR_FEATURE_COUNT = 0;
 
   /**
-   * The number of structural features of the '<em>Set Literal</em>' class.
+   * The meta object id for the '{@link net.certware.argument.language.l.impl.SentenceImpl <em>Sentence</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see net.certware.argument.language.l.impl.SentenceImpl
+   * @see net.certware.argument.language.l.impl.LPackageImpl#getSentence()
+   * @generated
+   */
+  int SENTENCE = 30;
+
+  /**
+   * The number of structural features of the '<em>Sentence</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SET_LITERAL_FEATURE_COUNT = SET_EXPRESSION_FEATURE_COUNT + 1;
+  int SENTENCE_FEATURE_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link net.certware.argument.language.l.impl.QuantifiedTermImpl <em>Quantified Term</em>}' class.
+   * The meta object id for the '{@link net.certware.argument.language.l.impl.SentenceExprImpl <em>Sentence Expr</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see net.certware.argument.language.l.impl.QuantifiedTermImpl
-   * @see net.certware.argument.language.l.impl.LPackageImpl#getQuantifiedTerm()
+   * @see net.certware.argument.language.l.impl.SentenceExprImpl
+   * @see net.certware.argument.language.l.impl.LPackageImpl#getSentenceExpr()
    * @generated
    */
-  int QUANTIFIED_TERM = 19;
+  int SENTENCE_EXPR = 31;
 
   /**
-   * The number of structural features of the '<em>Quantified Term</em>' class.
+   * The number of structural features of the '<em>Sentence Expr</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int QUANTIFIED_TERM_FEATURE_COUNT = TERM_FEATURE_COUNT + 0;
+  int SENTENCE_EXPR_FEATURE_COUNT = SENTENCE_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link net.certware.argument.language.l.impl.SentenceLiteralImpl <em>Sentence Literal</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see net.certware.argument.language.l.impl.SentenceLiteralImpl
+   * @see net.certware.argument.language.l.impl.LPackageImpl#getSentenceLiteral()
+   * @generated
+   */
+  int SENTENCE_LITERAL = 32;
+
+  /**
+   * The number of structural features of the '<em>Sentence Literal</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SENTENCE_LITERAL_FEATURE_COUNT = SENTENCE_EXPR_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link net.certware.argument.language.l.impl.AtomImpl <em>Atom</em>}' class.
@@ -689,7 +940,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getAtom()
    * @generated
    */
-  int ATOM = 21;
+  int ATOM = 26;
 
   /**
    * The number of structural features of the '<em>Atom</em>' class.
@@ -698,7 +949,7 @@ public interface LPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ATOM_FEATURE_COUNT = 0;
+  int ATOM_FEATURE_COUNT = SENTENCE_LITERAL_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link net.certware.argument.language.l.impl.PredicateAtomImpl <em>Predicate Atom</em>}' class.
@@ -708,7 +959,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getPredicateAtom()
    * @generated
    */
-  int PREDICATE_ATOM = 22;
+  int PREDICATE_ATOM = 27;
 
   /**
    * The feature id for the '<em><b>Fid</b></em>' attribute.
@@ -738,6 +989,81 @@ public interface LPackage extends EPackage
   int PREDICATE_ATOM_FEATURE_COUNT = ATOM_FEATURE_COUNT + 2;
 
   /**
+   * The meta object id for the '{@link net.certware.argument.language.l.impl.HeadImpl <em>Head</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see net.certware.argument.language.l.impl.HeadImpl
+   * @see net.certware.argument.language.l.impl.LPackageImpl#getHead()
+   * @generated
+   */
+  int HEAD = 39;
+
+  /**
+   * The number of structural features of the '<em>Head</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HEAD_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link net.certware.argument.language.l.impl.MaybeLiteralImpl <em>Maybe Literal</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see net.certware.argument.language.l.impl.MaybeLiteralImpl
+   * @see net.certware.argument.language.l.impl.LPackageImpl#getMaybeLiteral()
+   * @generated
+   */
+  int MAYBE_LITERAL = 35;
+
+  /**
+   * The number of structural features of the '<em>Maybe Literal</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAYBE_LITERAL_FEATURE_COUNT = HEAD_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link net.certware.argument.language.l.impl.BasicPredicateAtomImpl <em>Basic Predicate Atom</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see net.certware.argument.language.l.impl.BasicPredicateAtomImpl
+   * @see net.certware.argument.language.l.impl.LPackageImpl#getBasicPredicateAtom()
+   * @generated
+   */
+  int BASIC_PREDICATE_ATOM = 28;
+
+  /**
+   * The feature id for the '<em><b>Fid</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BASIC_PREDICATE_ATOM__FID = MAYBE_LITERAL_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Terms</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BASIC_PREDICATE_ATOM__TERMS = MAYBE_LITERAL_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Basic Predicate Atom</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BASIC_PREDICATE_ATOM_FEATURE_COUNT = MAYBE_LITERAL_FEATURE_COUNT + 2;
+
+  /**
    * The meta object id for the '{@link net.certware.argument.language.l.impl.BuiltInAtomImpl <em>Built In Atom</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -745,7 +1071,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getBuiltInAtom()
    * @generated
    */
-  int BUILT_IN_ATOM = 23;
+  int BUILT_IN_ATOM = 29;
 
   /**
    * The feature id for the '<em><b>Lhs</b></em>' containment reference.
@@ -784,99 +1110,42 @@ public interface LPackage extends EPackage
   int BUILT_IN_ATOM_FEATURE_COUNT = ATOM_FEATURE_COUNT + 3;
 
   /**
-   * The meta object id for the '{@link net.certware.argument.language.l.impl.SentenceImpl <em>Sentence</em>}' class.
+   * The meta object id for the '{@link net.certware.argument.language.l.impl.pSentenceImpl <em>pSentence</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see net.certware.argument.language.l.impl.SentenceImpl
-   * @see net.certware.argument.language.l.impl.LPackageImpl#getSentence()
+   * @see net.certware.argument.language.l.impl.pSentenceImpl
+   * @see net.certware.argument.language.l.impl.LPackageImpl#getpSentence()
    * @generated
    */
-  int SENTENCE = 24;
+  int PSENTENCE = 33;
 
   /**
-   * The number of structural features of the '<em>Sentence</em>' class.
+   * The number of structural features of the '<em>pSentence</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SENTENCE_FEATURE_COUNT = 0;
+  int PSENTENCE_FEATURE_COUNT = HEAD_FEATURE_COUNT + 0;
 
   /**
-   * The meta object id for the '{@link net.certware.argument.language.l.impl.SentenceExprImpl <em>Sentence Expr</em>}' class.
+   * The meta object id for the '{@link net.certware.argument.language.l.impl.pSentenceLiteralImpl <em>pSentence Literal</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see net.certware.argument.language.l.impl.SentenceExprImpl
-   * @see net.certware.argument.language.l.impl.LPackageImpl#getSentenceExpr()
+   * @see net.certware.argument.language.l.impl.pSentenceLiteralImpl
+   * @see net.certware.argument.language.l.impl.LPackageImpl#getpSentenceLiteral()
    * @generated
    */
-  int SENTENCE_EXPR = 25;
+  int PSENTENCE_LITERAL = 34;
 
   /**
-   * The number of structural features of the '<em>Sentence Expr</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SENTENCE_EXPR_FEATURE_COUNT = SENTENCE_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link net.certware.argument.language.l.impl.SentenceLiteralImpl <em>Sentence Literal</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see net.certware.argument.language.l.impl.SentenceLiteralImpl
-   * @see net.certware.argument.language.l.impl.LPackageImpl#getSentenceLiteral()
-   * @generated
-   */
-  int SENTENCE_LITERAL = 26;
-
-  /**
-   * The number of structural features of the '<em>Sentence Literal</em>' class.
+   * The number of structural features of the '<em>pSentence Literal</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SENTENCE_LITERAL_FEATURE_COUNT = SENTENCE_EXPR_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link net.certware.argument.language.l.impl.HeadImpl <em>Head</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see net.certware.argument.language.l.impl.HeadImpl
-   * @see net.certware.argument.language.l.impl.LPackageImpl#getHead()
-   * @generated
-   */
-  int HEAD = 31;
-
-  /**
-   * The number of structural features of the '<em>Head</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int HEAD_FEATURE_COUNT = 0;
-
-  /**
-   * The meta object id for the '{@link net.certware.argument.language.l.impl.MaybeLiteralImpl <em>Maybe Literal</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see net.certware.argument.language.l.impl.MaybeLiteralImpl
-   * @see net.certware.argument.language.l.impl.LPackageImpl#getMaybeLiteral()
-   * @generated
-   */
-  int MAYBE_LITERAL = 27;
-
-  /**
-   * The number of structural features of the '<em>Maybe Literal</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MAYBE_LITERAL_FEATURE_COUNT = HEAD_FEATURE_COUNT + 0;
+  int PSENTENCE_LITERAL_FEATURE_COUNT = SENTENCE_EXPR_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link net.certware.argument.language.l.impl.CardinalityConstraintImpl <em>Cardinality Constraint</em>}' class.
@@ -886,7 +1155,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getCardinalityConstraint()
    * @generated
    */
-  int CARDINALITY_CONSTRAINT = 28;
+  int CARDINALITY_CONSTRAINT = 36;
 
   /**
    * The feature id for the '<em><b>Lhs</b></em>' containment reference.
@@ -898,22 +1167,13 @@ public interface LPackage extends EPackage
   int CARDINALITY_CONSTRAINT__LHS = HEAD_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * The feature id for the '<em><b>Atom</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CARDINALITY_CONSTRAINT__ID = HEAD_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Terms</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CARDINALITY_CONSTRAINT__TERMS = HEAD_FEATURE_COUNT + 2;
+  int CARDINALITY_CONSTRAINT__ATOM = HEAD_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Rhs</b></em>' containment reference.
@@ -922,7 +1182,7 @@ public interface LPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CARDINALITY_CONSTRAINT__RHS = HEAD_FEATURE_COUNT + 3;
+  int CARDINALITY_CONSTRAINT__RHS = HEAD_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Cardinality Constraint</em>' class.
@@ -931,7 +1191,7 @@ public interface LPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CARDINALITY_CONSTRAINT_FEATURE_COUNT = HEAD_FEATURE_COUNT + 4;
+  int CARDINALITY_CONSTRAINT_FEATURE_COUNT = HEAD_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link net.certware.argument.language.l.impl.BoundImpl <em>Bound</em>}' class.
@@ -941,7 +1201,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getBound()
    * @generated
    */
-  int BOUND = 29;
+  int BOUND = 37;
 
   /**
    * The feature id for the '<em><b>Av</b></em>' containment reference.
@@ -969,7 +1229,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getRule()
    * @generated
    */
-  int RULE = 30;
+  int RULE = 38;
 
   /**
    * The feature id for the '<em><b>Head</b></em>' containment reference.
@@ -1006,7 +1266,25 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getAddition()
    * @generated
    */
-  int ADDITION = 33;
+  int ADDITION = 41;
+
+  /**
+   * The feature id for the '<em><b>Minus</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADDITION__MINUS = ARITHMETIC_TERM__MINUS;
+
+  /**
+   * The feature id for the '<em><b>Term</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADDITION__TERM = ARITHMETIC_TERM__TERM;
 
   /**
    * The feature id for the '<em><b>Lhs</b></em>' containment reference.
@@ -1015,7 +1293,7 @@ public interface LPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ADDITION__LHS = ARITHMETIC_TERM_FEATURE_COUNT + 0;
+  int ADDITION__LHS = ARITHMETIC_TERM__LHS;
 
   /**
    * The feature id for the '<em><b>Rhs</b></em>' containment reference.
@@ -1024,7 +1302,7 @@ public interface LPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ADDITION__RHS = ARITHMETIC_TERM_FEATURE_COUNT + 1;
+  int ADDITION__RHS = ARITHMETIC_TERM__RHS;
 
   /**
    * The number of structural features of the '<em>Addition</em>' class.
@@ -1033,7 +1311,7 @@ public interface LPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ADDITION_FEATURE_COUNT = ARITHMETIC_TERM_FEATURE_COUNT + 2;
+  int ADDITION_FEATURE_COUNT = ARITHMETIC_TERM_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link net.certware.argument.language.l.impl.MultiplicationImpl <em>Multiplication</em>}' class.
@@ -1043,7 +1321,25 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getMultiplication()
    * @generated
    */
-  int MULTIPLICATION = 34;
+  int MULTIPLICATION = 42;
+
+  /**
+   * The feature id for the '<em><b>Minus</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTIPLICATION__MINUS = ARITHMETIC_TERM__MINUS;
+
+  /**
+   * The feature id for the '<em><b>Term</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTIPLICATION__TERM = ARITHMETIC_TERM__TERM;
 
   /**
    * The feature id for the '<em><b>Lhs</b></em>' containment reference.
@@ -1052,7 +1348,7 @@ public interface LPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MULTIPLICATION__LHS = ARITHMETIC_TERM_FEATURE_COUNT + 0;
+  int MULTIPLICATION__LHS = ARITHMETIC_TERM__LHS;
 
   /**
    * The feature id for the '<em><b>Rhs</b></em>' containment reference.
@@ -1061,7 +1357,7 @@ public interface LPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MULTIPLICATION__RHS = ARITHMETIC_TERM_FEATURE_COUNT + 1;
+  int MULTIPLICATION__RHS = ARITHMETIC_TERM__RHS;
 
   /**
    * The number of structural features of the '<em>Multiplication</em>' class.
@@ -1070,7 +1366,117 @@ public interface LPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MULTIPLICATION_FEATURE_COUNT = ARITHMETIC_TERM_FEATURE_COUNT + 2;
+  int MULTIPLICATION_FEATURE_COUNT = ARITHMETIC_TERM_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link net.certware.argument.language.l.impl.GroundAdditionImpl <em>Ground Addition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see net.certware.argument.language.l.impl.GroundAdditionImpl
+   * @see net.certware.argument.language.l.impl.LPackageImpl#getGroundAddition()
+   * @generated
+   */
+  int GROUND_ADDITION = 43;
+
+  /**
+   * The feature id for the '<em><b>Minus</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GROUND_ADDITION__MINUS = ARITHMETIC_TERM__MINUS;
+
+  /**
+   * The feature id for the '<em><b>Term</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GROUND_ADDITION__TERM = ARITHMETIC_TERM__TERM;
+
+  /**
+   * The feature id for the '<em><b>Lhs</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GROUND_ADDITION__LHS = ARITHMETIC_TERM__LHS;
+
+  /**
+   * The feature id for the '<em><b>Rhs</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GROUND_ADDITION__RHS = ARITHMETIC_TERM__RHS;
+
+  /**
+   * The number of structural features of the '<em>Ground Addition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GROUND_ADDITION_FEATURE_COUNT = ARITHMETIC_TERM_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link net.certware.argument.language.l.impl.GroundMultiplicationImpl <em>Ground Multiplication</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see net.certware.argument.language.l.impl.GroundMultiplicationImpl
+   * @see net.certware.argument.language.l.impl.LPackageImpl#getGroundMultiplication()
+   * @generated
+   */
+  int GROUND_MULTIPLICATION = 44;
+
+  /**
+   * The feature id for the '<em><b>Minus</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GROUND_MULTIPLICATION__MINUS = ARITHMETIC_TERM__MINUS;
+
+  /**
+   * The feature id for the '<em><b>Term</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GROUND_MULTIPLICATION__TERM = ARITHMETIC_TERM__TERM;
+
+  /**
+   * The feature id for the '<em><b>Lhs</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GROUND_MULTIPLICATION__LHS = ARITHMETIC_TERM__LHS;
+
+  /**
+   * The feature id for the '<em><b>Rhs</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GROUND_MULTIPLICATION__RHS = ARITHMETIC_TERM__RHS;
+
+  /**
+   * The number of structural features of the '<em>Ground Multiplication</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GROUND_MULTIPLICATION_FEATURE_COUNT = ARITHMETIC_TERM_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link net.certware.argument.language.l.impl.SetAdditionImpl <em>Set Addition</em>}' class.
@@ -1080,7 +1486,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getSetAddition()
    * @generated
    */
-  int SET_ADDITION = 35;
+  int SET_ADDITION = 45;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1117,7 +1523,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getSetMultiplication()
    * @generated
    */
-  int SET_MULTIPLICATION = 36;
+  int SET_MULTIPLICATION = 46;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1154,7 +1560,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getOrSentence()
    * @generated
    */
-  int OR_SENTENCE = 37;
+  int OR_SENTENCE = 47;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1191,7 +1597,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getAndSentence()
    * @generated
    */
-  int AND_SENTENCE = 38;
+  int AND_SENTENCE = 48;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1219,6 +1625,80 @@ public interface LPackage extends EPackage
    * @ordered
    */
   int AND_SENTENCE_FEATURE_COUNT = SENTENCE_EXPR_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link net.certware.argument.language.l.impl.pOrSentenceImpl <em>pOr Sentence</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see net.certware.argument.language.l.impl.pOrSentenceImpl
+   * @see net.certware.argument.language.l.impl.LPackageImpl#getpOrSentence()
+   * @generated
+   */
+  int POR_SENTENCE = 49;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POR_SENTENCE__LEFT = SENTENCE_EXPR_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POR_SENTENCE__RIGHT = SENTENCE_EXPR_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>pOr Sentence</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POR_SENTENCE_FEATURE_COUNT = SENTENCE_EXPR_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link net.certware.argument.language.l.impl.pAndSentenceImpl <em>pAnd Sentence</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see net.certware.argument.language.l.impl.pAndSentenceImpl
+   * @see net.certware.argument.language.l.impl.LPackageImpl#getpAndSentence()
+   * @generated
+   */
+  int PAND_SENTENCE = 50;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PAND_SENTENCE__LEFT = SENTENCE_EXPR_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PAND_SENTENCE__RIGHT = SENTENCE_EXPR_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>pAnd Sentence</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PAND_SENTENCE_FEATURE_COUNT = SENTENCE_EXPR_FEATURE_COUNT + 2;
 
 
   /**
@@ -1337,6 +1817,50 @@ public interface LPackage extends EPackage
   EClass getArithmeticTerm();
 
   /**
+   * Returns the meta object for the attribute '{@link net.certware.argument.language.l.ArithmeticTerm#getMinus <em>Minus</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Minus</em>'.
+   * @see net.certware.argument.language.l.ArithmeticTerm#getMinus()
+   * @see #getArithmeticTerm()
+   * @generated
+   */
+  EAttribute getArithmeticTerm_Minus();
+
+  /**
+   * Returns the meta object for the containment reference '{@link net.certware.argument.language.l.ArithmeticTerm#getTerm <em>Term</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Term</em>'.
+   * @see net.certware.argument.language.l.ArithmeticTerm#getTerm()
+   * @see #getArithmeticTerm()
+   * @generated
+   */
+  EReference getArithmeticTerm_Term();
+
+  /**
+   * Returns the meta object for the containment reference '{@link net.certware.argument.language.l.ArithmeticTerm#getLhs <em>Lhs</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Lhs</em>'.
+   * @see net.certware.argument.language.l.ArithmeticTerm#getLhs()
+   * @see #getArithmeticTerm()
+   * @generated
+   */
+  EReference getArithmeticTerm_Lhs();
+
+  /**
+   * Returns the meta object for the containment reference '{@link net.certware.argument.language.l.ArithmeticTerm#getRhs <em>Rhs</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Rhs</em>'.
+   * @see net.certware.argument.language.l.ArithmeticTerm#getRhs()
+   * @see #getArithmeticTerm()
+   * @generated
+   */
+  EReference getArithmeticTerm_Rhs();
+
+  /**
    * Returns the meta object for class '{@link net.certware.argument.language.l.ArithmeticLiteral <em>Arithmetic Literal</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1347,15 +1871,37 @@ public interface LPackage extends EPackage
   EClass getArithmeticLiteral();
 
   /**
-   * Returns the meta object for the attribute '{@link net.certware.argument.language.l.ArithmeticLiteral#getIdentifier <em>Identifier</em>}'.
+   * Returns the meta object for the containment reference '{@link net.certware.argument.language.l.ArithmeticLiteral#getV <em>V</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Identifier</em>'.
-   * @see net.certware.argument.language.l.ArithmeticLiteral#getIdentifier()
+   * @return the meta object for the containment reference '<em>V</em>'.
+   * @see net.certware.argument.language.l.ArithmeticLiteral#getV()
    * @see #getArithmeticLiteral()
    * @generated
    */
-  EAttribute getArithmeticLiteral_Identifier();
+  EReference getArithmeticLiteral_V();
+
+  /**
+   * Returns the meta object for the containment reference '{@link net.certware.argument.language.l.ArithmeticLiteral#getTv <em>Tv</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Tv</em>'.
+   * @see net.certware.argument.language.l.ArithmeticLiteral#getTv()
+   * @see #getArithmeticLiteral()
+   * @generated
+   */
+  EReference getArithmeticLiteral_Tv();
+
+  /**
+   * Returns the meta object for the attribute '{@link net.certware.argument.language.l.ArithmeticLiteral#getConst <em>Const</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Const</em>'.
+   * @see net.certware.argument.language.l.ArithmeticLiteral#getConst()
+   * @see #getArithmeticLiteral()
+   * @generated
+   */
+  EAttribute getArithmeticLiteral_Const();
 
   /**
    * Returns the meta object for the attribute '{@link net.certware.argument.language.l.ArithmeticLiteral#getValue <em>Value</em>}'.
@@ -1369,6 +1915,48 @@ public interface LPackage extends EPackage
   EAttribute getArithmeticLiteral_Value();
 
   /**
+   * Returns the meta object for class '{@link net.certware.argument.language.l.GroundArithmeticTerm <em>Ground Arithmetic Term</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Ground Arithmetic Term</em>'.
+   * @see net.certware.argument.language.l.GroundArithmeticTerm
+   * @generated
+   */
+  EClass getGroundArithmeticTerm();
+
+  /**
+   * Returns the meta object for class '{@link net.certware.argument.language.l.GroundArithmeticLiteral <em>Ground Arithmetic Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Ground Arithmetic Literal</em>'.
+   * @see net.certware.argument.language.l.GroundArithmeticLiteral
+   * @generated
+   */
+  EClass getGroundArithmeticLiteral();
+
+  /**
+   * Returns the meta object for the attribute '{@link net.certware.argument.language.l.GroundArithmeticLiteral#getIdentifier <em>Identifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Identifier</em>'.
+   * @see net.certware.argument.language.l.GroundArithmeticLiteral#getIdentifier()
+   * @see #getGroundArithmeticLiteral()
+   * @generated
+   */
+  EAttribute getGroundArithmeticLiteral_Identifier();
+
+  /**
+   * Returns the meta object for the attribute '{@link net.certware.argument.language.l.GroundArithmeticLiteral#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see net.certware.argument.language.l.GroundArithmeticLiteral#getValue()
+   * @see #getGroundArithmeticLiteral()
+   * @generated
+   */
+  EAttribute getGroundArithmeticLiteral_Value();
+
+  /**
    * Returns the meta object for class '{@link net.certware.argument.language.l.FunctionalTerm <em>Functional Term</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1377,6 +1965,16 @@ public interface LPackage extends EPackage
    * @generated
    */
   EClass getFunctionalTerm();
+
+  /**
+   * Returns the meta object for class '{@link net.certware.argument.language.l.GroundFunctionalTerm <em>Ground Functional Term</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Ground Functional Term</em>'.
+   * @see net.certware.argument.language.l.GroundFunctionalTerm
+   * @generated
+   */
+  EClass getGroundFunctionalTerm();
 
   /**
    * Returns the meta object for class '{@link net.certware.argument.language.l.BasicTerms <em>Basic Terms</em>}'.
@@ -1409,6 +2007,100 @@ public interface LPackage extends EPackage
    * @generated
    */
   EReference getBasicTerms_Cdr();
+
+  /**
+   * Returns the meta object for class '{@link net.certware.argument.language.l.GroundTerms <em>Ground Terms</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Ground Terms</em>'.
+   * @see net.certware.argument.language.l.GroundTerms
+   * @generated
+   */
+  EClass getGroundTerms();
+
+  /**
+   * Returns the meta object for the containment reference '{@link net.certware.argument.language.l.GroundTerms#getCar <em>Car</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Car</em>'.
+   * @see net.certware.argument.language.l.GroundTerms#getCar()
+   * @see #getGroundTerms()
+   * @generated
+   */
+  EReference getGroundTerms_Car();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link net.certware.argument.language.l.GroundTerms#getCdr <em>Cdr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Cdr</em>'.
+   * @see net.certware.argument.language.l.GroundTerms#getCdr()
+   * @see #getGroundTerms()
+   * @generated
+   */
+  EReference getGroundTerms_Cdr();
+
+  /**
+   * Returns the meta object for class '{@link net.certware.argument.language.l.GroundTerm <em>Ground Term</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Ground Term</em>'.
+   * @see net.certware.argument.language.l.GroundTerm
+   * @generated
+   */
+  EClass getGroundTerm();
+
+  /**
+   * Returns the meta object for class '{@link net.certware.argument.language.l.QuantifiedTerm <em>Quantified Term</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Quantified Term</em>'.
+   * @see net.certware.argument.language.l.QuantifiedTerm
+   * @generated
+   */
+  EClass getQuantifiedTerm();
+
+  /**
+   * Returns the meta object for class '{@link net.certware.argument.language.l.Term <em>Term</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Term</em>'.
+   * @see net.certware.argument.language.l.Term
+   * @generated
+   */
+  EClass getTerm();
+
+  /**
+   * Returns the meta object for class '{@link net.certware.argument.language.l.Terms <em>Terms</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Terms</em>'.
+   * @see net.certware.argument.language.l.Terms
+   * @generated
+   */
+  EClass getTerms();
+
+  /**
+   * Returns the meta object for the containment reference '{@link net.certware.argument.language.l.Terms#getCar <em>Car</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Car</em>'.
+   * @see net.certware.argument.language.l.Terms#getCar()
+   * @see #getTerms()
+   * @generated
+   */
+  EReference getTerms_Car();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link net.certware.argument.language.l.Terms#getCdr <em>Cdr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Cdr</em>'.
+   * @see net.certware.argument.language.l.Terms#getCdr()
+   * @see #getTerms()
+   * @generated
+   */
+  EReference getTerms_Cdr();
 
   /**
    * Returns the meta object for class '{@link net.certware.argument.language.l.ConstantDeclaration <em>Constant Declaration</em>}'.
@@ -1644,47 +2336,6 @@ public interface LPackage extends EPackage
   EClass getTVar();
 
   /**
-   * Returns the meta object for class '{@link net.certware.argument.language.l.SetLiteral <em>Set Literal</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Set Literal</em>'.
-   * @see net.certware.argument.language.l.SetLiteral
-   * @generated
-   */
-  EClass getSetLiteral();
-
-  /**
-   * Returns the meta object for the attribute '{@link net.certware.argument.language.l.SetLiteral#getValue <em>Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value</em>'.
-   * @see net.certware.argument.language.l.SetLiteral#getValue()
-   * @see #getSetLiteral()
-   * @generated
-   */
-  EAttribute getSetLiteral_Value();
-
-  /**
-   * Returns the meta object for class '{@link net.certware.argument.language.l.QuantifiedTerm <em>Quantified Term</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Quantified Term</em>'.
-   * @see net.certware.argument.language.l.QuantifiedTerm
-   * @generated
-   */
-  EClass getQuantifiedTerm();
-
-  /**
-   * Returns the meta object for class '{@link net.certware.argument.language.l.Term <em>Term</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Term</em>'.
-   * @see net.certware.argument.language.l.Term
-   * @generated
-   */
-  EClass getTerm();
-
-  /**
    * Returns the meta object for class '{@link net.certware.argument.language.l.Atom <em>Atom</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1725,6 +2376,38 @@ public interface LPackage extends EPackage
    * @generated
    */
   EReference getPredicateAtom_Terms();
+
+  /**
+   * Returns the meta object for class '{@link net.certware.argument.language.l.BasicPredicateAtom <em>Basic Predicate Atom</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Basic Predicate Atom</em>'.
+   * @see net.certware.argument.language.l.BasicPredicateAtom
+   * @generated
+   */
+  EClass getBasicPredicateAtom();
+
+  /**
+   * Returns the meta object for the attribute '{@link net.certware.argument.language.l.BasicPredicateAtom#getFid <em>Fid</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Fid</em>'.
+   * @see net.certware.argument.language.l.BasicPredicateAtom#getFid()
+   * @see #getBasicPredicateAtom()
+   * @generated
+   */
+  EAttribute getBasicPredicateAtom_Fid();
+
+  /**
+   * Returns the meta object for the containment reference '{@link net.certware.argument.language.l.BasicPredicateAtom#getTerms <em>Terms</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Terms</em>'.
+   * @see net.certware.argument.language.l.BasicPredicateAtom#getTerms()
+   * @see #getBasicPredicateAtom()
+   * @generated
+   */
+  EReference getBasicPredicateAtom_Terms();
 
   /**
    * Returns the meta object for class '{@link net.certware.argument.language.l.BuiltInAtom <em>Built In Atom</em>}'.
@@ -1800,6 +2483,26 @@ public interface LPackage extends EPackage
   EClass getSentenceLiteral();
 
   /**
+   * Returns the meta object for class '{@link net.certware.argument.language.l.pSentence <em>pSentence</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>pSentence</em>'.
+   * @see net.certware.argument.language.l.pSentence
+   * @generated
+   */
+  EClass getpSentence();
+
+  /**
+   * Returns the meta object for class '{@link net.certware.argument.language.l.pSentenceLiteral <em>pSentence Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>pSentence Literal</em>'.
+   * @see net.certware.argument.language.l.pSentenceLiteral
+   * @generated
+   */
+  EClass getpSentenceLiteral();
+
+  /**
    * Returns the meta object for class '{@link net.certware.argument.language.l.MaybeLiteral <em>Maybe Literal</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1831,26 +2534,15 @@ public interface LPackage extends EPackage
   EReference getCardinalityConstraint_Lhs();
 
   /**
-   * Returns the meta object for the attribute '{@link net.certware.argument.language.l.CardinalityConstraint#getId <em>Id</em>}'.
+   * Returns the meta object for the containment reference '{@link net.certware.argument.language.l.CardinalityConstraint#getAtom <em>Atom</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Id</em>'.
-   * @see net.certware.argument.language.l.CardinalityConstraint#getId()
+   * @return the meta object for the containment reference '<em>Atom</em>'.
+   * @see net.certware.argument.language.l.CardinalityConstraint#getAtom()
    * @see #getCardinalityConstraint()
    * @generated
    */
-  EAttribute getCardinalityConstraint_Id();
-
-  /**
-   * Returns the meta object for the containment reference '{@link net.certware.argument.language.l.CardinalityConstraint#getTerms <em>Terms</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Terms</em>'.
-   * @see net.certware.argument.language.l.CardinalityConstraint#getTerms()
-   * @see #getCardinalityConstraint()
-   * @generated
-   */
-  EReference getCardinalityConstraint_Terms();
+  EReference getCardinalityConstraint_Atom();
 
   /**
    * Returns the meta object for the containment reference '{@link net.certware.argument.language.l.CardinalityConstraint#getRhs <em>Rhs</em>}'.
@@ -1947,28 +2639,6 @@ public interface LPackage extends EPackage
   EClass getAddition();
 
   /**
-   * Returns the meta object for the containment reference '{@link net.certware.argument.language.l.Addition#getLhs <em>Lhs</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Lhs</em>'.
-   * @see net.certware.argument.language.l.Addition#getLhs()
-   * @see #getAddition()
-   * @generated
-   */
-  EReference getAddition_Lhs();
-
-  /**
-   * Returns the meta object for the containment reference '{@link net.certware.argument.language.l.Addition#getRhs <em>Rhs</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Rhs</em>'.
-   * @see net.certware.argument.language.l.Addition#getRhs()
-   * @see #getAddition()
-   * @generated
-   */
-  EReference getAddition_Rhs();
-
-  /**
    * Returns the meta object for class '{@link net.certware.argument.language.l.Multiplication <em>Multiplication</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1979,26 +2649,24 @@ public interface LPackage extends EPackage
   EClass getMultiplication();
 
   /**
-   * Returns the meta object for the containment reference '{@link net.certware.argument.language.l.Multiplication#getLhs <em>Lhs</em>}'.
+   * Returns the meta object for class '{@link net.certware.argument.language.l.GroundAddition <em>Ground Addition</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Lhs</em>'.
-   * @see net.certware.argument.language.l.Multiplication#getLhs()
-   * @see #getMultiplication()
+   * @return the meta object for class '<em>Ground Addition</em>'.
+   * @see net.certware.argument.language.l.GroundAddition
    * @generated
    */
-  EReference getMultiplication_Lhs();
+  EClass getGroundAddition();
 
   /**
-   * Returns the meta object for the containment reference '{@link net.certware.argument.language.l.Multiplication#getRhs <em>Rhs</em>}'.
+   * Returns the meta object for class '{@link net.certware.argument.language.l.GroundMultiplication <em>Ground Multiplication</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Rhs</em>'.
-   * @see net.certware.argument.language.l.Multiplication#getRhs()
-   * @see #getMultiplication()
+   * @return the meta object for class '<em>Ground Multiplication</em>'.
+   * @see net.certware.argument.language.l.GroundMultiplication
    * @generated
    */
-  EReference getMultiplication_Rhs();
+  EClass getGroundMultiplication();
 
   /**
    * Returns the meta object for class '{@link net.certware.argument.language.l.SetAddition <em>Set Addition</em>}'.
@@ -2129,6 +2797,70 @@ public interface LPackage extends EPackage
   EReference getAndSentence_Right();
 
   /**
+   * Returns the meta object for class '{@link net.certware.argument.language.l.pOrSentence <em>pOr Sentence</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>pOr Sentence</em>'.
+   * @see net.certware.argument.language.l.pOrSentence
+   * @generated
+   */
+  EClass getpOrSentence();
+
+  /**
+   * Returns the meta object for the containment reference '{@link net.certware.argument.language.l.pOrSentence#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see net.certware.argument.language.l.pOrSentence#getLeft()
+   * @see #getpOrSentence()
+   * @generated
+   */
+  EReference getpOrSentence_Left();
+
+  /**
+   * Returns the meta object for the containment reference '{@link net.certware.argument.language.l.pOrSentence#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see net.certware.argument.language.l.pOrSentence#getRight()
+   * @see #getpOrSentence()
+   * @generated
+   */
+  EReference getpOrSentence_Right();
+
+  /**
+   * Returns the meta object for class '{@link net.certware.argument.language.l.pAndSentence <em>pAnd Sentence</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>pAnd Sentence</em>'.
+   * @see net.certware.argument.language.l.pAndSentence
+   * @generated
+   */
+  EClass getpAndSentence();
+
+  /**
+   * Returns the meta object for the containment reference '{@link net.certware.argument.language.l.pAndSentence#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see net.certware.argument.language.l.pAndSentence#getLeft()
+   * @see #getpAndSentence()
+   * @generated
+   */
+  EReference getpAndSentence_Left();
+
+  /**
+   * Returns the meta object for the containment reference '{@link net.certware.argument.language.l.pAndSentence#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see net.certware.argument.language.l.pAndSentence#getRight()
+   * @see #getpAndSentence()
+   * @generated
+   */
+  EReference getpAndSentence_Right();
+
+  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2252,6 +2984,38 @@ public interface LPackage extends EPackage
     EClass ARITHMETIC_TERM = eINSTANCE.getArithmeticTerm();
 
     /**
+     * The meta object literal for the '<em><b>Minus</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ARITHMETIC_TERM__MINUS = eINSTANCE.getArithmeticTerm_Minus();
+
+    /**
+     * The meta object literal for the '<em><b>Term</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ARITHMETIC_TERM__TERM = eINSTANCE.getArithmeticTerm_Term();
+
+    /**
+     * The meta object literal for the '<em><b>Lhs</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ARITHMETIC_TERM__LHS = eINSTANCE.getArithmeticTerm_Lhs();
+
+    /**
+     * The meta object literal for the '<em><b>Rhs</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ARITHMETIC_TERM__RHS = eINSTANCE.getArithmeticTerm_Rhs();
+
+    /**
      * The meta object literal for the '{@link net.certware.argument.language.l.impl.ArithmeticLiteralImpl <em>Arithmetic Literal</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2262,12 +3026,28 @@ public interface LPackage extends EPackage
     EClass ARITHMETIC_LITERAL = eINSTANCE.getArithmeticLiteral();
 
     /**
-     * The meta object literal for the '<em><b>Identifier</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>V</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ARITHMETIC_LITERAL__IDENTIFIER = eINSTANCE.getArithmeticLiteral_Identifier();
+    EReference ARITHMETIC_LITERAL__V = eINSTANCE.getArithmeticLiteral_V();
+
+    /**
+     * The meta object literal for the '<em><b>Tv</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ARITHMETIC_LITERAL__TV = eINSTANCE.getArithmeticLiteral_Tv();
+
+    /**
+     * The meta object literal for the '<em><b>Const</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ARITHMETIC_LITERAL__CONST = eINSTANCE.getArithmeticLiteral_Const();
 
     /**
      * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -2278,6 +3058,42 @@ public interface LPackage extends EPackage
     EAttribute ARITHMETIC_LITERAL__VALUE = eINSTANCE.getArithmeticLiteral_Value();
 
     /**
+     * The meta object literal for the '{@link net.certware.argument.language.l.impl.GroundArithmeticTermImpl <em>Ground Arithmetic Term</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see net.certware.argument.language.l.impl.GroundArithmeticTermImpl
+     * @see net.certware.argument.language.l.impl.LPackageImpl#getGroundArithmeticTerm()
+     * @generated
+     */
+    EClass GROUND_ARITHMETIC_TERM = eINSTANCE.getGroundArithmeticTerm();
+
+    /**
+     * The meta object literal for the '{@link net.certware.argument.language.l.impl.GroundArithmeticLiteralImpl <em>Ground Arithmetic Literal</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see net.certware.argument.language.l.impl.GroundArithmeticLiteralImpl
+     * @see net.certware.argument.language.l.impl.LPackageImpl#getGroundArithmeticLiteral()
+     * @generated
+     */
+    EClass GROUND_ARITHMETIC_LITERAL = eINSTANCE.getGroundArithmeticLiteral();
+
+    /**
+     * The meta object literal for the '<em><b>Identifier</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute GROUND_ARITHMETIC_LITERAL__IDENTIFIER = eINSTANCE.getGroundArithmeticLiteral_Identifier();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute GROUND_ARITHMETIC_LITERAL__VALUE = eINSTANCE.getGroundArithmeticLiteral_Value();
+
+    /**
      * The meta object literal for the '{@link net.certware.argument.language.l.impl.FunctionalTermImpl <em>Functional Term</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2286,6 +3102,16 @@ public interface LPackage extends EPackage
      * @generated
      */
     EClass FUNCTIONAL_TERM = eINSTANCE.getFunctionalTerm();
+
+    /**
+     * The meta object literal for the '{@link net.certware.argument.language.l.impl.GroundFunctionalTermImpl <em>Ground Functional Term</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see net.certware.argument.language.l.impl.GroundFunctionalTermImpl
+     * @see net.certware.argument.language.l.impl.LPackageImpl#getGroundFunctionalTerm()
+     * @generated
+     */
+    EClass GROUND_FUNCTIONAL_TERM = eINSTANCE.getGroundFunctionalTerm();
 
     /**
      * The meta object literal for the '{@link net.certware.argument.language.l.impl.BasicTermsImpl <em>Basic Terms</em>}' class.
@@ -2312,6 +3138,88 @@ public interface LPackage extends EPackage
      * @generated
      */
     EReference BASIC_TERMS__CDR = eINSTANCE.getBasicTerms_Cdr();
+
+    /**
+     * The meta object literal for the '{@link net.certware.argument.language.l.impl.GroundTermsImpl <em>Ground Terms</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see net.certware.argument.language.l.impl.GroundTermsImpl
+     * @see net.certware.argument.language.l.impl.LPackageImpl#getGroundTerms()
+     * @generated
+     */
+    EClass GROUND_TERMS = eINSTANCE.getGroundTerms();
+
+    /**
+     * The meta object literal for the '<em><b>Car</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference GROUND_TERMS__CAR = eINSTANCE.getGroundTerms_Car();
+
+    /**
+     * The meta object literal for the '<em><b>Cdr</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference GROUND_TERMS__CDR = eINSTANCE.getGroundTerms_Cdr();
+
+    /**
+     * The meta object literal for the '{@link net.certware.argument.language.l.impl.GroundTermImpl <em>Ground Term</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see net.certware.argument.language.l.impl.GroundTermImpl
+     * @see net.certware.argument.language.l.impl.LPackageImpl#getGroundTerm()
+     * @generated
+     */
+    EClass GROUND_TERM = eINSTANCE.getGroundTerm();
+
+    /**
+     * The meta object literal for the '{@link net.certware.argument.language.l.impl.QuantifiedTermImpl <em>Quantified Term</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see net.certware.argument.language.l.impl.QuantifiedTermImpl
+     * @see net.certware.argument.language.l.impl.LPackageImpl#getQuantifiedTerm()
+     * @generated
+     */
+    EClass QUANTIFIED_TERM = eINSTANCE.getQuantifiedTerm();
+
+    /**
+     * The meta object literal for the '{@link net.certware.argument.language.l.impl.TermImpl <em>Term</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see net.certware.argument.language.l.impl.TermImpl
+     * @see net.certware.argument.language.l.impl.LPackageImpl#getTerm()
+     * @generated
+     */
+    EClass TERM = eINSTANCE.getTerm();
+
+    /**
+     * The meta object literal for the '{@link net.certware.argument.language.l.impl.TermsImpl <em>Terms</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see net.certware.argument.language.l.impl.TermsImpl
+     * @see net.certware.argument.language.l.impl.LPackageImpl#getTerms()
+     * @generated
+     */
+    EClass TERMS = eINSTANCE.getTerms();
+
+    /**
+     * The meta object literal for the '<em><b>Car</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TERMS__CAR = eINSTANCE.getTerms_Car();
+
+    /**
+     * The meta object literal for the '<em><b>Cdr</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TERMS__CDR = eINSTANCE.getTerms_Cdr();
 
     /**
      * The meta object literal for the '{@link net.certware.argument.language.l.impl.ConstantDeclarationImpl <em>Constant Declaration</em>}' class.
@@ -2508,44 +3416,6 @@ public interface LPackage extends EPackage
     EClass TVAR = eINSTANCE.getTVar();
 
     /**
-     * The meta object literal for the '{@link net.certware.argument.language.l.impl.SetLiteralImpl <em>Set Literal</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see net.certware.argument.language.l.impl.SetLiteralImpl
-     * @see net.certware.argument.language.l.impl.LPackageImpl#getSetLiteral()
-     * @generated
-     */
-    EClass SET_LITERAL = eINSTANCE.getSetLiteral();
-
-    /**
-     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute SET_LITERAL__VALUE = eINSTANCE.getSetLiteral_Value();
-
-    /**
-     * The meta object literal for the '{@link net.certware.argument.language.l.impl.QuantifiedTermImpl <em>Quantified Term</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see net.certware.argument.language.l.impl.QuantifiedTermImpl
-     * @see net.certware.argument.language.l.impl.LPackageImpl#getQuantifiedTerm()
-     * @generated
-     */
-    EClass QUANTIFIED_TERM = eINSTANCE.getQuantifiedTerm();
-
-    /**
-     * The meta object literal for the '{@link net.certware.argument.language.l.impl.TermImpl <em>Term</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see net.certware.argument.language.l.impl.TermImpl
-     * @see net.certware.argument.language.l.impl.LPackageImpl#getTerm()
-     * @generated
-     */
-    EClass TERM = eINSTANCE.getTerm();
-
-    /**
      * The meta object literal for the '{@link net.certware.argument.language.l.impl.AtomImpl <em>Atom</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2580,6 +3450,32 @@ public interface LPackage extends EPackage
      * @generated
      */
     EReference PREDICATE_ATOM__TERMS = eINSTANCE.getPredicateAtom_Terms();
+
+    /**
+     * The meta object literal for the '{@link net.certware.argument.language.l.impl.BasicPredicateAtomImpl <em>Basic Predicate Atom</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see net.certware.argument.language.l.impl.BasicPredicateAtomImpl
+     * @see net.certware.argument.language.l.impl.LPackageImpl#getBasicPredicateAtom()
+     * @generated
+     */
+    EClass BASIC_PREDICATE_ATOM = eINSTANCE.getBasicPredicateAtom();
+
+    /**
+     * The meta object literal for the '<em><b>Fid</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BASIC_PREDICATE_ATOM__FID = eINSTANCE.getBasicPredicateAtom_Fid();
+
+    /**
+     * The meta object literal for the '<em><b>Terms</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BASIC_PREDICATE_ATOM__TERMS = eINSTANCE.getBasicPredicateAtom_Terms();
 
     /**
      * The meta object literal for the '{@link net.certware.argument.language.l.impl.BuiltInAtomImpl <em>Built In Atom</em>}' class.
@@ -2646,6 +3542,26 @@ public interface LPackage extends EPackage
     EClass SENTENCE_LITERAL = eINSTANCE.getSentenceLiteral();
 
     /**
+     * The meta object literal for the '{@link net.certware.argument.language.l.impl.pSentenceImpl <em>pSentence</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see net.certware.argument.language.l.impl.pSentenceImpl
+     * @see net.certware.argument.language.l.impl.LPackageImpl#getpSentence()
+     * @generated
+     */
+    EClass PSENTENCE = eINSTANCE.getpSentence();
+
+    /**
+     * The meta object literal for the '{@link net.certware.argument.language.l.impl.pSentenceLiteralImpl <em>pSentence Literal</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see net.certware.argument.language.l.impl.pSentenceLiteralImpl
+     * @see net.certware.argument.language.l.impl.LPackageImpl#getpSentenceLiteral()
+     * @generated
+     */
+    EClass PSENTENCE_LITERAL = eINSTANCE.getpSentenceLiteral();
+
+    /**
      * The meta object literal for the '{@link net.certware.argument.language.l.impl.MaybeLiteralImpl <em>Maybe Literal</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2674,20 +3590,12 @@ public interface LPackage extends EPackage
     EReference CARDINALITY_CONSTRAINT__LHS = eINSTANCE.getCardinalityConstraint_Lhs();
 
     /**
-     * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Atom</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CARDINALITY_CONSTRAINT__ID = eINSTANCE.getCardinalityConstraint_Id();
-
-    /**
-     * The meta object literal for the '<em><b>Terms</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference CARDINALITY_CONSTRAINT__TERMS = eINSTANCE.getCardinalityConstraint_Terms();
+    EReference CARDINALITY_CONSTRAINT__ATOM = eINSTANCE.getCardinalityConstraint_Atom();
 
     /**
      * The meta object literal for the '<em><b>Rhs</b></em>' containment reference feature.
@@ -2772,22 +3680,6 @@ public interface LPackage extends EPackage
     EClass ADDITION = eINSTANCE.getAddition();
 
     /**
-     * The meta object literal for the '<em><b>Lhs</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference ADDITION__LHS = eINSTANCE.getAddition_Lhs();
-
-    /**
-     * The meta object literal for the '<em><b>Rhs</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference ADDITION__RHS = eINSTANCE.getAddition_Rhs();
-
-    /**
      * The meta object literal for the '{@link net.certware.argument.language.l.impl.MultiplicationImpl <em>Multiplication</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2798,20 +3690,24 @@ public interface LPackage extends EPackage
     EClass MULTIPLICATION = eINSTANCE.getMultiplication();
 
     /**
-     * The meta object literal for the '<em><b>Lhs</b></em>' containment reference feature.
+     * The meta object literal for the '{@link net.certware.argument.language.l.impl.GroundAdditionImpl <em>Ground Addition</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see net.certware.argument.language.l.impl.GroundAdditionImpl
+     * @see net.certware.argument.language.l.impl.LPackageImpl#getGroundAddition()
      * @generated
      */
-    EReference MULTIPLICATION__LHS = eINSTANCE.getMultiplication_Lhs();
+    EClass GROUND_ADDITION = eINSTANCE.getGroundAddition();
 
     /**
-     * The meta object literal for the '<em><b>Rhs</b></em>' containment reference feature.
+     * The meta object literal for the '{@link net.certware.argument.language.l.impl.GroundMultiplicationImpl <em>Ground Multiplication</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see net.certware.argument.language.l.impl.GroundMultiplicationImpl
+     * @see net.certware.argument.language.l.impl.LPackageImpl#getGroundMultiplication()
      * @generated
      */
-    EReference MULTIPLICATION__RHS = eINSTANCE.getMultiplication_Rhs();
+    EClass GROUND_MULTIPLICATION = eINSTANCE.getGroundMultiplication();
 
     /**
      * The meta object literal for the '{@link net.certware.argument.language.l.impl.SetAdditionImpl <em>Set Addition</em>}' class.
@@ -2916,6 +3812,58 @@ public interface LPackage extends EPackage
      * @generated
      */
     EReference AND_SENTENCE__RIGHT = eINSTANCE.getAndSentence_Right();
+
+    /**
+     * The meta object literal for the '{@link net.certware.argument.language.l.impl.pOrSentenceImpl <em>pOr Sentence</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see net.certware.argument.language.l.impl.pOrSentenceImpl
+     * @see net.certware.argument.language.l.impl.LPackageImpl#getpOrSentence()
+     * @generated
+     */
+    EClass POR_SENTENCE = eINSTANCE.getpOrSentence();
+
+    /**
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference POR_SENTENCE__LEFT = eINSTANCE.getpOrSentence_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference POR_SENTENCE__RIGHT = eINSTANCE.getpOrSentence_Right();
+
+    /**
+     * The meta object literal for the '{@link net.certware.argument.language.l.impl.pAndSentenceImpl <em>pAnd Sentence</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see net.certware.argument.language.l.impl.pAndSentenceImpl
+     * @see net.certware.argument.language.l.impl.LPackageImpl#getpAndSentence()
+     * @generated
+     */
+    EClass PAND_SENTENCE = eINSTANCE.getpAndSentence();
+
+    /**
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PAND_SENTENCE__LEFT = eINSTANCE.getpAndSentence_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PAND_SENTENCE__RIGHT = eINSTANCE.getpAndSentence_Right();
 
   }
 

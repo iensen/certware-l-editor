@@ -31,12 +31,12 @@ public interface Limit extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Cv</em>' containment reference.
-   * @see #setCv(ArithmeticTerm)
+   * @see #setCv(GroundArithmeticTerm)
    * @see net.certware.argument.language.l.LPackage#getLimit_Cv()
    * @model containment="true"
    * @generated
    */
-  ArithmeticTerm getCv();
+  GroundArithmeticTerm getCv();
 
   /**
    * Sets the value of the '{@link net.certware.argument.language.l.Limit#getCv <em>Cv</em>}' containment reference.
@@ -46,6 +46,6 @@ public interface Limit extends EObject
    * @see #getCv()
    * @generated
    */
-  void setCv(ArithmeticTerm value);
+  void setCv(GroundArithmeticTerm value);
 
 } // Limit

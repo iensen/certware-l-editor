@@ -2,7 +2,7 @@
  */
 package net.certware.argument.language.l.impl;
 
-import net.certware.argument.language.l.ArithmeticTerm;
+import net.certware.argument.language.l.GroundArithmeticTerm;
 import net.certware.argument.language.l.LPackage;
 import net.certware.argument.language.l.Limit;
 
@@ -38,7 +38,7 @@ public class LimitImpl extends MinimalEObjectImpl.Container implements Limit
    * @generated
    * @ordered
    */
-  protected ArithmeticTerm cv;
+  protected GroundArithmeticTerm cv;
 
   /**
    * <!-- begin-user-doc -->
@@ -66,7 +66,7 @@ public class LimitImpl extends MinimalEObjectImpl.Container implements Limit
    * <!-- end-user-doc -->
    * @generated
    */
-  public ArithmeticTerm getCv()
+  public GroundArithmeticTerm getCv()
   {
     return cv;
   }
@@ -76,9 +76,9 @@ public class LimitImpl extends MinimalEObjectImpl.Container implements Limit
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetCv(ArithmeticTerm newCv, NotificationChain msgs)
+  public NotificationChain basicSetCv(GroundArithmeticTerm newCv, NotificationChain msgs)
   {
-    ArithmeticTerm oldCv = cv;
+    GroundArithmeticTerm oldCv = cv;
     cv = newCv;
     if (eNotificationRequired())
     {
@@ -93,7 +93,7 @@ public class LimitImpl extends MinimalEObjectImpl.Container implements Limit
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setCv(ArithmeticTerm newCv)
+  public void setCv(GroundArithmeticTerm newCv)
   {
     if (newCv != cv)
     {
@@ -152,7 +152,7 @@ public class LimitImpl extends MinimalEObjectImpl.Container implements Limit
     switch (featureID)
     {
       case LPackage.LIMIT__CV:
-        setCv((ArithmeticTerm)newValue);
+        setCv((GroundArithmeticTerm)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -169,7 +169,7 @@ public class LimitImpl extends MinimalEObjectImpl.Container implements Limit
     switch (featureID)
     {
       case LPackage.LIMIT__CV:
-        setCv((ArithmeticTerm)null);
+        setCv((GroundArithmeticTerm)null);
         return;
     }
     super.eUnset(featureID);

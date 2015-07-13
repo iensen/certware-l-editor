@@ -2,7 +2,7 @@
  */
 package net.certware.argument.language.l.impl;
 
-import net.certware.argument.language.l.BasicTerms;
+import net.certware.argument.language.l.BasicPredicateAtom;
 import net.certware.argument.language.l.Bound;
 import net.certware.argument.language.l.CardinalityConstraint;
 import net.certware.argument.language.l.LPackage;
@@ -23,8 +23,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link net.certware.argument.language.l.impl.CardinalityConstraintImpl#getLhs <em>Lhs</em>}</li>
- *   <li>{@link net.certware.argument.language.l.impl.CardinalityConstraintImpl#getId <em>Id</em>}</li>
- *   <li>{@link net.certware.argument.language.l.impl.CardinalityConstraintImpl#getTerms <em>Terms</em>}</li>
+ *   <li>{@link net.certware.argument.language.l.impl.CardinalityConstraintImpl#getAtom <em>Atom</em>}</li>
  *   <li>{@link net.certware.argument.language.l.impl.CardinalityConstraintImpl#getRhs <em>Rhs</em>}</li>
  * </ul>
  * </p>
@@ -44,34 +43,14 @@ public class CardinalityConstraintImpl extends HeadImpl implements CardinalityCo
   protected Bound lhs;
 
   /**
-   * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+   * The cached value of the '{@link #getAtom() <em>Atom</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getId()
+   * @see #getAtom()
    * @generated
    * @ordered
    */
-  protected static final String ID_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getId()
-   * @generated
-   * @ordered
-   */
-  protected String id = ID_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getTerms() <em>Terms</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTerms()
-   * @generated
-   * @ordered
-   */
-  protected BasicTerms terms;
+  protected BasicPredicateAtom atom;
 
   /**
    * The cached value of the '{@link #getRhs() <em>Rhs</em>}' containment reference.
@@ -157,9 +136,9 @@ public class CardinalityConstraintImpl extends HeadImpl implements CardinalityCo
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getId()
+  public BasicPredicateAtom getAtom()
   {
-    return id;
+    return atom;
   }
 
   /**
@@ -167,36 +146,13 @@ public class CardinalityConstraintImpl extends HeadImpl implements CardinalityCo
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setId(String newId)
+  public NotificationChain basicSetAtom(BasicPredicateAtom newAtom, NotificationChain msgs)
   {
-    String oldId = id;
-    id = newId;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, LPackage.CARDINALITY_CONSTRAINT__ID, oldId, id));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public BasicTerms getTerms()
-  {
-    return terms;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetTerms(BasicTerms newTerms, NotificationChain msgs)
-  {
-    BasicTerms oldTerms = terms;
-    terms = newTerms;
+    BasicPredicateAtom oldAtom = atom;
+    atom = newAtom;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LPackage.CARDINALITY_CONSTRAINT__TERMS, oldTerms, newTerms);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LPackage.CARDINALITY_CONSTRAINT__ATOM, oldAtom, newAtom);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -207,20 +163,20 @@ public class CardinalityConstraintImpl extends HeadImpl implements CardinalityCo
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setTerms(BasicTerms newTerms)
+  public void setAtom(BasicPredicateAtom newAtom)
   {
-    if (newTerms != terms)
+    if (newAtom != atom)
     {
       NotificationChain msgs = null;
-      if (terms != null)
-        msgs = ((InternalEObject)terms).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LPackage.CARDINALITY_CONSTRAINT__TERMS, null, msgs);
-      if (newTerms != null)
-        msgs = ((InternalEObject)newTerms).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LPackage.CARDINALITY_CONSTRAINT__TERMS, null, msgs);
-      msgs = basicSetTerms(newTerms, msgs);
+      if (atom != null)
+        msgs = ((InternalEObject)atom).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LPackage.CARDINALITY_CONSTRAINT__ATOM, null, msgs);
+      if (newAtom != null)
+        msgs = ((InternalEObject)newAtom).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LPackage.CARDINALITY_CONSTRAINT__ATOM, null, msgs);
+      msgs = basicSetAtom(newAtom, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, LPackage.CARDINALITY_CONSTRAINT__TERMS, newTerms, newTerms));
+      eNotify(new ENotificationImpl(this, Notification.SET, LPackage.CARDINALITY_CONSTRAINT__ATOM, newAtom, newAtom));
   }
 
   /**
@@ -283,8 +239,8 @@ public class CardinalityConstraintImpl extends HeadImpl implements CardinalityCo
     {
       case LPackage.CARDINALITY_CONSTRAINT__LHS:
         return basicSetLhs(null, msgs);
-      case LPackage.CARDINALITY_CONSTRAINT__TERMS:
-        return basicSetTerms(null, msgs);
+      case LPackage.CARDINALITY_CONSTRAINT__ATOM:
+        return basicSetAtom(null, msgs);
       case LPackage.CARDINALITY_CONSTRAINT__RHS:
         return basicSetRhs(null, msgs);
     }
@@ -303,10 +259,8 @@ public class CardinalityConstraintImpl extends HeadImpl implements CardinalityCo
     {
       case LPackage.CARDINALITY_CONSTRAINT__LHS:
         return getLhs();
-      case LPackage.CARDINALITY_CONSTRAINT__ID:
-        return getId();
-      case LPackage.CARDINALITY_CONSTRAINT__TERMS:
-        return getTerms();
+      case LPackage.CARDINALITY_CONSTRAINT__ATOM:
+        return getAtom();
       case LPackage.CARDINALITY_CONSTRAINT__RHS:
         return getRhs();
     }
@@ -326,11 +280,8 @@ public class CardinalityConstraintImpl extends HeadImpl implements CardinalityCo
       case LPackage.CARDINALITY_CONSTRAINT__LHS:
         setLhs((Bound)newValue);
         return;
-      case LPackage.CARDINALITY_CONSTRAINT__ID:
-        setId((String)newValue);
-        return;
-      case LPackage.CARDINALITY_CONSTRAINT__TERMS:
-        setTerms((BasicTerms)newValue);
+      case LPackage.CARDINALITY_CONSTRAINT__ATOM:
+        setAtom((BasicPredicateAtom)newValue);
         return;
       case LPackage.CARDINALITY_CONSTRAINT__RHS:
         setRhs((Bound)newValue);
@@ -352,11 +303,8 @@ public class CardinalityConstraintImpl extends HeadImpl implements CardinalityCo
       case LPackage.CARDINALITY_CONSTRAINT__LHS:
         setLhs((Bound)null);
         return;
-      case LPackage.CARDINALITY_CONSTRAINT__ID:
-        setId(ID_EDEFAULT);
-        return;
-      case LPackage.CARDINALITY_CONSTRAINT__TERMS:
-        setTerms((BasicTerms)null);
+      case LPackage.CARDINALITY_CONSTRAINT__ATOM:
+        setAtom((BasicPredicateAtom)null);
         return;
       case LPackage.CARDINALITY_CONSTRAINT__RHS:
         setRhs((Bound)null);
@@ -377,31 +325,12 @@ public class CardinalityConstraintImpl extends HeadImpl implements CardinalityCo
     {
       case LPackage.CARDINALITY_CONSTRAINT__LHS:
         return lhs != null;
-      case LPackage.CARDINALITY_CONSTRAINT__ID:
-        return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-      case LPackage.CARDINALITY_CONSTRAINT__TERMS:
-        return terms != null;
+      case LPackage.CARDINALITY_CONSTRAINT__ATOM:
+        return atom != null;
       case LPackage.CARDINALITY_CONSTRAINT__RHS:
         return rhs != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (id: ");
-    result.append(id);
-    result.append(')');
-    return result.toString();
   }
 
 } //CardinalityConstraintImpl
