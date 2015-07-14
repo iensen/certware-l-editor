@@ -4124,11 +4124,11 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTerms"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1362:1: ruleTerms returns [EObject current=null] : ( ( (lv_car_0_0= ruleTerm ) ) (otherlv_1= ',' ( (lv_cdr_2_0= ruleTerm ) ) )* ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1362:1: ruleTerms returns [EObject current=null] : ( ( (lv_car_0_0= ruleTerm ) ) ( ( (lv_terms_1_0= ',' ) ) ( (lv_cdr_2_0= ruleTerm ) ) )* ) ;
     public final EObject ruleTerms() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_1=null;
+        Token lv_terms_1_0=null;
         EObject lv_car_0_0 = null;
 
         EObject lv_cdr_2_0 = null;
@@ -4137,11 +4137,11 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1365:28: ( ( ( (lv_car_0_0= ruleTerm ) ) (otherlv_1= ',' ( (lv_cdr_2_0= ruleTerm ) ) )* ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1366:1: ( ( (lv_car_0_0= ruleTerm ) ) (otherlv_1= ',' ( (lv_cdr_2_0= ruleTerm ) ) )* )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1365:28: ( ( ( (lv_car_0_0= ruleTerm ) ) ( ( (lv_terms_1_0= ',' ) ) ( (lv_cdr_2_0= ruleTerm ) ) )* ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1366:1: ( ( (lv_car_0_0= ruleTerm ) ) ( ( (lv_terms_1_0= ',' ) ) ( (lv_cdr_2_0= ruleTerm ) ) )* )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1366:1: ( ( (lv_car_0_0= ruleTerm ) ) (otherlv_1= ',' ( (lv_cdr_2_0= ruleTerm ) ) )* )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1366:2: ( (lv_car_0_0= ruleTerm ) ) (otherlv_1= ',' ( (lv_cdr_2_0= ruleTerm ) ) )*
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1366:1: ( ( (lv_car_0_0= ruleTerm ) ) ( ( (lv_terms_1_0= ',' ) ) ( (lv_cdr_2_0= ruleTerm ) ) )* )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1366:2: ( (lv_car_0_0= ruleTerm ) ) ( ( (lv_terms_1_0= ',' ) ) ( (lv_cdr_2_0= ruleTerm ) ) )*
             {
             // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1366:2: ( (lv_car_0_0= ruleTerm ) )
             // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1367:1: (lv_car_0_0= ruleTerm )
@@ -4178,7 +4178,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1384:2: (otherlv_1= ',' ( (lv_cdr_2_0= ruleTerm ) ) )*
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1384:2: ( ( (lv_terms_1_0= ',' ) ) ( (lv_cdr_2_0= ruleTerm ) ) )*
             loop25:
             do {
                 int alt25=2;
@@ -4191,26 +4191,46 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
                 switch (alt25) {
             	case 1 :
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1384:4: otherlv_1= ',' ( (lv_cdr_2_0= ruleTerm ) )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1384:3: ( (lv_terms_1_0= ',' ) ) ( (lv_cdr_2_0= ruleTerm ) )
             	    {
-            	    otherlv_1=(Token)match(input,20,FOLLOW_20_in_ruleTerms3194); if (state.failed) return current;
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1384:3: ( (lv_terms_1_0= ',' ) )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1385:1: (lv_terms_1_0= ',' )
+            	    {
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1385:1: (lv_terms_1_0= ',' )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1386:3: lv_terms_1_0= ','
+            	    {
+            	    lv_terms_1_0=(Token)match(input,20,FOLLOW_20_in_ruleTerms3200); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
-            	          	newLeafNode(otherlv_1, grammarAccess.getTermsAccess().getCommaKeyword_1_0());
+            	              newLeafNode(lv_terms_1_0, grammarAccess.getTermsAccess().getTermsCommaKeyword_1_0_0());
             	          
             	    }
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1388:1: ( (lv_cdr_2_0= ruleTerm ) )
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1389:1: (lv_cdr_2_0= ruleTerm )
+            	    if ( state.backtracking==0 ) {
+
+            	      	        if (current==null) {
+            	      	            current = createModelElement(grammarAccess.getTermsRule());
+            	      	        }
+            	             		addWithLastConsumed(current, "terms", lv_terms_1_0, ",");
+            	      	    
+            	    }
+
+            	    }
+
+
+            	    }
+
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1399:2: ( (lv_cdr_2_0= ruleTerm ) )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1400:1: (lv_cdr_2_0= ruleTerm )
             	    {
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1389:1: (lv_cdr_2_0= ruleTerm )
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1390:3: lv_cdr_2_0= ruleTerm
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1400:1: (lv_cdr_2_0= ruleTerm )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1401:3: lv_cdr_2_0= ruleTerm
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getTermsAccess().getCdrTermParserRuleCall_1_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleTerm_in_ruleTerms3215);
+            	    pushFollow(FOLLOW_ruleTerm_in_ruleTerms3234);
             	    lv_cdr_2_0=ruleTerm();
 
             	    state._fsp--;
@@ -4266,7 +4286,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleConstantDeclaration"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1414:1: entryRuleConstantDeclaration returns [EObject current=null] : iv_ruleConstantDeclaration= ruleConstantDeclaration EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1425:1: entryRuleConstantDeclaration returns [EObject current=null] : iv_ruleConstantDeclaration= ruleConstantDeclaration EOF ;
     public final EObject entryRuleConstantDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -4274,13 +4294,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1415:2: (iv_ruleConstantDeclaration= ruleConstantDeclaration EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1416:2: iv_ruleConstantDeclaration= ruleConstantDeclaration EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1426:2: (iv_ruleConstantDeclaration= ruleConstantDeclaration EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1427:2: iv_ruleConstantDeclaration= ruleConstantDeclaration EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getConstantDeclarationRule()); 
             }
-            pushFollow(FOLLOW_ruleConstantDeclaration_in_entryRuleConstantDeclaration3253);
+            pushFollow(FOLLOW_ruleConstantDeclaration_in_entryRuleConstantDeclaration3272);
             iv_ruleConstantDeclaration=ruleConstantDeclaration();
 
             state._fsp--;
@@ -4288,7 +4308,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleConstantDeclaration; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleConstantDeclaration3263); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleConstantDeclaration3282); if (state.failed) return current;
 
             }
 
@@ -4306,7 +4326,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleConstantDeclaration"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1423:1: ruleConstantDeclaration returns [EObject current=null] : (otherlv_0= 'const' ( (lv_id_1_0= RULE_LID ) ) otherlv_2= '=' ( (lv_cv_3_0= ruleGroundArithmeticTerm ) ) otherlv_4= '.' ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1434:1: ruleConstantDeclaration returns [EObject current=null] : (otherlv_0= 'const' ( (lv_id_1_0= RULE_LID ) ) otherlv_2= '=' ( (lv_cv_3_0= ruleGroundArithmeticTerm ) ) otherlv_4= '.' ) ;
     public final EObject ruleConstantDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -4320,25 +4340,25 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1426:28: ( (otherlv_0= 'const' ( (lv_id_1_0= RULE_LID ) ) otherlv_2= '=' ( (lv_cv_3_0= ruleGroundArithmeticTerm ) ) otherlv_4= '.' ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1427:1: (otherlv_0= 'const' ( (lv_id_1_0= RULE_LID ) ) otherlv_2= '=' ( (lv_cv_3_0= ruleGroundArithmeticTerm ) ) otherlv_4= '.' )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1437:28: ( (otherlv_0= 'const' ( (lv_id_1_0= RULE_LID ) ) otherlv_2= '=' ( (lv_cv_3_0= ruleGroundArithmeticTerm ) ) otherlv_4= '.' ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1438:1: (otherlv_0= 'const' ( (lv_id_1_0= RULE_LID ) ) otherlv_2= '=' ( (lv_cv_3_0= ruleGroundArithmeticTerm ) ) otherlv_4= '.' )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1427:1: (otherlv_0= 'const' ( (lv_id_1_0= RULE_LID ) ) otherlv_2= '=' ( (lv_cv_3_0= ruleGroundArithmeticTerm ) ) otherlv_4= '.' )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1427:3: otherlv_0= 'const' ( (lv_id_1_0= RULE_LID ) ) otherlv_2= '=' ( (lv_cv_3_0= ruleGroundArithmeticTerm ) ) otherlv_4= '.'
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1438:1: (otherlv_0= 'const' ( (lv_id_1_0= RULE_LID ) ) otherlv_2= '=' ( (lv_cv_3_0= ruleGroundArithmeticTerm ) ) otherlv_4= '.' )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1438:3: otherlv_0= 'const' ( (lv_id_1_0= RULE_LID ) ) otherlv_2= '=' ( (lv_cv_3_0= ruleGroundArithmeticTerm ) ) otherlv_4= '.'
             {
-            otherlv_0=(Token)match(input,23,FOLLOW_23_in_ruleConstantDeclaration3300); if (state.failed) return current;
+            otherlv_0=(Token)match(input,23,FOLLOW_23_in_ruleConstantDeclaration3319); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getConstantDeclarationAccess().getConstKeyword_0());
                   
             }
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1431:1: ( (lv_id_1_0= RULE_LID ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1432:1: (lv_id_1_0= RULE_LID )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1442:1: ( (lv_id_1_0= RULE_LID ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1443:1: (lv_id_1_0= RULE_LID )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1432:1: (lv_id_1_0= RULE_LID )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1433:3: lv_id_1_0= RULE_LID
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1443:1: (lv_id_1_0= RULE_LID )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1444:3: lv_id_1_0= RULE_LID
             {
-            lv_id_1_0=(Token)match(input,RULE_LID,FOLLOW_RULE_LID_in_ruleConstantDeclaration3317); if (state.failed) return current;
+            lv_id_1_0=(Token)match(input,RULE_LID,FOLLOW_RULE_LID_in_ruleConstantDeclaration3336); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_id_1_0, grammarAccess.getConstantDeclarationAccess().getIdLIDTerminalRuleCall_1_0()); 
@@ -4362,24 +4382,24 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,24,FOLLOW_24_in_ruleConstantDeclaration3334); if (state.failed) return current;
+            otherlv_2=(Token)match(input,24,FOLLOW_24_in_ruleConstantDeclaration3353); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getConstantDeclarationAccess().getEqualsSignKeyword_2());
                   
             }
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1453:1: ( (lv_cv_3_0= ruleGroundArithmeticTerm ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1454:1: (lv_cv_3_0= ruleGroundArithmeticTerm )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1464:1: ( (lv_cv_3_0= ruleGroundArithmeticTerm ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1465:1: (lv_cv_3_0= ruleGroundArithmeticTerm )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1454:1: (lv_cv_3_0= ruleGroundArithmeticTerm )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1455:3: lv_cv_3_0= ruleGroundArithmeticTerm
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1465:1: (lv_cv_3_0= ruleGroundArithmeticTerm )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1466:3: lv_cv_3_0= ruleGroundArithmeticTerm
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getConstantDeclarationAccess().getCvGroundArithmeticTermParserRuleCall_3_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleGroundArithmeticTerm_in_ruleConstantDeclaration3355);
+            pushFollow(FOLLOW_ruleGroundArithmeticTerm_in_ruleConstantDeclaration3374);
             lv_cv_3_0=ruleGroundArithmeticTerm();
 
             state._fsp--;
@@ -4403,7 +4423,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,25,FOLLOW_25_in_ruleConstantDeclaration3367); if (state.failed) return current;
+            otherlv_4=(Token)match(input,25,FOLLOW_25_in_ruleConstantDeclaration3386); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_4, grammarAccess.getConstantDeclarationAccess().getFullStopKeyword_4());
@@ -4432,7 +4452,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTypeDeclaration"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1483:1: entryRuleTypeDeclaration returns [EObject current=null] : iv_ruleTypeDeclaration= ruleTypeDeclaration EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1494:1: entryRuleTypeDeclaration returns [EObject current=null] : iv_ruleTypeDeclaration= ruleTypeDeclaration EOF ;
     public final EObject entryRuleTypeDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -4440,13 +4460,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1484:2: (iv_ruleTypeDeclaration= ruleTypeDeclaration EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1485:2: iv_ruleTypeDeclaration= ruleTypeDeclaration EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1495:2: (iv_ruleTypeDeclaration= ruleTypeDeclaration EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1496:2: iv_ruleTypeDeclaration= ruleTypeDeclaration EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTypeDeclarationRule()); 
             }
-            pushFollow(FOLLOW_ruleTypeDeclaration_in_entryRuleTypeDeclaration3403);
+            pushFollow(FOLLOW_ruleTypeDeclaration_in_entryRuleTypeDeclaration3422);
             iv_ruleTypeDeclaration=ruleTypeDeclaration();
 
             state._fsp--;
@@ -4454,7 +4474,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleTypeDeclaration; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTypeDeclaration3413); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTypeDeclaration3432); if (state.failed) return current;
 
             }
 
@@ -4472,7 +4492,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTypeDeclaration"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1492:1: ruleTypeDeclaration returns [EObject current=null] : (otherlv_0= 'type' ( (lv_id_1_0= RULE_LID ) ) otherlv_2= '=' ( (lv_exp_3_0= ruleSetExpression ) ) otherlv_4= '.' ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1503:1: ruleTypeDeclaration returns [EObject current=null] : (otherlv_0= 'type' ( (lv_id_1_0= RULE_LID ) ) otherlv_2= '=' ( (lv_exp_3_0= ruleSetExpression ) ) otherlv_4= '.' ) ;
     public final EObject ruleTypeDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -4486,25 +4506,25 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1495:28: ( (otherlv_0= 'type' ( (lv_id_1_0= RULE_LID ) ) otherlv_2= '=' ( (lv_exp_3_0= ruleSetExpression ) ) otherlv_4= '.' ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1496:1: (otherlv_0= 'type' ( (lv_id_1_0= RULE_LID ) ) otherlv_2= '=' ( (lv_exp_3_0= ruleSetExpression ) ) otherlv_4= '.' )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1506:28: ( (otherlv_0= 'type' ( (lv_id_1_0= RULE_LID ) ) otherlv_2= '=' ( (lv_exp_3_0= ruleSetExpression ) ) otherlv_4= '.' ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1507:1: (otherlv_0= 'type' ( (lv_id_1_0= RULE_LID ) ) otherlv_2= '=' ( (lv_exp_3_0= ruleSetExpression ) ) otherlv_4= '.' )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1496:1: (otherlv_0= 'type' ( (lv_id_1_0= RULE_LID ) ) otherlv_2= '=' ( (lv_exp_3_0= ruleSetExpression ) ) otherlv_4= '.' )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1496:3: otherlv_0= 'type' ( (lv_id_1_0= RULE_LID ) ) otherlv_2= '=' ( (lv_exp_3_0= ruleSetExpression ) ) otherlv_4= '.'
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1507:1: (otherlv_0= 'type' ( (lv_id_1_0= RULE_LID ) ) otherlv_2= '=' ( (lv_exp_3_0= ruleSetExpression ) ) otherlv_4= '.' )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1507:3: otherlv_0= 'type' ( (lv_id_1_0= RULE_LID ) ) otherlv_2= '=' ( (lv_exp_3_0= ruleSetExpression ) ) otherlv_4= '.'
             {
-            otherlv_0=(Token)match(input,26,FOLLOW_26_in_ruleTypeDeclaration3450); if (state.failed) return current;
+            otherlv_0=(Token)match(input,26,FOLLOW_26_in_ruleTypeDeclaration3469); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getTypeDeclarationAccess().getTypeKeyword_0());
                   
             }
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1500:1: ( (lv_id_1_0= RULE_LID ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1501:1: (lv_id_1_0= RULE_LID )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1511:1: ( (lv_id_1_0= RULE_LID ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1512:1: (lv_id_1_0= RULE_LID )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1501:1: (lv_id_1_0= RULE_LID )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1502:3: lv_id_1_0= RULE_LID
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1512:1: (lv_id_1_0= RULE_LID )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1513:3: lv_id_1_0= RULE_LID
             {
-            lv_id_1_0=(Token)match(input,RULE_LID,FOLLOW_RULE_LID_in_ruleTypeDeclaration3467); if (state.failed) return current;
+            lv_id_1_0=(Token)match(input,RULE_LID,FOLLOW_RULE_LID_in_ruleTypeDeclaration3486); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_id_1_0, grammarAccess.getTypeDeclarationAccess().getIdLIDTerminalRuleCall_1_0()); 
@@ -4528,24 +4548,24 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,24,FOLLOW_24_in_ruleTypeDeclaration3484); if (state.failed) return current;
+            otherlv_2=(Token)match(input,24,FOLLOW_24_in_ruleTypeDeclaration3503); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getTypeDeclarationAccess().getEqualsSignKeyword_2());
                   
             }
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1522:1: ( (lv_exp_3_0= ruleSetExpression ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1523:1: (lv_exp_3_0= ruleSetExpression )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1533:1: ( (lv_exp_3_0= ruleSetExpression ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1534:1: (lv_exp_3_0= ruleSetExpression )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1523:1: (lv_exp_3_0= ruleSetExpression )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1524:3: lv_exp_3_0= ruleSetExpression
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1534:1: (lv_exp_3_0= ruleSetExpression )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1535:3: lv_exp_3_0= ruleSetExpression
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getTypeDeclarationAccess().getExpSetExpressionParserRuleCall_3_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleSetExpression_in_ruleTypeDeclaration3505);
+            pushFollow(FOLLOW_ruleSetExpression_in_ruleTypeDeclaration3524);
             lv_exp_3_0=ruleSetExpression();
 
             state._fsp--;
@@ -4569,7 +4589,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,25,FOLLOW_25_in_ruleTypeDeclaration3517); if (state.failed) return current;
+            otherlv_4=(Token)match(input,25,FOLLOW_25_in_ruleTypeDeclaration3536); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_4, grammarAccess.getTypeDeclarationAccess().getFullStopKeyword_4());
@@ -4598,7 +4618,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLimit"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1552:1: entryRuleLimit returns [EObject current=null] : iv_ruleLimit= ruleLimit EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1563:1: entryRuleLimit returns [EObject current=null] : iv_ruleLimit= ruleLimit EOF ;
     public final EObject entryRuleLimit() throws RecognitionException {
         EObject current = null;
 
@@ -4606,13 +4626,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1553:2: (iv_ruleLimit= ruleLimit EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1554:2: iv_ruleLimit= ruleLimit EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1564:2: (iv_ruleLimit= ruleLimit EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1565:2: iv_ruleLimit= ruleLimit EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getLimitRule()); 
             }
-            pushFollow(FOLLOW_ruleLimit_in_entryRuleLimit3553);
+            pushFollow(FOLLOW_ruleLimit_in_entryRuleLimit3572);
             iv_ruleLimit=ruleLimit();
 
             state._fsp--;
@@ -4620,7 +4640,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleLimit; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLimit3563); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLimit3582); if (state.failed) return current;
 
             }
 
@@ -4638,7 +4658,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLimit"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1561:1: ruleLimit returns [EObject current=null] : ( (lv_cv_0_0= ruleGroundArithmeticTerm ) ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1572:1: ruleLimit returns [EObject current=null] : ( (lv_cv_0_0= ruleGroundArithmeticTerm ) ) ;
     public final EObject ruleLimit() throws RecognitionException {
         EObject current = null;
 
@@ -4648,21 +4668,21 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1564:28: ( ( (lv_cv_0_0= ruleGroundArithmeticTerm ) ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1565:1: ( (lv_cv_0_0= ruleGroundArithmeticTerm ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1575:28: ( ( (lv_cv_0_0= ruleGroundArithmeticTerm ) ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1576:1: ( (lv_cv_0_0= ruleGroundArithmeticTerm ) )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1565:1: ( (lv_cv_0_0= ruleGroundArithmeticTerm ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1566:1: (lv_cv_0_0= ruleGroundArithmeticTerm )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1576:1: ( (lv_cv_0_0= ruleGroundArithmeticTerm ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1577:1: (lv_cv_0_0= ruleGroundArithmeticTerm )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1566:1: (lv_cv_0_0= ruleGroundArithmeticTerm )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1567:3: lv_cv_0_0= ruleGroundArithmeticTerm
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1577:1: (lv_cv_0_0= ruleGroundArithmeticTerm )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1578:3: lv_cv_0_0= ruleGroundArithmeticTerm
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getLimitAccess().getCvGroundArithmeticTermParserRuleCall_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleGroundArithmeticTerm_in_ruleLimit3608);
+            pushFollow(FOLLOW_ruleGroundArithmeticTerm_in_ruleLimit3627);
             lv_cv_0_0=ruleGroundArithmeticTerm();
 
             state._fsp--;
@@ -4706,7 +4726,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSet"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1591:1: entryRuleSet returns [EObject current=null] : iv_ruleSet= ruleSet EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1602:1: entryRuleSet returns [EObject current=null] : iv_ruleSet= ruleSet EOF ;
     public final EObject entryRuleSet() throws RecognitionException {
         EObject current = null;
 
@@ -4714,13 +4734,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1592:2: (iv_ruleSet= ruleSet EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1593:2: iv_ruleSet= ruleSet EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1603:2: (iv_ruleSet= ruleSet EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1604:2: iv_ruleSet= ruleSet EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSetRule()); 
             }
-            pushFollow(FOLLOW_ruleSet_in_entryRuleSet3643);
+            pushFollow(FOLLOW_ruleSet_in_entryRuleSet3662);
             iv_ruleSet=ruleSet();
 
             state._fsp--;
@@ -4728,7 +4748,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleSet; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSet3653); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSet3672); if (state.failed) return current;
 
             }
 
@@ -4746,7 +4766,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSet"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1600:1: ruleSet returns [EObject current=null] : ( ( (lv_lhs_0_0= '{' ) ) ( (lv_terms_1_0= ruleGroundTerms ) )? otherlv_2= '}' ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1611:1: ruleSet returns [EObject current=null] : ( ( (lv_lhs_0_0= '{' ) ) ( (lv_terms_1_0= ruleGroundTerms ) )? otherlv_2= '}' ) ;
     public final EObject ruleSet() throws RecognitionException {
         EObject current = null;
 
@@ -4758,19 +4778,19 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1603:28: ( ( ( (lv_lhs_0_0= '{' ) ) ( (lv_terms_1_0= ruleGroundTerms ) )? otherlv_2= '}' ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1604:1: ( ( (lv_lhs_0_0= '{' ) ) ( (lv_terms_1_0= ruleGroundTerms ) )? otherlv_2= '}' )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1614:28: ( ( ( (lv_lhs_0_0= '{' ) ) ( (lv_terms_1_0= ruleGroundTerms ) )? otherlv_2= '}' ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1615:1: ( ( (lv_lhs_0_0= '{' ) ) ( (lv_terms_1_0= ruleGroundTerms ) )? otherlv_2= '}' )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1604:1: ( ( (lv_lhs_0_0= '{' ) ) ( (lv_terms_1_0= ruleGroundTerms ) )? otherlv_2= '}' )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1604:2: ( (lv_lhs_0_0= '{' ) ) ( (lv_terms_1_0= ruleGroundTerms ) )? otherlv_2= '}'
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1615:1: ( ( (lv_lhs_0_0= '{' ) ) ( (lv_terms_1_0= ruleGroundTerms ) )? otherlv_2= '}' )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1615:2: ( (lv_lhs_0_0= '{' ) ) ( (lv_terms_1_0= ruleGroundTerms ) )? otherlv_2= '}'
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1604:2: ( (lv_lhs_0_0= '{' ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1605:1: (lv_lhs_0_0= '{' )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1615:2: ( (lv_lhs_0_0= '{' ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1616:1: (lv_lhs_0_0= '{' )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1605:1: (lv_lhs_0_0= '{' )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1606:3: lv_lhs_0_0= '{'
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1616:1: (lv_lhs_0_0= '{' )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1617:3: lv_lhs_0_0= '{'
             {
-            lv_lhs_0_0=(Token)match(input,27,FOLLOW_27_in_ruleSet3696); if (state.failed) return current;
+            lv_lhs_0_0=(Token)match(input,27,FOLLOW_27_in_ruleSet3715); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                       newLeafNode(lv_lhs_0_0, grammarAccess.getSetAccess().getLhsLeftCurlyBracketKeyword_0_0());
@@ -4790,7 +4810,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1619:2: ( (lv_terms_1_0= ruleGroundTerms ) )?
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1630:2: ( (lv_terms_1_0= ruleGroundTerms ) )?
             int alt26=2;
             int LA26_0 = input.LA(1);
 
@@ -4799,17 +4819,17 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             }
             switch (alt26) {
                 case 1 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1620:1: (lv_terms_1_0= ruleGroundTerms )
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1631:1: (lv_terms_1_0= ruleGroundTerms )
                     {
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1620:1: (lv_terms_1_0= ruleGroundTerms )
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1621:3: lv_terms_1_0= ruleGroundTerms
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1631:1: (lv_terms_1_0= ruleGroundTerms )
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1632:3: lv_terms_1_0= ruleGroundTerms
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getSetAccess().getTermsGroundTermsParserRuleCall_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleGroundTerms_in_ruleSet3730);
+                    pushFollow(FOLLOW_ruleGroundTerms_in_ruleSet3749);
                     lv_terms_1_0=ruleGroundTerms();
 
                     state._fsp--;
@@ -4836,7 +4856,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,28,FOLLOW_28_in_ruleSet3743); if (state.failed) return current;
+            otherlv_2=(Token)match(input,28,FOLLOW_28_in_ruleSet3762); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getSetAccess().getRightCurlyBracketKeyword_2());
@@ -4865,7 +4885,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRange"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1649:1: entryRuleRange returns [EObject current=null] : iv_ruleRange= ruleRange EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1660:1: entryRuleRange returns [EObject current=null] : iv_ruleRange= ruleRange EOF ;
     public final EObject entryRuleRange() throws RecognitionException {
         EObject current = null;
 
@@ -4873,13 +4893,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1650:2: (iv_ruleRange= ruleRange EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1651:2: iv_ruleRange= ruleRange EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1661:2: (iv_ruleRange= ruleRange EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1662:2: iv_ruleRange= ruleRange EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getRangeRule()); 
             }
-            pushFollow(FOLLOW_ruleRange_in_entryRuleRange3779);
+            pushFollow(FOLLOW_ruleRange_in_entryRuleRange3798);
             iv_ruleRange=ruleRange();
 
             state._fsp--;
@@ -4887,7 +4907,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleRange; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRange3789); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRange3808); if (state.failed) return current;
 
             }
 
@@ -4905,7 +4925,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRange"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1658:1: ruleRange returns [EObject current=null] : (otherlv_0= '{' ( (lv_lhs_1_0= ruleLimit ) ) otherlv_2= '.' otherlv_3= '.' ( (lv_rhs_4_0= ruleLimit ) ) otherlv_5= '}' ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1669:1: ruleRange returns [EObject current=null] : (otherlv_0= '{' ( (lv_lhs_1_0= ruleLimit ) ) otherlv_2= '.' otherlv_3= '.' ( (lv_rhs_4_0= ruleLimit ) ) otherlv_5= '}' ) ;
     public final EObject ruleRange() throws RecognitionException {
         EObject current = null;
 
@@ -4921,30 +4941,30 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1661:28: ( (otherlv_0= '{' ( (lv_lhs_1_0= ruleLimit ) ) otherlv_2= '.' otherlv_3= '.' ( (lv_rhs_4_0= ruleLimit ) ) otherlv_5= '}' ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1662:1: (otherlv_0= '{' ( (lv_lhs_1_0= ruleLimit ) ) otherlv_2= '.' otherlv_3= '.' ( (lv_rhs_4_0= ruleLimit ) ) otherlv_5= '}' )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1672:28: ( (otherlv_0= '{' ( (lv_lhs_1_0= ruleLimit ) ) otherlv_2= '.' otherlv_3= '.' ( (lv_rhs_4_0= ruleLimit ) ) otherlv_5= '}' ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1673:1: (otherlv_0= '{' ( (lv_lhs_1_0= ruleLimit ) ) otherlv_2= '.' otherlv_3= '.' ( (lv_rhs_4_0= ruleLimit ) ) otherlv_5= '}' )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1662:1: (otherlv_0= '{' ( (lv_lhs_1_0= ruleLimit ) ) otherlv_2= '.' otherlv_3= '.' ( (lv_rhs_4_0= ruleLimit ) ) otherlv_5= '}' )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1662:3: otherlv_0= '{' ( (lv_lhs_1_0= ruleLimit ) ) otherlv_2= '.' otherlv_3= '.' ( (lv_rhs_4_0= ruleLimit ) ) otherlv_5= '}'
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1673:1: (otherlv_0= '{' ( (lv_lhs_1_0= ruleLimit ) ) otherlv_2= '.' otherlv_3= '.' ( (lv_rhs_4_0= ruleLimit ) ) otherlv_5= '}' )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1673:3: otherlv_0= '{' ( (lv_lhs_1_0= ruleLimit ) ) otherlv_2= '.' otherlv_3= '.' ( (lv_rhs_4_0= ruleLimit ) ) otherlv_5= '}'
             {
-            otherlv_0=(Token)match(input,27,FOLLOW_27_in_ruleRange3826); if (state.failed) return current;
+            otherlv_0=(Token)match(input,27,FOLLOW_27_in_ruleRange3845); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getRangeAccess().getLeftCurlyBracketKeyword_0());
                   
             }
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1666:1: ( (lv_lhs_1_0= ruleLimit ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1667:1: (lv_lhs_1_0= ruleLimit )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1677:1: ( (lv_lhs_1_0= ruleLimit ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1678:1: (lv_lhs_1_0= ruleLimit )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1667:1: (lv_lhs_1_0= ruleLimit )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1668:3: lv_lhs_1_0= ruleLimit
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1678:1: (lv_lhs_1_0= ruleLimit )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1679:3: lv_lhs_1_0= ruleLimit
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getRangeAccess().getLhsLimitParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleLimit_in_ruleRange3847);
+            pushFollow(FOLLOW_ruleLimit_in_ruleRange3866);
             lv_lhs_1_0=ruleLimit();
 
             state._fsp--;
@@ -4968,30 +4988,30 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,25,FOLLOW_25_in_ruleRange3859); if (state.failed) return current;
+            otherlv_2=(Token)match(input,25,FOLLOW_25_in_ruleRange3878); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getRangeAccess().getFullStopKeyword_2());
                   
             }
-            otherlv_3=(Token)match(input,25,FOLLOW_25_in_ruleRange3871); if (state.failed) return current;
+            otherlv_3=(Token)match(input,25,FOLLOW_25_in_ruleRange3890); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_3, grammarAccess.getRangeAccess().getFullStopKeyword_3());
                   
             }
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1692:1: ( (lv_rhs_4_0= ruleLimit ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1693:1: (lv_rhs_4_0= ruleLimit )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1703:1: ( (lv_rhs_4_0= ruleLimit ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1704:1: (lv_rhs_4_0= ruleLimit )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1693:1: (lv_rhs_4_0= ruleLimit )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1694:3: lv_rhs_4_0= ruleLimit
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1704:1: (lv_rhs_4_0= ruleLimit )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1705:3: lv_rhs_4_0= ruleLimit
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getRangeAccess().getRhsLimitParserRuleCall_4_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleLimit_in_ruleRange3892);
+            pushFollow(FOLLOW_ruleLimit_in_ruleRange3911);
             lv_rhs_4_0=ruleLimit();
 
             state._fsp--;
@@ -5015,7 +5035,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,28,FOLLOW_28_in_ruleRange3904); if (state.failed) return current;
+            otherlv_5=(Token)match(input,28,FOLLOW_28_in_ruleRange3923); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_5, grammarAccess.getRangeAccess().getRightCurlyBracketKeyword_5());
@@ -5044,7 +5064,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSetExpression"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1722:1: entryRuleSetExpression returns [EObject current=null] : iv_ruleSetExpression= ruleSetExpression EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1733:1: entryRuleSetExpression returns [EObject current=null] : iv_ruleSetExpression= ruleSetExpression EOF ;
     public final EObject entryRuleSetExpression() throws RecognitionException {
         EObject current = null;
 
@@ -5052,13 +5072,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1723:2: (iv_ruleSetExpression= ruleSetExpression EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1724:2: iv_ruleSetExpression= ruleSetExpression EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1734:2: (iv_ruleSetExpression= ruleSetExpression EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1735:2: iv_ruleSetExpression= ruleSetExpression EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSetExpressionRule()); 
             }
-            pushFollow(FOLLOW_ruleSetExpression_in_entryRuleSetExpression3940);
+            pushFollow(FOLLOW_ruleSetExpression_in_entryRuleSetExpression3959);
             iv_ruleSetExpression=ruleSetExpression();
 
             state._fsp--;
@@ -5066,7 +5086,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleSetExpression; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSetExpression3950); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSetExpression3969); if (state.failed) return current;
 
             }
 
@@ -5084,7 +5104,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSetExpression"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1731:1: ruleSetExpression returns [EObject current=null] : this_SetAddition_0= ruleSetAddition ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1742:1: ruleSetExpression returns [EObject current=null] : this_SetAddition_0= ruleSetAddition ;
     public final EObject ruleSetExpression() throws RecognitionException {
         EObject current = null;
 
@@ -5094,8 +5114,8 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1734:28: (this_SetAddition_0= ruleSetAddition )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1736:2: this_SetAddition_0= ruleSetAddition
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1745:28: (this_SetAddition_0= ruleSetAddition )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1747:2: this_SetAddition_0= ruleSetAddition
             {
             if ( state.backtracking==0 ) {
                
@@ -5107,7 +5127,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                       newCompositeNode(grammarAccess.getSetExpressionAccess().getSetAdditionParserRuleCall()); 
                   
             }
-            pushFollow(FOLLOW_ruleSetAddition_in_ruleSetExpression3999);
+            pushFollow(FOLLOW_ruleSetAddition_in_ruleSetExpression4018);
             this_SetAddition_0=ruleSetAddition();
 
             state._fsp--;
@@ -5138,7 +5158,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSetConstruct"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1755:1: entryRuleSetConstruct returns [EObject current=null] : iv_ruleSetConstruct= ruleSetConstruct EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1766:1: entryRuleSetConstruct returns [EObject current=null] : iv_ruleSetConstruct= ruleSetConstruct EOF ;
     public final EObject entryRuleSetConstruct() throws RecognitionException {
         EObject current = null;
 
@@ -5146,13 +5166,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1756:2: (iv_ruleSetConstruct= ruleSetConstruct EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1757:2: iv_ruleSetConstruct= ruleSetConstruct EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1767:2: (iv_ruleSetConstruct= ruleSetConstruct EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1768:2: iv_ruleSetConstruct= ruleSetConstruct EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSetConstructRule()); 
             }
-            pushFollow(FOLLOW_ruleSetConstruct_in_entryRuleSetConstruct4033);
+            pushFollow(FOLLOW_ruleSetConstruct_in_entryRuleSetConstruct4052);
             iv_ruleSetConstruct=ruleSetConstruct();
 
             state._fsp--;
@@ -5160,7 +5180,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleSetConstruct; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSetConstruct4043); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSetConstruct4062); if (state.failed) return current;
 
             }
 
@@ -5178,7 +5198,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSetConstruct"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1764:1: ruleSetConstruct returns [EObject current=null] : ( ( (lv_lhs_0_0= ruleBasicTerm ) ) otherlv_1= 'where' ( (lv_rhs_2_0= ruleTVars ) ) ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1775:1: ruleSetConstruct returns [EObject current=null] : ( ( (lv_lhs_0_0= ruleBasicTerm ) ) otherlv_1= 'where' ( (lv_rhs_2_0= ruleTVars ) ) ) ;
     public final EObject ruleSetConstruct() throws RecognitionException {
         EObject current = null;
 
@@ -5191,24 +5211,24 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1767:28: ( ( ( (lv_lhs_0_0= ruleBasicTerm ) ) otherlv_1= 'where' ( (lv_rhs_2_0= ruleTVars ) ) ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1768:1: ( ( (lv_lhs_0_0= ruleBasicTerm ) ) otherlv_1= 'where' ( (lv_rhs_2_0= ruleTVars ) ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1778:28: ( ( ( (lv_lhs_0_0= ruleBasicTerm ) ) otherlv_1= 'where' ( (lv_rhs_2_0= ruleTVars ) ) ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1779:1: ( ( (lv_lhs_0_0= ruleBasicTerm ) ) otherlv_1= 'where' ( (lv_rhs_2_0= ruleTVars ) ) )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1768:1: ( ( (lv_lhs_0_0= ruleBasicTerm ) ) otherlv_1= 'where' ( (lv_rhs_2_0= ruleTVars ) ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1768:2: ( (lv_lhs_0_0= ruleBasicTerm ) ) otherlv_1= 'where' ( (lv_rhs_2_0= ruleTVars ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1779:1: ( ( (lv_lhs_0_0= ruleBasicTerm ) ) otherlv_1= 'where' ( (lv_rhs_2_0= ruleTVars ) ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1779:2: ( (lv_lhs_0_0= ruleBasicTerm ) ) otherlv_1= 'where' ( (lv_rhs_2_0= ruleTVars ) )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1768:2: ( (lv_lhs_0_0= ruleBasicTerm ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1769:1: (lv_lhs_0_0= ruleBasicTerm )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1779:2: ( (lv_lhs_0_0= ruleBasicTerm ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1780:1: (lv_lhs_0_0= ruleBasicTerm )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1769:1: (lv_lhs_0_0= ruleBasicTerm )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1770:3: lv_lhs_0_0= ruleBasicTerm
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1780:1: (lv_lhs_0_0= ruleBasicTerm )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1781:3: lv_lhs_0_0= ruleBasicTerm
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getSetConstructAccess().getLhsBasicTermParserRuleCall_0_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleBasicTerm_in_ruleSetConstruct4089);
+            pushFollow(FOLLOW_ruleBasicTerm_in_ruleSetConstruct4108);
             lv_lhs_0_0=ruleBasicTerm();
 
             state._fsp--;
@@ -5232,24 +5252,24 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,29,FOLLOW_29_in_ruleSetConstruct4101); if (state.failed) return current;
+            otherlv_1=(Token)match(input,29,FOLLOW_29_in_ruleSetConstruct4120); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getSetConstructAccess().getWhereKeyword_1());
                   
             }
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1790:1: ( (lv_rhs_2_0= ruleTVars ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1791:1: (lv_rhs_2_0= ruleTVars )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1801:1: ( (lv_rhs_2_0= ruleTVars ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1802:1: (lv_rhs_2_0= ruleTVars )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1791:1: (lv_rhs_2_0= ruleTVars )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1792:3: lv_rhs_2_0= ruleTVars
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1802:1: (lv_rhs_2_0= ruleTVars )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1803:3: lv_rhs_2_0= ruleTVars
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getSetConstructAccess().getRhsTVarsParserRuleCall_2_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleTVars_in_ruleSetConstruct4122);
+            pushFollow(FOLLOW_ruleTVars_in_ruleSetConstruct4141);
             lv_rhs_2_0=ruleTVars();
 
             state._fsp--;
@@ -5296,7 +5316,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTVars"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1816:1: entryRuleTVars returns [EObject current=null] : iv_ruleTVars= ruleTVars EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1827:1: entryRuleTVars returns [EObject current=null] : iv_ruleTVars= ruleTVars EOF ;
     public final EObject entryRuleTVars() throws RecognitionException {
         EObject current = null;
 
@@ -5304,13 +5324,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1817:2: (iv_ruleTVars= ruleTVars EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1818:2: iv_ruleTVars= ruleTVars EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1828:2: (iv_ruleTVars= ruleTVars EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1829:2: iv_ruleTVars= ruleTVars EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTVarsRule()); 
             }
-            pushFollow(FOLLOW_ruleTVars_in_entryRuleTVars4158);
+            pushFollow(FOLLOW_ruleTVars_in_entryRuleTVars4177);
             iv_ruleTVars=ruleTVars();
 
             state._fsp--;
@@ -5318,7 +5338,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleTVars; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTVars4168); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTVars4187); if (state.failed) return current;
 
             }
 
@@ -5336,7 +5356,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTVars"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1825:1: ruleTVars returns [EObject current=null] : ( ( (lv_car_0_0= ruleTVar ) ) (otherlv_1= ',' ( (lv_cdr_2_0= ruleTVar ) ) )* ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1836:1: ruleTVars returns [EObject current=null] : ( ( (lv_car_0_0= ruleTVar ) ) (otherlv_1= ',' ( (lv_cdr_2_0= ruleTVar ) ) )* ) ;
     public final EObject ruleTVars() throws RecognitionException {
         EObject current = null;
 
@@ -5349,24 +5369,24 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1828:28: ( ( ( (lv_car_0_0= ruleTVar ) ) (otherlv_1= ',' ( (lv_cdr_2_0= ruleTVar ) ) )* ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1829:1: ( ( (lv_car_0_0= ruleTVar ) ) (otherlv_1= ',' ( (lv_cdr_2_0= ruleTVar ) ) )* )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1839:28: ( ( ( (lv_car_0_0= ruleTVar ) ) (otherlv_1= ',' ( (lv_cdr_2_0= ruleTVar ) ) )* ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1840:1: ( ( (lv_car_0_0= ruleTVar ) ) (otherlv_1= ',' ( (lv_cdr_2_0= ruleTVar ) ) )* )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1829:1: ( ( (lv_car_0_0= ruleTVar ) ) (otherlv_1= ',' ( (lv_cdr_2_0= ruleTVar ) ) )* )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1829:2: ( (lv_car_0_0= ruleTVar ) ) (otherlv_1= ',' ( (lv_cdr_2_0= ruleTVar ) ) )*
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1840:1: ( ( (lv_car_0_0= ruleTVar ) ) (otherlv_1= ',' ( (lv_cdr_2_0= ruleTVar ) ) )* )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1840:2: ( (lv_car_0_0= ruleTVar ) ) (otherlv_1= ',' ( (lv_cdr_2_0= ruleTVar ) ) )*
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1829:2: ( (lv_car_0_0= ruleTVar ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1830:1: (lv_car_0_0= ruleTVar )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1840:2: ( (lv_car_0_0= ruleTVar ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1841:1: (lv_car_0_0= ruleTVar )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1830:1: (lv_car_0_0= ruleTVar )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1831:3: lv_car_0_0= ruleTVar
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1841:1: (lv_car_0_0= ruleTVar )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1842:3: lv_car_0_0= ruleTVar
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getTVarsAccess().getCarTVarParserRuleCall_0_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleTVar_in_ruleTVars4214);
+            pushFollow(FOLLOW_ruleTVar_in_ruleTVars4233);
             lv_car_0_0=ruleTVar();
 
             state._fsp--;
@@ -5390,7 +5410,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1847:2: (otherlv_1= ',' ( (lv_cdr_2_0= ruleTVar ) ) )*
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1858:2: (otherlv_1= ',' ( (lv_cdr_2_0= ruleTVar ) ) )*
             loop27:
             do {
                 int alt27=2;
@@ -5403,26 +5423,26 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
                 switch (alt27) {
             	case 1 :
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1847:4: otherlv_1= ',' ( (lv_cdr_2_0= ruleTVar ) )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1858:4: otherlv_1= ',' ( (lv_cdr_2_0= ruleTVar ) )
             	    {
-            	    otherlv_1=(Token)match(input,20,FOLLOW_20_in_ruleTVars4227); if (state.failed) return current;
+            	    otherlv_1=(Token)match(input,20,FOLLOW_20_in_ruleTVars4246); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	          	newLeafNode(otherlv_1, grammarAccess.getTVarsAccess().getCommaKeyword_1_0());
             	          
             	    }
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1851:1: ( (lv_cdr_2_0= ruleTVar ) )
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1852:1: (lv_cdr_2_0= ruleTVar )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1862:1: ( (lv_cdr_2_0= ruleTVar ) )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1863:1: (lv_cdr_2_0= ruleTVar )
             	    {
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1852:1: (lv_cdr_2_0= ruleTVar )
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1853:3: lv_cdr_2_0= ruleTVar
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1863:1: (lv_cdr_2_0= ruleTVar )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1864:3: lv_cdr_2_0= ruleTVar
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getTVarsAccess().getCdrTVarParserRuleCall_1_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleTVar_in_ruleTVars4248);
+            	    pushFollow(FOLLOW_ruleTVar_in_ruleTVars4267);
             	    lv_cdr_2_0=ruleTVar();
 
             	    state._fsp--;
@@ -5478,7 +5498,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTVar"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1877:1: entryRuleTVar returns [EObject current=null] : iv_ruleTVar= ruleTVar EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1888:1: entryRuleTVar returns [EObject current=null] : iv_ruleTVar= ruleTVar EOF ;
     public final EObject entryRuleTVar() throws RecognitionException {
         EObject current = null;
 
@@ -5486,13 +5506,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1878:2: (iv_ruleTVar= ruleTVar EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1879:2: iv_ruleTVar= ruleTVar EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1889:2: (iv_ruleTVar= ruleTVar EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1890:2: iv_ruleTVar= ruleTVar EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTVarRule()); 
             }
-            pushFollow(FOLLOW_ruleTVar_in_entryRuleTVar4286);
+            pushFollow(FOLLOW_ruleTVar_in_entryRuleTVar4305);
             iv_ruleTVar=ruleTVar();
 
             state._fsp--;
@@ -5500,7 +5520,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleTVar; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTVar4296); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTVar4315); if (state.failed) return current;
 
             }
 
@@ -5518,7 +5538,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTVar"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1886:1: ruleTVar returns [EObject current=null] : (this_Variable_0= ruleVariable otherlv_1= 'in' this_LID_2= RULE_LID ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1897:1: ruleTVar returns [EObject current=null] : (this_Variable_0= ruleVariable otherlv_1= 'in' this_LID_2= RULE_LID ) ;
     public final EObject ruleTVar() throws RecognitionException {
         EObject current = null;
 
@@ -5530,11 +5550,11 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1889:28: ( (this_Variable_0= ruleVariable otherlv_1= 'in' this_LID_2= RULE_LID ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1890:1: (this_Variable_0= ruleVariable otherlv_1= 'in' this_LID_2= RULE_LID )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1900:28: ( (this_Variable_0= ruleVariable otherlv_1= 'in' this_LID_2= RULE_LID ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1901:1: (this_Variable_0= ruleVariable otherlv_1= 'in' this_LID_2= RULE_LID )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1890:1: (this_Variable_0= ruleVariable otherlv_1= 'in' this_LID_2= RULE_LID )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1891:2: this_Variable_0= ruleVariable otherlv_1= 'in' this_LID_2= RULE_LID
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1901:1: (this_Variable_0= ruleVariable otherlv_1= 'in' this_LID_2= RULE_LID )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1902:2: this_Variable_0= ruleVariable otherlv_1= 'in' this_LID_2= RULE_LID
             {
             if ( state.backtracking==0 ) {
                
@@ -5546,7 +5566,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                       newCompositeNode(grammarAccess.getTVarAccess().getVariableParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_ruleVariable_in_ruleTVar4346);
+            pushFollow(FOLLOW_ruleVariable_in_ruleTVar4365);
             this_Variable_0=ruleVariable();
 
             state._fsp--;
@@ -5557,13 +5577,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            otherlv_1=(Token)match(input,30,FOLLOW_30_in_ruleTVar4357); if (state.failed) return current;
+            otherlv_1=(Token)match(input,30,FOLLOW_30_in_ruleTVar4376); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getTVarAccess().getInKeyword_1());
                   
             }
-            this_LID_2=(Token)match(input,RULE_LID,FOLLOW_RULE_LID_in_ruleTVar4368); if (state.failed) return current;
+            this_LID_2=(Token)match(input,RULE_LID,FOLLOW_RULE_LID_in_ruleTVar4387); if (state.failed) return current;
             if ( state.backtracking==0 ) {
                
                   newLeafNode(this_LID_2, grammarAccess.getTVarAccess().getLIDTerminalRuleCall_2()); 
@@ -5592,7 +5612,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSetAddition"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1918:1: entryRuleSetAddition returns [EObject current=null] : iv_ruleSetAddition= ruleSetAddition EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1929:1: entryRuleSetAddition returns [EObject current=null] : iv_ruleSetAddition= ruleSetAddition EOF ;
     public final EObject entryRuleSetAddition() throws RecognitionException {
         EObject current = null;
 
@@ -5600,13 +5620,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1919:2: (iv_ruleSetAddition= ruleSetAddition EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1920:2: iv_ruleSetAddition= ruleSetAddition EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1930:2: (iv_ruleSetAddition= ruleSetAddition EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1931:2: iv_ruleSetAddition= ruleSetAddition EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSetAdditionRule()); 
             }
-            pushFollow(FOLLOW_ruleSetAddition_in_entryRuleSetAddition4403);
+            pushFollow(FOLLOW_ruleSetAddition_in_entryRuleSetAddition4422);
             iv_ruleSetAddition=ruleSetAddition();
 
             state._fsp--;
@@ -5614,7 +5634,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleSetAddition; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSetAddition4413); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSetAddition4432); if (state.failed) return current;
 
             }
 
@@ -5632,7 +5652,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSetAddition"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1927:1: ruleSetAddition returns [EObject current=null] : (this_SetMultiplication_0= ruleSetMultiplication ( () otherlv_2= '+' ( (lv_right_3_0= ruleSetMultiplication ) ) )* ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1938:1: ruleSetAddition returns [EObject current=null] : (this_SetMultiplication_0= ruleSetMultiplication ( () otherlv_2= '+' ( (lv_right_3_0= ruleSetMultiplication ) ) )* ) ;
     public final EObject ruleSetAddition() throws RecognitionException {
         EObject current = null;
 
@@ -5645,11 +5665,11 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1930:28: ( (this_SetMultiplication_0= ruleSetMultiplication ( () otherlv_2= '+' ( (lv_right_3_0= ruleSetMultiplication ) ) )* ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1931:1: (this_SetMultiplication_0= ruleSetMultiplication ( () otherlv_2= '+' ( (lv_right_3_0= ruleSetMultiplication ) ) )* )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1941:28: ( (this_SetMultiplication_0= ruleSetMultiplication ( () otherlv_2= '+' ( (lv_right_3_0= ruleSetMultiplication ) ) )* ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1942:1: (this_SetMultiplication_0= ruleSetMultiplication ( () otherlv_2= '+' ( (lv_right_3_0= ruleSetMultiplication ) ) )* )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1931:1: (this_SetMultiplication_0= ruleSetMultiplication ( () otherlv_2= '+' ( (lv_right_3_0= ruleSetMultiplication ) ) )* )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1932:2: this_SetMultiplication_0= ruleSetMultiplication ( () otherlv_2= '+' ( (lv_right_3_0= ruleSetMultiplication ) ) )*
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1942:1: (this_SetMultiplication_0= ruleSetMultiplication ( () otherlv_2= '+' ( (lv_right_3_0= ruleSetMultiplication ) ) )* )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1943:2: this_SetMultiplication_0= ruleSetMultiplication ( () otherlv_2= '+' ( (lv_right_3_0= ruleSetMultiplication ) ) )*
             {
             if ( state.backtracking==0 ) {
                
@@ -5661,7 +5681,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                       newCompositeNode(grammarAccess.getSetAdditionAccess().getSetMultiplicationParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_ruleSetMultiplication_in_ruleSetAddition4463);
+            pushFollow(FOLLOW_ruleSetMultiplication_in_ruleSetAddition4482);
             this_SetMultiplication_0=ruleSetMultiplication();
 
             state._fsp--;
@@ -5672,7 +5692,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1943:1: ( () otherlv_2= '+' ( (lv_right_3_0= ruleSetMultiplication ) ) )*
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1954:1: ( () otherlv_2= '+' ( (lv_right_3_0= ruleSetMultiplication ) ) )*
             loop28:
             do {
                 int alt28=2;
@@ -5685,10 +5705,10 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
                 switch (alt28) {
             	case 1 :
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1943:2: () otherlv_2= '+' ( (lv_right_3_0= ruleSetMultiplication ) )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1954:2: () otherlv_2= '+' ( (lv_right_3_0= ruleSetMultiplication ) )
             	    {
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1943:2: ()
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1944:2: 
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1954:2: ()
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1955:2: 
             	    {
             	    if ( state.backtracking==0 ) {
             	       
@@ -5705,24 +5725,24 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_2=(Token)match(input,13,FOLLOW_13_in_ruleSetAddition4487); if (state.failed) return current;
+            	    otherlv_2=(Token)match(input,13,FOLLOW_13_in_ruleSetAddition4506); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	          	newLeafNode(otherlv_2, grammarAccess.getSetAdditionAccess().getPlusSignKeyword_1_1());
             	          
             	    }
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1956:1: ( (lv_right_3_0= ruleSetMultiplication ) )
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1957:1: (lv_right_3_0= ruleSetMultiplication )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1967:1: ( (lv_right_3_0= ruleSetMultiplication ) )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1968:1: (lv_right_3_0= ruleSetMultiplication )
             	    {
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1957:1: (lv_right_3_0= ruleSetMultiplication )
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1958:3: lv_right_3_0= ruleSetMultiplication
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1968:1: (lv_right_3_0= ruleSetMultiplication )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1969:3: lv_right_3_0= ruleSetMultiplication
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getSetAdditionAccess().getRightSetMultiplicationParserRuleCall_1_2_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleSetMultiplication_in_ruleSetAddition4508);
+            	    pushFollow(FOLLOW_ruleSetMultiplication_in_ruleSetAddition4527);
             	    lv_right_3_0=ruleSetMultiplication();
 
             	    state._fsp--;
@@ -5778,7 +5798,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSetMultiplication"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1982:1: entryRuleSetMultiplication returns [EObject current=null] : iv_ruleSetMultiplication= ruleSetMultiplication EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1993:1: entryRuleSetMultiplication returns [EObject current=null] : iv_ruleSetMultiplication= ruleSetMultiplication EOF ;
     public final EObject entryRuleSetMultiplication() throws RecognitionException {
         EObject current = null;
 
@@ -5786,13 +5806,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1983:2: (iv_ruleSetMultiplication= ruleSetMultiplication EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1984:2: iv_ruleSetMultiplication= ruleSetMultiplication EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1994:2: (iv_ruleSetMultiplication= ruleSetMultiplication EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1995:2: iv_ruleSetMultiplication= ruleSetMultiplication EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSetMultiplicationRule()); 
             }
-            pushFollow(FOLLOW_ruleSetMultiplication_in_entryRuleSetMultiplication4546);
+            pushFollow(FOLLOW_ruleSetMultiplication_in_entryRuleSetMultiplication4565);
             iv_ruleSetMultiplication=ruleSetMultiplication();
 
             state._fsp--;
@@ -5800,7 +5820,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleSetMultiplication; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSetMultiplication4556); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSetMultiplication4575); if (state.failed) return current;
 
             }
 
@@ -5818,7 +5838,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSetMultiplication"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1991:1: ruleSetMultiplication returns [EObject current=null] : (this_SetPrimary_0= ruleSetPrimary ( () (otherlv_2= '*' | otherlv_3= '\\\\' ) ( (lv_right_4_0= ruleSetPrimary ) ) )* ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2002:1: ruleSetMultiplication returns [EObject current=null] : (this_SetPrimary_0= ruleSetPrimary ( () (otherlv_2= '*' | otherlv_3= '\\\\' ) ( (lv_right_4_0= ruleSetPrimary ) ) )* ) ;
     public final EObject ruleSetMultiplication() throws RecognitionException {
         EObject current = null;
 
@@ -5832,11 +5852,11 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1994:28: ( (this_SetPrimary_0= ruleSetPrimary ( () (otherlv_2= '*' | otherlv_3= '\\\\' ) ( (lv_right_4_0= ruleSetPrimary ) ) )* ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1995:1: (this_SetPrimary_0= ruleSetPrimary ( () (otherlv_2= '*' | otherlv_3= '\\\\' ) ( (lv_right_4_0= ruleSetPrimary ) ) )* )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2005:28: ( (this_SetPrimary_0= ruleSetPrimary ( () (otherlv_2= '*' | otherlv_3= '\\\\' ) ( (lv_right_4_0= ruleSetPrimary ) ) )* ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2006:1: (this_SetPrimary_0= ruleSetPrimary ( () (otherlv_2= '*' | otherlv_3= '\\\\' ) ( (lv_right_4_0= ruleSetPrimary ) ) )* )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1995:1: (this_SetPrimary_0= ruleSetPrimary ( () (otherlv_2= '*' | otherlv_3= '\\\\' ) ( (lv_right_4_0= ruleSetPrimary ) ) )* )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:1996:2: this_SetPrimary_0= ruleSetPrimary ( () (otherlv_2= '*' | otherlv_3= '\\\\' ) ( (lv_right_4_0= ruleSetPrimary ) ) )*
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2006:1: (this_SetPrimary_0= ruleSetPrimary ( () (otherlv_2= '*' | otherlv_3= '\\\\' ) ( (lv_right_4_0= ruleSetPrimary ) ) )* )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2007:2: this_SetPrimary_0= ruleSetPrimary ( () (otherlv_2= '*' | otherlv_3= '\\\\' ) ( (lv_right_4_0= ruleSetPrimary ) ) )*
             {
             if ( state.backtracking==0 ) {
                
@@ -5848,7 +5868,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                       newCompositeNode(grammarAccess.getSetMultiplicationAccess().getSetPrimaryParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_ruleSetPrimary_in_ruleSetMultiplication4606);
+            pushFollow(FOLLOW_ruleSetPrimary_in_ruleSetMultiplication4625);
             this_SetPrimary_0=ruleSetPrimary();
 
             state._fsp--;
@@ -5859,7 +5879,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2007:1: ( () (otherlv_2= '*' | otherlv_3= '\\\\' ) ( (lv_right_4_0= ruleSetPrimary ) ) )*
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2018:1: ( () (otherlv_2= '*' | otherlv_3= '\\\\' ) ( (lv_right_4_0= ruleSetPrimary ) ) )*
             loop30:
             do {
                 int alt30=2;
@@ -5872,10 +5892,10 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
                 switch (alt30) {
             	case 1 :
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2007:2: () (otherlv_2= '*' | otherlv_3= '\\\\' ) ( (lv_right_4_0= ruleSetPrimary ) )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2018:2: () (otherlv_2= '*' | otherlv_3= '\\\\' ) ( (lv_right_4_0= ruleSetPrimary ) )
             	    {
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2007:2: ()
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2008:2: 
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2018:2: ()
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2019:2: 
             	    {
             	    if ( state.backtracking==0 ) {
             	       
@@ -5892,7 +5912,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2016:2: (otherlv_2= '*' | otherlv_3= '\\\\' )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2027:2: (otherlv_2= '*' | otherlv_3= '\\\\' )
             	    int alt29=2;
             	    int LA29_0 = input.LA(1);
 
@@ -5911,9 +5931,9 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             	    }
             	    switch (alt29) {
             	        case 1 :
-            	            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2016:4: otherlv_2= '*'
+            	            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2027:4: otherlv_2= '*'
             	            {
-            	            otherlv_2=(Token)match(input,15,FOLLOW_15_in_ruleSetMultiplication4631); if (state.failed) return current;
+            	            otherlv_2=(Token)match(input,15,FOLLOW_15_in_ruleSetMultiplication4650); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	                  	newLeafNode(otherlv_2, grammarAccess.getSetMultiplicationAccess().getAsteriskKeyword_1_1_0());
@@ -5923,9 +5943,9 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2021:7: otherlv_3= '\\\\'
+            	            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2032:7: otherlv_3= '\\\\'
             	            {
-            	            otherlv_3=(Token)match(input,31,FOLLOW_31_in_ruleSetMultiplication4649); if (state.failed) return current;
+            	            otherlv_3=(Token)match(input,31,FOLLOW_31_in_ruleSetMultiplication4668); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	                  	newLeafNode(otherlv_3, grammarAccess.getSetMultiplicationAccess().getReverseSolidusKeyword_1_1_1());
@@ -5937,18 +5957,18 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2025:2: ( (lv_right_4_0= ruleSetPrimary ) )
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2026:1: (lv_right_4_0= ruleSetPrimary )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2036:2: ( (lv_right_4_0= ruleSetPrimary ) )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2037:1: (lv_right_4_0= ruleSetPrimary )
             	    {
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2026:1: (lv_right_4_0= ruleSetPrimary )
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2027:3: lv_right_4_0= ruleSetPrimary
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2037:1: (lv_right_4_0= ruleSetPrimary )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2038:3: lv_right_4_0= ruleSetPrimary
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getSetMultiplicationAccess().getRightSetPrimaryParserRuleCall_1_2_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleSetPrimary_in_ruleSetMultiplication4671);
+            	    pushFollow(FOLLOW_ruleSetPrimary_in_ruleSetMultiplication4690);
             	    lv_right_4_0=ruleSetPrimary();
 
             	    state._fsp--;
@@ -6004,7 +6024,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSetPrimary"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2051:1: entryRuleSetPrimary returns [EObject current=null] : iv_ruleSetPrimary= ruleSetPrimary EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2062:1: entryRuleSetPrimary returns [EObject current=null] : iv_ruleSetPrimary= ruleSetPrimary EOF ;
     public final EObject entryRuleSetPrimary() throws RecognitionException {
         EObject current = null;
 
@@ -6012,13 +6032,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2052:2: (iv_ruleSetPrimary= ruleSetPrimary EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2053:2: iv_ruleSetPrimary= ruleSetPrimary EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2063:2: (iv_ruleSetPrimary= ruleSetPrimary EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2064:2: iv_ruleSetPrimary= ruleSetPrimary EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSetPrimaryRule()); 
             }
-            pushFollow(FOLLOW_ruleSetPrimary_in_entryRuleSetPrimary4709);
+            pushFollow(FOLLOW_ruleSetPrimary_in_entryRuleSetPrimary4728);
             iv_ruleSetPrimary=ruleSetPrimary();
 
             state._fsp--;
@@ -6026,7 +6046,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleSetPrimary; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSetPrimary4719); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSetPrimary4738); if (state.failed) return current;
 
             }
 
@@ -6044,7 +6064,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSetPrimary"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2060:1: ruleSetPrimary returns [EObject current=null] : (this_SetLiteral_0= ruleSetLiteral | (otherlv_1= '(' this_SetAddition_2= ruleSetAddition otherlv_3= ')' ) ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2071:1: ruleSetPrimary returns [EObject current=null] : (this_SetLiteral_0= ruleSetLiteral | (otherlv_1= '(' this_SetAddition_2= ruleSetAddition otherlv_3= ')' ) ) ;
     public final EObject ruleSetPrimary() throws RecognitionException {
         EObject current = null;
 
@@ -6058,10 +6078,10 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2063:28: ( (this_SetLiteral_0= ruleSetLiteral | (otherlv_1= '(' this_SetAddition_2= ruleSetAddition otherlv_3= ')' ) ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2064:1: (this_SetLiteral_0= ruleSetLiteral | (otherlv_1= '(' this_SetAddition_2= ruleSetAddition otherlv_3= ')' ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2074:28: ( (this_SetLiteral_0= ruleSetLiteral | (otherlv_1= '(' this_SetAddition_2= ruleSetAddition otherlv_3= ')' ) ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2075:1: (this_SetLiteral_0= ruleSetLiteral | (otherlv_1= '(' this_SetAddition_2= ruleSetAddition otherlv_3= ')' ) )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2064:1: (this_SetLiteral_0= ruleSetLiteral | (otherlv_1= '(' this_SetAddition_2= ruleSetAddition otherlv_3= ')' ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2075:1: (this_SetLiteral_0= ruleSetLiteral | (otherlv_1= '(' this_SetAddition_2= ruleSetAddition otherlv_3= ')' ) )
             int alt31=2;
             int LA31_0 = input.LA(1);
 
@@ -6094,7 +6114,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             }
             switch (alt31) {
                 case 1 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2065:2: this_SetLiteral_0= ruleSetLiteral
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2076:2: this_SetLiteral_0= ruleSetLiteral
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -6106,7 +6126,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getSetPrimaryAccess().getSetLiteralParserRuleCall_0()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleSetLiteral_in_ruleSetPrimary4769);
+                    pushFollow(FOLLOW_ruleSetLiteral_in_ruleSetPrimary4788);
                     this_SetLiteral_0=ruleSetLiteral();
 
                     state._fsp--;
@@ -6121,12 +6141,12 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2077:6: (otherlv_1= '(' this_SetAddition_2= ruleSetAddition otherlv_3= ')' )
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2088:6: (otherlv_1= '(' this_SetAddition_2= ruleSetAddition otherlv_3= ')' )
                     {
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2077:6: (otherlv_1= '(' this_SetAddition_2= ruleSetAddition otherlv_3= ')' )
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2077:8: otherlv_1= '(' this_SetAddition_2= ruleSetAddition otherlv_3= ')'
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2088:6: (otherlv_1= '(' this_SetAddition_2= ruleSetAddition otherlv_3= ')' )
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2088:8: otherlv_1= '(' this_SetAddition_2= ruleSetAddition otherlv_3= ')'
                     {
-                    otherlv_1=(Token)match(input,18,FOLLOW_18_in_ruleSetPrimary4787); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,18,FOLLOW_18_in_ruleSetPrimary4806); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getSetPrimaryAccess().getLeftParenthesisKeyword_1_0());
@@ -6142,7 +6162,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getSetPrimaryAccess().getSetAdditionParserRuleCall_1_1()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleSetAddition_in_ruleSetPrimary4812);
+                    pushFollow(FOLLOW_ruleSetAddition_in_ruleSetPrimary4831);
                     this_SetAddition_2=ruleSetAddition();
 
                     state._fsp--;
@@ -6153,7 +6173,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                               afterParserOrEnumRuleCall();
                           
                     }
-                    otherlv_3=(Token)match(input,19,FOLLOW_19_in_ruleSetPrimary4823); if (state.failed) return current;
+                    otherlv_3=(Token)match(input,19,FOLLOW_19_in_ruleSetPrimary4842); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_3, grammarAccess.getSetPrimaryAccess().getRightParenthesisKeyword_1_2());
@@ -6188,7 +6208,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSetLiteral"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2105:1: entryRuleSetLiteral returns [EObject current=null] : iv_ruleSetLiteral= ruleSetLiteral EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2116:1: entryRuleSetLiteral returns [EObject current=null] : iv_ruleSetLiteral= ruleSetLiteral EOF ;
     public final EObject entryRuleSetLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -6196,13 +6216,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2106:2: (iv_ruleSetLiteral= ruleSetLiteral EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2107:2: iv_ruleSetLiteral= ruleSetLiteral EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2117:2: (iv_ruleSetLiteral= ruleSetLiteral EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2118:2: iv_ruleSetLiteral= ruleSetLiteral EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSetLiteralRule()); 
             }
-            pushFollow(FOLLOW_ruleSetLiteral_in_entryRuleSetLiteral4860);
+            pushFollow(FOLLOW_ruleSetLiteral_in_entryRuleSetLiteral4879);
             iv_ruleSetLiteral=ruleSetLiteral();
 
             state._fsp--;
@@ -6210,7 +6230,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleSetLiteral; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSetLiteral4870); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSetLiteral4889); if (state.failed) return current;
 
             }
 
@@ -6228,7 +6248,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSetLiteral"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2114:1: ruleSetLiteral returns [EObject current=null] : (this_Set_0= ruleSet | this_Range_1= ruleRange | this_SetConstruct_2= ruleSetConstruct | this_LID_3= RULE_LID ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2125:1: ruleSetLiteral returns [EObject current=null] : (this_Set_0= ruleSet | this_Range_1= ruleRange | this_SetConstruct_2= ruleSetConstruct | this_LID_3= RULE_LID ) ;
     public final EObject ruleSetLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -6243,15 +6263,15 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2117:28: ( (this_Set_0= ruleSet | this_Range_1= ruleRange | this_SetConstruct_2= ruleSetConstruct | this_LID_3= RULE_LID ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2118:1: (this_Set_0= ruleSet | this_Range_1= ruleRange | this_SetConstruct_2= ruleSetConstruct | this_LID_3= RULE_LID )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2128:28: ( (this_Set_0= ruleSet | this_Range_1= ruleRange | this_SetConstruct_2= ruleSetConstruct | this_LID_3= RULE_LID ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2129:1: (this_Set_0= ruleSet | this_Range_1= ruleRange | this_SetConstruct_2= ruleSetConstruct | this_LID_3= RULE_LID )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2118:1: (this_Set_0= ruleSet | this_Range_1= ruleRange | this_SetConstruct_2= ruleSetConstruct | this_LID_3= RULE_LID )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2129:1: (this_Set_0= ruleSet | this_Range_1= ruleRange | this_SetConstruct_2= ruleSetConstruct | this_LID_3= RULE_LID )
             int alt32=4;
             alt32 = dfa32.predict(input);
             switch (alt32) {
                 case 1 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2119:2: this_Set_0= ruleSet
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2130:2: this_Set_0= ruleSet
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -6263,7 +6283,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getSetLiteralAccess().getSetParserRuleCall_0()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleSet_in_ruleSetLiteral4920);
+                    pushFollow(FOLLOW_ruleSet_in_ruleSetLiteral4939);
                     this_Set_0=ruleSet();
 
                     state._fsp--;
@@ -6278,7 +6298,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2132:2: this_Range_1= ruleRange
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2143:2: this_Range_1= ruleRange
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -6290,7 +6310,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getSetLiteralAccess().getRangeParserRuleCall_1()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleRange_in_ruleSetLiteral4950);
+                    pushFollow(FOLLOW_ruleRange_in_ruleSetLiteral4969);
                     this_Range_1=ruleRange();
 
                     state._fsp--;
@@ -6305,7 +6325,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2145:2: this_SetConstruct_2= ruleSetConstruct
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2156:2: this_SetConstruct_2= ruleSetConstruct
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -6317,7 +6337,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getSetLiteralAccess().getSetConstructParserRuleCall_2()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleSetConstruct_in_ruleSetLiteral4980);
+                    pushFollow(FOLLOW_ruleSetConstruct_in_ruleSetLiteral4999);
                     this_SetConstruct_2=ruleSetConstruct();
 
                     state._fsp--;
@@ -6332,9 +6352,9 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2157:6: this_LID_3= RULE_LID
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2168:6: this_LID_3= RULE_LID
                     {
-                    this_LID_3=(Token)match(input,RULE_LID,FOLLOW_RULE_LID_in_ruleSetLiteral4996); if (state.failed) return current;
+                    this_LID_3=(Token)match(input,RULE_LID,FOLLOW_RULE_LID_in_ruleSetLiteral5015); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
                        
                           newLeafNode(this_LID_3, grammarAccess.getSetLiteralAccess().getLIDTerminalRuleCall_3()); 
@@ -6366,7 +6386,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAtom"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2169:1: entryRuleAtom returns [EObject current=null] : iv_ruleAtom= ruleAtom EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2180:1: entryRuleAtom returns [EObject current=null] : iv_ruleAtom= ruleAtom EOF ;
     public final EObject entryRuleAtom() throws RecognitionException {
         EObject current = null;
 
@@ -6374,13 +6394,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2170:2: (iv_ruleAtom= ruleAtom EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2171:2: iv_ruleAtom= ruleAtom EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2181:2: (iv_ruleAtom= ruleAtom EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2182:2: iv_ruleAtom= ruleAtom EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAtomRule()); 
             }
-            pushFollow(FOLLOW_ruleAtom_in_entryRuleAtom5031);
+            pushFollow(FOLLOW_ruleAtom_in_entryRuleAtom5050);
             iv_ruleAtom=ruleAtom();
 
             state._fsp--;
@@ -6388,7 +6408,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleAtom; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAtom5041); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAtom5060); if (state.failed) return current;
 
             }
 
@@ -6406,7 +6426,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAtom"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2178:1: ruleAtom returns [EObject current=null] : (this_PredicateAtom_0= rulePredicateAtom | this_BuiltInAtom_1= ruleBuiltInAtom ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2189:1: ruleAtom returns [EObject current=null] : (this_PredicateAtom_0= rulePredicateAtom | this_BuiltInAtom_1= ruleBuiltInAtom ) ;
     public final EObject ruleAtom() throws RecognitionException {
         EObject current = null;
 
@@ -6418,10 +6438,10 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2181:28: ( (this_PredicateAtom_0= rulePredicateAtom | this_BuiltInAtom_1= ruleBuiltInAtom ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2182:1: (this_PredicateAtom_0= rulePredicateAtom | this_BuiltInAtom_1= ruleBuiltInAtom )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2192:28: ( (this_PredicateAtom_0= rulePredicateAtom | this_BuiltInAtom_1= ruleBuiltInAtom ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2193:1: (this_PredicateAtom_0= rulePredicateAtom | this_BuiltInAtom_1= ruleBuiltInAtom )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2182:1: (this_PredicateAtom_0= rulePredicateAtom | this_BuiltInAtom_1= ruleBuiltInAtom )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2193:1: (this_PredicateAtom_0= rulePredicateAtom | this_BuiltInAtom_1= ruleBuiltInAtom )
             int alt33=2;
             int LA33_0 = input.LA(1);
 
@@ -6454,7 +6474,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             }
             switch (alt33) {
                 case 1 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2183:2: this_PredicateAtom_0= rulePredicateAtom
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2194:2: this_PredicateAtom_0= rulePredicateAtom
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -6466,7 +6486,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getAtomAccess().getPredicateAtomParserRuleCall_0()); 
                           
                     }
-                    pushFollow(FOLLOW_rulePredicateAtom_in_ruleAtom5091);
+                    pushFollow(FOLLOW_rulePredicateAtom_in_ruleAtom5110);
                     this_PredicateAtom_0=rulePredicateAtom();
 
                     state._fsp--;
@@ -6481,7 +6501,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2196:2: this_BuiltInAtom_1= ruleBuiltInAtom
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2207:2: this_BuiltInAtom_1= ruleBuiltInAtom
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -6493,7 +6513,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getAtomAccess().getBuiltInAtomParserRuleCall_1()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleBuiltInAtom_in_ruleAtom5121);
+                    pushFollow(FOLLOW_ruleBuiltInAtom_in_ruleAtom5140);
                     this_BuiltInAtom_1=ruleBuiltInAtom();
 
                     state._fsp--;
@@ -6530,7 +6550,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePredicateAtom"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2215:1: entryRulePredicateAtom returns [EObject current=null] : iv_rulePredicateAtom= rulePredicateAtom EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2226:1: entryRulePredicateAtom returns [EObject current=null] : iv_rulePredicateAtom= rulePredicateAtom EOF ;
     public final EObject entryRulePredicateAtom() throws RecognitionException {
         EObject current = null;
 
@@ -6538,13 +6558,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2216:2: (iv_rulePredicateAtom= rulePredicateAtom EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2217:2: iv_rulePredicateAtom= rulePredicateAtom EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2227:2: (iv_rulePredicateAtom= rulePredicateAtom EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2228:2: iv_rulePredicateAtom= rulePredicateAtom EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPredicateAtomRule()); 
             }
-            pushFollow(FOLLOW_rulePredicateAtom_in_entryRulePredicateAtom5156);
+            pushFollow(FOLLOW_rulePredicateAtom_in_entryRulePredicateAtom5175);
             iv_rulePredicateAtom=rulePredicateAtom();
 
             state._fsp--;
@@ -6552,7 +6572,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulePredicateAtom; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRulePredicateAtom5166); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRulePredicateAtom5185); if (state.failed) return current;
 
             }
 
@@ -6570,7 +6590,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePredicateAtom"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2224:1: rulePredicateAtom returns [EObject current=null] : ( ( (lv_fid_0_0= RULE_LID ) ) (otherlv_1= '(' ( (lv_terms_2_0= ruleTerms ) ) otherlv_3= ')' )? ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2235:1: rulePredicateAtom returns [EObject current=null] : ( ( (lv_fid_0_0= RULE_LID ) ) (otherlv_1= '(' ( (lv_terms_2_0= ruleTerms ) ) otherlv_3= ')' )? ) ;
     public final EObject rulePredicateAtom() throws RecognitionException {
         EObject current = null;
 
@@ -6583,19 +6603,19 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2227:28: ( ( ( (lv_fid_0_0= RULE_LID ) ) (otherlv_1= '(' ( (lv_terms_2_0= ruleTerms ) ) otherlv_3= ')' )? ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2228:1: ( ( (lv_fid_0_0= RULE_LID ) ) (otherlv_1= '(' ( (lv_terms_2_0= ruleTerms ) ) otherlv_3= ')' )? )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2238:28: ( ( ( (lv_fid_0_0= RULE_LID ) ) (otherlv_1= '(' ( (lv_terms_2_0= ruleTerms ) ) otherlv_3= ')' )? ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2239:1: ( ( (lv_fid_0_0= RULE_LID ) ) (otherlv_1= '(' ( (lv_terms_2_0= ruleTerms ) ) otherlv_3= ')' )? )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2228:1: ( ( (lv_fid_0_0= RULE_LID ) ) (otherlv_1= '(' ( (lv_terms_2_0= ruleTerms ) ) otherlv_3= ')' )? )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2228:2: ( (lv_fid_0_0= RULE_LID ) ) (otherlv_1= '(' ( (lv_terms_2_0= ruleTerms ) ) otherlv_3= ')' )?
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2239:1: ( ( (lv_fid_0_0= RULE_LID ) ) (otherlv_1= '(' ( (lv_terms_2_0= ruleTerms ) ) otherlv_3= ')' )? )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2239:2: ( (lv_fid_0_0= RULE_LID ) ) (otherlv_1= '(' ( (lv_terms_2_0= ruleTerms ) ) otherlv_3= ')' )?
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2228:2: ( (lv_fid_0_0= RULE_LID ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2229:1: (lv_fid_0_0= RULE_LID )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2239:2: ( (lv_fid_0_0= RULE_LID ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2240:1: (lv_fid_0_0= RULE_LID )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2229:1: (lv_fid_0_0= RULE_LID )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2230:3: lv_fid_0_0= RULE_LID
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2240:1: (lv_fid_0_0= RULE_LID )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2241:3: lv_fid_0_0= RULE_LID
             {
-            lv_fid_0_0=(Token)match(input,RULE_LID,FOLLOW_RULE_LID_in_rulePredicateAtom5208); if (state.failed) return current;
+            lv_fid_0_0=(Token)match(input,RULE_LID,FOLLOW_RULE_LID_in_rulePredicateAtom5227); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_fid_0_0, grammarAccess.getPredicateAtomAccess().getFidLIDTerminalRuleCall_0_0()); 
@@ -6619,7 +6639,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2246:2: (otherlv_1= '(' ( (lv_terms_2_0= ruleTerms ) ) otherlv_3= ')' )?
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2257:2: (otherlv_1= '(' ( (lv_terms_2_0= ruleTerms ) ) otherlv_3= ')' )?
             int alt34=2;
             int LA34_0 = input.LA(1);
 
@@ -6628,26 +6648,26 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             }
             switch (alt34) {
                 case 1 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2246:4: otherlv_1= '(' ( (lv_terms_2_0= ruleTerms ) ) otherlv_3= ')'
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2257:4: otherlv_1= '(' ( (lv_terms_2_0= ruleTerms ) ) otherlv_3= ')'
                     {
-                    otherlv_1=(Token)match(input,18,FOLLOW_18_in_rulePredicateAtom5226); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,18,FOLLOW_18_in_rulePredicateAtom5245); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getPredicateAtomAccess().getLeftParenthesisKeyword_1_0());
                           
                     }
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2250:1: ( (lv_terms_2_0= ruleTerms ) )
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2251:1: (lv_terms_2_0= ruleTerms )
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2261:1: ( (lv_terms_2_0= ruleTerms ) )
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2262:1: (lv_terms_2_0= ruleTerms )
                     {
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2251:1: (lv_terms_2_0= ruleTerms )
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2252:3: lv_terms_2_0= ruleTerms
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2262:1: (lv_terms_2_0= ruleTerms )
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2263:3: lv_terms_2_0= ruleTerms
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getPredicateAtomAccess().getTermsTermsParserRuleCall_1_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleTerms_in_rulePredicateAtom5247);
+                    pushFollow(FOLLOW_ruleTerms_in_rulePredicateAtom5266);
                     lv_terms_2_0=ruleTerms();
 
                     state._fsp--;
@@ -6671,7 +6691,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_3=(Token)match(input,19,FOLLOW_19_in_rulePredicateAtom5259); if (state.failed) return current;
+                    otherlv_3=(Token)match(input,19,FOLLOW_19_in_rulePredicateAtom5278); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_3, grammarAccess.getPredicateAtomAccess().getRightParenthesisKeyword_1_2());
@@ -6706,7 +6726,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBasicPredicateAtom"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2280:1: entryRuleBasicPredicateAtom returns [EObject current=null] : iv_ruleBasicPredicateAtom= ruleBasicPredicateAtom EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2291:1: entryRuleBasicPredicateAtom returns [EObject current=null] : iv_ruleBasicPredicateAtom= ruleBasicPredicateAtom EOF ;
     public final EObject entryRuleBasicPredicateAtom() throws RecognitionException {
         EObject current = null;
 
@@ -6714,13 +6734,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2281:2: (iv_ruleBasicPredicateAtom= ruleBasicPredicateAtom EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2282:2: iv_ruleBasicPredicateAtom= ruleBasicPredicateAtom EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2292:2: (iv_ruleBasicPredicateAtom= ruleBasicPredicateAtom EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2293:2: iv_ruleBasicPredicateAtom= ruleBasicPredicateAtom EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getBasicPredicateAtomRule()); 
             }
-            pushFollow(FOLLOW_ruleBasicPredicateAtom_in_entryRuleBasicPredicateAtom5297);
+            pushFollow(FOLLOW_ruleBasicPredicateAtom_in_entryRuleBasicPredicateAtom5316);
             iv_ruleBasicPredicateAtom=ruleBasicPredicateAtom();
 
             state._fsp--;
@@ -6728,7 +6748,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleBasicPredicateAtom; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBasicPredicateAtom5307); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBasicPredicateAtom5326); if (state.failed) return current;
 
             }
 
@@ -6746,7 +6766,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBasicPredicateAtom"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2289:1: ruleBasicPredicateAtom returns [EObject current=null] : ( ( (lv_fid_0_0= RULE_LID ) ) (otherlv_1= '(' ( (lv_terms_2_0= ruleBasicTerms ) ) otherlv_3= ')' )? ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2300:1: ruleBasicPredicateAtom returns [EObject current=null] : ( ( (lv_fid_0_0= RULE_LID ) ) (otherlv_1= '(' ( (lv_terms_2_0= ruleBasicTerms ) ) otherlv_3= ')' )? ) ;
     public final EObject ruleBasicPredicateAtom() throws RecognitionException {
         EObject current = null;
 
@@ -6759,19 +6779,19 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2292:28: ( ( ( (lv_fid_0_0= RULE_LID ) ) (otherlv_1= '(' ( (lv_terms_2_0= ruleBasicTerms ) ) otherlv_3= ')' )? ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2293:1: ( ( (lv_fid_0_0= RULE_LID ) ) (otherlv_1= '(' ( (lv_terms_2_0= ruleBasicTerms ) ) otherlv_3= ')' )? )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2303:28: ( ( ( (lv_fid_0_0= RULE_LID ) ) (otherlv_1= '(' ( (lv_terms_2_0= ruleBasicTerms ) ) otherlv_3= ')' )? ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2304:1: ( ( (lv_fid_0_0= RULE_LID ) ) (otherlv_1= '(' ( (lv_terms_2_0= ruleBasicTerms ) ) otherlv_3= ')' )? )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2293:1: ( ( (lv_fid_0_0= RULE_LID ) ) (otherlv_1= '(' ( (lv_terms_2_0= ruleBasicTerms ) ) otherlv_3= ')' )? )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2293:2: ( (lv_fid_0_0= RULE_LID ) ) (otherlv_1= '(' ( (lv_terms_2_0= ruleBasicTerms ) ) otherlv_3= ')' )?
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2304:1: ( ( (lv_fid_0_0= RULE_LID ) ) (otherlv_1= '(' ( (lv_terms_2_0= ruleBasicTerms ) ) otherlv_3= ')' )? )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2304:2: ( (lv_fid_0_0= RULE_LID ) ) (otherlv_1= '(' ( (lv_terms_2_0= ruleBasicTerms ) ) otherlv_3= ')' )?
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2293:2: ( (lv_fid_0_0= RULE_LID ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2294:1: (lv_fid_0_0= RULE_LID )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2304:2: ( (lv_fid_0_0= RULE_LID ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2305:1: (lv_fid_0_0= RULE_LID )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2294:1: (lv_fid_0_0= RULE_LID )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2295:3: lv_fid_0_0= RULE_LID
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2305:1: (lv_fid_0_0= RULE_LID )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2306:3: lv_fid_0_0= RULE_LID
             {
-            lv_fid_0_0=(Token)match(input,RULE_LID,FOLLOW_RULE_LID_in_ruleBasicPredicateAtom5349); if (state.failed) return current;
+            lv_fid_0_0=(Token)match(input,RULE_LID,FOLLOW_RULE_LID_in_ruleBasicPredicateAtom5368); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_fid_0_0, grammarAccess.getBasicPredicateAtomAccess().getFidLIDTerminalRuleCall_0_0()); 
@@ -6795,7 +6815,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2311:2: (otherlv_1= '(' ( (lv_terms_2_0= ruleBasicTerms ) ) otherlv_3= ')' )?
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2322:2: (otherlv_1= '(' ( (lv_terms_2_0= ruleBasicTerms ) ) otherlv_3= ')' )?
             int alt35=2;
             int LA35_0 = input.LA(1);
 
@@ -6804,26 +6824,26 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             }
             switch (alt35) {
                 case 1 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2311:4: otherlv_1= '(' ( (lv_terms_2_0= ruleBasicTerms ) ) otherlv_3= ')'
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2322:4: otherlv_1= '(' ( (lv_terms_2_0= ruleBasicTerms ) ) otherlv_3= ')'
                     {
-                    otherlv_1=(Token)match(input,18,FOLLOW_18_in_ruleBasicPredicateAtom5367); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,18,FOLLOW_18_in_ruleBasicPredicateAtom5386); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getBasicPredicateAtomAccess().getLeftParenthesisKeyword_1_0());
                           
                     }
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2315:1: ( (lv_terms_2_0= ruleBasicTerms ) )
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2316:1: (lv_terms_2_0= ruleBasicTerms )
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2326:1: ( (lv_terms_2_0= ruleBasicTerms ) )
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2327:1: (lv_terms_2_0= ruleBasicTerms )
                     {
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2316:1: (lv_terms_2_0= ruleBasicTerms )
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2317:3: lv_terms_2_0= ruleBasicTerms
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2327:1: (lv_terms_2_0= ruleBasicTerms )
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2328:3: lv_terms_2_0= ruleBasicTerms
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getBasicPredicateAtomAccess().getTermsBasicTermsParserRuleCall_1_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleBasicTerms_in_ruleBasicPredicateAtom5388);
+                    pushFollow(FOLLOW_ruleBasicTerms_in_ruleBasicPredicateAtom5407);
                     lv_terms_2_0=ruleBasicTerms();
 
                     state._fsp--;
@@ -6847,7 +6867,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_3=(Token)match(input,19,FOLLOW_19_in_ruleBasicPredicateAtom5400); if (state.failed) return current;
+                    otherlv_3=(Token)match(input,19,FOLLOW_19_in_ruleBasicPredicateAtom5419); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_3, grammarAccess.getBasicPredicateAtomAccess().getRightParenthesisKeyword_1_2());
@@ -6882,7 +6902,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBuiltInAtom"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2345:1: entryRuleBuiltInAtom returns [EObject current=null] : iv_ruleBuiltInAtom= ruleBuiltInAtom EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2356:1: entryRuleBuiltInAtom returns [EObject current=null] : iv_ruleBuiltInAtom= ruleBuiltInAtom EOF ;
     public final EObject entryRuleBuiltInAtom() throws RecognitionException {
         EObject current = null;
 
@@ -6890,13 +6910,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2346:2: (iv_ruleBuiltInAtom= ruleBuiltInAtom EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2347:2: iv_ruleBuiltInAtom= ruleBuiltInAtom EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2357:2: (iv_ruleBuiltInAtom= ruleBuiltInAtom EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2358:2: iv_ruleBuiltInAtom= ruleBuiltInAtom EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getBuiltInAtomRule()); 
             }
-            pushFollow(FOLLOW_ruleBuiltInAtom_in_entryRuleBuiltInAtom5438);
+            pushFollow(FOLLOW_ruleBuiltInAtom_in_entryRuleBuiltInAtom5457);
             iv_ruleBuiltInAtom=ruleBuiltInAtom();
 
             state._fsp--;
@@ -6904,7 +6924,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleBuiltInAtom; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBuiltInAtom5448); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBuiltInAtom5467); if (state.failed) return current;
 
             }
 
@@ -6922,7 +6942,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBuiltInAtom"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2354:1: ruleBuiltInAtom returns [EObject current=null] : ( ( (lv_lhs_0_0= ruleBasicTerm ) ) ( (lv_op_1_0= ruleAtomOp ) ) ( (lv_rhs_2_0= ruleBasicTerm ) ) ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2365:1: ruleBuiltInAtom returns [EObject current=null] : ( ( (lv_lhs_0_0= ruleBasicTerm ) ) ( (lv_op_1_0= ruleAtomOp ) ) ( (lv_rhs_2_0= ruleBasicTerm ) ) ) ;
     public final EObject ruleBuiltInAtom() throws RecognitionException {
         EObject current = null;
 
@@ -6936,24 +6956,24 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2357:28: ( ( ( (lv_lhs_0_0= ruleBasicTerm ) ) ( (lv_op_1_0= ruleAtomOp ) ) ( (lv_rhs_2_0= ruleBasicTerm ) ) ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2358:1: ( ( (lv_lhs_0_0= ruleBasicTerm ) ) ( (lv_op_1_0= ruleAtomOp ) ) ( (lv_rhs_2_0= ruleBasicTerm ) ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2368:28: ( ( ( (lv_lhs_0_0= ruleBasicTerm ) ) ( (lv_op_1_0= ruleAtomOp ) ) ( (lv_rhs_2_0= ruleBasicTerm ) ) ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2369:1: ( ( (lv_lhs_0_0= ruleBasicTerm ) ) ( (lv_op_1_0= ruleAtomOp ) ) ( (lv_rhs_2_0= ruleBasicTerm ) ) )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2358:1: ( ( (lv_lhs_0_0= ruleBasicTerm ) ) ( (lv_op_1_0= ruleAtomOp ) ) ( (lv_rhs_2_0= ruleBasicTerm ) ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2358:2: ( (lv_lhs_0_0= ruleBasicTerm ) ) ( (lv_op_1_0= ruleAtomOp ) ) ( (lv_rhs_2_0= ruleBasicTerm ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2369:1: ( ( (lv_lhs_0_0= ruleBasicTerm ) ) ( (lv_op_1_0= ruleAtomOp ) ) ( (lv_rhs_2_0= ruleBasicTerm ) ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2369:2: ( (lv_lhs_0_0= ruleBasicTerm ) ) ( (lv_op_1_0= ruleAtomOp ) ) ( (lv_rhs_2_0= ruleBasicTerm ) )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2358:2: ( (lv_lhs_0_0= ruleBasicTerm ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2359:1: (lv_lhs_0_0= ruleBasicTerm )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2369:2: ( (lv_lhs_0_0= ruleBasicTerm ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2370:1: (lv_lhs_0_0= ruleBasicTerm )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2359:1: (lv_lhs_0_0= ruleBasicTerm )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2360:3: lv_lhs_0_0= ruleBasicTerm
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2370:1: (lv_lhs_0_0= ruleBasicTerm )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2371:3: lv_lhs_0_0= ruleBasicTerm
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getBuiltInAtomAccess().getLhsBasicTermParserRuleCall_0_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleBasicTerm_in_ruleBuiltInAtom5494);
+            pushFollow(FOLLOW_ruleBasicTerm_in_ruleBuiltInAtom5513);
             lv_lhs_0_0=ruleBasicTerm();
 
             state._fsp--;
@@ -6977,18 +6997,18 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2376:2: ( (lv_op_1_0= ruleAtomOp ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2377:1: (lv_op_1_0= ruleAtomOp )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2387:2: ( (lv_op_1_0= ruleAtomOp ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2388:1: (lv_op_1_0= ruleAtomOp )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2377:1: (lv_op_1_0= ruleAtomOp )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2378:3: lv_op_1_0= ruleAtomOp
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2388:1: (lv_op_1_0= ruleAtomOp )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2389:3: lv_op_1_0= ruleAtomOp
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getBuiltInAtomAccess().getOpAtomOpParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleAtomOp_in_ruleBuiltInAtom5515);
+            pushFollow(FOLLOW_ruleAtomOp_in_ruleBuiltInAtom5534);
             lv_op_1_0=ruleAtomOp();
 
             state._fsp--;
@@ -7012,18 +7032,18 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2394:2: ( (lv_rhs_2_0= ruleBasicTerm ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2395:1: (lv_rhs_2_0= ruleBasicTerm )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2405:2: ( (lv_rhs_2_0= ruleBasicTerm ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2406:1: (lv_rhs_2_0= ruleBasicTerm )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2395:1: (lv_rhs_2_0= ruleBasicTerm )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2396:3: lv_rhs_2_0= ruleBasicTerm
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2406:1: (lv_rhs_2_0= ruleBasicTerm )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2407:3: lv_rhs_2_0= ruleBasicTerm
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getBuiltInAtomAccess().getRhsBasicTermParserRuleCall_2_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleBasicTerm_in_ruleBuiltInAtom5536);
+            pushFollow(FOLLOW_ruleBasicTerm_in_ruleBuiltInAtom5555);
             lv_rhs_2_0=ruleBasicTerm();
 
             state._fsp--;
@@ -7070,7 +7090,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAtomOp"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2420:1: entryRuleAtomOp returns [String current=null] : iv_ruleAtomOp= ruleAtomOp EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2431:1: entryRuleAtomOp returns [String current=null] : iv_ruleAtomOp= ruleAtomOp EOF ;
     public final String entryRuleAtomOp() throws RecognitionException {
         String current = null;
 
@@ -7078,13 +7098,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2421:2: (iv_ruleAtomOp= ruleAtomOp EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2422:2: iv_ruleAtomOp= ruleAtomOp EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2432:2: (iv_ruleAtomOp= ruleAtomOp EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2433:2: iv_ruleAtomOp= ruleAtomOp EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAtomOpRule()); 
             }
-            pushFollow(FOLLOW_ruleAtomOp_in_entryRuleAtomOp5573);
+            pushFollow(FOLLOW_ruleAtomOp_in_entryRuleAtomOp5592);
             iv_ruleAtomOp=ruleAtomOp();
 
             state._fsp--;
@@ -7092,7 +7112,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleAtomOp.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAtomOp5584); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAtomOp5603); if (state.failed) return current;
 
             }
 
@@ -7110,7 +7130,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAtomOp"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2429:1: ruleAtomOp returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '>' | kw= '<' | kw= '>=' | kw= '<=' | kw= '=' | kw= '!=' ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2440:1: ruleAtomOp returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '>' | kw= '<' | kw= '>=' | kw= '<=' | kw= '=' | kw= '!=' ) ;
     public final AntlrDatatypeRuleToken ruleAtomOp() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -7119,10 +7139,10 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2432:28: ( (kw= '>' | kw= '<' | kw= '>=' | kw= '<=' | kw= '=' | kw= '!=' ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2433:1: (kw= '>' | kw= '<' | kw= '>=' | kw= '<=' | kw= '=' | kw= '!=' )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2443:28: ( (kw= '>' | kw= '<' | kw= '>=' | kw= '<=' | kw= '=' | kw= '!=' ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2444:1: (kw= '>' | kw= '<' | kw= '>=' | kw= '<=' | kw= '=' | kw= '!=' )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2433:1: (kw= '>' | kw= '<' | kw= '>=' | kw= '<=' | kw= '=' | kw= '!=' )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2444:1: (kw= '>' | kw= '<' | kw= '>=' | kw= '<=' | kw= '=' | kw= '!=' )
             int alt36=6;
             switch ( input.LA(1) ) {
             case 32:
@@ -7165,9 +7185,9 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
             switch (alt36) {
                 case 1 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2434:2: kw= '>'
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2445:2: kw= '>'
                     {
-                    kw=(Token)match(input,32,FOLLOW_32_in_ruleAtomOp5622); if (state.failed) return current;
+                    kw=(Token)match(input,32,FOLLOW_32_in_ruleAtomOp5641); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -7178,9 +7198,9 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2441:2: kw= '<'
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2452:2: kw= '<'
                     {
-                    kw=(Token)match(input,33,FOLLOW_33_in_ruleAtomOp5641); if (state.failed) return current;
+                    kw=(Token)match(input,33,FOLLOW_33_in_ruleAtomOp5660); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -7191,9 +7211,9 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2448:2: kw= '>='
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2459:2: kw= '>='
                     {
-                    kw=(Token)match(input,34,FOLLOW_34_in_ruleAtomOp5660); if (state.failed) return current;
+                    kw=(Token)match(input,34,FOLLOW_34_in_ruleAtomOp5679); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -7204,9 +7224,9 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2455:2: kw= '<='
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2466:2: kw= '<='
                     {
-                    kw=(Token)match(input,35,FOLLOW_35_in_ruleAtomOp5679); if (state.failed) return current;
+                    kw=(Token)match(input,35,FOLLOW_35_in_ruleAtomOp5698); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -7217,9 +7237,9 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2462:2: kw= '='
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2473:2: kw= '='
                     {
-                    kw=(Token)match(input,24,FOLLOW_24_in_ruleAtomOp5698); if (state.failed) return current;
+                    kw=(Token)match(input,24,FOLLOW_24_in_ruleAtomOp5717); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -7230,9 +7250,9 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2469:2: kw= '!='
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2480:2: kw= '!='
                     {
-                    kw=(Token)match(input,36,FOLLOW_36_in_ruleAtomOp5717); if (state.failed) return current;
+                    kw=(Token)match(input,36,FOLLOW_36_in_ruleAtomOp5736); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -7265,7 +7285,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSentence"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2482:1: entryRuleSentence returns [EObject current=null] : iv_ruleSentence= ruleSentence EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2493:1: entryRuleSentence returns [EObject current=null] : iv_ruleSentence= ruleSentence EOF ;
     public final EObject entryRuleSentence() throws RecognitionException {
         EObject current = null;
 
@@ -7273,13 +7293,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2483:2: (iv_ruleSentence= ruleSentence EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2484:2: iv_ruleSentence= ruleSentence EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2494:2: (iv_ruleSentence= ruleSentence EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2495:2: iv_ruleSentence= ruleSentence EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSentenceRule()); 
             }
-            pushFollow(FOLLOW_ruleSentence_in_entryRuleSentence5757);
+            pushFollow(FOLLOW_ruleSentence_in_entryRuleSentence5776);
             iv_ruleSentence=ruleSentence();
 
             state._fsp--;
@@ -7287,7 +7307,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleSentence; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSentence5767); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSentence5786); if (state.failed) return current;
 
             }
 
@@ -7305,7 +7325,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSentence"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2491:1: ruleSentence returns [EObject current=null] : this_OrSentence_0= ruleOrSentence ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2502:1: ruleSentence returns [EObject current=null] : this_OrSentence_0= ruleOrSentence ;
     public final EObject ruleSentence() throws RecognitionException {
         EObject current = null;
 
@@ -7315,8 +7335,8 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2494:28: (this_OrSentence_0= ruleOrSentence )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2496:2: this_OrSentence_0= ruleOrSentence
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2505:28: (this_OrSentence_0= ruleOrSentence )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2507:2: this_OrSentence_0= ruleOrSentence
             {
             if ( state.backtracking==0 ) {
                
@@ -7328,7 +7348,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                       newCompositeNode(grammarAccess.getSentenceAccess().getOrSentenceParserRuleCall()); 
                   
             }
-            pushFollow(FOLLOW_ruleOrSentence_in_ruleSentence5816);
+            pushFollow(FOLLOW_ruleOrSentence_in_ruleSentence5835);
             this_OrSentence_0=ruleOrSentence();
 
             state._fsp--;
@@ -7359,7 +7379,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOrSentence"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2515:1: entryRuleOrSentence returns [EObject current=null] : iv_ruleOrSentence= ruleOrSentence EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2526:1: entryRuleOrSentence returns [EObject current=null] : iv_ruleOrSentence= ruleOrSentence EOF ;
     public final EObject entryRuleOrSentence() throws RecognitionException {
         EObject current = null;
 
@@ -7367,13 +7387,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2516:2: (iv_ruleOrSentence= ruleOrSentence EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2517:2: iv_ruleOrSentence= ruleOrSentence EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2527:2: (iv_ruleOrSentence= ruleOrSentence EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2528:2: iv_ruleOrSentence= ruleOrSentence EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getOrSentenceRule()); 
             }
-            pushFollow(FOLLOW_ruleOrSentence_in_entryRuleOrSentence5850);
+            pushFollow(FOLLOW_ruleOrSentence_in_entryRuleOrSentence5869);
             iv_ruleOrSentence=ruleOrSentence();
 
             state._fsp--;
@@ -7381,7 +7401,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleOrSentence; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleOrSentence5860); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleOrSentence5879); if (state.failed) return current;
 
             }
 
@@ -7399,7 +7419,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOrSentence"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2524:1: ruleOrSentence returns [EObject current=null] : (this_AndSentence_0= ruleAndSentence ( () otherlv_2= 'or' ( (lv_right_3_0= ruleAndSentence ) ) )* ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2535:1: ruleOrSentence returns [EObject current=null] : (this_AndSentence_0= ruleAndSentence ( () otherlv_2= 'or' ( (lv_right_3_0= ruleAndSentence ) ) )* ) ;
     public final EObject ruleOrSentence() throws RecognitionException {
         EObject current = null;
 
@@ -7412,11 +7432,11 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2527:28: ( (this_AndSentence_0= ruleAndSentence ( () otherlv_2= 'or' ( (lv_right_3_0= ruleAndSentence ) ) )* ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2528:1: (this_AndSentence_0= ruleAndSentence ( () otherlv_2= 'or' ( (lv_right_3_0= ruleAndSentence ) ) )* )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2538:28: ( (this_AndSentence_0= ruleAndSentence ( () otherlv_2= 'or' ( (lv_right_3_0= ruleAndSentence ) ) )* ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2539:1: (this_AndSentence_0= ruleAndSentence ( () otherlv_2= 'or' ( (lv_right_3_0= ruleAndSentence ) ) )* )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2528:1: (this_AndSentence_0= ruleAndSentence ( () otherlv_2= 'or' ( (lv_right_3_0= ruleAndSentence ) ) )* )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2529:2: this_AndSentence_0= ruleAndSentence ( () otherlv_2= 'or' ( (lv_right_3_0= ruleAndSentence ) ) )*
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2539:1: (this_AndSentence_0= ruleAndSentence ( () otherlv_2= 'or' ( (lv_right_3_0= ruleAndSentence ) ) )* )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2540:2: this_AndSentence_0= ruleAndSentence ( () otherlv_2= 'or' ( (lv_right_3_0= ruleAndSentence ) ) )*
             {
             if ( state.backtracking==0 ) {
                
@@ -7428,7 +7448,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                       newCompositeNode(grammarAccess.getOrSentenceAccess().getAndSentenceParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_ruleAndSentence_in_ruleOrSentence5910);
+            pushFollow(FOLLOW_ruleAndSentence_in_ruleOrSentence5929);
             this_AndSentence_0=ruleAndSentence();
 
             state._fsp--;
@@ -7439,7 +7459,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2540:1: ( () otherlv_2= 'or' ( (lv_right_3_0= ruleAndSentence ) ) )*
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2551:1: ( () otherlv_2= 'or' ( (lv_right_3_0= ruleAndSentence ) ) )*
             loop37:
             do {
                 int alt37=2;
@@ -7452,10 +7472,10 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
                 switch (alt37) {
             	case 1 :
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2540:2: () otherlv_2= 'or' ( (lv_right_3_0= ruleAndSentence ) )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2551:2: () otherlv_2= 'or' ( (lv_right_3_0= ruleAndSentence ) )
             	    {
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2540:2: ()
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2541:2: 
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2551:2: ()
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2552:2: 
             	    {
             	    if ( state.backtracking==0 ) {
             	       
@@ -7472,24 +7492,24 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_2=(Token)match(input,37,FOLLOW_37_in_ruleOrSentence5934); if (state.failed) return current;
+            	    otherlv_2=(Token)match(input,37,FOLLOW_37_in_ruleOrSentence5953); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	          	newLeafNode(otherlv_2, grammarAccess.getOrSentenceAccess().getOrKeyword_1_1());
             	          
             	    }
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2553:1: ( (lv_right_3_0= ruleAndSentence ) )
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2554:1: (lv_right_3_0= ruleAndSentence )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2564:1: ( (lv_right_3_0= ruleAndSentence ) )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2565:1: (lv_right_3_0= ruleAndSentence )
             	    {
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2554:1: (lv_right_3_0= ruleAndSentence )
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2555:3: lv_right_3_0= ruleAndSentence
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2565:1: (lv_right_3_0= ruleAndSentence )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2566:3: lv_right_3_0= ruleAndSentence
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getOrSentenceAccess().getRightAndSentenceParserRuleCall_1_2_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleAndSentence_in_ruleOrSentence5955);
+            	    pushFollow(FOLLOW_ruleAndSentence_in_ruleOrSentence5974);
             	    lv_right_3_0=ruleAndSentence();
 
             	    state._fsp--;
@@ -7545,7 +7565,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAndSentence"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2579:1: entryRuleAndSentence returns [EObject current=null] : iv_ruleAndSentence= ruleAndSentence EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2590:1: entryRuleAndSentence returns [EObject current=null] : iv_ruleAndSentence= ruleAndSentence EOF ;
     public final EObject entryRuleAndSentence() throws RecognitionException {
         EObject current = null;
 
@@ -7553,13 +7573,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2580:2: (iv_ruleAndSentence= ruleAndSentence EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2581:2: iv_ruleAndSentence= ruleAndSentence EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2591:2: (iv_ruleAndSentence= ruleAndSentence EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2592:2: iv_ruleAndSentence= ruleAndSentence EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getAndSentenceRule()); 
             }
-            pushFollow(FOLLOW_ruleAndSentence_in_entryRuleAndSentence5993);
+            pushFollow(FOLLOW_ruleAndSentence_in_entryRuleAndSentence6012);
             iv_ruleAndSentence=ruleAndSentence();
 
             state._fsp--;
@@ -7567,7 +7587,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleAndSentence; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAndSentence6003); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAndSentence6022); if (state.failed) return current;
 
             }
 
@@ -7585,7 +7605,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAndSentence"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2588:1: ruleAndSentence returns [EObject current=null] : (this_NotSentence_0= ruleNotSentence ( () (otherlv_2= 'and' | otherlv_3= ',' ) ( (lv_right_4_0= ruleNotSentence ) ) )* ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2599:1: ruleAndSentence returns [EObject current=null] : (this_NotSentence_0= ruleNotSentence ( () (otherlv_2= 'and' | otherlv_3= ',' ) ( (lv_right_4_0= ruleNotSentence ) ) )* ) ;
     public final EObject ruleAndSentence() throws RecognitionException {
         EObject current = null;
 
@@ -7599,11 +7619,11 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2591:28: ( (this_NotSentence_0= ruleNotSentence ( () (otherlv_2= 'and' | otherlv_3= ',' ) ( (lv_right_4_0= ruleNotSentence ) ) )* ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2592:1: (this_NotSentence_0= ruleNotSentence ( () (otherlv_2= 'and' | otherlv_3= ',' ) ( (lv_right_4_0= ruleNotSentence ) ) )* )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2602:28: ( (this_NotSentence_0= ruleNotSentence ( () (otherlv_2= 'and' | otherlv_3= ',' ) ( (lv_right_4_0= ruleNotSentence ) ) )* ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2603:1: (this_NotSentence_0= ruleNotSentence ( () (otherlv_2= 'and' | otherlv_3= ',' ) ( (lv_right_4_0= ruleNotSentence ) ) )* )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2592:1: (this_NotSentence_0= ruleNotSentence ( () (otherlv_2= 'and' | otherlv_3= ',' ) ( (lv_right_4_0= ruleNotSentence ) ) )* )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2593:2: this_NotSentence_0= ruleNotSentence ( () (otherlv_2= 'and' | otherlv_3= ',' ) ( (lv_right_4_0= ruleNotSentence ) ) )*
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2603:1: (this_NotSentence_0= ruleNotSentence ( () (otherlv_2= 'and' | otherlv_3= ',' ) ( (lv_right_4_0= ruleNotSentence ) ) )* )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2604:2: this_NotSentence_0= ruleNotSentence ( () (otherlv_2= 'and' | otherlv_3= ',' ) ( (lv_right_4_0= ruleNotSentence ) ) )*
             {
             if ( state.backtracking==0 ) {
                
@@ -7615,7 +7635,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                       newCompositeNode(grammarAccess.getAndSentenceAccess().getNotSentenceParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_ruleNotSentence_in_ruleAndSentence6053);
+            pushFollow(FOLLOW_ruleNotSentence_in_ruleAndSentence6072);
             this_NotSentence_0=ruleNotSentence();
 
             state._fsp--;
@@ -7626,7 +7646,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2604:1: ( () (otherlv_2= 'and' | otherlv_3= ',' ) ( (lv_right_4_0= ruleNotSentence ) ) )*
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2615:1: ( () (otherlv_2= 'and' | otherlv_3= ',' ) ( (lv_right_4_0= ruleNotSentence ) ) )*
             loop39:
             do {
                 int alt39=2;
@@ -7639,10 +7659,10 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
                 switch (alt39) {
             	case 1 :
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2604:2: () (otherlv_2= 'and' | otherlv_3= ',' ) ( (lv_right_4_0= ruleNotSentence ) )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2615:2: () (otherlv_2= 'and' | otherlv_3= ',' ) ( (lv_right_4_0= ruleNotSentence ) )
             	    {
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2604:2: ()
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2605:2: 
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2615:2: ()
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2616:2: 
             	    {
             	    if ( state.backtracking==0 ) {
             	       
@@ -7659,7 +7679,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2613:2: (otherlv_2= 'and' | otherlv_3= ',' )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2624:2: (otherlv_2= 'and' | otherlv_3= ',' )
             	    int alt38=2;
             	    int LA38_0 = input.LA(1);
 
@@ -7678,9 +7698,9 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             	    }
             	    switch (alt38) {
             	        case 1 :
-            	            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2613:4: otherlv_2= 'and'
+            	            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2624:4: otherlv_2= 'and'
             	            {
-            	            otherlv_2=(Token)match(input,38,FOLLOW_38_in_ruleAndSentence6078); if (state.failed) return current;
+            	            otherlv_2=(Token)match(input,38,FOLLOW_38_in_ruleAndSentence6097); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	                  	newLeafNode(otherlv_2, grammarAccess.getAndSentenceAccess().getAndKeyword_1_1_0());
@@ -7690,9 +7710,9 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2618:7: otherlv_3= ','
+            	            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2629:7: otherlv_3= ','
             	            {
-            	            otherlv_3=(Token)match(input,20,FOLLOW_20_in_ruleAndSentence6096); if (state.failed) return current;
+            	            otherlv_3=(Token)match(input,20,FOLLOW_20_in_ruleAndSentence6115); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	                  	newLeafNode(otherlv_3, grammarAccess.getAndSentenceAccess().getCommaKeyword_1_1_1());
@@ -7704,18 +7724,18 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2622:2: ( (lv_right_4_0= ruleNotSentence ) )
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2623:1: (lv_right_4_0= ruleNotSentence )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2633:2: ( (lv_right_4_0= ruleNotSentence ) )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2634:1: (lv_right_4_0= ruleNotSentence )
             	    {
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2623:1: (lv_right_4_0= ruleNotSentence )
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2624:3: lv_right_4_0= ruleNotSentence
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2634:1: (lv_right_4_0= ruleNotSentence )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2635:3: lv_right_4_0= ruleNotSentence
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getAndSentenceAccess().getRightNotSentenceParserRuleCall_1_2_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleNotSentence_in_ruleAndSentence6118);
+            	    pushFollow(FOLLOW_ruleNotSentence_in_ruleAndSentence6137);
             	    lv_right_4_0=ruleNotSentence();
 
             	    state._fsp--;
@@ -7771,7 +7791,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNotSentence"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2648:1: entryRuleNotSentence returns [EObject current=null] : iv_ruleNotSentence= ruleNotSentence EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2659:1: entryRuleNotSentence returns [EObject current=null] : iv_ruleNotSentence= ruleNotSentence EOF ;
     public final EObject entryRuleNotSentence() throws RecognitionException {
         EObject current = null;
 
@@ -7779,13 +7799,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2649:2: (iv_ruleNotSentence= ruleNotSentence EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2650:2: iv_ruleNotSentence= ruleNotSentence EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2660:2: (iv_ruleNotSentence= ruleNotSentence EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2661:2: iv_ruleNotSentence= ruleNotSentence EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getNotSentenceRule()); 
             }
-            pushFollow(FOLLOW_ruleNotSentence_in_entryRuleNotSentence6156);
+            pushFollow(FOLLOW_ruleNotSentence_in_entryRuleNotSentence6175);
             iv_ruleNotSentence=ruleNotSentence();
 
             state._fsp--;
@@ -7793,7 +7813,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleNotSentence; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNotSentence6166); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNotSentence6185); if (state.failed) return current;
 
             }
 
@@ -7811,7 +7831,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNotSentence"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2657:1: ruleNotSentence returns [EObject current=null] : (this_PrimarySentence_0= rulePrimarySentence | (otherlv_1= 'not' this_PrimarySentence_2= rulePrimarySentence ) ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2668:1: ruleNotSentence returns [EObject current=null] : (this_PrimarySentence_0= rulePrimarySentence | (otherlv_1= 'not' this_PrimarySentence_2= rulePrimarySentence ) ) ;
     public final EObject ruleNotSentence() throws RecognitionException {
         EObject current = null;
 
@@ -7824,10 +7844,10 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2660:28: ( (this_PrimarySentence_0= rulePrimarySentence | (otherlv_1= 'not' this_PrimarySentence_2= rulePrimarySentence ) ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2661:1: (this_PrimarySentence_0= rulePrimarySentence | (otherlv_1= 'not' this_PrimarySentence_2= rulePrimarySentence ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2671:28: ( (this_PrimarySentence_0= rulePrimarySentence | (otherlv_1= 'not' this_PrimarySentence_2= rulePrimarySentence ) ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2672:1: (this_PrimarySentence_0= rulePrimarySentence | (otherlv_1= 'not' this_PrimarySentence_2= rulePrimarySentence ) )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2661:1: (this_PrimarySentence_0= rulePrimarySentence | (otherlv_1= 'not' this_PrimarySentence_2= rulePrimarySentence ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2672:1: (this_PrimarySentence_0= rulePrimarySentence | (otherlv_1= 'not' this_PrimarySentence_2= rulePrimarySentence ) )
             int alt40=2;
             int LA40_0 = input.LA(1);
 
@@ -7846,7 +7866,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             }
             switch (alt40) {
                 case 1 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2662:2: this_PrimarySentence_0= rulePrimarySentence
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2673:2: this_PrimarySentence_0= rulePrimarySentence
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -7858,7 +7878,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getNotSentenceAccess().getPrimarySentenceParserRuleCall_0()); 
                           
                     }
-                    pushFollow(FOLLOW_rulePrimarySentence_in_ruleNotSentence6216);
+                    pushFollow(FOLLOW_rulePrimarySentence_in_ruleNotSentence6235);
                     this_PrimarySentence_0=rulePrimarySentence();
 
                     state._fsp--;
@@ -7873,12 +7893,12 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2674:6: (otherlv_1= 'not' this_PrimarySentence_2= rulePrimarySentence )
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2685:6: (otherlv_1= 'not' this_PrimarySentence_2= rulePrimarySentence )
                     {
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2674:6: (otherlv_1= 'not' this_PrimarySentence_2= rulePrimarySentence )
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2674:8: otherlv_1= 'not' this_PrimarySentence_2= rulePrimarySentence
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2685:6: (otherlv_1= 'not' this_PrimarySentence_2= rulePrimarySentence )
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2685:8: otherlv_1= 'not' this_PrimarySentence_2= rulePrimarySentence
                     {
-                    otherlv_1=(Token)match(input,39,FOLLOW_39_in_ruleNotSentence6234); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,39,FOLLOW_39_in_ruleNotSentence6253); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getNotSentenceAccess().getNotKeyword_1_0());
@@ -7894,7 +7914,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getNotSentenceAccess().getPrimarySentenceParserRuleCall_1_1()); 
                           
                     }
-                    pushFollow(FOLLOW_rulePrimarySentence_in_ruleNotSentence6259);
+                    pushFollow(FOLLOW_rulePrimarySentence_in_ruleNotSentence6278);
                     this_PrimarySentence_2=rulePrimarySentence();
 
                     state._fsp--;
@@ -7934,7 +7954,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePrimarySentence"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2698:1: entryRulePrimarySentence returns [EObject current=null] : iv_rulePrimarySentence= rulePrimarySentence EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2709:1: entryRulePrimarySentence returns [EObject current=null] : iv_rulePrimarySentence= rulePrimarySentence EOF ;
     public final EObject entryRulePrimarySentence() throws RecognitionException {
         EObject current = null;
 
@@ -7942,13 +7962,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2699:2: (iv_rulePrimarySentence= rulePrimarySentence EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2700:2: iv_rulePrimarySentence= rulePrimarySentence EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2710:2: (iv_rulePrimarySentence= rulePrimarySentence EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2711:2: iv_rulePrimarySentence= rulePrimarySentence EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPrimarySentenceRule()); 
             }
-            pushFollow(FOLLOW_rulePrimarySentence_in_entryRulePrimarySentence6295);
+            pushFollow(FOLLOW_rulePrimarySentence_in_entryRulePrimarySentence6314);
             iv_rulePrimarySentence=rulePrimarySentence();
 
             state._fsp--;
@@ -7956,7 +7976,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulePrimarySentence; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRulePrimarySentence6305); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRulePrimarySentence6324); if (state.failed) return current;
 
             }
 
@@ -7974,7 +7994,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePrimarySentence"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2707:1: rulePrimarySentence returns [EObject current=null] : (this_SentenceLiteral_0= ruleSentenceLiteral | (otherlv_1= '(' this_OrSentence_2= ruleOrSentence otherlv_3= ')' ) ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2718:1: rulePrimarySentence returns [EObject current=null] : (this_SentenceLiteral_0= ruleSentenceLiteral | (otherlv_1= '(' this_OrSentence_2= ruleOrSentence otherlv_3= ')' ) ) ;
     public final EObject rulePrimarySentence() throws RecognitionException {
         EObject current = null;
 
@@ -7988,10 +8008,10 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2710:28: ( (this_SentenceLiteral_0= ruleSentenceLiteral | (otherlv_1= '(' this_OrSentence_2= ruleOrSentence otherlv_3= ')' ) ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2711:1: (this_SentenceLiteral_0= ruleSentenceLiteral | (otherlv_1= '(' this_OrSentence_2= ruleOrSentence otherlv_3= ')' ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2721:28: ( (this_SentenceLiteral_0= ruleSentenceLiteral | (otherlv_1= '(' this_OrSentence_2= ruleOrSentence otherlv_3= ')' ) ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2722:1: (this_SentenceLiteral_0= ruleSentenceLiteral | (otherlv_1= '(' this_OrSentence_2= ruleOrSentence otherlv_3= ')' ) )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2711:1: (this_SentenceLiteral_0= ruleSentenceLiteral | (otherlv_1= '(' this_OrSentence_2= ruleOrSentence otherlv_3= ')' ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2722:1: (this_SentenceLiteral_0= ruleSentenceLiteral | (otherlv_1= '(' this_OrSentence_2= ruleOrSentence otherlv_3= ')' ) )
             int alt41=2;
             int LA41_0 = input.LA(1);
 
@@ -8024,7 +8044,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             }
             switch (alt41) {
                 case 1 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2712:2: this_SentenceLiteral_0= ruleSentenceLiteral
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2723:2: this_SentenceLiteral_0= ruleSentenceLiteral
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -8036,7 +8056,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getPrimarySentenceAccess().getSentenceLiteralParserRuleCall_0()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleSentenceLiteral_in_rulePrimarySentence6355);
+                    pushFollow(FOLLOW_ruleSentenceLiteral_in_rulePrimarySentence6374);
                     this_SentenceLiteral_0=ruleSentenceLiteral();
 
                     state._fsp--;
@@ -8051,12 +8071,12 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2724:6: (otherlv_1= '(' this_OrSentence_2= ruleOrSentence otherlv_3= ')' )
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2735:6: (otherlv_1= '(' this_OrSentence_2= ruleOrSentence otherlv_3= ')' )
                     {
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2724:6: (otherlv_1= '(' this_OrSentence_2= ruleOrSentence otherlv_3= ')' )
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2724:8: otherlv_1= '(' this_OrSentence_2= ruleOrSentence otherlv_3= ')'
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2735:6: (otherlv_1= '(' this_OrSentence_2= ruleOrSentence otherlv_3= ')' )
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2735:8: otherlv_1= '(' this_OrSentence_2= ruleOrSentence otherlv_3= ')'
                     {
-                    otherlv_1=(Token)match(input,18,FOLLOW_18_in_rulePrimarySentence6373); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,18,FOLLOW_18_in_rulePrimarySentence6392); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getPrimarySentenceAccess().getLeftParenthesisKeyword_1_0());
@@ -8072,7 +8092,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getPrimarySentenceAccess().getOrSentenceParserRuleCall_1_1()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleOrSentence_in_rulePrimarySentence6398);
+                    pushFollow(FOLLOW_ruleOrSentence_in_rulePrimarySentence6417);
                     this_OrSentence_2=ruleOrSentence();
 
                     state._fsp--;
@@ -8083,7 +8103,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                               afterParserOrEnumRuleCall();
                           
                     }
-                    otherlv_3=(Token)match(input,19,FOLLOW_19_in_rulePrimarySentence6409); if (state.failed) return current;
+                    otherlv_3=(Token)match(input,19,FOLLOW_19_in_rulePrimarySentence6428); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_3, grammarAccess.getPrimarySentenceAccess().getRightParenthesisKeyword_1_2());
@@ -8118,7 +8138,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSentenceLiteral"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2752:1: entryRuleSentenceLiteral returns [EObject current=null] : iv_ruleSentenceLiteral= ruleSentenceLiteral EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2763:1: entryRuleSentenceLiteral returns [EObject current=null] : iv_ruleSentenceLiteral= ruleSentenceLiteral EOF ;
     public final EObject entryRuleSentenceLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -8126,13 +8146,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2753:2: (iv_ruleSentenceLiteral= ruleSentenceLiteral EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2754:2: iv_ruleSentenceLiteral= ruleSentenceLiteral EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2764:2: (iv_ruleSentenceLiteral= ruleSentenceLiteral EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2765:2: iv_ruleSentenceLiteral= ruleSentenceLiteral EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getSentenceLiteralRule()); 
             }
-            pushFollow(FOLLOW_ruleSentenceLiteral_in_entryRuleSentenceLiteral6446);
+            pushFollow(FOLLOW_ruleSentenceLiteral_in_entryRuleSentenceLiteral6465);
             iv_ruleSentenceLiteral=ruleSentenceLiteral();
 
             state._fsp--;
@@ -8140,7 +8160,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleSentenceLiteral; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSentenceLiteral6456); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSentenceLiteral6475); if (state.failed) return current;
 
             }
 
@@ -8158,7 +8178,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSentenceLiteral"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2761:1: ruleSentenceLiteral returns [EObject current=null] : this_Atom_0= ruleAtom ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2772:1: ruleSentenceLiteral returns [EObject current=null] : this_Atom_0= ruleAtom ;
     public final EObject ruleSentenceLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -8168,8 +8188,8 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2764:28: (this_Atom_0= ruleAtom )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2766:2: this_Atom_0= ruleAtom
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2775:28: (this_Atom_0= ruleAtom )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2777:2: this_Atom_0= ruleAtom
             {
             if ( state.backtracking==0 ) {
                
@@ -8181,7 +8201,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                       newCompositeNode(grammarAccess.getSentenceLiteralAccess().getAtomParserRuleCall()); 
                   
             }
-            pushFollow(FOLLOW_ruleAtom_in_ruleSentenceLiteral6505);
+            pushFollow(FOLLOW_ruleAtom_in_ruleSentenceLiteral6524);
             this_Atom_0=ruleAtom();
 
             state._fsp--;
@@ -8212,7 +8232,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulepSentence"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2785:1: entryRulepSentence returns [EObject current=null] : iv_rulepSentence= rulepSentence EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2796:1: entryRulepSentence returns [EObject current=null] : iv_rulepSentence= rulepSentence EOF ;
     public final EObject entryRulepSentence() throws RecognitionException {
         EObject current = null;
 
@@ -8220,13 +8240,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2786:2: (iv_rulepSentence= rulepSentence EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2787:2: iv_rulepSentence= rulepSentence EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2797:2: (iv_rulepSentence= rulepSentence EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2798:2: iv_rulepSentence= rulepSentence EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPSentenceRule()); 
             }
-            pushFollow(FOLLOW_rulepSentence_in_entryRulepSentence6539);
+            pushFollow(FOLLOW_rulepSentence_in_entryRulepSentence6558);
             iv_rulepSentence=rulepSentence();
 
             state._fsp--;
@@ -8234,7 +8254,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulepSentence; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRulepSentence6549); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRulepSentence6568); if (state.failed) return current;
 
             }
 
@@ -8252,7 +8272,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulepSentence"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2794:1: rulepSentence returns [EObject current=null] : this_pOrSentence_0= rulepOrSentence ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2805:1: rulepSentence returns [EObject current=null] : this_pOrSentence_0= rulepOrSentence ;
     public final EObject rulepSentence() throws RecognitionException {
         EObject current = null;
 
@@ -8262,8 +8282,8 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2797:28: (this_pOrSentence_0= rulepOrSentence )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2799:2: this_pOrSentence_0= rulepOrSentence
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2808:28: (this_pOrSentence_0= rulepOrSentence )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2810:2: this_pOrSentence_0= rulepOrSentence
             {
             if ( state.backtracking==0 ) {
                
@@ -8275,7 +8295,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                       newCompositeNode(grammarAccess.getPSentenceAccess().getPOrSentenceParserRuleCall()); 
                   
             }
-            pushFollow(FOLLOW_rulepOrSentence_in_rulepSentence6598);
+            pushFollow(FOLLOW_rulepOrSentence_in_rulepSentence6617);
             this_pOrSentence_0=rulepOrSentence();
 
             state._fsp--;
@@ -8306,7 +8326,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulepOrSentence"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2818:1: entryRulepOrSentence returns [EObject current=null] : iv_rulepOrSentence= rulepOrSentence EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2829:1: entryRulepOrSentence returns [EObject current=null] : iv_rulepOrSentence= rulepOrSentence EOF ;
     public final EObject entryRulepOrSentence() throws RecognitionException {
         EObject current = null;
 
@@ -8314,13 +8334,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2819:2: (iv_rulepOrSentence= rulepOrSentence EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2820:2: iv_rulepOrSentence= rulepOrSentence EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2830:2: (iv_rulepOrSentence= rulepOrSentence EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2831:2: iv_rulepOrSentence= rulepOrSentence EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPOrSentenceRule()); 
             }
-            pushFollow(FOLLOW_rulepOrSentence_in_entryRulepOrSentence6632);
+            pushFollow(FOLLOW_rulepOrSentence_in_entryRulepOrSentence6651);
             iv_rulepOrSentence=rulepOrSentence();
 
             state._fsp--;
@@ -8328,7 +8348,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulepOrSentence; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRulepOrSentence6642); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRulepOrSentence6661); if (state.failed) return current;
 
             }
 
@@ -8346,7 +8366,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulepOrSentence"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2827:1: rulepOrSentence returns [EObject current=null] : (this_pAndSentence_0= rulepAndSentence ( () otherlv_2= 'or' ( (lv_right_3_0= rulepAndSentence ) ) )* ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2838:1: rulepOrSentence returns [EObject current=null] : (this_pAndSentence_0= rulepAndSentence ( () otherlv_2= 'or' ( (lv_right_3_0= rulepAndSentence ) ) )* ) ;
     public final EObject rulepOrSentence() throws RecognitionException {
         EObject current = null;
 
@@ -8359,11 +8379,11 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2830:28: ( (this_pAndSentence_0= rulepAndSentence ( () otherlv_2= 'or' ( (lv_right_3_0= rulepAndSentence ) ) )* ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2831:1: (this_pAndSentence_0= rulepAndSentence ( () otherlv_2= 'or' ( (lv_right_3_0= rulepAndSentence ) ) )* )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2841:28: ( (this_pAndSentence_0= rulepAndSentence ( () otherlv_2= 'or' ( (lv_right_3_0= rulepAndSentence ) ) )* ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2842:1: (this_pAndSentence_0= rulepAndSentence ( () otherlv_2= 'or' ( (lv_right_3_0= rulepAndSentence ) ) )* )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2831:1: (this_pAndSentence_0= rulepAndSentence ( () otherlv_2= 'or' ( (lv_right_3_0= rulepAndSentence ) ) )* )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2832:2: this_pAndSentence_0= rulepAndSentence ( () otherlv_2= 'or' ( (lv_right_3_0= rulepAndSentence ) ) )*
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2842:1: (this_pAndSentence_0= rulepAndSentence ( () otherlv_2= 'or' ( (lv_right_3_0= rulepAndSentence ) ) )* )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2843:2: this_pAndSentence_0= rulepAndSentence ( () otherlv_2= 'or' ( (lv_right_3_0= rulepAndSentence ) ) )*
             {
             if ( state.backtracking==0 ) {
                
@@ -8375,7 +8395,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                       newCompositeNode(grammarAccess.getPOrSentenceAccess().getPAndSentenceParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_rulepAndSentence_in_rulepOrSentence6692);
+            pushFollow(FOLLOW_rulepAndSentence_in_rulepOrSentence6711);
             this_pAndSentence_0=rulepAndSentence();
 
             state._fsp--;
@@ -8386,7 +8406,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2843:1: ( () otherlv_2= 'or' ( (lv_right_3_0= rulepAndSentence ) ) )*
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2854:1: ( () otherlv_2= 'or' ( (lv_right_3_0= rulepAndSentence ) ) )*
             loop42:
             do {
                 int alt42=2;
@@ -8399,10 +8419,10 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
                 switch (alt42) {
             	case 1 :
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2843:2: () otherlv_2= 'or' ( (lv_right_3_0= rulepAndSentence ) )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2854:2: () otherlv_2= 'or' ( (lv_right_3_0= rulepAndSentence ) )
             	    {
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2843:2: ()
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2844:2: 
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2854:2: ()
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2855:2: 
             	    {
             	    if ( state.backtracking==0 ) {
             	       
@@ -8419,24 +8439,24 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_2=(Token)match(input,37,FOLLOW_37_in_rulepOrSentence6716); if (state.failed) return current;
+            	    otherlv_2=(Token)match(input,37,FOLLOW_37_in_rulepOrSentence6735); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	          	newLeafNode(otherlv_2, grammarAccess.getPOrSentenceAccess().getOrKeyword_1_1());
             	          
             	    }
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2856:1: ( (lv_right_3_0= rulepAndSentence ) )
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2857:1: (lv_right_3_0= rulepAndSentence )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2867:1: ( (lv_right_3_0= rulepAndSentence ) )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2868:1: (lv_right_3_0= rulepAndSentence )
             	    {
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2857:1: (lv_right_3_0= rulepAndSentence )
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2858:3: lv_right_3_0= rulepAndSentence
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2868:1: (lv_right_3_0= rulepAndSentence )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2869:3: lv_right_3_0= rulepAndSentence
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getPOrSentenceAccess().getRightPAndSentenceParserRuleCall_1_2_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_rulepAndSentence_in_rulepOrSentence6737);
+            	    pushFollow(FOLLOW_rulepAndSentence_in_rulepOrSentence6756);
             	    lv_right_3_0=rulepAndSentence();
 
             	    state._fsp--;
@@ -8492,7 +8512,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulepAndSentence"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2882:1: entryRulepAndSentence returns [EObject current=null] : iv_rulepAndSentence= rulepAndSentence EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2893:1: entryRulepAndSentence returns [EObject current=null] : iv_rulepAndSentence= rulepAndSentence EOF ;
     public final EObject entryRulepAndSentence() throws RecognitionException {
         EObject current = null;
 
@@ -8500,13 +8520,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2883:2: (iv_rulepAndSentence= rulepAndSentence EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2884:2: iv_rulepAndSentence= rulepAndSentence EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2894:2: (iv_rulepAndSentence= rulepAndSentence EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2895:2: iv_rulepAndSentence= rulepAndSentence EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPAndSentenceRule()); 
             }
-            pushFollow(FOLLOW_rulepAndSentence_in_entryRulepAndSentence6775);
+            pushFollow(FOLLOW_rulepAndSentence_in_entryRulepAndSentence6794);
             iv_rulepAndSentence=rulepAndSentence();
 
             state._fsp--;
@@ -8514,7 +8534,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulepAndSentence; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRulepAndSentence6785); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRulepAndSentence6804); if (state.failed) return current;
 
             }
 
@@ -8532,7 +8552,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulepAndSentence"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2891:1: rulepAndSentence returns [EObject current=null] : (this_pNotSentence_0= rulepNotSentence ( () otherlv_2= 'and' ( (lv_right_3_0= rulepNotSentence ) ) )* ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2902:1: rulepAndSentence returns [EObject current=null] : (this_pNotSentence_0= rulepNotSentence ( () otherlv_2= 'and' ( (lv_right_3_0= rulepNotSentence ) ) )* ) ;
     public final EObject rulepAndSentence() throws RecognitionException {
         EObject current = null;
 
@@ -8545,11 +8565,11 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2894:28: ( (this_pNotSentence_0= rulepNotSentence ( () otherlv_2= 'and' ( (lv_right_3_0= rulepNotSentence ) ) )* ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2895:1: (this_pNotSentence_0= rulepNotSentence ( () otherlv_2= 'and' ( (lv_right_3_0= rulepNotSentence ) ) )* )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2905:28: ( (this_pNotSentence_0= rulepNotSentence ( () otherlv_2= 'and' ( (lv_right_3_0= rulepNotSentence ) ) )* ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2906:1: (this_pNotSentence_0= rulepNotSentence ( () otherlv_2= 'and' ( (lv_right_3_0= rulepNotSentence ) ) )* )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2895:1: (this_pNotSentence_0= rulepNotSentence ( () otherlv_2= 'and' ( (lv_right_3_0= rulepNotSentence ) ) )* )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2896:2: this_pNotSentence_0= rulepNotSentence ( () otherlv_2= 'and' ( (lv_right_3_0= rulepNotSentence ) ) )*
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2906:1: (this_pNotSentence_0= rulepNotSentence ( () otherlv_2= 'and' ( (lv_right_3_0= rulepNotSentence ) ) )* )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2907:2: this_pNotSentence_0= rulepNotSentence ( () otherlv_2= 'and' ( (lv_right_3_0= rulepNotSentence ) ) )*
             {
             if ( state.backtracking==0 ) {
                
@@ -8561,7 +8581,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                       newCompositeNode(grammarAccess.getPAndSentenceAccess().getPNotSentenceParserRuleCall_0()); 
                   
             }
-            pushFollow(FOLLOW_rulepNotSentence_in_rulepAndSentence6835);
+            pushFollow(FOLLOW_rulepNotSentence_in_rulepAndSentence6854);
             this_pNotSentence_0=rulepNotSentence();
 
             state._fsp--;
@@ -8572,7 +8592,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                       afterParserOrEnumRuleCall();
                   
             }
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2907:1: ( () otherlv_2= 'and' ( (lv_right_3_0= rulepNotSentence ) ) )*
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2918:1: ( () otherlv_2= 'and' ( (lv_right_3_0= rulepNotSentence ) ) )*
             loop43:
             do {
                 int alt43=2;
@@ -8585,10 +8605,10 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
                 switch (alt43) {
             	case 1 :
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2907:2: () otherlv_2= 'and' ( (lv_right_3_0= rulepNotSentence ) )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2918:2: () otherlv_2= 'and' ( (lv_right_3_0= rulepNotSentence ) )
             	    {
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2907:2: ()
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2908:2: 
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2918:2: ()
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2919:2: 
             	    {
             	    if ( state.backtracking==0 ) {
             	       
@@ -8605,24 +8625,24 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_2=(Token)match(input,38,FOLLOW_38_in_rulepAndSentence6859); if (state.failed) return current;
+            	    otherlv_2=(Token)match(input,38,FOLLOW_38_in_rulepAndSentence6878); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	          	newLeafNode(otherlv_2, grammarAccess.getPAndSentenceAccess().getAndKeyword_1_1());
             	          
             	    }
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2920:1: ( (lv_right_3_0= rulepNotSentence ) )
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2921:1: (lv_right_3_0= rulepNotSentence )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2931:1: ( (lv_right_3_0= rulepNotSentence ) )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2932:1: (lv_right_3_0= rulepNotSentence )
             	    {
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2921:1: (lv_right_3_0= rulepNotSentence )
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2922:3: lv_right_3_0= rulepNotSentence
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2932:1: (lv_right_3_0= rulepNotSentence )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2933:3: lv_right_3_0= rulepNotSentence
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getPAndSentenceAccess().getRightPNotSentenceParserRuleCall_1_2_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_rulepNotSentence_in_rulepAndSentence6880);
+            	    pushFollow(FOLLOW_rulepNotSentence_in_rulepAndSentence6899);
             	    lv_right_3_0=rulepNotSentence();
 
             	    state._fsp--;
@@ -8678,7 +8698,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulepNotSentence"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2946:1: entryRulepNotSentence returns [EObject current=null] : iv_rulepNotSentence= rulepNotSentence EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2957:1: entryRulepNotSentence returns [EObject current=null] : iv_rulepNotSentence= rulepNotSentence EOF ;
     public final EObject entryRulepNotSentence() throws RecognitionException {
         EObject current = null;
 
@@ -8686,13 +8706,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2947:2: (iv_rulepNotSentence= rulepNotSentence EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2948:2: iv_rulepNotSentence= rulepNotSentence EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2958:2: (iv_rulepNotSentence= rulepNotSentence EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2959:2: iv_rulepNotSentence= rulepNotSentence EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPNotSentenceRule()); 
             }
-            pushFollow(FOLLOW_rulepNotSentence_in_entryRulepNotSentence6918);
+            pushFollow(FOLLOW_rulepNotSentence_in_entryRulepNotSentence6937);
             iv_rulepNotSentence=rulepNotSentence();
 
             state._fsp--;
@@ -8700,7 +8720,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulepNotSentence; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRulepNotSentence6928); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRulepNotSentence6947); if (state.failed) return current;
 
             }
 
@@ -8718,7 +8738,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulepNotSentence"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2955:1: rulepNotSentence returns [EObject current=null] : (this_pPrimarySentence_0= rulepPrimarySentence | (otherlv_1= 'not' this_pPrimarySentence_2= rulepPrimarySentence ) ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2966:1: rulepNotSentence returns [EObject current=null] : (this_pPrimarySentence_0= rulepPrimarySentence | (otherlv_1= 'not' this_pPrimarySentence_2= rulepPrimarySentence ) ) ;
     public final EObject rulepNotSentence() throws RecognitionException {
         EObject current = null;
 
@@ -8731,10 +8751,10 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2958:28: ( (this_pPrimarySentence_0= rulepPrimarySentence | (otherlv_1= 'not' this_pPrimarySentence_2= rulepPrimarySentence ) ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2959:1: (this_pPrimarySentence_0= rulepPrimarySentence | (otherlv_1= 'not' this_pPrimarySentence_2= rulepPrimarySentence ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2969:28: ( (this_pPrimarySentence_0= rulepPrimarySentence | (otherlv_1= 'not' this_pPrimarySentence_2= rulepPrimarySentence ) ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2970:1: (this_pPrimarySentence_0= rulepPrimarySentence | (otherlv_1= 'not' this_pPrimarySentence_2= rulepPrimarySentence ) )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2959:1: (this_pPrimarySentence_0= rulepPrimarySentence | (otherlv_1= 'not' this_pPrimarySentence_2= rulepPrimarySentence ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2970:1: (this_pPrimarySentence_0= rulepPrimarySentence | (otherlv_1= 'not' this_pPrimarySentence_2= rulepPrimarySentence ) )
             int alt44=2;
             int LA44_0 = input.LA(1);
 
@@ -8753,7 +8773,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             }
             switch (alt44) {
                 case 1 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2960:2: this_pPrimarySentence_0= rulepPrimarySentence
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2971:2: this_pPrimarySentence_0= rulepPrimarySentence
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -8765,7 +8785,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getPNotSentenceAccess().getPPrimarySentenceParserRuleCall_0()); 
                           
                     }
-                    pushFollow(FOLLOW_rulepPrimarySentence_in_rulepNotSentence6978);
+                    pushFollow(FOLLOW_rulepPrimarySentence_in_rulepNotSentence6997);
                     this_pPrimarySentence_0=rulepPrimarySentence();
 
                     state._fsp--;
@@ -8780,12 +8800,12 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2972:6: (otherlv_1= 'not' this_pPrimarySentence_2= rulepPrimarySentence )
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2983:6: (otherlv_1= 'not' this_pPrimarySentence_2= rulepPrimarySentence )
                     {
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2972:6: (otherlv_1= 'not' this_pPrimarySentence_2= rulepPrimarySentence )
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2972:8: otherlv_1= 'not' this_pPrimarySentence_2= rulepPrimarySentence
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2983:6: (otherlv_1= 'not' this_pPrimarySentence_2= rulepPrimarySentence )
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2983:8: otherlv_1= 'not' this_pPrimarySentence_2= rulepPrimarySentence
                     {
-                    otherlv_1=(Token)match(input,39,FOLLOW_39_in_rulepNotSentence6996); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,39,FOLLOW_39_in_rulepNotSentence7015); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getPNotSentenceAccess().getNotKeyword_1_0());
@@ -8801,7 +8821,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getPNotSentenceAccess().getPPrimarySentenceParserRuleCall_1_1()); 
                           
                     }
-                    pushFollow(FOLLOW_rulepPrimarySentence_in_rulepNotSentence7021);
+                    pushFollow(FOLLOW_rulepPrimarySentence_in_rulepNotSentence7040);
                     this_pPrimarySentence_2=rulepPrimarySentence();
 
                     state._fsp--;
@@ -8841,7 +8861,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulepPrimarySentence"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2996:1: entryRulepPrimarySentence returns [EObject current=null] : iv_rulepPrimarySentence= rulepPrimarySentence EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3007:1: entryRulepPrimarySentence returns [EObject current=null] : iv_rulepPrimarySentence= rulepPrimarySentence EOF ;
     public final EObject entryRulepPrimarySentence() throws RecognitionException {
         EObject current = null;
 
@@ -8849,13 +8869,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2997:2: (iv_rulepPrimarySentence= rulepPrimarySentence EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2998:2: iv_rulepPrimarySentence= rulepPrimarySentence EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3008:2: (iv_rulepPrimarySentence= rulepPrimarySentence EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3009:2: iv_rulepPrimarySentence= rulepPrimarySentence EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPPrimarySentenceRule()); 
             }
-            pushFollow(FOLLOW_rulepPrimarySentence_in_entryRulepPrimarySentence7057);
+            pushFollow(FOLLOW_rulepPrimarySentence_in_entryRulepPrimarySentence7076);
             iv_rulepPrimarySentence=rulepPrimarySentence();
 
             state._fsp--;
@@ -8863,7 +8883,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulepPrimarySentence; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRulepPrimarySentence7067); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRulepPrimarySentence7086); if (state.failed) return current;
 
             }
 
@@ -8881,7 +8901,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulepPrimarySentence"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3005:1: rulepPrimarySentence returns [EObject current=null] : (this_pSentenceLiteral_0= rulepSentenceLiteral | (otherlv_1= '(' this_OrSentence_2= ruleOrSentence otherlv_3= ')' ) ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3016:1: rulepPrimarySentence returns [EObject current=null] : (this_pSentenceLiteral_0= rulepSentenceLiteral | (otherlv_1= '(' this_OrSentence_2= ruleOrSentence otherlv_3= ')' ) ) ;
     public final EObject rulepPrimarySentence() throws RecognitionException {
         EObject current = null;
 
@@ -8895,10 +8915,10 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3008:28: ( (this_pSentenceLiteral_0= rulepSentenceLiteral | (otherlv_1= '(' this_OrSentence_2= ruleOrSentence otherlv_3= ')' ) ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3009:1: (this_pSentenceLiteral_0= rulepSentenceLiteral | (otherlv_1= '(' this_OrSentence_2= ruleOrSentence otherlv_3= ')' ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3019:28: ( (this_pSentenceLiteral_0= rulepSentenceLiteral | (otherlv_1= '(' this_OrSentence_2= ruleOrSentence otherlv_3= ')' ) ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3020:1: (this_pSentenceLiteral_0= rulepSentenceLiteral | (otherlv_1= '(' this_OrSentence_2= ruleOrSentence otherlv_3= ')' ) )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3009:1: (this_pSentenceLiteral_0= rulepSentenceLiteral | (otherlv_1= '(' this_OrSentence_2= ruleOrSentence otherlv_3= ')' ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3020:1: (this_pSentenceLiteral_0= rulepSentenceLiteral | (otherlv_1= '(' this_OrSentence_2= ruleOrSentence otherlv_3= ')' ) )
             int alt45=2;
             int LA45_0 = input.LA(1);
 
@@ -8917,7 +8937,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             }
             switch (alt45) {
                 case 1 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3010:2: this_pSentenceLiteral_0= rulepSentenceLiteral
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3021:2: this_pSentenceLiteral_0= rulepSentenceLiteral
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -8929,7 +8949,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getPPrimarySentenceAccess().getPSentenceLiteralParserRuleCall_0()); 
                           
                     }
-                    pushFollow(FOLLOW_rulepSentenceLiteral_in_rulepPrimarySentence7117);
+                    pushFollow(FOLLOW_rulepSentenceLiteral_in_rulepPrimarySentence7136);
                     this_pSentenceLiteral_0=rulepSentenceLiteral();
 
                     state._fsp--;
@@ -8944,12 +8964,12 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3022:6: (otherlv_1= '(' this_OrSentence_2= ruleOrSentence otherlv_3= ')' )
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3033:6: (otherlv_1= '(' this_OrSentence_2= ruleOrSentence otherlv_3= ')' )
                     {
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3022:6: (otherlv_1= '(' this_OrSentence_2= ruleOrSentence otherlv_3= ')' )
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3022:8: otherlv_1= '(' this_OrSentence_2= ruleOrSentence otherlv_3= ')'
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3033:6: (otherlv_1= '(' this_OrSentence_2= ruleOrSentence otherlv_3= ')' )
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3033:8: otherlv_1= '(' this_OrSentence_2= ruleOrSentence otherlv_3= ')'
                     {
-                    otherlv_1=(Token)match(input,18,FOLLOW_18_in_rulepPrimarySentence7135); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,18,FOLLOW_18_in_rulepPrimarySentence7154); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getPPrimarySentenceAccess().getLeftParenthesisKeyword_1_0());
@@ -8965,7 +8985,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getPPrimarySentenceAccess().getOrSentenceParserRuleCall_1_1()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleOrSentence_in_rulepPrimarySentence7160);
+                    pushFollow(FOLLOW_ruleOrSentence_in_rulepPrimarySentence7179);
                     this_OrSentence_2=ruleOrSentence();
 
                     state._fsp--;
@@ -8976,7 +8996,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                               afterParserOrEnumRuleCall();
                           
                     }
-                    otherlv_3=(Token)match(input,19,FOLLOW_19_in_rulepPrimarySentence7171); if (state.failed) return current;
+                    otherlv_3=(Token)match(input,19,FOLLOW_19_in_rulepPrimarySentence7190); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_3, grammarAccess.getPPrimarySentenceAccess().getRightParenthesisKeyword_1_2());
@@ -9011,7 +9031,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulepSentenceLiteral"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3050:1: entryRulepSentenceLiteral returns [EObject current=null] : iv_rulepSentenceLiteral= rulepSentenceLiteral EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3061:1: entryRulepSentenceLiteral returns [EObject current=null] : iv_rulepSentenceLiteral= rulepSentenceLiteral EOF ;
     public final EObject entryRulepSentenceLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -9019,13 +9039,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3051:2: (iv_rulepSentenceLiteral= rulepSentenceLiteral EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3052:2: iv_rulepSentenceLiteral= rulepSentenceLiteral EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3062:2: (iv_rulepSentenceLiteral= rulepSentenceLiteral EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3063:2: iv_rulepSentenceLiteral= rulepSentenceLiteral EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPSentenceLiteralRule()); 
             }
-            pushFollow(FOLLOW_rulepSentenceLiteral_in_entryRulepSentenceLiteral7208);
+            pushFollow(FOLLOW_rulepSentenceLiteral_in_entryRulepSentenceLiteral7227);
             iv_rulepSentenceLiteral=rulepSentenceLiteral();
 
             state._fsp--;
@@ -9033,7 +9053,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulepSentenceLiteral; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRulepSentenceLiteral7218); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRulepSentenceLiteral7237); if (state.failed) return current;
 
             }
 
@@ -9051,7 +9071,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulepSentenceLiteral"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3059:1: rulepSentenceLiteral returns [EObject current=null] : this_PredicateAtom_0= rulePredicateAtom ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3070:1: rulepSentenceLiteral returns [EObject current=null] : this_PredicateAtom_0= rulePredicateAtom ;
     public final EObject rulepSentenceLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -9061,8 +9081,8 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3062:28: (this_PredicateAtom_0= rulePredicateAtom )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3064:2: this_PredicateAtom_0= rulePredicateAtom
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3073:28: (this_PredicateAtom_0= rulePredicateAtom )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3075:2: this_PredicateAtom_0= rulePredicateAtom
             {
             if ( state.backtracking==0 ) {
                
@@ -9074,7 +9094,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                       newCompositeNode(grammarAccess.getPSentenceLiteralAccess().getPredicateAtomParserRuleCall()); 
                   
             }
-            pushFollow(FOLLOW_rulePredicateAtom_in_rulepSentenceLiteral7267);
+            pushFollow(FOLLOW_rulePredicateAtom_in_rulepSentenceLiteral7286);
             this_PredicateAtom_0=rulePredicateAtom();
 
             state._fsp--;
@@ -9105,7 +9125,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMaybeLiteral"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3083:1: entryRuleMaybeLiteral returns [EObject current=null] : iv_ruleMaybeLiteral= ruleMaybeLiteral EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3094:1: entryRuleMaybeLiteral returns [EObject current=null] : iv_ruleMaybeLiteral= ruleMaybeLiteral EOF ;
     public final EObject entryRuleMaybeLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -9113,13 +9133,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3084:2: (iv_ruleMaybeLiteral= ruleMaybeLiteral EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3085:2: iv_ruleMaybeLiteral= ruleMaybeLiteral EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3095:2: (iv_ruleMaybeLiteral= ruleMaybeLiteral EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3096:2: iv_ruleMaybeLiteral= ruleMaybeLiteral EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMaybeLiteralRule()); 
             }
-            pushFollow(FOLLOW_ruleMaybeLiteral_in_entryRuleMaybeLiteral7301);
+            pushFollow(FOLLOW_ruleMaybeLiteral_in_entryRuleMaybeLiteral7320);
             iv_ruleMaybeLiteral=ruleMaybeLiteral();
 
             state._fsp--;
@@ -9127,7 +9147,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleMaybeLiteral; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMaybeLiteral7311); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMaybeLiteral7330); if (state.failed) return current;
 
             }
 
@@ -9145,7 +9165,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMaybeLiteral"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3092:1: ruleMaybeLiteral returns [EObject current=null] : (otherlv_0= 'maybe' this_BasicPredicateAtom_1= ruleBasicPredicateAtom ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3103:1: ruleMaybeLiteral returns [EObject current=null] : (otherlv_0= 'maybe' this_BasicPredicateAtom_1= ruleBasicPredicateAtom ) ;
     public final EObject ruleMaybeLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -9156,13 +9176,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3095:28: ( (otherlv_0= 'maybe' this_BasicPredicateAtom_1= ruleBasicPredicateAtom ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3096:1: (otherlv_0= 'maybe' this_BasicPredicateAtom_1= ruleBasicPredicateAtom )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3106:28: ( (otherlv_0= 'maybe' this_BasicPredicateAtom_1= ruleBasicPredicateAtom ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3107:1: (otherlv_0= 'maybe' this_BasicPredicateAtom_1= ruleBasicPredicateAtom )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3096:1: (otherlv_0= 'maybe' this_BasicPredicateAtom_1= ruleBasicPredicateAtom )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3096:3: otherlv_0= 'maybe' this_BasicPredicateAtom_1= ruleBasicPredicateAtom
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3107:1: (otherlv_0= 'maybe' this_BasicPredicateAtom_1= ruleBasicPredicateAtom )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3107:3: otherlv_0= 'maybe' this_BasicPredicateAtom_1= ruleBasicPredicateAtom
             {
-            otherlv_0=(Token)match(input,40,FOLLOW_40_in_ruleMaybeLiteral7348); if (state.failed) return current;
+            otherlv_0=(Token)match(input,40,FOLLOW_40_in_ruleMaybeLiteral7367); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_0, grammarAccess.getMaybeLiteralAccess().getMaybeKeyword_0());
@@ -9178,7 +9198,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                       newCompositeNode(grammarAccess.getMaybeLiteralAccess().getBasicPredicateAtomParserRuleCall_1()); 
                   
             }
-            pushFollow(FOLLOW_ruleBasicPredicateAtom_in_ruleMaybeLiteral7373);
+            pushFollow(FOLLOW_ruleBasicPredicateAtom_in_ruleMaybeLiteral7392);
             this_BasicPredicateAtom_1=ruleBasicPredicateAtom();
 
             state._fsp--;
@@ -9212,7 +9232,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCardinalityConstraint"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3120:1: entryRuleCardinalityConstraint returns [EObject current=null] : iv_ruleCardinalityConstraint= ruleCardinalityConstraint EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3131:1: entryRuleCardinalityConstraint returns [EObject current=null] : iv_ruleCardinalityConstraint= ruleCardinalityConstraint EOF ;
     public final EObject entryRuleCardinalityConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -9220,13 +9240,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3121:2: (iv_ruleCardinalityConstraint= ruleCardinalityConstraint EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3122:2: iv_ruleCardinalityConstraint= ruleCardinalityConstraint EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3132:2: (iv_ruleCardinalityConstraint= ruleCardinalityConstraint EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3133:2: iv_ruleCardinalityConstraint= ruleCardinalityConstraint EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getCardinalityConstraintRule()); 
             }
-            pushFollow(FOLLOW_ruleCardinalityConstraint_in_entryRuleCardinalityConstraint7408);
+            pushFollow(FOLLOW_ruleCardinalityConstraint_in_entryRuleCardinalityConstraint7427);
             iv_ruleCardinalityConstraint=ruleCardinalityConstraint();
 
             state._fsp--;
@@ -9234,7 +9254,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleCardinalityConstraint; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCardinalityConstraint7418); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCardinalityConstraint7437); if (state.failed) return current;
 
             }
 
@@ -9252,7 +9272,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCardinalityConstraint"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3129:1: ruleCardinalityConstraint returns [EObject current=null] : ( ( (lv_lhs_0_0= ruleBound ) ) otherlv_1= '<=' otherlv_2= '|' otherlv_3= '{' ( (lv_atom_4_0= ruleBasicPredicateAtom ) ) otherlv_5= '}' otherlv_6= '|' otherlv_7= '<=' ( (lv_rhs_8_0= ruleBound ) ) ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3140:1: ruleCardinalityConstraint returns [EObject current=null] : ( ( (lv_lhs_0_0= ruleBound ) ) otherlv_1= '<=' otherlv_2= '|' otherlv_3= '{' ( (lv_atom_4_0= ruleBasicPredicateAtom ) ) otherlv_5= '}' otherlv_6= '|' otherlv_7= '<=' ( (lv_rhs_8_0= ruleBound ) ) ) ;
     public final EObject ruleCardinalityConstraint() throws RecognitionException {
         EObject current = null;
 
@@ -9272,24 +9292,24 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3132:28: ( ( ( (lv_lhs_0_0= ruleBound ) ) otherlv_1= '<=' otherlv_2= '|' otherlv_3= '{' ( (lv_atom_4_0= ruleBasicPredicateAtom ) ) otherlv_5= '}' otherlv_6= '|' otherlv_7= '<=' ( (lv_rhs_8_0= ruleBound ) ) ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3133:1: ( ( (lv_lhs_0_0= ruleBound ) ) otherlv_1= '<=' otherlv_2= '|' otherlv_3= '{' ( (lv_atom_4_0= ruleBasicPredicateAtom ) ) otherlv_5= '}' otherlv_6= '|' otherlv_7= '<=' ( (lv_rhs_8_0= ruleBound ) ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3143:28: ( ( ( (lv_lhs_0_0= ruleBound ) ) otherlv_1= '<=' otherlv_2= '|' otherlv_3= '{' ( (lv_atom_4_0= ruleBasicPredicateAtom ) ) otherlv_5= '}' otherlv_6= '|' otherlv_7= '<=' ( (lv_rhs_8_0= ruleBound ) ) ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3144:1: ( ( (lv_lhs_0_0= ruleBound ) ) otherlv_1= '<=' otherlv_2= '|' otherlv_3= '{' ( (lv_atom_4_0= ruleBasicPredicateAtom ) ) otherlv_5= '}' otherlv_6= '|' otherlv_7= '<=' ( (lv_rhs_8_0= ruleBound ) ) )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3133:1: ( ( (lv_lhs_0_0= ruleBound ) ) otherlv_1= '<=' otherlv_2= '|' otherlv_3= '{' ( (lv_atom_4_0= ruleBasicPredicateAtom ) ) otherlv_5= '}' otherlv_6= '|' otherlv_7= '<=' ( (lv_rhs_8_0= ruleBound ) ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3133:2: ( (lv_lhs_0_0= ruleBound ) ) otherlv_1= '<=' otherlv_2= '|' otherlv_3= '{' ( (lv_atom_4_0= ruleBasicPredicateAtom ) ) otherlv_5= '}' otherlv_6= '|' otherlv_7= '<=' ( (lv_rhs_8_0= ruleBound ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3144:1: ( ( (lv_lhs_0_0= ruleBound ) ) otherlv_1= '<=' otherlv_2= '|' otherlv_3= '{' ( (lv_atom_4_0= ruleBasicPredicateAtom ) ) otherlv_5= '}' otherlv_6= '|' otherlv_7= '<=' ( (lv_rhs_8_0= ruleBound ) ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3144:2: ( (lv_lhs_0_0= ruleBound ) ) otherlv_1= '<=' otherlv_2= '|' otherlv_3= '{' ( (lv_atom_4_0= ruleBasicPredicateAtom ) ) otherlv_5= '}' otherlv_6= '|' otherlv_7= '<=' ( (lv_rhs_8_0= ruleBound ) )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3133:2: ( (lv_lhs_0_0= ruleBound ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3134:1: (lv_lhs_0_0= ruleBound )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3144:2: ( (lv_lhs_0_0= ruleBound ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3145:1: (lv_lhs_0_0= ruleBound )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3134:1: (lv_lhs_0_0= ruleBound )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3135:3: lv_lhs_0_0= ruleBound
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3145:1: (lv_lhs_0_0= ruleBound )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3146:3: lv_lhs_0_0= ruleBound
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getCardinalityConstraintAccess().getLhsBoundParserRuleCall_0_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleBound_in_ruleCardinalityConstraint7464);
+            pushFollow(FOLLOW_ruleBound_in_ruleCardinalityConstraint7483);
             lv_lhs_0_0=ruleBound();
 
             state._fsp--;
@@ -9313,36 +9333,36 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,35,FOLLOW_35_in_ruleCardinalityConstraint7476); if (state.failed) return current;
+            otherlv_1=(Token)match(input,35,FOLLOW_35_in_ruleCardinalityConstraint7495); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getCardinalityConstraintAccess().getLessThanSignEqualsSignKeyword_1());
                   
             }
-            otherlv_2=(Token)match(input,41,FOLLOW_41_in_ruleCardinalityConstraint7488); if (state.failed) return current;
+            otherlv_2=(Token)match(input,41,FOLLOW_41_in_ruleCardinalityConstraint7507); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getCardinalityConstraintAccess().getVerticalLineKeyword_2());
                   
             }
-            otherlv_3=(Token)match(input,27,FOLLOW_27_in_ruleCardinalityConstraint7500); if (state.failed) return current;
+            otherlv_3=(Token)match(input,27,FOLLOW_27_in_ruleCardinalityConstraint7519); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_3, grammarAccess.getCardinalityConstraintAccess().getLeftCurlyBracketKeyword_3());
                   
             }
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3163:1: ( (lv_atom_4_0= ruleBasicPredicateAtom ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3164:1: (lv_atom_4_0= ruleBasicPredicateAtom )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3174:1: ( (lv_atom_4_0= ruleBasicPredicateAtom ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3175:1: (lv_atom_4_0= ruleBasicPredicateAtom )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3164:1: (lv_atom_4_0= ruleBasicPredicateAtom )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3165:3: lv_atom_4_0= ruleBasicPredicateAtom
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3175:1: (lv_atom_4_0= ruleBasicPredicateAtom )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3176:3: lv_atom_4_0= ruleBasicPredicateAtom
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getCardinalityConstraintAccess().getAtomBasicPredicateAtomParserRuleCall_4_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleBasicPredicateAtom_in_ruleCardinalityConstraint7521);
+            pushFollow(FOLLOW_ruleBasicPredicateAtom_in_ruleCardinalityConstraint7540);
             lv_atom_4_0=ruleBasicPredicateAtom();
 
             state._fsp--;
@@ -9366,36 +9386,36 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,28,FOLLOW_28_in_ruleCardinalityConstraint7533); if (state.failed) return current;
+            otherlv_5=(Token)match(input,28,FOLLOW_28_in_ruleCardinalityConstraint7552); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_5, grammarAccess.getCardinalityConstraintAccess().getRightCurlyBracketKeyword_5());
                   
             }
-            otherlv_6=(Token)match(input,41,FOLLOW_41_in_ruleCardinalityConstraint7545); if (state.failed) return current;
+            otherlv_6=(Token)match(input,41,FOLLOW_41_in_ruleCardinalityConstraint7564); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_6, grammarAccess.getCardinalityConstraintAccess().getVerticalLineKeyword_6());
                   
             }
-            otherlv_7=(Token)match(input,35,FOLLOW_35_in_ruleCardinalityConstraint7557); if (state.failed) return current;
+            otherlv_7=(Token)match(input,35,FOLLOW_35_in_ruleCardinalityConstraint7576); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_7, grammarAccess.getCardinalityConstraintAccess().getLessThanSignEqualsSignKeyword_7());
                   
             }
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3193:1: ( (lv_rhs_8_0= ruleBound ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3194:1: (lv_rhs_8_0= ruleBound )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3204:1: ( (lv_rhs_8_0= ruleBound ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3205:1: (lv_rhs_8_0= ruleBound )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3194:1: (lv_rhs_8_0= ruleBound )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3195:3: lv_rhs_8_0= ruleBound
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3205:1: (lv_rhs_8_0= ruleBound )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3206:3: lv_rhs_8_0= ruleBound
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getCardinalityConstraintAccess().getRhsBoundParserRuleCall_8_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleBound_in_ruleCardinalityConstraint7578);
+            pushFollow(FOLLOW_ruleBound_in_ruleCardinalityConstraint7597);
             lv_rhs_8_0=ruleBound();
 
             state._fsp--;
@@ -9442,7 +9462,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBound"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3219:1: entryRuleBound returns [EObject current=null] : iv_ruleBound= ruleBound EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3230:1: entryRuleBound returns [EObject current=null] : iv_ruleBound= ruleBound EOF ;
     public final EObject entryRuleBound() throws RecognitionException {
         EObject current = null;
 
@@ -9450,13 +9470,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3220:2: (iv_ruleBound= ruleBound EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3221:2: iv_ruleBound= ruleBound EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3231:2: (iv_ruleBound= ruleBound EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3232:2: iv_ruleBound= ruleBound EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getBoundRule()); 
             }
-            pushFollow(FOLLOW_ruleBound_in_entryRuleBound7614);
+            pushFollow(FOLLOW_ruleBound_in_entryRuleBound7633);
             iv_ruleBound=ruleBound();
 
             state._fsp--;
@@ -9464,7 +9484,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleBound; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBound7624); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBound7643); if (state.failed) return current;
 
             }
 
@@ -9482,7 +9502,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBound"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3228:1: ruleBound returns [EObject current=null] : ( (lv_av_0_0= ruleArithmeticTerm ) ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3239:1: ruleBound returns [EObject current=null] : ( (lv_av_0_0= ruleArithmeticTerm ) ) ;
     public final EObject ruleBound() throws RecognitionException {
         EObject current = null;
 
@@ -9492,21 +9512,21 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3231:28: ( ( (lv_av_0_0= ruleArithmeticTerm ) ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3232:1: ( (lv_av_0_0= ruleArithmeticTerm ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3242:28: ( ( (lv_av_0_0= ruleArithmeticTerm ) ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3243:1: ( (lv_av_0_0= ruleArithmeticTerm ) )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3232:1: ( (lv_av_0_0= ruleArithmeticTerm ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3233:1: (lv_av_0_0= ruleArithmeticTerm )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3243:1: ( (lv_av_0_0= ruleArithmeticTerm ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3244:1: (lv_av_0_0= ruleArithmeticTerm )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3233:1: (lv_av_0_0= ruleArithmeticTerm )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3234:3: lv_av_0_0= ruleArithmeticTerm
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3244:1: (lv_av_0_0= ruleArithmeticTerm )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3245:3: lv_av_0_0= ruleArithmeticTerm
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getBoundAccess().getAvArithmeticTermParserRuleCall_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleArithmeticTerm_in_ruleBound7669);
+            pushFollow(FOLLOW_ruleArithmeticTerm_in_ruleBound7688);
             lv_av_0_0=ruleArithmeticTerm();
 
             state._fsp--;
@@ -9550,7 +9570,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRule"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3258:1: entryRuleRule returns [EObject current=null] : iv_ruleRule= ruleRule EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3269:1: entryRuleRule returns [EObject current=null] : iv_ruleRule= ruleRule EOF ;
     public final EObject entryRuleRule() throws RecognitionException {
         EObject current = null;
 
@@ -9558,13 +9578,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3259:2: (iv_ruleRule= ruleRule EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3260:2: iv_ruleRule= ruleRule EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3270:2: (iv_ruleRule= ruleRule EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3271:2: iv_ruleRule= ruleRule EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getRuleRule()); 
             }
-            pushFollow(FOLLOW_ruleRule_in_entryRuleRule7704);
+            pushFollow(FOLLOW_ruleRule_in_entryRuleRule7723);
             iv_ruleRule=ruleRule();
 
             state._fsp--;
@@ -9572,7 +9592,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleRule; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRule7714); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRule7733); if (state.failed) return current;
 
             }
 
@@ -9590,11 +9610,11 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRule"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3267:1: ruleRule returns [EObject current=null] : ( ( (lv_head_0_0= ruleHead ) ) (otherlv_1= 'if' ( (lv_body_2_0= ruleSentence ) ) )? otherlv_3= '.' ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3278:1: ruleRule returns [EObject current=null] : ( ( (lv_head_0_0= ruleHead ) ) ( ( (lv_condition_1_0= 'if' ) ) ( (lv_body_2_0= ruleSentence ) ) )? otherlv_3= '.' ) ;
     public final EObject ruleRule() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_1=null;
+        Token lv_condition_1_0=null;
         Token otherlv_3=null;
         EObject lv_head_0_0 = null;
 
@@ -9604,24 +9624,24 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3270:28: ( ( ( (lv_head_0_0= ruleHead ) ) (otherlv_1= 'if' ( (lv_body_2_0= ruleSentence ) ) )? otherlv_3= '.' ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3271:1: ( ( (lv_head_0_0= ruleHead ) ) (otherlv_1= 'if' ( (lv_body_2_0= ruleSentence ) ) )? otherlv_3= '.' )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3281:28: ( ( ( (lv_head_0_0= ruleHead ) ) ( ( (lv_condition_1_0= 'if' ) ) ( (lv_body_2_0= ruleSentence ) ) )? otherlv_3= '.' ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3282:1: ( ( (lv_head_0_0= ruleHead ) ) ( ( (lv_condition_1_0= 'if' ) ) ( (lv_body_2_0= ruleSentence ) ) )? otherlv_3= '.' )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3271:1: ( ( (lv_head_0_0= ruleHead ) ) (otherlv_1= 'if' ( (lv_body_2_0= ruleSentence ) ) )? otherlv_3= '.' )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3271:2: ( (lv_head_0_0= ruleHead ) ) (otherlv_1= 'if' ( (lv_body_2_0= ruleSentence ) ) )? otherlv_3= '.'
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3282:1: ( ( (lv_head_0_0= ruleHead ) ) ( ( (lv_condition_1_0= 'if' ) ) ( (lv_body_2_0= ruleSentence ) ) )? otherlv_3= '.' )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3282:2: ( (lv_head_0_0= ruleHead ) ) ( ( (lv_condition_1_0= 'if' ) ) ( (lv_body_2_0= ruleSentence ) ) )? otherlv_3= '.'
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3271:2: ( (lv_head_0_0= ruleHead ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3272:1: (lv_head_0_0= ruleHead )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3282:2: ( (lv_head_0_0= ruleHead ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3283:1: (lv_head_0_0= ruleHead )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3272:1: (lv_head_0_0= ruleHead )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3273:3: lv_head_0_0= ruleHead
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3283:1: (lv_head_0_0= ruleHead )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3284:3: lv_head_0_0= ruleHead
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getRuleAccess().getHeadHeadParserRuleCall_0_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleHead_in_ruleRule7760);
+            pushFollow(FOLLOW_ruleHead_in_ruleRule7779);
             lv_head_0_0=ruleHead();
 
             state._fsp--;
@@ -9645,7 +9665,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3289:2: (otherlv_1= 'if' ( (lv_body_2_0= ruleSentence ) ) )?
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3300:2: ( ( (lv_condition_1_0= 'if' ) ) ( (lv_body_2_0= ruleSentence ) ) )?
             int alt46=2;
             int LA46_0 = input.LA(1);
 
@@ -9654,26 +9674,46 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             }
             switch (alt46) {
                 case 1 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3289:4: otherlv_1= 'if' ( (lv_body_2_0= ruleSentence ) )
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3300:3: ( (lv_condition_1_0= 'if' ) ) ( (lv_body_2_0= ruleSentence ) )
                     {
-                    otherlv_1=(Token)match(input,42,FOLLOW_42_in_ruleRule7773); if (state.failed) return current;
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3300:3: ( (lv_condition_1_0= 'if' ) )
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3301:1: (lv_condition_1_0= 'if' )
+                    {
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3301:1: (lv_condition_1_0= 'if' )
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3302:3: lv_condition_1_0= 'if'
+                    {
+                    lv_condition_1_0=(Token)match(input,42,FOLLOW_42_in_ruleRule7798); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                          	newLeafNode(otherlv_1, grammarAccess.getRuleAccess().getIfKeyword_1_0());
+                              newLeafNode(lv_condition_1_0, grammarAccess.getRuleAccess().getConditionIfKeyword_1_0_0());
                           
                     }
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3293:1: ( (lv_body_2_0= ruleSentence ) )
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3294:1: (lv_body_2_0= ruleSentence )
+                    if ( state.backtracking==0 ) {
+
+                      	        if (current==null) {
+                      	            current = createModelElement(grammarAccess.getRuleRule());
+                      	        }
+                             		setWithLastConsumed(current, "condition", lv_condition_1_0, "if");
+                      	    
+                    }
+
+                    }
+
+
+                    }
+
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3315:2: ( (lv_body_2_0= ruleSentence ) )
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3316:1: (lv_body_2_0= ruleSentence )
                     {
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3294:1: (lv_body_2_0= ruleSentence )
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3295:3: lv_body_2_0= ruleSentence
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3316:1: (lv_body_2_0= ruleSentence )
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3317:3: lv_body_2_0= ruleSentence
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getRuleAccess().getBodySentenceParserRuleCall_1_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleSentence_in_ruleRule7794);
+                    pushFollow(FOLLOW_ruleSentence_in_ruleRule7832);
                     lv_body_2_0=ruleSentence();
 
                     state._fsp--;
@@ -9703,7 +9743,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,25,FOLLOW_25_in_ruleRule7808); if (state.failed) return current;
+            otherlv_3=(Token)match(input,25,FOLLOW_25_in_ruleRule7846); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_3, grammarAccess.getRuleAccess().getFullStopKeyword_2());
@@ -9732,7 +9772,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleHead"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3323:1: entryRuleHead returns [EObject current=null] : iv_ruleHead= ruleHead EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3345:1: entryRuleHead returns [EObject current=null] : iv_ruleHead= ruleHead EOF ;
     public final EObject entryRuleHead() throws RecognitionException {
         EObject current = null;
 
@@ -9740,13 +9780,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3324:2: (iv_ruleHead= ruleHead EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3325:2: iv_ruleHead= ruleHead EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3346:2: (iv_ruleHead= ruleHead EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3347:2: iv_ruleHead= ruleHead EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getHeadRule()); 
             }
-            pushFollow(FOLLOW_ruleHead_in_entryRuleHead7844);
+            pushFollow(FOLLOW_ruleHead_in_entryRuleHead7882);
             iv_ruleHead=ruleHead();
 
             state._fsp--;
@@ -9754,7 +9794,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleHead; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleHead7854); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleHead7892); if (state.failed) return current;
 
             }
 
@@ -9772,7 +9812,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleHead"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3332:1: ruleHead returns [EObject current=null] : (this_pSentence_0= rulepSentence | this_MaybeLiteral_1= ruleMaybeLiteral | this_CardinalityConstraint_2= ruleCardinalityConstraint ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3354:1: ruleHead returns [EObject current=null] : (this_pSentence_0= rulepSentence | this_MaybeLiteral_1= ruleMaybeLiteral | this_CardinalityConstraint_2= ruleCardinalityConstraint ) ;
     public final EObject ruleHead() throws RecognitionException {
         EObject current = null;
 
@@ -9786,10 +9826,10 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3335:28: ( (this_pSentence_0= rulepSentence | this_MaybeLiteral_1= ruleMaybeLiteral | this_CardinalityConstraint_2= ruleCardinalityConstraint ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3336:1: (this_pSentence_0= rulepSentence | this_MaybeLiteral_1= ruleMaybeLiteral | this_CardinalityConstraint_2= ruleCardinalityConstraint )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3357:28: ( (this_pSentence_0= rulepSentence | this_MaybeLiteral_1= ruleMaybeLiteral | this_CardinalityConstraint_2= ruleCardinalityConstraint ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3358:1: (this_pSentence_0= rulepSentence | this_MaybeLiteral_1= ruleMaybeLiteral | this_CardinalityConstraint_2= ruleCardinalityConstraint )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3336:1: (this_pSentence_0= rulepSentence | this_MaybeLiteral_1= ruleMaybeLiteral | this_CardinalityConstraint_2= ruleCardinalityConstraint )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3358:1: (this_pSentence_0= rulepSentence | this_MaybeLiteral_1= ruleMaybeLiteral | this_CardinalityConstraint_2= ruleCardinalityConstraint )
             int alt47=3;
             switch ( input.LA(1) ) {
             case RULE_LID:
@@ -9857,7 +9897,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
             switch (alt47) {
                 case 1 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3337:2: this_pSentence_0= rulepSentence
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3359:2: this_pSentence_0= rulepSentence
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -9869,7 +9909,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getHeadAccess().getPSentenceParserRuleCall_0()); 
                           
                     }
-                    pushFollow(FOLLOW_rulepSentence_in_ruleHead7904);
+                    pushFollow(FOLLOW_rulepSentence_in_ruleHead7942);
                     this_pSentence_0=rulepSentence();
 
                     state._fsp--;
@@ -9884,7 +9924,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3350:2: this_MaybeLiteral_1= ruleMaybeLiteral
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3372:2: this_MaybeLiteral_1= ruleMaybeLiteral
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -9896,7 +9936,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getHeadAccess().getMaybeLiteralParserRuleCall_1()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleMaybeLiteral_in_ruleHead7934);
+                    pushFollow(FOLLOW_ruleMaybeLiteral_in_ruleHead7972);
                     this_MaybeLiteral_1=ruleMaybeLiteral();
 
                     state._fsp--;
@@ -9911,7 +9951,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3363:2: this_CardinalityConstraint_2= ruleCardinalityConstraint
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3385:2: this_CardinalityConstraint_2= ruleCardinalityConstraint
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -9923,7 +9963,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getHeadAccess().getCardinalityConstraintParserRuleCall_2()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleCardinalityConstraint_in_ruleHead7964);
+                    pushFollow(FOLLOW_ruleCardinalityConstraint_in_ruleHead8002);
                     this_CardinalityConstraint_2=ruleCardinalityConstraint();
 
                     state._fsp--;
@@ -9960,7 +10000,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStatement"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3382:1: entryRuleStatement returns [EObject current=null] : iv_ruleStatement= ruleStatement EOF ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3404:1: entryRuleStatement returns [EObject current=null] : iv_ruleStatement= ruleStatement EOF ;
     public final EObject entryRuleStatement() throws RecognitionException {
         EObject current = null;
 
@@ -9968,13 +10008,13 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3383:2: (iv_ruleStatement= ruleStatement EOF )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3384:2: iv_ruleStatement= ruleStatement EOF
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3405:2: (iv_ruleStatement= ruleStatement EOF )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3406:2: iv_ruleStatement= ruleStatement EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getStatementRule()); 
             }
-            pushFollow(FOLLOW_ruleStatement_in_entryRuleStatement7999);
+            pushFollow(FOLLOW_ruleStatement_in_entryRuleStatement8037);
             iv_ruleStatement=ruleStatement();
 
             state._fsp--;
@@ -9982,7 +10022,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleStatement; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleStatement8009); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleStatement8047); if (state.failed) return current;
 
             }
 
@@ -10000,7 +10040,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStatement"
-    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3391:1: ruleStatement returns [EObject current=null] : (this_Rule_0= ruleRule | this_TypeDeclaration_1= ruleTypeDeclaration | this_ConstantDeclaration_2= ruleConstantDeclaration ) ;
+    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3413:1: ruleStatement returns [EObject current=null] : (this_Rule_0= ruleRule | this_TypeDeclaration_1= ruleTypeDeclaration | this_ConstantDeclaration_2= ruleConstantDeclaration ) ;
     public final EObject ruleStatement() throws RecognitionException {
         EObject current = null;
 
@@ -10014,10 +10054,10 @@ public class InternalLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3394:28: ( (this_Rule_0= ruleRule | this_TypeDeclaration_1= ruleTypeDeclaration | this_ConstantDeclaration_2= ruleConstantDeclaration ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3395:1: (this_Rule_0= ruleRule | this_TypeDeclaration_1= ruleTypeDeclaration | this_ConstantDeclaration_2= ruleConstantDeclaration )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3416:28: ( (this_Rule_0= ruleRule | this_TypeDeclaration_1= ruleTypeDeclaration | this_ConstantDeclaration_2= ruleConstantDeclaration ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3417:1: (this_Rule_0= ruleRule | this_TypeDeclaration_1= ruleTypeDeclaration | this_ConstantDeclaration_2= ruleConstantDeclaration )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3395:1: (this_Rule_0= ruleRule | this_TypeDeclaration_1= ruleTypeDeclaration | this_ConstantDeclaration_2= ruleConstantDeclaration )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3417:1: (this_Rule_0= ruleRule | this_TypeDeclaration_1= ruleTypeDeclaration | this_ConstantDeclaration_2= ruleConstantDeclaration )
             int alt48=3;
             switch ( input.LA(1) ) {
             case RULE_UID:
@@ -10051,7 +10091,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
 
             switch (alt48) {
                 case 1 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3396:2: this_Rule_0= ruleRule
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3418:2: this_Rule_0= ruleRule
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -10063,7 +10103,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getStatementAccess().getRuleParserRuleCall_0()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleRule_in_ruleStatement8059);
+                    pushFollow(FOLLOW_ruleRule_in_ruleStatement8097);
                     this_Rule_0=ruleRule();
 
                     state._fsp--;
@@ -10078,7 +10118,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3409:2: this_TypeDeclaration_1= ruleTypeDeclaration
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3431:2: this_TypeDeclaration_1= ruleTypeDeclaration
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -10090,7 +10130,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getStatementAccess().getTypeDeclarationParserRuleCall_1()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleTypeDeclaration_in_ruleStatement8089);
+                    pushFollow(FOLLOW_ruleTypeDeclaration_in_ruleStatement8127);
                     this_TypeDeclaration_1=ruleTypeDeclaration();
 
                     state._fsp--;
@@ -10105,7 +10145,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3422:2: this_ConstantDeclaration_2= ruleConstantDeclaration
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3444:2: this_ConstantDeclaration_2= ruleConstantDeclaration
                     {
                     if ( state.backtracking==0 ) {
                        
@@ -10117,7 +10157,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getStatementAccess().getConstantDeclarationParserRuleCall_2()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleConstantDeclaration_in_ruleStatement8119);
+                    pushFollow(FOLLOW_ruleConstantDeclaration_in_ruleStatement8157);
                     this_ConstantDeclaration_2=ruleConstantDeclaration();
 
                     state._fsp--;
@@ -10203,15 +10243,15 @@ public class InternalLParser extends AbstractInternalAntlrParser {
         EObject this_SetLiteral_0 = null;
 
 
-        // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2065:2: (this_SetLiteral_0= ruleSetLiteral )
-        // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2065:2: this_SetLiteral_0= ruleSetLiteral
+        // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2076:2: (this_SetLiteral_0= ruleSetLiteral )
+        // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2076:2: this_SetLiteral_0= ruleSetLiteral
         {
         if ( state.backtracking==0 ) {
            
           	  /* */ 
           	
         }
-        pushFollow(FOLLOW_ruleSetLiteral_in_synpred36_InternalL4769);
+        pushFollow(FOLLOW_ruleSetLiteral_in_synpred36_InternalL4788);
         this_SetLiteral_0=ruleSetLiteral();
 
         state._fsp--;
@@ -10226,15 +10266,15 @@ public class InternalLParser extends AbstractInternalAntlrParser {
         EObject this_Set_0 = null;
 
 
-        // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2119:2: (this_Set_0= ruleSet )
-        // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2119:2: this_Set_0= ruleSet
+        // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2130:2: (this_Set_0= ruleSet )
+        // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2130:2: this_Set_0= ruleSet
         {
         if ( state.backtracking==0 ) {
            
           	  /* */ 
           	
         }
-        pushFollow(FOLLOW_ruleSet_in_synpred37_InternalL4920);
+        pushFollow(FOLLOW_ruleSet_in_synpred37_InternalL4939);
         this_Set_0=ruleSet();
 
         state._fsp--;
@@ -10249,15 +10289,15 @@ public class InternalLParser extends AbstractInternalAntlrParser {
         EObject this_Range_1 = null;
 
 
-        // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2132:2: (this_Range_1= ruleRange )
-        // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2132:2: this_Range_1= ruleRange
+        // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2143:2: (this_Range_1= ruleRange )
+        // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2143:2: this_Range_1= ruleRange
         {
         if ( state.backtracking==0 ) {
            
           	  /* */ 
           	
         }
-        pushFollow(FOLLOW_ruleRange_in_synpred38_InternalL4950);
+        pushFollow(FOLLOW_ruleRange_in_synpred38_InternalL4969);
         this_Range_1=ruleRange();
 
         state._fsp--;
@@ -10272,15 +10312,15 @@ public class InternalLParser extends AbstractInternalAntlrParser {
         EObject this_SetConstruct_2 = null;
 
 
-        // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2145:2: (this_SetConstruct_2= ruleSetConstruct )
-        // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2145:2: this_SetConstruct_2= ruleSetConstruct
+        // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2156:2: (this_SetConstruct_2= ruleSetConstruct )
+        // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2156:2: this_SetConstruct_2= ruleSetConstruct
         {
         if ( state.backtracking==0 ) {
            
           	  /* */ 
           	
         }
-        pushFollow(FOLLOW_ruleSetConstruct_in_synpred39_InternalL4980);
+        pushFollow(FOLLOW_ruleSetConstruct_in_synpred39_InternalL4999);
         this_SetConstruct_2=ruleSetConstruct();
 
         state._fsp--;
@@ -10295,15 +10335,15 @@ public class InternalLParser extends AbstractInternalAntlrParser {
         EObject this_PredicateAtom_0 = null;
 
 
-        // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2183:2: (this_PredicateAtom_0= rulePredicateAtom )
-        // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2183:2: this_PredicateAtom_0= rulePredicateAtom
+        // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2194:2: (this_PredicateAtom_0= rulePredicateAtom )
+        // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2194:2: this_PredicateAtom_0= rulePredicateAtom
         {
         if ( state.backtracking==0 ) {
            
           	  /* */ 
           	
         }
-        pushFollow(FOLLOW_rulePredicateAtom_in_synpred40_InternalL5091);
+        pushFollow(FOLLOW_rulePredicateAtom_in_synpred40_InternalL5110);
         this_PredicateAtom_0=rulePredicateAtom();
 
         state._fsp--;
@@ -10318,15 +10358,15 @@ public class InternalLParser extends AbstractInternalAntlrParser {
         EObject this_SentenceLiteral_0 = null;
 
 
-        // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2712:2: (this_SentenceLiteral_0= ruleSentenceLiteral )
-        // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2712:2: this_SentenceLiteral_0= ruleSentenceLiteral
+        // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2723:2: (this_SentenceLiteral_0= ruleSentenceLiteral )
+        // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:2723:2: this_SentenceLiteral_0= ruleSentenceLiteral
         {
         if ( state.backtracking==0 ) {
            
           	  /* */ 
           	
         }
-        pushFollow(FOLLOW_ruleSentenceLiteral_in_synpred52_InternalL6355);
+        pushFollow(FOLLOW_ruleSentenceLiteral_in_synpred52_InternalL6374);
         this_SentenceLiteral_0=ruleSentenceLiteral();
 
         state._fsp--;
@@ -10341,15 +10381,15 @@ public class InternalLParser extends AbstractInternalAntlrParser {
         EObject this_pSentence_0 = null;
 
 
-        // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3337:2: (this_pSentence_0= rulepSentence )
-        // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3337:2: this_pSentence_0= rulepSentence
+        // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3359:2: (this_pSentence_0= rulepSentence )
+        // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3359:2: this_pSentence_0= rulepSentence
         {
         if ( state.backtracking==0 ) {
            
           	  /* */ 
           	
         }
-        pushFollow(FOLLOW_rulepSentence_in_synpred58_InternalL7904);
+        pushFollow(FOLLOW_rulepSentence_in_synpred58_InternalL7942);
         this_pSentence_0=rulepSentence();
 
         state._fsp--;
@@ -10545,7 +10585,7 @@ public class InternalLParser extends AbstractInternalAntlrParser {
             this.transition = DFA32_transition;
         }
         public String getDescription() {
-            return "2118:1: (this_Set_0= ruleSet | this_Range_1= ruleRange | this_SetConstruct_2= ruleSetConstruct | this_LID_3= RULE_LID )";
+            return "2129:1: (this_Set_0= ruleSet | this_Range_1= ruleRange | this_SetConstruct_2= ruleSetConstruct | this_LID_3= RULE_LID )";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -10706,205 +10746,205 @@ public class InternalLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleTerms_in_entryRuleTerms3125 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleTerms3135 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleTerm_in_ruleTerms3181 = new BitSet(new long[]{0x0000000000100002L});
-    public static final BitSet FOLLOW_20_in_ruleTerms3194 = new BitSet(new long[]{0x0000018000644070L});
-    public static final BitSet FOLLOW_ruleTerm_in_ruleTerms3215 = new BitSet(new long[]{0x0000000000100002L});
-    public static final BitSet FOLLOW_ruleConstantDeclaration_in_entryRuleConstantDeclaration3253 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleConstantDeclaration3263 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_ruleConstantDeclaration3300 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_LID_in_ruleConstantDeclaration3317 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_24_in_ruleConstantDeclaration3334 = new BitSet(new long[]{0x0000000000044060L});
-    public static final BitSet FOLLOW_ruleGroundArithmeticTerm_in_ruleConstantDeclaration3355 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_25_in_ruleConstantDeclaration3367 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTypeDeclaration_in_entryRuleTypeDeclaration3403 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTypeDeclaration3413 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_ruleTypeDeclaration3450 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_LID_in_ruleTypeDeclaration3467 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_24_in_ruleTypeDeclaration3484 = new BitSet(new long[]{0x0000018008044070L});
-    public static final BitSet FOLLOW_ruleSetExpression_in_ruleTypeDeclaration3505 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_25_in_ruleTypeDeclaration3517 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLimit_in_entryRuleLimit3553 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLimit3563 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGroundArithmeticTerm_in_ruleLimit3608 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSet_in_entryRuleSet3643 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSet3653 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_ruleSet3696 = new BitSet(new long[]{0x0000000010044060L});
-    public static final BitSet FOLLOW_ruleGroundTerms_in_ruleSet3730 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleSet3743 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRange_in_entryRuleRange3779 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRange3789 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_ruleRange3826 = new BitSet(new long[]{0x0000000000044060L});
-    public static final BitSet FOLLOW_ruleLimit_in_ruleRange3847 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_25_in_ruleRange3859 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_25_in_ruleRange3871 = new BitSet(new long[]{0x0000000000044060L});
-    public static final BitSet FOLLOW_ruleLimit_in_ruleRange3892 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleRange3904 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSetExpression_in_entryRuleSetExpression3940 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSetExpression3950 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSetAddition_in_ruleSetExpression3999 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSetConstruct_in_entryRuleSetConstruct4033 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSetConstruct4043 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBasicTerm_in_ruleSetConstruct4089 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_ruleSetConstruct4101 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleTVars_in_ruleSetConstruct4122 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTVars_in_entryRuleTVars4158 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTVars4168 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTVar_in_ruleTVars4214 = new BitSet(new long[]{0x0000000000100002L});
-    public static final BitSet FOLLOW_20_in_ruleTVars4227 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleTVar_in_ruleTVars4248 = new BitSet(new long[]{0x0000000000100002L});
-    public static final BitSet FOLLOW_ruleTVar_in_entryRuleTVar4286 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTVar4296 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariable_in_ruleTVar4346 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_ruleTVar4357 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_LID_in_ruleTVar4368 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSetAddition_in_entryRuleSetAddition4403 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSetAddition4413 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSetMultiplication_in_ruleSetAddition4463 = new BitSet(new long[]{0x0000000000002002L});
-    public static final BitSet FOLLOW_13_in_ruleSetAddition4487 = new BitSet(new long[]{0x0000018008044070L});
-    public static final BitSet FOLLOW_ruleSetMultiplication_in_ruleSetAddition4508 = new BitSet(new long[]{0x0000000000002002L});
-    public static final BitSet FOLLOW_ruleSetMultiplication_in_entryRuleSetMultiplication4546 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSetMultiplication4556 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSetPrimary_in_ruleSetMultiplication4606 = new BitSet(new long[]{0x0000000080008002L});
-    public static final BitSet FOLLOW_15_in_ruleSetMultiplication4631 = new BitSet(new long[]{0x0000018008044070L});
-    public static final BitSet FOLLOW_31_in_ruleSetMultiplication4649 = new BitSet(new long[]{0x0000018008044070L});
-    public static final BitSet FOLLOW_ruleSetPrimary_in_ruleSetMultiplication4671 = new BitSet(new long[]{0x0000000080008002L});
-    public static final BitSet FOLLOW_ruleSetPrimary_in_entryRuleSetPrimary4709 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSetPrimary4719 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSetLiteral_in_ruleSetPrimary4769 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_ruleSetPrimary4787 = new BitSet(new long[]{0x0000018008044070L});
-    public static final BitSet FOLLOW_ruleSetAddition_in_ruleSetPrimary4812 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleSetPrimary4823 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSetLiteral_in_entryRuleSetLiteral4860 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSetLiteral4870 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSet_in_ruleSetLiteral4920 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRange_in_ruleSetLiteral4950 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSetConstruct_in_ruleSetLiteral4980 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_LID_in_ruleSetLiteral4996 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAtom_in_entryRuleAtom5031 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAtom5041 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePredicateAtom_in_ruleAtom5091 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBuiltInAtom_in_ruleAtom5121 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePredicateAtom_in_entryRulePredicateAtom5156 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePredicateAtom5166 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_LID_in_rulePredicateAtom5208 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_18_in_rulePredicateAtom5226 = new BitSet(new long[]{0x0000018000644070L});
-    public static final BitSet FOLLOW_ruleTerms_in_rulePredicateAtom5247 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_rulePredicateAtom5259 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBasicPredicateAtom_in_entryRuleBasicPredicateAtom5297 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBasicPredicateAtom5307 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_LID_in_ruleBasicPredicateAtom5349 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_18_in_ruleBasicPredicateAtom5367 = new BitSet(new long[]{0x0000018000044070L});
-    public static final BitSet FOLLOW_ruleBasicTerms_in_ruleBasicPredicateAtom5388 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleBasicPredicateAtom5400 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBuiltInAtom_in_entryRuleBuiltInAtom5438 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBuiltInAtom5448 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBasicTerm_in_ruleBuiltInAtom5494 = new BitSet(new long[]{0x0000001F01000000L});
-    public static final BitSet FOLLOW_ruleAtomOp_in_ruleBuiltInAtom5515 = new BitSet(new long[]{0x0000018000044070L});
-    public static final BitSet FOLLOW_ruleBasicTerm_in_ruleBuiltInAtom5536 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAtomOp_in_entryRuleAtomOp5573 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAtomOp5584 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_ruleAtomOp5622 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_ruleAtomOp5641 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_ruleAtomOp5660 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_ruleAtomOp5679 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_ruleAtomOp5698 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_ruleAtomOp5717 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSentence_in_entryRuleSentence5757 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSentence5767 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOrSentence_in_ruleSentence5816 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOrSentence_in_entryRuleOrSentence5850 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleOrSentence5860 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAndSentence_in_ruleOrSentence5910 = new BitSet(new long[]{0x0000002000000002L});
-    public static final BitSet FOLLOW_37_in_ruleOrSentence5934 = new BitSet(new long[]{0x0000018000044070L});
-    public static final BitSet FOLLOW_ruleAndSentence_in_ruleOrSentence5955 = new BitSet(new long[]{0x0000002000000002L});
-    public static final BitSet FOLLOW_ruleAndSentence_in_entryRuleAndSentence5993 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAndSentence6003 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNotSentence_in_ruleAndSentence6053 = new BitSet(new long[]{0x0000004000100002L});
-    public static final BitSet FOLLOW_38_in_ruleAndSentence6078 = new BitSet(new long[]{0x0000018000044070L});
-    public static final BitSet FOLLOW_20_in_ruleAndSentence6096 = new BitSet(new long[]{0x0000018000044070L});
-    public static final BitSet FOLLOW_ruleNotSentence_in_ruleAndSentence6118 = new BitSet(new long[]{0x0000004000100002L});
-    public static final BitSet FOLLOW_ruleNotSentence_in_entryRuleNotSentence6156 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNotSentence6166 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrimarySentence_in_ruleNotSentence6216 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_ruleNotSentence6234 = new BitSet(new long[]{0x0000018000044070L});
-    public static final BitSet FOLLOW_rulePrimarySentence_in_ruleNotSentence6259 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrimarySentence_in_entryRulePrimarySentence6295 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePrimarySentence6305 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSentenceLiteral_in_rulePrimarySentence6355 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rulePrimarySentence6373 = new BitSet(new long[]{0x0000018000044070L});
-    public static final BitSet FOLLOW_ruleOrSentence_in_rulePrimarySentence6398 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_rulePrimarySentence6409 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSentenceLiteral_in_entryRuleSentenceLiteral6446 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSentenceLiteral6456 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAtom_in_ruleSentenceLiteral6505 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulepSentence_in_entryRulepSentence6539 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulepSentence6549 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulepOrSentence_in_rulepSentence6598 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulepOrSentence_in_entryRulepOrSentence6632 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulepOrSentence6642 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulepAndSentence_in_rulepOrSentence6692 = new BitSet(new long[]{0x0000002000000002L});
-    public static final BitSet FOLLOW_37_in_rulepOrSentence6716 = new BitSet(new long[]{0x0000008000040020L});
-    public static final BitSet FOLLOW_rulepAndSentence_in_rulepOrSentence6737 = new BitSet(new long[]{0x0000002000000002L});
-    public static final BitSet FOLLOW_rulepAndSentence_in_entryRulepAndSentence6775 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulepAndSentence6785 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulepNotSentence_in_rulepAndSentence6835 = new BitSet(new long[]{0x0000004000000002L});
-    public static final BitSet FOLLOW_38_in_rulepAndSentence6859 = new BitSet(new long[]{0x0000008000040020L});
-    public static final BitSet FOLLOW_rulepNotSentence_in_rulepAndSentence6880 = new BitSet(new long[]{0x0000004000000002L});
-    public static final BitSet FOLLOW_rulepNotSentence_in_entryRulepNotSentence6918 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulepNotSentence6928 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulepPrimarySentence_in_rulepNotSentence6978 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_rulepNotSentence6996 = new BitSet(new long[]{0x0000000000040020L});
-    public static final BitSet FOLLOW_rulepPrimarySentence_in_rulepNotSentence7021 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulepPrimarySentence_in_entryRulepPrimarySentence7057 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulepPrimarySentence7067 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulepSentenceLiteral_in_rulepPrimarySentence7117 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rulepPrimarySentence7135 = new BitSet(new long[]{0x0000018000044070L});
-    public static final BitSet FOLLOW_ruleOrSentence_in_rulepPrimarySentence7160 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_rulepPrimarySentence7171 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulepSentenceLiteral_in_entryRulepSentenceLiteral7208 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulepSentenceLiteral7218 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePredicateAtom_in_rulepSentenceLiteral7267 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMaybeLiteral_in_entryRuleMaybeLiteral7301 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMaybeLiteral7311 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_ruleMaybeLiteral7348 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleBasicPredicateAtom_in_ruleMaybeLiteral7373 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCardinalityConstraint_in_entryRuleCardinalityConstraint7408 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCardinalityConstraint7418 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBound_in_ruleCardinalityConstraint7464 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_35_in_ruleCardinalityConstraint7476 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_41_in_ruleCardinalityConstraint7488 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_ruleCardinalityConstraint7500 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleBasicPredicateAtom_in_ruleCardinalityConstraint7521 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleCardinalityConstraint7533 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_41_in_ruleCardinalityConstraint7545 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_35_in_ruleCardinalityConstraint7557 = new BitSet(new long[]{0x0000018000044070L});
-    public static final BitSet FOLLOW_ruleBound_in_ruleCardinalityConstraint7578 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBound_in_entryRuleBound7614 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBound7624 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleArithmeticTerm_in_ruleBound7669 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRule_in_entryRuleRule7704 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRule7714 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHead_in_ruleRule7760 = new BitSet(new long[]{0x0000040002000000L});
-    public static final BitSet FOLLOW_42_in_ruleRule7773 = new BitSet(new long[]{0x0000018000044070L});
-    public static final BitSet FOLLOW_ruleSentence_in_ruleRule7794 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_25_in_ruleRule7808 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHead_in_entryRuleHead7844 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleHead7854 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulepSentence_in_ruleHead7904 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMaybeLiteral_in_ruleHead7934 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCardinalityConstraint_in_ruleHead7964 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStatement_in_entryRuleStatement7999 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleStatement8009 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRule_in_ruleStatement8059 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTypeDeclaration_in_ruleStatement8089 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConstantDeclaration_in_ruleStatement8119 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_ruleTerms3200 = new BitSet(new long[]{0x0000018000644070L});
+    public static final BitSet FOLLOW_ruleTerm_in_ruleTerms3234 = new BitSet(new long[]{0x0000000000100002L});
+    public static final BitSet FOLLOW_ruleConstantDeclaration_in_entryRuleConstantDeclaration3272 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleConstantDeclaration3282 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_ruleConstantDeclaration3319 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_LID_in_ruleConstantDeclaration3336 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_24_in_ruleConstantDeclaration3353 = new BitSet(new long[]{0x0000000000044060L});
+    public static final BitSet FOLLOW_ruleGroundArithmeticTerm_in_ruleConstantDeclaration3374 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_ruleConstantDeclaration3386 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTypeDeclaration_in_entryRuleTypeDeclaration3422 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTypeDeclaration3432 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_ruleTypeDeclaration3469 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_LID_in_ruleTypeDeclaration3486 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_24_in_ruleTypeDeclaration3503 = new BitSet(new long[]{0x0000018008044070L});
+    public static final BitSet FOLLOW_ruleSetExpression_in_ruleTypeDeclaration3524 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_ruleTypeDeclaration3536 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLimit_in_entryRuleLimit3572 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLimit3582 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGroundArithmeticTerm_in_ruleLimit3627 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSet_in_entryRuleSet3662 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSet3672 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_ruleSet3715 = new BitSet(new long[]{0x0000000010044060L});
+    public static final BitSet FOLLOW_ruleGroundTerms_in_ruleSet3749 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleSet3762 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRange_in_entryRuleRange3798 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRange3808 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_ruleRange3845 = new BitSet(new long[]{0x0000000000044060L});
+    public static final BitSet FOLLOW_ruleLimit_in_ruleRange3866 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_ruleRange3878 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_ruleRange3890 = new BitSet(new long[]{0x0000000000044060L});
+    public static final BitSet FOLLOW_ruleLimit_in_ruleRange3911 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleRange3923 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSetExpression_in_entryRuleSetExpression3959 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSetExpression3969 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSetAddition_in_ruleSetExpression4018 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSetConstruct_in_entryRuleSetConstruct4052 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSetConstruct4062 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBasicTerm_in_ruleSetConstruct4108 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_ruleSetConstruct4120 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleTVars_in_ruleSetConstruct4141 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTVars_in_entryRuleTVars4177 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTVars4187 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTVar_in_ruleTVars4233 = new BitSet(new long[]{0x0000000000100002L});
+    public static final BitSet FOLLOW_20_in_ruleTVars4246 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleTVar_in_ruleTVars4267 = new BitSet(new long[]{0x0000000000100002L});
+    public static final BitSet FOLLOW_ruleTVar_in_entryRuleTVar4305 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTVar4315 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariable_in_ruleTVar4365 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_ruleTVar4376 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_LID_in_ruleTVar4387 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSetAddition_in_entryRuleSetAddition4422 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSetAddition4432 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSetMultiplication_in_ruleSetAddition4482 = new BitSet(new long[]{0x0000000000002002L});
+    public static final BitSet FOLLOW_13_in_ruleSetAddition4506 = new BitSet(new long[]{0x0000018008044070L});
+    public static final BitSet FOLLOW_ruleSetMultiplication_in_ruleSetAddition4527 = new BitSet(new long[]{0x0000000000002002L});
+    public static final BitSet FOLLOW_ruleSetMultiplication_in_entryRuleSetMultiplication4565 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSetMultiplication4575 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSetPrimary_in_ruleSetMultiplication4625 = new BitSet(new long[]{0x0000000080008002L});
+    public static final BitSet FOLLOW_15_in_ruleSetMultiplication4650 = new BitSet(new long[]{0x0000018008044070L});
+    public static final BitSet FOLLOW_31_in_ruleSetMultiplication4668 = new BitSet(new long[]{0x0000018008044070L});
+    public static final BitSet FOLLOW_ruleSetPrimary_in_ruleSetMultiplication4690 = new BitSet(new long[]{0x0000000080008002L});
+    public static final BitSet FOLLOW_ruleSetPrimary_in_entryRuleSetPrimary4728 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSetPrimary4738 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSetLiteral_in_ruleSetPrimary4788 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_ruleSetPrimary4806 = new BitSet(new long[]{0x0000018008044070L});
+    public static final BitSet FOLLOW_ruleSetAddition_in_ruleSetPrimary4831 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleSetPrimary4842 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSetLiteral_in_entryRuleSetLiteral4879 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSetLiteral4889 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSet_in_ruleSetLiteral4939 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRange_in_ruleSetLiteral4969 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSetConstruct_in_ruleSetLiteral4999 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_LID_in_ruleSetLiteral5015 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAtom_in_entryRuleAtom5050 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAtom5060 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePredicateAtom_in_ruleAtom5110 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBuiltInAtom_in_ruleAtom5140 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePredicateAtom_in_entryRulePredicateAtom5175 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePredicateAtom5185 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_LID_in_rulePredicateAtom5227 = new BitSet(new long[]{0x0000000000040002L});
+    public static final BitSet FOLLOW_18_in_rulePredicateAtom5245 = new BitSet(new long[]{0x0000018000644070L});
+    public static final BitSet FOLLOW_ruleTerms_in_rulePredicateAtom5266 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_rulePredicateAtom5278 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBasicPredicateAtom_in_entryRuleBasicPredicateAtom5316 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBasicPredicateAtom5326 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_LID_in_ruleBasicPredicateAtom5368 = new BitSet(new long[]{0x0000000000040002L});
+    public static final BitSet FOLLOW_18_in_ruleBasicPredicateAtom5386 = new BitSet(new long[]{0x0000018000044070L});
+    public static final BitSet FOLLOW_ruleBasicTerms_in_ruleBasicPredicateAtom5407 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleBasicPredicateAtom5419 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBuiltInAtom_in_entryRuleBuiltInAtom5457 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBuiltInAtom5467 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBasicTerm_in_ruleBuiltInAtom5513 = new BitSet(new long[]{0x0000001F01000000L});
+    public static final BitSet FOLLOW_ruleAtomOp_in_ruleBuiltInAtom5534 = new BitSet(new long[]{0x0000018000044070L});
+    public static final BitSet FOLLOW_ruleBasicTerm_in_ruleBuiltInAtom5555 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAtomOp_in_entryRuleAtomOp5592 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAtomOp5603 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_ruleAtomOp5641 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_ruleAtomOp5660 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_ruleAtomOp5679 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_ruleAtomOp5698 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_ruleAtomOp5717 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_ruleAtomOp5736 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSentence_in_entryRuleSentence5776 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSentence5786 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOrSentence_in_ruleSentence5835 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOrSentence_in_entryRuleOrSentence5869 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleOrSentence5879 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAndSentence_in_ruleOrSentence5929 = new BitSet(new long[]{0x0000002000000002L});
+    public static final BitSet FOLLOW_37_in_ruleOrSentence5953 = new BitSet(new long[]{0x0000018000044070L});
+    public static final BitSet FOLLOW_ruleAndSentence_in_ruleOrSentence5974 = new BitSet(new long[]{0x0000002000000002L});
+    public static final BitSet FOLLOW_ruleAndSentence_in_entryRuleAndSentence6012 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAndSentence6022 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNotSentence_in_ruleAndSentence6072 = new BitSet(new long[]{0x0000004000100002L});
+    public static final BitSet FOLLOW_38_in_ruleAndSentence6097 = new BitSet(new long[]{0x0000018000044070L});
+    public static final BitSet FOLLOW_20_in_ruleAndSentence6115 = new BitSet(new long[]{0x0000018000044070L});
+    public static final BitSet FOLLOW_ruleNotSentence_in_ruleAndSentence6137 = new BitSet(new long[]{0x0000004000100002L});
+    public static final BitSet FOLLOW_ruleNotSentence_in_entryRuleNotSentence6175 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNotSentence6185 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePrimarySentence_in_ruleNotSentence6235 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_ruleNotSentence6253 = new BitSet(new long[]{0x0000018000044070L});
+    public static final BitSet FOLLOW_rulePrimarySentence_in_ruleNotSentence6278 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePrimarySentence_in_entryRulePrimarySentence6314 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePrimarySentence6324 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSentenceLiteral_in_rulePrimarySentence6374 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rulePrimarySentence6392 = new BitSet(new long[]{0x0000018000044070L});
+    public static final BitSet FOLLOW_ruleOrSentence_in_rulePrimarySentence6417 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_rulePrimarySentence6428 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSentenceLiteral_in_entryRuleSentenceLiteral6465 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSentenceLiteral6475 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAtom_in_ruleSentenceLiteral6524 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulepSentence_in_entryRulepSentence6558 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulepSentence6568 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulepOrSentence_in_rulepSentence6617 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulepOrSentence_in_entryRulepOrSentence6651 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulepOrSentence6661 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulepAndSentence_in_rulepOrSentence6711 = new BitSet(new long[]{0x0000002000000002L});
+    public static final BitSet FOLLOW_37_in_rulepOrSentence6735 = new BitSet(new long[]{0x0000008000040020L});
+    public static final BitSet FOLLOW_rulepAndSentence_in_rulepOrSentence6756 = new BitSet(new long[]{0x0000002000000002L});
+    public static final BitSet FOLLOW_rulepAndSentence_in_entryRulepAndSentence6794 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulepAndSentence6804 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulepNotSentence_in_rulepAndSentence6854 = new BitSet(new long[]{0x0000004000000002L});
+    public static final BitSet FOLLOW_38_in_rulepAndSentence6878 = new BitSet(new long[]{0x0000008000040020L});
+    public static final BitSet FOLLOW_rulepNotSentence_in_rulepAndSentence6899 = new BitSet(new long[]{0x0000004000000002L});
+    public static final BitSet FOLLOW_rulepNotSentence_in_entryRulepNotSentence6937 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulepNotSentence6947 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulepPrimarySentence_in_rulepNotSentence6997 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_rulepNotSentence7015 = new BitSet(new long[]{0x0000000000040020L});
+    public static final BitSet FOLLOW_rulepPrimarySentence_in_rulepNotSentence7040 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulepPrimarySentence_in_entryRulepPrimarySentence7076 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulepPrimarySentence7086 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulepSentenceLiteral_in_rulepPrimarySentence7136 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rulepPrimarySentence7154 = new BitSet(new long[]{0x0000018000044070L});
+    public static final BitSet FOLLOW_ruleOrSentence_in_rulepPrimarySentence7179 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_rulepPrimarySentence7190 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulepSentenceLiteral_in_entryRulepSentenceLiteral7227 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulepSentenceLiteral7237 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePredicateAtom_in_rulepSentenceLiteral7286 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMaybeLiteral_in_entryRuleMaybeLiteral7320 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMaybeLiteral7330 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_ruleMaybeLiteral7367 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleBasicPredicateAtom_in_ruleMaybeLiteral7392 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCardinalityConstraint_in_entryRuleCardinalityConstraint7427 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCardinalityConstraint7437 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBound_in_ruleCardinalityConstraint7483 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_ruleCardinalityConstraint7495 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_41_in_ruleCardinalityConstraint7507 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_27_in_ruleCardinalityConstraint7519 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleBasicPredicateAtom_in_ruleCardinalityConstraint7540 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleCardinalityConstraint7552 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_41_in_ruleCardinalityConstraint7564 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_ruleCardinalityConstraint7576 = new BitSet(new long[]{0x0000018000044070L});
+    public static final BitSet FOLLOW_ruleBound_in_ruleCardinalityConstraint7597 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBound_in_entryRuleBound7633 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBound7643 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleArithmeticTerm_in_ruleBound7688 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRule_in_entryRuleRule7723 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRule7733 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHead_in_ruleRule7779 = new BitSet(new long[]{0x0000040002000000L});
+    public static final BitSet FOLLOW_42_in_ruleRule7798 = new BitSet(new long[]{0x0000018000044070L});
+    public static final BitSet FOLLOW_ruleSentence_in_ruleRule7832 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_ruleRule7846 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHead_in_entryRuleHead7882 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleHead7892 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulepSentence_in_ruleHead7942 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMaybeLiteral_in_ruleHead7972 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCardinalityConstraint_in_ruleHead8002 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStatement_in_entryRuleStatement8037 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleStatement8047 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRule_in_ruleStatement8097 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTypeDeclaration_in_ruleStatement8127 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConstantDeclaration_in_ruleStatement8157 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleTypedVariable_in_synpred2_InternalL232 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleArithmeticTerm_in_synpred3_InternalL262 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSetLiteral_in_synpred36_InternalL4769 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSet_in_synpred37_InternalL4920 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRange_in_synpred38_InternalL4950 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSetConstruct_in_synpred39_InternalL4980 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePredicateAtom_in_synpred40_InternalL5091 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSentenceLiteral_in_synpred52_InternalL6355 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulepSentence_in_synpred58_InternalL7904 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSetLiteral_in_synpred36_InternalL4788 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSet_in_synpred37_InternalL4939 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRange_in_synpred38_InternalL4969 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSetConstruct_in_synpred39_InternalL4999 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePredicateAtom_in_synpred40_InternalL5110 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSentenceLiteral_in_synpred52_InternalL6374 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulepSentence_in_synpred58_InternalL7942 = new BitSet(new long[]{0x0000000000000002L});
 
 }

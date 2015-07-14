@@ -145,6 +145,7 @@ public class LParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGroundTermsAccess().getCarAssignment_0(), "rule__GroundTerms__CarAssignment_0");
 					put(grammarAccess.getGroundTermsAccess().getCdrAssignment_1_1(), "rule__GroundTerms__CdrAssignment_1_1");
 					put(grammarAccess.getTermsAccess().getCarAssignment_0(), "rule__Terms__CarAssignment_0");
+					put(grammarAccess.getTermsAccess().getTermsAssignment_1_0(), "rule__Terms__TermsAssignment_1_0");
 					put(grammarAccess.getTermsAccess().getCdrAssignment_1_1(), "rule__Terms__CdrAssignment_1_1");
 					put(grammarAccess.getConstantDeclarationAccess().getIdAssignment_1(), "rule__ConstantDeclaration__IdAssignment_1");
 					put(grammarAccess.getConstantDeclarationAccess().getCvAssignment_3(), "rule__ConstantDeclaration__CvAssignment_3");
@@ -177,6 +178,7 @@ public class LParser extends AbstractContentAssistParser {
 					put(grammarAccess.getCardinalityConstraintAccess().getRhsAssignment_8(), "rule__CardinalityConstraint__RhsAssignment_8");
 					put(grammarAccess.getBoundAccess().getAvAssignment(), "rule__Bound__AvAssignment");
 					put(grammarAccess.getRuleAccess().getHeadAssignment_0(), "rule__Rule__HeadAssignment_0");
+					put(grammarAccess.getRuleAccess().getConditionAssignment_1_0(), "rule__Rule__ConditionAssignment_1_0");
 					put(grammarAccess.getRuleAccess().getBodyAssignment_1_1(), "rule__Rule__BodyAssignment_1_1");
 				}
 			};

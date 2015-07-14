@@ -1381,11 +1381,22 @@ ruleTerms returns [EObject current=null]
 	    }
 
 )
-)(	otherlv_1=',' 
-    {
-    	newLeafNode(otherlv_1, grammarAccess.getTermsAccess().getCommaKeyword_1_0());
-    }
+)((
 (
+		lv_terms_1_0=	',' 
+    {
+        newLeafNode(lv_terms_1_0, grammarAccess.getTermsAccess().getTermsCommaKeyword_1_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getTermsRule());
+	        }
+       		addWithLastConsumed($current, "terms", lv_terms_1_0, ",");
+	    }
+
+)
+)(
 (
 		{ 
 	        newCompositeNode(grammarAccess.getTermsAccess().getCdrTermParserRuleCall_1_1_0()); 
@@ -3286,11 +3297,22 @@ ruleRule returns [EObject current=null]
 	    }
 
 )
-)(	otherlv_1='if' 
-    {
-    	newLeafNode(otherlv_1, grammarAccess.getRuleAccess().getIfKeyword_1_0());
-    }
+)((
 (
+		lv_condition_1_0=	'if' 
+    {
+        newLeafNode(lv_condition_1_0, grammarAccess.getRuleAccess().getConditionIfKeyword_1_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getRuleRule());
+	        }
+       		setWithLastConsumed($current, "condition", lv_condition_1_0, "if");
+	    }
+
+)
+)(
 (
 		{ 
 	        newCompositeNode(grammarAccess.getRuleAccess().getBodySentenceParserRuleCall_1_1_0()); 

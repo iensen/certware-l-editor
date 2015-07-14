@@ -26,7 +26,7 @@ terminal UID : ('A'..'Z')('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 //	INT // provided by Terminals and returning ECore Integer type 
 // ;
 
-// Identifier:  MRB replaced with direct subsitution of terminal ID
+// Identifier:  MRB replaced with direct substitution of terminal ID
 //	ID // provided by Terminals and returning ECore String type
 //;
 

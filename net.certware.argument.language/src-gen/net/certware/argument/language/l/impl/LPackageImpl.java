@@ -866,9 +866,19 @@ public class LPackageImpl extends EPackageImpl implements LPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getTerms_Terms()
+  {
+    return (EAttribute)termsEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getTerms_Cdr()
   {
-    return (EReference)termsEClass.getEStructuralFeatures().get(1);
+    return (EReference)termsEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1346,9 +1356,19 @@ public class LPackageImpl extends EPackageImpl implements LPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getRule_Condition()
+  {
+    return (EAttribute)ruleEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getRule_Body()
   {
-    return (EReference)ruleEClass.getEStructuralFeatures().get(1);
+    return (EReference)ruleEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1674,6 +1694,7 @@ public class LPackageImpl extends EPackageImpl implements LPackage
 
     termsEClass = createEClass(TERMS);
     createEReference(termsEClass, TERMS__CAR);
+    createEAttribute(termsEClass, TERMS__TERMS);
     createEReference(termsEClass, TERMS__CDR);
 
     constantDeclarationEClass = createEClass(CONSTANT_DECLARATION);
@@ -1744,6 +1765,7 @@ public class LPackageImpl extends EPackageImpl implements LPackage
 
     ruleEClass = createEClass(RULE);
     createEReference(ruleEClass, RULE__HEAD);
+    createEAttribute(ruleEClass, RULE__CONDITION);
     createEReference(ruleEClass, RULE__BODY);
 
     headEClass = createEClass(HEAD);
@@ -1907,6 +1929,7 @@ public class LPackageImpl extends EPackageImpl implements LPackage
 
     initEClass(termsEClass, Terms.class, "Terms", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getTerms_Car(), this.getTerm(), null, "car", null, 0, 1, Terms.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTerms_Terms(), ecorePackage.getEString(), "terms", null, 0, -1, Terms.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTerms_Cdr(), this.getTerm(), null, "cdr", null, 0, -1, Terms.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(constantDeclarationEClass, ConstantDeclaration.class, "ConstantDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1977,6 +2000,7 @@ public class LPackageImpl extends EPackageImpl implements LPackage
 
     initEClass(ruleEClass, Rule.class, "Rule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getRule_Head(), this.getHead(), null, "head", null, 0, 1, Rule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRule_Condition(), ecorePackage.getEString(), "condition", null, 0, 1, Rule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getRule_Body(), this.getSentence(), null, "body", null, 0, 1, Rule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(headEClass, Head.class, "Head", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

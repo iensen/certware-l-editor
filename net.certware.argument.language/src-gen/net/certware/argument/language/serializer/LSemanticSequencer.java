@@ -699,7 +699,7 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (head=Head body=Sentence?)
+	 *     (head=Head (condition='if' body=Sentence)?)
 	 */
 	protected void sequence_Rule(EObject context, Rule semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -783,7 +783,7 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (car=Term cdr+=Term*)
+	 *     (car=Term (terms+=',' cdr+=Term)*)
 	 */
 	protected void sequence_Terms(EObject context, Terms semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

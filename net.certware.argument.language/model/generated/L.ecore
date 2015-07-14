@@ -58,6 +58,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Term"/>
   <eClassifiers xsi:type="ecore:EClass" name="Terms" eSuperTypes="#//FunctionalTerm">
     <eStructuralFeatures xsi:type="ecore:EReference" name="car" eType="#//Term" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="terms" unique="false" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cdr" upperBound="-1" eType="#//Term"
         containment="true"/>
   </eClassifiers>
@@ -132,6 +134,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Rule" eSuperTypes="#//Statement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="head" eType="#//Head" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="condition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="body" eType="#//Sentence"
         containment="true"/>
   </eClassifiers>

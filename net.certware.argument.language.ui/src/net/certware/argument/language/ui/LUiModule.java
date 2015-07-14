@@ -3,7 +3,14 @@
  */
 package net.certware.argument.language.ui;
 
+import net.certware.argument.language.ui.outline.FilterRuleContribution;
+import net.certware.argument.language.ui.outline.FilterTypeDeclarationContribution;
+
 import org.eclipse.ui.plugin.AbstractUIPlugin;
+import org.eclipse.xtext.ui.editor.outline.actions.IOutlineContribution;
+
+import com.google.inject.Binder;
+import com.google.inject.name.Names;
 
 /**
  * Use this class to register components to be used within the IDE.
@@ -11,5 +18,19 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 public class LUiModule extends net.certware.argument.language.ui.AbstractLUiModule {
 	public LUiModule(AbstractUIPlugin plugin) {
 		super(plugin);
+	}
+	
+	/*
+	 * Bind the outline filters.
+	 * @author MRB
+	 */
+	public void configureFilterOperationsContribution(Binder binder) {
+		binder.bind(IOutlineContribution.class).annotatedWith(
+				Names.named("FilterRuleContribution"))
+				.to(FilterRuleContribution.class);
+		
+		binder.bind(IOutlineContribution.class).annotatedWith(
+				Names.named("FilterTypeDeclarationContribution"))
+				.to(FilterTypeDeclarationContribution.class);
 	}
 }
