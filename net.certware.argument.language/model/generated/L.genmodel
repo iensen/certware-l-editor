@@ -53,6 +53,7 @@
     <genClasses ecoreClass="L.ecore#//Term"/>
     <genClasses ecoreClass="L.ecore#//Terms">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//Terms/car"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//Terms/terms"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//Terms/cdr"/>
     </genClasses>
     <genClasses ecoreClass="L.ecore#//ConstantDeclaration">
@@ -114,6 +115,7 @@
     </genClasses>
     <genClasses ecoreClass="L.ecore#//Rule">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//Rule/head"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//Rule/condition"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//Rule/body"/>
     </genClasses>
     <genClasses ecoreClass="L.ecore#//Head"/>

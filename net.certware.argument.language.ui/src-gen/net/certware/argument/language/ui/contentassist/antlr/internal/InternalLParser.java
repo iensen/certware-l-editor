@@ -5126,11 +5126,6 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
                     }
                     }
                     break;
-                case 29:
-                    {
-                    alt2=3;
-                    }
-                    break;
                 case EOF:
                 case 13:
                 case 14:
@@ -5151,6 +5146,11 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
                 case 38:
                     {
                     alt2=2;
+                    }
+                    break;
+                case 29:
+                    {
+                    alt2=3;
                     }
                     break;
                 default:
@@ -12575,24 +12575,34 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Terms__Group_1__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4091:1: rule__Terms__Group_1__0__Impl : ( ',' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4091:1: rule__Terms__Group_1__0__Impl : ( ( rule__Terms__TermsAssignment_1_0 ) ) ;
     public final void rule__Terms__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4095:1: ( ( ',' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4096:1: ( ',' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4095:1: ( ( ( rule__Terms__TermsAssignment_1_0 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4096:1: ( ( rule__Terms__TermsAssignment_1_0 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4096:1: ( ',' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4097:1: ','
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4096:1: ( ( rule__Terms__TermsAssignment_1_0 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4097:1: ( rule__Terms__TermsAssignment_1_0 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getTermsAccess().getCommaKeyword_1_0()); 
+               before(grammarAccess.getTermsAccess().getTermsAssignment_1_0()); 
             }
-            match(input,28,FOLLOW_28_in_rule__Terms__Group_1__0__Impl8493); if (state.failed) return ;
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4098:1: ( rule__Terms__TermsAssignment_1_0 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4098:2: rule__Terms__TermsAssignment_1_0
+            {
+            pushFollow(FOLLOW_rule__Terms__TermsAssignment_1_0_in_rule__Terms__Group_1__0__Impl8492);
+            rule__Terms__TermsAssignment_1_0();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getTermsAccess().getCommaKeyword_1_0()); 
+               after(grammarAccess.getTermsAccess().getTermsAssignment_1_0()); 
             }
 
             }
@@ -12616,16 +12626,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Terms__Group_1__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4110:1: rule__Terms__Group_1__1 : rule__Terms__Group_1__1__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4108:1: rule__Terms__Group_1__1 : rule__Terms__Group_1__1__Impl ;
     public final void rule__Terms__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4114:1: ( rule__Terms__Group_1__1__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4115:2: rule__Terms__Group_1__1__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4112:1: ( rule__Terms__Group_1__1__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4113:2: rule__Terms__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Terms__Group_1__1__Impl_in_rule__Terms__Group_1__18524);
+            pushFollow(FOLLOW_rule__Terms__Group_1__1__Impl_in_rule__Terms__Group_1__18522);
             rule__Terms__Group_1__1__Impl();
 
             state._fsp--;
@@ -12649,25 +12659,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Terms__Group_1__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4121:1: rule__Terms__Group_1__1__Impl : ( ( rule__Terms__CdrAssignment_1_1 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4119:1: rule__Terms__Group_1__1__Impl : ( ( rule__Terms__CdrAssignment_1_1 ) ) ;
     public final void rule__Terms__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4125:1: ( ( ( rule__Terms__CdrAssignment_1_1 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4126:1: ( ( rule__Terms__CdrAssignment_1_1 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4123:1: ( ( ( rule__Terms__CdrAssignment_1_1 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4124:1: ( ( rule__Terms__CdrAssignment_1_1 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4126:1: ( ( rule__Terms__CdrAssignment_1_1 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4127:1: ( rule__Terms__CdrAssignment_1_1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4124:1: ( ( rule__Terms__CdrAssignment_1_1 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4125:1: ( rule__Terms__CdrAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTermsAccess().getCdrAssignment_1_1()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4128:1: ( rule__Terms__CdrAssignment_1_1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4128:2: rule__Terms__CdrAssignment_1_1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4126:1: ( rule__Terms__CdrAssignment_1_1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4126:2: rule__Terms__CdrAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__Terms__CdrAssignment_1_1_in_rule__Terms__Group_1__1__Impl8551);
+            pushFollow(FOLLOW_rule__Terms__CdrAssignment_1_1_in_rule__Terms__Group_1__1__Impl8549);
             rule__Terms__CdrAssignment_1_1();
 
             state._fsp--;
@@ -12700,21 +12710,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstantDeclaration__Group__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4142:1: rule__ConstantDeclaration__Group__0 : rule__ConstantDeclaration__Group__0__Impl rule__ConstantDeclaration__Group__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4140:1: rule__ConstantDeclaration__Group__0 : rule__ConstantDeclaration__Group__0__Impl rule__ConstantDeclaration__Group__1 ;
     public final void rule__ConstantDeclaration__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4146:1: ( rule__ConstantDeclaration__Group__0__Impl rule__ConstantDeclaration__Group__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4147:2: rule__ConstantDeclaration__Group__0__Impl rule__ConstantDeclaration__Group__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4144:1: ( rule__ConstantDeclaration__Group__0__Impl rule__ConstantDeclaration__Group__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4145:2: rule__ConstantDeclaration__Group__0__Impl rule__ConstantDeclaration__Group__1
             {
-            pushFollow(FOLLOW_rule__ConstantDeclaration__Group__0__Impl_in_rule__ConstantDeclaration__Group__08585);
+            pushFollow(FOLLOW_rule__ConstantDeclaration__Group__0__Impl_in_rule__ConstantDeclaration__Group__08583);
             rule__ConstantDeclaration__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ConstantDeclaration__Group__1_in_rule__ConstantDeclaration__Group__08588);
+            pushFollow(FOLLOW_rule__ConstantDeclaration__Group__1_in_rule__ConstantDeclaration__Group__08586);
             rule__ConstantDeclaration__Group__1();
 
             state._fsp--;
@@ -12738,22 +12748,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstantDeclaration__Group__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4154:1: rule__ConstantDeclaration__Group__0__Impl : ( 'const' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4152:1: rule__ConstantDeclaration__Group__0__Impl : ( 'const' ) ;
     public final void rule__ConstantDeclaration__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4158:1: ( ( 'const' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4159:1: ( 'const' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4156:1: ( ( 'const' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4157:1: ( 'const' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4159:1: ( 'const' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4160:1: 'const'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4157:1: ( 'const' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4158:1: 'const'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConstantDeclarationAccess().getConstKeyword_0()); 
             }
-            match(input,31,FOLLOW_31_in_rule__ConstantDeclaration__Group__0__Impl8616); if (state.failed) return ;
+            match(input,31,FOLLOW_31_in_rule__ConstantDeclaration__Group__0__Impl8614); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getConstantDeclarationAccess().getConstKeyword_0()); 
             }
@@ -12779,21 +12789,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstantDeclaration__Group__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4173:1: rule__ConstantDeclaration__Group__1 : rule__ConstantDeclaration__Group__1__Impl rule__ConstantDeclaration__Group__2 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4171:1: rule__ConstantDeclaration__Group__1 : rule__ConstantDeclaration__Group__1__Impl rule__ConstantDeclaration__Group__2 ;
     public final void rule__ConstantDeclaration__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4177:1: ( rule__ConstantDeclaration__Group__1__Impl rule__ConstantDeclaration__Group__2 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4178:2: rule__ConstantDeclaration__Group__1__Impl rule__ConstantDeclaration__Group__2
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4175:1: ( rule__ConstantDeclaration__Group__1__Impl rule__ConstantDeclaration__Group__2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4176:2: rule__ConstantDeclaration__Group__1__Impl rule__ConstantDeclaration__Group__2
             {
-            pushFollow(FOLLOW_rule__ConstantDeclaration__Group__1__Impl_in_rule__ConstantDeclaration__Group__18647);
+            pushFollow(FOLLOW_rule__ConstantDeclaration__Group__1__Impl_in_rule__ConstantDeclaration__Group__18645);
             rule__ConstantDeclaration__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ConstantDeclaration__Group__2_in_rule__ConstantDeclaration__Group__18650);
+            pushFollow(FOLLOW_rule__ConstantDeclaration__Group__2_in_rule__ConstantDeclaration__Group__18648);
             rule__ConstantDeclaration__Group__2();
 
             state._fsp--;
@@ -12817,25 +12827,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstantDeclaration__Group__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4185:1: rule__ConstantDeclaration__Group__1__Impl : ( ( rule__ConstantDeclaration__IdAssignment_1 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4183:1: rule__ConstantDeclaration__Group__1__Impl : ( ( rule__ConstantDeclaration__IdAssignment_1 ) ) ;
     public final void rule__ConstantDeclaration__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4189:1: ( ( ( rule__ConstantDeclaration__IdAssignment_1 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4190:1: ( ( rule__ConstantDeclaration__IdAssignment_1 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4187:1: ( ( ( rule__ConstantDeclaration__IdAssignment_1 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4188:1: ( ( rule__ConstantDeclaration__IdAssignment_1 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4190:1: ( ( rule__ConstantDeclaration__IdAssignment_1 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4191:1: ( rule__ConstantDeclaration__IdAssignment_1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4188:1: ( ( rule__ConstantDeclaration__IdAssignment_1 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4189:1: ( rule__ConstantDeclaration__IdAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConstantDeclarationAccess().getIdAssignment_1()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4192:1: ( rule__ConstantDeclaration__IdAssignment_1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4192:2: rule__ConstantDeclaration__IdAssignment_1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4190:1: ( rule__ConstantDeclaration__IdAssignment_1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4190:2: rule__ConstantDeclaration__IdAssignment_1
             {
-            pushFollow(FOLLOW_rule__ConstantDeclaration__IdAssignment_1_in_rule__ConstantDeclaration__Group__1__Impl8677);
+            pushFollow(FOLLOW_rule__ConstantDeclaration__IdAssignment_1_in_rule__ConstantDeclaration__Group__1__Impl8675);
             rule__ConstantDeclaration__IdAssignment_1();
 
             state._fsp--;
@@ -12868,21 +12878,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstantDeclaration__Group__2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4202:1: rule__ConstantDeclaration__Group__2 : rule__ConstantDeclaration__Group__2__Impl rule__ConstantDeclaration__Group__3 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4200:1: rule__ConstantDeclaration__Group__2 : rule__ConstantDeclaration__Group__2__Impl rule__ConstantDeclaration__Group__3 ;
     public final void rule__ConstantDeclaration__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4206:1: ( rule__ConstantDeclaration__Group__2__Impl rule__ConstantDeclaration__Group__3 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4207:2: rule__ConstantDeclaration__Group__2__Impl rule__ConstantDeclaration__Group__3
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4204:1: ( rule__ConstantDeclaration__Group__2__Impl rule__ConstantDeclaration__Group__3 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4205:2: rule__ConstantDeclaration__Group__2__Impl rule__ConstantDeclaration__Group__3
             {
-            pushFollow(FOLLOW_rule__ConstantDeclaration__Group__2__Impl_in_rule__ConstantDeclaration__Group__28707);
+            pushFollow(FOLLOW_rule__ConstantDeclaration__Group__2__Impl_in_rule__ConstantDeclaration__Group__28705);
             rule__ConstantDeclaration__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ConstantDeclaration__Group__3_in_rule__ConstantDeclaration__Group__28710);
+            pushFollow(FOLLOW_rule__ConstantDeclaration__Group__3_in_rule__ConstantDeclaration__Group__28708);
             rule__ConstantDeclaration__Group__3();
 
             state._fsp--;
@@ -12906,22 +12916,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstantDeclaration__Group__2__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4214:1: rule__ConstantDeclaration__Group__2__Impl : ( '=' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4212:1: rule__ConstantDeclaration__Group__2__Impl : ( '=' ) ;
     public final void rule__ConstantDeclaration__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4218:1: ( ( '=' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4219:1: ( '=' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4216:1: ( ( '=' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4217:1: ( '=' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4219:1: ( '=' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4220:1: '='
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4217:1: ( '=' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4218:1: '='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConstantDeclarationAccess().getEqualsSignKeyword_2()); 
             }
-            match(input,25,FOLLOW_25_in_rule__ConstantDeclaration__Group__2__Impl8738); if (state.failed) return ;
+            match(input,25,FOLLOW_25_in_rule__ConstantDeclaration__Group__2__Impl8736); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getConstantDeclarationAccess().getEqualsSignKeyword_2()); 
             }
@@ -12947,21 +12957,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstantDeclaration__Group__3"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4233:1: rule__ConstantDeclaration__Group__3 : rule__ConstantDeclaration__Group__3__Impl rule__ConstantDeclaration__Group__4 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4231:1: rule__ConstantDeclaration__Group__3 : rule__ConstantDeclaration__Group__3__Impl rule__ConstantDeclaration__Group__4 ;
     public final void rule__ConstantDeclaration__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4237:1: ( rule__ConstantDeclaration__Group__3__Impl rule__ConstantDeclaration__Group__4 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4238:2: rule__ConstantDeclaration__Group__3__Impl rule__ConstantDeclaration__Group__4
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4235:1: ( rule__ConstantDeclaration__Group__3__Impl rule__ConstantDeclaration__Group__4 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4236:2: rule__ConstantDeclaration__Group__3__Impl rule__ConstantDeclaration__Group__4
             {
-            pushFollow(FOLLOW_rule__ConstantDeclaration__Group__3__Impl_in_rule__ConstantDeclaration__Group__38769);
+            pushFollow(FOLLOW_rule__ConstantDeclaration__Group__3__Impl_in_rule__ConstantDeclaration__Group__38767);
             rule__ConstantDeclaration__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ConstantDeclaration__Group__4_in_rule__ConstantDeclaration__Group__38772);
+            pushFollow(FOLLOW_rule__ConstantDeclaration__Group__4_in_rule__ConstantDeclaration__Group__38770);
             rule__ConstantDeclaration__Group__4();
 
             state._fsp--;
@@ -12985,25 +12995,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstantDeclaration__Group__3__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4245:1: rule__ConstantDeclaration__Group__3__Impl : ( ( rule__ConstantDeclaration__CvAssignment_3 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4243:1: rule__ConstantDeclaration__Group__3__Impl : ( ( rule__ConstantDeclaration__CvAssignment_3 ) ) ;
     public final void rule__ConstantDeclaration__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4249:1: ( ( ( rule__ConstantDeclaration__CvAssignment_3 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4250:1: ( ( rule__ConstantDeclaration__CvAssignment_3 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4247:1: ( ( ( rule__ConstantDeclaration__CvAssignment_3 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4248:1: ( ( rule__ConstantDeclaration__CvAssignment_3 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4250:1: ( ( rule__ConstantDeclaration__CvAssignment_3 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4251:1: ( rule__ConstantDeclaration__CvAssignment_3 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4248:1: ( ( rule__ConstantDeclaration__CvAssignment_3 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4249:1: ( rule__ConstantDeclaration__CvAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConstantDeclarationAccess().getCvAssignment_3()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4252:1: ( rule__ConstantDeclaration__CvAssignment_3 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4252:2: rule__ConstantDeclaration__CvAssignment_3
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4250:1: ( rule__ConstantDeclaration__CvAssignment_3 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4250:2: rule__ConstantDeclaration__CvAssignment_3
             {
-            pushFollow(FOLLOW_rule__ConstantDeclaration__CvAssignment_3_in_rule__ConstantDeclaration__Group__3__Impl8799);
+            pushFollow(FOLLOW_rule__ConstantDeclaration__CvAssignment_3_in_rule__ConstantDeclaration__Group__3__Impl8797);
             rule__ConstantDeclaration__CvAssignment_3();
 
             state._fsp--;
@@ -13036,16 +13046,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstantDeclaration__Group__4"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4262:1: rule__ConstantDeclaration__Group__4 : rule__ConstantDeclaration__Group__4__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4260:1: rule__ConstantDeclaration__Group__4 : rule__ConstantDeclaration__Group__4__Impl ;
     public final void rule__ConstantDeclaration__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4266:1: ( rule__ConstantDeclaration__Group__4__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4267:2: rule__ConstantDeclaration__Group__4__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4264:1: ( rule__ConstantDeclaration__Group__4__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4265:2: rule__ConstantDeclaration__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__ConstantDeclaration__Group__4__Impl_in_rule__ConstantDeclaration__Group__48829);
+            pushFollow(FOLLOW_rule__ConstantDeclaration__Group__4__Impl_in_rule__ConstantDeclaration__Group__48827);
             rule__ConstantDeclaration__Group__4__Impl();
 
             state._fsp--;
@@ -13069,22 +13079,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstantDeclaration__Group__4__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4273:1: rule__ConstantDeclaration__Group__4__Impl : ( '.' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4271:1: rule__ConstantDeclaration__Group__4__Impl : ( '.' ) ;
     public final void rule__ConstantDeclaration__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4277:1: ( ( '.' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4278:1: ( '.' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4275:1: ( ( '.' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4276:1: ( '.' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4278:1: ( '.' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4279:1: '.'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4276:1: ( '.' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4277:1: '.'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConstantDeclarationAccess().getFullStopKeyword_4()); 
             }
-            match(input,32,FOLLOW_32_in_rule__ConstantDeclaration__Group__4__Impl8857); if (state.failed) return ;
+            match(input,32,FOLLOW_32_in_rule__ConstantDeclaration__Group__4__Impl8855); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getConstantDeclarationAccess().getFullStopKeyword_4()); 
             }
@@ -13110,21 +13120,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TypeDeclaration__Group__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4302:1: rule__TypeDeclaration__Group__0 : rule__TypeDeclaration__Group__0__Impl rule__TypeDeclaration__Group__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4300:1: rule__TypeDeclaration__Group__0 : rule__TypeDeclaration__Group__0__Impl rule__TypeDeclaration__Group__1 ;
     public final void rule__TypeDeclaration__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4306:1: ( rule__TypeDeclaration__Group__0__Impl rule__TypeDeclaration__Group__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4307:2: rule__TypeDeclaration__Group__0__Impl rule__TypeDeclaration__Group__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4304:1: ( rule__TypeDeclaration__Group__0__Impl rule__TypeDeclaration__Group__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4305:2: rule__TypeDeclaration__Group__0__Impl rule__TypeDeclaration__Group__1
             {
-            pushFollow(FOLLOW_rule__TypeDeclaration__Group__0__Impl_in_rule__TypeDeclaration__Group__08898);
+            pushFollow(FOLLOW_rule__TypeDeclaration__Group__0__Impl_in_rule__TypeDeclaration__Group__08896);
             rule__TypeDeclaration__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__TypeDeclaration__Group__1_in_rule__TypeDeclaration__Group__08901);
+            pushFollow(FOLLOW_rule__TypeDeclaration__Group__1_in_rule__TypeDeclaration__Group__08899);
             rule__TypeDeclaration__Group__1();
 
             state._fsp--;
@@ -13148,22 +13158,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TypeDeclaration__Group__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4314:1: rule__TypeDeclaration__Group__0__Impl : ( 'type' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4312:1: rule__TypeDeclaration__Group__0__Impl : ( 'type' ) ;
     public final void rule__TypeDeclaration__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4318:1: ( ( 'type' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4319:1: ( 'type' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4316:1: ( ( 'type' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4317:1: ( 'type' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4319:1: ( 'type' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4320:1: 'type'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4317:1: ( 'type' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4318:1: 'type'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTypeDeclarationAccess().getTypeKeyword_0()); 
             }
-            match(input,33,FOLLOW_33_in_rule__TypeDeclaration__Group__0__Impl8929); if (state.failed) return ;
+            match(input,33,FOLLOW_33_in_rule__TypeDeclaration__Group__0__Impl8927); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getTypeDeclarationAccess().getTypeKeyword_0()); 
             }
@@ -13189,21 +13199,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TypeDeclaration__Group__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4333:1: rule__TypeDeclaration__Group__1 : rule__TypeDeclaration__Group__1__Impl rule__TypeDeclaration__Group__2 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4331:1: rule__TypeDeclaration__Group__1 : rule__TypeDeclaration__Group__1__Impl rule__TypeDeclaration__Group__2 ;
     public final void rule__TypeDeclaration__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4337:1: ( rule__TypeDeclaration__Group__1__Impl rule__TypeDeclaration__Group__2 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4338:2: rule__TypeDeclaration__Group__1__Impl rule__TypeDeclaration__Group__2
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4335:1: ( rule__TypeDeclaration__Group__1__Impl rule__TypeDeclaration__Group__2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4336:2: rule__TypeDeclaration__Group__1__Impl rule__TypeDeclaration__Group__2
             {
-            pushFollow(FOLLOW_rule__TypeDeclaration__Group__1__Impl_in_rule__TypeDeclaration__Group__18960);
+            pushFollow(FOLLOW_rule__TypeDeclaration__Group__1__Impl_in_rule__TypeDeclaration__Group__18958);
             rule__TypeDeclaration__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__TypeDeclaration__Group__2_in_rule__TypeDeclaration__Group__18963);
+            pushFollow(FOLLOW_rule__TypeDeclaration__Group__2_in_rule__TypeDeclaration__Group__18961);
             rule__TypeDeclaration__Group__2();
 
             state._fsp--;
@@ -13227,25 +13237,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TypeDeclaration__Group__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4345:1: rule__TypeDeclaration__Group__1__Impl : ( ( rule__TypeDeclaration__IdAssignment_1 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4343:1: rule__TypeDeclaration__Group__1__Impl : ( ( rule__TypeDeclaration__IdAssignment_1 ) ) ;
     public final void rule__TypeDeclaration__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4349:1: ( ( ( rule__TypeDeclaration__IdAssignment_1 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4350:1: ( ( rule__TypeDeclaration__IdAssignment_1 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4347:1: ( ( ( rule__TypeDeclaration__IdAssignment_1 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4348:1: ( ( rule__TypeDeclaration__IdAssignment_1 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4350:1: ( ( rule__TypeDeclaration__IdAssignment_1 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4351:1: ( rule__TypeDeclaration__IdAssignment_1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4348:1: ( ( rule__TypeDeclaration__IdAssignment_1 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4349:1: ( rule__TypeDeclaration__IdAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTypeDeclarationAccess().getIdAssignment_1()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4352:1: ( rule__TypeDeclaration__IdAssignment_1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4352:2: rule__TypeDeclaration__IdAssignment_1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4350:1: ( rule__TypeDeclaration__IdAssignment_1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4350:2: rule__TypeDeclaration__IdAssignment_1
             {
-            pushFollow(FOLLOW_rule__TypeDeclaration__IdAssignment_1_in_rule__TypeDeclaration__Group__1__Impl8990);
+            pushFollow(FOLLOW_rule__TypeDeclaration__IdAssignment_1_in_rule__TypeDeclaration__Group__1__Impl8988);
             rule__TypeDeclaration__IdAssignment_1();
 
             state._fsp--;
@@ -13278,21 +13288,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TypeDeclaration__Group__2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4362:1: rule__TypeDeclaration__Group__2 : rule__TypeDeclaration__Group__2__Impl rule__TypeDeclaration__Group__3 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4360:1: rule__TypeDeclaration__Group__2 : rule__TypeDeclaration__Group__2__Impl rule__TypeDeclaration__Group__3 ;
     public final void rule__TypeDeclaration__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4366:1: ( rule__TypeDeclaration__Group__2__Impl rule__TypeDeclaration__Group__3 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4367:2: rule__TypeDeclaration__Group__2__Impl rule__TypeDeclaration__Group__3
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4364:1: ( rule__TypeDeclaration__Group__2__Impl rule__TypeDeclaration__Group__3 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4365:2: rule__TypeDeclaration__Group__2__Impl rule__TypeDeclaration__Group__3
             {
-            pushFollow(FOLLOW_rule__TypeDeclaration__Group__2__Impl_in_rule__TypeDeclaration__Group__29020);
+            pushFollow(FOLLOW_rule__TypeDeclaration__Group__2__Impl_in_rule__TypeDeclaration__Group__29018);
             rule__TypeDeclaration__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__TypeDeclaration__Group__3_in_rule__TypeDeclaration__Group__29023);
+            pushFollow(FOLLOW_rule__TypeDeclaration__Group__3_in_rule__TypeDeclaration__Group__29021);
             rule__TypeDeclaration__Group__3();
 
             state._fsp--;
@@ -13316,22 +13326,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TypeDeclaration__Group__2__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4374:1: rule__TypeDeclaration__Group__2__Impl : ( '=' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4372:1: rule__TypeDeclaration__Group__2__Impl : ( '=' ) ;
     public final void rule__TypeDeclaration__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4378:1: ( ( '=' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4379:1: ( '=' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4376:1: ( ( '=' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4377:1: ( '=' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4379:1: ( '=' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4380:1: '='
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4377:1: ( '=' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4378:1: '='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTypeDeclarationAccess().getEqualsSignKeyword_2()); 
             }
-            match(input,25,FOLLOW_25_in_rule__TypeDeclaration__Group__2__Impl9051); if (state.failed) return ;
+            match(input,25,FOLLOW_25_in_rule__TypeDeclaration__Group__2__Impl9049); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getTypeDeclarationAccess().getEqualsSignKeyword_2()); 
             }
@@ -13357,21 +13367,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TypeDeclaration__Group__3"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4393:1: rule__TypeDeclaration__Group__3 : rule__TypeDeclaration__Group__3__Impl rule__TypeDeclaration__Group__4 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4391:1: rule__TypeDeclaration__Group__3 : rule__TypeDeclaration__Group__3__Impl rule__TypeDeclaration__Group__4 ;
     public final void rule__TypeDeclaration__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4397:1: ( rule__TypeDeclaration__Group__3__Impl rule__TypeDeclaration__Group__4 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4398:2: rule__TypeDeclaration__Group__3__Impl rule__TypeDeclaration__Group__4
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4395:1: ( rule__TypeDeclaration__Group__3__Impl rule__TypeDeclaration__Group__4 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4396:2: rule__TypeDeclaration__Group__3__Impl rule__TypeDeclaration__Group__4
             {
-            pushFollow(FOLLOW_rule__TypeDeclaration__Group__3__Impl_in_rule__TypeDeclaration__Group__39082);
+            pushFollow(FOLLOW_rule__TypeDeclaration__Group__3__Impl_in_rule__TypeDeclaration__Group__39080);
             rule__TypeDeclaration__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__TypeDeclaration__Group__4_in_rule__TypeDeclaration__Group__39085);
+            pushFollow(FOLLOW_rule__TypeDeclaration__Group__4_in_rule__TypeDeclaration__Group__39083);
             rule__TypeDeclaration__Group__4();
 
             state._fsp--;
@@ -13395,25 +13405,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TypeDeclaration__Group__3__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4405:1: rule__TypeDeclaration__Group__3__Impl : ( ( rule__TypeDeclaration__ExpAssignment_3 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4403:1: rule__TypeDeclaration__Group__3__Impl : ( ( rule__TypeDeclaration__ExpAssignment_3 ) ) ;
     public final void rule__TypeDeclaration__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4409:1: ( ( ( rule__TypeDeclaration__ExpAssignment_3 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4410:1: ( ( rule__TypeDeclaration__ExpAssignment_3 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4407:1: ( ( ( rule__TypeDeclaration__ExpAssignment_3 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4408:1: ( ( rule__TypeDeclaration__ExpAssignment_3 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4410:1: ( ( rule__TypeDeclaration__ExpAssignment_3 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4411:1: ( rule__TypeDeclaration__ExpAssignment_3 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4408:1: ( ( rule__TypeDeclaration__ExpAssignment_3 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4409:1: ( rule__TypeDeclaration__ExpAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTypeDeclarationAccess().getExpAssignment_3()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4412:1: ( rule__TypeDeclaration__ExpAssignment_3 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4412:2: rule__TypeDeclaration__ExpAssignment_3
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4410:1: ( rule__TypeDeclaration__ExpAssignment_3 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4410:2: rule__TypeDeclaration__ExpAssignment_3
             {
-            pushFollow(FOLLOW_rule__TypeDeclaration__ExpAssignment_3_in_rule__TypeDeclaration__Group__3__Impl9112);
+            pushFollow(FOLLOW_rule__TypeDeclaration__ExpAssignment_3_in_rule__TypeDeclaration__Group__3__Impl9110);
             rule__TypeDeclaration__ExpAssignment_3();
 
             state._fsp--;
@@ -13446,16 +13456,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TypeDeclaration__Group__4"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4422:1: rule__TypeDeclaration__Group__4 : rule__TypeDeclaration__Group__4__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4420:1: rule__TypeDeclaration__Group__4 : rule__TypeDeclaration__Group__4__Impl ;
     public final void rule__TypeDeclaration__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4426:1: ( rule__TypeDeclaration__Group__4__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4427:2: rule__TypeDeclaration__Group__4__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4424:1: ( rule__TypeDeclaration__Group__4__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4425:2: rule__TypeDeclaration__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__TypeDeclaration__Group__4__Impl_in_rule__TypeDeclaration__Group__49142);
+            pushFollow(FOLLOW_rule__TypeDeclaration__Group__4__Impl_in_rule__TypeDeclaration__Group__49140);
             rule__TypeDeclaration__Group__4__Impl();
 
             state._fsp--;
@@ -13479,22 +13489,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TypeDeclaration__Group__4__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4433:1: rule__TypeDeclaration__Group__4__Impl : ( '.' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4431:1: rule__TypeDeclaration__Group__4__Impl : ( '.' ) ;
     public final void rule__TypeDeclaration__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4437:1: ( ( '.' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4438:1: ( '.' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4435:1: ( ( '.' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4436:1: ( '.' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4438:1: ( '.' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4439:1: '.'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4436:1: ( '.' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4437:1: '.'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTypeDeclarationAccess().getFullStopKeyword_4()); 
             }
-            match(input,32,FOLLOW_32_in_rule__TypeDeclaration__Group__4__Impl9170); if (state.failed) return ;
+            match(input,32,FOLLOW_32_in_rule__TypeDeclaration__Group__4__Impl9168); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getTypeDeclarationAccess().getFullStopKeyword_4()); 
             }
@@ -13520,21 +13530,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Set__Group__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4462:1: rule__Set__Group__0 : rule__Set__Group__0__Impl rule__Set__Group__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4460:1: rule__Set__Group__0 : rule__Set__Group__0__Impl rule__Set__Group__1 ;
     public final void rule__Set__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4466:1: ( rule__Set__Group__0__Impl rule__Set__Group__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4467:2: rule__Set__Group__0__Impl rule__Set__Group__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4464:1: ( rule__Set__Group__0__Impl rule__Set__Group__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4465:2: rule__Set__Group__0__Impl rule__Set__Group__1
             {
-            pushFollow(FOLLOW_rule__Set__Group__0__Impl_in_rule__Set__Group__09211);
+            pushFollow(FOLLOW_rule__Set__Group__0__Impl_in_rule__Set__Group__09209);
             rule__Set__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Set__Group__1_in_rule__Set__Group__09214);
+            pushFollow(FOLLOW_rule__Set__Group__1_in_rule__Set__Group__09212);
             rule__Set__Group__1();
 
             state._fsp--;
@@ -13558,25 +13568,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Set__Group__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4474:1: rule__Set__Group__0__Impl : ( ( rule__Set__LhsAssignment_0 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4472:1: rule__Set__Group__0__Impl : ( ( rule__Set__LhsAssignment_0 ) ) ;
     public final void rule__Set__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4478:1: ( ( ( rule__Set__LhsAssignment_0 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4479:1: ( ( rule__Set__LhsAssignment_0 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4476:1: ( ( ( rule__Set__LhsAssignment_0 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4477:1: ( ( rule__Set__LhsAssignment_0 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4479:1: ( ( rule__Set__LhsAssignment_0 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4480:1: ( rule__Set__LhsAssignment_0 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4477:1: ( ( rule__Set__LhsAssignment_0 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4478:1: ( rule__Set__LhsAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSetAccess().getLhsAssignment_0()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4481:1: ( rule__Set__LhsAssignment_0 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4481:2: rule__Set__LhsAssignment_0
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4479:1: ( rule__Set__LhsAssignment_0 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4479:2: rule__Set__LhsAssignment_0
             {
-            pushFollow(FOLLOW_rule__Set__LhsAssignment_0_in_rule__Set__Group__0__Impl9241);
+            pushFollow(FOLLOW_rule__Set__LhsAssignment_0_in_rule__Set__Group__0__Impl9239);
             rule__Set__LhsAssignment_0();
 
             state._fsp--;
@@ -13609,21 +13619,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Set__Group__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4491:1: rule__Set__Group__1 : rule__Set__Group__1__Impl rule__Set__Group__2 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4489:1: rule__Set__Group__1 : rule__Set__Group__1__Impl rule__Set__Group__2 ;
     public final void rule__Set__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4495:1: ( rule__Set__Group__1__Impl rule__Set__Group__2 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4496:2: rule__Set__Group__1__Impl rule__Set__Group__2
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4493:1: ( rule__Set__Group__1__Impl rule__Set__Group__2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4494:2: rule__Set__Group__1__Impl rule__Set__Group__2
             {
-            pushFollow(FOLLOW_rule__Set__Group__1__Impl_in_rule__Set__Group__19271);
+            pushFollow(FOLLOW_rule__Set__Group__1__Impl_in_rule__Set__Group__19269);
             rule__Set__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Set__Group__2_in_rule__Set__Group__19274);
+            pushFollow(FOLLOW_rule__Set__Group__2_in_rule__Set__Group__19272);
             rule__Set__Group__2();
 
             state._fsp--;
@@ -13647,22 +13657,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Set__Group__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4503:1: rule__Set__Group__1__Impl : ( ( rule__Set__TermsAssignment_1 )? ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4501:1: rule__Set__Group__1__Impl : ( ( rule__Set__TermsAssignment_1 )? ) ;
     public final void rule__Set__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4507:1: ( ( ( rule__Set__TermsAssignment_1 )? ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4508:1: ( ( rule__Set__TermsAssignment_1 )? )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4505:1: ( ( ( rule__Set__TermsAssignment_1 )? ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4506:1: ( ( rule__Set__TermsAssignment_1 )? )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4508:1: ( ( rule__Set__TermsAssignment_1 )? )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4509:1: ( rule__Set__TermsAssignment_1 )?
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4506:1: ( ( rule__Set__TermsAssignment_1 )? )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4507:1: ( rule__Set__TermsAssignment_1 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSetAccess().getTermsAssignment_1()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4510:1: ( rule__Set__TermsAssignment_1 )?
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4508:1: ( rule__Set__TermsAssignment_1 )?
             int alt38=2;
             int LA38_0 = input.LA(1);
 
@@ -13671,9 +13681,9 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
             }
             switch (alt38) {
                 case 1 :
-                    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4510:2: rule__Set__TermsAssignment_1
+                    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4508:2: rule__Set__TermsAssignment_1
                     {
-                    pushFollow(FOLLOW_rule__Set__TermsAssignment_1_in_rule__Set__Group__1__Impl9301);
+                    pushFollow(FOLLOW_rule__Set__TermsAssignment_1_in_rule__Set__Group__1__Impl9299);
                     rule__Set__TermsAssignment_1();
 
                     state._fsp--;
@@ -13709,16 +13719,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Set__Group__2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4520:1: rule__Set__Group__2 : rule__Set__Group__2__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4518:1: rule__Set__Group__2 : rule__Set__Group__2__Impl ;
     public final void rule__Set__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4524:1: ( rule__Set__Group__2__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4525:2: rule__Set__Group__2__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4522:1: ( rule__Set__Group__2__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4523:2: rule__Set__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Set__Group__2__Impl_in_rule__Set__Group__29332);
+            pushFollow(FOLLOW_rule__Set__Group__2__Impl_in_rule__Set__Group__29330);
             rule__Set__Group__2__Impl();
 
             state._fsp--;
@@ -13742,22 +13752,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Set__Group__2__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4531:1: rule__Set__Group__2__Impl : ( '}' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4529:1: rule__Set__Group__2__Impl : ( '}' ) ;
     public final void rule__Set__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4535:1: ( ( '}' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4536:1: ( '}' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4533:1: ( ( '}' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4534:1: ( '}' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4536:1: ( '}' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4537:1: '}'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4534:1: ( '}' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4535:1: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSetAccess().getRightCurlyBracketKeyword_2()); 
             }
-            match(input,34,FOLLOW_34_in_rule__Set__Group__2__Impl9360); if (state.failed) return ;
+            match(input,34,FOLLOW_34_in_rule__Set__Group__2__Impl9358); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSetAccess().getRightCurlyBracketKeyword_2()); 
             }
@@ -13783,21 +13793,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Range__Group__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4556:1: rule__Range__Group__0 : rule__Range__Group__0__Impl rule__Range__Group__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4554:1: rule__Range__Group__0 : rule__Range__Group__0__Impl rule__Range__Group__1 ;
     public final void rule__Range__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4560:1: ( rule__Range__Group__0__Impl rule__Range__Group__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4561:2: rule__Range__Group__0__Impl rule__Range__Group__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4558:1: ( rule__Range__Group__0__Impl rule__Range__Group__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4559:2: rule__Range__Group__0__Impl rule__Range__Group__1
             {
-            pushFollow(FOLLOW_rule__Range__Group__0__Impl_in_rule__Range__Group__09397);
+            pushFollow(FOLLOW_rule__Range__Group__0__Impl_in_rule__Range__Group__09395);
             rule__Range__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Range__Group__1_in_rule__Range__Group__09400);
+            pushFollow(FOLLOW_rule__Range__Group__1_in_rule__Range__Group__09398);
             rule__Range__Group__1();
 
             state._fsp--;
@@ -13821,22 +13831,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Range__Group__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4568:1: rule__Range__Group__0__Impl : ( '{' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4566:1: rule__Range__Group__0__Impl : ( '{' ) ;
     public final void rule__Range__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4572:1: ( ( '{' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4573:1: ( '{' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4570:1: ( ( '{' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4571:1: ( '{' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4573:1: ( '{' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4574:1: '{'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4571:1: ( '{' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4572:1: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRangeAccess().getLeftCurlyBracketKeyword_0()); 
             }
-            match(input,35,FOLLOW_35_in_rule__Range__Group__0__Impl9428); if (state.failed) return ;
+            match(input,35,FOLLOW_35_in_rule__Range__Group__0__Impl9426); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getRangeAccess().getLeftCurlyBracketKeyword_0()); 
             }
@@ -13862,21 +13872,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Range__Group__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4587:1: rule__Range__Group__1 : rule__Range__Group__1__Impl rule__Range__Group__2 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4585:1: rule__Range__Group__1 : rule__Range__Group__1__Impl rule__Range__Group__2 ;
     public final void rule__Range__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4591:1: ( rule__Range__Group__1__Impl rule__Range__Group__2 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4592:2: rule__Range__Group__1__Impl rule__Range__Group__2
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4589:1: ( rule__Range__Group__1__Impl rule__Range__Group__2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4590:2: rule__Range__Group__1__Impl rule__Range__Group__2
             {
-            pushFollow(FOLLOW_rule__Range__Group__1__Impl_in_rule__Range__Group__19459);
+            pushFollow(FOLLOW_rule__Range__Group__1__Impl_in_rule__Range__Group__19457);
             rule__Range__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Range__Group__2_in_rule__Range__Group__19462);
+            pushFollow(FOLLOW_rule__Range__Group__2_in_rule__Range__Group__19460);
             rule__Range__Group__2();
 
             state._fsp--;
@@ -13900,25 +13910,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Range__Group__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4599:1: rule__Range__Group__1__Impl : ( ( rule__Range__LhsAssignment_1 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4597:1: rule__Range__Group__1__Impl : ( ( rule__Range__LhsAssignment_1 ) ) ;
     public final void rule__Range__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4603:1: ( ( ( rule__Range__LhsAssignment_1 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4604:1: ( ( rule__Range__LhsAssignment_1 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4601:1: ( ( ( rule__Range__LhsAssignment_1 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4602:1: ( ( rule__Range__LhsAssignment_1 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4604:1: ( ( rule__Range__LhsAssignment_1 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4605:1: ( rule__Range__LhsAssignment_1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4602:1: ( ( rule__Range__LhsAssignment_1 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4603:1: ( rule__Range__LhsAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRangeAccess().getLhsAssignment_1()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4606:1: ( rule__Range__LhsAssignment_1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4606:2: rule__Range__LhsAssignment_1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4604:1: ( rule__Range__LhsAssignment_1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4604:2: rule__Range__LhsAssignment_1
             {
-            pushFollow(FOLLOW_rule__Range__LhsAssignment_1_in_rule__Range__Group__1__Impl9489);
+            pushFollow(FOLLOW_rule__Range__LhsAssignment_1_in_rule__Range__Group__1__Impl9487);
             rule__Range__LhsAssignment_1();
 
             state._fsp--;
@@ -13951,21 +13961,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Range__Group__2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4616:1: rule__Range__Group__2 : rule__Range__Group__2__Impl rule__Range__Group__3 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4614:1: rule__Range__Group__2 : rule__Range__Group__2__Impl rule__Range__Group__3 ;
     public final void rule__Range__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4620:1: ( rule__Range__Group__2__Impl rule__Range__Group__3 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4621:2: rule__Range__Group__2__Impl rule__Range__Group__3
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4618:1: ( rule__Range__Group__2__Impl rule__Range__Group__3 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4619:2: rule__Range__Group__2__Impl rule__Range__Group__3
             {
-            pushFollow(FOLLOW_rule__Range__Group__2__Impl_in_rule__Range__Group__29519);
+            pushFollow(FOLLOW_rule__Range__Group__2__Impl_in_rule__Range__Group__29517);
             rule__Range__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Range__Group__3_in_rule__Range__Group__29522);
+            pushFollow(FOLLOW_rule__Range__Group__3_in_rule__Range__Group__29520);
             rule__Range__Group__3();
 
             state._fsp--;
@@ -13989,22 +13999,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Range__Group__2__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4628:1: rule__Range__Group__2__Impl : ( '.' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4626:1: rule__Range__Group__2__Impl : ( '.' ) ;
     public final void rule__Range__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4632:1: ( ( '.' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4633:1: ( '.' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4630:1: ( ( '.' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4631:1: ( '.' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4633:1: ( '.' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4634:1: '.'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4631:1: ( '.' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4632:1: '.'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRangeAccess().getFullStopKeyword_2()); 
             }
-            match(input,32,FOLLOW_32_in_rule__Range__Group__2__Impl9550); if (state.failed) return ;
+            match(input,32,FOLLOW_32_in_rule__Range__Group__2__Impl9548); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getRangeAccess().getFullStopKeyword_2()); 
             }
@@ -14030,21 +14040,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Range__Group__3"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4647:1: rule__Range__Group__3 : rule__Range__Group__3__Impl rule__Range__Group__4 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4645:1: rule__Range__Group__3 : rule__Range__Group__3__Impl rule__Range__Group__4 ;
     public final void rule__Range__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4651:1: ( rule__Range__Group__3__Impl rule__Range__Group__4 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4652:2: rule__Range__Group__3__Impl rule__Range__Group__4
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4649:1: ( rule__Range__Group__3__Impl rule__Range__Group__4 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4650:2: rule__Range__Group__3__Impl rule__Range__Group__4
             {
-            pushFollow(FOLLOW_rule__Range__Group__3__Impl_in_rule__Range__Group__39581);
+            pushFollow(FOLLOW_rule__Range__Group__3__Impl_in_rule__Range__Group__39579);
             rule__Range__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Range__Group__4_in_rule__Range__Group__39584);
+            pushFollow(FOLLOW_rule__Range__Group__4_in_rule__Range__Group__39582);
             rule__Range__Group__4();
 
             state._fsp--;
@@ -14068,22 +14078,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Range__Group__3__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4659:1: rule__Range__Group__3__Impl : ( '.' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4657:1: rule__Range__Group__3__Impl : ( '.' ) ;
     public final void rule__Range__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4663:1: ( ( '.' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4664:1: ( '.' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4661:1: ( ( '.' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4662:1: ( '.' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4664:1: ( '.' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4665:1: '.'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4662:1: ( '.' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4663:1: '.'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRangeAccess().getFullStopKeyword_3()); 
             }
-            match(input,32,FOLLOW_32_in_rule__Range__Group__3__Impl9612); if (state.failed) return ;
+            match(input,32,FOLLOW_32_in_rule__Range__Group__3__Impl9610); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getRangeAccess().getFullStopKeyword_3()); 
             }
@@ -14109,21 +14119,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Range__Group__4"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4678:1: rule__Range__Group__4 : rule__Range__Group__4__Impl rule__Range__Group__5 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4676:1: rule__Range__Group__4 : rule__Range__Group__4__Impl rule__Range__Group__5 ;
     public final void rule__Range__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4682:1: ( rule__Range__Group__4__Impl rule__Range__Group__5 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4683:2: rule__Range__Group__4__Impl rule__Range__Group__5
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4680:1: ( rule__Range__Group__4__Impl rule__Range__Group__5 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4681:2: rule__Range__Group__4__Impl rule__Range__Group__5
             {
-            pushFollow(FOLLOW_rule__Range__Group__4__Impl_in_rule__Range__Group__49643);
+            pushFollow(FOLLOW_rule__Range__Group__4__Impl_in_rule__Range__Group__49641);
             rule__Range__Group__4__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Range__Group__5_in_rule__Range__Group__49646);
+            pushFollow(FOLLOW_rule__Range__Group__5_in_rule__Range__Group__49644);
             rule__Range__Group__5();
 
             state._fsp--;
@@ -14147,25 +14157,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Range__Group__4__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4690:1: rule__Range__Group__4__Impl : ( ( rule__Range__RhsAssignment_4 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4688:1: rule__Range__Group__4__Impl : ( ( rule__Range__RhsAssignment_4 ) ) ;
     public final void rule__Range__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4694:1: ( ( ( rule__Range__RhsAssignment_4 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4695:1: ( ( rule__Range__RhsAssignment_4 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4692:1: ( ( ( rule__Range__RhsAssignment_4 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4693:1: ( ( rule__Range__RhsAssignment_4 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4695:1: ( ( rule__Range__RhsAssignment_4 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4696:1: ( rule__Range__RhsAssignment_4 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4693:1: ( ( rule__Range__RhsAssignment_4 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4694:1: ( rule__Range__RhsAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRangeAccess().getRhsAssignment_4()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4697:1: ( rule__Range__RhsAssignment_4 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4697:2: rule__Range__RhsAssignment_4
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4695:1: ( rule__Range__RhsAssignment_4 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4695:2: rule__Range__RhsAssignment_4
             {
-            pushFollow(FOLLOW_rule__Range__RhsAssignment_4_in_rule__Range__Group__4__Impl9673);
+            pushFollow(FOLLOW_rule__Range__RhsAssignment_4_in_rule__Range__Group__4__Impl9671);
             rule__Range__RhsAssignment_4();
 
             state._fsp--;
@@ -14198,16 +14208,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Range__Group__5"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4707:1: rule__Range__Group__5 : rule__Range__Group__5__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4705:1: rule__Range__Group__5 : rule__Range__Group__5__Impl ;
     public final void rule__Range__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4711:1: ( rule__Range__Group__5__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4712:2: rule__Range__Group__5__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4709:1: ( rule__Range__Group__5__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4710:2: rule__Range__Group__5__Impl
             {
-            pushFollow(FOLLOW_rule__Range__Group__5__Impl_in_rule__Range__Group__59703);
+            pushFollow(FOLLOW_rule__Range__Group__5__Impl_in_rule__Range__Group__59701);
             rule__Range__Group__5__Impl();
 
             state._fsp--;
@@ -14231,22 +14241,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Range__Group__5__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4718:1: rule__Range__Group__5__Impl : ( '}' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4716:1: rule__Range__Group__5__Impl : ( '}' ) ;
     public final void rule__Range__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4722:1: ( ( '}' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4723:1: ( '}' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4720:1: ( ( '}' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4721:1: ( '}' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4723:1: ( '}' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4724:1: '}'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4721:1: ( '}' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4722:1: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRangeAccess().getRightCurlyBracketKeyword_5()); 
             }
-            match(input,34,FOLLOW_34_in_rule__Range__Group__5__Impl9731); if (state.failed) return ;
+            match(input,34,FOLLOW_34_in_rule__Range__Group__5__Impl9729); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getRangeAccess().getRightCurlyBracketKeyword_5()); 
             }
@@ -14272,21 +14282,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetConstruct__Group__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4749:1: rule__SetConstruct__Group__0 : rule__SetConstruct__Group__0__Impl rule__SetConstruct__Group__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4747:1: rule__SetConstruct__Group__0 : rule__SetConstruct__Group__0__Impl rule__SetConstruct__Group__1 ;
     public final void rule__SetConstruct__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4753:1: ( rule__SetConstruct__Group__0__Impl rule__SetConstruct__Group__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4754:2: rule__SetConstruct__Group__0__Impl rule__SetConstruct__Group__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4751:1: ( rule__SetConstruct__Group__0__Impl rule__SetConstruct__Group__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4752:2: rule__SetConstruct__Group__0__Impl rule__SetConstruct__Group__1
             {
-            pushFollow(FOLLOW_rule__SetConstruct__Group__0__Impl_in_rule__SetConstruct__Group__09774);
+            pushFollow(FOLLOW_rule__SetConstruct__Group__0__Impl_in_rule__SetConstruct__Group__09772);
             rule__SetConstruct__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__SetConstruct__Group__1_in_rule__SetConstruct__Group__09777);
+            pushFollow(FOLLOW_rule__SetConstruct__Group__1_in_rule__SetConstruct__Group__09775);
             rule__SetConstruct__Group__1();
 
             state._fsp--;
@@ -14310,25 +14320,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetConstruct__Group__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4761:1: rule__SetConstruct__Group__0__Impl : ( ( rule__SetConstruct__LhsAssignment_0 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4759:1: rule__SetConstruct__Group__0__Impl : ( ( rule__SetConstruct__LhsAssignment_0 ) ) ;
     public final void rule__SetConstruct__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4765:1: ( ( ( rule__SetConstruct__LhsAssignment_0 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4766:1: ( ( rule__SetConstruct__LhsAssignment_0 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4763:1: ( ( ( rule__SetConstruct__LhsAssignment_0 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4764:1: ( ( rule__SetConstruct__LhsAssignment_0 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4766:1: ( ( rule__SetConstruct__LhsAssignment_0 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4767:1: ( rule__SetConstruct__LhsAssignment_0 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4764:1: ( ( rule__SetConstruct__LhsAssignment_0 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4765:1: ( rule__SetConstruct__LhsAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSetConstructAccess().getLhsAssignment_0()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4768:1: ( rule__SetConstruct__LhsAssignment_0 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4768:2: rule__SetConstruct__LhsAssignment_0
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4766:1: ( rule__SetConstruct__LhsAssignment_0 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4766:2: rule__SetConstruct__LhsAssignment_0
             {
-            pushFollow(FOLLOW_rule__SetConstruct__LhsAssignment_0_in_rule__SetConstruct__Group__0__Impl9804);
+            pushFollow(FOLLOW_rule__SetConstruct__LhsAssignment_0_in_rule__SetConstruct__Group__0__Impl9802);
             rule__SetConstruct__LhsAssignment_0();
 
             state._fsp--;
@@ -14361,21 +14371,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetConstruct__Group__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4778:1: rule__SetConstruct__Group__1 : rule__SetConstruct__Group__1__Impl rule__SetConstruct__Group__2 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4776:1: rule__SetConstruct__Group__1 : rule__SetConstruct__Group__1__Impl rule__SetConstruct__Group__2 ;
     public final void rule__SetConstruct__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4782:1: ( rule__SetConstruct__Group__1__Impl rule__SetConstruct__Group__2 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4783:2: rule__SetConstruct__Group__1__Impl rule__SetConstruct__Group__2
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4780:1: ( rule__SetConstruct__Group__1__Impl rule__SetConstruct__Group__2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4781:2: rule__SetConstruct__Group__1__Impl rule__SetConstruct__Group__2
             {
-            pushFollow(FOLLOW_rule__SetConstruct__Group__1__Impl_in_rule__SetConstruct__Group__19834);
+            pushFollow(FOLLOW_rule__SetConstruct__Group__1__Impl_in_rule__SetConstruct__Group__19832);
             rule__SetConstruct__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__SetConstruct__Group__2_in_rule__SetConstruct__Group__19837);
+            pushFollow(FOLLOW_rule__SetConstruct__Group__2_in_rule__SetConstruct__Group__19835);
             rule__SetConstruct__Group__2();
 
             state._fsp--;
@@ -14399,22 +14409,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetConstruct__Group__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4790:1: rule__SetConstruct__Group__1__Impl : ( 'where' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4788:1: rule__SetConstruct__Group__1__Impl : ( 'where' ) ;
     public final void rule__SetConstruct__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4794:1: ( ( 'where' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4795:1: ( 'where' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4792:1: ( ( 'where' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4793:1: ( 'where' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4795:1: ( 'where' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4796:1: 'where'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4793:1: ( 'where' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4794:1: 'where'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSetConstructAccess().getWhereKeyword_1()); 
             }
-            match(input,36,FOLLOW_36_in_rule__SetConstruct__Group__1__Impl9865); if (state.failed) return ;
+            match(input,36,FOLLOW_36_in_rule__SetConstruct__Group__1__Impl9863); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSetConstructAccess().getWhereKeyword_1()); 
             }
@@ -14440,16 +14450,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetConstruct__Group__2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4809:1: rule__SetConstruct__Group__2 : rule__SetConstruct__Group__2__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4807:1: rule__SetConstruct__Group__2 : rule__SetConstruct__Group__2__Impl ;
     public final void rule__SetConstruct__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4813:1: ( rule__SetConstruct__Group__2__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4814:2: rule__SetConstruct__Group__2__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4811:1: ( rule__SetConstruct__Group__2__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4812:2: rule__SetConstruct__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__SetConstruct__Group__2__Impl_in_rule__SetConstruct__Group__29896);
+            pushFollow(FOLLOW_rule__SetConstruct__Group__2__Impl_in_rule__SetConstruct__Group__29894);
             rule__SetConstruct__Group__2__Impl();
 
             state._fsp--;
@@ -14473,25 +14483,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetConstruct__Group__2__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4820:1: rule__SetConstruct__Group__2__Impl : ( ( rule__SetConstruct__RhsAssignment_2 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4818:1: rule__SetConstruct__Group__2__Impl : ( ( rule__SetConstruct__RhsAssignment_2 ) ) ;
     public final void rule__SetConstruct__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4824:1: ( ( ( rule__SetConstruct__RhsAssignment_2 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4825:1: ( ( rule__SetConstruct__RhsAssignment_2 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4822:1: ( ( ( rule__SetConstruct__RhsAssignment_2 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4823:1: ( ( rule__SetConstruct__RhsAssignment_2 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4825:1: ( ( rule__SetConstruct__RhsAssignment_2 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4826:1: ( rule__SetConstruct__RhsAssignment_2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4823:1: ( ( rule__SetConstruct__RhsAssignment_2 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4824:1: ( rule__SetConstruct__RhsAssignment_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSetConstructAccess().getRhsAssignment_2()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4827:1: ( rule__SetConstruct__RhsAssignment_2 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4827:2: rule__SetConstruct__RhsAssignment_2
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4825:1: ( rule__SetConstruct__RhsAssignment_2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4825:2: rule__SetConstruct__RhsAssignment_2
             {
-            pushFollow(FOLLOW_rule__SetConstruct__RhsAssignment_2_in_rule__SetConstruct__Group__2__Impl9923);
+            pushFollow(FOLLOW_rule__SetConstruct__RhsAssignment_2_in_rule__SetConstruct__Group__2__Impl9921);
             rule__SetConstruct__RhsAssignment_2();
 
             state._fsp--;
@@ -14524,21 +14534,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TVars__Group__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4843:1: rule__TVars__Group__0 : rule__TVars__Group__0__Impl rule__TVars__Group__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4841:1: rule__TVars__Group__0 : rule__TVars__Group__0__Impl rule__TVars__Group__1 ;
     public final void rule__TVars__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4847:1: ( rule__TVars__Group__0__Impl rule__TVars__Group__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4848:2: rule__TVars__Group__0__Impl rule__TVars__Group__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4845:1: ( rule__TVars__Group__0__Impl rule__TVars__Group__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4846:2: rule__TVars__Group__0__Impl rule__TVars__Group__1
             {
-            pushFollow(FOLLOW_rule__TVars__Group__0__Impl_in_rule__TVars__Group__09959);
+            pushFollow(FOLLOW_rule__TVars__Group__0__Impl_in_rule__TVars__Group__09957);
             rule__TVars__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__TVars__Group__1_in_rule__TVars__Group__09962);
+            pushFollow(FOLLOW_rule__TVars__Group__1_in_rule__TVars__Group__09960);
             rule__TVars__Group__1();
 
             state._fsp--;
@@ -14562,25 +14572,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TVars__Group__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4855:1: rule__TVars__Group__0__Impl : ( ( rule__TVars__CarAssignment_0 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4853:1: rule__TVars__Group__0__Impl : ( ( rule__TVars__CarAssignment_0 ) ) ;
     public final void rule__TVars__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4859:1: ( ( ( rule__TVars__CarAssignment_0 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4860:1: ( ( rule__TVars__CarAssignment_0 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4857:1: ( ( ( rule__TVars__CarAssignment_0 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4858:1: ( ( rule__TVars__CarAssignment_0 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4860:1: ( ( rule__TVars__CarAssignment_0 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4861:1: ( rule__TVars__CarAssignment_0 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4858:1: ( ( rule__TVars__CarAssignment_0 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4859:1: ( rule__TVars__CarAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTVarsAccess().getCarAssignment_0()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4862:1: ( rule__TVars__CarAssignment_0 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4862:2: rule__TVars__CarAssignment_0
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4860:1: ( rule__TVars__CarAssignment_0 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4860:2: rule__TVars__CarAssignment_0
             {
-            pushFollow(FOLLOW_rule__TVars__CarAssignment_0_in_rule__TVars__Group__0__Impl9989);
+            pushFollow(FOLLOW_rule__TVars__CarAssignment_0_in_rule__TVars__Group__0__Impl9987);
             rule__TVars__CarAssignment_0();
 
             state._fsp--;
@@ -14613,16 +14623,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TVars__Group__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4872:1: rule__TVars__Group__1 : rule__TVars__Group__1__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4870:1: rule__TVars__Group__1 : rule__TVars__Group__1__Impl ;
     public final void rule__TVars__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4876:1: ( rule__TVars__Group__1__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4877:2: rule__TVars__Group__1__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4874:1: ( rule__TVars__Group__1__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4875:2: rule__TVars__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__TVars__Group__1__Impl_in_rule__TVars__Group__110019);
+            pushFollow(FOLLOW_rule__TVars__Group__1__Impl_in_rule__TVars__Group__110017);
             rule__TVars__Group__1__Impl();
 
             state._fsp--;
@@ -14646,22 +14656,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TVars__Group__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4883:1: rule__TVars__Group__1__Impl : ( ( rule__TVars__Group_1__0 )* ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4881:1: rule__TVars__Group__1__Impl : ( ( rule__TVars__Group_1__0 )* ) ;
     public final void rule__TVars__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4887:1: ( ( ( rule__TVars__Group_1__0 )* ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4888:1: ( ( rule__TVars__Group_1__0 )* )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4885:1: ( ( ( rule__TVars__Group_1__0 )* ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4886:1: ( ( rule__TVars__Group_1__0 )* )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4888:1: ( ( rule__TVars__Group_1__0 )* )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4889:1: ( rule__TVars__Group_1__0 )*
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4886:1: ( ( rule__TVars__Group_1__0 )* )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4887:1: ( rule__TVars__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTVarsAccess().getGroup_1()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4890:1: ( rule__TVars__Group_1__0 )*
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4888:1: ( rule__TVars__Group_1__0 )*
             loop39:
             do {
                 int alt39=2;
@@ -14674,9 +14684,9 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
                 switch (alt39) {
             	case 1 :
-            	    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4890:2: rule__TVars__Group_1__0
+            	    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4888:2: rule__TVars__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__TVars__Group_1__0_in_rule__TVars__Group__1__Impl10046);
+            	    pushFollow(FOLLOW_rule__TVars__Group_1__0_in_rule__TVars__Group__1__Impl10044);
             	    rule__TVars__Group_1__0();
 
             	    state._fsp--;
@@ -14715,21 +14725,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TVars__Group_1__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4904:1: rule__TVars__Group_1__0 : rule__TVars__Group_1__0__Impl rule__TVars__Group_1__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4902:1: rule__TVars__Group_1__0 : rule__TVars__Group_1__0__Impl rule__TVars__Group_1__1 ;
     public final void rule__TVars__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4908:1: ( rule__TVars__Group_1__0__Impl rule__TVars__Group_1__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4909:2: rule__TVars__Group_1__0__Impl rule__TVars__Group_1__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4906:1: ( rule__TVars__Group_1__0__Impl rule__TVars__Group_1__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4907:2: rule__TVars__Group_1__0__Impl rule__TVars__Group_1__1
             {
-            pushFollow(FOLLOW_rule__TVars__Group_1__0__Impl_in_rule__TVars__Group_1__010081);
+            pushFollow(FOLLOW_rule__TVars__Group_1__0__Impl_in_rule__TVars__Group_1__010079);
             rule__TVars__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__TVars__Group_1__1_in_rule__TVars__Group_1__010084);
+            pushFollow(FOLLOW_rule__TVars__Group_1__1_in_rule__TVars__Group_1__010082);
             rule__TVars__Group_1__1();
 
             state._fsp--;
@@ -14753,22 +14763,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TVars__Group_1__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4916:1: rule__TVars__Group_1__0__Impl : ( ',' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4914:1: rule__TVars__Group_1__0__Impl : ( ',' ) ;
     public final void rule__TVars__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4920:1: ( ( ',' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4921:1: ( ',' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4918:1: ( ( ',' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4919:1: ( ',' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4921:1: ( ',' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4922:1: ','
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4919:1: ( ',' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4920:1: ','
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTVarsAccess().getCommaKeyword_1_0()); 
             }
-            match(input,28,FOLLOW_28_in_rule__TVars__Group_1__0__Impl10112); if (state.failed) return ;
+            match(input,28,FOLLOW_28_in_rule__TVars__Group_1__0__Impl10110); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getTVarsAccess().getCommaKeyword_1_0()); 
             }
@@ -14794,16 +14804,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TVars__Group_1__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4935:1: rule__TVars__Group_1__1 : rule__TVars__Group_1__1__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4933:1: rule__TVars__Group_1__1 : rule__TVars__Group_1__1__Impl ;
     public final void rule__TVars__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4939:1: ( rule__TVars__Group_1__1__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4940:2: rule__TVars__Group_1__1__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4937:1: ( rule__TVars__Group_1__1__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4938:2: rule__TVars__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__TVars__Group_1__1__Impl_in_rule__TVars__Group_1__110143);
+            pushFollow(FOLLOW_rule__TVars__Group_1__1__Impl_in_rule__TVars__Group_1__110141);
             rule__TVars__Group_1__1__Impl();
 
             state._fsp--;
@@ -14827,25 +14837,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TVars__Group_1__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4946:1: rule__TVars__Group_1__1__Impl : ( ( rule__TVars__CdrAssignment_1_1 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4944:1: rule__TVars__Group_1__1__Impl : ( ( rule__TVars__CdrAssignment_1_1 ) ) ;
     public final void rule__TVars__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4950:1: ( ( ( rule__TVars__CdrAssignment_1_1 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4951:1: ( ( rule__TVars__CdrAssignment_1_1 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4948:1: ( ( ( rule__TVars__CdrAssignment_1_1 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4949:1: ( ( rule__TVars__CdrAssignment_1_1 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4951:1: ( ( rule__TVars__CdrAssignment_1_1 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4952:1: ( rule__TVars__CdrAssignment_1_1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4949:1: ( ( rule__TVars__CdrAssignment_1_1 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4950:1: ( rule__TVars__CdrAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTVarsAccess().getCdrAssignment_1_1()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4953:1: ( rule__TVars__CdrAssignment_1_1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4953:2: rule__TVars__CdrAssignment_1_1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4951:1: ( rule__TVars__CdrAssignment_1_1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4951:2: rule__TVars__CdrAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__TVars__CdrAssignment_1_1_in_rule__TVars__Group_1__1__Impl10170);
+            pushFollow(FOLLOW_rule__TVars__CdrAssignment_1_1_in_rule__TVars__Group_1__1__Impl10168);
             rule__TVars__CdrAssignment_1_1();
 
             state._fsp--;
@@ -14878,21 +14888,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TVar__Group__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4967:1: rule__TVar__Group__0 : rule__TVar__Group__0__Impl rule__TVar__Group__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4965:1: rule__TVar__Group__0 : rule__TVar__Group__0__Impl rule__TVar__Group__1 ;
     public final void rule__TVar__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4971:1: ( rule__TVar__Group__0__Impl rule__TVar__Group__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4972:2: rule__TVar__Group__0__Impl rule__TVar__Group__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4969:1: ( rule__TVar__Group__0__Impl rule__TVar__Group__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4970:2: rule__TVar__Group__0__Impl rule__TVar__Group__1
             {
-            pushFollow(FOLLOW_rule__TVar__Group__0__Impl_in_rule__TVar__Group__010204);
+            pushFollow(FOLLOW_rule__TVar__Group__0__Impl_in_rule__TVar__Group__010202);
             rule__TVar__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__TVar__Group__1_in_rule__TVar__Group__010207);
+            pushFollow(FOLLOW_rule__TVar__Group__1_in_rule__TVar__Group__010205);
             rule__TVar__Group__1();
 
             state._fsp--;
@@ -14916,22 +14926,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TVar__Group__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4979:1: rule__TVar__Group__0__Impl : ( ruleVariable ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4977:1: rule__TVar__Group__0__Impl : ( ruleVariable ) ;
     public final void rule__TVar__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4983:1: ( ( ruleVariable ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4984:1: ( ruleVariable )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4981:1: ( ( ruleVariable ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4982:1: ( ruleVariable )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4984:1: ( ruleVariable )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4985:1: ruleVariable
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4982:1: ( ruleVariable )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4983:1: ruleVariable
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTVarAccess().getVariableParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_ruleVariable_in_rule__TVar__Group__0__Impl10234);
+            pushFollow(FOLLOW_ruleVariable_in_rule__TVar__Group__0__Impl10232);
             ruleVariable();
 
             state._fsp--;
@@ -14961,21 +14971,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TVar__Group__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4996:1: rule__TVar__Group__1 : rule__TVar__Group__1__Impl rule__TVar__Group__2 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4994:1: rule__TVar__Group__1 : rule__TVar__Group__1__Impl rule__TVar__Group__2 ;
     public final void rule__TVar__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5000:1: ( rule__TVar__Group__1__Impl rule__TVar__Group__2 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5001:2: rule__TVar__Group__1__Impl rule__TVar__Group__2
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4998:1: ( rule__TVar__Group__1__Impl rule__TVar__Group__2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:4999:2: rule__TVar__Group__1__Impl rule__TVar__Group__2
             {
-            pushFollow(FOLLOW_rule__TVar__Group__1__Impl_in_rule__TVar__Group__110263);
+            pushFollow(FOLLOW_rule__TVar__Group__1__Impl_in_rule__TVar__Group__110261);
             rule__TVar__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__TVar__Group__2_in_rule__TVar__Group__110266);
+            pushFollow(FOLLOW_rule__TVar__Group__2_in_rule__TVar__Group__110264);
             rule__TVar__Group__2();
 
             state._fsp--;
@@ -14999,22 +15009,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TVar__Group__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5008:1: rule__TVar__Group__1__Impl : ( 'in' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5006:1: rule__TVar__Group__1__Impl : ( 'in' ) ;
     public final void rule__TVar__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5012:1: ( ( 'in' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5013:1: ( 'in' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5010:1: ( ( 'in' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5011:1: ( 'in' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5013:1: ( 'in' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5014:1: 'in'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5011:1: ( 'in' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5012:1: 'in'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTVarAccess().getInKeyword_1()); 
             }
-            match(input,37,FOLLOW_37_in_rule__TVar__Group__1__Impl10294); if (state.failed) return ;
+            match(input,37,FOLLOW_37_in_rule__TVar__Group__1__Impl10292); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getTVarAccess().getInKeyword_1()); 
             }
@@ -15040,16 +15050,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TVar__Group__2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5027:1: rule__TVar__Group__2 : rule__TVar__Group__2__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5025:1: rule__TVar__Group__2 : rule__TVar__Group__2__Impl ;
     public final void rule__TVar__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5031:1: ( rule__TVar__Group__2__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5032:2: rule__TVar__Group__2__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5029:1: ( rule__TVar__Group__2__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5030:2: rule__TVar__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__TVar__Group__2__Impl_in_rule__TVar__Group__210325);
+            pushFollow(FOLLOW_rule__TVar__Group__2__Impl_in_rule__TVar__Group__210323);
             rule__TVar__Group__2__Impl();
 
             state._fsp--;
@@ -15073,22 +15083,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TVar__Group__2__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5038:1: rule__TVar__Group__2__Impl : ( RULE_LID ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5036:1: rule__TVar__Group__2__Impl : ( RULE_LID ) ;
     public final void rule__TVar__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5042:1: ( ( RULE_LID ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5043:1: ( RULE_LID )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5040:1: ( ( RULE_LID ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5041:1: ( RULE_LID )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5043:1: ( RULE_LID )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5044:1: RULE_LID
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5041:1: ( RULE_LID )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5042:1: RULE_LID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTVarAccess().getLIDTerminalRuleCall_2()); 
             }
-            match(input,RULE_LID,FOLLOW_RULE_LID_in_rule__TVar__Group__2__Impl10352); if (state.failed) return ;
+            match(input,RULE_LID,FOLLOW_RULE_LID_in_rule__TVar__Group__2__Impl10350); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getTVarAccess().getLIDTerminalRuleCall_2()); 
             }
@@ -15114,21 +15124,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetAddition__Group__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5061:1: rule__SetAddition__Group__0 : rule__SetAddition__Group__0__Impl rule__SetAddition__Group__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5059:1: rule__SetAddition__Group__0 : rule__SetAddition__Group__0__Impl rule__SetAddition__Group__1 ;
     public final void rule__SetAddition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5065:1: ( rule__SetAddition__Group__0__Impl rule__SetAddition__Group__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5066:2: rule__SetAddition__Group__0__Impl rule__SetAddition__Group__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5063:1: ( rule__SetAddition__Group__0__Impl rule__SetAddition__Group__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5064:2: rule__SetAddition__Group__0__Impl rule__SetAddition__Group__1
             {
-            pushFollow(FOLLOW_rule__SetAddition__Group__0__Impl_in_rule__SetAddition__Group__010387);
+            pushFollow(FOLLOW_rule__SetAddition__Group__0__Impl_in_rule__SetAddition__Group__010385);
             rule__SetAddition__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__SetAddition__Group__1_in_rule__SetAddition__Group__010390);
+            pushFollow(FOLLOW_rule__SetAddition__Group__1_in_rule__SetAddition__Group__010388);
             rule__SetAddition__Group__1();
 
             state._fsp--;
@@ -15152,22 +15162,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetAddition__Group__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5073:1: rule__SetAddition__Group__0__Impl : ( ruleSetMultiplication ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5071:1: rule__SetAddition__Group__0__Impl : ( ruleSetMultiplication ) ;
     public final void rule__SetAddition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5077:1: ( ( ruleSetMultiplication ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5078:1: ( ruleSetMultiplication )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5075:1: ( ( ruleSetMultiplication ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5076:1: ( ruleSetMultiplication )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5078:1: ( ruleSetMultiplication )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5079:1: ruleSetMultiplication
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5076:1: ( ruleSetMultiplication )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5077:1: ruleSetMultiplication
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSetAdditionAccess().getSetMultiplicationParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_ruleSetMultiplication_in_rule__SetAddition__Group__0__Impl10417);
+            pushFollow(FOLLOW_ruleSetMultiplication_in_rule__SetAddition__Group__0__Impl10415);
             ruleSetMultiplication();
 
             state._fsp--;
@@ -15197,16 +15207,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetAddition__Group__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5090:1: rule__SetAddition__Group__1 : rule__SetAddition__Group__1__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5088:1: rule__SetAddition__Group__1 : rule__SetAddition__Group__1__Impl ;
     public final void rule__SetAddition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5094:1: ( rule__SetAddition__Group__1__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5095:2: rule__SetAddition__Group__1__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5092:1: ( rule__SetAddition__Group__1__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5093:2: rule__SetAddition__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__SetAddition__Group__1__Impl_in_rule__SetAddition__Group__110446);
+            pushFollow(FOLLOW_rule__SetAddition__Group__1__Impl_in_rule__SetAddition__Group__110444);
             rule__SetAddition__Group__1__Impl();
 
             state._fsp--;
@@ -15230,22 +15240,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetAddition__Group__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5101:1: rule__SetAddition__Group__1__Impl : ( ( rule__SetAddition__Group_1__0 )* ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5099:1: rule__SetAddition__Group__1__Impl : ( ( rule__SetAddition__Group_1__0 )* ) ;
     public final void rule__SetAddition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5105:1: ( ( ( rule__SetAddition__Group_1__0 )* ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5106:1: ( ( rule__SetAddition__Group_1__0 )* )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5103:1: ( ( ( rule__SetAddition__Group_1__0 )* ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5104:1: ( ( rule__SetAddition__Group_1__0 )* )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5106:1: ( ( rule__SetAddition__Group_1__0 )* )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5107:1: ( rule__SetAddition__Group_1__0 )*
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5104:1: ( ( rule__SetAddition__Group_1__0 )* )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5105:1: ( rule__SetAddition__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSetAdditionAccess().getGroup_1()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5108:1: ( rule__SetAddition__Group_1__0 )*
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5106:1: ( rule__SetAddition__Group_1__0 )*
             loop40:
             do {
                 int alt40=2;
@@ -15258,9 +15268,9 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
                 switch (alt40) {
             	case 1 :
-            	    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5108:2: rule__SetAddition__Group_1__0
+            	    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5106:2: rule__SetAddition__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__SetAddition__Group_1__0_in_rule__SetAddition__Group__1__Impl10473);
+            	    pushFollow(FOLLOW_rule__SetAddition__Group_1__0_in_rule__SetAddition__Group__1__Impl10471);
             	    rule__SetAddition__Group_1__0();
 
             	    state._fsp--;
@@ -15299,21 +15309,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetAddition__Group_1__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5122:1: rule__SetAddition__Group_1__0 : rule__SetAddition__Group_1__0__Impl rule__SetAddition__Group_1__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5120:1: rule__SetAddition__Group_1__0 : rule__SetAddition__Group_1__0__Impl rule__SetAddition__Group_1__1 ;
     public final void rule__SetAddition__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5126:1: ( rule__SetAddition__Group_1__0__Impl rule__SetAddition__Group_1__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5127:2: rule__SetAddition__Group_1__0__Impl rule__SetAddition__Group_1__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5124:1: ( rule__SetAddition__Group_1__0__Impl rule__SetAddition__Group_1__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5125:2: rule__SetAddition__Group_1__0__Impl rule__SetAddition__Group_1__1
             {
-            pushFollow(FOLLOW_rule__SetAddition__Group_1__0__Impl_in_rule__SetAddition__Group_1__010508);
+            pushFollow(FOLLOW_rule__SetAddition__Group_1__0__Impl_in_rule__SetAddition__Group_1__010506);
             rule__SetAddition__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__SetAddition__Group_1__1_in_rule__SetAddition__Group_1__010511);
+            pushFollow(FOLLOW_rule__SetAddition__Group_1__1_in_rule__SetAddition__Group_1__010509);
             rule__SetAddition__Group_1__1();
 
             state._fsp--;
@@ -15337,23 +15347,23 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetAddition__Group_1__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5134:1: rule__SetAddition__Group_1__0__Impl : ( () ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5132:1: rule__SetAddition__Group_1__0__Impl : ( () ) ;
     public final void rule__SetAddition__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5138:1: ( ( () ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5139:1: ( () )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5136:1: ( ( () ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5137:1: ( () )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5139:1: ( () )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5140:1: ()
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5137:1: ( () )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5138:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSetAdditionAccess().getSetAdditionLeftAction_1_0()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5141:1: ()
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5143:1: 
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5139:1: ()
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5141:1: 
             {
             }
 
@@ -15378,21 +15388,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetAddition__Group_1__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5153:1: rule__SetAddition__Group_1__1 : rule__SetAddition__Group_1__1__Impl rule__SetAddition__Group_1__2 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5151:1: rule__SetAddition__Group_1__1 : rule__SetAddition__Group_1__1__Impl rule__SetAddition__Group_1__2 ;
     public final void rule__SetAddition__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5157:1: ( rule__SetAddition__Group_1__1__Impl rule__SetAddition__Group_1__2 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5158:2: rule__SetAddition__Group_1__1__Impl rule__SetAddition__Group_1__2
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5155:1: ( rule__SetAddition__Group_1__1__Impl rule__SetAddition__Group_1__2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5156:2: rule__SetAddition__Group_1__1__Impl rule__SetAddition__Group_1__2
             {
-            pushFollow(FOLLOW_rule__SetAddition__Group_1__1__Impl_in_rule__SetAddition__Group_1__110569);
+            pushFollow(FOLLOW_rule__SetAddition__Group_1__1__Impl_in_rule__SetAddition__Group_1__110567);
             rule__SetAddition__Group_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__SetAddition__Group_1__2_in_rule__SetAddition__Group_1__110572);
+            pushFollow(FOLLOW_rule__SetAddition__Group_1__2_in_rule__SetAddition__Group_1__110570);
             rule__SetAddition__Group_1__2();
 
             state._fsp--;
@@ -15416,22 +15426,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetAddition__Group_1__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5165:1: rule__SetAddition__Group_1__1__Impl : ( '+' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5163:1: rule__SetAddition__Group_1__1__Impl : ( '+' ) ;
     public final void rule__SetAddition__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5169:1: ( ( '+' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5170:1: ( '+' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5167:1: ( ( '+' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5168:1: ( '+' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5170:1: ( '+' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5171:1: '+'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5168:1: ( '+' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5169:1: '+'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSetAdditionAccess().getPlusSignKeyword_1_1()); 
             }
-            match(input,13,FOLLOW_13_in_rule__SetAddition__Group_1__1__Impl10600); if (state.failed) return ;
+            match(input,13,FOLLOW_13_in_rule__SetAddition__Group_1__1__Impl10598); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSetAdditionAccess().getPlusSignKeyword_1_1()); 
             }
@@ -15457,16 +15467,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetAddition__Group_1__2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5184:1: rule__SetAddition__Group_1__2 : rule__SetAddition__Group_1__2__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5182:1: rule__SetAddition__Group_1__2 : rule__SetAddition__Group_1__2__Impl ;
     public final void rule__SetAddition__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5188:1: ( rule__SetAddition__Group_1__2__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5189:2: rule__SetAddition__Group_1__2__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5186:1: ( rule__SetAddition__Group_1__2__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5187:2: rule__SetAddition__Group_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__SetAddition__Group_1__2__Impl_in_rule__SetAddition__Group_1__210631);
+            pushFollow(FOLLOW_rule__SetAddition__Group_1__2__Impl_in_rule__SetAddition__Group_1__210629);
             rule__SetAddition__Group_1__2__Impl();
 
             state._fsp--;
@@ -15490,25 +15500,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetAddition__Group_1__2__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5195:1: rule__SetAddition__Group_1__2__Impl : ( ( rule__SetAddition__RightAssignment_1_2 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5193:1: rule__SetAddition__Group_1__2__Impl : ( ( rule__SetAddition__RightAssignment_1_2 ) ) ;
     public final void rule__SetAddition__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5199:1: ( ( ( rule__SetAddition__RightAssignment_1_2 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5200:1: ( ( rule__SetAddition__RightAssignment_1_2 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5197:1: ( ( ( rule__SetAddition__RightAssignment_1_2 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5198:1: ( ( rule__SetAddition__RightAssignment_1_2 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5200:1: ( ( rule__SetAddition__RightAssignment_1_2 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5201:1: ( rule__SetAddition__RightAssignment_1_2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5198:1: ( ( rule__SetAddition__RightAssignment_1_2 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5199:1: ( rule__SetAddition__RightAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSetAdditionAccess().getRightAssignment_1_2()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5202:1: ( rule__SetAddition__RightAssignment_1_2 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5202:2: rule__SetAddition__RightAssignment_1_2
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5200:1: ( rule__SetAddition__RightAssignment_1_2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5200:2: rule__SetAddition__RightAssignment_1_2
             {
-            pushFollow(FOLLOW_rule__SetAddition__RightAssignment_1_2_in_rule__SetAddition__Group_1__2__Impl10658);
+            pushFollow(FOLLOW_rule__SetAddition__RightAssignment_1_2_in_rule__SetAddition__Group_1__2__Impl10656);
             rule__SetAddition__RightAssignment_1_2();
 
             state._fsp--;
@@ -15541,21 +15551,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetMultiplication__Group__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5218:1: rule__SetMultiplication__Group__0 : rule__SetMultiplication__Group__0__Impl rule__SetMultiplication__Group__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5216:1: rule__SetMultiplication__Group__0 : rule__SetMultiplication__Group__0__Impl rule__SetMultiplication__Group__1 ;
     public final void rule__SetMultiplication__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5222:1: ( rule__SetMultiplication__Group__0__Impl rule__SetMultiplication__Group__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5223:2: rule__SetMultiplication__Group__0__Impl rule__SetMultiplication__Group__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5220:1: ( rule__SetMultiplication__Group__0__Impl rule__SetMultiplication__Group__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5221:2: rule__SetMultiplication__Group__0__Impl rule__SetMultiplication__Group__1
             {
-            pushFollow(FOLLOW_rule__SetMultiplication__Group__0__Impl_in_rule__SetMultiplication__Group__010694);
+            pushFollow(FOLLOW_rule__SetMultiplication__Group__0__Impl_in_rule__SetMultiplication__Group__010692);
             rule__SetMultiplication__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__SetMultiplication__Group__1_in_rule__SetMultiplication__Group__010697);
+            pushFollow(FOLLOW_rule__SetMultiplication__Group__1_in_rule__SetMultiplication__Group__010695);
             rule__SetMultiplication__Group__1();
 
             state._fsp--;
@@ -15579,22 +15589,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetMultiplication__Group__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5230:1: rule__SetMultiplication__Group__0__Impl : ( ruleSetPrimary ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5228:1: rule__SetMultiplication__Group__0__Impl : ( ruleSetPrimary ) ;
     public final void rule__SetMultiplication__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5234:1: ( ( ruleSetPrimary ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5235:1: ( ruleSetPrimary )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5232:1: ( ( ruleSetPrimary ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5233:1: ( ruleSetPrimary )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5235:1: ( ruleSetPrimary )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5236:1: ruleSetPrimary
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5233:1: ( ruleSetPrimary )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5234:1: ruleSetPrimary
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSetMultiplicationAccess().getSetPrimaryParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_ruleSetPrimary_in_rule__SetMultiplication__Group__0__Impl10724);
+            pushFollow(FOLLOW_ruleSetPrimary_in_rule__SetMultiplication__Group__0__Impl10722);
             ruleSetPrimary();
 
             state._fsp--;
@@ -15624,16 +15634,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetMultiplication__Group__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5247:1: rule__SetMultiplication__Group__1 : rule__SetMultiplication__Group__1__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5245:1: rule__SetMultiplication__Group__1 : rule__SetMultiplication__Group__1__Impl ;
     public final void rule__SetMultiplication__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5251:1: ( rule__SetMultiplication__Group__1__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5252:2: rule__SetMultiplication__Group__1__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5249:1: ( rule__SetMultiplication__Group__1__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5250:2: rule__SetMultiplication__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__SetMultiplication__Group__1__Impl_in_rule__SetMultiplication__Group__110753);
+            pushFollow(FOLLOW_rule__SetMultiplication__Group__1__Impl_in_rule__SetMultiplication__Group__110751);
             rule__SetMultiplication__Group__1__Impl();
 
             state._fsp--;
@@ -15657,22 +15667,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetMultiplication__Group__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5258:1: rule__SetMultiplication__Group__1__Impl : ( ( rule__SetMultiplication__Group_1__0 )* ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5256:1: rule__SetMultiplication__Group__1__Impl : ( ( rule__SetMultiplication__Group_1__0 )* ) ;
     public final void rule__SetMultiplication__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5262:1: ( ( ( rule__SetMultiplication__Group_1__0 )* ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5263:1: ( ( rule__SetMultiplication__Group_1__0 )* )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5260:1: ( ( ( rule__SetMultiplication__Group_1__0 )* ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5261:1: ( ( rule__SetMultiplication__Group_1__0 )* )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5263:1: ( ( rule__SetMultiplication__Group_1__0 )* )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5264:1: ( rule__SetMultiplication__Group_1__0 )*
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5261:1: ( ( rule__SetMultiplication__Group_1__0 )* )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5262:1: ( rule__SetMultiplication__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSetMultiplicationAccess().getGroup_1()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5265:1: ( rule__SetMultiplication__Group_1__0 )*
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5263:1: ( rule__SetMultiplication__Group_1__0 )*
             loop41:
             do {
                 int alt41=2;
@@ -15685,9 +15695,9 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
                 switch (alt41) {
             	case 1 :
-            	    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5265:2: rule__SetMultiplication__Group_1__0
+            	    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5263:2: rule__SetMultiplication__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__SetMultiplication__Group_1__0_in_rule__SetMultiplication__Group__1__Impl10780);
+            	    pushFollow(FOLLOW_rule__SetMultiplication__Group_1__0_in_rule__SetMultiplication__Group__1__Impl10778);
             	    rule__SetMultiplication__Group_1__0();
 
             	    state._fsp--;
@@ -15726,21 +15736,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetMultiplication__Group_1__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5279:1: rule__SetMultiplication__Group_1__0 : rule__SetMultiplication__Group_1__0__Impl rule__SetMultiplication__Group_1__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5277:1: rule__SetMultiplication__Group_1__0 : rule__SetMultiplication__Group_1__0__Impl rule__SetMultiplication__Group_1__1 ;
     public final void rule__SetMultiplication__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5283:1: ( rule__SetMultiplication__Group_1__0__Impl rule__SetMultiplication__Group_1__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5284:2: rule__SetMultiplication__Group_1__0__Impl rule__SetMultiplication__Group_1__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5281:1: ( rule__SetMultiplication__Group_1__0__Impl rule__SetMultiplication__Group_1__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5282:2: rule__SetMultiplication__Group_1__0__Impl rule__SetMultiplication__Group_1__1
             {
-            pushFollow(FOLLOW_rule__SetMultiplication__Group_1__0__Impl_in_rule__SetMultiplication__Group_1__010815);
+            pushFollow(FOLLOW_rule__SetMultiplication__Group_1__0__Impl_in_rule__SetMultiplication__Group_1__010813);
             rule__SetMultiplication__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__SetMultiplication__Group_1__1_in_rule__SetMultiplication__Group_1__010818);
+            pushFollow(FOLLOW_rule__SetMultiplication__Group_1__1_in_rule__SetMultiplication__Group_1__010816);
             rule__SetMultiplication__Group_1__1();
 
             state._fsp--;
@@ -15764,23 +15774,23 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetMultiplication__Group_1__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5291:1: rule__SetMultiplication__Group_1__0__Impl : ( () ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5289:1: rule__SetMultiplication__Group_1__0__Impl : ( () ) ;
     public final void rule__SetMultiplication__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5295:1: ( ( () ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5296:1: ( () )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5293:1: ( ( () ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5294:1: ( () )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5296:1: ( () )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5297:1: ()
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5294:1: ( () )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5295:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSetMultiplicationAccess().getSetMultiplicationLeftAction_1_0()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5298:1: ()
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5300:1: 
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5296:1: ()
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5298:1: 
             {
             }
 
@@ -15805,21 +15815,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetMultiplication__Group_1__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5310:1: rule__SetMultiplication__Group_1__1 : rule__SetMultiplication__Group_1__1__Impl rule__SetMultiplication__Group_1__2 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5308:1: rule__SetMultiplication__Group_1__1 : rule__SetMultiplication__Group_1__1__Impl rule__SetMultiplication__Group_1__2 ;
     public final void rule__SetMultiplication__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5314:1: ( rule__SetMultiplication__Group_1__1__Impl rule__SetMultiplication__Group_1__2 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5315:2: rule__SetMultiplication__Group_1__1__Impl rule__SetMultiplication__Group_1__2
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5312:1: ( rule__SetMultiplication__Group_1__1__Impl rule__SetMultiplication__Group_1__2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5313:2: rule__SetMultiplication__Group_1__1__Impl rule__SetMultiplication__Group_1__2
             {
-            pushFollow(FOLLOW_rule__SetMultiplication__Group_1__1__Impl_in_rule__SetMultiplication__Group_1__110876);
+            pushFollow(FOLLOW_rule__SetMultiplication__Group_1__1__Impl_in_rule__SetMultiplication__Group_1__110874);
             rule__SetMultiplication__Group_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__SetMultiplication__Group_1__2_in_rule__SetMultiplication__Group_1__110879);
+            pushFollow(FOLLOW_rule__SetMultiplication__Group_1__2_in_rule__SetMultiplication__Group_1__110877);
             rule__SetMultiplication__Group_1__2();
 
             state._fsp--;
@@ -15843,25 +15853,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetMultiplication__Group_1__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5322:1: rule__SetMultiplication__Group_1__1__Impl : ( ( rule__SetMultiplication__Alternatives_1_1 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5320:1: rule__SetMultiplication__Group_1__1__Impl : ( ( rule__SetMultiplication__Alternatives_1_1 ) ) ;
     public final void rule__SetMultiplication__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5326:1: ( ( ( rule__SetMultiplication__Alternatives_1_1 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5327:1: ( ( rule__SetMultiplication__Alternatives_1_1 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5324:1: ( ( ( rule__SetMultiplication__Alternatives_1_1 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5325:1: ( ( rule__SetMultiplication__Alternatives_1_1 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5327:1: ( ( rule__SetMultiplication__Alternatives_1_1 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5328:1: ( rule__SetMultiplication__Alternatives_1_1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5325:1: ( ( rule__SetMultiplication__Alternatives_1_1 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5326:1: ( rule__SetMultiplication__Alternatives_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSetMultiplicationAccess().getAlternatives_1_1()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5329:1: ( rule__SetMultiplication__Alternatives_1_1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5329:2: rule__SetMultiplication__Alternatives_1_1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5327:1: ( rule__SetMultiplication__Alternatives_1_1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5327:2: rule__SetMultiplication__Alternatives_1_1
             {
-            pushFollow(FOLLOW_rule__SetMultiplication__Alternatives_1_1_in_rule__SetMultiplication__Group_1__1__Impl10906);
+            pushFollow(FOLLOW_rule__SetMultiplication__Alternatives_1_1_in_rule__SetMultiplication__Group_1__1__Impl10904);
             rule__SetMultiplication__Alternatives_1_1();
 
             state._fsp--;
@@ -15894,16 +15904,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetMultiplication__Group_1__2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5339:1: rule__SetMultiplication__Group_1__2 : rule__SetMultiplication__Group_1__2__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5337:1: rule__SetMultiplication__Group_1__2 : rule__SetMultiplication__Group_1__2__Impl ;
     public final void rule__SetMultiplication__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5343:1: ( rule__SetMultiplication__Group_1__2__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5344:2: rule__SetMultiplication__Group_1__2__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5341:1: ( rule__SetMultiplication__Group_1__2__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5342:2: rule__SetMultiplication__Group_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__SetMultiplication__Group_1__2__Impl_in_rule__SetMultiplication__Group_1__210936);
+            pushFollow(FOLLOW_rule__SetMultiplication__Group_1__2__Impl_in_rule__SetMultiplication__Group_1__210934);
             rule__SetMultiplication__Group_1__2__Impl();
 
             state._fsp--;
@@ -15927,25 +15937,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetMultiplication__Group_1__2__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5350:1: rule__SetMultiplication__Group_1__2__Impl : ( ( rule__SetMultiplication__RightAssignment_1_2 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5348:1: rule__SetMultiplication__Group_1__2__Impl : ( ( rule__SetMultiplication__RightAssignment_1_2 ) ) ;
     public final void rule__SetMultiplication__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5354:1: ( ( ( rule__SetMultiplication__RightAssignment_1_2 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5355:1: ( ( rule__SetMultiplication__RightAssignment_1_2 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5352:1: ( ( ( rule__SetMultiplication__RightAssignment_1_2 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5353:1: ( ( rule__SetMultiplication__RightAssignment_1_2 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5355:1: ( ( rule__SetMultiplication__RightAssignment_1_2 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5356:1: ( rule__SetMultiplication__RightAssignment_1_2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5353:1: ( ( rule__SetMultiplication__RightAssignment_1_2 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5354:1: ( rule__SetMultiplication__RightAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSetMultiplicationAccess().getRightAssignment_1_2()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5357:1: ( rule__SetMultiplication__RightAssignment_1_2 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5357:2: rule__SetMultiplication__RightAssignment_1_2
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5355:1: ( rule__SetMultiplication__RightAssignment_1_2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5355:2: rule__SetMultiplication__RightAssignment_1_2
             {
-            pushFollow(FOLLOW_rule__SetMultiplication__RightAssignment_1_2_in_rule__SetMultiplication__Group_1__2__Impl10963);
+            pushFollow(FOLLOW_rule__SetMultiplication__RightAssignment_1_2_in_rule__SetMultiplication__Group_1__2__Impl10961);
             rule__SetMultiplication__RightAssignment_1_2();
 
             state._fsp--;
@@ -15978,21 +15988,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetPrimary__Group_1__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5373:1: rule__SetPrimary__Group_1__0 : rule__SetPrimary__Group_1__0__Impl rule__SetPrimary__Group_1__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5371:1: rule__SetPrimary__Group_1__0 : rule__SetPrimary__Group_1__0__Impl rule__SetPrimary__Group_1__1 ;
     public final void rule__SetPrimary__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5377:1: ( rule__SetPrimary__Group_1__0__Impl rule__SetPrimary__Group_1__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5378:2: rule__SetPrimary__Group_1__0__Impl rule__SetPrimary__Group_1__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5375:1: ( rule__SetPrimary__Group_1__0__Impl rule__SetPrimary__Group_1__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5376:2: rule__SetPrimary__Group_1__0__Impl rule__SetPrimary__Group_1__1
             {
-            pushFollow(FOLLOW_rule__SetPrimary__Group_1__0__Impl_in_rule__SetPrimary__Group_1__010999);
+            pushFollow(FOLLOW_rule__SetPrimary__Group_1__0__Impl_in_rule__SetPrimary__Group_1__010997);
             rule__SetPrimary__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__SetPrimary__Group_1__1_in_rule__SetPrimary__Group_1__011002);
+            pushFollow(FOLLOW_rule__SetPrimary__Group_1__1_in_rule__SetPrimary__Group_1__011000);
             rule__SetPrimary__Group_1__1();
 
             state._fsp--;
@@ -16016,22 +16026,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetPrimary__Group_1__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5385:1: rule__SetPrimary__Group_1__0__Impl : ( '(' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5383:1: rule__SetPrimary__Group_1__0__Impl : ( '(' ) ;
     public final void rule__SetPrimary__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5389:1: ( ( '(' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5390:1: ( '(' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5387:1: ( ( '(' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5388:1: ( '(' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5390:1: ( '(' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5391:1: '('
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5388:1: ( '(' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5389:1: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSetPrimaryAccess().getLeftParenthesisKeyword_1_0()); 
             }
-            match(input,29,FOLLOW_29_in_rule__SetPrimary__Group_1__0__Impl11030); if (state.failed) return ;
+            match(input,29,FOLLOW_29_in_rule__SetPrimary__Group_1__0__Impl11028); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSetPrimaryAccess().getLeftParenthesisKeyword_1_0()); 
             }
@@ -16057,21 +16067,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetPrimary__Group_1__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5404:1: rule__SetPrimary__Group_1__1 : rule__SetPrimary__Group_1__1__Impl rule__SetPrimary__Group_1__2 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5402:1: rule__SetPrimary__Group_1__1 : rule__SetPrimary__Group_1__1__Impl rule__SetPrimary__Group_1__2 ;
     public final void rule__SetPrimary__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5408:1: ( rule__SetPrimary__Group_1__1__Impl rule__SetPrimary__Group_1__2 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5409:2: rule__SetPrimary__Group_1__1__Impl rule__SetPrimary__Group_1__2
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5406:1: ( rule__SetPrimary__Group_1__1__Impl rule__SetPrimary__Group_1__2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5407:2: rule__SetPrimary__Group_1__1__Impl rule__SetPrimary__Group_1__2
             {
-            pushFollow(FOLLOW_rule__SetPrimary__Group_1__1__Impl_in_rule__SetPrimary__Group_1__111061);
+            pushFollow(FOLLOW_rule__SetPrimary__Group_1__1__Impl_in_rule__SetPrimary__Group_1__111059);
             rule__SetPrimary__Group_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__SetPrimary__Group_1__2_in_rule__SetPrimary__Group_1__111064);
+            pushFollow(FOLLOW_rule__SetPrimary__Group_1__2_in_rule__SetPrimary__Group_1__111062);
             rule__SetPrimary__Group_1__2();
 
             state._fsp--;
@@ -16095,22 +16105,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetPrimary__Group_1__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5416:1: rule__SetPrimary__Group_1__1__Impl : ( ruleSetAddition ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5414:1: rule__SetPrimary__Group_1__1__Impl : ( ruleSetAddition ) ;
     public final void rule__SetPrimary__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5420:1: ( ( ruleSetAddition ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5421:1: ( ruleSetAddition )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5418:1: ( ( ruleSetAddition ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5419:1: ( ruleSetAddition )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5421:1: ( ruleSetAddition )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5422:1: ruleSetAddition
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5419:1: ( ruleSetAddition )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5420:1: ruleSetAddition
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSetPrimaryAccess().getSetAdditionParserRuleCall_1_1()); 
             }
-            pushFollow(FOLLOW_ruleSetAddition_in_rule__SetPrimary__Group_1__1__Impl11091);
+            pushFollow(FOLLOW_ruleSetAddition_in_rule__SetPrimary__Group_1__1__Impl11089);
             ruleSetAddition();
 
             state._fsp--;
@@ -16140,16 +16150,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetPrimary__Group_1__2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5433:1: rule__SetPrimary__Group_1__2 : rule__SetPrimary__Group_1__2__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5431:1: rule__SetPrimary__Group_1__2 : rule__SetPrimary__Group_1__2__Impl ;
     public final void rule__SetPrimary__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5437:1: ( rule__SetPrimary__Group_1__2__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5438:2: rule__SetPrimary__Group_1__2__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5435:1: ( rule__SetPrimary__Group_1__2__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5436:2: rule__SetPrimary__Group_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__SetPrimary__Group_1__2__Impl_in_rule__SetPrimary__Group_1__211120);
+            pushFollow(FOLLOW_rule__SetPrimary__Group_1__2__Impl_in_rule__SetPrimary__Group_1__211118);
             rule__SetPrimary__Group_1__2__Impl();
 
             state._fsp--;
@@ -16173,22 +16183,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetPrimary__Group_1__2__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5444:1: rule__SetPrimary__Group_1__2__Impl : ( ')' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5442:1: rule__SetPrimary__Group_1__2__Impl : ( ')' ) ;
     public final void rule__SetPrimary__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5448:1: ( ( ')' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5449:1: ( ')' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5446:1: ( ( ')' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5447:1: ( ')' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5449:1: ( ')' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5450:1: ')'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5447:1: ( ')' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5448:1: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSetPrimaryAccess().getRightParenthesisKeyword_1_2()); 
             }
-            match(input,30,FOLLOW_30_in_rule__SetPrimary__Group_1__2__Impl11148); if (state.failed) return ;
+            match(input,30,FOLLOW_30_in_rule__SetPrimary__Group_1__2__Impl11146); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSetPrimaryAccess().getRightParenthesisKeyword_1_2()); 
             }
@@ -16214,21 +16224,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PredicateAtom__Group__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5469:1: rule__PredicateAtom__Group__0 : rule__PredicateAtom__Group__0__Impl rule__PredicateAtom__Group__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5467:1: rule__PredicateAtom__Group__0 : rule__PredicateAtom__Group__0__Impl rule__PredicateAtom__Group__1 ;
     public final void rule__PredicateAtom__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5473:1: ( rule__PredicateAtom__Group__0__Impl rule__PredicateAtom__Group__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5474:2: rule__PredicateAtom__Group__0__Impl rule__PredicateAtom__Group__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5471:1: ( rule__PredicateAtom__Group__0__Impl rule__PredicateAtom__Group__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5472:2: rule__PredicateAtom__Group__0__Impl rule__PredicateAtom__Group__1
             {
-            pushFollow(FOLLOW_rule__PredicateAtom__Group__0__Impl_in_rule__PredicateAtom__Group__011185);
+            pushFollow(FOLLOW_rule__PredicateAtom__Group__0__Impl_in_rule__PredicateAtom__Group__011183);
             rule__PredicateAtom__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__PredicateAtom__Group__1_in_rule__PredicateAtom__Group__011188);
+            pushFollow(FOLLOW_rule__PredicateAtom__Group__1_in_rule__PredicateAtom__Group__011186);
             rule__PredicateAtom__Group__1();
 
             state._fsp--;
@@ -16252,25 +16262,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PredicateAtom__Group__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5481:1: rule__PredicateAtom__Group__0__Impl : ( ( rule__PredicateAtom__FidAssignment_0 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5479:1: rule__PredicateAtom__Group__0__Impl : ( ( rule__PredicateAtom__FidAssignment_0 ) ) ;
     public final void rule__PredicateAtom__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5485:1: ( ( ( rule__PredicateAtom__FidAssignment_0 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5486:1: ( ( rule__PredicateAtom__FidAssignment_0 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5483:1: ( ( ( rule__PredicateAtom__FidAssignment_0 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5484:1: ( ( rule__PredicateAtom__FidAssignment_0 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5486:1: ( ( rule__PredicateAtom__FidAssignment_0 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5487:1: ( rule__PredicateAtom__FidAssignment_0 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5484:1: ( ( rule__PredicateAtom__FidAssignment_0 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5485:1: ( rule__PredicateAtom__FidAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPredicateAtomAccess().getFidAssignment_0()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5488:1: ( rule__PredicateAtom__FidAssignment_0 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5488:2: rule__PredicateAtom__FidAssignment_0
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5486:1: ( rule__PredicateAtom__FidAssignment_0 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5486:2: rule__PredicateAtom__FidAssignment_0
             {
-            pushFollow(FOLLOW_rule__PredicateAtom__FidAssignment_0_in_rule__PredicateAtom__Group__0__Impl11215);
+            pushFollow(FOLLOW_rule__PredicateAtom__FidAssignment_0_in_rule__PredicateAtom__Group__0__Impl11213);
             rule__PredicateAtom__FidAssignment_0();
 
             state._fsp--;
@@ -16303,16 +16313,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PredicateAtom__Group__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5498:1: rule__PredicateAtom__Group__1 : rule__PredicateAtom__Group__1__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5496:1: rule__PredicateAtom__Group__1 : rule__PredicateAtom__Group__1__Impl ;
     public final void rule__PredicateAtom__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5502:1: ( rule__PredicateAtom__Group__1__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5503:2: rule__PredicateAtom__Group__1__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5500:1: ( rule__PredicateAtom__Group__1__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5501:2: rule__PredicateAtom__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__PredicateAtom__Group__1__Impl_in_rule__PredicateAtom__Group__111245);
+            pushFollow(FOLLOW_rule__PredicateAtom__Group__1__Impl_in_rule__PredicateAtom__Group__111243);
             rule__PredicateAtom__Group__1__Impl();
 
             state._fsp--;
@@ -16336,22 +16346,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PredicateAtom__Group__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5509:1: rule__PredicateAtom__Group__1__Impl : ( ( rule__PredicateAtom__Group_1__0 )? ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5507:1: rule__PredicateAtom__Group__1__Impl : ( ( rule__PredicateAtom__Group_1__0 )? ) ;
     public final void rule__PredicateAtom__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5513:1: ( ( ( rule__PredicateAtom__Group_1__0 )? ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5514:1: ( ( rule__PredicateAtom__Group_1__0 )? )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5511:1: ( ( ( rule__PredicateAtom__Group_1__0 )? ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5512:1: ( ( rule__PredicateAtom__Group_1__0 )? )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5514:1: ( ( rule__PredicateAtom__Group_1__0 )? )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5515:1: ( rule__PredicateAtom__Group_1__0 )?
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5512:1: ( ( rule__PredicateAtom__Group_1__0 )? )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5513:1: ( rule__PredicateAtom__Group_1__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPredicateAtomAccess().getGroup_1()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5516:1: ( rule__PredicateAtom__Group_1__0 )?
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5514:1: ( rule__PredicateAtom__Group_1__0 )?
             int alt42=2;
             int LA42_0 = input.LA(1);
 
@@ -16360,9 +16370,9 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
             }
             switch (alt42) {
                 case 1 :
-                    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5516:2: rule__PredicateAtom__Group_1__0
+                    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5514:2: rule__PredicateAtom__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__PredicateAtom__Group_1__0_in_rule__PredicateAtom__Group__1__Impl11272);
+                    pushFollow(FOLLOW_rule__PredicateAtom__Group_1__0_in_rule__PredicateAtom__Group__1__Impl11270);
                     rule__PredicateAtom__Group_1__0();
 
                     state._fsp--;
@@ -16398,21 +16408,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PredicateAtom__Group_1__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5530:1: rule__PredicateAtom__Group_1__0 : rule__PredicateAtom__Group_1__0__Impl rule__PredicateAtom__Group_1__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5528:1: rule__PredicateAtom__Group_1__0 : rule__PredicateAtom__Group_1__0__Impl rule__PredicateAtom__Group_1__1 ;
     public final void rule__PredicateAtom__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5534:1: ( rule__PredicateAtom__Group_1__0__Impl rule__PredicateAtom__Group_1__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5535:2: rule__PredicateAtom__Group_1__0__Impl rule__PredicateAtom__Group_1__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5532:1: ( rule__PredicateAtom__Group_1__0__Impl rule__PredicateAtom__Group_1__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5533:2: rule__PredicateAtom__Group_1__0__Impl rule__PredicateAtom__Group_1__1
             {
-            pushFollow(FOLLOW_rule__PredicateAtom__Group_1__0__Impl_in_rule__PredicateAtom__Group_1__011307);
+            pushFollow(FOLLOW_rule__PredicateAtom__Group_1__0__Impl_in_rule__PredicateAtom__Group_1__011305);
             rule__PredicateAtom__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__PredicateAtom__Group_1__1_in_rule__PredicateAtom__Group_1__011310);
+            pushFollow(FOLLOW_rule__PredicateAtom__Group_1__1_in_rule__PredicateAtom__Group_1__011308);
             rule__PredicateAtom__Group_1__1();
 
             state._fsp--;
@@ -16436,22 +16446,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PredicateAtom__Group_1__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5542:1: rule__PredicateAtom__Group_1__0__Impl : ( '(' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5540:1: rule__PredicateAtom__Group_1__0__Impl : ( '(' ) ;
     public final void rule__PredicateAtom__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5546:1: ( ( '(' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5547:1: ( '(' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5544:1: ( ( '(' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5545:1: ( '(' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5547:1: ( '(' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5548:1: '('
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5545:1: ( '(' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5546:1: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPredicateAtomAccess().getLeftParenthesisKeyword_1_0()); 
             }
-            match(input,29,FOLLOW_29_in_rule__PredicateAtom__Group_1__0__Impl11338); if (state.failed) return ;
+            match(input,29,FOLLOW_29_in_rule__PredicateAtom__Group_1__0__Impl11336); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPredicateAtomAccess().getLeftParenthesisKeyword_1_0()); 
             }
@@ -16477,21 +16487,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PredicateAtom__Group_1__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5561:1: rule__PredicateAtom__Group_1__1 : rule__PredicateAtom__Group_1__1__Impl rule__PredicateAtom__Group_1__2 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5559:1: rule__PredicateAtom__Group_1__1 : rule__PredicateAtom__Group_1__1__Impl rule__PredicateAtom__Group_1__2 ;
     public final void rule__PredicateAtom__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5565:1: ( rule__PredicateAtom__Group_1__1__Impl rule__PredicateAtom__Group_1__2 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5566:2: rule__PredicateAtom__Group_1__1__Impl rule__PredicateAtom__Group_1__2
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5563:1: ( rule__PredicateAtom__Group_1__1__Impl rule__PredicateAtom__Group_1__2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5564:2: rule__PredicateAtom__Group_1__1__Impl rule__PredicateAtom__Group_1__2
             {
-            pushFollow(FOLLOW_rule__PredicateAtom__Group_1__1__Impl_in_rule__PredicateAtom__Group_1__111369);
+            pushFollow(FOLLOW_rule__PredicateAtom__Group_1__1__Impl_in_rule__PredicateAtom__Group_1__111367);
             rule__PredicateAtom__Group_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__PredicateAtom__Group_1__2_in_rule__PredicateAtom__Group_1__111372);
+            pushFollow(FOLLOW_rule__PredicateAtom__Group_1__2_in_rule__PredicateAtom__Group_1__111370);
             rule__PredicateAtom__Group_1__2();
 
             state._fsp--;
@@ -16515,25 +16525,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PredicateAtom__Group_1__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5573:1: rule__PredicateAtom__Group_1__1__Impl : ( ( rule__PredicateAtom__TermsAssignment_1_1 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5571:1: rule__PredicateAtom__Group_1__1__Impl : ( ( rule__PredicateAtom__TermsAssignment_1_1 ) ) ;
     public final void rule__PredicateAtom__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5577:1: ( ( ( rule__PredicateAtom__TermsAssignment_1_1 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5578:1: ( ( rule__PredicateAtom__TermsAssignment_1_1 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5575:1: ( ( ( rule__PredicateAtom__TermsAssignment_1_1 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5576:1: ( ( rule__PredicateAtom__TermsAssignment_1_1 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5578:1: ( ( rule__PredicateAtom__TermsAssignment_1_1 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5579:1: ( rule__PredicateAtom__TermsAssignment_1_1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5576:1: ( ( rule__PredicateAtom__TermsAssignment_1_1 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5577:1: ( rule__PredicateAtom__TermsAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPredicateAtomAccess().getTermsAssignment_1_1()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5580:1: ( rule__PredicateAtom__TermsAssignment_1_1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5580:2: rule__PredicateAtom__TermsAssignment_1_1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5578:1: ( rule__PredicateAtom__TermsAssignment_1_1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5578:2: rule__PredicateAtom__TermsAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__PredicateAtom__TermsAssignment_1_1_in_rule__PredicateAtom__Group_1__1__Impl11399);
+            pushFollow(FOLLOW_rule__PredicateAtom__TermsAssignment_1_1_in_rule__PredicateAtom__Group_1__1__Impl11397);
             rule__PredicateAtom__TermsAssignment_1_1();
 
             state._fsp--;
@@ -16566,16 +16576,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PredicateAtom__Group_1__2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5590:1: rule__PredicateAtom__Group_1__2 : rule__PredicateAtom__Group_1__2__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5588:1: rule__PredicateAtom__Group_1__2 : rule__PredicateAtom__Group_1__2__Impl ;
     public final void rule__PredicateAtom__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5594:1: ( rule__PredicateAtom__Group_1__2__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5595:2: rule__PredicateAtom__Group_1__2__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5592:1: ( rule__PredicateAtom__Group_1__2__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5593:2: rule__PredicateAtom__Group_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__PredicateAtom__Group_1__2__Impl_in_rule__PredicateAtom__Group_1__211429);
+            pushFollow(FOLLOW_rule__PredicateAtom__Group_1__2__Impl_in_rule__PredicateAtom__Group_1__211427);
             rule__PredicateAtom__Group_1__2__Impl();
 
             state._fsp--;
@@ -16599,22 +16609,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PredicateAtom__Group_1__2__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5601:1: rule__PredicateAtom__Group_1__2__Impl : ( ')' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5599:1: rule__PredicateAtom__Group_1__2__Impl : ( ')' ) ;
     public final void rule__PredicateAtom__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5605:1: ( ( ')' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5606:1: ( ')' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5603:1: ( ( ')' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5604:1: ( ')' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5606:1: ( ')' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5607:1: ')'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5604:1: ( ')' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5605:1: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPredicateAtomAccess().getRightParenthesisKeyword_1_2()); 
             }
-            match(input,30,FOLLOW_30_in_rule__PredicateAtom__Group_1__2__Impl11457); if (state.failed) return ;
+            match(input,30,FOLLOW_30_in_rule__PredicateAtom__Group_1__2__Impl11455); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPredicateAtomAccess().getRightParenthesisKeyword_1_2()); 
             }
@@ -16640,21 +16650,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BasicPredicateAtom__Group__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5626:1: rule__BasicPredicateAtom__Group__0 : rule__BasicPredicateAtom__Group__0__Impl rule__BasicPredicateAtom__Group__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5624:1: rule__BasicPredicateAtom__Group__0 : rule__BasicPredicateAtom__Group__0__Impl rule__BasicPredicateAtom__Group__1 ;
     public final void rule__BasicPredicateAtom__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5630:1: ( rule__BasicPredicateAtom__Group__0__Impl rule__BasicPredicateAtom__Group__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5631:2: rule__BasicPredicateAtom__Group__0__Impl rule__BasicPredicateAtom__Group__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5628:1: ( rule__BasicPredicateAtom__Group__0__Impl rule__BasicPredicateAtom__Group__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5629:2: rule__BasicPredicateAtom__Group__0__Impl rule__BasicPredicateAtom__Group__1
             {
-            pushFollow(FOLLOW_rule__BasicPredicateAtom__Group__0__Impl_in_rule__BasicPredicateAtom__Group__011494);
+            pushFollow(FOLLOW_rule__BasicPredicateAtom__Group__0__Impl_in_rule__BasicPredicateAtom__Group__011492);
             rule__BasicPredicateAtom__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__BasicPredicateAtom__Group__1_in_rule__BasicPredicateAtom__Group__011497);
+            pushFollow(FOLLOW_rule__BasicPredicateAtom__Group__1_in_rule__BasicPredicateAtom__Group__011495);
             rule__BasicPredicateAtom__Group__1();
 
             state._fsp--;
@@ -16678,25 +16688,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BasicPredicateAtom__Group__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5638:1: rule__BasicPredicateAtom__Group__0__Impl : ( ( rule__BasicPredicateAtom__FidAssignment_0 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5636:1: rule__BasicPredicateAtom__Group__0__Impl : ( ( rule__BasicPredicateAtom__FidAssignment_0 ) ) ;
     public final void rule__BasicPredicateAtom__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5642:1: ( ( ( rule__BasicPredicateAtom__FidAssignment_0 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5643:1: ( ( rule__BasicPredicateAtom__FidAssignment_0 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5640:1: ( ( ( rule__BasicPredicateAtom__FidAssignment_0 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5641:1: ( ( rule__BasicPredicateAtom__FidAssignment_0 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5643:1: ( ( rule__BasicPredicateAtom__FidAssignment_0 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5644:1: ( rule__BasicPredicateAtom__FidAssignment_0 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5641:1: ( ( rule__BasicPredicateAtom__FidAssignment_0 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5642:1: ( rule__BasicPredicateAtom__FidAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBasicPredicateAtomAccess().getFidAssignment_0()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5645:1: ( rule__BasicPredicateAtom__FidAssignment_0 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5645:2: rule__BasicPredicateAtom__FidAssignment_0
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5643:1: ( rule__BasicPredicateAtom__FidAssignment_0 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5643:2: rule__BasicPredicateAtom__FidAssignment_0
             {
-            pushFollow(FOLLOW_rule__BasicPredicateAtom__FidAssignment_0_in_rule__BasicPredicateAtom__Group__0__Impl11524);
+            pushFollow(FOLLOW_rule__BasicPredicateAtom__FidAssignment_0_in_rule__BasicPredicateAtom__Group__0__Impl11522);
             rule__BasicPredicateAtom__FidAssignment_0();
 
             state._fsp--;
@@ -16729,16 +16739,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BasicPredicateAtom__Group__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5655:1: rule__BasicPredicateAtom__Group__1 : rule__BasicPredicateAtom__Group__1__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5653:1: rule__BasicPredicateAtom__Group__1 : rule__BasicPredicateAtom__Group__1__Impl ;
     public final void rule__BasicPredicateAtom__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5659:1: ( rule__BasicPredicateAtom__Group__1__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5660:2: rule__BasicPredicateAtom__Group__1__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5657:1: ( rule__BasicPredicateAtom__Group__1__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5658:2: rule__BasicPredicateAtom__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__BasicPredicateAtom__Group__1__Impl_in_rule__BasicPredicateAtom__Group__111554);
+            pushFollow(FOLLOW_rule__BasicPredicateAtom__Group__1__Impl_in_rule__BasicPredicateAtom__Group__111552);
             rule__BasicPredicateAtom__Group__1__Impl();
 
             state._fsp--;
@@ -16762,22 +16772,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BasicPredicateAtom__Group__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5666:1: rule__BasicPredicateAtom__Group__1__Impl : ( ( rule__BasicPredicateAtom__Group_1__0 )? ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5664:1: rule__BasicPredicateAtom__Group__1__Impl : ( ( rule__BasicPredicateAtom__Group_1__0 )? ) ;
     public final void rule__BasicPredicateAtom__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5670:1: ( ( ( rule__BasicPredicateAtom__Group_1__0 )? ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5671:1: ( ( rule__BasicPredicateAtom__Group_1__0 )? )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5668:1: ( ( ( rule__BasicPredicateAtom__Group_1__0 )? ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5669:1: ( ( rule__BasicPredicateAtom__Group_1__0 )? )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5671:1: ( ( rule__BasicPredicateAtom__Group_1__0 )? )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5672:1: ( rule__BasicPredicateAtom__Group_1__0 )?
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5669:1: ( ( rule__BasicPredicateAtom__Group_1__0 )? )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5670:1: ( rule__BasicPredicateAtom__Group_1__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBasicPredicateAtomAccess().getGroup_1()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5673:1: ( rule__BasicPredicateAtom__Group_1__0 )?
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5671:1: ( rule__BasicPredicateAtom__Group_1__0 )?
             int alt43=2;
             int LA43_0 = input.LA(1);
 
@@ -16786,9 +16796,9 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
             }
             switch (alt43) {
                 case 1 :
-                    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5673:2: rule__BasicPredicateAtom__Group_1__0
+                    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5671:2: rule__BasicPredicateAtom__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__BasicPredicateAtom__Group_1__0_in_rule__BasicPredicateAtom__Group__1__Impl11581);
+                    pushFollow(FOLLOW_rule__BasicPredicateAtom__Group_1__0_in_rule__BasicPredicateAtom__Group__1__Impl11579);
                     rule__BasicPredicateAtom__Group_1__0();
 
                     state._fsp--;
@@ -16824,21 +16834,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BasicPredicateAtom__Group_1__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5687:1: rule__BasicPredicateAtom__Group_1__0 : rule__BasicPredicateAtom__Group_1__0__Impl rule__BasicPredicateAtom__Group_1__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5685:1: rule__BasicPredicateAtom__Group_1__0 : rule__BasicPredicateAtom__Group_1__0__Impl rule__BasicPredicateAtom__Group_1__1 ;
     public final void rule__BasicPredicateAtom__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5691:1: ( rule__BasicPredicateAtom__Group_1__0__Impl rule__BasicPredicateAtom__Group_1__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5692:2: rule__BasicPredicateAtom__Group_1__0__Impl rule__BasicPredicateAtom__Group_1__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5689:1: ( rule__BasicPredicateAtom__Group_1__0__Impl rule__BasicPredicateAtom__Group_1__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5690:2: rule__BasicPredicateAtom__Group_1__0__Impl rule__BasicPredicateAtom__Group_1__1
             {
-            pushFollow(FOLLOW_rule__BasicPredicateAtom__Group_1__0__Impl_in_rule__BasicPredicateAtom__Group_1__011616);
+            pushFollow(FOLLOW_rule__BasicPredicateAtom__Group_1__0__Impl_in_rule__BasicPredicateAtom__Group_1__011614);
             rule__BasicPredicateAtom__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__BasicPredicateAtom__Group_1__1_in_rule__BasicPredicateAtom__Group_1__011619);
+            pushFollow(FOLLOW_rule__BasicPredicateAtom__Group_1__1_in_rule__BasicPredicateAtom__Group_1__011617);
             rule__BasicPredicateAtom__Group_1__1();
 
             state._fsp--;
@@ -16862,22 +16872,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BasicPredicateAtom__Group_1__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5699:1: rule__BasicPredicateAtom__Group_1__0__Impl : ( '(' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5697:1: rule__BasicPredicateAtom__Group_1__0__Impl : ( '(' ) ;
     public final void rule__BasicPredicateAtom__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5703:1: ( ( '(' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5704:1: ( '(' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5701:1: ( ( '(' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5702:1: ( '(' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5704:1: ( '(' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5705:1: '('
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5702:1: ( '(' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5703:1: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBasicPredicateAtomAccess().getLeftParenthesisKeyword_1_0()); 
             }
-            match(input,29,FOLLOW_29_in_rule__BasicPredicateAtom__Group_1__0__Impl11647); if (state.failed) return ;
+            match(input,29,FOLLOW_29_in_rule__BasicPredicateAtom__Group_1__0__Impl11645); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getBasicPredicateAtomAccess().getLeftParenthesisKeyword_1_0()); 
             }
@@ -16903,21 +16913,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BasicPredicateAtom__Group_1__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5718:1: rule__BasicPredicateAtom__Group_1__1 : rule__BasicPredicateAtom__Group_1__1__Impl rule__BasicPredicateAtom__Group_1__2 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5716:1: rule__BasicPredicateAtom__Group_1__1 : rule__BasicPredicateAtom__Group_1__1__Impl rule__BasicPredicateAtom__Group_1__2 ;
     public final void rule__BasicPredicateAtom__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5722:1: ( rule__BasicPredicateAtom__Group_1__1__Impl rule__BasicPredicateAtom__Group_1__2 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5723:2: rule__BasicPredicateAtom__Group_1__1__Impl rule__BasicPredicateAtom__Group_1__2
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5720:1: ( rule__BasicPredicateAtom__Group_1__1__Impl rule__BasicPredicateAtom__Group_1__2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5721:2: rule__BasicPredicateAtom__Group_1__1__Impl rule__BasicPredicateAtom__Group_1__2
             {
-            pushFollow(FOLLOW_rule__BasicPredicateAtom__Group_1__1__Impl_in_rule__BasicPredicateAtom__Group_1__111678);
+            pushFollow(FOLLOW_rule__BasicPredicateAtom__Group_1__1__Impl_in_rule__BasicPredicateAtom__Group_1__111676);
             rule__BasicPredicateAtom__Group_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__BasicPredicateAtom__Group_1__2_in_rule__BasicPredicateAtom__Group_1__111681);
+            pushFollow(FOLLOW_rule__BasicPredicateAtom__Group_1__2_in_rule__BasicPredicateAtom__Group_1__111679);
             rule__BasicPredicateAtom__Group_1__2();
 
             state._fsp--;
@@ -16941,25 +16951,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BasicPredicateAtom__Group_1__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5730:1: rule__BasicPredicateAtom__Group_1__1__Impl : ( ( rule__BasicPredicateAtom__TermsAssignment_1_1 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5728:1: rule__BasicPredicateAtom__Group_1__1__Impl : ( ( rule__BasicPredicateAtom__TermsAssignment_1_1 ) ) ;
     public final void rule__BasicPredicateAtom__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5734:1: ( ( ( rule__BasicPredicateAtom__TermsAssignment_1_1 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5735:1: ( ( rule__BasicPredicateAtom__TermsAssignment_1_1 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5732:1: ( ( ( rule__BasicPredicateAtom__TermsAssignment_1_1 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5733:1: ( ( rule__BasicPredicateAtom__TermsAssignment_1_1 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5735:1: ( ( rule__BasicPredicateAtom__TermsAssignment_1_1 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5736:1: ( rule__BasicPredicateAtom__TermsAssignment_1_1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5733:1: ( ( rule__BasicPredicateAtom__TermsAssignment_1_1 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5734:1: ( rule__BasicPredicateAtom__TermsAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBasicPredicateAtomAccess().getTermsAssignment_1_1()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5737:1: ( rule__BasicPredicateAtom__TermsAssignment_1_1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5737:2: rule__BasicPredicateAtom__TermsAssignment_1_1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5735:1: ( rule__BasicPredicateAtom__TermsAssignment_1_1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5735:2: rule__BasicPredicateAtom__TermsAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__BasicPredicateAtom__TermsAssignment_1_1_in_rule__BasicPredicateAtom__Group_1__1__Impl11708);
+            pushFollow(FOLLOW_rule__BasicPredicateAtom__TermsAssignment_1_1_in_rule__BasicPredicateAtom__Group_1__1__Impl11706);
             rule__BasicPredicateAtom__TermsAssignment_1_1();
 
             state._fsp--;
@@ -16992,16 +17002,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BasicPredicateAtom__Group_1__2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5747:1: rule__BasicPredicateAtom__Group_1__2 : rule__BasicPredicateAtom__Group_1__2__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5745:1: rule__BasicPredicateAtom__Group_1__2 : rule__BasicPredicateAtom__Group_1__2__Impl ;
     public final void rule__BasicPredicateAtom__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5751:1: ( rule__BasicPredicateAtom__Group_1__2__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5752:2: rule__BasicPredicateAtom__Group_1__2__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5749:1: ( rule__BasicPredicateAtom__Group_1__2__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5750:2: rule__BasicPredicateAtom__Group_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__BasicPredicateAtom__Group_1__2__Impl_in_rule__BasicPredicateAtom__Group_1__211738);
+            pushFollow(FOLLOW_rule__BasicPredicateAtom__Group_1__2__Impl_in_rule__BasicPredicateAtom__Group_1__211736);
             rule__BasicPredicateAtom__Group_1__2__Impl();
 
             state._fsp--;
@@ -17025,22 +17035,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BasicPredicateAtom__Group_1__2__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5758:1: rule__BasicPredicateAtom__Group_1__2__Impl : ( ')' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5756:1: rule__BasicPredicateAtom__Group_1__2__Impl : ( ')' ) ;
     public final void rule__BasicPredicateAtom__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5762:1: ( ( ')' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5763:1: ( ')' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5760:1: ( ( ')' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5761:1: ( ')' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5763:1: ( ')' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5764:1: ')'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5761:1: ( ')' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5762:1: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBasicPredicateAtomAccess().getRightParenthesisKeyword_1_2()); 
             }
-            match(input,30,FOLLOW_30_in_rule__BasicPredicateAtom__Group_1__2__Impl11766); if (state.failed) return ;
+            match(input,30,FOLLOW_30_in_rule__BasicPredicateAtom__Group_1__2__Impl11764); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getBasicPredicateAtomAccess().getRightParenthesisKeyword_1_2()); 
             }
@@ -17066,21 +17076,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BuiltInAtom__Group__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5783:1: rule__BuiltInAtom__Group__0 : rule__BuiltInAtom__Group__0__Impl rule__BuiltInAtom__Group__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5781:1: rule__BuiltInAtom__Group__0 : rule__BuiltInAtom__Group__0__Impl rule__BuiltInAtom__Group__1 ;
     public final void rule__BuiltInAtom__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5787:1: ( rule__BuiltInAtom__Group__0__Impl rule__BuiltInAtom__Group__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5788:2: rule__BuiltInAtom__Group__0__Impl rule__BuiltInAtom__Group__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5785:1: ( rule__BuiltInAtom__Group__0__Impl rule__BuiltInAtom__Group__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5786:2: rule__BuiltInAtom__Group__0__Impl rule__BuiltInAtom__Group__1
             {
-            pushFollow(FOLLOW_rule__BuiltInAtom__Group__0__Impl_in_rule__BuiltInAtom__Group__011803);
+            pushFollow(FOLLOW_rule__BuiltInAtom__Group__0__Impl_in_rule__BuiltInAtom__Group__011801);
             rule__BuiltInAtom__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__BuiltInAtom__Group__1_in_rule__BuiltInAtom__Group__011806);
+            pushFollow(FOLLOW_rule__BuiltInAtom__Group__1_in_rule__BuiltInAtom__Group__011804);
             rule__BuiltInAtom__Group__1();
 
             state._fsp--;
@@ -17104,25 +17114,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BuiltInAtom__Group__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5795:1: rule__BuiltInAtom__Group__0__Impl : ( ( rule__BuiltInAtom__LhsAssignment_0 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5793:1: rule__BuiltInAtom__Group__0__Impl : ( ( rule__BuiltInAtom__LhsAssignment_0 ) ) ;
     public final void rule__BuiltInAtom__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5799:1: ( ( ( rule__BuiltInAtom__LhsAssignment_0 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5800:1: ( ( rule__BuiltInAtom__LhsAssignment_0 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5797:1: ( ( ( rule__BuiltInAtom__LhsAssignment_0 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5798:1: ( ( rule__BuiltInAtom__LhsAssignment_0 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5800:1: ( ( rule__BuiltInAtom__LhsAssignment_0 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5801:1: ( rule__BuiltInAtom__LhsAssignment_0 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5798:1: ( ( rule__BuiltInAtom__LhsAssignment_0 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5799:1: ( rule__BuiltInAtom__LhsAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBuiltInAtomAccess().getLhsAssignment_0()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5802:1: ( rule__BuiltInAtom__LhsAssignment_0 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5802:2: rule__BuiltInAtom__LhsAssignment_0
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5800:1: ( rule__BuiltInAtom__LhsAssignment_0 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5800:2: rule__BuiltInAtom__LhsAssignment_0
             {
-            pushFollow(FOLLOW_rule__BuiltInAtom__LhsAssignment_0_in_rule__BuiltInAtom__Group__0__Impl11833);
+            pushFollow(FOLLOW_rule__BuiltInAtom__LhsAssignment_0_in_rule__BuiltInAtom__Group__0__Impl11831);
             rule__BuiltInAtom__LhsAssignment_0();
 
             state._fsp--;
@@ -17155,21 +17165,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BuiltInAtom__Group__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5812:1: rule__BuiltInAtom__Group__1 : rule__BuiltInAtom__Group__1__Impl rule__BuiltInAtom__Group__2 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5810:1: rule__BuiltInAtom__Group__1 : rule__BuiltInAtom__Group__1__Impl rule__BuiltInAtom__Group__2 ;
     public final void rule__BuiltInAtom__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5816:1: ( rule__BuiltInAtom__Group__1__Impl rule__BuiltInAtom__Group__2 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5817:2: rule__BuiltInAtom__Group__1__Impl rule__BuiltInAtom__Group__2
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5814:1: ( rule__BuiltInAtom__Group__1__Impl rule__BuiltInAtom__Group__2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5815:2: rule__BuiltInAtom__Group__1__Impl rule__BuiltInAtom__Group__2
             {
-            pushFollow(FOLLOW_rule__BuiltInAtom__Group__1__Impl_in_rule__BuiltInAtom__Group__111863);
+            pushFollow(FOLLOW_rule__BuiltInAtom__Group__1__Impl_in_rule__BuiltInAtom__Group__111861);
             rule__BuiltInAtom__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__BuiltInAtom__Group__2_in_rule__BuiltInAtom__Group__111866);
+            pushFollow(FOLLOW_rule__BuiltInAtom__Group__2_in_rule__BuiltInAtom__Group__111864);
             rule__BuiltInAtom__Group__2();
 
             state._fsp--;
@@ -17193,25 +17203,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BuiltInAtom__Group__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5824:1: rule__BuiltInAtom__Group__1__Impl : ( ( rule__BuiltInAtom__OpAssignment_1 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5822:1: rule__BuiltInAtom__Group__1__Impl : ( ( rule__BuiltInAtom__OpAssignment_1 ) ) ;
     public final void rule__BuiltInAtom__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5828:1: ( ( ( rule__BuiltInAtom__OpAssignment_1 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5829:1: ( ( rule__BuiltInAtom__OpAssignment_1 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5826:1: ( ( ( rule__BuiltInAtom__OpAssignment_1 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5827:1: ( ( rule__BuiltInAtom__OpAssignment_1 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5829:1: ( ( rule__BuiltInAtom__OpAssignment_1 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5830:1: ( rule__BuiltInAtom__OpAssignment_1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5827:1: ( ( rule__BuiltInAtom__OpAssignment_1 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5828:1: ( rule__BuiltInAtom__OpAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBuiltInAtomAccess().getOpAssignment_1()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5831:1: ( rule__BuiltInAtom__OpAssignment_1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5831:2: rule__BuiltInAtom__OpAssignment_1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5829:1: ( rule__BuiltInAtom__OpAssignment_1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5829:2: rule__BuiltInAtom__OpAssignment_1
             {
-            pushFollow(FOLLOW_rule__BuiltInAtom__OpAssignment_1_in_rule__BuiltInAtom__Group__1__Impl11893);
+            pushFollow(FOLLOW_rule__BuiltInAtom__OpAssignment_1_in_rule__BuiltInAtom__Group__1__Impl11891);
             rule__BuiltInAtom__OpAssignment_1();
 
             state._fsp--;
@@ -17244,16 +17254,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BuiltInAtom__Group__2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5841:1: rule__BuiltInAtom__Group__2 : rule__BuiltInAtom__Group__2__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5839:1: rule__BuiltInAtom__Group__2 : rule__BuiltInAtom__Group__2__Impl ;
     public final void rule__BuiltInAtom__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5845:1: ( rule__BuiltInAtom__Group__2__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5846:2: rule__BuiltInAtom__Group__2__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5843:1: ( rule__BuiltInAtom__Group__2__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5844:2: rule__BuiltInAtom__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__BuiltInAtom__Group__2__Impl_in_rule__BuiltInAtom__Group__211923);
+            pushFollow(FOLLOW_rule__BuiltInAtom__Group__2__Impl_in_rule__BuiltInAtom__Group__211921);
             rule__BuiltInAtom__Group__2__Impl();
 
             state._fsp--;
@@ -17277,25 +17287,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BuiltInAtom__Group__2__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5852:1: rule__BuiltInAtom__Group__2__Impl : ( ( rule__BuiltInAtom__RhsAssignment_2 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5850:1: rule__BuiltInAtom__Group__2__Impl : ( ( rule__BuiltInAtom__RhsAssignment_2 ) ) ;
     public final void rule__BuiltInAtom__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5856:1: ( ( ( rule__BuiltInAtom__RhsAssignment_2 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5857:1: ( ( rule__BuiltInAtom__RhsAssignment_2 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5854:1: ( ( ( rule__BuiltInAtom__RhsAssignment_2 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5855:1: ( ( rule__BuiltInAtom__RhsAssignment_2 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5857:1: ( ( rule__BuiltInAtom__RhsAssignment_2 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5858:1: ( rule__BuiltInAtom__RhsAssignment_2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5855:1: ( ( rule__BuiltInAtom__RhsAssignment_2 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5856:1: ( rule__BuiltInAtom__RhsAssignment_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBuiltInAtomAccess().getRhsAssignment_2()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5859:1: ( rule__BuiltInAtom__RhsAssignment_2 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5859:2: rule__BuiltInAtom__RhsAssignment_2
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5857:1: ( rule__BuiltInAtom__RhsAssignment_2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5857:2: rule__BuiltInAtom__RhsAssignment_2
             {
-            pushFollow(FOLLOW_rule__BuiltInAtom__RhsAssignment_2_in_rule__BuiltInAtom__Group__2__Impl11950);
+            pushFollow(FOLLOW_rule__BuiltInAtom__RhsAssignment_2_in_rule__BuiltInAtom__Group__2__Impl11948);
             rule__BuiltInAtom__RhsAssignment_2();
 
             state._fsp--;
@@ -17328,21 +17338,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrSentence__Group__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5875:1: rule__OrSentence__Group__0 : rule__OrSentence__Group__0__Impl rule__OrSentence__Group__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5873:1: rule__OrSentence__Group__0 : rule__OrSentence__Group__0__Impl rule__OrSentence__Group__1 ;
     public final void rule__OrSentence__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5879:1: ( rule__OrSentence__Group__0__Impl rule__OrSentence__Group__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5880:2: rule__OrSentence__Group__0__Impl rule__OrSentence__Group__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5877:1: ( rule__OrSentence__Group__0__Impl rule__OrSentence__Group__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5878:2: rule__OrSentence__Group__0__Impl rule__OrSentence__Group__1
             {
-            pushFollow(FOLLOW_rule__OrSentence__Group__0__Impl_in_rule__OrSentence__Group__011986);
+            pushFollow(FOLLOW_rule__OrSentence__Group__0__Impl_in_rule__OrSentence__Group__011984);
             rule__OrSentence__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__OrSentence__Group__1_in_rule__OrSentence__Group__011989);
+            pushFollow(FOLLOW_rule__OrSentence__Group__1_in_rule__OrSentence__Group__011987);
             rule__OrSentence__Group__1();
 
             state._fsp--;
@@ -17366,22 +17376,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrSentence__Group__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5887:1: rule__OrSentence__Group__0__Impl : ( ruleAndSentence ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5885:1: rule__OrSentence__Group__0__Impl : ( ruleAndSentence ) ;
     public final void rule__OrSentence__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5891:1: ( ( ruleAndSentence ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5892:1: ( ruleAndSentence )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5889:1: ( ( ruleAndSentence ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5890:1: ( ruleAndSentence )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5892:1: ( ruleAndSentence )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5893:1: ruleAndSentence
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5890:1: ( ruleAndSentence )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5891:1: ruleAndSentence
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOrSentenceAccess().getAndSentenceParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_ruleAndSentence_in_rule__OrSentence__Group__0__Impl12016);
+            pushFollow(FOLLOW_ruleAndSentence_in_rule__OrSentence__Group__0__Impl12014);
             ruleAndSentence();
 
             state._fsp--;
@@ -17411,16 +17421,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrSentence__Group__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5904:1: rule__OrSentence__Group__1 : rule__OrSentence__Group__1__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5902:1: rule__OrSentence__Group__1 : rule__OrSentence__Group__1__Impl ;
     public final void rule__OrSentence__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5908:1: ( rule__OrSentence__Group__1__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5909:2: rule__OrSentence__Group__1__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5906:1: ( rule__OrSentence__Group__1__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5907:2: rule__OrSentence__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__OrSentence__Group__1__Impl_in_rule__OrSentence__Group__112045);
+            pushFollow(FOLLOW_rule__OrSentence__Group__1__Impl_in_rule__OrSentence__Group__112043);
             rule__OrSentence__Group__1__Impl();
 
             state._fsp--;
@@ -17444,22 +17454,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrSentence__Group__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5915:1: rule__OrSentence__Group__1__Impl : ( ( rule__OrSentence__Group_1__0 )* ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5913:1: rule__OrSentence__Group__1__Impl : ( ( rule__OrSentence__Group_1__0 )* ) ;
     public final void rule__OrSentence__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5919:1: ( ( ( rule__OrSentence__Group_1__0 )* ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5920:1: ( ( rule__OrSentence__Group_1__0 )* )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5917:1: ( ( ( rule__OrSentence__Group_1__0 )* ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5918:1: ( ( rule__OrSentence__Group_1__0 )* )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5920:1: ( ( rule__OrSentence__Group_1__0 )* )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5921:1: ( rule__OrSentence__Group_1__0 )*
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5918:1: ( ( rule__OrSentence__Group_1__0 )* )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5919:1: ( rule__OrSentence__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOrSentenceAccess().getGroup_1()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5922:1: ( rule__OrSentence__Group_1__0 )*
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5920:1: ( rule__OrSentence__Group_1__0 )*
             loop44:
             do {
                 int alt44=2;
@@ -17472,9 +17482,9 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
                 switch (alt44) {
             	case 1 :
-            	    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5922:2: rule__OrSentence__Group_1__0
+            	    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5920:2: rule__OrSentence__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__OrSentence__Group_1__0_in_rule__OrSentence__Group__1__Impl12072);
+            	    pushFollow(FOLLOW_rule__OrSentence__Group_1__0_in_rule__OrSentence__Group__1__Impl12070);
             	    rule__OrSentence__Group_1__0();
 
             	    state._fsp--;
@@ -17513,21 +17523,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrSentence__Group_1__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5936:1: rule__OrSentence__Group_1__0 : rule__OrSentence__Group_1__0__Impl rule__OrSentence__Group_1__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5934:1: rule__OrSentence__Group_1__0 : rule__OrSentence__Group_1__0__Impl rule__OrSentence__Group_1__1 ;
     public final void rule__OrSentence__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5940:1: ( rule__OrSentence__Group_1__0__Impl rule__OrSentence__Group_1__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5941:2: rule__OrSentence__Group_1__0__Impl rule__OrSentence__Group_1__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5938:1: ( rule__OrSentence__Group_1__0__Impl rule__OrSentence__Group_1__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5939:2: rule__OrSentence__Group_1__0__Impl rule__OrSentence__Group_1__1
             {
-            pushFollow(FOLLOW_rule__OrSentence__Group_1__0__Impl_in_rule__OrSentence__Group_1__012107);
+            pushFollow(FOLLOW_rule__OrSentence__Group_1__0__Impl_in_rule__OrSentence__Group_1__012105);
             rule__OrSentence__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__OrSentence__Group_1__1_in_rule__OrSentence__Group_1__012110);
+            pushFollow(FOLLOW_rule__OrSentence__Group_1__1_in_rule__OrSentence__Group_1__012108);
             rule__OrSentence__Group_1__1();
 
             state._fsp--;
@@ -17551,23 +17561,23 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrSentence__Group_1__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5948:1: rule__OrSentence__Group_1__0__Impl : ( () ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5946:1: rule__OrSentence__Group_1__0__Impl : ( () ) ;
     public final void rule__OrSentence__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5952:1: ( ( () ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5953:1: ( () )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5950:1: ( ( () ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5951:1: ( () )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5953:1: ( () )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5954:1: ()
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5951:1: ( () )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5952:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOrSentenceAccess().getOrSentenceLeftAction_1_0()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5955:1: ()
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5957:1: 
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5953:1: ()
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5955:1: 
             {
             }
 
@@ -17592,21 +17602,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrSentence__Group_1__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5967:1: rule__OrSentence__Group_1__1 : rule__OrSentence__Group_1__1__Impl rule__OrSentence__Group_1__2 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5965:1: rule__OrSentence__Group_1__1 : rule__OrSentence__Group_1__1__Impl rule__OrSentence__Group_1__2 ;
     public final void rule__OrSentence__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5971:1: ( rule__OrSentence__Group_1__1__Impl rule__OrSentence__Group_1__2 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5972:2: rule__OrSentence__Group_1__1__Impl rule__OrSentence__Group_1__2
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5969:1: ( rule__OrSentence__Group_1__1__Impl rule__OrSentence__Group_1__2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5970:2: rule__OrSentence__Group_1__1__Impl rule__OrSentence__Group_1__2
             {
-            pushFollow(FOLLOW_rule__OrSentence__Group_1__1__Impl_in_rule__OrSentence__Group_1__112168);
+            pushFollow(FOLLOW_rule__OrSentence__Group_1__1__Impl_in_rule__OrSentence__Group_1__112166);
             rule__OrSentence__Group_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__OrSentence__Group_1__2_in_rule__OrSentence__Group_1__112171);
+            pushFollow(FOLLOW_rule__OrSentence__Group_1__2_in_rule__OrSentence__Group_1__112169);
             rule__OrSentence__Group_1__2();
 
             state._fsp--;
@@ -17630,22 +17640,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrSentence__Group_1__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5979:1: rule__OrSentence__Group_1__1__Impl : ( 'or' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5977:1: rule__OrSentence__Group_1__1__Impl : ( 'or' ) ;
     public final void rule__OrSentence__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5983:1: ( ( 'or' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5984:1: ( 'or' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5981:1: ( ( 'or' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5982:1: ( 'or' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5984:1: ( 'or' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5985:1: 'or'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5982:1: ( 'or' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5983:1: 'or'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOrSentenceAccess().getOrKeyword_1_1()); 
             }
-            match(input,38,FOLLOW_38_in_rule__OrSentence__Group_1__1__Impl12199); if (state.failed) return ;
+            match(input,38,FOLLOW_38_in_rule__OrSentence__Group_1__1__Impl12197); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getOrSentenceAccess().getOrKeyword_1_1()); 
             }
@@ -17671,16 +17681,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrSentence__Group_1__2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5998:1: rule__OrSentence__Group_1__2 : rule__OrSentence__Group_1__2__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:5996:1: rule__OrSentence__Group_1__2 : rule__OrSentence__Group_1__2__Impl ;
     public final void rule__OrSentence__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6002:1: ( rule__OrSentence__Group_1__2__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6003:2: rule__OrSentence__Group_1__2__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6000:1: ( rule__OrSentence__Group_1__2__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6001:2: rule__OrSentence__Group_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__OrSentence__Group_1__2__Impl_in_rule__OrSentence__Group_1__212230);
+            pushFollow(FOLLOW_rule__OrSentence__Group_1__2__Impl_in_rule__OrSentence__Group_1__212228);
             rule__OrSentence__Group_1__2__Impl();
 
             state._fsp--;
@@ -17704,25 +17714,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrSentence__Group_1__2__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6009:1: rule__OrSentence__Group_1__2__Impl : ( ( rule__OrSentence__RightAssignment_1_2 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6007:1: rule__OrSentence__Group_1__2__Impl : ( ( rule__OrSentence__RightAssignment_1_2 ) ) ;
     public final void rule__OrSentence__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6013:1: ( ( ( rule__OrSentence__RightAssignment_1_2 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6014:1: ( ( rule__OrSentence__RightAssignment_1_2 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6011:1: ( ( ( rule__OrSentence__RightAssignment_1_2 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6012:1: ( ( rule__OrSentence__RightAssignment_1_2 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6014:1: ( ( rule__OrSentence__RightAssignment_1_2 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6015:1: ( rule__OrSentence__RightAssignment_1_2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6012:1: ( ( rule__OrSentence__RightAssignment_1_2 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6013:1: ( rule__OrSentence__RightAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOrSentenceAccess().getRightAssignment_1_2()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6016:1: ( rule__OrSentence__RightAssignment_1_2 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6016:2: rule__OrSentence__RightAssignment_1_2
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6014:1: ( rule__OrSentence__RightAssignment_1_2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6014:2: rule__OrSentence__RightAssignment_1_2
             {
-            pushFollow(FOLLOW_rule__OrSentence__RightAssignment_1_2_in_rule__OrSentence__Group_1__2__Impl12257);
+            pushFollow(FOLLOW_rule__OrSentence__RightAssignment_1_2_in_rule__OrSentence__Group_1__2__Impl12255);
             rule__OrSentence__RightAssignment_1_2();
 
             state._fsp--;
@@ -17755,21 +17765,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AndSentence__Group__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6032:1: rule__AndSentence__Group__0 : rule__AndSentence__Group__0__Impl rule__AndSentence__Group__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6030:1: rule__AndSentence__Group__0 : rule__AndSentence__Group__0__Impl rule__AndSentence__Group__1 ;
     public final void rule__AndSentence__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6036:1: ( rule__AndSentence__Group__0__Impl rule__AndSentence__Group__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6037:2: rule__AndSentence__Group__0__Impl rule__AndSentence__Group__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6034:1: ( rule__AndSentence__Group__0__Impl rule__AndSentence__Group__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6035:2: rule__AndSentence__Group__0__Impl rule__AndSentence__Group__1
             {
-            pushFollow(FOLLOW_rule__AndSentence__Group__0__Impl_in_rule__AndSentence__Group__012293);
+            pushFollow(FOLLOW_rule__AndSentence__Group__0__Impl_in_rule__AndSentence__Group__012291);
             rule__AndSentence__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__AndSentence__Group__1_in_rule__AndSentence__Group__012296);
+            pushFollow(FOLLOW_rule__AndSentence__Group__1_in_rule__AndSentence__Group__012294);
             rule__AndSentence__Group__1();
 
             state._fsp--;
@@ -17793,22 +17803,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AndSentence__Group__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6044:1: rule__AndSentence__Group__0__Impl : ( ruleNotSentence ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6042:1: rule__AndSentence__Group__0__Impl : ( ruleNotSentence ) ;
     public final void rule__AndSentence__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6048:1: ( ( ruleNotSentence ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6049:1: ( ruleNotSentence )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6046:1: ( ( ruleNotSentence ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6047:1: ( ruleNotSentence )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6049:1: ( ruleNotSentence )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6050:1: ruleNotSentence
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6047:1: ( ruleNotSentence )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6048:1: ruleNotSentence
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndSentenceAccess().getNotSentenceParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_ruleNotSentence_in_rule__AndSentence__Group__0__Impl12323);
+            pushFollow(FOLLOW_ruleNotSentence_in_rule__AndSentence__Group__0__Impl12321);
             ruleNotSentence();
 
             state._fsp--;
@@ -17838,16 +17848,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AndSentence__Group__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6061:1: rule__AndSentence__Group__1 : rule__AndSentence__Group__1__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6059:1: rule__AndSentence__Group__1 : rule__AndSentence__Group__1__Impl ;
     public final void rule__AndSentence__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6065:1: ( rule__AndSentence__Group__1__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6066:2: rule__AndSentence__Group__1__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6063:1: ( rule__AndSentence__Group__1__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6064:2: rule__AndSentence__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__AndSentence__Group__1__Impl_in_rule__AndSentence__Group__112352);
+            pushFollow(FOLLOW_rule__AndSentence__Group__1__Impl_in_rule__AndSentence__Group__112350);
             rule__AndSentence__Group__1__Impl();
 
             state._fsp--;
@@ -17871,22 +17881,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AndSentence__Group__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6072:1: rule__AndSentence__Group__1__Impl : ( ( rule__AndSentence__Group_1__0 )* ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6070:1: rule__AndSentence__Group__1__Impl : ( ( rule__AndSentence__Group_1__0 )* ) ;
     public final void rule__AndSentence__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6076:1: ( ( ( rule__AndSentence__Group_1__0 )* ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6077:1: ( ( rule__AndSentence__Group_1__0 )* )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6074:1: ( ( ( rule__AndSentence__Group_1__0 )* ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6075:1: ( ( rule__AndSentence__Group_1__0 )* )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6077:1: ( ( rule__AndSentence__Group_1__0 )* )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6078:1: ( rule__AndSentence__Group_1__0 )*
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6075:1: ( ( rule__AndSentence__Group_1__0 )* )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6076:1: ( rule__AndSentence__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndSentenceAccess().getGroup_1()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6079:1: ( rule__AndSentence__Group_1__0 )*
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6077:1: ( rule__AndSentence__Group_1__0 )*
             loop45:
             do {
                 int alt45=2;
@@ -17899,9 +17909,9 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
                 switch (alt45) {
             	case 1 :
-            	    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6079:2: rule__AndSentence__Group_1__0
+            	    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6077:2: rule__AndSentence__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__AndSentence__Group_1__0_in_rule__AndSentence__Group__1__Impl12379);
+            	    pushFollow(FOLLOW_rule__AndSentence__Group_1__0_in_rule__AndSentence__Group__1__Impl12377);
             	    rule__AndSentence__Group_1__0();
 
             	    state._fsp--;
@@ -17940,21 +17950,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AndSentence__Group_1__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6093:1: rule__AndSentence__Group_1__0 : rule__AndSentence__Group_1__0__Impl rule__AndSentence__Group_1__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6091:1: rule__AndSentence__Group_1__0 : rule__AndSentence__Group_1__0__Impl rule__AndSentence__Group_1__1 ;
     public final void rule__AndSentence__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6097:1: ( rule__AndSentence__Group_1__0__Impl rule__AndSentence__Group_1__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6098:2: rule__AndSentence__Group_1__0__Impl rule__AndSentence__Group_1__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6095:1: ( rule__AndSentence__Group_1__0__Impl rule__AndSentence__Group_1__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6096:2: rule__AndSentence__Group_1__0__Impl rule__AndSentence__Group_1__1
             {
-            pushFollow(FOLLOW_rule__AndSentence__Group_1__0__Impl_in_rule__AndSentence__Group_1__012414);
+            pushFollow(FOLLOW_rule__AndSentence__Group_1__0__Impl_in_rule__AndSentence__Group_1__012412);
             rule__AndSentence__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__AndSentence__Group_1__1_in_rule__AndSentence__Group_1__012417);
+            pushFollow(FOLLOW_rule__AndSentence__Group_1__1_in_rule__AndSentence__Group_1__012415);
             rule__AndSentence__Group_1__1();
 
             state._fsp--;
@@ -17978,23 +17988,23 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AndSentence__Group_1__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6105:1: rule__AndSentence__Group_1__0__Impl : ( () ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6103:1: rule__AndSentence__Group_1__0__Impl : ( () ) ;
     public final void rule__AndSentence__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6109:1: ( ( () ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6110:1: ( () )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6107:1: ( ( () ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6108:1: ( () )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6110:1: ( () )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6111:1: ()
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6108:1: ( () )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6109:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndSentenceAccess().getAndSentenceLeftAction_1_0()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6112:1: ()
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6114:1: 
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6110:1: ()
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6112:1: 
             {
             }
 
@@ -18019,21 +18029,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AndSentence__Group_1__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6124:1: rule__AndSentence__Group_1__1 : rule__AndSentence__Group_1__1__Impl rule__AndSentence__Group_1__2 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6122:1: rule__AndSentence__Group_1__1 : rule__AndSentence__Group_1__1__Impl rule__AndSentence__Group_1__2 ;
     public final void rule__AndSentence__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6128:1: ( rule__AndSentence__Group_1__1__Impl rule__AndSentence__Group_1__2 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6129:2: rule__AndSentence__Group_1__1__Impl rule__AndSentence__Group_1__2
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6126:1: ( rule__AndSentence__Group_1__1__Impl rule__AndSentence__Group_1__2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6127:2: rule__AndSentence__Group_1__1__Impl rule__AndSentence__Group_1__2
             {
-            pushFollow(FOLLOW_rule__AndSentence__Group_1__1__Impl_in_rule__AndSentence__Group_1__112475);
+            pushFollow(FOLLOW_rule__AndSentence__Group_1__1__Impl_in_rule__AndSentence__Group_1__112473);
             rule__AndSentence__Group_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__AndSentence__Group_1__2_in_rule__AndSentence__Group_1__112478);
+            pushFollow(FOLLOW_rule__AndSentence__Group_1__2_in_rule__AndSentence__Group_1__112476);
             rule__AndSentence__Group_1__2();
 
             state._fsp--;
@@ -18057,25 +18067,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AndSentence__Group_1__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6136:1: rule__AndSentence__Group_1__1__Impl : ( ( rule__AndSentence__Alternatives_1_1 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6134:1: rule__AndSentence__Group_1__1__Impl : ( ( rule__AndSentence__Alternatives_1_1 ) ) ;
     public final void rule__AndSentence__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6140:1: ( ( ( rule__AndSentence__Alternatives_1_1 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6141:1: ( ( rule__AndSentence__Alternatives_1_1 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6138:1: ( ( ( rule__AndSentence__Alternatives_1_1 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6139:1: ( ( rule__AndSentence__Alternatives_1_1 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6141:1: ( ( rule__AndSentence__Alternatives_1_1 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6142:1: ( rule__AndSentence__Alternatives_1_1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6139:1: ( ( rule__AndSentence__Alternatives_1_1 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6140:1: ( rule__AndSentence__Alternatives_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndSentenceAccess().getAlternatives_1_1()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6143:1: ( rule__AndSentence__Alternatives_1_1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6143:2: rule__AndSentence__Alternatives_1_1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6141:1: ( rule__AndSentence__Alternatives_1_1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6141:2: rule__AndSentence__Alternatives_1_1
             {
-            pushFollow(FOLLOW_rule__AndSentence__Alternatives_1_1_in_rule__AndSentence__Group_1__1__Impl12505);
+            pushFollow(FOLLOW_rule__AndSentence__Alternatives_1_1_in_rule__AndSentence__Group_1__1__Impl12503);
             rule__AndSentence__Alternatives_1_1();
 
             state._fsp--;
@@ -18108,16 +18118,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AndSentence__Group_1__2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6153:1: rule__AndSentence__Group_1__2 : rule__AndSentence__Group_1__2__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6151:1: rule__AndSentence__Group_1__2 : rule__AndSentence__Group_1__2__Impl ;
     public final void rule__AndSentence__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6157:1: ( rule__AndSentence__Group_1__2__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6158:2: rule__AndSentence__Group_1__2__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6155:1: ( rule__AndSentence__Group_1__2__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6156:2: rule__AndSentence__Group_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__AndSentence__Group_1__2__Impl_in_rule__AndSentence__Group_1__212535);
+            pushFollow(FOLLOW_rule__AndSentence__Group_1__2__Impl_in_rule__AndSentence__Group_1__212533);
             rule__AndSentence__Group_1__2__Impl();
 
             state._fsp--;
@@ -18141,25 +18151,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AndSentence__Group_1__2__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6164:1: rule__AndSentence__Group_1__2__Impl : ( ( rule__AndSentence__RightAssignment_1_2 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6162:1: rule__AndSentence__Group_1__2__Impl : ( ( rule__AndSentence__RightAssignment_1_2 ) ) ;
     public final void rule__AndSentence__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6168:1: ( ( ( rule__AndSentence__RightAssignment_1_2 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6169:1: ( ( rule__AndSentence__RightAssignment_1_2 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6166:1: ( ( ( rule__AndSentence__RightAssignment_1_2 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6167:1: ( ( rule__AndSentence__RightAssignment_1_2 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6169:1: ( ( rule__AndSentence__RightAssignment_1_2 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6170:1: ( rule__AndSentence__RightAssignment_1_2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6167:1: ( ( rule__AndSentence__RightAssignment_1_2 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6168:1: ( rule__AndSentence__RightAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndSentenceAccess().getRightAssignment_1_2()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6171:1: ( rule__AndSentence__RightAssignment_1_2 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6171:2: rule__AndSentence__RightAssignment_1_2
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6169:1: ( rule__AndSentence__RightAssignment_1_2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6169:2: rule__AndSentence__RightAssignment_1_2
             {
-            pushFollow(FOLLOW_rule__AndSentence__RightAssignment_1_2_in_rule__AndSentence__Group_1__2__Impl12562);
+            pushFollow(FOLLOW_rule__AndSentence__RightAssignment_1_2_in_rule__AndSentence__Group_1__2__Impl12560);
             rule__AndSentence__RightAssignment_1_2();
 
             state._fsp--;
@@ -18192,21 +18202,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NotSentence__Group_1__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6187:1: rule__NotSentence__Group_1__0 : rule__NotSentence__Group_1__0__Impl rule__NotSentence__Group_1__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6185:1: rule__NotSentence__Group_1__0 : rule__NotSentence__Group_1__0__Impl rule__NotSentence__Group_1__1 ;
     public final void rule__NotSentence__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6191:1: ( rule__NotSentence__Group_1__0__Impl rule__NotSentence__Group_1__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6192:2: rule__NotSentence__Group_1__0__Impl rule__NotSentence__Group_1__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6189:1: ( rule__NotSentence__Group_1__0__Impl rule__NotSentence__Group_1__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6190:2: rule__NotSentence__Group_1__0__Impl rule__NotSentence__Group_1__1
             {
-            pushFollow(FOLLOW_rule__NotSentence__Group_1__0__Impl_in_rule__NotSentence__Group_1__012598);
+            pushFollow(FOLLOW_rule__NotSentence__Group_1__0__Impl_in_rule__NotSentence__Group_1__012596);
             rule__NotSentence__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__NotSentence__Group_1__1_in_rule__NotSentence__Group_1__012601);
+            pushFollow(FOLLOW_rule__NotSentence__Group_1__1_in_rule__NotSentence__Group_1__012599);
             rule__NotSentence__Group_1__1();
 
             state._fsp--;
@@ -18230,22 +18240,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NotSentence__Group_1__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6199:1: rule__NotSentence__Group_1__0__Impl : ( 'not' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6197:1: rule__NotSentence__Group_1__0__Impl : ( 'not' ) ;
     public final void rule__NotSentence__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6203:1: ( ( 'not' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6204:1: ( 'not' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6201:1: ( ( 'not' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6202:1: ( 'not' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6204:1: ( 'not' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6205:1: 'not'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6202:1: ( 'not' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6203:1: 'not'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNotSentenceAccess().getNotKeyword_1_0()); 
             }
-            match(input,39,FOLLOW_39_in_rule__NotSentence__Group_1__0__Impl12629); if (state.failed) return ;
+            match(input,39,FOLLOW_39_in_rule__NotSentence__Group_1__0__Impl12627); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNotSentenceAccess().getNotKeyword_1_0()); 
             }
@@ -18271,16 +18281,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NotSentence__Group_1__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6218:1: rule__NotSentence__Group_1__1 : rule__NotSentence__Group_1__1__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6216:1: rule__NotSentence__Group_1__1 : rule__NotSentence__Group_1__1__Impl ;
     public final void rule__NotSentence__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6222:1: ( rule__NotSentence__Group_1__1__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6223:2: rule__NotSentence__Group_1__1__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6220:1: ( rule__NotSentence__Group_1__1__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6221:2: rule__NotSentence__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__NotSentence__Group_1__1__Impl_in_rule__NotSentence__Group_1__112660);
+            pushFollow(FOLLOW_rule__NotSentence__Group_1__1__Impl_in_rule__NotSentence__Group_1__112658);
             rule__NotSentence__Group_1__1__Impl();
 
             state._fsp--;
@@ -18304,22 +18314,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NotSentence__Group_1__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6229:1: rule__NotSentence__Group_1__1__Impl : ( rulePrimarySentence ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6227:1: rule__NotSentence__Group_1__1__Impl : ( rulePrimarySentence ) ;
     public final void rule__NotSentence__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6233:1: ( ( rulePrimarySentence ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6234:1: ( rulePrimarySentence )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6231:1: ( ( rulePrimarySentence ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6232:1: ( rulePrimarySentence )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6234:1: ( rulePrimarySentence )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6235:1: rulePrimarySentence
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6232:1: ( rulePrimarySentence )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6233:1: rulePrimarySentence
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNotSentenceAccess().getPrimarySentenceParserRuleCall_1_1()); 
             }
-            pushFollow(FOLLOW_rulePrimarySentence_in_rule__NotSentence__Group_1__1__Impl12687);
+            pushFollow(FOLLOW_rulePrimarySentence_in_rule__NotSentence__Group_1__1__Impl12685);
             rulePrimarySentence();
 
             state._fsp--;
@@ -18349,21 +18359,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimarySentence__Group_1__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6250:1: rule__PrimarySentence__Group_1__0 : rule__PrimarySentence__Group_1__0__Impl rule__PrimarySentence__Group_1__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6248:1: rule__PrimarySentence__Group_1__0 : rule__PrimarySentence__Group_1__0__Impl rule__PrimarySentence__Group_1__1 ;
     public final void rule__PrimarySentence__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6254:1: ( rule__PrimarySentence__Group_1__0__Impl rule__PrimarySentence__Group_1__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6255:2: rule__PrimarySentence__Group_1__0__Impl rule__PrimarySentence__Group_1__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6252:1: ( rule__PrimarySentence__Group_1__0__Impl rule__PrimarySentence__Group_1__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6253:2: rule__PrimarySentence__Group_1__0__Impl rule__PrimarySentence__Group_1__1
             {
-            pushFollow(FOLLOW_rule__PrimarySentence__Group_1__0__Impl_in_rule__PrimarySentence__Group_1__012720);
+            pushFollow(FOLLOW_rule__PrimarySentence__Group_1__0__Impl_in_rule__PrimarySentence__Group_1__012718);
             rule__PrimarySentence__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__PrimarySentence__Group_1__1_in_rule__PrimarySentence__Group_1__012723);
+            pushFollow(FOLLOW_rule__PrimarySentence__Group_1__1_in_rule__PrimarySentence__Group_1__012721);
             rule__PrimarySentence__Group_1__1();
 
             state._fsp--;
@@ -18387,22 +18397,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimarySentence__Group_1__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6262:1: rule__PrimarySentence__Group_1__0__Impl : ( '(' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6260:1: rule__PrimarySentence__Group_1__0__Impl : ( '(' ) ;
     public final void rule__PrimarySentence__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6266:1: ( ( '(' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6267:1: ( '(' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6264:1: ( ( '(' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6265:1: ( '(' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6267:1: ( '(' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6268:1: '('
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6265:1: ( '(' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6266:1: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimarySentenceAccess().getLeftParenthesisKeyword_1_0()); 
             }
-            match(input,29,FOLLOW_29_in_rule__PrimarySentence__Group_1__0__Impl12751); if (state.failed) return ;
+            match(input,29,FOLLOW_29_in_rule__PrimarySentence__Group_1__0__Impl12749); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimarySentenceAccess().getLeftParenthesisKeyword_1_0()); 
             }
@@ -18428,21 +18438,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimarySentence__Group_1__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6281:1: rule__PrimarySentence__Group_1__1 : rule__PrimarySentence__Group_1__1__Impl rule__PrimarySentence__Group_1__2 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6279:1: rule__PrimarySentence__Group_1__1 : rule__PrimarySentence__Group_1__1__Impl rule__PrimarySentence__Group_1__2 ;
     public final void rule__PrimarySentence__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6285:1: ( rule__PrimarySentence__Group_1__1__Impl rule__PrimarySentence__Group_1__2 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6286:2: rule__PrimarySentence__Group_1__1__Impl rule__PrimarySentence__Group_1__2
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6283:1: ( rule__PrimarySentence__Group_1__1__Impl rule__PrimarySentence__Group_1__2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6284:2: rule__PrimarySentence__Group_1__1__Impl rule__PrimarySentence__Group_1__2
             {
-            pushFollow(FOLLOW_rule__PrimarySentence__Group_1__1__Impl_in_rule__PrimarySentence__Group_1__112782);
+            pushFollow(FOLLOW_rule__PrimarySentence__Group_1__1__Impl_in_rule__PrimarySentence__Group_1__112780);
             rule__PrimarySentence__Group_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__PrimarySentence__Group_1__2_in_rule__PrimarySentence__Group_1__112785);
+            pushFollow(FOLLOW_rule__PrimarySentence__Group_1__2_in_rule__PrimarySentence__Group_1__112783);
             rule__PrimarySentence__Group_1__2();
 
             state._fsp--;
@@ -18466,22 +18476,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimarySentence__Group_1__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6293:1: rule__PrimarySentence__Group_1__1__Impl : ( ruleOrSentence ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6291:1: rule__PrimarySentence__Group_1__1__Impl : ( ruleOrSentence ) ;
     public final void rule__PrimarySentence__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6297:1: ( ( ruleOrSentence ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6298:1: ( ruleOrSentence )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6295:1: ( ( ruleOrSentence ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6296:1: ( ruleOrSentence )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6298:1: ( ruleOrSentence )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6299:1: ruleOrSentence
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6296:1: ( ruleOrSentence )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6297:1: ruleOrSentence
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimarySentenceAccess().getOrSentenceParserRuleCall_1_1()); 
             }
-            pushFollow(FOLLOW_ruleOrSentence_in_rule__PrimarySentence__Group_1__1__Impl12812);
+            pushFollow(FOLLOW_ruleOrSentence_in_rule__PrimarySentence__Group_1__1__Impl12810);
             ruleOrSentence();
 
             state._fsp--;
@@ -18511,16 +18521,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimarySentence__Group_1__2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6310:1: rule__PrimarySentence__Group_1__2 : rule__PrimarySentence__Group_1__2__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6308:1: rule__PrimarySentence__Group_1__2 : rule__PrimarySentence__Group_1__2__Impl ;
     public final void rule__PrimarySentence__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6314:1: ( rule__PrimarySentence__Group_1__2__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6315:2: rule__PrimarySentence__Group_1__2__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6312:1: ( rule__PrimarySentence__Group_1__2__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6313:2: rule__PrimarySentence__Group_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__PrimarySentence__Group_1__2__Impl_in_rule__PrimarySentence__Group_1__212841);
+            pushFollow(FOLLOW_rule__PrimarySentence__Group_1__2__Impl_in_rule__PrimarySentence__Group_1__212839);
             rule__PrimarySentence__Group_1__2__Impl();
 
             state._fsp--;
@@ -18544,22 +18554,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimarySentence__Group_1__2__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6321:1: rule__PrimarySentence__Group_1__2__Impl : ( ')' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6319:1: rule__PrimarySentence__Group_1__2__Impl : ( ')' ) ;
     public final void rule__PrimarySentence__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6325:1: ( ( ')' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6326:1: ( ')' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6323:1: ( ( ')' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6324:1: ( ')' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6326:1: ( ')' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6327:1: ')'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6324:1: ( ')' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6325:1: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimarySentenceAccess().getRightParenthesisKeyword_1_2()); 
             }
-            match(input,30,FOLLOW_30_in_rule__PrimarySentence__Group_1__2__Impl12869); if (state.failed) return ;
+            match(input,30,FOLLOW_30_in_rule__PrimarySentence__Group_1__2__Impl12867); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimarySentenceAccess().getRightParenthesisKeyword_1_2()); 
             }
@@ -18585,21 +18595,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__POrSentence__Group__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6346:1: rule__POrSentence__Group__0 : rule__POrSentence__Group__0__Impl rule__POrSentence__Group__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6344:1: rule__POrSentence__Group__0 : rule__POrSentence__Group__0__Impl rule__POrSentence__Group__1 ;
     public final void rule__POrSentence__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6350:1: ( rule__POrSentence__Group__0__Impl rule__POrSentence__Group__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6351:2: rule__POrSentence__Group__0__Impl rule__POrSentence__Group__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6348:1: ( rule__POrSentence__Group__0__Impl rule__POrSentence__Group__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6349:2: rule__POrSentence__Group__0__Impl rule__POrSentence__Group__1
             {
-            pushFollow(FOLLOW_rule__POrSentence__Group__0__Impl_in_rule__POrSentence__Group__012906);
+            pushFollow(FOLLOW_rule__POrSentence__Group__0__Impl_in_rule__POrSentence__Group__012904);
             rule__POrSentence__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__POrSentence__Group__1_in_rule__POrSentence__Group__012909);
+            pushFollow(FOLLOW_rule__POrSentence__Group__1_in_rule__POrSentence__Group__012907);
             rule__POrSentence__Group__1();
 
             state._fsp--;
@@ -18623,22 +18633,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__POrSentence__Group__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6358:1: rule__POrSentence__Group__0__Impl : ( rulepAndSentence ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6356:1: rule__POrSentence__Group__0__Impl : ( rulepAndSentence ) ;
     public final void rule__POrSentence__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6362:1: ( ( rulepAndSentence ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6363:1: ( rulepAndSentence )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6360:1: ( ( rulepAndSentence ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6361:1: ( rulepAndSentence )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6363:1: ( rulepAndSentence )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6364:1: rulepAndSentence
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6361:1: ( rulepAndSentence )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6362:1: rulepAndSentence
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPOrSentenceAccess().getPAndSentenceParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_rulepAndSentence_in_rule__POrSentence__Group__0__Impl12936);
+            pushFollow(FOLLOW_rulepAndSentence_in_rule__POrSentence__Group__0__Impl12934);
             rulepAndSentence();
 
             state._fsp--;
@@ -18668,16 +18678,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__POrSentence__Group__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6375:1: rule__POrSentence__Group__1 : rule__POrSentence__Group__1__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6373:1: rule__POrSentence__Group__1 : rule__POrSentence__Group__1__Impl ;
     public final void rule__POrSentence__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6379:1: ( rule__POrSentence__Group__1__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6380:2: rule__POrSentence__Group__1__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6377:1: ( rule__POrSentence__Group__1__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6378:2: rule__POrSentence__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__POrSentence__Group__1__Impl_in_rule__POrSentence__Group__112965);
+            pushFollow(FOLLOW_rule__POrSentence__Group__1__Impl_in_rule__POrSentence__Group__112963);
             rule__POrSentence__Group__1__Impl();
 
             state._fsp--;
@@ -18701,22 +18711,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__POrSentence__Group__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6386:1: rule__POrSentence__Group__1__Impl : ( ( rule__POrSentence__Group_1__0 )* ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6384:1: rule__POrSentence__Group__1__Impl : ( ( rule__POrSentence__Group_1__0 )* ) ;
     public final void rule__POrSentence__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6390:1: ( ( ( rule__POrSentence__Group_1__0 )* ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6391:1: ( ( rule__POrSentence__Group_1__0 )* )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6388:1: ( ( ( rule__POrSentence__Group_1__0 )* ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6389:1: ( ( rule__POrSentence__Group_1__0 )* )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6391:1: ( ( rule__POrSentence__Group_1__0 )* )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6392:1: ( rule__POrSentence__Group_1__0 )*
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6389:1: ( ( rule__POrSentence__Group_1__0 )* )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6390:1: ( rule__POrSentence__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPOrSentenceAccess().getGroup_1()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6393:1: ( rule__POrSentence__Group_1__0 )*
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6391:1: ( rule__POrSentence__Group_1__0 )*
             loop46:
             do {
                 int alt46=2;
@@ -18729,9 +18739,9 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
                 switch (alt46) {
             	case 1 :
-            	    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6393:2: rule__POrSentence__Group_1__0
+            	    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6391:2: rule__POrSentence__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__POrSentence__Group_1__0_in_rule__POrSentence__Group__1__Impl12992);
+            	    pushFollow(FOLLOW_rule__POrSentence__Group_1__0_in_rule__POrSentence__Group__1__Impl12990);
             	    rule__POrSentence__Group_1__0();
 
             	    state._fsp--;
@@ -18770,21 +18780,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__POrSentence__Group_1__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6407:1: rule__POrSentence__Group_1__0 : rule__POrSentence__Group_1__0__Impl rule__POrSentence__Group_1__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6405:1: rule__POrSentence__Group_1__0 : rule__POrSentence__Group_1__0__Impl rule__POrSentence__Group_1__1 ;
     public final void rule__POrSentence__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6411:1: ( rule__POrSentence__Group_1__0__Impl rule__POrSentence__Group_1__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6412:2: rule__POrSentence__Group_1__0__Impl rule__POrSentence__Group_1__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6409:1: ( rule__POrSentence__Group_1__0__Impl rule__POrSentence__Group_1__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6410:2: rule__POrSentence__Group_1__0__Impl rule__POrSentence__Group_1__1
             {
-            pushFollow(FOLLOW_rule__POrSentence__Group_1__0__Impl_in_rule__POrSentence__Group_1__013027);
+            pushFollow(FOLLOW_rule__POrSentence__Group_1__0__Impl_in_rule__POrSentence__Group_1__013025);
             rule__POrSentence__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__POrSentence__Group_1__1_in_rule__POrSentence__Group_1__013030);
+            pushFollow(FOLLOW_rule__POrSentence__Group_1__1_in_rule__POrSentence__Group_1__013028);
             rule__POrSentence__Group_1__1();
 
             state._fsp--;
@@ -18808,23 +18818,23 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__POrSentence__Group_1__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6419:1: rule__POrSentence__Group_1__0__Impl : ( () ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6417:1: rule__POrSentence__Group_1__0__Impl : ( () ) ;
     public final void rule__POrSentence__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6423:1: ( ( () ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6424:1: ( () )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6421:1: ( ( () ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6422:1: ( () )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6424:1: ( () )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6425:1: ()
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6422:1: ( () )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6423:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPOrSentenceAccess().getPOrSentenceLeftAction_1_0()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6426:1: ()
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6428:1: 
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6424:1: ()
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6426:1: 
             {
             }
 
@@ -18849,21 +18859,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__POrSentence__Group_1__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6438:1: rule__POrSentence__Group_1__1 : rule__POrSentence__Group_1__1__Impl rule__POrSentence__Group_1__2 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6436:1: rule__POrSentence__Group_1__1 : rule__POrSentence__Group_1__1__Impl rule__POrSentence__Group_1__2 ;
     public final void rule__POrSentence__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6442:1: ( rule__POrSentence__Group_1__1__Impl rule__POrSentence__Group_1__2 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6443:2: rule__POrSentence__Group_1__1__Impl rule__POrSentence__Group_1__2
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6440:1: ( rule__POrSentence__Group_1__1__Impl rule__POrSentence__Group_1__2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6441:2: rule__POrSentence__Group_1__1__Impl rule__POrSentence__Group_1__2
             {
-            pushFollow(FOLLOW_rule__POrSentence__Group_1__1__Impl_in_rule__POrSentence__Group_1__113088);
+            pushFollow(FOLLOW_rule__POrSentence__Group_1__1__Impl_in_rule__POrSentence__Group_1__113086);
             rule__POrSentence__Group_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__POrSentence__Group_1__2_in_rule__POrSentence__Group_1__113091);
+            pushFollow(FOLLOW_rule__POrSentence__Group_1__2_in_rule__POrSentence__Group_1__113089);
             rule__POrSentence__Group_1__2();
 
             state._fsp--;
@@ -18887,22 +18897,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__POrSentence__Group_1__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6450:1: rule__POrSentence__Group_1__1__Impl : ( 'or' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6448:1: rule__POrSentence__Group_1__1__Impl : ( 'or' ) ;
     public final void rule__POrSentence__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6454:1: ( ( 'or' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6455:1: ( 'or' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6452:1: ( ( 'or' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6453:1: ( 'or' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6455:1: ( 'or' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6456:1: 'or'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6453:1: ( 'or' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6454:1: 'or'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPOrSentenceAccess().getOrKeyword_1_1()); 
             }
-            match(input,38,FOLLOW_38_in_rule__POrSentence__Group_1__1__Impl13119); if (state.failed) return ;
+            match(input,38,FOLLOW_38_in_rule__POrSentence__Group_1__1__Impl13117); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPOrSentenceAccess().getOrKeyword_1_1()); 
             }
@@ -18928,16 +18938,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__POrSentence__Group_1__2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6469:1: rule__POrSentence__Group_1__2 : rule__POrSentence__Group_1__2__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6467:1: rule__POrSentence__Group_1__2 : rule__POrSentence__Group_1__2__Impl ;
     public final void rule__POrSentence__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6473:1: ( rule__POrSentence__Group_1__2__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6474:2: rule__POrSentence__Group_1__2__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6471:1: ( rule__POrSentence__Group_1__2__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6472:2: rule__POrSentence__Group_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__POrSentence__Group_1__2__Impl_in_rule__POrSentence__Group_1__213150);
+            pushFollow(FOLLOW_rule__POrSentence__Group_1__2__Impl_in_rule__POrSentence__Group_1__213148);
             rule__POrSentence__Group_1__2__Impl();
 
             state._fsp--;
@@ -18961,25 +18971,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__POrSentence__Group_1__2__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6480:1: rule__POrSentence__Group_1__2__Impl : ( ( rule__POrSentence__RightAssignment_1_2 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6478:1: rule__POrSentence__Group_1__2__Impl : ( ( rule__POrSentence__RightAssignment_1_2 ) ) ;
     public final void rule__POrSentence__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6484:1: ( ( ( rule__POrSentence__RightAssignment_1_2 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6485:1: ( ( rule__POrSentence__RightAssignment_1_2 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6482:1: ( ( ( rule__POrSentence__RightAssignment_1_2 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6483:1: ( ( rule__POrSentence__RightAssignment_1_2 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6485:1: ( ( rule__POrSentence__RightAssignment_1_2 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6486:1: ( rule__POrSentence__RightAssignment_1_2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6483:1: ( ( rule__POrSentence__RightAssignment_1_2 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6484:1: ( rule__POrSentence__RightAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPOrSentenceAccess().getRightAssignment_1_2()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6487:1: ( rule__POrSentence__RightAssignment_1_2 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6487:2: rule__POrSentence__RightAssignment_1_2
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6485:1: ( rule__POrSentence__RightAssignment_1_2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6485:2: rule__POrSentence__RightAssignment_1_2
             {
-            pushFollow(FOLLOW_rule__POrSentence__RightAssignment_1_2_in_rule__POrSentence__Group_1__2__Impl13177);
+            pushFollow(FOLLOW_rule__POrSentence__RightAssignment_1_2_in_rule__POrSentence__Group_1__2__Impl13175);
             rule__POrSentence__RightAssignment_1_2();
 
             state._fsp--;
@@ -19012,21 +19022,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PAndSentence__Group__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6503:1: rule__PAndSentence__Group__0 : rule__PAndSentence__Group__0__Impl rule__PAndSentence__Group__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6501:1: rule__PAndSentence__Group__0 : rule__PAndSentence__Group__0__Impl rule__PAndSentence__Group__1 ;
     public final void rule__PAndSentence__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6507:1: ( rule__PAndSentence__Group__0__Impl rule__PAndSentence__Group__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6508:2: rule__PAndSentence__Group__0__Impl rule__PAndSentence__Group__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6505:1: ( rule__PAndSentence__Group__0__Impl rule__PAndSentence__Group__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6506:2: rule__PAndSentence__Group__0__Impl rule__PAndSentence__Group__1
             {
-            pushFollow(FOLLOW_rule__PAndSentence__Group__0__Impl_in_rule__PAndSentence__Group__013213);
+            pushFollow(FOLLOW_rule__PAndSentence__Group__0__Impl_in_rule__PAndSentence__Group__013211);
             rule__PAndSentence__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__PAndSentence__Group__1_in_rule__PAndSentence__Group__013216);
+            pushFollow(FOLLOW_rule__PAndSentence__Group__1_in_rule__PAndSentence__Group__013214);
             rule__PAndSentence__Group__1();
 
             state._fsp--;
@@ -19050,22 +19060,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PAndSentence__Group__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6515:1: rule__PAndSentence__Group__0__Impl : ( rulepNotSentence ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6513:1: rule__PAndSentence__Group__0__Impl : ( rulepNotSentence ) ;
     public final void rule__PAndSentence__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6519:1: ( ( rulepNotSentence ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6520:1: ( rulepNotSentence )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6517:1: ( ( rulepNotSentence ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6518:1: ( rulepNotSentence )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6520:1: ( rulepNotSentence )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6521:1: rulepNotSentence
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6518:1: ( rulepNotSentence )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6519:1: rulepNotSentence
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPAndSentenceAccess().getPNotSentenceParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_rulepNotSentence_in_rule__PAndSentence__Group__0__Impl13243);
+            pushFollow(FOLLOW_rulepNotSentence_in_rule__PAndSentence__Group__0__Impl13241);
             rulepNotSentence();
 
             state._fsp--;
@@ -19095,16 +19105,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PAndSentence__Group__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6532:1: rule__PAndSentence__Group__1 : rule__PAndSentence__Group__1__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6530:1: rule__PAndSentence__Group__1 : rule__PAndSentence__Group__1__Impl ;
     public final void rule__PAndSentence__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6536:1: ( rule__PAndSentence__Group__1__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6537:2: rule__PAndSentence__Group__1__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6534:1: ( rule__PAndSentence__Group__1__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6535:2: rule__PAndSentence__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__PAndSentence__Group__1__Impl_in_rule__PAndSentence__Group__113272);
+            pushFollow(FOLLOW_rule__PAndSentence__Group__1__Impl_in_rule__PAndSentence__Group__113270);
             rule__PAndSentence__Group__1__Impl();
 
             state._fsp--;
@@ -19128,22 +19138,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PAndSentence__Group__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6543:1: rule__PAndSentence__Group__1__Impl : ( ( rule__PAndSentence__Group_1__0 )* ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6541:1: rule__PAndSentence__Group__1__Impl : ( ( rule__PAndSentence__Group_1__0 )* ) ;
     public final void rule__PAndSentence__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6547:1: ( ( ( rule__PAndSentence__Group_1__0 )* ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6548:1: ( ( rule__PAndSentence__Group_1__0 )* )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6545:1: ( ( ( rule__PAndSentence__Group_1__0 )* ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6546:1: ( ( rule__PAndSentence__Group_1__0 )* )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6548:1: ( ( rule__PAndSentence__Group_1__0 )* )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6549:1: ( rule__PAndSentence__Group_1__0 )*
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6546:1: ( ( rule__PAndSentence__Group_1__0 )* )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6547:1: ( rule__PAndSentence__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPAndSentenceAccess().getGroup_1()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6550:1: ( rule__PAndSentence__Group_1__0 )*
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6548:1: ( rule__PAndSentence__Group_1__0 )*
             loop47:
             do {
                 int alt47=2;
@@ -19156,9 +19166,9 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
                 switch (alt47) {
             	case 1 :
-            	    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6550:2: rule__PAndSentence__Group_1__0
+            	    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6548:2: rule__PAndSentence__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__PAndSentence__Group_1__0_in_rule__PAndSentence__Group__1__Impl13299);
+            	    pushFollow(FOLLOW_rule__PAndSentence__Group_1__0_in_rule__PAndSentence__Group__1__Impl13297);
             	    rule__PAndSentence__Group_1__0();
 
             	    state._fsp--;
@@ -19197,21 +19207,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PAndSentence__Group_1__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6564:1: rule__PAndSentence__Group_1__0 : rule__PAndSentence__Group_1__0__Impl rule__PAndSentence__Group_1__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6562:1: rule__PAndSentence__Group_1__0 : rule__PAndSentence__Group_1__0__Impl rule__PAndSentence__Group_1__1 ;
     public final void rule__PAndSentence__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6568:1: ( rule__PAndSentence__Group_1__0__Impl rule__PAndSentence__Group_1__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6569:2: rule__PAndSentence__Group_1__0__Impl rule__PAndSentence__Group_1__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6566:1: ( rule__PAndSentence__Group_1__0__Impl rule__PAndSentence__Group_1__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6567:2: rule__PAndSentence__Group_1__0__Impl rule__PAndSentence__Group_1__1
             {
-            pushFollow(FOLLOW_rule__PAndSentence__Group_1__0__Impl_in_rule__PAndSentence__Group_1__013334);
+            pushFollow(FOLLOW_rule__PAndSentence__Group_1__0__Impl_in_rule__PAndSentence__Group_1__013332);
             rule__PAndSentence__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__PAndSentence__Group_1__1_in_rule__PAndSentence__Group_1__013337);
+            pushFollow(FOLLOW_rule__PAndSentence__Group_1__1_in_rule__PAndSentence__Group_1__013335);
             rule__PAndSentence__Group_1__1();
 
             state._fsp--;
@@ -19235,23 +19245,23 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PAndSentence__Group_1__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6576:1: rule__PAndSentence__Group_1__0__Impl : ( () ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6574:1: rule__PAndSentence__Group_1__0__Impl : ( () ) ;
     public final void rule__PAndSentence__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6580:1: ( ( () ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6581:1: ( () )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6578:1: ( ( () ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6579:1: ( () )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6581:1: ( () )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6582:1: ()
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6579:1: ( () )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6580:1: ()
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPAndSentenceAccess().getPAndSentenceLeftAction_1_0()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6583:1: ()
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6585:1: 
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6581:1: ()
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6583:1: 
             {
             }
 
@@ -19276,21 +19286,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PAndSentence__Group_1__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6595:1: rule__PAndSentence__Group_1__1 : rule__PAndSentence__Group_1__1__Impl rule__PAndSentence__Group_1__2 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6593:1: rule__PAndSentence__Group_1__1 : rule__PAndSentence__Group_1__1__Impl rule__PAndSentence__Group_1__2 ;
     public final void rule__PAndSentence__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6599:1: ( rule__PAndSentence__Group_1__1__Impl rule__PAndSentence__Group_1__2 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6600:2: rule__PAndSentence__Group_1__1__Impl rule__PAndSentence__Group_1__2
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6597:1: ( rule__PAndSentence__Group_1__1__Impl rule__PAndSentence__Group_1__2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6598:2: rule__PAndSentence__Group_1__1__Impl rule__PAndSentence__Group_1__2
             {
-            pushFollow(FOLLOW_rule__PAndSentence__Group_1__1__Impl_in_rule__PAndSentence__Group_1__113395);
+            pushFollow(FOLLOW_rule__PAndSentence__Group_1__1__Impl_in_rule__PAndSentence__Group_1__113393);
             rule__PAndSentence__Group_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__PAndSentence__Group_1__2_in_rule__PAndSentence__Group_1__113398);
+            pushFollow(FOLLOW_rule__PAndSentence__Group_1__2_in_rule__PAndSentence__Group_1__113396);
             rule__PAndSentence__Group_1__2();
 
             state._fsp--;
@@ -19314,22 +19324,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PAndSentence__Group_1__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6607:1: rule__PAndSentence__Group_1__1__Impl : ( 'and' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6605:1: rule__PAndSentence__Group_1__1__Impl : ( 'and' ) ;
     public final void rule__PAndSentence__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6611:1: ( ( 'and' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6612:1: ( 'and' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6609:1: ( ( 'and' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6610:1: ( 'and' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6612:1: ( 'and' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6613:1: 'and'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6610:1: ( 'and' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6611:1: 'and'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPAndSentenceAccess().getAndKeyword_1_1()); 
             }
-            match(input,27,FOLLOW_27_in_rule__PAndSentence__Group_1__1__Impl13426); if (state.failed) return ;
+            match(input,27,FOLLOW_27_in_rule__PAndSentence__Group_1__1__Impl13424); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPAndSentenceAccess().getAndKeyword_1_1()); 
             }
@@ -19355,16 +19365,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PAndSentence__Group_1__2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6626:1: rule__PAndSentence__Group_1__2 : rule__PAndSentence__Group_1__2__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6624:1: rule__PAndSentence__Group_1__2 : rule__PAndSentence__Group_1__2__Impl ;
     public final void rule__PAndSentence__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6630:1: ( rule__PAndSentence__Group_1__2__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6631:2: rule__PAndSentence__Group_1__2__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6628:1: ( rule__PAndSentence__Group_1__2__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6629:2: rule__PAndSentence__Group_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__PAndSentence__Group_1__2__Impl_in_rule__PAndSentence__Group_1__213457);
+            pushFollow(FOLLOW_rule__PAndSentence__Group_1__2__Impl_in_rule__PAndSentence__Group_1__213455);
             rule__PAndSentence__Group_1__2__Impl();
 
             state._fsp--;
@@ -19388,25 +19398,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PAndSentence__Group_1__2__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6637:1: rule__PAndSentence__Group_1__2__Impl : ( ( rule__PAndSentence__RightAssignment_1_2 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6635:1: rule__PAndSentence__Group_1__2__Impl : ( ( rule__PAndSentence__RightAssignment_1_2 ) ) ;
     public final void rule__PAndSentence__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6641:1: ( ( ( rule__PAndSentence__RightAssignment_1_2 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6642:1: ( ( rule__PAndSentence__RightAssignment_1_2 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6639:1: ( ( ( rule__PAndSentence__RightAssignment_1_2 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6640:1: ( ( rule__PAndSentence__RightAssignment_1_2 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6642:1: ( ( rule__PAndSentence__RightAssignment_1_2 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6643:1: ( rule__PAndSentence__RightAssignment_1_2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6640:1: ( ( rule__PAndSentence__RightAssignment_1_2 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6641:1: ( rule__PAndSentence__RightAssignment_1_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPAndSentenceAccess().getRightAssignment_1_2()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6644:1: ( rule__PAndSentence__RightAssignment_1_2 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6644:2: rule__PAndSentence__RightAssignment_1_2
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6642:1: ( rule__PAndSentence__RightAssignment_1_2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6642:2: rule__PAndSentence__RightAssignment_1_2
             {
-            pushFollow(FOLLOW_rule__PAndSentence__RightAssignment_1_2_in_rule__PAndSentence__Group_1__2__Impl13484);
+            pushFollow(FOLLOW_rule__PAndSentence__RightAssignment_1_2_in_rule__PAndSentence__Group_1__2__Impl13482);
             rule__PAndSentence__RightAssignment_1_2();
 
             state._fsp--;
@@ -19439,21 +19449,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PNotSentence__Group_1__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6660:1: rule__PNotSentence__Group_1__0 : rule__PNotSentence__Group_1__0__Impl rule__PNotSentence__Group_1__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6658:1: rule__PNotSentence__Group_1__0 : rule__PNotSentence__Group_1__0__Impl rule__PNotSentence__Group_1__1 ;
     public final void rule__PNotSentence__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6664:1: ( rule__PNotSentence__Group_1__0__Impl rule__PNotSentence__Group_1__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6665:2: rule__PNotSentence__Group_1__0__Impl rule__PNotSentence__Group_1__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6662:1: ( rule__PNotSentence__Group_1__0__Impl rule__PNotSentence__Group_1__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6663:2: rule__PNotSentence__Group_1__0__Impl rule__PNotSentence__Group_1__1
             {
-            pushFollow(FOLLOW_rule__PNotSentence__Group_1__0__Impl_in_rule__PNotSentence__Group_1__013520);
+            pushFollow(FOLLOW_rule__PNotSentence__Group_1__0__Impl_in_rule__PNotSentence__Group_1__013518);
             rule__PNotSentence__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__PNotSentence__Group_1__1_in_rule__PNotSentence__Group_1__013523);
+            pushFollow(FOLLOW_rule__PNotSentence__Group_1__1_in_rule__PNotSentence__Group_1__013521);
             rule__PNotSentence__Group_1__1();
 
             state._fsp--;
@@ -19477,22 +19487,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PNotSentence__Group_1__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6672:1: rule__PNotSentence__Group_1__0__Impl : ( 'not' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6670:1: rule__PNotSentence__Group_1__0__Impl : ( 'not' ) ;
     public final void rule__PNotSentence__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6676:1: ( ( 'not' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6677:1: ( 'not' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6674:1: ( ( 'not' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6675:1: ( 'not' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6677:1: ( 'not' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6678:1: 'not'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6675:1: ( 'not' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6676:1: 'not'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPNotSentenceAccess().getNotKeyword_1_0()); 
             }
-            match(input,39,FOLLOW_39_in_rule__PNotSentence__Group_1__0__Impl13551); if (state.failed) return ;
+            match(input,39,FOLLOW_39_in_rule__PNotSentence__Group_1__0__Impl13549); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPNotSentenceAccess().getNotKeyword_1_0()); 
             }
@@ -19518,16 +19528,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PNotSentence__Group_1__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6691:1: rule__PNotSentence__Group_1__1 : rule__PNotSentence__Group_1__1__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6689:1: rule__PNotSentence__Group_1__1 : rule__PNotSentence__Group_1__1__Impl ;
     public final void rule__PNotSentence__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6695:1: ( rule__PNotSentence__Group_1__1__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6696:2: rule__PNotSentence__Group_1__1__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6693:1: ( rule__PNotSentence__Group_1__1__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6694:2: rule__PNotSentence__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__PNotSentence__Group_1__1__Impl_in_rule__PNotSentence__Group_1__113582);
+            pushFollow(FOLLOW_rule__PNotSentence__Group_1__1__Impl_in_rule__PNotSentence__Group_1__113580);
             rule__PNotSentence__Group_1__1__Impl();
 
             state._fsp--;
@@ -19551,22 +19561,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PNotSentence__Group_1__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6702:1: rule__PNotSentence__Group_1__1__Impl : ( rulepPrimarySentence ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6700:1: rule__PNotSentence__Group_1__1__Impl : ( rulepPrimarySentence ) ;
     public final void rule__PNotSentence__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6706:1: ( ( rulepPrimarySentence ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6707:1: ( rulepPrimarySentence )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6704:1: ( ( rulepPrimarySentence ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6705:1: ( rulepPrimarySentence )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6707:1: ( rulepPrimarySentence )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6708:1: rulepPrimarySentence
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6705:1: ( rulepPrimarySentence )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6706:1: rulepPrimarySentence
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPNotSentenceAccess().getPPrimarySentenceParserRuleCall_1_1()); 
             }
-            pushFollow(FOLLOW_rulepPrimarySentence_in_rule__PNotSentence__Group_1__1__Impl13609);
+            pushFollow(FOLLOW_rulepPrimarySentence_in_rule__PNotSentence__Group_1__1__Impl13607);
             rulepPrimarySentence();
 
             state._fsp--;
@@ -19596,21 +19606,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PPrimarySentence__Group_1__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6723:1: rule__PPrimarySentence__Group_1__0 : rule__PPrimarySentence__Group_1__0__Impl rule__PPrimarySentence__Group_1__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6721:1: rule__PPrimarySentence__Group_1__0 : rule__PPrimarySentence__Group_1__0__Impl rule__PPrimarySentence__Group_1__1 ;
     public final void rule__PPrimarySentence__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6727:1: ( rule__PPrimarySentence__Group_1__0__Impl rule__PPrimarySentence__Group_1__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6728:2: rule__PPrimarySentence__Group_1__0__Impl rule__PPrimarySentence__Group_1__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6725:1: ( rule__PPrimarySentence__Group_1__0__Impl rule__PPrimarySentence__Group_1__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6726:2: rule__PPrimarySentence__Group_1__0__Impl rule__PPrimarySentence__Group_1__1
             {
-            pushFollow(FOLLOW_rule__PPrimarySentence__Group_1__0__Impl_in_rule__PPrimarySentence__Group_1__013642);
+            pushFollow(FOLLOW_rule__PPrimarySentence__Group_1__0__Impl_in_rule__PPrimarySentence__Group_1__013640);
             rule__PPrimarySentence__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__PPrimarySentence__Group_1__1_in_rule__PPrimarySentence__Group_1__013645);
+            pushFollow(FOLLOW_rule__PPrimarySentence__Group_1__1_in_rule__PPrimarySentence__Group_1__013643);
             rule__PPrimarySentence__Group_1__1();
 
             state._fsp--;
@@ -19634,22 +19644,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PPrimarySentence__Group_1__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6735:1: rule__PPrimarySentence__Group_1__0__Impl : ( '(' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6733:1: rule__PPrimarySentence__Group_1__0__Impl : ( '(' ) ;
     public final void rule__PPrimarySentence__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6739:1: ( ( '(' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6740:1: ( '(' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6737:1: ( ( '(' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6738:1: ( '(' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6740:1: ( '(' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6741:1: '('
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6738:1: ( '(' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6739:1: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPPrimarySentenceAccess().getLeftParenthesisKeyword_1_0()); 
             }
-            match(input,29,FOLLOW_29_in_rule__PPrimarySentence__Group_1__0__Impl13673); if (state.failed) return ;
+            match(input,29,FOLLOW_29_in_rule__PPrimarySentence__Group_1__0__Impl13671); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPPrimarySentenceAccess().getLeftParenthesisKeyword_1_0()); 
             }
@@ -19675,21 +19685,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PPrimarySentence__Group_1__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6754:1: rule__PPrimarySentence__Group_1__1 : rule__PPrimarySentence__Group_1__1__Impl rule__PPrimarySentence__Group_1__2 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6752:1: rule__PPrimarySentence__Group_1__1 : rule__PPrimarySentence__Group_1__1__Impl rule__PPrimarySentence__Group_1__2 ;
     public final void rule__PPrimarySentence__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6758:1: ( rule__PPrimarySentence__Group_1__1__Impl rule__PPrimarySentence__Group_1__2 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6759:2: rule__PPrimarySentence__Group_1__1__Impl rule__PPrimarySentence__Group_1__2
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6756:1: ( rule__PPrimarySentence__Group_1__1__Impl rule__PPrimarySentence__Group_1__2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6757:2: rule__PPrimarySentence__Group_1__1__Impl rule__PPrimarySentence__Group_1__2
             {
-            pushFollow(FOLLOW_rule__PPrimarySentence__Group_1__1__Impl_in_rule__PPrimarySentence__Group_1__113704);
+            pushFollow(FOLLOW_rule__PPrimarySentence__Group_1__1__Impl_in_rule__PPrimarySentence__Group_1__113702);
             rule__PPrimarySentence__Group_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__PPrimarySentence__Group_1__2_in_rule__PPrimarySentence__Group_1__113707);
+            pushFollow(FOLLOW_rule__PPrimarySentence__Group_1__2_in_rule__PPrimarySentence__Group_1__113705);
             rule__PPrimarySentence__Group_1__2();
 
             state._fsp--;
@@ -19713,22 +19723,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PPrimarySentence__Group_1__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6766:1: rule__PPrimarySentence__Group_1__1__Impl : ( ruleOrSentence ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6764:1: rule__PPrimarySentence__Group_1__1__Impl : ( ruleOrSentence ) ;
     public final void rule__PPrimarySentence__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6770:1: ( ( ruleOrSentence ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6771:1: ( ruleOrSentence )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6768:1: ( ( ruleOrSentence ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6769:1: ( ruleOrSentence )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6771:1: ( ruleOrSentence )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6772:1: ruleOrSentence
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6769:1: ( ruleOrSentence )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6770:1: ruleOrSentence
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPPrimarySentenceAccess().getOrSentenceParserRuleCall_1_1()); 
             }
-            pushFollow(FOLLOW_ruleOrSentence_in_rule__PPrimarySentence__Group_1__1__Impl13734);
+            pushFollow(FOLLOW_ruleOrSentence_in_rule__PPrimarySentence__Group_1__1__Impl13732);
             ruleOrSentence();
 
             state._fsp--;
@@ -19758,16 +19768,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PPrimarySentence__Group_1__2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6783:1: rule__PPrimarySentence__Group_1__2 : rule__PPrimarySentence__Group_1__2__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6781:1: rule__PPrimarySentence__Group_1__2 : rule__PPrimarySentence__Group_1__2__Impl ;
     public final void rule__PPrimarySentence__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6787:1: ( rule__PPrimarySentence__Group_1__2__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6788:2: rule__PPrimarySentence__Group_1__2__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6785:1: ( rule__PPrimarySentence__Group_1__2__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6786:2: rule__PPrimarySentence__Group_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__PPrimarySentence__Group_1__2__Impl_in_rule__PPrimarySentence__Group_1__213763);
+            pushFollow(FOLLOW_rule__PPrimarySentence__Group_1__2__Impl_in_rule__PPrimarySentence__Group_1__213761);
             rule__PPrimarySentence__Group_1__2__Impl();
 
             state._fsp--;
@@ -19791,22 +19801,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PPrimarySentence__Group_1__2__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6794:1: rule__PPrimarySentence__Group_1__2__Impl : ( ')' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6792:1: rule__PPrimarySentence__Group_1__2__Impl : ( ')' ) ;
     public final void rule__PPrimarySentence__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6798:1: ( ( ')' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6799:1: ( ')' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6796:1: ( ( ')' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6797:1: ( ')' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6799:1: ( ')' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6800:1: ')'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6797:1: ( ')' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6798:1: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPPrimarySentenceAccess().getRightParenthesisKeyword_1_2()); 
             }
-            match(input,30,FOLLOW_30_in_rule__PPrimarySentence__Group_1__2__Impl13791); if (state.failed) return ;
+            match(input,30,FOLLOW_30_in_rule__PPrimarySentence__Group_1__2__Impl13789); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPPrimarySentenceAccess().getRightParenthesisKeyword_1_2()); 
             }
@@ -19832,21 +19842,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MaybeLiteral__Group__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6819:1: rule__MaybeLiteral__Group__0 : rule__MaybeLiteral__Group__0__Impl rule__MaybeLiteral__Group__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6817:1: rule__MaybeLiteral__Group__0 : rule__MaybeLiteral__Group__0__Impl rule__MaybeLiteral__Group__1 ;
     public final void rule__MaybeLiteral__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6823:1: ( rule__MaybeLiteral__Group__0__Impl rule__MaybeLiteral__Group__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6824:2: rule__MaybeLiteral__Group__0__Impl rule__MaybeLiteral__Group__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6821:1: ( rule__MaybeLiteral__Group__0__Impl rule__MaybeLiteral__Group__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6822:2: rule__MaybeLiteral__Group__0__Impl rule__MaybeLiteral__Group__1
             {
-            pushFollow(FOLLOW_rule__MaybeLiteral__Group__0__Impl_in_rule__MaybeLiteral__Group__013828);
+            pushFollow(FOLLOW_rule__MaybeLiteral__Group__0__Impl_in_rule__MaybeLiteral__Group__013826);
             rule__MaybeLiteral__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__MaybeLiteral__Group__1_in_rule__MaybeLiteral__Group__013831);
+            pushFollow(FOLLOW_rule__MaybeLiteral__Group__1_in_rule__MaybeLiteral__Group__013829);
             rule__MaybeLiteral__Group__1();
 
             state._fsp--;
@@ -19870,22 +19880,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MaybeLiteral__Group__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6831:1: rule__MaybeLiteral__Group__0__Impl : ( 'maybe' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6829:1: rule__MaybeLiteral__Group__0__Impl : ( 'maybe' ) ;
     public final void rule__MaybeLiteral__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6835:1: ( ( 'maybe' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6836:1: ( 'maybe' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6833:1: ( ( 'maybe' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6834:1: ( 'maybe' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6836:1: ( 'maybe' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6837:1: 'maybe'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6834:1: ( 'maybe' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6835:1: 'maybe'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMaybeLiteralAccess().getMaybeKeyword_0()); 
             }
-            match(input,40,FOLLOW_40_in_rule__MaybeLiteral__Group__0__Impl13859); if (state.failed) return ;
+            match(input,40,FOLLOW_40_in_rule__MaybeLiteral__Group__0__Impl13857); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMaybeLiteralAccess().getMaybeKeyword_0()); 
             }
@@ -19911,16 +19921,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MaybeLiteral__Group__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6850:1: rule__MaybeLiteral__Group__1 : rule__MaybeLiteral__Group__1__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6848:1: rule__MaybeLiteral__Group__1 : rule__MaybeLiteral__Group__1__Impl ;
     public final void rule__MaybeLiteral__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6854:1: ( rule__MaybeLiteral__Group__1__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6855:2: rule__MaybeLiteral__Group__1__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6852:1: ( rule__MaybeLiteral__Group__1__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6853:2: rule__MaybeLiteral__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__MaybeLiteral__Group__1__Impl_in_rule__MaybeLiteral__Group__113890);
+            pushFollow(FOLLOW_rule__MaybeLiteral__Group__1__Impl_in_rule__MaybeLiteral__Group__113888);
             rule__MaybeLiteral__Group__1__Impl();
 
             state._fsp--;
@@ -19944,22 +19954,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MaybeLiteral__Group__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6861:1: rule__MaybeLiteral__Group__1__Impl : ( ruleBasicPredicateAtom ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6859:1: rule__MaybeLiteral__Group__1__Impl : ( ruleBasicPredicateAtom ) ;
     public final void rule__MaybeLiteral__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6865:1: ( ( ruleBasicPredicateAtom ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6866:1: ( ruleBasicPredicateAtom )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6863:1: ( ( ruleBasicPredicateAtom ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6864:1: ( ruleBasicPredicateAtom )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6866:1: ( ruleBasicPredicateAtom )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6867:1: ruleBasicPredicateAtom
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6864:1: ( ruleBasicPredicateAtom )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6865:1: ruleBasicPredicateAtom
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMaybeLiteralAccess().getBasicPredicateAtomParserRuleCall_1()); 
             }
-            pushFollow(FOLLOW_ruleBasicPredicateAtom_in_rule__MaybeLiteral__Group__1__Impl13917);
+            pushFollow(FOLLOW_ruleBasicPredicateAtom_in_rule__MaybeLiteral__Group__1__Impl13915);
             ruleBasicPredicateAtom();
 
             state._fsp--;
@@ -19989,21 +19999,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CardinalityConstraint__Group__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6882:1: rule__CardinalityConstraint__Group__0 : rule__CardinalityConstraint__Group__0__Impl rule__CardinalityConstraint__Group__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6880:1: rule__CardinalityConstraint__Group__0 : rule__CardinalityConstraint__Group__0__Impl rule__CardinalityConstraint__Group__1 ;
     public final void rule__CardinalityConstraint__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6886:1: ( rule__CardinalityConstraint__Group__0__Impl rule__CardinalityConstraint__Group__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6887:2: rule__CardinalityConstraint__Group__0__Impl rule__CardinalityConstraint__Group__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6884:1: ( rule__CardinalityConstraint__Group__0__Impl rule__CardinalityConstraint__Group__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6885:2: rule__CardinalityConstraint__Group__0__Impl rule__CardinalityConstraint__Group__1
             {
-            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__0__Impl_in_rule__CardinalityConstraint__Group__013950);
+            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__0__Impl_in_rule__CardinalityConstraint__Group__013948);
             rule__CardinalityConstraint__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__1_in_rule__CardinalityConstraint__Group__013953);
+            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__1_in_rule__CardinalityConstraint__Group__013951);
             rule__CardinalityConstraint__Group__1();
 
             state._fsp--;
@@ -20027,25 +20037,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CardinalityConstraint__Group__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6894:1: rule__CardinalityConstraint__Group__0__Impl : ( ( rule__CardinalityConstraint__LhsAssignment_0 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6892:1: rule__CardinalityConstraint__Group__0__Impl : ( ( rule__CardinalityConstraint__LhsAssignment_0 ) ) ;
     public final void rule__CardinalityConstraint__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6898:1: ( ( ( rule__CardinalityConstraint__LhsAssignment_0 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6899:1: ( ( rule__CardinalityConstraint__LhsAssignment_0 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6896:1: ( ( ( rule__CardinalityConstraint__LhsAssignment_0 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6897:1: ( ( rule__CardinalityConstraint__LhsAssignment_0 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6899:1: ( ( rule__CardinalityConstraint__LhsAssignment_0 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6900:1: ( rule__CardinalityConstraint__LhsAssignment_0 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6897:1: ( ( rule__CardinalityConstraint__LhsAssignment_0 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6898:1: ( rule__CardinalityConstraint__LhsAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCardinalityConstraintAccess().getLhsAssignment_0()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6901:1: ( rule__CardinalityConstraint__LhsAssignment_0 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6901:2: rule__CardinalityConstraint__LhsAssignment_0
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6899:1: ( rule__CardinalityConstraint__LhsAssignment_0 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6899:2: rule__CardinalityConstraint__LhsAssignment_0
             {
-            pushFollow(FOLLOW_rule__CardinalityConstraint__LhsAssignment_0_in_rule__CardinalityConstraint__Group__0__Impl13980);
+            pushFollow(FOLLOW_rule__CardinalityConstraint__LhsAssignment_0_in_rule__CardinalityConstraint__Group__0__Impl13978);
             rule__CardinalityConstraint__LhsAssignment_0();
 
             state._fsp--;
@@ -20078,21 +20088,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CardinalityConstraint__Group__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6911:1: rule__CardinalityConstraint__Group__1 : rule__CardinalityConstraint__Group__1__Impl rule__CardinalityConstraint__Group__2 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6909:1: rule__CardinalityConstraint__Group__1 : rule__CardinalityConstraint__Group__1__Impl rule__CardinalityConstraint__Group__2 ;
     public final void rule__CardinalityConstraint__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6915:1: ( rule__CardinalityConstraint__Group__1__Impl rule__CardinalityConstraint__Group__2 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6916:2: rule__CardinalityConstraint__Group__1__Impl rule__CardinalityConstraint__Group__2
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6913:1: ( rule__CardinalityConstraint__Group__1__Impl rule__CardinalityConstraint__Group__2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6914:2: rule__CardinalityConstraint__Group__1__Impl rule__CardinalityConstraint__Group__2
             {
-            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__1__Impl_in_rule__CardinalityConstraint__Group__114010);
+            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__1__Impl_in_rule__CardinalityConstraint__Group__114008);
             rule__CardinalityConstraint__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__2_in_rule__CardinalityConstraint__Group__114013);
+            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__2_in_rule__CardinalityConstraint__Group__114011);
             rule__CardinalityConstraint__Group__2();
 
             state._fsp--;
@@ -20116,22 +20126,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CardinalityConstraint__Group__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6923:1: rule__CardinalityConstraint__Group__1__Impl : ( '<=' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6921:1: rule__CardinalityConstraint__Group__1__Impl : ( '<=' ) ;
     public final void rule__CardinalityConstraint__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6927:1: ( ( '<=' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6928:1: ( '<=' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6925:1: ( ( '<=' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6926:1: ( '<=' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6928:1: ( '<=' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6929:1: '<='
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6926:1: ( '<=' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6927:1: '<='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCardinalityConstraintAccess().getLessThanSignEqualsSignKeyword_1()); 
             }
-            match(input,24,FOLLOW_24_in_rule__CardinalityConstraint__Group__1__Impl14041); if (state.failed) return ;
+            match(input,24,FOLLOW_24_in_rule__CardinalityConstraint__Group__1__Impl14039); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCardinalityConstraintAccess().getLessThanSignEqualsSignKeyword_1()); 
             }
@@ -20157,21 +20167,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CardinalityConstraint__Group__2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6942:1: rule__CardinalityConstraint__Group__2 : rule__CardinalityConstraint__Group__2__Impl rule__CardinalityConstraint__Group__3 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6940:1: rule__CardinalityConstraint__Group__2 : rule__CardinalityConstraint__Group__2__Impl rule__CardinalityConstraint__Group__3 ;
     public final void rule__CardinalityConstraint__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6946:1: ( rule__CardinalityConstraint__Group__2__Impl rule__CardinalityConstraint__Group__3 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6947:2: rule__CardinalityConstraint__Group__2__Impl rule__CardinalityConstraint__Group__3
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6944:1: ( rule__CardinalityConstraint__Group__2__Impl rule__CardinalityConstraint__Group__3 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6945:2: rule__CardinalityConstraint__Group__2__Impl rule__CardinalityConstraint__Group__3
             {
-            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__2__Impl_in_rule__CardinalityConstraint__Group__214072);
+            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__2__Impl_in_rule__CardinalityConstraint__Group__214070);
             rule__CardinalityConstraint__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__3_in_rule__CardinalityConstraint__Group__214075);
+            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__3_in_rule__CardinalityConstraint__Group__214073);
             rule__CardinalityConstraint__Group__3();
 
             state._fsp--;
@@ -20195,22 +20205,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CardinalityConstraint__Group__2__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6954:1: rule__CardinalityConstraint__Group__2__Impl : ( '|' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6952:1: rule__CardinalityConstraint__Group__2__Impl : ( '|' ) ;
     public final void rule__CardinalityConstraint__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6958:1: ( ( '|' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6959:1: ( '|' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6956:1: ( ( '|' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6957:1: ( '|' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6959:1: ( '|' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6960:1: '|'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6957:1: ( '|' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6958:1: '|'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCardinalityConstraintAccess().getVerticalLineKeyword_2()); 
             }
-            match(input,41,FOLLOW_41_in_rule__CardinalityConstraint__Group__2__Impl14103); if (state.failed) return ;
+            match(input,41,FOLLOW_41_in_rule__CardinalityConstraint__Group__2__Impl14101); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCardinalityConstraintAccess().getVerticalLineKeyword_2()); 
             }
@@ -20236,21 +20246,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CardinalityConstraint__Group__3"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6973:1: rule__CardinalityConstraint__Group__3 : rule__CardinalityConstraint__Group__3__Impl rule__CardinalityConstraint__Group__4 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6971:1: rule__CardinalityConstraint__Group__3 : rule__CardinalityConstraint__Group__3__Impl rule__CardinalityConstraint__Group__4 ;
     public final void rule__CardinalityConstraint__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6977:1: ( rule__CardinalityConstraint__Group__3__Impl rule__CardinalityConstraint__Group__4 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6978:2: rule__CardinalityConstraint__Group__3__Impl rule__CardinalityConstraint__Group__4
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6975:1: ( rule__CardinalityConstraint__Group__3__Impl rule__CardinalityConstraint__Group__4 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6976:2: rule__CardinalityConstraint__Group__3__Impl rule__CardinalityConstraint__Group__4
             {
-            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__3__Impl_in_rule__CardinalityConstraint__Group__314134);
+            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__3__Impl_in_rule__CardinalityConstraint__Group__314132);
             rule__CardinalityConstraint__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__4_in_rule__CardinalityConstraint__Group__314137);
+            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__4_in_rule__CardinalityConstraint__Group__314135);
             rule__CardinalityConstraint__Group__4();
 
             state._fsp--;
@@ -20274,22 +20284,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CardinalityConstraint__Group__3__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6985:1: rule__CardinalityConstraint__Group__3__Impl : ( '{' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6983:1: rule__CardinalityConstraint__Group__3__Impl : ( '{' ) ;
     public final void rule__CardinalityConstraint__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6989:1: ( ( '{' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6990:1: ( '{' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6987:1: ( ( '{' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6988:1: ( '{' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6990:1: ( '{' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6991:1: '{'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6988:1: ( '{' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:6989:1: '{'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCardinalityConstraintAccess().getLeftCurlyBracketKeyword_3()); 
             }
-            match(input,35,FOLLOW_35_in_rule__CardinalityConstraint__Group__3__Impl14165); if (state.failed) return ;
+            match(input,35,FOLLOW_35_in_rule__CardinalityConstraint__Group__3__Impl14163); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCardinalityConstraintAccess().getLeftCurlyBracketKeyword_3()); 
             }
@@ -20315,21 +20325,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CardinalityConstraint__Group__4"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7004:1: rule__CardinalityConstraint__Group__4 : rule__CardinalityConstraint__Group__4__Impl rule__CardinalityConstraint__Group__5 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7002:1: rule__CardinalityConstraint__Group__4 : rule__CardinalityConstraint__Group__4__Impl rule__CardinalityConstraint__Group__5 ;
     public final void rule__CardinalityConstraint__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7008:1: ( rule__CardinalityConstraint__Group__4__Impl rule__CardinalityConstraint__Group__5 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7009:2: rule__CardinalityConstraint__Group__4__Impl rule__CardinalityConstraint__Group__5
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7006:1: ( rule__CardinalityConstraint__Group__4__Impl rule__CardinalityConstraint__Group__5 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7007:2: rule__CardinalityConstraint__Group__4__Impl rule__CardinalityConstraint__Group__5
             {
-            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__4__Impl_in_rule__CardinalityConstraint__Group__414196);
+            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__4__Impl_in_rule__CardinalityConstraint__Group__414194);
             rule__CardinalityConstraint__Group__4__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__5_in_rule__CardinalityConstraint__Group__414199);
+            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__5_in_rule__CardinalityConstraint__Group__414197);
             rule__CardinalityConstraint__Group__5();
 
             state._fsp--;
@@ -20353,25 +20363,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CardinalityConstraint__Group__4__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7016:1: rule__CardinalityConstraint__Group__4__Impl : ( ( rule__CardinalityConstraint__AtomAssignment_4 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7014:1: rule__CardinalityConstraint__Group__4__Impl : ( ( rule__CardinalityConstraint__AtomAssignment_4 ) ) ;
     public final void rule__CardinalityConstraint__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7020:1: ( ( ( rule__CardinalityConstraint__AtomAssignment_4 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7021:1: ( ( rule__CardinalityConstraint__AtomAssignment_4 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7018:1: ( ( ( rule__CardinalityConstraint__AtomAssignment_4 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7019:1: ( ( rule__CardinalityConstraint__AtomAssignment_4 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7021:1: ( ( rule__CardinalityConstraint__AtomAssignment_4 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7022:1: ( rule__CardinalityConstraint__AtomAssignment_4 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7019:1: ( ( rule__CardinalityConstraint__AtomAssignment_4 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7020:1: ( rule__CardinalityConstraint__AtomAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCardinalityConstraintAccess().getAtomAssignment_4()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7023:1: ( rule__CardinalityConstraint__AtomAssignment_4 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7023:2: rule__CardinalityConstraint__AtomAssignment_4
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7021:1: ( rule__CardinalityConstraint__AtomAssignment_4 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7021:2: rule__CardinalityConstraint__AtomAssignment_4
             {
-            pushFollow(FOLLOW_rule__CardinalityConstraint__AtomAssignment_4_in_rule__CardinalityConstraint__Group__4__Impl14226);
+            pushFollow(FOLLOW_rule__CardinalityConstraint__AtomAssignment_4_in_rule__CardinalityConstraint__Group__4__Impl14224);
             rule__CardinalityConstraint__AtomAssignment_4();
 
             state._fsp--;
@@ -20404,21 +20414,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CardinalityConstraint__Group__5"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7033:1: rule__CardinalityConstraint__Group__5 : rule__CardinalityConstraint__Group__5__Impl rule__CardinalityConstraint__Group__6 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7031:1: rule__CardinalityConstraint__Group__5 : rule__CardinalityConstraint__Group__5__Impl rule__CardinalityConstraint__Group__6 ;
     public final void rule__CardinalityConstraint__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7037:1: ( rule__CardinalityConstraint__Group__5__Impl rule__CardinalityConstraint__Group__6 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7038:2: rule__CardinalityConstraint__Group__5__Impl rule__CardinalityConstraint__Group__6
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7035:1: ( rule__CardinalityConstraint__Group__5__Impl rule__CardinalityConstraint__Group__6 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7036:2: rule__CardinalityConstraint__Group__5__Impl rule__CardinalityConstraint__Group__6
             {
-            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__5__Impl_in_rule__CardinalityConstraint__Group__514256);
+            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__5__Impl_in_rule__CardinalityConstraint__Group__514254);
             rule__CardinalityConstraint__Group__5__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__6_in_rule__CardinalityConstraint__Group__514259);
+            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__6_in_rule__CardinalityConstraint__Group__514257);
             rule__CardinalityConstraint__Group__6();
 
             state._fsp--;
@@ -20442,22 +20452,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CardinalityConstraint__Group__5__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7045:1: rule__CardinalityConstraint__Group__5__Impl : ( '}' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7043:1: rule__CardinalityConstraint__Group__5__Impl : ( '}' ) ;
     public final void rule__CardinalityConstraint__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7049:1: ( ( '}' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7050:1: ( '}' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7047:1: ( ( '}' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7048:1: ( '}' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7050:1: ( '}' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7051:1: '}'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7048:1: ( '}' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7049:1: '}'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCardinalityConstraintAccess().getRightCurlyBracketKeyword_5()); 
             }
-            match(input,34,FOLLOW_34_in_rule__CardinalityConstraint__Group__5__Impl14287); if (state.failed) return ;
+            match(input,34,FOLLOW_34_in_rule__CardinalityConstraint__Group__5__Impl14285); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCardinalityConstraintAccess().getRightCurlyBracketKeyword_5()); 
             }
@@ -20483,21 +20493,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CardinalityConstraint__Group__6"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7064:1: rule__CardinalityConstraint__Group__6 : rule__CardinalityConstraint__Group__6__Impl rule__CardinalityConstraint__Group__7 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7062:1: rule__CardinalityConstraint__Group__6 : rule__CardinalityConstraint__Group__6__Impl rule__CardinalityConstraint__Group__7 ;
     public final void rule__CardinalityConstraint__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7068:1: ( rule__CardinalityConstraint__Group__6__Impl rule__CardinalityConstraint__Group__7 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7069:2: rule__CardinalityConstraint__Group__6__Impl rule__CardinalityConstraint__Group__7
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7066:1: ( rule__CardinalityConstraint__Group__6__Impl rule__CardinalityConstraint__Group__7 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7067:2: rule__CardinalityConstraint__Group__6__Impl rule__CardinalityConstraint__Group__7
             {
-            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__6__Impl_in_rule__CardinalityConstraint__Group__614318);
+            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__6__Impl_in_rule__CardinalityConstraint__Group__614316);
             rule__CardinalityConstraint__Group__6__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__7_in_rule__CardinalityConstraint__Group__614321);
+            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__7_in_rule__CardinalityConstraint__Group__614319);
             rule__CardinalityConstraint__Group__7();
 
             state._fsp--;
@@ -20521,22 +20531,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CardinalityConstraint__Group__6__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7076:1: rule__CardinalityConstraint__Group__6__Impl : ( '|' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7074:1: rule__CardinalityConstraint__Group__6__Impl : ( '|' ) ;
     public final void rule__CardinalityConstraint__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7080:1: ( ( '|' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7081:1: ( '|' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7078:1: ( ( '|' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7079:1: ( '|' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7081:1: ( '|' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7082:1: '|'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7079:1: ( '|' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7080:1: '|'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCardinalityConstraintAccess().getVerticalLineKeyword_6()); 
             }
-            match(input,41,FOLLOW_41_in_rule__CardinalityConstraint__Group__6__Impl14349); if (state.failed) return ;
+            match(input,41,FOLLOW_41_in_rule__CardinalityConstraint__Group__6__Impl14347); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCardinalityConstraintAccess().getVerticalLineKeyword_6()); 
             }
@@ -20562,21 +20572,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CardinalityConstraint__Group__7"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7095:1: rule__CardinalityConstraint__Group__7 : rule__CardinalityConstraint__Group__7__Impl rule__CardinalityConstraint__Group__8 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7093:1: rule__CardinalityConstraint__Group__7 : rule__CardinalityConstraint__Group__7__Impl rule__CardinalityConstraint__Group__8 ;
     public final void rule__CardinalityConstraint__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7099:1: ( rule__CardinalityConstraint__Group__7__Impl rule__CardinalityConstraint__Group__8 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7100:2: rule__CardinalityConstraint__Group__7__Impl rule__CardinalityConstraint__Group__8
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7097:1: ( rule__CardinalityConstraint__Group__7__Impl rule__CardinalityConstraint__Group__8 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7098:2: rule__CardinalityConstraint__Group__7__Impl rule__CardinalityConstraint__Group__8
             {
-            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__7__Impl_in_rule__CardinalityConstraint__Group__714380);
+            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__7__Impl_in_rule__CardinalityConstraint__Group__714378);
             rule__CardinalityConstraint__Group__7__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__8_in_rule__CardinalityConstraint__Group__714383);
+            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__8_in_rule__CardinalityConstraint__Group__714381);
             rule__CardinalityConstraint__Group__8();
 
             state._fsp--;
@@ -20600,22 +20610,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CardinalityConstraint__Group__7__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7107:1: rule__CardinalityConstraint__Group__7__Impl : ( '<=' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7105:1: rule__CardinalityConstraint__Group__7__Impl : ( '<=' ) ;
     public final void rule__CardinalityConstraint__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7111:1: ( ( '<=' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7112:1: ( '<=' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7109:1: ( ( '<=' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7110:1: ( '<=' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7112:1: ( '<=' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7113:1: '<='
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7110:1: ( '<=' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7111:1: '<='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCardinalityConstraintAccess().getLessThanSignEqualsSignKeyword_7()); 
             }
-            match(input,24,FOLLOW_24_in_rule__CardinalityConstraint__Group__7__Impl14411); if (state.failed) return ;
+            match(input,24,FOLLOW_24_in_rule__CardinalityConstraint__Group__7__Impl14409); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCardinalityConstraintAccess().getLessThanSignEqualsSignKeyword_7()); 
             }
@@ -20641,16 +20651,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CardinalityConstraint__Group__8"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7126:1: rule__CardinalityConstraint__Group__8 : rule__CardinalityConstraint__Group__8__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7124:1: rule__CardinalityConstraint__Group__8 : rule__CardinalityConstraint__Group__8__Impl ;
     public final void rule__CardinalityConstraint__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7130:1: ( rule__CardinalityConstraint__Group__8__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7131:2: rule__CardinalityConstraint__Group__8__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7128:1: ( rule__CardinalityConstraint__Group__8__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7129:2: rule__CardinalityConstraint__Group__8__Impl
             {
-            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__8__Impl_in_rule__CardinalityConstraint__Group__814442);
+            pushFollow(FOLLOW_rule__CardinalityConstraint__Group__8__Impl_in_rule__CardinalityConstraint__Group__814440);
             rule__CardinalityConstraint__Group__8__Impl();
 
             state._fsp--;
@@ -20674,25 +20684,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CardinalityConstraint__Group__8__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7137:1: rule__CardinalityConstraint__Group__8__Impl : ( ( rule__CardinalityConstraint__RhsAssignment_8 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7135:1: rule__CardinalityConstraint__Group__8__Impl : ( ( rule__CardinalityConstraint__RhsAssignment_8 ) ) ;
     public final void rule__CardinalityConstraint__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7141:1: ( ( ( rule__CardinalityConstraint__RhsAssignment_8 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7142:1: ( ( rule__CardinalityConstraint__RhsAssignment_8 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7139:1: ( ( ( rule__CardinalityConstraint__RhsAssignment_8 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7140:1: ( ( rule__CardinalityConstraint__RhsAssignment_8 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7142:1: ( ( rule__CardinalityConstraint__RhsAssignment_8 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7143:1: ( rule__CardinalityConstraint__RhsAssignment_8 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7140:1: ( ( rule__CardinalityConstraint__RhsAssignment_8 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7141:1: ( rule__CardinalityConstraint__RhsAssignment_8 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCardinalityConstraintAccess().getRhsAssignment_8()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7144:1: ( rule__CardinalityConstraint__RhsAssignment_8 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7144:2: rule__CardinalityConstraint__RhsAssignment_8
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7142:1: ( rule__CardinalityConstraint__RhsAssignment_8 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7142:2: rule__CardinalityConstraint__RhsAssignment_8
             {
-            pushFollow(FOLLOW_rule__CardinalityConstraint__RhsAssignment_8_in_rule__CardinalityConstraint__Group__8__Impl14469);
+            pushFollow(FOLLOW_rule__CardinalityConstraint__RhsAssignment_8_in_rule__CardinalityConstraint__Group__8__Impl14467);
             rule__CardinalityConstraint__RhsAssignment_8();
 
             state._fsp--;
@@ -20725,21 +20735,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rule__Group__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7172:1: rule__Rule__Group__0 : rule__Rule__Group__0__Impl rule__Rule__Group__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7170:1: rule__Rule__Group__0 : rule__Rule__Group__0__Impl rule__Rule__Group__1 ;
     public final void rule__Rule__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7176:1: ( rule__Rule__Group__0__Impl rule__Rule__Group__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7177:2: rule__Rule__Group__0__Impl rule__Rule__Group__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7174:1: ( rule__Rule__Group__0__Impl rule__Rule__Group__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7175:2: rule__Rule__Group__0__Impl rule__Rule__Group__1
             {
-            pushFollow(FOLLOW_rule__Rule__Group__0__Impl_in_rule__Rule__Group__014517);
+            pushFollow(FOLLOW_rule__Rule__Group__0__Impl_in_rule__Rule__Group__014515);
             rule__Rule__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Rule__Group__1_in_rule__Rule__Group__014520);
+            pushFollow(FOLLOW_rule__Rule__Group__1_in_rule__Rule__Group__014518);
             rule__Rule__Group__1();
 
             state._fsp--;
@@ -20763,25 +20773,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rule__Group__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7184:1: rule__Rule__Group__0__Impl : ( ( rule__Rule__HeadAssignment_0 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7182:1: rule__Rule__Group__0__Impl : ( ( rule__Rule__HeadAssignment_0 ) ) ;
     public final void rule__Rule__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7188:1: ( ( ( rule__Rule__HeadAssignment_0 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7189:1: ( ( rule__Rule__HeadAssignment_0 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7186:1: ( ( ( rule__Rule__HeadAssignment_0 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7187:1: ( ( rule__Rule__HeadAssignment_0 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7189:1: ( ( rule__Rule__HeadAssignment_0 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7190:1: ( rule__Rule__HeadAssignment_0 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7187:1: ( ( rule__Rule__HeadAssignment_0 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7188:1: ( rule__Rule__HeadAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRuleAccess().getHeadAssignment_0()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7191:1: ( rule__Rule__HeadAssignment_0 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7191:2: rule__Rule__HeadAssignment_0
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7189:1: ( rule__Rule__HeadAssignment_0 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7189:2: rule__Rule__HeadAssignment_0
             {
-            pushFollow(FOLLOW_rule__Rule__HeadAssignment_0_in_rule__Rule__Group__0__Impl14547);
+            pushFollow(FOLLOW_rule__Rule__HeadAssignment_0_in_rule__Rule__Group__0__Impl14545);
             rule__Rule__HeadAssignment_0();
 
             state._fsp--;
@@ -20814,21 +20824,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rule__Group__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7201:1: rule__Rule__Group__1 : rule__Rule__Group__1__Impl rule__Rule__Group__2 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7199:1: rule__Rule__Group__1 : rule__Rule__Group__1__Impl rule__Rule__Group__2 ;
     public final void rule__Rule__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7205:1: ( rule__Rule__Group__1__Impl rule__Rule__Group__2 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7206:2: rule__Rule__Group__1__Impl rule__Rule__Group__2
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7203:1: ( rule__Rule__Group__1__Impl rule__Rule__Group__2 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7204:2: rule__Rule__Group__1__Impl rule__Rule__Group__2
             {
-            pushFollow(FOLLOW_rule__Rule__Group__1__Impl_in_rule__Rule__Group__114577);
+            pushFollow(FOLLOW_rule__Rule__Group__1__Impl_in_rule__Rule__Group__114575);
             rule__Rule__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Rule__Group__2_in_rule__Rule__Group__114580);
+            pushFollow(FOLLOW_rule__Rule__Group__2_in_rule__Rule__Group__114578);
             rule__Rule__Group__2();
 
             state._fsp--;
@@ -20852,22 +20862,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rule__Group__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7213:1: rule__Rule__Group__1__Impl : ( ( rule__Rule__Group_1__0 )? ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7211:1: rule__Rule__Group__1__Impl : ( ( rule__Rule__Group_1__0 )? ) ;
     public final void rule__Rule__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7217:1: ( ( ( rule__Rule__Group_1__0 )? ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7218:1: ( ( rule__Rule__Group_1__0 )? )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7215:1: ( ( ( rule__Rule__Group_1__0 )? ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7216:1: ( ( rule__Rule__Group_1__0 )? )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7218:1: ( ( rule__Rule__Group_1__0 )? )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7219:1: ( rule__Rule__Group_1__0 )?
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7216:1: ( ( rule__Rule__Group_1__0 )? )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7217:1: ( rule__Rule__Group_1__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRuleAccess().getGroup_1()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7220:1: ( rule__Rule__Group_1__0 )?
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7218:1: ( rule__Rule__Group_1__0 )?
             int alt48=2;
             int LA48_0 = input.LA(1);
 
@@ -20876,9 +20886,9 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
             }
             switch (alt48) {
                 case 1 :
-                    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7220:2: rule__Rule__Group_1__0
+                    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7218:2: rule__Rule__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__Rule__Group_1__0_in_rule__Rule__Group__1__Impl14607);
+                    pushFollow(FOLLOW_rule__Rule__Group_1__0_in_rule__Rule__Group__1__Impl14605);
                     rule__Rule__Group_1__0();
 
                     state._fsp--;
@@ -20914,16 +20924,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rule__Group__2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7230:1: rule__Rule__Group__2 : rule__Rule__Group__2__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7228:1: rule__Rule__Group__2 : rule__Rule__Group__2__Impl ;
     public final void rule__Rule__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7234:1: ( rule__Rule__Group__2__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7235:2: rule__Rule__Group__2__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7232:1: ( rule__Rule__Group__2__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7233:2: rule__Rule__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Rule__Group__2__Impl_in_rule__Rule__Group__214638);
+            pushFollow(FOLLOW_rule__Rule__Group__2__Impl_in_rule__Rule__Group__214636);
             rule__Rule__Group__2__Impl();
 
             state._fsp--;
@@ -20947,22 +20957,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rule__Group__2__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7241:1: rule__Rule__Group__2__Impl : ( '.' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7239:1: rule__Rule__Group__2__Impl : ( '.' ) ;
     public final void rule__Rule__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7245:1: ( ( '.' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7246:1: ( '.' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7243:1: ( ( '.' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7244:1: ( '.' )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7246:1: ( '.' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7247:1: '.'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7244:1: ( '.' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7245:1: '.'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRuleAccess().getFullStopKeyword_2()); 
             }
-            match(input,32,FOLLOW_32_in_rule__Rule__Group__2__Impl14666); if (state.failed) return ;
+            match(input,32,FOLLOW_32_in_rule__Rule__Group__2__Impl14664); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getRuleAccess().getFullStopKeyword_2()); 
             }
@@ -20988,21 +20998,21 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rule__Group_1__0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7266:1: rule__Rule__Group_1__0 : rule__Rule__Group_1__0__Impl rule__Rule__Group_1__1 ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7264:1: rule__Rule__Group_1__0 : rule__Rule__Group_1__0__Impl rule__Rule__Group_1__1 ;
     public final void rule__Rule__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7270:1: ( rule__Rule__Group_1__0__Impl rule__Rule__Group_1__1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7271:2: rule__Rule__Group_1__0__Impl rule__Rule__Group_1__1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7268:1: ( rule__Rule__Group_1__0__Impl rule__Rule__Group_1__1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7269:2: rule__Rule__Group_1__0__Impl rule__Rule__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Rule__Group_1__0__Impl_in_rule__Rule__Group_1__014703);
+            pushFollow(FOLLOW_rule__Rule__Group_1__0__Impl_in_rule__Rule__Group_1__014701);
             rule__Rule__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Rule__Group_1__1_in_rule__Rule__Group_1__014706);
+            pushFollow(FOLLOW_rule__Rule__Group_1__1_in_rule__Rule__Group_1__014704);
             rule__Rule__Group_1__1();
 
             state._fsp--;
@@ -21026,24 +21036,34 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rule__Group_1__0__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7278:1: rule__Rule__Group_1__0__Impl : ( 'if' ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7276:1: rule__Rule__Group_1__0__Impl : ( ( rule__Rule__ConditionAssignment_1_0 ) ) ;
     public final void rule__Rule__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7282:1: ( ( 'if' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7283:1: ( 'if' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7280:1: ( ( ( rule__Rule__ConditionAssignment_1_0 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7281:1: ( ( rule__Rule__ConditionAssignment_1_0 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7283:1: ( 'if' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7284:1: 'if'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7281:1: ( ( rule__Rule__ConditionAssignment_1_0 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7282:1: ( rule__Rule__ConditionAssignment_1_0 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getRuleAccess().getIfKeyword_1_0()); 
+               before(grammarAccess.getRuleAccess().getConditionAssignment_1_0()); 
             }
-            match(input,42,FOLLOW_42_in_rule__Rule__Group_1__0__Impl14734); if (state.failed) return ;
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7283:1: ( rule__Rule__ConditionAssignment_1_0 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7283:2: rule__Rule__ConditionAssignment_1_0
+            {
+            pushFollow(FOLLOW_rule__Rule__ConditionAssignment_1_0_in_rule__Rule__Group_1__0__Impl14731);
+            rule__Rule__ConditionAssignment_1_0();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getRuleAccess().getIfKeyword_1_0()); 
+               after(grammarAccess.getRuleAccess().getConditionAssignment_1_0()); 
             }
 
             }
@@ -21067,16 +21087,16 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rule__Group_1__1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7297:1: rule__Rule__Group_1__1 : rule__Rule__Group_1__1__Impl ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7293:1: rule__Rule__Group_1__1 : rule__Rule__Group_1__1__Impl ;
     public final void rule__Rule__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7301:1: ( rule__Rule__Group_1__1__Impl )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7302:2: rule__Rule__Group_1__1__Impl
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7297:1: ( rule__Rule__Group_1__1__Impl )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7298:2: rule__Rule__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Rule__Group_1__1__Impl_in_rule__Rule__Group_1__114765);
+            pushFollow(FOLLOW_rule__Rule__Group_1__1__Impl_in_rule__Rule__Group_1__114761);
             rule__Rule__Group_1__1__Impl();
 
             state._fsp--;
@@ -21100,25 +21120,25 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rule__Group_1__1__Impl"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7308:1: rule__Rule__Group_1__1__Impl : ( ( rule__Rule__BodyAssignment_1_1 ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7304:1: rule__Rule__Group_1__1__Impl : ( ( rule__Rule__BodyAssignment_1_1 ) ) ;
     public final void rule__Rule__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7312:1: ( ( ( rule__Rule__BodyAssignment_1_1 ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7313:1: ( ( rule__Rule__BodyAssignment_1_1 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7308:1: ( ( ( rule__Rule__BodyAssignment_1_1 ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7309:1: ( ( rule__Rule__BodyAssignment_1_1 ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7313:1: ( ( rule__Rule__BodyAssignment_1_1 ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7314:1: ( rule__Rule__BodyAssignment_1_1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7309:1: ( ( rule__Rule__BodyAssignment_1_1 ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7310:1: ( rule__Rule__BodyAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRuleAccess().getBodyAssignment_1_1()); 
             }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7315:1: ( rule__Rule__BodyAssignment_1_1 )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7315:2: rule__Rule__BodyAssignment_1_1
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7311:1: ( rule__Rule__BodyAssignment_1_1 )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7311:2: rule__Rule__BodyAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__Rule__BodyAssignment_1_1_in_rule__Rule__Group_1__1__Impl14792);
+            pushFollow(FOLLOW_rule__Rule__BodyAssignment_1_1_in_rule__Rule__Group_1__1__Impl14788);
             rule__Rule__BodyAssignment_1_1();
 
             state._fsp--;
@@ -21151,22 +21171,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Program__StatementsAssignment"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7330:1: rule__Program__StatementsAssignment : ( ruleStatement ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7326:1: rule__Program__StatementsAssignment : ( ruleStatement ) ;
     public final void rule__Program__StatementsAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7334:1: ( ( ruleStatement ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7335:1: ( ruleStatement )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7330:1: ( ( ruleStatement ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7331:1: ( ruleStatement )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7335:1: ( ruleStatement )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7336:1: ruleStatement
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7331:1: ( ruleStatement )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7332:1: ruleStatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getProgramAccess().getStatementsStatementParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_ruleStatement_in_rule__Program__StatementsAssignment14831);
+            pushFollow(FOLLOW_ruleStatement_in_rule__Program__StatementsAssignment14827);
             ruleStatement();
 
             state._fsp--;
@@ -21196,22 +21216,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Variable__IdentifierAssignment"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7346:1: rule__Variable__IdentifierAssignment : ( RULE_UID ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7342:1: rule__Variable__IdentifierAssignment : ( RULE_UID ) ;
     public final void rule__Variable__IdentifierAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7350:1: ( ( RULE_UID ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7351:1: ( RULE_UID )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7346:1: ( ( RULE_UID ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7347:1: ( RULE_UID )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7351:1: ( RULE_UID )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7352:1: RULE_UID
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7347:1: ( RULE_UID )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7348:1: RULE_UID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVariableAccess().getIdentifierUIDTerminalRuleCall_0()); 
             }
-            match(input,RULE_UID,FOLLOW_RULE_UID_in_rule__Variable__IdentifierAssignment14863); if (state.failed) return ;
+            match(input,RULE_UID,FOLLOW_RULE_UID_in_rule__Variable__IdentifierAssignment14859); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getVariableAccess().getIdentifierUIDTerminalRuleCall_0()); 
             }
@@ -21237,22 +21257,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TypedVariable__TypeAssignment_0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7361:1: rule__TypedVariable__TypeAssignment_0 : ( RULE_LID ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7357:1: rule__TypedVariable__TypeAssignment_0 : ( RULE_LID ) ;
     public final void rule__TypedVariable__TypeAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7365:1: ( ( RULE_LID ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7366:1: ( RULE_LID )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7361:1: ( ( RULE_LID ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7362:1: ( RULE_LID )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7366:1: ( RULE_LID )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7367:1: RULE_LID
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7362:1: ( RULE_LID )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7363:1: RULE_LID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTypedVariableAccess().getTypeLIDTerminalRuleCall_0_0()); 
             }
-            match(input,RULE_LID,FOLLOW_RULE_LID_in_rule__TypedVariable__TypeAssignment_014894); if (state.failed) return ;
+            match(input,RULE_LID,FOLLOW_RULE_LID_in_rule__TypedVariable__TypeAssignment_014890); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getTypedVariableAccess().getTypeLIDTerminalRuleCall_0_0()); 
             }
@@ -21278,22 +21298,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TypedVariable__VarAssignment_1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7376:1: rule__TypedVariable__VarAssignment_1 : ( ruleVariable ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7372:1: rule__TypedVariable__VarAssignment_1 : ( ruleVariable ) ;
     public final void rule__TypedVariable__VarAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7380:1: ( ( ruleVariable ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7381:1: ( ruleVariable )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7376:1: ( ( ruleVariable ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7377:1: ( ruleVariable )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7381:1: ( ruleVariable )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7382:1: ruleVariable
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7377:1: ( ruleVariable )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7378:1: ruleVariable
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTypedVariableAccess().getVarVariableParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleVariable_in_rule__TypedVariable__VarAssignment_114925);
+            pushFollow(FOLLOW_ruleVariable_in_rule__TypedVariable__VarAssignment_114921);
             ruleVariable();
 
             state._fsp--;
@@ -21323,22 +21343,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Addition__RhsAssignment_1_2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7391:1: rule__Addition__RhsAssignment_1_2 : ( ruleMultiplication ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7387:1: rule__Addition__RhsAssignment_1_2 : ( ruleMultiplication ) ;
     public final void rule__Addition__RhsAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7395:1: ( ( ruleMultiplication ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7396:1: ( ruleMultiplication )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7391:1: ( ( ruleMultiplication ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7392:1: ( ruleMultiplication )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7396:1: ( ruleMultiplication )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7397:1: ruleMultiplication
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7392:1: ( ruleMultiplication )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7393:1: ruleMultiplication
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditionAccess().getRhsMultiplicationParserRuleCall_1_2_0()); 
             }
-            pushFollow(FOLLOW_ruleMultiplication_in_rule__Addition__RhsAssignment_1_214956);
+            pushFollow(FOLLOW_ruleMultiplication_in_rule__Addition__RhsAssignment_1_214952);
             ruleMultiplication();
 
             state._fsp--;
@@ -21368,22 +21388,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Multiplication__RhsAssignment_1_2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7406:1: rule__Multiplication__RhsAssignment_1_2 : ( rulePrimary ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7402:1: rule__Multiplication__RhsAssignment_1_2 : ( rulePrimary ) ;
     public final void rule__Multiplication__RhsAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7410:1: ( ( rulePrimary ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7411:1: ( rulePrimary )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7406:1: ( ( rulePrimary ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7407:1: ( rulePrimary )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7411:1: ( rulePrimary )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7412:1: rulePrimary
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7407:1: ( rulePrimary )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7408:1: rulePrimary
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicationAccess().getRhsPrimaryParserRuleCall_1_2_0()); 
             }
-            pushFollow(FOLLOW_rulePrimary_in_rule__Multiplication__RhsAssignment_1_214987);
+            pushFollow(FOLLOW_rulePrimary_in_rule__Multiplication__RhsAssignment_1_214983);
             rulePrimary();
 
             state._fsp--;
@@ -21413,28 +21433,28 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Primary__MinusAssignment_0_0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7421:1: rule__Primary__MinusAssignment_0_0 : ( ( '-' ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7417:1: rule__Primary__MinusAssignment_0_0 : ( ( '-' ) ) ;
     public final void rule__Primary__MinusAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7425:1: ( ( ( '-' ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7426:1: ( ( '-' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7421:1: ( ( ( '-' ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7422:1: ( ( '-' ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7426:1: ( ( '-' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7427:1: ( '-' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getPrimaryAccess().getMinusHyphenMinusKeyword_0_0_0()); 
-            }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7428:1: ( '-' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7429:1: '-'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7422:1: ( ( '-' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7423:1: ( '-' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryAccess().getMinusHyphenMinusKeyword_0_0_0()); 
             }
-            match(input,14,FOLLOW_14_in_rule__Primary__MinusAssignment_0_015023); if (state.failed) return ;
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7424:1: ( '-' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7425:1: '-'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getPrimaryAccess().getMinusHyphenMinusKeyword_0_0_0()); 
+            }
+            match(input,14,FOLLOW_14_in_rule__Primary__MinusAssignment_0_015019); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryAccess().getMinusHyphenMinusKeyword_0_0_0()); 
             }
@@ -21466,22 +21486,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Primary__TermAssignment_0_1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7444:1: rule__Primary__TermAssignment_0_1 : ( ruleArithmeticLiteral ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7440:1: rule__Primary__TermAssignment_0_1 : ( ruleArithmeticLiteral ) ;
     public final void rule__Primary__TermAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7448:1: ( ( ruleArithmeticLiteral ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7449:1: ( ruleArithmeticLiteral )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7444:1: ( ( ruleArithmeticLiteral ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7445:1: ( ruleArithmeticLiteral )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7449:1: ( ruleArithmeticLiteral )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7450:1: ruleArithmeticLiteral
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7445:1: ( ruleArithmeticLiteral )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7446:1: ruleArithmeticLiteral
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryAccess().getTermArithmeticLiteralParserRuleCall_0_1_0()); 
             }
-            pushFollow(FOLLOW_ruleArithmeticLiteral_in_rule__Primary__TermAssignment_0_115062);
+            pushFollow(FOLLOW_ruleArithmeticLiteral_in_rule__Primary__TermAssignment_0_115058);
             ruleArithmeticLiteral();
 
             state._fsp--;
@@ -21511,28 +21531,28 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Primary__MinusAssignment_1_0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7459:1: rule__Primary__MinusAssignment_1_0 : ( ( '-' ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7455:1: rule__Primary__MinusAssignment_1_0 : ( ( '-' ) ) ;
     public final void rule__Primary__MinusAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7463:1: ( ( ( '-' ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7464:1: ( ( '-' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7459:1: ( ( ( '-' ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7460:1: ( ( '-' ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7464:1: ( ( '-' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7465:1: ( '-' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getPrimaryAccess().getMinusHyphenMinusKeyword_1_0_0()); 
-            }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7466:1: ( '-' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7467:1: '-'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7460:1: ( ( '-' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7461:1: ( '-' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryAccess().getMinusHyphenMinusKeyword_1_0_0()); 
             }
-            match(input,14,FOLLOW_14_in_rule__Primary__MinusAssignment_1_015098); if (state.failed) return ;
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7462:1: ( '-' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7463:1: '-'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getPrimaryAccess().getMinusHyphenMinusKeyword_1_0_0()); 
+            }
+            match(input,14,FOLLOW_14_in_rule__Primary__MinusAssignment_1_015094); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryAccess().getMinusHyphenMinusKeyword_1_0_0()); 
             }
@@ -21564,22 +21584,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Primary__TermAssignment_1_2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7482:1: rule__Primary__TermAssignment_1_2 : ( ruleAddition ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7478:1: rule__Primary__TermAssignment_1_2 : ( ruleAddition ) ;
     public final void rule__Primary__TermAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7486:1: ( ( ruleAddition ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7487:1: ( ruleAddition )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7482:1: ( ( ruleAddition ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7483:1: ( ruleAddition )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7487:1: ( ruleAddition )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7488:1: ruleAddition
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7483:1: ( ruleAddition )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7484:1: ruleAddition
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryAccess().getTermAdditionParserRuleCall_1_2_0()); 
             }
-            pushFollow(FOLLOW_ruleAddition_in_rule__Primary__TermAssignment_1_215137);
+            pushFollow(FOLLOW_ruleAddition_in_rule__Primary__TermAssignment_1_215133);
             ruleAddition();
 
             state._fsp--;
@@ -21609,22 +21629,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ArithmeticLiteral__VAssignment_0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7497:1: rule__ArithmeticLiteral__VAssignment_0 : ( ruleVariable ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7493:1: rule__ArithmeticLiteral__VAssignment_0 : ( ruleVariable ) ;
     public final void rule__ArithmeticLiteral__VAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7501:1: ( ( ruleVariable ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7502:1: ( ruleVariable )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7497:1: ( ( ruleVariable ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7498:1: ( ruleVariable )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7502:1: ( ruleVariable )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7503:1: ruleVariable
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7498:1: ( ruleVariable )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7499:1: ruleVariable
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArithmeticLiteralAccess().getVVariableParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleVariable_in_rule__ArithmeticLiteral__VAssignment_015168);
+            pushFollow(FOLLOW_ruleVariable_in_rule__ArithmeticLiteral__VAssignment_015164);
             ruleVariable();
 
             state._fsp--;
@@ -21654,22 +21674,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ArithmeticLiteral__TvAssignment_1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7512:1: rule__ArithmeticLiteral__TvAssignment_1 : ( ruleTypedVariable ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7508:1: rule__ArithmeticLiteral__TvAssignment_1 : ( ruleTypedVariable ) ;
     public final void rule__ArithmeticLiteral__TvAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7516:1: ( ( ruleTypedVariable ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7517:1: ( ruleTypedVariable )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7512:1: ( ( ruleTypedVariable ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7513:1: ( ruleTypedVariable )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7517:1: ( ruleTypedVariable )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7518:1: ruleTypedVariable
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7513:1: ( ruleTypedVariable )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7514:1: ruleTypedVariable
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArithmeticLiteralAccess().getTvTypedVariableParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleTypedVariable_in_rule__ArithmeticLiteral__TvAssignment_115199);
+            pushFollow(FOLLOW_ruleTypedVariable_in_rule__ArithmeticLiteral__TvAssignment_115195);
             ruleTypedVariable();
 
             state._fsp--;
@@ -21699,22 +21719,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ArithmeticLiteral__ConstAssignment_2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7527:1: rule__ArithmeticLiteral__ConstAssignment_2 : ( RULE_LID ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7523:1: rule__ArithmeticLiteral__ConstAssignment_2 : ( RULE_LID ) ;
     public final void rule__ArithmeticLiteral__ConstAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7531:1: ( ( RULE_LID ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7532:1: ( RULE_LID )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7527:1: ( ( RULE_LID ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7528:1: ( RULE_LID )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7532:1: ( RULE_LID )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7533:1: RULE_LID
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7528:1: ( RULE_LID )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7529:1: RULE_LID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArithmeticLiteralAccess().getConstLIDTerminalRuleCall_2_0()); 
             }
-            match(input,RULE_LID,FOLLOW_RULE_LID_in_rule__ArithmeticLiteral__ConstAssignment_215230); if (state.failed) return ;
+            match(input,RULE_LID,FOLLOW_RULE_LID_in_rule__ArithmeticLiteral__ConstAssignment_215226); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getArithmeticLiteralAccess().getConstLIDTerminalRuleCall_2_0()); 
             }
@@ -21740,22 +21760,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ArithmeticLiteral__ValueAssignment_3"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7542:1: rule__ArithmeticLiteral__ValueAssignment_3 : ( RULE_INT ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7538:1: rule__ArithmeticLiteral__ValueAssignment_3 : ( RULE_INT ) ;
     public final void rule__ArithmeticLiteral__ValueAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7546:1: ( ( RULE_INT ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7547:1: ( RULE_INT )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7542:1: ( ( RULE_INT ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7543:1: ( RULE_INT )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7547:1: ( RULE_INT )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7548:1: RULE_INT
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7543:1: ( RULE_INT )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7544:1: RULE_INT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArithmeticLiteralAccess().getValueINTTerminalRuleCall_3_0()); 
             }
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__ArithmeticLiteral__ValueAssignment_315261); if (state.failed) return ;
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__ArithmeticLiteral__ValueAssignment_315257); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getArithmeticLiteralAccess().getValueINTTerminalRuleCall_3_0()); 
             }
@@ -21781,22 +21801,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GroundAddition__RhsAssignment_1_2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7557:1: rule__GroundAddition__RhsAssignment_1_2 : ( ruleGroundMultiplication ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7553:1: rule__GroundAddition__RhsAssignment_1_2 : ( ruleGroundMultiplication ) ;
     public final void rule__GroundAddition__RhsAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7561:1: ( ( ruleGroundMultiplication ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7562:1: ( ruleGroundMultiplication )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7557:1: ( ( ruleGroundMultiplication ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7558:1: ( ruleGroundMultiplication )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7562:1: ( ruleGroundMultiplication )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7563:1: ruleGroundMultiplication
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7558:1: ( ruleGroundMultiplication )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7559:1: ruleGroundMultiplication
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGroundAdditionAccess().getRhsGroundMultiplicationParserRuleCall_1_2_0()); 
             }
-            pushFollow(FOLLOW_ruleGroundMultiplication_in_rule__GroundAddition__RhsAssignment_1_215292);
+            pushFollow(FOLLOW_ruleGroundMultiplication_in_rule__GroundAddition__RhsAssignment_1_215288);
             ruleGroundMultiplication();
 
             state._fsp--;
@@ -21826,22 +21846,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GroundMultiplication__RhsAssignment_1_2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7572:1: rule__GroundMultiplication__RhsAssignment_1_2 : ( rulePrimary ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7568:1: rule__GroundMultiplication__RhsAssignment_1_2 : ( rulePrimary ) ;
     public final void rule__GroundMultiplication__RhsAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7576:1: ( ( rulePrimary ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7577:1: ( rulePrimary )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7572:1: ( ( rulePrimary ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7573:1: ( rulePrimary )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7577:1: ( rulePrimary )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7578:1: rulePrimary
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7573:1: ( rulePrimary )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7574:1: rulePrimary
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGroundMultiplicationAccess().getRhsPrimaryParserRuleCall_1_2_0()); 
             }
-            pushFollow(FOLLOW_rulePrimary_in_rule__GroundMultiplication__RhsAssignment_1_215323);
+            pushFollow(FOLLOW_rulePrimary_in_rule__GroundMultiplication__RhsAssignment_1_215319);
             rulePrimary();
 
             state._fsp--;
@@ -21871,28 +21891,28 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GroundPrimary__MinusAssignment_0_0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7587:1: rule__GroundPrimary__MinusAssignment_0_0 : ( ( '-' ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7583:1: rule__GroundPrimary__MinusAssignment_0_0 : ( ( '-' ) ) ;
     public final void rule__GroundPrimary__MinusAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7591:1: ( ( ( '-' ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7592:1: ( ( '-' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7587:1: ( ( ( '-' ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7588:1: ( ( '-' ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7592:1: ( ( '-' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7593:1: ( '-' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getGroundPrimaryAccess().getMinusHyphenMinusKeyword_0_0_0()); 
-            }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7594:1: ( '-' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7595:1: '-'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7588:1: ( ( '-' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7589:1: ( '-' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGroundPrimaryAccess().getMinusHyphenMinusKeyword_0_0_0()); 
             }
-            match(input,14,FOLLOW_14_in_rule__GroundPrimary__MinusAssignment_0_015359); if (state.failed) return ;
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7590:1: ( '-' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7591:1: '-'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGroundPrimaryAccess().getMinusHyphenMinusKeyword_0_0_0()); 
+            }
+            match(input,14,FOLLOW_14_in_rule__GroundPrimary__MinusAssignment_0_015355); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGroundPrimaryAccess().getMinusHyphenMinusKeyword_0_0_0()); 
             }
@@ -21924,22 +21944,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GroundPrimary__TermAssignment_0_1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7610:1: rule__GroundPrimary__TermAssignment_0_1 : ( ruleGroundArithmeticLiteral ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7606:1: rule__GroundPrimary__TermAssignment_0_1 : ( ruleGroundArithmeticLiteral ) ;
     public final void rule__GroundPrimary__TermAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7614:1: ( ( ruleGroundArithmeticLiteral ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7615:1: ( ruleGroundArithmeticLiteral )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7610:1: ( ( ruleGroundArithmeticLiteral ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7611:1: ( ruleGroundArithmeticLiteral )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7615:1: ( ruleGroundArithmeticLiteral )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7616:1: ruleGroundArithmeticLiteral
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7611:1: ( ruleGroundArithmeticLiteral )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7612:1: ruleGroundArithmeticLiteral
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGroundPrimaryAccess().getTermGroundArithmeticLiteralParserRuleCall_0_1_0()); 
             }
-            pushFollow(FOLLOW_ruleGroundArithmeticLiteral_in_rule__GroundPrimary__TermAssignment_0_115398);
+            pushFollow(FOLLOW_ruleGroundArithmeticLiteral_in_rule__GroundPrimary__TermAssignment_0_115394);
             ruleGroundArithmeticLiteral();
 
             state._fsp--;
@@ -21969,28 +21989,28 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GroundPrimary__MinusAssignment_1_0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7625:1: rule__GroundPrimary__MinusAssignment_1_0 : ( ( '-' ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7621:1: rule__GroundPrimary__MinusAssignment_1_0 : ( ( '-' ) ) ;
     public final void rule__GroundPrimary__MinusAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7629:1: ( ( ( '-' ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7630:1: ( ( '-' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7625:1: ( ( ( '-' ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7626:1: ( ( '-' ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7630:1: ( ( '-' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7631:1: ( '-' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getGroundPrimaryAccess().getMinusHyphenMinusKeyword_1_0_0()); 
-            }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7632:1: ( '-' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7633:1: '-'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7626:1: ( ( '-' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7627:1: ( '-' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGroundPrimaryAccess().getMinusHyphenMinusKeyword_1_0_0()); 
             }
-            match(input,14,FOLLOW_14_in_rule__GroundPrimary__MinusAssignment_1_015434); if (state.failed) return ;
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7628:1: ( '-' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7629:1: '-'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getGroundPrimaryAccess().getMinusHyphenMinusKeyword_1_0_0()); 
+            }
+            match(input,14,FOLLOW_14_in_rule__GroundPrimary__MinusAssignment_1_015430); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGroundPrimaryAccess().getMinusHyphenMinusKeyword_1_0_0()); 
             }
@@ -22022,22 +22042,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GroundPrimary__TermAssignment_1_2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7648:1: rule__GroundPrimary__TermAssignment_1_2 : ( ruleAddition ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7644:1: rule__GroundPrimary__TermAssignment_1_2 : ( ruleAddition ) ;
     public final void rule__GroundPrimary__TermAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7652:1: ( ( ruleAddition ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7653:1: ( ruleAddition )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7648:1: ( ( ruleAddition ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7649:1: ( ruleAddition )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7653:1: ( ruleAddition )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7654:1: ruleAddition
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7649:1: ( ruleAddition )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7650:1: ruleAddition
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGroundPrimaryAccess().getTermAdditionParserRuleCall_1_2_0()); 
             }
-            pushFollow(FOLLOW_ruleAddition_in_rule__GroundPrimary__TermAssignment_1_215473);
+            pushFollow(FOLLOW_ruleAddition_in_rule__GroundPrimary__TermAssignment_1_215469);
             ruleAddition();
 
             state._fsp--;
@@ -22067,22 +22087,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GroundArithmeticLiteral__IdentifierAssignment_0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7663:1: rule__GroundArithmeticLiteral__IdentifierAssignment_0 : ( RULE_LID ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7659:1: rule__GroundArithmeticLiteral__IdentifierAssignment_0 : ( RULE_LID ) ;
     public final void rule__GroundArithmeticLiteral__IdentifierAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7667:1: ( ( RULE_LID ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7668:1: ( RULE_LID )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7663:1: ( ( RULE_LID ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7664:1: ( RULE_LID )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7668:1: ( RULE_LID )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7669:1: RULE_LID
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7664:1: ( RULE_LID )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7665:1: RULE_LID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGroundArithmeticLiteralAccess().getIdentifierLIDTerminalRuleCall_0_0()); 
             }
-            match(input,RULE_LID,FOLLOW_RULE_LID_in_rule__GroundArithmeticLiteral__IdentifierAssignment_015504); if (state.failed) return ;
+            match(input,RULE_LID,FOLLOW_RULE_LID_in_rule__GroundArithmeticLiteral__IdentifierAssignment_015500); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGroundArithmeticLiteralAccess().getIdentifierLIDTerminalRuleCall_0_0()); 
             }
@@ -22108,22 +22128,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GroundArithmeticLiteral__ValueAssignment_1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7678:1: rule__GroundArithmeticLiteral__ValueAssignment_1 : ( RULE_INT ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7674:1: rule__GroundArithmeticLiteral__ValueAssignment_1 : ( RULE_INT ) ;
     public final void rule__GroundArithmeticLiteral__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7682:1: ( ( RULE_INT ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7683:1: ( RULE_INT )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7678:1: ( ( RULE_INT ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7679:1: ( RULE_INT )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7683:1: ( RULE_INT )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7684:1: RULE_INT
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7679:1: ( RULE_INT )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7680:1: RULE_INT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGroundArithmeticLiteralAccess().getValueINTTerminalRuleCall_1_0()); 
             }
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__GroundArithmeticLiteral__ValueAssignment_115535); if (state.failed) return ;
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__GroundArithmeticLiteral__ValueAssignment_115531); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getGroundArithmeticLiteralAccess().getValueINTTerminalRuleCall_1_0()); 
             }
@@ -22149,22 +22169,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BasicTerms__CarAssignment_0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7693:1: rule__BasicTerms__CarAssignment_0 : ( ruleBasicTerm ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7689:1: rule__BasicTerms__CarAssignment_0 : ( ruleBasicTerm ) ;
     public final void rule__BasicTerms__CarAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7697:1: ( ( ruleBasicTerm ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7698:1: ( ruleBasicTerm )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7693:1: ( ( ruleBasicTerm ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7694:1: ( ruleBasicTerm )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7698:1: ( ruleBasicTerm )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7699:1: ruleBasicTerm
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7694:1: ( ruleBasicTerm )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7695:1: ruleBasicTerm
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBasicTermsAccess().getCarBasicTermParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleBasicTerm_in_rule__BasicTerms__CarAssignment_015566);
+            pushFollow(FOLLOW_ruleBasicTerm_in_rule__BasicTerms__CarAssignment_015562);
             ruleBasicTerm();
 
             state._fsp--;
@@ -22194,22 +22214,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BasicTerms__CdrAssignment_1_1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7708:1: rule__BasicTerms__CdrAssignment_1_1 : ( ruleBasicTerm ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7704:1: rule__BasicTerms__CdrAssignment_1_1 : ( ruleBasicTerm ) ;
     public final void rule__BasicTerms__CdrAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7712:1: ( ( ruleBasicTerm ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7713:1: ( ruleBasicTerm )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7708:1: ( ( ruleBasicTerm ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7709:1: ( ruleBasicTerm )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7713:1: ( ruleBasicTerm )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7714:1: ruleBasicTerm
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7709:1: ( ruleBasicTerm )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7710:1: ruleBasicTerm
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBasicTermsAccess().getCdrBasicTermParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleBasicTerm_in_rule__BasicTerms__CdrAssignment_1_115597);
+            pushFollow(FOLLOW_ruleBasicTerm_in_rule__BasicTerms__CdrAssignment_1_115593);
             ruleBasicTerm();
 
             state._fsp--;
@@ -22239,22 +22259,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GroundTerms__CarAssignment_0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7723:1: rule__GroundTerms__CarAssignment_0 : ( ruleGroundTerm ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7719:1: rule__GroundTerms__CarAssignment_0 : ( ruleGroundTerm ) ;
     public final void rule__GroundTerms__CarAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7727:1: ( ( ruleGroundTerm ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7728:1: ( ruleGroundTerm )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7723:1: ( ( ruleGroundTerm ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7724:1: ( ruleGroundTerm )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7728:1: ( ruleGroundTerm )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7729:1: ruleGroundTerm
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7724:1: ( ruleGroundTerm )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7725:1: ruleGroundTerm
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGroundTermsAccess().getCarGroundTermParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleGroundTerm_in_rule__GroundTerms__CarAssignment_015628);
+            pushFollow(FOLLOW_ruleGroundTerm_in_rule__GroundTerms__CarAssignment_015624);
             ruleGroundTerm();
 
             state._fsp--;
@@ -22284,22 +22304,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GroundTerms__CdrAssignment_1_1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7738:1: rule__GroundTerms__CdrAssignment_1_1 : ( ruleGroundTerm ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7734:1: rule__GroundTerms__CdrAssignment_1_1 : ( ruleGroundTerm ) ;
     public final void rule__GroundTerms__CdrAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7742:1: ( ( ruleGroundTerm ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7743:1: ( ruleGroundTerm )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7738:1: ( ( ruleGroundTerm ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7739:1: ( ruleGroundTerm )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7743:1: ( ruleGroundTerm )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7744:1: ruleGroundTerm
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7739:1: ( ruleGroundTerm )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7740:1: ruleGroundTerm
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGroundTermsAccess().getCdrGroundTermParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleGroundTerm_in_rule__GroundTerms__CdrAssignment_1_115659);
+            pushFollow(FOLLOW_ruleGroundTerm_in_rule__GroundTerms__CdrAssignment_1_115655);
             ruleGroundTerm();
 
             state._fsp--;
@@ -22329,22 +22349,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Terms__CarAssignment_0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7753:1: rule__Terms__CarAssignment_0 : ( ruleTerm ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7749:1: rule__Terms__CarAssignment_0 : ( ruleTerm ) ;
     public final void rule__Terms__CarAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7757:1: ( ( ruleTerm ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7758:1: ( ruleTerm )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7753:1: ( ( ruleTerm ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7754:1: ( ruleTerm )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7758:1: ( ruleTerm )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7759:1: ruleTerm
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7754:1: ( ruleTerm )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7755:1: ruleTerm
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTermsAccess().getCarTermParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleTerm_in_rule__Terms__CarAssignment_015690);
+            pushFollow(FOLLOW_ruleTerm_in_rule__Terms__CarAssignment_015686);
             ruleTerm();
 
             state._fsp--;
@@ -22373,23 +22393,76 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Terms__CarAssignment_0"
 
 
+    // $ANTLR start "rule__Terms__TermsAssignment_1_0"
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7764:1: rule__Terms__TermsAssignment_1_0 : ( ( ',' ) ) ;
+    public final void rule__Terms__TermsAssignment_1_0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7768:1: ( ( ( ',' ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7769:1: ( ( ',' ) )
+            {
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7769:1: ( ( ',' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7770:1: ( ',' )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getTermsAccess().getTermsCommaKeyword_1_0_0()); 
+            }
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7771:1: ( ',' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7772:1: ','
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getTermsAccess().getTermsCommaKeyword_1_0_0()); 
+            }
+            match(input,28,FOLLOW_28_in_rule__Terms__TermsAssignment_1_015722); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getTermsAccess().getTermsCommaKeyword_1_0_0()); 
+            }
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getTermsAccess().getTermsCommaKeyword_1_0_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Terms__TermsAssignment_1_0"
+
+
     // $ANTLR start "rule__Terms__CdrAssignment_1_1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7768:1: rule__Terms__CdrAssignment_1_1 : ( ruleTerm ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7787:1: rule__Terms__CdrAssignment_1_1 : ( ruleTerm ) ;
     public final void rule__Terms__CdrAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7772:1: ( ( ruleTerm ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7773:1: ( ruleTerm )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7791:1: ( ( ruleTerm ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7792:1: ( ruleTerm )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7773:1: ( ruleTerm )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7774:1: ruleTerm
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7792:1: ( ruleTerm )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7793:1: ruleTerm
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTermsAccess().getCdrTermParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleTerm_in_rule__Terms__CdrAssignment_1_115721);
+            pushFollow(FOLLOW_ruleTerm_in_rule__Terms__CdrAssignment_1_115761);
             ruleTerm();
 
             state._fsp--;
@@ -22419,22 +22492,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstantDeclaration__IdAssignment_1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7783:1: rule__ConstantDeclaration__IdAssignment_1 : ( RULE_LID ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7802:1: rule__ConstantDeclaration__IdAssignment_1 : ( RULE_LID ) ;
     public final void rule__ConstantDeclaration__IdAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7787:1: ( ( RULE_LID ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7788:1: ( RULE_LID )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7806:1: ( ( RULE_LID ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7807:1: ( RULE_LID )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7788:1: ( RULE_LID )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7789:1: RULE_LID
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7807:1: ( RULE_LID )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7808:1: RULE_LID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConstantDeclarationAccess().getIdLIDTerminalRuleCall_1_0()); 
             }
-            match(input,RULE_LID,FOLLOW_RULE_LID_in_rule__ConstantDeclaration__IdAssignment_115752); if (state.failed) return ;
+            match(input,RULE_LID,FOLLOW_RULE_LID_in_rule__ConstantDeclaration__IdAssignment_115792); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getConstantDeclarationAccess().getIdLIDTerminalRuleCall_1_0()); 
             }
@@ -22460,22 +22533,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ConstantDeclaration__CvAssignment_3"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7798:1: rule__ConstantDeclaration__CvAssignment_3 : ( ruleGroundArithmeticTerm ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7817:1: rule__ConstantDeclaration__CvAssignment_3 : ( ruleGroundArithmeticTerm ) ;
     public final void rule__ConstantDeclaration__CvAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7802:1: ( ( ruleGroundArithmeticTerm ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7803:1: ( ruleGroundArithmeticTerm )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7821:1: ( ( ruleGroundArithmeticTerm ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7822:1: ( ruleGroundArithmeticTerm )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7803:1: ( ruleGroundArithmeticTerm )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7804:1: ruleGroundArithmeticTerm
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7822:1: ( ruleGroundArithmeticTerm )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7823:1: ruleGroundArithmeticTerm
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConstantDeclarationAccess().getCvGroundArithmeticTermParserRuleCall_3_0()); 
             }
-            pushFollow(FOLLOW_ruleGroundArithmeticTerm_in_rule__ConstantDeclaration__CvAssignment_315783);
+            pushFollow(FOLLOW_ruleGroundArithmeticTerm_in_rule__ConstantDeclaration__CvAssignment_315823);
             ruleGroundArithmeticTerm();
 
             state._fsp--;
@@ -22505,22 +22578,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TypeDeclaration__IdAssignment_1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7813:1: rule__TypeDeclaration__IdAssignment_1 : ( RULE_LID ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7832:1: rule__TypeDeclaration__IdAssignment_1 : ( RULE_LID ) ;
     public final void rule__TypeDeclaration__IdAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7817:1: ( ( RULE_LID ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7818:1: ( RULE_LID )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7836:1: ( ( RULE_LID ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7837:1: ( RULE_LID )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7818:1: ( RULE_LID )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7819:1: RULE_LID
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7837:1: ( RULE_LID )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7838:1: RULE_LID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTypeDeclarationAccess().getIdLIDTerminalRuleCall_1_0()); 
             }
-            match(input,RULE_LID,FOLLOW_RULE_LID_in_rule__TypeDeclaration__IdAssignment_115814); if (state.failed) return ;
+            match(input,RULE_LID,FOLLOW_RULE_LID_in_rule__TypeDeclaration__IdAssignment_115854); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getTypeDeclarationAccess().getIdLIDTerminalRuleCall_1_0()); 
             }
@@ -22546,22 +22619,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TypeDeclaration__ExpAssignment_3"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7828:1: rule__TypeDeclaration__ExpAssignment_3 : ( ruleSetExpression ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7847:1: rule__TypeDeclaration__ExpAssignment_3 : ( ruleSetExpression ) ;
     public final void rule__TypeDeclaration__ExpAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7832:1: ( ( ruleSetExpression ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7833:1: ( ruleSetExpression )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7851:1: ( ( ruleSetExpression ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7852:1: ( ruleSetExpression )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7833:1: ( ruleSetExpression )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7834:1: ruleSetExpression
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7852:1: ( ruleSetExpression )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7853:1: ruleSetExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTypeDeclarationAccess().getExpSetExpressionParserRuleCall_3_0()); 
             }
-            pushFollow(FOLLOW_ruleSetExpression_in_rule__TypeDeclaration__ExpAssignment_315845);
+            pushFollow(FOLLOW_ruleSetExpression_in_rule__TypeDeclaration__ExpAssignment_315885);
             ruleSetExpression();
 
             state._fsp--;
@@ -22591,22 +22664,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Limit__CvAssignment"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7843:1: rule__Limit__CvAssignment : ( ruleGroundArithmeticTerm ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7862:1: rule__Limit__CvAssignment : ( ruleGroundArithmeticTerm ) ;
     public final void rule__Limit__CvAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7847:1: ( ( ruleGroundArithmeticTerm ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7848:1: ( ruleGroundArithmeticTerm )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7866:1: ( ( ruleGroundArithmeticTerm ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7867:1: ( ruleGroundArithmeticTerm )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7848:1: ( ruleGroundArithmeticTerm )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7849:1: ruleGroundArithmeticTerm
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7867:1: ( ruleGroundArithmeticTerm )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7868:1: ruleGroundArithmeticTerm
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLimitAccess().getCvGroundArithmeticTermParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_ruleGroundArithmeticTerm_in_rule__Limit__CvAssignment15876);
+            pushFollow(FOLLOW_ruleGroundArithmeticTerm_in_rule__Limit__CvAssignment15916);
             ruleGroundArithmeticTerm();
 
             state._fsp--;
@@ -22636,28 +22709,28 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Set__LhsAssignment_0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7858:1: rule__Set__LhsAssignment_0 : ( ( '{' ) ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7877:1: rule__Set__LhsAssignment_0 : ( ( '{' ) ) ;
     public final void rule__Set__LhsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7862:1: ( ( ( '{' ) ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7863:1: ( ( '{' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7881:1: ( ( ( '{' ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7882:1: ( ( '{' ) )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7863:1: ( ( '{' ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7864:1: ( '{' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getSetAccess().getLhsLeftCurlyBracketKeyword_0_0()); 
-            }
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7865:1: ( '{' )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7866:1: '{'
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7882:1: ( ( '{' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7883:1: ( '{' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSetAccess().getLhsLeftCurlyBracketKeyword_0_0()); 
             }
-            match(input,35,FOLLOW_35_in_rule__Set__LhsAssignment_015912); if (state.failed) return ;
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7884:1: ( '{' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7885:1: '{'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getSetAccess().getLhsLeftCurlyBracketKeyword_0_0()); 
+            }
+            match(input,35,FOLLOW_35_in_rule__Set__LhsAssignment_015952); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSetAccess().getLhsLeftCurlyBracketKeyword_0_0()); 
             }
@@ -22689,22 +22762,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Set__TermsAssignment_1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7881:1: rule__Set__TermsAssignment_1 : ( ruleGroundTerms ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7900:1: rule__Set__TermsAssignment_1 : ( ruleGroundTerms ) ;
     public final void rule__Set__TermsAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7885:1: ( ( ruleGroundTerms ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7886:1: ( ruleGroundTerms )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7904:1: ( ( ruleGroundTerms ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7905:1: ( ruleGroundTerms )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7886:1: ( ruleGroundTerms )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7887:1: ruleGroundTerms
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7905:1: ( ruleGroundTerms )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7906:1: ruleGroundTerms
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSetAccess().getTermsGroundTermsParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleGroundTerms_in_rule__Set__TermsAssignment_115951);
+            pushFollow(FOLLOW_ruleGroundTerms_in_rule__Set__TermsAssignment_115991);
             ruleGroundTerms();
 
             state._fsp--;
@@ -22734,22 +22807,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Range__LhsAssignment_1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7896:1: rule__Range__LhsAssignment_1 : ( ruleLimit ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7915:1: rule__Range__LhsAssignment_1 : ( ruleLimit ) ;
     public final void rule__Range__LhsAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7900:1: ( ( ruleLimit ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7901:1: ( ruleLimit )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7919:1: ( ( ruleLimit ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7920:1: ( ruleLimit )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7901:1: ( ruleLimit )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7902:1: ruleLimit
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7920:1: ( ruleLimit )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7921:1: ruleLimit
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRangeAccess().getLhsLimitParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleLimit_in_rule__Range__LhsAssignment_115982);
+            pushFollow(FOLLOW_ruleLimit_in_rule__Range__LhsAssignment_116022);
             ruleLimit();
 
             state._fsp--;
@@ -22779,22 +22852,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Range__RhsAssignment_4"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7911:1: rule__Range__RhsAssignment_4 : ( ruleLimit ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7930:1: rule__Range__RhsAssignment_4 : ( ruleLimit ) ;
     public final void rule__Range__RhsAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7915:1: ( ( ruleLimit ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7916:1: ( ruleLimit )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7934:1: ( ( ruleLimit ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7935:1: ( ruleLimit )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7916:1: ( ruleLimit )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7917:1: ruleLimit
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7935:1: ( ruleLimit )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7936:1: ruleLimit
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRangeAccess().getRhsLimitParserRuleCall_4_0()); 
             }
-            pushFollow(FOLLOW_ruleLimit_in_rule__Range__RhsAssignment_416013);
+            pushFollow(FOLLOW_ruleLimit_in_rule__Range__RhsAssignment_416053);
             ruleLimit();
 
             state._fsp--;
@@ -22824,22 +22897,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetConstruct__LhsAssignment_0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7926:1: rule__SetConstruct__LhsAssignment_0 : ( ruleBasicTerm ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7945:1: rule__SetConstruct__LhsAssignment_0 : ( ruleBasicTerm ) ;
     public final void rule__SetConstruct__LhsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7930:1: ( ( ruleBasicTerm ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7931:1: ( ruleBasicTerm )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7949:1: ( ( ruleBasicTerm ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7950:1: ( ruleBasicTerm )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7931:1: ( ruleBasicTerm )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7932:1: ruleBasicTerm
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7950:1: ( ruleBasicTerm )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7951:1: ruleBasicTerm
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSetConstructAccess().getLhsBasicTermParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleBasicTerm_in_rule__SetConstruct__LhsAssignment_016044);
+            pushFollow(FOLLOW_ruleBasicTerm_in_rule__SetConstruct__LhsAssignment_016084);
             ruleBasicTerm();
 
             state._fsp--;
@@ -22869,22 +22942,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetConstruct__RhsAssignment_2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7941:1: rule__SetConstruct__RhsAssignment_2 : ( ruleTVars ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7960:1: rule__SetConstruct__RhsAssignment_2 : ( ruleTVars ) ;
     public final void rule__SetConstruct__RhsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7945:1: ( ( ruleTVars ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7946:1: ( ruleTVars )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7964:1: ( ( ruleTVars ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7965:1: ( ruleTVars )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7946:1: ( ruleTVars )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7947:1: ruleTVars
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7965:1: ( ruleTVars )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7966:1: ruleTVars
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSetConstructAccess().getRhsTVarsParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleTVars_in_rule__SetConstruct__RhsAssignment_216075);
+            pushFollow(FOLLOW_ruleTVars_in_rule__SetConstruct__RhsAssignment_216115);
             ruleTVars();
 
             state._fsp--;
@@ -22914,22 +22987,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TVars__CarAssignment_0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7956:1: rule__TVars__CarAssignment_0 : ( ruleTVar ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7975:1: rule__TVars__CarAssignment_0 : ( ruleTVar ) ;
     public final void rule__TVars__CarAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7960:1: ( ( ruleTVar ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7961:1: ( ruleTVar )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7979:1: ( ( ruleTVar ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7980:1: ( ruleTVar )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7961:1: ( ruleTVar )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7962:1: ruleTVar
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7980:1: ( ruleTVar )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7981:1: ruleTVar
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTVarsAccess().getCarTVarParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleTVar_in_rule__TVars__CarAssignment_016106);
+            pushFollow(FOLLOW_ruleTVar_in_rule__TVars__CarAssignment_016146);
             ruleTVar();
 
             state._fsp--;
@@ -22959,22 +23032,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TVars__CdrAssignment_1_1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7971:1: rule__TVars__CdrAssignment_1_1 : ( ruleTVar ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7990:1: rule__TVars__CdrAssignment_1_1 : ( ruleTVar ) ;
     public final void rule__TVars__CdrAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7975:1: ( ( ruleTVar ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7976:1: ( ruleTVar )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7994:1: ( ( ruleTVar ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7995:1: ( ruleTVar )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7976:1: ( ruleTVar )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7977:1: ruleTVar
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7995:1: ( ruleTVar )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7996:1: ruleTVar
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTVarsAccess().getCdrTVarParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleTVar_in_rule__TVars__CdrAssignment_1_116137);
+            pushFollow(FOLLOW_ruleTVar_in_rule__TVars__CdrAssignment_1_116177);
             ruleTVar();
 
             state._fsp--;
@@ -23004,22 +23077,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetAddition__RightAssignment_1_2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7986:1: rule__SetAddition__RightAssignment_1_2 : ( ruleSetMultiplication ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8005:1: rule__SetAddition__RightAssignment_1_2 : ( ruleSetMultiplication ) ;
     public final void rule__SetAddition__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7990:1: ( ( ruleSetMultiplication ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7991:1: ( ruleSetMultiplication )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8009:1: ( ( ruleSetMultiplication ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8010:1: ( ruleSetMultiplication )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7991:1: ( ruleSetMultiplication )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:7992:1: ruleSetMultiplication
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8010:1: ( ruleSetMultiplication )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8011:1: ruleSetMultiplication
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSetAdditionAccess().getRightSetMultiplicationParserRuleCall_1_2_0()); 
             }
-            pushFollow(FOLLOW_ruleSetMultiplication_in_rule__SetAddition__RightAssignment_1_216168);
+            pushFollow(FOLLOW_ruleSetMultiplication_in_rule__SetAddition__RightAssignment_1_216208);
             ruleSetMultiplication();
 
             state._fsp--;
@@ -23049,22 +23122,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__SetMultiplication__RightAssignment_1_2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8001:1: rule__SetMultiplication__RightAssignment_1_2 : ( ruleSetPrimary ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8020:1: rule__SetMultiplication__RightAssignment_1_2 : ( ruleSetPrimary ) ;
     public final void rule__SetMultiplication__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8005:1: ( ( ruleSetPrimary ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8006:1: ( ruleSetPrimary )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8024:1: ( ( ruleSetPrimary ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8025:1: ( ruleSetPrimary )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8006:1: ( ruleSetPrimary )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8007:1: ruleSetPrimary
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8025:1: ( ruleSetPrimary )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8026:1: ruleSetPrimary
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSetMultiplicationAccess().getRightSetPrimaryParserRuleCall_1_2_0()); 
             }
-            pushFollow(FOLLOW_ruleSetPrimary_in_rule__SetMultiplication__RightAssignment_1_216199);
+            pushFollow(FOLLOW_ruleSetPrimary_in_rule__SetMultiplication__RightAssignment_1_216239);
             ruleSetPrimary();
 
             state._fsp--;
@@ -23094,22 +23167,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PredicateAtom__FidAssignment_0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8016:1: rule__PredicateAtom__FidAssignment_0 : ( RULE_LID ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8035:1: rule__PredicateAtom__FidAssignment_0 : ( RULE_LID ) ;
     public final void rule__PredicateAtom__FidAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8020:1: ( ( RULE_LID ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8021:1: ( RULE_LID )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8039:1: ( ( RULE_LID ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8040:1: ( RULE_LID )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8021:1: ( RULE_LID )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8022:1: RULE_LID
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8040:1: ( RULE_LID )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8041:1: RULE_LID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPredicateAtomAccess().getFidLIDTerminalRuleCall_0_0()); 
             }
-            match(input,RULE_LID,FOLLOW_RULE_LID_in_rule__PredicateAtom__FidAssignment_016230); if (state.failed) return ;
+            match(input,RULE_LID,FOLLOW_RULE_LID_in_rule__PredicateAtom__FidAssignment_016270); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPredicateAtomAccess().getFidLIDTerminalRuleCall_0_0()); 
             }
@@ -23135,22 +23208,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PredicateAtom__TermsAssignment_1_1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8031:1: rule__PredicateAtom__TermsAssignment_1_1 : ( ruleTerms ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8050:1: rule__PredicateAtom__TermsAssignment_1_1 : ( ruleTerms ) ;
     public final void rule__PredicateAtom__TermsAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8035:1: ( ( ruleTerms ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8036:1: ( ruleTerms )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8054:1: ( ( ruleTerms ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8055:1: ( ruleTerms )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8036:1: ( ruleTerms )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8037:1: ruleTerms
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8055:1: ( ruleTerms )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8056:1: ruleTerms
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPredicateAtomAccess().getTermsTermsParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleTerms_in_rule__PredicateAtom__TermsAssignment_1_116261);
+            pushFollow(FOLLOW_ruleTerms_in_rule__PredicateAtom__TermsAssignment_1_116301);
             ruleTerms();
 
             state._fsp--;
@@ -23180,22 +23253,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BasicPredicateAtom__FidAssignment_0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8046:1: rule__BasicPredicateAtom__FidAssignment_0 : ( RULE_LID ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8065:1: rule__BasicPredicateAtom__FidAssignment_0 : ( RULE_LID ) ;
     public final void rule__BasicPredicateAtom__FidAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8050:1: ( ( RULE_LID ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8051:1: ( RULE_LID )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8069:1: ( ( RULE_LID ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8070:1: ( RULE_LID )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8051:1: ( RULE_LID )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8052:1: RULE_LID
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8070:1: ( RULE_LID )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8071:1: RULE_LID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBasicPredicateAtomAccess().getFidLIDTerminalRuleCall_0_0()); 
             }
-            match(input,RULE_LID,FOLLOW_RULE_LID_in_rule__BasicPredicateAtom__FidAssignment_016292); if (state.failed) return ;
+            match(input,RULE_LID,FOLLOW_RULE_LID_in_rule__BasicPredicateAtom__FidAssignment_016332); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getBasicPredicateAtomAccess().getFidLIDTerminalRuleCall_0_0()); 
             }
@@ -23221,22 +23294,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BasicPredicateAtom__TermsAssignment_1_1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8061:1: rule__BasicPredicateAtom__TermsAssignment_1_1 : ( ruleBasicTerms ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8080:1: rule__BasicPredicateAtom__TermsAssignment_1_1 : ( ruleBasicTerms ) ;
     public final void rule__BasicPredicateAtom__TermsAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8065:1: ( ( ruleBasicTerms ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8066:1: ( ruleBasicTerms )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8084:1: ( ( ruleBasicTerms ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8085:1: ( ruleBasicTerms )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8066:1: ( ruleBasicTerms )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8067:1: ruleBasicTerms
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8085:1: ( ruleBasicTerms )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8086:1: ruleBasicTerms
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBasicPredicateAtomAccess().getTermsBasicTermsParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleBasicTerms_in_rule__BasicPredicateAtom__TermsAssignment_1_116323);
+            pushFollow(FOLLOW_ruleBasicTerms_in_rule__BasicPredicateAtom__TermsAssignment_1_116363);
             ruleBasicTerms();
 
             state._fsp--;
@@ -23266,22 +23339,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BuiltInAtom__LhsAssignment_0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8076:1: rule__BuiltInAtom__LhsAssignment_0 : ( ruleBasicTerm ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8095:1: rule__BuiltInAtom__LhsAssignment_0 : ( ruleBasicTerm ) ;
     public final void rule__BuiltInAtom__LhsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8080:1: ( ( ruleBasicTerm ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8081:1: ( ruleBasicTerm )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8099:1: ( ( ruleBasicTerm ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8100:1: ( ruleBasicTerm )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8081:1: ( ruleBasicTerm )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8082:1: ruleBasicTerm
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8100:1: ( ruleBasicTerm )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8101:1: ruleBasicTerm
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBuiltInAtomAccess().getLhsBasicTermParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleBasicTerm_in_rule__BuiltInAtom__LhsAssignment_016354);
+            pushFollow(FOLLOW_ruleBasicTerm_in_rule__BuiltInAtom__LhsAssignment_016394);
             ruleBasicTerm();
 
             state._fsp--;
@@ -23311,22 +23384,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BuiltInAtom__OpAssignment_1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8091:1: rule__BuiltInAtom__OpAssignment_1 : ( ruleAtomOp ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8110:1: rule__BuiltInAtom__OpAssignment_1 : ( ruleAtomOp ) ;
     public final void rule__BuiltInAtom__OpAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8095:1: ( ( ruleAtomOp ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8096:1: ( ruleAtomOp )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8114:1: ( ( ruleAtomOp ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8115:1: ( ruleAtomOp )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8096:1: ( ruleAtomOp )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8097:1: ruleAtomOp
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8115:1: ( ruleAtomOp )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8116:1: ruleAtomOp
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBuiltInAtomAccess().getOpAtomOpParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleAtomOp_in_rule__BuiltInAtom__OpAssignment_116385);
+            pushFollow(FOLLOW_ruleAtomOp_in_rule__BuiltInAtom__OpAssignment_116425);
             ruleAtomOp();
 
             state._fsp--;
@@ -23356,22 +23429,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BuiltInAtom__RhsAssignment_2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8106:1: rule__BuiltInAtom__RhsAssignment_2 : ( ruleBasicTerm ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8125:1: rule__BuiltInAtom__RhsAssignment_2 : ( ruleBasicTerm ) ;
     public final void rule__BuiltInAtom__RhsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8110:1: ( ( ruleBasicTerm ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8111:1: ( ruleBasicTerm )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8129:1: ( ( ruleBasicTerm ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8130:1: ( ruleBasicTerm )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8111:1: ( ruleBasicTerm )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8112:1: ruleBasicTerm
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8130:1: ( ruleBasicTerm )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8131:1: ruleBasicTerm
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBuiltInAtomAccess().getRhsBasicTermParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleBasicTerm_in_rule__BuiltInAtom__RhsAssignment_216416);
+            pushFollow(FOLLOW_ruleBasicTerm_in_rule__BuiltInAtom__RhsAssignment_216456);
             ruleBasicTerm();
 
             state._fsp--;
@@ -23401,22 +23474,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrSentence__RightAssignment_1_2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8121:1: rule__OrSentence__RightAssignment_1_2 : ( ruleAndSentence ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8140:1: rule__OrSentence__RightAssignment_1_2 : ( ruleAndSentence ) ;
     public final void rule__OrSentence__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8125:1: ( ( ruleAndSentence ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8126:1: ( ruleAndSentence )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8144:1: ( ( ruleAndSentence ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8145:1: ( ruleAndSentence )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8126:1: ( ruleAndSentence )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8127:1: ruleAndSentence
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8145:1: ( ruleAndSentence )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8146:1: ruleAndSentence
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOrSentenceAccess().getRightAndSentenceParserRuleCall_1_2_0()); 
             }
-            pushFollow(FOLLOW_ruleAndSentence_in_rule__OrSentence__RightAssignment_1_216447);
+            pushFollow(FOLLOW_ruleAndSentence_in_rule__OrSentence__RightAssignment_1_216487);
             ruleAndSentence();
 
             state._fsp--;
@@ -23446,22 +23519,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AndSentence__RightAssignment_1_2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8136:1: rule__AndSentence__RightAssignment_1_2 : ( ruleNotSentence ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8155:1: rule__AndSentence__RightAssignment_1_2 : ( ruleNotSentence ) ;
     public final void rule__AndSentence__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8140:1: ( ( ruleNotSentence ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8141:1: ( ruleNotSentence )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8159:1: ( ( ruleNotSentence ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8160:1: ( ruleNotSentence )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8141:1: ( ruleNotSentence )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8142:1: ruleNotSentence
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8160:1: ( ruleNotSentence )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8161:1: ruleNotSentence
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndSentenceAccess().getRightNotSentenceParserRuleCall_1_2_0()); 
             }
-            pushFollow(FOLLOW_ruleNotSentence_in_rule__AndSentence__RightAssignment_1_216478);
+            pushFollow(FOLLOW_ruleNotSentence_in_rule__AndSentence__RightAssignment_1_216518);
             ruleNotSentence();
 
             state._fsp--;
@@ -23491,22 +23564,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__POrSentence__RightAssignment_1_2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8151:1: rule__POrSentence__RightAssignment_1_2 : ( rulepAndSentence ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8170:1: rule__POrSentence__RightAssignment_1_2 : ( rulepAndSentence ) ;
     public final void rule__POrSentence__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8155:1: ( ( rulepAndSentence ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8156:1: ( rulepAndSentence )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8174:1: ( ( rulepAndSentence ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8175:1: ( rulepAndSentence )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8156:1: ( rulepAndSentence )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8157:1: rulepAndSentence
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8175:1: ( rulepAndSentence )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8176:1: rulepAndSentence
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPOrSentenceAccess().getRightPAndSentenceParserRuleCall_1_2_0()); 
             }
-            pushFollow(FOLLOW_rulepAndSentence_in_rule__POrSentence__RightAssignment_1_216509);
+            pushFollow(FOLLOW_rulepAndSentence_in_rule__POrSentence__RightAssignment_1_216549);
             rulepAndSentence();
 
             state._fsp--;
@@ -23536,22 +23609,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PAndSentence__RightAssignment_1_2"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8166:1: rule__PAndSentence__RightAssignment_1_2 : ( rulepNotSentence ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8185:1: rule__PAndSentence__RightAssignment_1_2 : ( rulepNotSentence ) ;
     public final void rule__PAndSentence__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8170:1: ( ( rulepNotSentence ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8171:1: ( rulepNotSentence )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8189:1: ( ( rulepNotSentence ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8190:1: ( rulepNotSentence )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8171:1: ( rulepNotSentence )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8172:1: rulepNotSentence
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8190:1: ( rulepNotSentence )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8191:1: rulepNotSentence
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPAndSentenceAccess().getRightPNotSentenceParserRuleCall_1_2_0()); 
             }
-            pushFollow(FOLLOW_rulepNotSentence_in_rule__PAndSentence__RightAssignment_1_216540);
+            pushFollow(FOLLOW_rulepNotSentence_in_rule__PAndSentence__RightAssignment_1_216580);
             rulepNotSentence();
 
             state._fsp--;
@@ -23581,22 +23654,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CardinalityConstraint__LhsAssignment_0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8181:1: rule__CardinalityConstraint__LhsAssignment_0 : ( ruleBound ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8200:1: rule__CardinalityConstraint__LhsAssignment_0 : ( ruleBound ) ;
     public final void rule__CardinalityConstraint__LhsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8185:1: ( ( ruleBound ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8186:1: ( ruleBound )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8204:1: ( ( ruleBound ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8205:1: ( ruleBound )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8186:1: ( ruleBound )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8187:1: ruleBound
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8205:1: ( ruleBound )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8206:1: ruleBound
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCardinalityConstraintAccess().getLhsBoundParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleBound_in_rule__CardinalityConstraint__LhsAssignment_016571);
+            pushFollow(FOLLOW_ruleBound_in_rule__CardinalityConstraint__LhsAssignment_016611);
             ruleBound();
 
             state._fsp--;
@@ -23626,22 +23699,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CardinalityConstraint__AtomAssignment_4"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8196:1: rule__CardinalityConstraint__AtomAssignment_4 : ( ruleBasicPredicateAtom ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8215:1: rule__CardinalityConstraint__AtomAssignment_4 : ( ruleBasicPredicateAtom ) ;
     public final void rule__CardinalityConstraint__AtomAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8200:1: ( ( ruleBasicPredicateAtom ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8201:1: ( ruleBasicPredicateAtom )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8219:1: ( ( ruleBasicPredicateAtom ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8220:1: ( ruleBasicPredicateAtom )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8201:1: ( ruleBasicPredicateAtom )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8202:1: ruleBasicPredicateAtom
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8220:1: ( ruleBasicPredicateAtom )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8221:1: ruleBasicPredicateAtom
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCardinalityConstraintAccess().getAtomBasicPredicateAtomParserRuleCall_4_0()); 
             }
-            pushFollow(FOLLOW_ruleBasicPredicateAtom_in_rule__CardinalityConstraint__AtomAssignment_416602);
+            pushFollow(FOLLOW_ruleBasicPredicateAtom_in_rule__CardinalityConstraint__AtomAssignment_416642);
             ruleBasicPredicateAtom();
 
             state._fsp--;
@@ -23671,22 +23744,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CardinalityConstraint__RhsAssignment_8"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8211:1: rule__CardinalityConstraint__RhsAssignment_8 : ( ruleBound ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8230:1: rule__CardinalityConstraint__RhsAssignment_8 : ( ruleBound ) ;
     public final void rule__CardinalityConstraint__RhsAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8215:1: ( ( ruleBound ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8216:1: ( ruleBound )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8234:1: ( ( ruleBound ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8235:1: ( ruleBound )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8216:1: ( ruleBound )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8217:1: ruleBound
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8235:1: ( ruleBound )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8236:1: ruleBound
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCardinalityConstraintAccess().getRhsBoundParserRuleCall_8_0()); 
             }
-            pushFollow(FOLLOW_ruleBound_in_rule__CardinalityConstraint__RhsAssignment_816633);
+            pushFollow(FOLLOW_ruleBound_in_rule__CardinalityConstraint__RhsAssignment_816673);
             ruleBound();
 
             state._fsp--;
@@ -23716,22 +23789,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Bound__AvAssignment"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8226:1: rule__Bound__AvAssignment : ( ruleArithmeticTerm ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8245:1: rule__Bound__AvAssignment : ( ruleArithmeticTerm ) ;
     public final void rule__Bound__AvAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8230:1: ( ( ruleArithmeticTerm ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8231:1: ( ruleArithmeticTerm )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8249:1: ( ( ruleArithmeticTerm ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8250:1: ( ruleArithmeticTerm )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8231:1: ( ruleArithmeticTerm )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8232:1: ruleArithmeticTerm
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8250:1: ( ruleArithmeticTerm )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8251:1: ruleArithmeticTerm
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBoundAccess().getAvArithmeticTermParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_ruleArithmeticTerm_in_rule__Bound__AvAssignment16664);
+            pushFollow(FOLLOW_ruleArithmeticTerm_in_rule__Bound__AvAssignment16704);
             ruleArithmeticTerm();
 
             state._fsp--;
@@ -23761,22 +23834,22 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Rule__HeadAssignment_0"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8241:1: rule__Rule__HeadAssignment_0 : ( ruleHead ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8260:1: rule__Rule__HeadAssignment_0 : ( ruleHead ) ;
     public final void rule__Rule__HeadAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8245:1: ( ( ruleHead ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8246:1: ( ruleHead )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8264:1: ( ( ruleHead ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8265:1: ( ruleHead )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8246:1: ( ruleHead )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8247:1: ruleHead
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8265:1: ( ruleHead )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8266:1: ruleHead
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRuleAccess().getHeadHeadParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleHead_in_rule__Rule__HeadAssignment_016695);
+            pushFollow(FOLLOW_ruleHead_in_rule__Rule__HeadAssignment_016735);
             ruleHead();
 
             state._fsp--;
@@ -23805,23 +23878,76 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Rule__HeadAssignment_0"
 
 
+    // $ANTLR start "rule__Rule__ConditionAssignment_1_0"
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8275:1: rule__Rule__ConditionAssignment_1_0 : ( ( 'if' ) ) ;
+    public final void rule__Rule__ConditionAssignment_1_0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8279:1: ( ( ( 'if' ) ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8280:1: ( ( 'if' ) )
+            {
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8280:1: ( ( 'if' ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8281:1: ( 'if' )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getRuleAccess().getConditionIfKeyword_1_0_0()); 
+            }
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8282:1: ( 'if' )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8283:1: 'if'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getRuleAccess().getConditionIfKeyword_1_0_0()); 
+            }
+            match(input,42,FOLLOW_42_in_rule__Rule__ConditionAssignment_1_016771); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getRuleAccess().getConditionIfKeyword_1_0_0()); 
+            }
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getRuleAccess().getConditionIfKeyword_1_0_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Rule__ConditionAssignment_1_0"
+
+
     // $ANTLR start "rule__Rule__BodyAssignment_1_1"
-    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8256:1: rule__Rule__BodyAssignment_1_1 : ( ruleSentence ) ;
+    // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8298:1: rule__Rule__BodyAssignment_1_1 : ( ruleSentence ) ;
     public final void rule__Rule__BodyAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8260:1: ( ( ruleSentence ) )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8261:1: ( ruleSentence )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8302:1: ( ( ruleSentence ) )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8303:1: ( ruleSentence )
             {
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8261:1: ( ruleSentence )
-            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8262:1: ruleSentence
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8303:1: ( ruleSentence )
+            // ../net.certware.argument.language.ui/src-gen/net/certware/argument/language/ui/contentassist/antlr/internal/InternalL.g:8304:1: ruleSentence
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRuleAccess().getBodySentenceParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleSentence_in_rule__Rule__BodyAssignment_1_116726);
+            pushFollow(FOLLOW_ruleSentence_in_rule__Rule__BodyAssignment_1_116810);
             ruleSentence();
 
             state._fsp--;
@@ -24677,332 +24803,334 @@ public class InternalLParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__Terms__Group_1__0_in_rule__Terms__Group__1__Impl8427 = new BitSet(new long[]{0x0000000010000002L});
     public static final BitSet FOLLOW_rule__Terms__Group_1__0__Impl_in_rule__Terms__Group_1__08462 = new BitSet(new long[]{0x00000180200C4070L});
     public static final BitSet FOLLOW_rule__Terms__Group_1__1_in_rule__Terms__Group_1__08465 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__Terms__Group_1__0__Impl8493 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Terms__Group_1__1__Impl_in_rule__Terms__Group_1__18524 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Terms__CdrAssignment_1_1_in_rule__Terms__Group_1__1__Impl8551 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ConstantDeclaration__Group__0__Impl_in_rule__ConstantDeclaration__Group__08585 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__ConstantDeclaration__Group__1_in_rule__ConstantDeclaration__Group__08588 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rule__ConstantDeclaration__Group__0__Impl8616 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ConstantDeclaration__Group__1__Impl_in_rule__ConstantDeclaration__Group__18647 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_rule__ConstantDeclaration__Group__2_in_rule__ConstantDeclaration__Group__18650 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ConstantDeclaration__IdAssignment_1_in_rule__ConstantDeclaration__Group__1__Impl8677 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ConstantDeclaration__Group__2__Impl_in_rule__ConstantDeclaration__Group__28707 = new BitSet(new long[]{0x0000000020004050L});
-    public static final BitSet FOLLOW_rule__ConstantDeclaration__Group__3_in_rule__ConstantDeclaration__Group__28710 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__ConstantDeclaration__Group__2__Impl8738 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ConstantDeclaration__Group__3__Impl_in_rule__ConstantDeclaration__Group__38769 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__ConstantDeclaration__Group__4_in_rule__ConstantDeclaration__Group__38772 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ConstantDeclaration__CvAssignment_3_in_rule__ConstantDeclaration__Group__3__Impl8799 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ConstantDeclaration__Group__4__Impl_in_rule__ConstantDeclaration__Group__48829 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__ConstantDeclaration__Group__4__Impl8857 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TypeDeclaration__Group__0__Impl_in_rule__TypeDeclaration__Group__08898 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__TypeDeclaration__Group__1_in_rule__TypeDeclaration__Group__08901 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__TypeDeclaration__Group__0__Impl8929 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TypeDeclaration__Group__1__Impl_in_rule__TypeDeclaration__Group__18960 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_rule__TypeDeclaration__Group__2_in_rule__TypeDeclaration__Group__18963 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TypeDeclaration__IdAssignment_1_in_rule__TypeDeclaration__Group__1__Impl8990 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TypeDeclaration__Group__2__Impl_in_rule__TypeDeclaration__Group__29020 = new BitSet(new long[]{0x0000018820004070L});
-    public static final BitSet FOLLOW_rule__TypeDeclaration__Group__3_in_rule__TypeDeclaration__Group__29023 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__TypeDeclaration__Group__2__Impl9051 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TypeDeclaration__Group__3__Impl_in_rule__TypeDeclaration__Group__39082 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__TypeDeclaration__Group__4_in_rule__TypeDeclaration__Group__39085 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TypeDeclaration__ExpAssignment_3_in_rule__TypeDeclaration__Group__3__Impl9112 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TypeDeclaration__Group__4__Impl_in_rule__TypeDeclaration__Group__49142 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__TypeDeclaration__Group__4__Impl9170 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Set__Group__0__Impl_in_rule__Set__Group__09211 = new BitSet(new long[]{0x0000000420004050L});
-    public static final BitSet FOLLOW_rule__Set__Group__1_in_rule__Set__Group__09214 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Set__LhsAssignment_0_in_rule__Set__Group__0__Impl9241 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Set__Group__1__Impl_in_rule__Set__Group__19271 = new BitSet(new long[]{0x0000000420004050L});
-    public static final BitSet FOLLOW_rule__Set__Group__2_in_rule__Set__Group__19274 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Set__TermsAssignment_1_in_rule__Set__Group__1__Impl9301 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Set__Group__2__Impl_in_rule__Set__Group__29332 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__Set__Group__2__Impl9360 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Range__Group__0__Impl_in_rule__Range__Group__09397 = new BitSet(new long[]{0x0000000020004050L});
-    public static final BitSet FOLLOW_rule__Range__Group__1_in_rule__Range__Group__09400 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__Range__Group__0__Impl9428 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Range__Group__1__Impl_in_rule__Range__Group__19459 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__Range__Group__2_in_rule__Range__Group__19462 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Range__LhsAssignment_1_in_rule__Range__Group__1__Impl9489 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Range__Group__2__Impl_in_rule__Range__Group__29519 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__Range__Group__3_in_rule__Range__Group__29522 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__Range__Group__2__Impl9550 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Range__Group__3__Impl_in_rule__Range__Group__39581 = new BitSet(new long[]{0x0000000020004050L});
-    public static final BitSet FOLLOW_rule__Range__Group__4_in_rule__Range__Group__39584 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__Range__Group__3__Impl9612 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Range__Group__4__Impl_in_rule__Range__Group__49643 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_rule__Range__Group__5_in_rule__Range__Group__49646 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Range__RhsAssignment_4_in_rule__Range__Group__4__Impl9673 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Range__Group__5__Impl_in_rule__Range__Group__59703 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__Range__Group__5__Impl9731 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SetConstruct__Group__0__Impl_in_rule__SetConstruct__Group__09774 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_rule__SetConstruct__Group__1_in_rule__SetConstruct__Group__09777 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SetConstruct__LhsAssignment_0_in_rule__SetConstruct__Group__0__Impl9804 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SetConstruct__Group__1__Impl_in_rule__SetConstruct__Group__19834 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__SetConstruct__Group__2_in_rule__SetConstruct__Group__19837 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__SetConstruct__Group__1__Impl9865 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SetConstruct__Group__2__Impl_in_rule__SetConstruct__Group__29896 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SetConstruct__RhsAssignment_2_in_rule__SetConstruct__Group__2__Impl9923 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TVars__Group__0__Impl_in_rule__TVars__Group__09959 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_rule__TVars__Group__1_in_rule__TVars__Group__09962 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TVars__CarAssignment_0_in_rule__TVars__Group__0__Impl9989 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TVars__Group__1__Impl_in_rule__TVars__Group__110019 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TVars__Group_1__0_in_rule__TVars__Group__1__Impl10046 = new BitSet(new long[]{0x0000000010000002L});
-    public static final BitSet FOLLOW_rule__TVars__Group_1__0__Impl_in_rule__TVars__Group_1__010081 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__TVars__Group_1__1_in_rule__TVars__Group_1__010084 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__TVars__Group_1__0__Impl10112 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TVars__Group_1__1__Impl_in_rule__TVars__Group_1__110143 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TVars__CdrAssignment_1_1_in_rule__TVars__Group_1__1__Impl10170 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TVar__Group__0__Impl_in_rule__TVar__Group__010204 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_rule__TVar__Group__1_in_rule__TVar__Group__010207 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariable_in_rule__TVar__Group__0__Impl10234 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TVar__Group__1__Impl_in_rule__TVar__Group__110263 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__TVar__Group__2_in_rule__TVar__Group__110266 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_rule__TVar__Group__1__Impl10294 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TVar__Group__2__Impl_in_rule__TVar__Group__210325 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_LID_in_rule__TVar__Group__2__Impl10352 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SetAddition__Group__0__Impl_in_rule__SetAddition__Group__010387 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_rule__SetAddition__Group__1_in_rule__SetAddition__Group__010390 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSetMultiplication_in_rule__SetAddition__Group__0__Impl10417 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SetAddition__Group__1__Impl_in_rule__SetAddition__Group__110446 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SetAddition__Group_1__0_in_rule__SetAddition__Group__1__Impl10473 = new BitSet(new long[]{0x0000000000002002L});
-    public static final BitSet FOLLOW_rule__SetAddition__Group_1__0__Impl_in_rule__SetAddition__Group_1__010508 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_rule__SetAddition__Group_1__1_in_rule__SetAddition__Group_1__010511 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SetAddition__Group_1__1__Impl_in_rule__SetAddition__Group_1__110569 = new BitSet(new long[]{0x0000018820004070L});
-    public static final BitSet FOLLOW_rule__SetAddition__Group_1__2_in_rule__SetAddition__Group_1__110572 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__SetAddition__Group_1__1__Impl10600 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SetAddition__Group_1__2__Impl_in_rule__SetAddition__Group_1__210631 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SetAddition__RightAssignment_1_2_in_rule__SetAddition__Group_1__2__Impl10658 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SetMultiplication__Group__0__Impl_in_rule__SetMultiplication__Group__010694 = new BitSet(new long[]{0x0000000000108000L});
-    public static final BitSet FOLLOW_rule__SetMultiplication__Group__1_in_rule__SetMultiplication__Group__010697 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSetPrimary_in_rule__SetMultiplication__Group__0__Impl10724 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SetMultiplication__Group__1__Impl_in_rule__SetMultiplication__Group__110753 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SetMultiplication__Group_1__0_in_rule__SetMultiplication__Group__1__Impl10780 = new BitSet(new long[]{0x0000000000108002L});
-    public static final BitSet FOLLOW_rule__SetMultiplication__Group_1__0__Impl_in_rule__SetMultiplication__Group_1__010815 = new BitSet(new long[]{0x0000000000108000L});
-    public static final BitSet FOLLOW_rule__SetMultiplication__Group_1__1_in_rule__SetMultiplication__Group_1__010818 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SetMultiplication__Group_1__1__Impl_in_rule__SetMultiplication__Group_1__110876 = new BitSet(new long[]{0x0000018820004070L});
-    public static final BitSet FOLLOW_rule__SetMultiplication__Group_1__2_in_rule__SetMultiplication__Group_1__110879 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SetMultiplication__Alternatives_1_1_in_rule__SetMultiplication__Group_1__1__Impl10906 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SetMultiplication__Group_1__2__Impl_in_rule__SetMultiplication__Group_1__210936 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SetMultiplication__RightAssignment_1_2_in_rule__SetMultiplication__Group_1__2__Impl10963 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SetPrimary__Group_1__0__Impl_in_rule__SetPrimary__Group_1__010999 = new BitSet(new long[]{0x0000018820004070L});
-    public static final BitSet FOLLOW_rule__SetPrimary__Group_1__1_in_rule__SetPrimary__Group_1__011002 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rule__SetPrimary__Group_1__0__Impl11030 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SetPrimary__Group_1__1__Impl_in_rule__SetPrimary__Group_1__111061 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_rule__SetPrimary__Group_1__2_in_rule__SetPrimary__Group_1__111064 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSetAddition_in_rule__SetPrimary__Group_1__1__Impl11091 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SetPrimary__Group_1__2__Impl_in_rule__SetPrimary__Group_1__211120 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__SetPrimary__Group_1__2__Impl11148 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PredicateAtom__Group__0__Impl_in_rule__PredicateAtom__Group__011185 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_rule__PredicateAtom__Group__1_in_rule__PredicateAtom__Group__011188 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PredicateAtom__FidAssignment_0_in_rule__PredicateAtom__Group__0__Impl11215 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PredicateAtom__Group__1__Impl_in_rule__PredicateAtom__Group__111245 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PredicateAtom__Group_1__0_in_rule__PredicateAtom__Group__1__Impl11272 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PredicateAtom__Group_1__0__Impl_in_rule__PredicateAtom__Group_1__011307 = new BitSet(new long[]{0x00000180200C4070L});
-    public static final BitSet FOLLOW_rule__PredicateAtom__Group_1__1_in_rule__PredicateAtom__Group_1__011310 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rule__PredicateAtom__Group_1__0__Impl11338 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PredicateAtom__Group_1__1__Impl_in_rule__PredicateAtom__Group_1__111369 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_rule__PredicateAtom__Group_1__2_in_rule__PredicateAtom__Group_1__111372 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PredicateAtom__TermsAssignment_1_1_in_rule__PredicateAtom__Group_1__1__Impl11399 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PredicateAtom__Group_1__2__Impl_in_rule__PredicateAtom__Group_1__211429 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__PredicateAtom__Group_1__2__Impl11457 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BasicPredicateAtom__Group__0__Impl_in_rule__BasicPredicateAtom__Group__011494 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_rule__BasicPredicateAtom__Group__1_in_rule__BasicPredicateAtom__Group__011497 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BasicPredicateAtom__FidAssignment_0_in_rule__BasicPredicateAtom__Group__0__Impl11524 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BasicPredicateAtom__Group__1__Impl_in_rule__BasicPredicateAtom__Group__111554 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BasicPredicateAtom__Group_1__0_in_rule__BasicPredicateAtom__Group__1__Impl11581 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BasicPredicateAtom__Group_1__0__Impl_in_rule__BasicPredicateAtom__Group_1__011616 = new BitSet(new long[]{0x0000018020004070L});
-    public static final BitSet FOLLOW_rule__BasicPredicateAtom__Group_1__1_in_rule__BasicPredicateAtom__Group_1__011619 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rule__BasicPredicateAtom__Group_1__0__Impl11647 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BasicPredicateAtom__Group_1__1__Impl_in_rule__BasicPredicateAtom__Group_1__111678 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_rule__BasicPredicateAtom__Group_1__2_in_rule__BasicPredicateAtom__Group_1__111681 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BasicPredicateAtom__TermsAssignment_1_1_in_rule__BasicPredicateAtom__Group_1__1__Impl11708 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BasicPredicateAtom__Group_1__2__Impl_in_rule__BasicPredicateAtom__Group_1__211738 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__BasicPredicateAtom__Group_1__2__Impl11766 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInAtom__Group__0__Impl_in_rule__BuiltInAtom__Group__011803 = new BitSet(new long[]{0x0000000007E00000L});
-    public static final BitSet FOLLOW_rule__BuiltInAtom__Group__1_in_rule__BuiltInAtom__Group__011806 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInAtom__LhsAssignment_0_in_rule__BuiltInAtom__Group__0__Impl11833 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInAtom__Group__1__Impl_in_rule__BuiltInAtom__Group__111863 = new BitSet(new long[]{0x0000018020004070L});
-    public static final BitSet FOLLOW_rule__BuiltInAtom__Group__2_in_rule__BuiltInAtom__Group__111866 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInAtom__OpAssignment_1_in_rule__BuiltInAtom__Group__1__Impl11893 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInAtom__Group__2__Impl_in_rule__BuiltInAtom__Group__211923 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInAtom__RhsAssignment_2_in_rule__BuiltInAtom__Group__2__Impl11950 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OrSentence__Group__0__Impl_in_rule__OrSentence__Group__011986 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_rule__OrSentence__Group__1_in_rule__OrSentence__Group__011989 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAndSentence_in_rule__OrSentence__Group__0__Impl12016 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OrSentence__Group__1__Impl_in_rule__OrSentence__Group__112045 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OrSentence__Group_1__0_in_rule__OrSentence__Group__1__Impl12072 = new BitSet(new long[]{0x0000004000000002L});
-    public static final BitSet FOLLOW_rule__OrSentence__Group_1__0__Impl_in_rule__OrSentence__Group_1__012107 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_rule__OrSentence__Group_1__1_in_rule__OrSentence__Group_1__012110 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OrSentence__Group_1__1__Impl_in_rule__OrSentence__Group_1__112168 = new BitSet(new long[]{0x0000018020004070L});
-    public static final BitSet FOLLOW_rule__OrSentence__Group_1__2_in_rule__OrSentence__Group_1__112171 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_rule__OrSentence__Group_1__1__Impl12199 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OrSentence__Group_1__2__Impl_in_rule__OrSentence__Group_1__212230 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OrSentence__RightAssignment_1_2_in_rule__OrSentence__Group_1__2__Impl12257 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AndSentence__Group__0__Impl_in_rule__AndSentence__Group__012293 = new BitSet(new long[]{0x0000000018000000L});
-    public static final BitSet FOLLOW_rule__AndSentence__Group__1_in_rule__AndSentence__Group__012296 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNotSentence_in_rule__AndSentence__Group__0__Impl12323 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AndSentence__Group__1__Impl_in_rule__AndSentence__Group__112352 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AndSentence__Group_1__0_in_rule__AndSentence__Group__1__Impl12379 = new BitSet(new long[]{0x0000000018000002L});
-    public static final BitSet FOLLOW_rule__AndSentence__Group_1__0__Impl_in_rule__AndSentence__Group_1__012414 = new BitSet(new long[]{0x0000000018000000L});
-    public static final BitSet FOLLOW_rule__AndSentence__Group_1__1_in_rule__AndSentence__Group_1__012417 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AndSentence__Group_1__1__Impl_in_rule__AndSentence__Group_1__112475 = new BitSet(new long[]{0x0000018020004070L});
-    public static final BitSet FOLLOW_rule__AndSentence__Group_1__2_in_rule__AndSentence__Group_1__112478 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AndSentence__Alternatives_1_1_in_rule__AndSentence__Group_1__1__Impl12505 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AndSentence__Group_1__2__Impl_in_rule__AndSentence__Group_1__212535 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AndSentence__RightAssignment_1_2_in_rule__AndSentence__Group_1__2__Impl12562 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NotSentence__Group_1__0__Impl_in_rule__NotSentence__Group_1__012598 = new BitSet(new long[]{0x0000018020004070L});
-    public static final BitSet FOLLOW_rule__NotSentence__Group_1__1_in_rule__NotSentence__Group_1__012601 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_rule__NotSentence__Group_1__0__Impl12629 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NotSentence__Group_1__1__Impl_in_rule__NotSentence__Group_1__112660 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrimarySentence_in_rule__NotSentence__Group_1__1__Impl12687 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrimarySentence__Group_1__0__Impl_in_rule__PrimarySentence__Group_1__012720 = new BitSet(new long[]{0x0000018020004070L});
-    public static final BitSet FOLLOW_rule__PrimarySentence__Group_1__1_in_rule__PrimarySentence__Group_1__012723 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rule__PrimarySentence__Group_1__0__Impl12751 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrimarySentence__Group_1__1__Impl_in_rule__PrimarySentence__Group_1__112782 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_rule__PrimarySentence__Group_1__2_in_rule__PrimarySentence__Group_1__112785 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOrSentence_in_rule__PrimarySentence__Group_1__1__Impl12812 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrimarySentence__Group_1__2__Impl_in_rule__PrimarySentence__Group_1__212841 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__PrimarySentence__Group_1__2__Impl12869 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__POrSentence__Group__0__Impl_in_rule__POrSentence__Group__012906 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_rule__POrSentence__Group__1_in_rule__POrSentence__Group__012909 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulepAndSentence_in_rule__POrSentence__Group__0__Impl12936 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__POrSentence__Group__1__Impl_in_rule__POrSentence__Group__112965 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__POrSentence__Group_1__0_in_rule__POrSentence__Group__1__Impl12992 = new BitSet(new long[]{0x0000004000000002L});
-    public static final BitSet FOLLOW_rule__POrSentence__Group_1__0__Impl_in_rule__POrSentence__Group_1__013027 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_rule__POrSentence__Group_1__1_in_rule__POrSentence__Group_1__013030 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__POrSentence__Group_1__1__Impl_in_rule__POrSentence__Group_1__113088 = new BitSet(new long[]{0x0000008020000010L});
-    public static final BitSet FOLLOW_rule__POrSentence__Group_1__2_in_rule__POrSentence__Group_1__113091 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_rule__POrSentence__Group_1__1__Impl13119 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__POrSentence__Group_1__2__Impl_in_rule__POrSentence__Group_1__213150 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__POrSentence__RightAssignment_1_2_in_rule__POrSentence__Group_1__2__Impl13177 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PAndSentence__Group__0__Impl_in_rule__PAndSentence__Group__013213 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_rule__PAndSentence__Group__1_in_rule__PAndSentence__Group__013216 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulepNotSentence_in_rule__PAndSentence__Group__0__Impl13243 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PAndSentence__Group__1__Impl_in_rule__PAndSentence__Group__113272 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PAndSentence__Group_1__0_in_rule__PAndSentence__Group__1__Impl13299 = new BitSet(new long[]{0x0000000008000002L});
-    public static final BitSet FOLLOW_rule__PAndSentence__Group_1__0__Impl_in_rule__PAndSentence__Group_1__013334 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_rule__PAndSentence__Group_1__1_in_rule__PAndSentence__Group_1__013337 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PAndSentence__Group_1__1__Impl_in_rule__PAndSentence__Group_1__113395 = new BitSet(new long[]{0x0000008020000010L});
-    public static final BitSet FOLLOW_rule__PAndSentence__Group_1__2_in_rule__PAndSentence__Group_1__113398 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__PAndSentence__Group_1__1__Impl13426 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PAndSentence__Group_1__2__Impl_in_rule__PAndSentence__Group_1__213457 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PAndSentence__RightAssignment_1_2_in_rule__PAndSentence__Group_1__2__Impl13484 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PNotSentence__Group_1__0__Impl_in_rule__PNotSentence__Group_1__013520 = new BitSet(new long[]{0x0000000020000010L});
-    public static final BitSet FOLLOW_rule__PNotSentence__Group_1__1_in_rule__PNotSentence__Group_1__013523 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_rule__PNotSentence__Group_1__0__Impl13551 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PNotSentence__Group_1__1__Impl_in_rule__PNotSentence__Group_1__113582 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulepPrimarySentence_in_rule__PNotSentence__Group_1__1__Impl13609 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PPrimarySentence__Group_1__0__Impl_in_rule__PPrimarySentence__Group_1__013642 = new BitSet(new long[]{0x0000018020004070L});
-    public static final BitSet FOLLOW_rule__PPrimarySentence__Group_1__1_in_rule__PPrimarySentence__Group_1__013645 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rule__PPrimarySentence__Group_1__0__Impl13673 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PPrimarySentence__Group_1__1__Impl_in_rule__PPrimarySentence__Group_1__113704 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_rule__PPrimarySentence__Group_1__2_in_rule__PPrimarySentence__Group_1__113707 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOrSentence_in_rule__PPrimarySentence__Group_1__1__Impl13734 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PPrimarySentence__Group_1__2__Impl_in_rule__PPrimarySentence__Group_1__213763 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__PPrimarySentence__Group_1__2__Impl13791 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MaybeLiteral__Group__0__Impl_in_rule__MaybeLiteral__Group__013828 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__MaybeLiteral__Group__1_in_rule__MaybeLiteral__Group__013831 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_rule__MaybeLiteral__Group__0__Impl13859 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MaybeLiteral__Group__1__Impl_in_rule__MaybeLiteral__Group__113890 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBasicPredicateAtom_in_rule__MaybeLiteral__Group__1__Impl13917 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__0__Impl_in_rule__CardinalityConstraint__Group__013950 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__1_in_rule__CardinalityConstraint__Group__013953 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CardinalityConstraint__LhsAssignment_0_in_rule__CardinalityConstraint__Group__0__Impl13980 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__1__Impl_in_rule__CardinalityConstraint__Group__114010 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__2_in_rule__CardinalityConstraint__Group__114013 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__CardinalityConstraint__Group__1__Impl14041 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__2__Impl_in_rule__CardinalityConstraint__Group__214072 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__3_in_rule__CardinalityConstraint__Group__214075 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__CardinalityConstraint__Group__2__Impl14103 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__3__Impl_in_rule__CardinalityConstraint__Group__314134 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__4_in_rule__CardinalityConstraint__Group__314137 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__CardinalityConstraint__Group__3__Impl14165 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__4__Impl_in_rule__CardinalityConstraint__Group__414196 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__5_in_rule__CardinalityConstraint__Group__414199 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CardinalityConstraint__AtomAssignment_4_in_rule__CardinalityConstraint__Group__4__Impl14226 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__5__Impl_in_rule__CardinalityConstraint__Group__514256 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__6_in_rule__CardinalityConstraint__Group__514259 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__CardinalityConstraint__Group__5__Impl14287 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__6__Impl_in_rule__CardinalityConstraint__Group__614318 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__7_in_rule__CardinalityConstraint__Group__614321 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__CardinalityConstraint__Group__6__Impl14349 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__7__Impl_in_rule__CardinalityConstraint__Group__714380 = new BitSet(new long[]{0x0000018020004070L});
-    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__8_in_rule__CardinalityConstraint__Group__714383 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__CardinalityConstraint__Group__7__Impl14411 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__8__Impl_in_rule__CardinalityConstraint__Group__814442 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CardinalityConstraint__RhsAssignment_8_in_rule__CardinalityConstraint__Group__8__Impl14469 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Rule__Group__0__Impl_in_rule__Rule__Group__014517 = new BitSet(new long[]{0x0000040100000000L});
-    public static final BitSet FOLLOW_rule__Rule__Group__1_in_rule__Rule__Group__014520 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Rule__HeadAssignment_0_in_rule__Rule__Group__0__Impl14547 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Rule__Group__1__Impl_in_rule__Rule__Group__114577 = new BitSet(new long[]{0x0000040100000000L});
-    public static final BitSet FOLLOW_rule__Rule__Group__2_in_rule__Rule__Group__114580 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Rule__Group_1__0_in_rule__Rule__Group__1__Impl14607 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Rule__Group__2__Impl_in_rule__Rule__Group__214638 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__Rule__Group__2__Impl14666 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Rule__Group_1__0__Impl_in_rule__Rule__Group_1__014703 = new BitSet(new long[]{0x0000018020004070L});
-    public static final BitSet FOLLOW_rule__Rule__Group_1__1_in_rule__Rule__Group_1__014706 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_rule__Rule__Group_1__0__Impl14734 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Rule__Group_1__1__Impl_in_rule__Rule__Group_1__114765 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Rule__BodyAssignment_1_1_in_rule__Rule__Group_1__1__Impl14792 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStatement_in_rule__Program__StatementsAssignment14831 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_UID_in_rule__Variable__IdentifierAssignment14863 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_LID_in_rule__TypedVariable__TypeAssignment_014894 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariable_in_rule__TypedVariable__VarAssignment_114925 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMultiplication_in_rule__Addition__RhsAssignment_1_214956 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrimary_in_rule__Multiplication__RhsAssignment_1_214987 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__Primary__MinusAssignment_0_015023 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleArithmeticLiteral_in_rule__Primary__TermAssignment_0_115062 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__Primary__MinusAssignment_1_015098 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAddition_in_rule__Primary__TermAssignment_1_215137 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariable_in_rule__ArithmeticLiteral__VAssignment_015168 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTypedVariable_in_rule__ArithmeticLiteral__TvAssignment_115199 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_LID_in_rule__ArithmeticLiteral__ConstAssignment_215230 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__ArithmeticLiteral__ValueAssignment_315261 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGroundMultiplication_in_rule__GroundAddition__RhsAssignment_1_215292 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrimary_in_rule__GroundMultiplication__RhsAssignment_1_215323 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__GroundPrimary__MinusAssignment_0_015359 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGroundArithmeticLiteral_in_rule__GroundPrimary__TermAssignment_0_115398 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__GroundPrimary__MinusAssignment_1_015434 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAddition_in_rule__GroundPrimary__TermAssignment_1_215473 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_LID_in_rule__GroundArithmeticLiteral__IdentifierAssignment_015504 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__GroundArithmeticLiteral__ValueAssignment_115535 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBasicTerm_in_rule__BasicTerms__CarAssignment_015566 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBasicTerm_in_rule__BasicTerms__CdrAssignment_1_115597 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGroundTerm_in_rule__GroundTerms__CarAssignment_015628 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGroundTerm_in_rule__GroundTerms__CdrAssignment_1_115659 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTerm_in_rule__Terms__CarAssignment_015690 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTerm_in_rule__Terms__CdrAssignment_1_115721 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_LID_in_rule__ConstantDeclaration__IdAssignment_115752 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGroundArithmeticTerm_in_rule__ConstantDeclaration__CvAssignment_315783 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_LID_in_rule__TypeDeclaration__IdAssignment_115814 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSetExpression_in_rule__TypeDeclaration__ExpAssignment_315845 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGroundArithmeticTerm_in_rule__Limit__CvAssignment15876 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__Set__LhsAssignment_015912 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGroundTerms_in_rule__Set__TermsAssignment_115951 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLimit_in_rule__Range__LhsAssignment_115982 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLimit_in_rule__Range__RhsAssignment_416013 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBasicTerm_in_rule__SetConstruct__LhsAssignment_016044 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTVars_in_rule__SetConstruct__RhsAssignment_216075 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTVar_in_rule__TVars__CarAssignment_016106 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTVar_in_rule__TVars__CdrAssignment_1_116137 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSetMultiplication_in_rule__SetAddition__RightAssignment_1_216168 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSetPrimary_in_rule__SetMultiplication__RightAssignment_1_216199 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_LID_in_rule__PredicateAtom__FidAssignment_016230 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTerms_in_rule__PredicateAtom__TermsAssignment_1_116261 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_LID_in_rule__BasicPredicateAtom__FidAssignment_016292 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBasicTerms_in_rule__BasicPredicateAtom__TermsAssignment_1_116323 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBasicTerm_in_rule__BuiltInAtom__LhsAssignment_016354 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAtomOp_in_rule__BuiltInAtom__OpAssignment_116385 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBasicTerm_in_rule__BuiltInAtom__RhsAssignment_216416 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAndSentence_in_rule__OrSentence__RightAssignment_1_216447 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNotSentence_in_rule__AndSentence__RightAssignment_1_216478 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulepAndSentence_in_rule__POrSentence__RightAssignment_1_216509 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulepNotSentence_in_rule__PAndSentence__RightAssignment_1_216540 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBound_in_rule__CardinalityConstraint__LhsAssignment_016571 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBasicPredicateAtom_in_rule__CardinalityConstraint__AtomAssignment_416602 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBound_in_rule__CardinalityConstraint__RhsAssignment_816633 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleArithmeticTerm_in_rule__Bound__AvAssignment16664 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHead_in_rule__Rule__HeadAssignment_016695 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSentence_in_rule__Rule__BodyAssignment_1_116726 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Terms__TermsAssignment_1_0_in_rule__Terms__Group_1__0__Impl8492 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Terms__Group_1__1__Impl_in_rule__Terms__Group_1__18522 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Terms__CdrAssignment_1_1_in_rule__Terms__Group_1__1__Impl8549 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ConstantDeclaration__Group__0__Impl_in_rule__ConstantDeclaration__Group__08583 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__ConstantDeclaration__Group__1_in_rule__ConstantDeclaration__Group__08586 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__ConstantDeclaration__Group__0__Impl8614 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ConstantDeclaration__Group__1__Impl_in_rule__ConstantDeclaration__Group__18645 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_rule__ConstantDeclaration__Group__2_in_rule__ConstantDeclaration__Group__18648 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ConstantDeclaration__IdAssignment_1_in_rule__ConstantDeclaration__Group__1__Impl8675 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ConstantDeclaration__Group__2__Impl_in_rule__ConstantDeclaration__Group__28705 = new BitSet(new long[]{0x0000000020004050L});
+    public static final BitSet FOLLOW_rule__ConstantDeclaration__Group__3_in_rule__ConstantDeclaration__Group__28708 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__ConstantDeclaration__Group__2__Impl8736 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ConstantDeclaration__Group__3__Impl_in_rule__ConstantDeclaration__Group__38767 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_rule__ConstantDeclaration__Group__4_in_rule__ConstantDeclaration__Group__38770 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ConstantDeclaration__CvAssignment_3_in_rule__ConstantDeclaration__Group__3__Impl8797 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ConstantDeclaration__Group__4__Impl_in_rule__ConstantDeclaration__Group__48827 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__ConstantDeclaration__Group__4__Impl8855 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TypeDeclaration__Group__0__Impl_in_rule__TypeDeclaration__Group__08896 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__TypeDeclaration__Group__1_in_rule__TypeDeclaration__Group__08899 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__TypeDeclaration__Group__0__Impl8927 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TypeDeclaration__Group__1__Impl_in_rule__TypeDeclaration__Group__18958 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_rule__TypeDeclaration__Group__2_in_rule__TypeDeclaration__Group__18961 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TypeDeclaration__IdAssignment_1_in_rule__TypeDeclaration__Group__1__Impl8988 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TypeDeclaration__Group__2__Impl_in_rule__TypeDeclaration__Group__29018 = new BitSet(new long[]{0x0000018820004070L});
+    public static final BitSet FOLLOW_rule__TypeDeclaration__Group__3_in_rule__TypeDeclaration__Group__29021 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__TypeDeclaration__Group__2__Impl9049 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TypeDeclaration__Group__3__Impl_in_rule__TypeDeclaration__Group__39080 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_rule__TypeDeclaration__Group__4_in_rule__TypeDeclaration__Group__39083 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TypeDeclaration__ExpAssignment_3_in_rule__TypeDeclaration__Group__3__Impl9110 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TypeDeclaration__Group__4__Impl_in_rule__TypeDeclaration__Group__49140 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__TypeDeclaration__Group__4__Impl9168 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Set__Group__0__Impl_in_rule__Set__Group__09209 = new BitSet(new long[]{0x0000000420004050L});
+    public static final BitSet FOLLOW_rule__Set__Group__1_in_rule__Set__Group__09212 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Set__LhsAssignment_0_in_rule__Set__Group__0__Impl9239 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Set__Group__1__Impl_in_rule__Set__Group__19269 = new BitSet(new long[]{0x0000000420004050L});
+    public static final BitSet FOLLOW_rule__Set__Group__2_in_rule__Set__Group__19272 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Set__TermsAssignment_1_in_rule__Set__Group__1__Impl9299 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Set__Group__2__Impl_in_rule__Set__Group__29330 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__Set__Group__2__Impl9358 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Range__Group__0__Impl_in_rule__Range__Group__09395 = new BitSet(new long[]{0x0000000020004050L});
+    public static final BitSet FOLLOW_rule__Range__Group__1_in_rule__Range__Group__09398 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__Range__Group__0__Impl9426 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Range__Group__1__Impl_in_rule__Range__Group__19457 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_rule__Range__Group__2_in_rule__Range__Group__19460 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Range__LhsAssignment_1_in_rule__Range__Group__1__Impl9487 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Range__Group__2__Impl_in_rule__Range__Group__29517 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_rule__Range__Group__3_in_rule__Range__Group__29520 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Range__Group__2__Impl9548 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Range__Group__3__Impl_in_rule__Range__Group__39579 = new BitSet(new long[]{0x0000000020004050L});
+    public static final BitSet FOLLOW_rule__Range__Group__4_in_rule__Range__Group__39582 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Range__Group__3__Impl9610 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Range__Group__4__Impl_in_rule__Range__Group__49641 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_rule__Range__Group__5_in_rule__Range__Group__49644 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Range__RhsAssignment_4_in_rule__Range__Group__4__Impl9671 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Range__Group__5__Impl_in_rule__Range__Group__59701 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__Range__Group__5__Impl9729 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SetConstruct__Group__0__Impl_in_rule__SetConstruct__Group__09772 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_rule__SetConstruct__Group__1_in_rule__SetConstruct__Group__09775 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SetConstruct__LhsAssignment_0_in_rule__SetConstruct__Group__0__Impl9802 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SetConstruct__Group__1__Impl_in_rule__SetConstruct__Group__19832 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__SetConstruct__Group__2_in_rule__SetConstruct__Group__19835 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__SetConstruct__Group__1__Impl9863 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SetConstruct__Group__2__Impl_in_rule__SetConstruct__Group__29894 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SetConstruct__RhsAssignment_2_in_rule__SetConstruct__Group__2__Impl9921 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TVars__Group__0__Impl_in_rule__TVars__Group__09957 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_rule__TVars__Group__1_in_rule__TVars__Group__09960 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TVars__CarAssignment_0_in_rule__TVars__Group__0__Impl9987 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TVars__Group__1__Impl_in_rule__TVars__Group__110017 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TVars__Group_1__0_in_rule__TVars__Group__1__Impl10044 = new BitSet(new long[]{0x0000000010000002L});
+    public static final BitSet FOLLOW_rule__TVars__Group_1__0__Impl_in_rule__TVars__Group_1__010079 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__TVars__Group_1__1_in_rule__TVars__Group_1__010082 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__TVars__Group_1__0__Impl10110 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TVars__Group_1__1__Impl_in_rule__TVars__Group_1__110141 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TVars__CdrAssignment_1_1_in_rule__TVars__Group_1__1__Impl10168 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TVar__Group__0__Impl_in_rule__TVar__Group__010202 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_rule__TVar__Group__1_in_rule__TVar__Group__010205 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariable_in_rule__TVar__Group__0__Impl10232 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TVar__Group__1__Impl_in_rule__TVar__Group__110261 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__TVar__Group__2_in_rule__TVar__Group__110264 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_rule__TVar__Group__1__Impl10292 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TVar__Group__2__Impl_in_rule__TVar__Group__210323 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_LID_in_rule__TVar__Group__2__Impl10350 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SetAddition__Group__0__Impl_in_rule__SetAddition__Group__010385 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_rule__SetAddition__Group__1_in_rule__SetAddition__Group__010388 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSetMultiplication_in_rule__SetAddition__Group__0__Impl10415 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SetAddition__Group__1__Impl_in_rule__SetAddition__Group__110444 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SetAddition__Group_1__0_in_rule__SetAddition__Group__1__Impl10471 = new BitSet(new long[]{0x0000000000002002L});
+    public static final BitSet FOLLOW_rule__SetAddition__Group_1__0__Impl_in_rule__SetAddition__Group_1__010506 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_rule__SetAddition__Group_1__1_in_rule__SetAddition__Group_1__010509 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SetAddition__Group_1__1__Impl_in_rule__SetAddition__Group_1__110567 = new BitSet(new long[]{0x0000018820004070L});
+    public static final BitSet FOLLOW_rule__SetAddition__Group_1__2_in_rule__SetAddition__Group_1__110570 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__SetAddition__Group_1__1__Impl10598 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SetAddition__Group_1__2__Impl_in_rule__SetAddition__Group_1__210629 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SetAddition__RightAssignment_1_2_in_rule__SetAddition__Group_1__2__Impl10656 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SetMultiplication__Group__0__Impl_in_rule__SetMultiplication__Group__010692 = new BitSet(new long[]{0x0000000000108000L});
+    public static final BitSet FOLLOW_rule__SetMultiplication__Group__1_in_rule__SetMultiplication__Group__010695 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSetPrimary_in_rule__SetMultiplication__Group__0__Impl10722 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SetMultiplication__Group__1__Impl_in_rule__SetMultiplication__Group__110751 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SetMultiplication__Group_1__0_in_rule__SetMultiplication__Group__1__Impl10778 = new BitSet(new long[]{0x0000000000108002L});
+    public static final BitSet FOLLOW_rule__SetMultiplication__Group_1__0__Impl_in_rule__SetMultiplication__Group_1__010813 = new BitSet(new long[]{0x0000000000108000L});
+    public static final BitSet FOLLOW_rule__SetMultiplication__Group_1__1_in_rule__SetMultiplication__Group_1__010816 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SetMultiplication__Group_1__1__Impl_in_rule__SetMultiplication__Group_1__110874 = new BitSet(new long[]{0x0000018820004070L});
+    public static final BitSet FOLLOW_rule__SetMultiplication__Group_1__2_in_rule__SetMultiplication__Group_1__110877 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SetMultiplication__Alternatives_1_1_in_rule__SetMultiplication__Group_1__1__Impl10904 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SetMultiplication__Group_1__2__Impl_in_rule__SetMultiplication__Group_1__210934 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SetMultiplication__RightAssignment_1_2_in_rule__SetMultiplication__Group_1__2__Impl10961 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SetPrimary__Group_1__0__Impl_in_rule__SetPrimary__Group_1__010997 = new BitSet(new long[]{0x0000018820004070L});
+    public static final BitSet FOLLOW_rule__SetPrimary__Group_1__1_in_rule__SetPrimary__Group_1__011000 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rule__SetPrimary__Group_1__0__Impl11028 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SetPrimary__Group_1__1__Impl_in_rule__SetPrimary__Group_1__111059 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_rule__SetPrimary__Group_1__2_in_rule__SetPrimary__Group_1__111062 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSetAddition_in_rule__SetPrimary__Group_1__1__Impl11089 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SetPrimary__Group_1__2__Impl_in_rule__SetPrimary__Group_1__211118 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__SetPrimary__Group_1__2__Impl11146 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PredicateAtom__Group__0__Impl_in_rule__PredicateAtom__Group__011183 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_rule__PredicateAtom__Group__1_in_rule__PredicateAtom__Group__011186 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PredicateAtom__FidAssignment_0_in_rule__PredicateAtom__Group__0__Impl11213 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PredicateAtom__Group__1__Impl_in_rule__PredicateAtom__Group__111243 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PredicateAtom__Group_1__0_in_rule__PredicateAtom__Group__1__Impl11270 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PredicateAtom__Group_1__0__Impl_in_rule__PredicateAtom__Group_1__011305 = new BitSet(new long[]{0x00000180200C4070L});
+    public static final BitSet FOLLOW_rule__PredicateAtom__Group_1__1_in_rule__PredicateAtom__Group_1__011308 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rule__PredicateAtom__Group_1__0__Impl11336 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PredicateAtom__Group_1__1__Impl_in_rule__PredicateAtom__Group_1__111367 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_rule__PredicateAtom__Group_1__2_in_rule__PredicateAtom__Group_1__111370 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PredicateAtom__TermsAssignment_1_1_in_rule__PredicateAtom__Group_1__1__Impl11397 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PredicateAtom__Group_1__2__Impl_in_rule__PredicateAtom__Group_1__211427 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__PredicateAtom__Group_1__2__Impl11455 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BasicPredicateAtom__Group__0__Impl_in_rule__BasicPredicateAtom__Group__011492 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_rule__BasicPredicateAtom__Group__1_in_rule__BasicPredicateAtom__Group__011495 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BasicPredicateAtom__FidAssignment_0_in_rule__BasicPredicateAtom__Group__0__Impl11522 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BasicPredicateAtom__Group__1__Impl_in_rule__BasicPredicateAtom__Group__111552 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BasicPredicateAtom__Group_1__0_in_rule__BasicPredicateAtom__Group__1__Impl11579 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BasicPredicateAtom__Group_1__0__Impl_in_rule__BasicPredicateAtom__Group_1__011614 = new BitSet(new long[]{0x0000018020004070L});
+    public static final BitSet FOLLOW_rule__BasicPredicateAtom__Group_1__1_in_rule__BasicPredicateAtom__Group_1__011617 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rule__BasicPredicateAtom__Group_1__0__Impl11645 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BasicPredicateAtom__Group_1__1__Impl_in_rule__BasicPredicateAtom__Group_1__111676 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_rule__BasicPredicateAtom__Group_1__2_in_rule__BasicPredicateAtom__Group_1__111679 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BasicPredicateAtom__TermsAssignment_1_1_in_rule__BasicPredicateAtom__Group_1__1__Impl11706 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BasicPredicateAtom__Group_1__2__Impl_in_rule__BasicPredicateAtom__Group_1__211736 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__BasicPredicateAtom__Group_1__2__Impl11764 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInAtom__Group__0__Impl_in_rule__BuiltInAtom__Group__011801 = new BitSet(new long[]{0x0000000007E00000L});
+    public static final BitSet FOLLOW_rule__BuiltInAtom__Group__1_in_rule__BuiltInAtom__Group__011804 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInAtom__LhsAssignment_0_in_rule__BuiltInAtom__Group__0__Impl11831 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInAtom__Group__1__Impl_in_rule__BuiltInAtom__Group__111861 = new BitSet(new long[]{0x0000018020004070L});
+    public static final BitSet FOLLOW_rule__BuiltInAtom__Group__2_in_rule__BuiltInAtom__Group__111864 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInAtom__OpAssignment_1_in_rule__BuiltInAtom__Group__1__Impl11891 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInAtom__Group__2__Impl_in_rule__BuiltInAtom__Group__211921 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInAtom__RhsAssignment_2_in_rule__BuiltInAtom__Group__2__Impl11948 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OrSentence__Group__0__Impl_in_rule__OrSentence__Group__011984 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_rule__OrSentence__Group__1_in_rule__OrSentence__Group__011987 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAndSentence_in_rule__OrSentence__Group__0__Impl12014 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OrSentence__Group__1__Impl_in_rule__OrSentence__Group__112043 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OrSentence__Group_1__0_in_rule__OrSentence__Group__1__Impl12070 = new BitSet(new long[]{0x0000004000000002L});
+    public static final BitSet FOLLOW_rule__OrSentence__Group_1__0__Impl_in_rule__OrSentence__Group_1__012105 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_rule__OrSentence__Group_1__1_in_rule__OrSentence__Group_1__012108 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OrSentence__Group_1__1__Impl_in_rule__OrSentence__Group_1__112166 = new BitSet(new long[]{0x0000018020004070L});
+    public static final BitSet FOLLOW_rule__OrSentence__Group_1__2_in_rule__OrSentence__Group_1__112169 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_rule__OrSentence__Group_1__1__Impl12197 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OrSentence__Group_1__2__Impl_in_rule__OrSentence__Group_1__212228 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OrSentence__RightAssignment_1_2_in_rule__OrSentence__Group_1__2__Impl12255 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AndSentence__Group__0__Impl_in_rule__AndSentence__Group__012291 = new BitSet(new long[]{0x0000000018000000L});
+    public static final BitSet FOLLOW_rule__AndSentence__Group__1_in_rule__AndSentence__Group__012294 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNotSentence_in_rule__AndSentence__Group__0__Impl12321 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AndSentence__Group__1__Impl_in_rule__AndSentence__Group__112350 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AndSentence__Group_1__0_in_rule__AndSentence__Group__1__Impl12377 = new BitSet(new long[]{0x0000000018000002L});
+    public static final BitSet FOLLOW_rule__AndSentence__Group_1__0__Impl_in_rule__AndSentence__Group_1__012412 = new BitSet(new long[]{0x0000000018000000L});
+    public static final BitSet FOLLOW_rule__AndSentence__Group_1__1_in_rule__AndSentence__Group_1__012415 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AndSentence__Group_1__1__Impl_in_rule__AndSentence__Group_1__112473 = new BitSet(new long[]{0x0000018020004070L});
+    public static final BitSet FOLLOW_rule__AndSentence__Group_1__2_in_rule__AndSentence__Group_1__112476 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AndSentence__Alternatives_1_1_in_rule__AndSentence__Group_1__1__Impl12503 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AndSentence__Group_1__2__Impl_in_rule__AndSentence__Group_1__212533 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AndSentence__RightAssignment_1_2_in_rule__AndSentence__Group_1__2__Impl12560 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NotSentence__Group_1__0__Impl_in_rule__NotSentence__Group_1__012596 = new BitSet(new long[]{0x0000018020004070L});
+    public static final BitSet FOLLOW_rule__NotSentence__Group_1__1_in_rule__NotSentence__Group_1__012599 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_rule__NotSentence__Group_1__0__Impl12627 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NotSentence__Group_1__1__Impl_in_rule__NotSentence__Group_1__112658 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePrimarySentence_in_rule__NotSentence__Group_1__1__Impl12685 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrimarySentence__Group_1__0__Impl_in_rule__PrimarySentence__Group_1__012718 = new BitSet(new long[]{0x0000018020004070L});
+    public static final BitSet FOLLOW_rule__PrimarySentence__Group_1__1_in_rule__PrimarySentence__Group_1__012721 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rule__PrimarySentence__Group_1__0__Impl12749 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrimarySentence__Group_1__1__Impl_in_rule__PrimarySentence__Group_1__112780 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_rule__PrimarySentence__Group_1__2_in_rule__PrimarySentence__Group_1__112783 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOrSentence_in_rule__PrimarySentence__Group_1__1__Impl12810 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrimarySentence__Group_1__2__Impl_in_rule__PrimarySentence__Group_1__212839 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__PrimarySentence__Group_1__2__Impl12867 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__POrSentence__Group__0__Impl_in_rule__POrSentence__Group__012904 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_rule__POrSentence__Group__1_in_rule__POrSentence__Group__012907 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulepAndSentence_in_rule__POrSentence__Group__0__Impl12934 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__POrSentence__Group__1__Impl_in_rule__POrSentence__Group__112963 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__POrSentence__Group_1__0_in_rule__POrSentence__Group__1__Impl12990 = new BitSet(new long[]{0x0000004000000002L});
+    public static final BitSet FOLLOW_rule__POrSentence__Group_1__0__Impl_in_rule__POrSentence__Group_1__013025 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_rule__POrSentence__Group_1__1_in_rule__POrSentence__Group_1__013028 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__POrSentence__Group_1__1__Impl_in_rule__POrSentence__Group_1__113086 = new BitSet(new long[]{0x0000008020000010L});
+    public static final BitSet FOLLOW_rule__POrSentence__Group_1__2_in_rule__POrSentence__Group_1__113089 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_rule__POrSentence__Group_1__1__Impl13117 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__POrSentence__Group_1__2__Impl_in_rule__POrSentence__Group_1__213148 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__POrSentence__RightAssignment_1_2_in_rule__POrSentence__Group_1__2__Impl13175 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PAndSentence__Group__0__Impl_in_rule__PAndSentence__Group__013211 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_rule__PAndSentence__Group__1_in_rule__PAndSentence__Group__013214 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulepNotSentence_in_rule__PAndSentence__Group__0__Impl13241 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PAndSentence__Group__1__Impl_in_rule__PAndSentence__Group__113270 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PAndSentence__Group_1__0_in_rule__PAndSentence__Group__1__Impl13297 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_rule__PAndSentence__Group_1__0__Impl_in_rule__PAndSentence__Group_1__013332 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_rule__PAndSentence__Group_1__1_in_rule__PAndSentence__Group_1__013335 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PAndSentence__Group_1__1__Impl_in_rule__PAndSentence__Group_1__113393 = new BitSet(new long[]{0x0000008020000010L});
+    public static final BitSet FOLLOW_rule__PAndSentence__Group_1__2_in_rule__PAndSentence__Group_1__113396 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__PAndSentence__Group_1__1__Impl13424 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PAndSentence__Group_1__2__Impl_in_rule__PAndSentence__Group_1__213455 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PAndSentence__RightAssignment_1_2_in_rule__PAndSentence__Group_1__2__Impl13482 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PNotSentence__Group_1__0__Impl_in_rule__PNotSentence__Group_1__013518 = new BitSet(new long[]{0x0000000020000010L});
+    public static final BitSet FOLLOW_rule__PNotSentence__Group_1__1_in_rule__PNotSentence__Group_1__013521 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_rule__PNotSentence__Group_1__0__Impl13549 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PNotSentence__Group_1__1__Impl_in_rule__PNotSentence__Group_1__113580 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulepPrimarySentence_in_rule__PNotSentence__Group_1__1__Impl13607 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PPrimarySentence__Group_1__0__Impl_in_rule__PPrimarySentence__Group_1__013640 = new BitSet(new long[]{0x0000018020004070L});
+    public static final BitSet FOLLOW_rule__PPrimarySentence__Group_1__1_in_rule__PPrimarySentence__Group_1__013643 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rule__PPrimarySentence__Group_1__0__Impl13671 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PPrimarySentence__Group_1__1__Impl_in_rule__PPrimarySentence__Group_1__113702 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_rule__PPrimarySentence__Group_1__2_in_rule__PPrimarySentence__Group_1__113705 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOrSentence_in_rule__PPrimarySentence__Group_1__1__Impl13732 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PPrimarySentence__Group_1__2__Impl_in_rule__PPrimarySentence__Group_1__213761 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__PPrimarySentence__Group_1__2__Impl13789 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MaybeLiteral__Group__0__Impl_in_rule__MaybeLiteral__Group__013826 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__MaybeLiteral__Group__1_in_rule__MaybeLiteral__Group__013829 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__MaybeLiteral__Group__0__Impl13857 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MaybeLiteral__Group__1__Impl_in_rule__MaybeLiteral__Group__113888 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBasicPredicateAtom_in_rule__MaybeLiteral__Group__1__Impl13915 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__0__Impl_in_rule__CardinalityConstraint__Group__013948 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__1_in_rule__CardinalityConstraint__Group__013951 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CardinalityConstraint__LhsAssignment_0_in_rule__CardinalityConstraint__Group__0__Impl13978 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__1__Impl_in_rule__CardinalityConstraint__Group__114008 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__2_in_rule__CardinalityConstraint__Group__114011 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__CardinalityConstraint__Group__1__Impl14039 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__2__Impl_in_rule__CardinalityConstraint__Group__214070 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__3_in_rule__CardinalityConstraint__Group__214073 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__CardinalityConstraint__Group__2__Impl14101 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__3__Impl_in_rule__CardinalityConstraint__Group__314132 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__4_in_rule__CardinalityConstraint__Group__314135 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__CardinalityConstraint__Group__3__Impl14163 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__4__Impl_in_rule__CardinalityConstraint__Group__414194 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__5_in_rule__CardinalityConstraint__Group__414197 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CardinalityConstraint__AtomAssignment_4_in_rule__CardinalityConstraint__Group__4__Impl14224 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__5__Impl_in_rule__CardinalityConstraint__Group__514254 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__6_in_rule__CardinalityConstraint__Group__514257 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__CardinalityConstraint__Group__5__Impl14285 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__6__Impl_in_rule__CardinalityConstraint__Group__614316 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__7_in_rule__CardinalityConstraint__Group__614319 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__CardinalityConstraint__Group__6__Impl14347 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__7__Impl_in_rule__CardinalityConstraint__Group__714378 = new BitSet(new long[]{0x0000018020004070L});
+    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__8_in_rule__CardinalityConstraint__Group__714381 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__CardinalityConstraint__Group__7__Impl14409 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CardinalityConstraint__Group__8__Impl_in_rule__CardinalityConstraint__Group__814440 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CardinalityConstraint__RhsAssignment_8_in_rule__CardinalityConstraint__Group__8__Impl14467 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__Group__0__Impl_in_rule__Rule__Group__014515 = new BitSet(new long[]{0x0000040100000000L});
+    public static final BitSet FOLLOW_rule__Rule__Group__1_in_rule__Rule__Group__014518 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__HeadAssignment_0_in_rule__Rule__Group__0__Impl14545 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__Group__1__Impl_in_rule__Rule__Group__114575 = new BitSet(new long[]{0x0000040100000000L});
+    public static final BitSet FOLLOW_rule__Rule__Group__2_in_rule__Rule__Group__114578 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__Group_1__0_in_rule__Rule__Group__1__Impl14605 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__Group__2__Impl_in_rule__Rule__Group__214636 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Rule__Group__2__Impl14664 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__Group_1__0__Impl_in_rule__Rule__Group_1__014701 = new BitSet(new long[]{0x0000018020004070L});
+    public static final BitSet FOLLOW_rule__Rule__Group_1__1_in_rule__Rule__Group_1__014704 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__ConditionAssignment_1_0_in_rule__Rule__Group_1__0__Impl14731 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__Group_1__1__Impl_in_rule__Rule__Group_1__114761 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__BodyAssignment_1_1_in_rule__Rule__Group_1__1__Impl14788 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStatement_in_rule__Program__StatementsAssignment14827 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_UID_in_rule__Variable__IdentifierAssignment14859 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_LID_in_rule__TypedVariable__TypeAssignment_014890 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariable_in_rule__TypedVariable__VarAssignment_114921 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMultiplication_in_rule__Addition__RhsAssignment_1_214952 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePrimary_in_rule__Multiplication__RhsAssignment_1_214983 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__Primary__MinusAssignment_0_015019 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleArithmeticLiteral_in_rule__Primary__TermAssignment_0_115058 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__Primary__MinusAssignment_1_015094 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAddition_in_rule__Primary__TermAssignment_1_215133 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariable_in_rule__ArithmeticLiteral__VAssignment_015164 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTypedVariable_in_rule__ArithmeticLiteral__TvAssignment_115195 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_LID_in_rule__ArithmeticLiteral__ConstAssignment_215226 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__ArithmeticLiteral__ValueAssignment_315257 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGroundMultiplication_in_rule__GroundAddition__RhsAssignment_1_215288 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePrimary_in_rule__GroundMultiplication__RhsAssignment_1_215319 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__GroundPrimary__MinusAssignment_0_015355 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGroundArithmeticLiteral_in_rule__GroundPrimary__TermAssignment_0_115394 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__GroundPrimary__MinusAssignment_1_015430 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAddition_in_rule__GroundPrimary__TermAssignment_1_215469 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_LID_in_rule__GroundArithmeticLiteral__IdentifierAssignment_015500 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__GroundArithmeticLiteral__ValueAssignment_115531 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBasicTerm_in_rule__BasicTerms__CarAssignment_015562 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBasicTerm_in_rule__BasicTerms__CdrAssignment_1_115593 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGroundTerm_in_rule__GroundTerms__CarAssignment_015624 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGroundTerm_in_rule__GroundTerms__CdrAssignment_1_115655 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTerm_in_rule__Terms__CarAssignment_015686 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__Terms__TermsAssignment_1_015722 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTerm_in_rule__Terms__CdrAssignment_1_115761 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_LID_in_rule__ConstantDeclaration__IdAssignment_115792 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGroundArithmeticTerm_in_rule__ConstantDeclaration__CvAssignment_315823 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_LID_in_rule__TypeDeclaration__IdAssignment_115854 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSetExpression_in_rule__TypeDeclaration__ExpAssignment_315885 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGroundArithmeticTerm_in_rule__Limit__CvAssignment15916 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__Set__LhsAssignment_015952 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGroundTerms_in_rule__Set__TermsAssignment_115991 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLimit_in_rule__Range__LhsAssignment_116022 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLimit_in_rule__Range__RhsAssignment_416053 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBasicTerm_in_rule__SetConstruct__LhsAssignment_016084 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTVars_in_rule__SetConstruct__RhsAssignment_216115 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTVar_in_rule__TVars__CarAssignment_016146 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTVar_in_rule__TVars__CdrAssignment_1_116177 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSetMultiplication_in_rule__SetAddition__RightAssignment_1_216208 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSetPrimary_in_rule__SetMultiplication__RightAssignment_1_216239 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_LID_in_rule__PredicateAtom__FidAssignment_016270 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTerms_in_rule__PredicateAtom__TermsAssignment_1_116301 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_LID_in_rule__BasicPredicateAtom__FidAssignment_016332 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBasicTerms_in_rule__BasicPredicateAtom__TermsAssignment_1_116363 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBasicTerm_in_rule__BuiltInAtom__LhsAssignment_016394 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAtomOp_in_rule__BuiltInAtom__OpAssignment_116425 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBasicTerm_in_rule__BuiltInAtom__RhsAssignment_216456 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAndSentence_in_rule__OrSentence__RightAssignment_1_216487 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNotSentence_in_rule__AndSentence__RightAssignment_1_216518 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulepAndSentence_in_rule__POrSentence__RightAssignment_1_216549 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulepNotSentence_in_rule__PAndSentence__RightAssignment_1_216580 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBound_in_rule__CardinalityConstraint__LhsAssignment_016611 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBasicPredicateAtom_in_rule__CardinalityConstraint__AtomAssignment_416642 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBound_in_rule__CardinalityConstraint__RhsAssignment_816673 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleArithmeticTerm_in_rule__Bound__AvAssignment16704 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHead_in_rule__Rule__HeadAssignment_016735 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_rule__Rule__ConditionAssignment_1_016771 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSentence_in_rule__Rule__BodyAssignment_1_116810 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleTypedVariable_in_synpred2_InternalL3612 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleArithmeticTerm_in_synpred3_InternalL3629 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSetLiteral_in_synpred20_InternalL4386 = new BitSet(new long[]{0x0000000000000002L});

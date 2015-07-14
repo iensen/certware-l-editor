@@ -4094,11 +4094,9 @@ rule__Terms__Group_1__0__Impl
     }
 :
 (
-{ before(grammarAccess.getTermsAccess().getCommaKeyword_1_0()); }
-
-	',' 
-
-{ after(grammarAccess.getTermsAccess().getCommaKeyword_1_0()); }
+{ before(grammarAccess.getTermsAccess().getTermsAssignment_1_0()); }
+(rule__Terms__TermsAssignment_1_0)
+{ after(grammarAccess.getTermsAccess().getTermsAssignment_1_0()); }
 )
 
 ;
@@ -7281,11 +7279,9 @@ rule__Rule__Group_1__0__Impl
     }
 :
 (
-{ before(grammarAccess.getRuleAccess().getIfKeyword_1_0()); }
-
-	'if' 
-
-{ after(grammarAccess.getRuleAccess().getIfKeyword_1_0()); }
+{ before(grammarAccess.getRuleAccess().getConditionAssignment_1_0()); }
+(rule__Rule__ConditionAssignment_1_0)
+{ after(grammarAccess.getRuleAccess().getConditionAssignment_1_0()); }
 )
 
 ;
@@ -7758,6 +7754,29 @@ rule__Terms__CarAssignment_0
 (
 { before(grammarAccess.getTermsAccess().getCarTermParserRuleCall_0_0()); }
 	ruleTerm{ after(grammarAccess.getTermsAccess().getCarTermParserRuleCall_0_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Terms__TermsAssignment_1_0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getTermsAccess().getTermsCommaKeyword_1_0_0()); }
+(
+{ before(grammarAccess.getTermsAccess().getTermsCommaKeyword_1_0_0()); }
+
+	',' 
+
+{ after(grammarAccess.getTermsAccess().getTermsCommaKeyword_1_0_0()); }
+)
+
+{ after(grammarAccess.getTermsAccess().getTermsCommaKeyword_1_0_0()); }
 )
 
 ;
@@ -8246,6 +8265,29 @@ rule__Rule__HeadAssignment_0
 (
 { before(grammarAccess.getRuleAccess().getHeadHeadParserRuleCall_0_0()); }
 	ruleHead{ after(grammarAccess.getRuleAccess().getHeadHeadParserRuleCall_0_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Rule__ConditionAssignment_1_0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getRuleAccess().getConditionIfKeyword_1_0_0()); }
+(
+{ before(grammarAccess.getRuleAccess().getConditionIfKeyword_1_0_0()); }
+
+	'if' 
+
+{ after(grammarAccess.getRuleAccess().getConditionIfKeyword_1_0_0()); }
+)
+
+{ after(grammarAccess.getRuleAccess().getConditionIfKeyword_1_0_0()); }
 )
 
 ;

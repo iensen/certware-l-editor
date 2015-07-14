@@ -51,7 +51,7 @@ public class LGrammarAccess extends AbstractGrammarElementFinder {
 		//// IntegerNumeral:  MRB replaced with direct substitution of terminal INT
 		////	INT // provided by Terminals and returning ECore Integer type 
 		//// ;
-		//// Identifier:  MRB replaced with direct subsitution of terminal ID
+		//// Identifier:  MRB replaced with direct substitution of terminal ID
 		////	ID // provided by Terminals and returning ECore String type
 		////;
 		////SpecialCharacter:
@@ -778,15 +778,16 @@ public class LGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cCarAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cCarTermParserRuleCall_0_0 = (RuleCall)cCarAssignment_0.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cCommaKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cTermsAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
+		private final Keyword cTermsCommaKeyword_1_0_0 = (Keyword)cTermsAssignment_1_0.eContents().get(0);
 		private final Assignment cCdrAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cCdrTermParserRuleCall_1_1_0 = (RuleCall)cCdrAssignment_1_1.eContents().get(0);
 		
 		//Terms:
-		//	car=Term ("," cdr+=Term)*;
+		//	car=Term (terms+="," cdr+=Term)*;
 		public ParserRule getRule() { return rule; }
 
-		//car=Term ("," cdr+=Term)*
+		//car=Term (terms+="," cdr+=Term)*
 		public Group getGroup() { return cGroup; }
 
 		//car=Term
@@ -795,11 +796,14 @@ public class LGrammarAccess extends AbstractGrammarElementFinder {
 		//Term
 		public RuleCall getCarTermParserRuleCall_0_0() { return cCarTermParserRuleCall_0_0; }
 
-		//("," cdr+=Term)*
+		//(terms+="," cdr+=Term)*
 		public Group getGroup_1() { return cGroup_1; }
 
+		//terms+=","
+		public Assignment getTermsAssignment_1_0() { return cTermsAssignment_1_0; }
+
 		//","
-		public Keyword getCommaKeyword_1_0() { return cCommaKeyword_1_0; }
+		public Keyword getTermsCommaKeyword_1_0_0() { return cTermsCommaKeyword_1_0_0; }
 
 		//cdr+=Term
 		public Assignment getCdrAssignment_1_1() { return cCdrAssignment_1_1; }
@@ -1844,17 +1848,18 @@ public class LGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cHeadAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cHeadHeadParserRuleCall_0_0 = (RuleCall)cHeadAssignment_0.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cIfKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cConditionAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
+		private final Keyword cConditionIfKeyword_1_0_0 = (Keyword)cConditionAssignment_1_0.eContents().get(0);
 		private final Assignment cBodyAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cBodySentenceParserRuleCall_1_1_0 = (RuleCall)cBodyAssignment_1_1.eContents().get(0);
 		private final Keyword cFullStopKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//// 1.12 Rules, 1.14.8 Rules
 		//Rule:
-		//	head=Head ("if" body=Sentence)? ".";
+		//	head=Head (condition="if" body=Sentence)? ".";
 		public ParserRule getRule() { return rule; }
 
-		//head=Head ("if" body=Sentence)? "."
+		//head=Head (condition="if" body=Sentence)? "."
 		public Group getGroup() { return cGroup; }
 
 		//head=Head
@@ -1863,11 +1868,14 @@ public class LGrammarAccess extends AbstractGrammarElementFinder {
 		//Head
 		public RuleCall getHeadHeadParserRuleCall_0_0() { return cHeadHeadParserRuleCall_0_0; }
 
-		//("if" body=Sentence)?
+		//(condition="if" body=Sentence)?
 		public Group getGroup_1() { return cGroup_1; }
 
+		//condition="if"
+		public Assignment getConditionAssignment_1_0() { return cConditionAssignment_1_0; }
+
 		//"if"
-		public Keyword getIfKeyword_1_0() { return cIfKeyword_1_0; }
+		public Keyword getConditionIfKeyword_1_0_0() { return cConditionIfKeyword_1_0_0; }
 
 		//body=Sentence
 		public Assignment getBodyAssignment_1_1() { return cBodyAssignment_1_1; }
@@ -2130,7 +2138,7 @@ public class LGrammarAccess extends AbstractGrammarElementFinder {
 	//// IntegerNumeral:  MRB replaced with direct substitution of terminal INT
 	////	INT // provided by Terminals and returning ECore Integer type 
 	//// ;
-	//// Identifier:  MRB replaced with direct subsitution of terminal ID
+	//// Identifier:  MRB replaced with direct substitution of terminal ID
 	////	ID // provided by Terminals and returning ECore String type
 	////;
 	////SpecialCharacter:
@@ -2369,7 +2377,7 @@ public class LGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Terms:
-	//	car=Term ("," cdr+=Term)*;
+	//	car=Term (terms+="," cdr+=Term)*;
 	public TermsElements getTermsAccess() {
 		return pTerms;
 	}
@@ -2727,7 +2735,7 @@ public class LGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// 1.12 Rules, 1.14.8 Rules
 	//Rule:
-	//	head=Head ("if" body=Sentence)? ".";
+	//	head=Head (condition="if" body=Sentence)? ".";
 	public RuleElements getRuleAccess() {
 		return pRule;
 	}

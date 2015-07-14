@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link net.certware.argument.language.l.impl.RuleImpl#getHead <em>Head</em>}</li>
+ *   <li>{@link net.certware.argument.language.l.impl.RuleImpl#getCondition <em>Condition</em>}</li>
  *   <li>{@link net.certware.argument.language.l.impl.RuleImpl#getBody <em>Body</em>}</li>
  * </ul>
  * </p>
@@ -40,6 +41,26 @@ public class RuleImpl extends StatementImpl implements Rule
    * @ordered
    */
   protected Head head;
+
+  /**
+   * The default value of the '{@link #getCondition() <em>Condition</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCondition()
+   * @generated
+   * @ordered
+   */
+  protected static final String CONDITION_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getCondition() <em>Condition</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCondition()
+   * @generated
+   * @ordered
+   */
+  protected String condition = CONDITION_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference.
@@ -125,6 +146,29 @@ public class RuleImpl extends StatementImpl implements Rule
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getCondition()
+  {
+    return condition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setCondition(String newCondition)
+  {
+    String oldCondition = condition;
+    condition = newCondition;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, LPackage.RULE__CONDITION, oldCondition, condition));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Sentence getBody()
   {
     return body;
@@ -198,6 +242,8 @@ public class RuleImpl extends StatementImpl implements Rule
     {
       case LPackage.RULE__HEAD:
         return getHead();
+      case LPackage.RULE__CONDITION:
+        return getCondition();
       case LPackage.RULE__BODY:
         return getBody();
     }
@@ -216,6 +262,9 @@ public class RuleImpl extends StatementImpl implements Rule
     {
       case LPackage.RULE__HEAD:
         setHead((Head)newValue);
+        return;
+      case LPackage.RULE__CONDITION:
+        setCondition((String)newValue);
         return;
       case LPackage.RULE__BODY:
         setBody((Sentence)newValue);
@@ -237,6 +286,9 @@ public class RuleImpl extends StatementImpl implements Rule
       case LPackage.RULE__HEAD:
         setHead((Head)null);
         return;
+      case LPackage.RULE__CONDITION:
+        setCondition(CONDITION_EDEFAULT);
+        return;
       case LPackage.RULE__BODY:
         setBody((Sentence)null);
         return;
@@ -256,10 +308,29 @@ public class RuleImpl extends StatementImpl implements Rule
     {
       case LPackage.RULE__HEAD:
         return head != null;
+      case LPackage.RULE__CONDITION:
+        return CONDITION_EDEFAULT == null ? condition != null : !CONDITION_EDEFAULT.equals(condition);
       case LPackage.RULE__BODY:
         return body != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (condition: ");
+    result.append(condition);
+    result.append(')');
+    return result.toString();
   }
 
 } //RuleImpl

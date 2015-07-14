@@ -551,13 +551,22 @@ public interface LPackage extends EPackage
   int TERMS__CAR = FUNCTIONAL_TERM_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Terms</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TERMS__TERMS = FUNCTIONAL_TERM_FEATURE_COUNT + 1;
+
+  /**
    * The feature id for the '<em><b>Cdr</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TERMS__CDR = FUNCTIONAL_TERM_FEATURE_COUNT + 1;
+  int TERMS__CDR = FUNCTIONAL_TERM_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Terms</em>' class.
@@ -566,7 +575,7 @@ public interface LPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TERMS_FEATURE_COUNT = FUNCTIONAL_TERM_FEATURE_COUNT + 2;
+  int TERMS_FEATURE_COUNT = FUNCTIONAL_TERM_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link net.certware.argument.language.l.impl.StatementImpl <em>Statement</em>}' class.
@@ -1241,13 +1250,22 @@ public interface LPackage extends EPackage
   int RULE__HEAD = STATEMENT_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Condition</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RULE__CONDITION = STATEMENT_FEATURE_COUNT + 1;
+
+  /**
    * The feature id for the '<em><b>Body</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RULE__BODY = STATEMENT_FEATURE_COUNT + 1;
+  int RULE__BODY = STATEMENT_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Rule</em>' class.
@@ -1256,7 +1274,7 @@ public interface LPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RULE_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
+  int RULE_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link net.certware.argument.language.l.impl.AdditionImpl <em>Addition</em>}' class.
@@ -2092,6 +2110,17 @@ public interface LPackage extends EPackage
   EReference getTerms_Car();
 
   /**
+   * Returns the meta object for the attribute list '{@link net.certware.argument.language.l.Terms#getTerms <em>Terms</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Terms</em>'.
+   * @see net.certware.argument.language.l.Terms#getTerms()
+   * @see #getTerms()
+   * @generated
+   */
+  EAttribute getTerms_Terms();
+
+  /**
    * Returns the meta object for the containment reference list '{@link net.certware.argument.language.l.Terms#getCdr <em>Cdr</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2596,6 +2625,17 @@ public interface LPackage extends EPackage
    * @generated
    */
   EReference getRule_Head();
+
+  /**
+   * Returns the meta object for the attribute '{@link net.certware.argument.language.l.Rule#getCondition <em>Condition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Condition</em>'.
+   * @see net.certware.argument.language.l.Rule#getCondition()
+   * @see #getRule()
+   * @generated
+   */
+  EAttribute getRule_Condition();
 
   /**
    * Returns the meta object for the containment reference '{@link net.certware.argument.language.l.Rule#getBody <em>Body</em>}'.
@@ -3214,6 +3254,14 @@ public interface LPackage extends EPackage
     EReference TERMS__CAR = eINSTANCE.getTerms_Car();
 
     /**
+     * The meta object literal for the '<em><b>Terms</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TERMS__TERMS = eINSTANCE.getTerms_Terms();
+
+    /**
      * The meta object literal for the '<em><b>Cdr</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3640,6 +3688,14 @@ public interface LPackage extends EPackage
      * @generated
      */
     EReference RULE__HEAD = eINSTANCE.getRule_Head();
+
+    /**
+     * The meta object literal for the '<em><b>Condition</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute RULE__CONDITION = eINSTANCE.getRule_Condition();
 
     /**
      * The meta object literal for the '<em><b>Body</b></em>' containment reference feature.
