@@ -29,6 +29,7 @@ import net.certware.argument.language.l.Set;
 import net.certware.argument.language.l.SetAddition;
 import net.certware.argument.language.l.SetConstruct;
 import net.certware.argument.language.l.SetMultiplication;
+import net.certware.argument.language.l.TVar;
 import net.certware.argument.language.l.TVars;
 import net.certware.argument.language.l.Terms;
 import net.certware.argument.language.l.TypeDeclaration;
@@ -349,6 +350,12 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
+			case LPackage.TVAR:
+				if(context == grammarAccess.getTVarRule()) {
+					sequence_TVar(context, (TVar) semanticObject); 
+					return; 
+				}
+				else break;
 			case LPackage.TVARS:
 				if(context == grammarAccess.getTVarsRule()) {
 					sequence_TVars(context, (TVars) semanticObject); 
@@ -381,7 +388,6 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				else break;
 			case LPackage.VARIABLE:
 				if(context == grammarAccess.getQuantifiedTermRule() ||
-				   context == grammarAccess.getTVarRule() ||
 				   context == grammarAccess.getTermRule() ||
 				   context == grammarAccess.getVariableRule()) {
 					sequence_Variable(context, (Variable) semanticObject); 
@@ -774,6 +780,25 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
+	 *     (var=Variable id=LID)
+	 */
+	protected void sequence_TVar(EObject context, TVar semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, LPackage.Literals.TVAR__VAR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LPackage.Literals.TVAR__VAR));
+			if(transientValues.isValueTransient(semanticObject, LPackage.Literals.TVAR__ID) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LPackage.Literals.TVAR__ID));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getTVarAccess().getVarVariableParserRuleCall_0_0(), semanticObject.getVar());
+		feeder.accept(grammarAccess.getTVarAccess().getIdLIDTerminalRuleCall_2_0(), semanticObject.getId());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (car=TVar cdr+=TVar*)
 	 */
 	protected void sequence_TVars(EObject context, TVars semanticObject) {
@@ -783,7 +808,7 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (car=Term (terms+=',' cdr+=Term)*)
+	 *     (car=Term cdr+=Term*)
 	 */
 	protected void sequence_Terms(EObject context, Terms semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

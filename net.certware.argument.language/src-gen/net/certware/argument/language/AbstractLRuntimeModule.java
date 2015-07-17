@@ -89,9 +89,9 @@ public abstract class AbstractLRuntimeModule extends DefaultRuntimeModule {
 		return org.eclipse.xtext.parser.antlr.AntlrTokenDefProvider.class;
 	}
 
-	// contributed by org.eclipse.xtext.generator.validation.ValidatorFragment
-	@org.eclipse.xtext.service.SingletonBinding(eager=true)	public Class<? extends net.certware.argument.language.validation.LValidator> bindLValidator() {
-		return net.certware.argument.language.validation.LValidator.class;
+	// contributed by org.eclipse.xtext.generator.validation.JavaValidatorFragment
+	@org.eclipse.xtext.service.SingletonBinding(eager=true)	public Class<? extends net.certware.argument.language.validation.LJavaValidator> bindLJavaValidator() {
+		return net.certware.argument.language.validation.LJavaValidator.class;
 	}
 
 	// contributed by org.eclipse.xtext.generator.scoping.AbstractScopingFragment

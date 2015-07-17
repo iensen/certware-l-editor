@@ -53,7 +53,6 @@
     <genClasses ecoreClass="L.ecore#//Term"/>
     <genClasses ecoreClass="L.ecore#//Terms">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//Terms/car"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//Terms/terms"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//Terms/cdr"/>
     </genClasses>
     <genClasses ecoreClass="L.ecore#//ConstantDeclaration">
@@ -84,7 +83,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//TVars/car"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//TVars/cdr"/>
     </genClasses>
-    <genClasses ecoreClass="L.ecore#//TVar"/>
+    <genClasses ecoreClass="L.ecore#//TVar">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//TVar/var"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//TVar/id"/>
+    </genClasses>
     <genClasses ecoreClass="L.ecore#//Atom"/>
     <genClasses ecoreClass="L.ecore#//PredicateAtom">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//PredicateAtom/fid"/>

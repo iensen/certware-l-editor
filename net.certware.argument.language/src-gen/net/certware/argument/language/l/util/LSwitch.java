@@ -99,7 +99,6 @@ public class LSwitch<T> extends Switch<T>
         Variable variable = (Variable)theEObject;
         T result = caseVariable(variable);
         if (result == null) result = caseQuantifiedTerm(variable);
-        if (result == null) result = caseTVar(variable);
         if (result == null) result = caseTerm(variable);
         if (result == null) result = defaultCase(theEObject);
         return result;

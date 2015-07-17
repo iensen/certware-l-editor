@@ -1381,22 +1381,11 @@ ruleTerms returns [EObject current=null]
 	    }
 
 )
-)((
-(
-		lv_terms_1_0=	',' 
+)(	otherlv_1=',' 
     {
-        newLeafNode(lv_terms_1_0, grammarAccess.getTermsAccess().getTermsCommaKeyword_1_0_0());
+    	newLeafNode(otherlv_1, grammarAccess.getTermsAccess().getCommaKeyword_1_0());
     }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getTermsRule());
-	        }
-       		addWithLastConsumed($current, "terms", lv_terms_1_0, ",");
-	    }
-
-)
-)(
+(
 (
 		{ 
 	        newCompositeNode(grammarAccess.getTermsAccess().getCdrTermParserRuleCall_1_1_0()); 
@@ -1898,27 +1887,47 @@ ruleTVar returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
+((
 (
-	{ 
-	  /* */ 
-	}
-    { 
-        newCompositeNode(grammarAccess.getTVarAccess().getVariableParserRuleCall_0()); 
-    }
-    this_Variable_0=ruleVariable
-    { 
-        $current = $this_Variable_0.current; 
-        afterParserOrEnumRuleCall();
-    }
-	otherlv_1='in' 
+		{ 
+	        newCompositeNode(grammarAccess.getTVarAccess().getVarVariableParserRuleCall_0_0()); 
+	    }
+		lv_var_0_0=ruleVariable		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getTVarRule());
+	        }
+       		set(
+       			$current, 
+       			"var",
+        		lv_var_0_0, 
+        		"Variable");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_1='in' 
     {
     	newLeafNode(otherlv_1, grammarAccess.getTVarAccess().getInKeyword_1());
     }
-this_LID_2=RULE_LID
-    { 
-    newLeafNode(this_LID_2, grammarAccess.getTVarAccess().getLIDTerminalRuleCall_2()); 
-    }
+(
+(
+		lv_id_2_0=RULE_LID
+		{
+			newLeafNode(lv_id_2_0, grammarAccess.getTVarAccess().getIdLIDTerminalRuleCall_2_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getTVarRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"id",
+        		lv_id_2_0, 
+        		"LID");
+	    }
+
 )
+))
 ;
 
 

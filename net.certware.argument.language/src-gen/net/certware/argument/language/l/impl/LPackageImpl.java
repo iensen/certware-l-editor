@@ -866,19 +866,9 @@ public class LPackageImpl extends EPackageImpl implements LPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTerms_Terms()
-  {
-    return (EAttribute)termsEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getTerms_Cdr()
   {
-    return (EReference)termsEClass.getEStructuralFeatures().get(2);
+    return (EReference)termsEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1099,6 +1089,26 @@ public class LPackageImpl extends EPackageImpl implements LPackage
   public EClass getTVar()
   {
     return tVarEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTVar_Var()
+  {
+    return (EReference)tVarEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTVar_Id()
+  {
+    return (EAttribute)tVarEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1694,7 +1704,6 @@ public class LPackageImpl extends EPackageImpl implements LPackage
 
     termsEClass = createEClass(TERMS);
     createEReference(termsEClass, TERMS__CAR);
-    createEAttribute(termsEClass, TERMS__TERMS);
     createEReference(termsEClass, TERMS__CDR);
 
     constantDeclarationEClass = createEClass(CONSTANT_DECLARATION);
@@ -1727,6 +1736,8 @@ public class LPackageImpl extends EPackageImpl implements LPackage
     createEReference(tVarsEClass, TVARS__CDR);
 
     tVarEClass = createEClass(TVAR);
+    createEReference(tVarEClass, TVAR__VAR);
+    createEAttribute(tVarEClass, TVAR__ID);
 
     atomEClass = createEClass(ATOM);
 
@@ -1836,7 +1847,6 @@ public class LPackageImpl extends EPackageImpl implements LPackage
     // Add supertypes to classes
     basicTermEClass.getESuperTypes().add(this.getTerm());
     variableEClass.getESuperTypes().add(this.getQuantifiedTerm());
-    variableEClass.getESuperTypes().add(this.getTVar());
     typedVariableEClass.getESuperTypes().add(this.getBasicTerm());
     arithmeticTermEClass.getESuperTypes().add(this.getBasicTerm());
     arithmeticTermEClass.getESuperTypes().add(this.getGroundArithmeticTerm());
@@ -1929,7 +1939,6 @@ public class LPackageImpl extends EPackageImpl implements LPackage
 
     initEClass(termsEClass, Terms.class, "Terms", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getTerms_Car(), this.getTerm(), null, "car", null, 0, 1, Terms.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTerms_Terms(), ecorePackage.getEString(), "terms", null, 0, -1, Terms.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTerms_Cdr(), this.getTerm(), null, "cdr", null, 0, -1, Terms.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(constantDeclarationEClass, ConstantDeclaration.class, "ConstantDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1962,6 +1971,8 @@ public class LPackageImpl extends EPackageImpl implements LPackage
     initEReference(getTVars_Cdr(), this.getTVar(), null, "cdr", null, 0, -1, TVars.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(tVarEClass, TVar.class, "TVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getTVar_Var(), this.getVariable(), null, "var", null, 0, 1, TVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTVar_Id(), ecorePackage.getEString(), "id", null, 0, 1, TVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(atomEClass, Atom.class, "Atom", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

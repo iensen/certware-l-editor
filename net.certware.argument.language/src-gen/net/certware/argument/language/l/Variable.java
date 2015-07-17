@@ -19,7 +19,7 @@ package net.certware.argument.language.l;
  * @model
  * @generated
  */
-public interface Variable extends QuantifiedTerm, TVar
+public interface Variable extends QuantifiedTerm
 {
   /**
    * Returns the value of the '<em><b>Identifier</b></em>' attribute.

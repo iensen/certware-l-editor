@@ -40,5 +40,6 @@ public class LStandaloneSetupGenerated implements ISetup {
 		
 
 
+
 	}
 }

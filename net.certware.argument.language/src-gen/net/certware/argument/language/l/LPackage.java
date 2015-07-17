@@ -551,22 +551,13 @@ public interface LPackage extends EPackage
   int TERMS__CAR = FUNCTIONAL_TERM_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Terms</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TERMS__TERMS = FUNCTIONAL_TERM_FEATURE_COUNT + 1;
-
-  /**
    * The feature id for the '<em><b>Cdr</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TERMS__CDR = FUNCTIONAL_TERM_FEATURE_COUNT + 2;
+  int TERMS__CDR = FUNCTIONAL_TERM_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Terms</em>' class.
@@ -575,7 +566,7 @@ public interface LPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TERMS_FEATURE_COUNT = FUNCTIONAL_TERM_FEATURE_COUNT + 3;
+  int TERMS_FEATURE_COUNT = FUNCTIONAL_TERM_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link net.certware.argument.language.l.impl.StatementImpl <em>Statement</em>}' class.
@@ -876,13 +867,31 @@ public interface LPackage extends EPackage
   int TVAR = 25;
 
   /**
+   * The feature id for the '<em><b>Var</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TVAR__VAR = 0;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TVAR__ID = 1;
+
+  /**
    * The number of structural features of the '<em>TVar</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TVAR_FEATURE_COUNT = 0;
+  int TVAR_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link net.certware.argument.language.l.impl.SentenceImpl <em>Sentence</em>}' class.
@@ -2110,17 +2119,6 @@ public interface LPackage extends EPackage
   EReference getTerms_Car();
 
   /**
-   * Returns the meta object for the attribute list '{@link net.certware.argument.language.l.Terms#getTerms <em>Terms</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Terms</em>'.
-   * @see net.certware.argument.language.l.Terms#getTerms()
-   * @see #getTerms()
-   * @generated
-   */
-  EAttribute getTerms_Terms();
-
-  /**
    * Returns the meta object for the containment reference list '{@link net.certware.argument.language.l.Terms#getCdr <em>Cdr</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2363,6 +2361,28 @@ public interface LPackage extends EPackage
    * @generated
    */
   EClass getTVar();
+
+  /**
+   * Returns the meta object for the containment reference '{@link net.certware.argument.language.l.TVar#getVar <em>Var</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Var</em>'.
+   * @see net.certware.argument.language.l.TVar#getVar()
+   * @see #getTVar()
+   * @generated
+   */
+  EReference getTVar_Var();
+
+  /**
+   * Returns the meta object for the attribute '{@link net.certware.argument.language.l.TVar#getId <em>Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Id</em>'.
+   * @see net.certware.argument.language.l.TVar#getId()
+   * @see #getTVar()
+   * @generated
+   */
+  EAttribute getTVar_Id();
 
   /**
    * Returns the meta object for class '{@link net.certware.argument.language.l.Atom <em>Atom</em>}'.
@@ -3254,14 +3274,6 @@ public interface LPackage extends EPackage
     EReference TERMS__CAR = eINSTANCE.getTerms_Car();
 
     /**
-     * The meta object literal for the '<em><b>Terms</b></em>' attribute list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TERMS__TERMS = eINSTANCE.getTerms_Terms();
-
-    /**
      * The meta object literal for the '<em><b>Cdr</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3462,6 +3474,22 @@ public interface LPackage extends EPackage
      * @generated
      */
     EClass TVAR = eINSTANCE.getTVar();
+
+    /**
+     * The meta object literal for the '<em><b>Var</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TVAR__VAR = eINSTANCE.getTVar_Var();
+
+    /**
+     * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TVAR__ID = eINSTANCE.getTVar_Id();
 
     /**
      * The meta object literal for the '{@link net.certware.argument.language.l.impl.AtomImpl <em>Atom</em>}' class.

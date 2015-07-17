@@ -8,7 +8,6 @@ public class Messages extends NLS {
 	public static String FilterRuleContribution_1;
 	public static String FilterRuleContribution_2;
 	public static String FilterRuleContribution_3;
-	public static String FilterTypeDeclarationContribution_0;
 	public static String FilterTypeDeclarationContribution_1;
 	public static String FilterTypeDeclarationContribution_2;
 	public static String FilterTypeDeclarationContribution_3;

@@ -9,7 +9,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="NumericConstant">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="#//QuantifiedTerm #//TVar">
+  <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="#//QuantifiedTerm">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="identifier" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TypedVariable" eSuperTypes="#//BasicTerm">
@@ -58,8 +58,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Term"/>
   <eClassifiers xsi:type="ecore:EClass" name="Terms" eSuperTypes="#//FunctionalTerm">
     <eStructuralFeatures xsi:type="ecore:EReference" name="car" eType="#//Term" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="terms" unique="false" upperBound="-1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cdr" upperBound="-1" eType="#//Term"
         containment="true"/>
   </eClassifiers>
@@ -97,7 +95,11 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="cdr" upperBound="-1" eType="#//TVar"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TVar"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TVar">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="var" eType="#//Variable"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Atom" eSuperTypes="#//SentenceLiteral"/>
   <eClassifiers xsi:type="ecore:EClass" name="PredicateAtom" eSuperTypes="#//Atom #//pSentenceLiteral">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fid" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

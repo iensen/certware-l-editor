@@ -778,16 +778,15 @@ public class LGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cCarAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cCarTermParserRuleCall_0_0 = (RuleCall)cCarAssignment_0.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Assignment cTermsAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
-		private final Keyword cTermsCommaKeyword_1_0_0 = (Keyword)cTermsAssignment_1_0.eContents().get(0);
+		private final Keyword cCommaKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
 		private final Assignment cCdrAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cCdrTermParserRuleCall_1_1_0 = (RuleCall)cCdrAssignment_1_1.eContents().get(0);
 		
 		//Terms:
-		//	car=Term (terms+="," cdr+=Term)*;
+		//	car=Term ("," cdr+=Term)*;
 		public ParserRule getRule() { return rule; }
 
-		//car=Term (terms+="," cdr+=Term)*
+		//car=Term ("," cdr+=Term)*
 		public Group getGroup() { return cGroup; }
 
 		//car=Term
@@ -796,14 +795,11 @@ public class LGrammarAccess extends AbstractGrammarElementFinder {
 		//Term
 		public RuleCall getCarTermParserRuleCall_0_0() { return cCarTermParserRuleCall_0_0; }
 
-		//(terms+="," cdr+=Term)*
+		//("," cdr+=Term)*
 		public Group getGroup_1() { return cGroup_1; }
 
-		//terms+=","
-		public Assignment getTermsAssignment_1_0() { return cTermsAssignment_1_0; }
-
 		//","
-		public Keyword getTermsCommaKeyword_1_0_0() { return cTermsCommaKeyword_1_0_0; }
+		public Keyword getCommaKeyword_1_0() { return cCommaKeyword_1_0; }
 
 		//cdr+=Term
 		public Assignment getCdrAssignment_1_1() { return cCdrAssignment_1_1; }
@@ -1076,25 +1072,33 @@ public class LGrammarAccess extends AbstractGrammarElementFinder {
 	public class TVarElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TVar");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cVariableParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Assignment cVarAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cVarVariableParserRuleCall_0_0 = (RuleCall)cVarAssignment_0.eContents().get(0);
 		private final Keyword cInKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final RuleCall cLIDTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final Assignment cIdAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cIdLIDTerminalRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
 		
 		//TVar:
-		//	Variable "in" LID;
+		//	var=Variable "in" id=LID;
 		public ParserRule getRule() { return rule; }
 
-		//Variable "in" LID
+		//var=Variable "in" id=LID
 		public Group getGroup() { return cGroup; }
 
+		//var=Variable
+		public Assignment getVarAssignment_0() { return cVarAssignment_0; }
+
 		//Variable
-		public RuleCall getVariableParserRuleCall_0() { return cVariableParserRuleCall_0; }
+		public RuleCall getVarVariableParserRuleCall_0_0() { return cVarVariableParserRuleCall_0_0; }
 
 		//"in"
 		public Keyword getInKeyword_1() { return cInKeyword_1; }
 
+		//id=LID
+		public Assignment getIdAssignment_2() { return cIdAssignment_2; }
+
 		//LID
-		public RuleCall getLIDTerminalRuleCall_2() { return cLIDTerminalRuleCall_2; }
+		public RuleCall getIdLIDTerminalRuleCall_2_0() { return cIdLIDTerminalRuleCall_2_0; }
 	}
 
 	public class SetAdditionElements extends AbstractParserRuleElementFinder {
@@ -2377,7 +2381,7 @@ public class LGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Terms:
-	//	car=Term (terms+="," cdr+=Term)*;
+	//	car=Term ("," cdr+=Term)*;
 	public TermsElements getTermsAccess() {
 		return pTerms;
 	}
@@ -2471,7 +2475,7 @@ public class LGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//TVar:
-	//	Variable "in" LID;
+	//	var=Variable "in" id=LID;
 	public TVarElements getTVarAccess() {
 		return pTVar;
 	}
