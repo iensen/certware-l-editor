@@ -10,7 +10,7 @@
               contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
               default="true"
               extensions="L"
-              icon="icons/L_16.png"
+              icon="icons/obj16/L_16.png"
               id="net.certware.argument.language.L"
               name="L Editor">
         </editor>

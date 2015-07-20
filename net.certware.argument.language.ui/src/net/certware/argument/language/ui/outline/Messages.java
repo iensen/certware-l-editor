@@ -12,6 +12,10 @@ public class Messages extends NLS {
 	public static String FilterTypeDeclarationContribution_2;
 	public static String FilterTypeDeclarationContribution_3;
 	public static String FilterTypeDeclarationContribution_4;
+	public static String FilterConstantDeclarationContribution_1;
+	public static String FilterConstantDeclarationContribution_2;
+	public static String FilterConstantDeclarationContribution_3;
+	public static String FilterConstantDeclarationContribution_4;
 	static {
 		// initialize resource bundle
 		NLS.initializeMessages(BUNDLE_NAME, Messages.class);
