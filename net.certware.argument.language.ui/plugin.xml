@@ -6,12 +6,13 @@
     <extension
             point="org.eclipse.ui.editors">
         <editor
-            class="net.certware.argument.language.ui.LExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
-            contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
-            default="true"
-            extensions="L"
-            id="net.certware.argument.language.L"
-            name="L Editor">
+              class="net.certware.argument.language.ui.LExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
+              contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
+              default="true"
+              extensions="L"
+              icon="icons/L_16.png"
+              id="net.certware.argument.language.L"
+              name="L Editor">
         </editor>
     </extension>
     <extension
@@ -124,7 +125,7 @@
       <command
             description="Trigger expensive validation"
             id="net.certware.argument.language.L.validate"
-            name="Validate">
+            name="Validate L Expressions">
       </command>
       <!-- copy qualified name -->
       <command
