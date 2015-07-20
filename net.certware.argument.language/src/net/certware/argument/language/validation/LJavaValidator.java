@@ -5,18 +5,15 @@
 */
 package net.certware.argument.language.validation;
 
-import java.util.Dictionary;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 import net.certware.argument.language.l.LPackage;
 import net.certware.argument.language.l.Program;
 import net.certware.argument.language.l.Range;
+import net.certware.argument.language.l.Rule;
 import net.certware.argument.language.l.TVar;
 import net.certware.argument.language.l.TypeDeclaration;
 
-import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.EcoreUtil2;
 import org.eclipse.xtext.validation.Check;
@@ -34,7 +31,7 @@ public class LJavaValidator extends net.certware.argument.language.validation.Ab
 	 */
 	@Check public void checkProgramEmpty(Program program) {
 		if ( program.getStatements().isEmpty() ) {
-			error("Program has no statements",
+			error(Messages.getString("LJavaValidator.0"), //$NON-NLS-1$
 					LPackage.Literals.PROGRAM__STATEMENTS);
 		}
 	}
@@ -47,7 +44,7 @@ public class LJavaValidator extends net.certware.argument.language.validation.Ab
 	@Check public void checkRangeIncludesLeftAndRight(Range range) {
 		if ( range.getLhs().eContents().isEmpty() == true ||
 				range.getRhs().eContents().isEmpty() == true ) {
-			warning("Range must include both left- and right-hand sides",
+			warning(Messages.getString("LJavaValidator.1"), //$NON-NLS-1$
 					LPackage.Literals.RANGE__LHS);
 		}
 	}
@@ -75,8 +72,23 @@ public class LJavaValidator extends net.certware.argument.language.validation.Ab
 		}
 				
 		if ( ! found ) {	// haven't found a declaration, emit error
-			error("Type variable must refer to declared type",
+			error(Messages.getString("LJavaValidator.2"), //$NON-NLS-1$
 					LPackage.Literals.TVAR__ID);
+		}
+	}
+
+	/**
+	 * Check body of conditional rule.
+	 * May not reach here because parser seems to trap the condition.
+	 * @param rule program rule with 'if' part provided
+	 * @category error when 'if' provided but body empty
+	 */
+	@Check public void checkRuleConditionWithoutBody(Rule rule) {
+		if ( rule.getCondition().equalsIgnoreCase("if")) { //$NON-NLS-1$
+			if ( rule.eIsSet(LPackage.Literals.RULE__BODY) == false ) {
+				error(Messages.getString("LJavaValidator.3"), //$NON-NLS-1$
+						LPackage.Literals.RULE__BODY);
+			}
 		}
 	}
 }
