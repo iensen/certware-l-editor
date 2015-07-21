@@ -60,7 +60,7 @@ public class LOutlineTreeProvider extends DefaultOutlineTreeProvider {
      * Set expression text, outline only 
      */
     public Object _text(SetExpression setExpression) {
-	StringBuffer sb = new StringBuffer("set {}");
+	StringBuffer sb = new StringBuffer(Messages.LOutlineTreeProvider_0);
 	StyledString style = new StyledString(sb.toString(),
 					      stylerFactory.
 					      createXtextStyleAdapterStyler(getSetExpressionTextStyle()));
@@ -82,7 +82,7 @@ public class LOutlineTreeProvider extends DefaultOutlineTreeProvider {
      * Type declaration text, outline only 
      */
     public Object _text(TypeDeclaration typeDeclaration) {
-	StringBuffer sb = new StringBuffer("type");
+	StringBuffer sb = new StringBuffer(Messages.LOutlineTreeProvider_1);
 	sb.append(' ');
 	sb.append(typeDeclaration.getId());
 	StyledString style = new StyledString(sb.toString(),
@@ -106,7 +106,7 @@ public class LOutlineTreeProvider extends DefaultOutlineTreeProvider {
      * Constant declaration text, outline only
      */
     public Object _text(ConstantDeclaration constantDeclaration) {
-	StringBuffer sb = new StringBuffer("const");
+	StringBuffer sb = new StringBuffer(Messages.LOutlineTreeProvider_2);
 	sb.append(' ');
 	sb.append(constantDeclaration.getId());
 	StyledString style = new StyledString(sb.toString(),
@@ -142,7 +142,7 @@ public class LOutlineTreeProvider extends DefaultOutlineTreeProvider {
      * And sentence text
      */
     protected Object _text(AndSentence and) {
-	StringBuffer sb = new StringBuffer("and");
+	StringBuffer sb = new StringBuffer(Messages.LOutlineTreeProvider_3);
 	StyledString style = new StyledString(sb.toString(),
 					      stylerFactory.
 					      createXtextStyleAdapterStyler(getConditionalTextStyle()));
@@ -153,7 +153,7 @@ public class LOutlineTreeProvider extends DefaultOutlineTreeProvider {
      * Or sentence text
      */
     protected Object _text(OrSentence or) {
-	StringBuffer sb = new StringBuffer("or");
+	StringBuffer sb = new StringBuffer(Messages.LOutlineTreeProvider_4);
 	StyledString style = new StyledString(sb.toString(),
 					      stylerFactory.
 					      createXtextStyleAdapterStyler(getConditionalTextStyle()));
@@ -174,7 +174,7 @@ public class LOutlineTreeProvider extends DefaultOutlineTreeProvider {
      * Terms text
      */
     protected Object _text(Terms terms) {
-	StringBuffer sb = new StringBuffer("terms");
+	StringBuffer sb = new StringBuffer(Messages.LOutlineTreeProvider_5);
 	StyledString style = new StyledString(sb.toString(),
 					      stylerFactory.
 					      createXtextStyleAdapterStyler(getRuleTextStyle()));
@@ -185,7 +185,7 @@ public class LOutlineTreeProvider extends DefaultOutlineTreeProvider {
      * Basic term text
      */
     protected Object _text(BasicTerm term) {
-	StringBuffer sb = new StringBuffer("basic term");
+	StringBuffer sb = new StringBuffer(Messages.LOutlineTreeProvider_6);
 	StyledString style = new StyledString(sb.toString(),
 					      stylerFactory.
 					      createXtextStyleAdapterStyler(getRuleTextStyle()));
@@ -196,7 +196,7 @@ public class LOutlineTreeProvider extends DefaultOutlineTreeProvider {
      * Functional term text
      */
     protected Object _text(FunctionalTerm term) {
-	StringBuffer sb = new StringBuffer("functional term");
+	StringBuffer sb = new StringBuffer(Messages.LOutlineTreeProvider_7);
 	StyledString style = new StyledString(sb.toString(),
 					      stylerFactory.
 					      createXtextStyleAdapterStyler(getRuleTextStyle()));
@@ -207,7 +207,7 @@ public class LOutlineTreeProvider extends DefaultOutlineTreeProvider {
      * Program text
      */
     protected Object _text(Program p) {
-	StringBuffer sb = new StringBuffer("program");
+	StringBuffer sb = new StringBuffer(Messages.LOutlineTreeProvider_8);
 	StyledString style = new StyledString(sb.toString(),
 					      stylerFactory.
 					      createXtextStyleAdapterStyler(getRuleTextStyle()));
@@ -218,7 +218,7 @@ public class LOutlineTreeProvider extends DefaultOutlineTreeProvider {
      * Statement text
      */
     protected Object _text(Statement s) {
-	StringBuffer sb = new StringBuffer("statement");
+	StringBuffer sb = new StringBuffer(Messages.LOutlineTreeProvider_9);
 	StyledString style = new StyledString(sb.toString(),
 					      stylerFactory.
 					      createXtextStyleAdapterStyler(getRuleTextStyle()));

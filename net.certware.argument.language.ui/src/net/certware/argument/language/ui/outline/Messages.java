@@ -16,6 +16,16 @@ public class Messages extends NLS {
 	public static String FilterConstantDeclarationContribution_2;
 	public static String FilterConstantDeclarationContribution_3;
 	public static String FilterConstantDeclarationContribution_4;
+	public static String LOutlineTreeProvider_0;
+	public static String LOutlineTreeProvider_1;
+	public static String LOutlineTreeProvider_2;
+	public static String LOutlineTreeProvider_3;
+	public static String LOutlineTreeProvider_4;
+	public static String LOutlineTreeProvider_5;
+	public static String LOutlineTreeProvider_6;
+	public static String LOutlineTreeProvider_7;
+	public static String LOutlineTreeProvider_8;
+	public static String LOutlineTreeProvider_9;
 	static {
 		// initialize resource bundle
 		NLS.initializeMessages(BUNDLE_NAME, Messages.class);
