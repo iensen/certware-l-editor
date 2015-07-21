@@ -25,7 +25,7 @@ import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.jface.viewers.StyledString;
-import org.eclipse.swt.SWT;
+import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PlatformUI;
@@ -119,16 +119,14 @@ public class LOutlineTreeProvider extends DefaultOutlineTreeProvider {
 
 	/* 
 	 * Set expression text styler
-	 * TODO move to properties sheet 
-	 * P_SET_EXPRESSION_TEXT_COLOR
-	 * P_SET_EXPRESSION_TEXT_FONT
 	 */
 	protected TextStyle getSetExpressionTextStyle() {
 		IPreferenceStore ps = LActivator.getInstance().getPreferenceStore();
 		RGB color = PreferenceConverter.getColor(ps,PreferenceConstants.P_SET_EXPRESSION_TEXT_COLOR); 
+		FontData fd = PreferenceConverter.getFontData(ps, PreferenceConstants.P_SET_EXPRESSION_TEXT_FONT);
 		TextStyle textStyle = new TextStyle();
 		textStyle.setColor(color);
-		textStyle.setStyle(SWT.ITALIC);
+		textStyle.setFontData(fd);
 		return textStyle;
 	}
 
@@ -147,16 +145,14 @@ public class LOutlineTreeProvider extends DefaultOutlineTreeProvider {
 
 	/* 
 	 * Type declaration text styler
-	 * TODO move to properties sheet 
-	 * P_TYPE_DECLARATION_TEXT_COLOR
-	 * P_TYPE_DECLARATION_TEXT_FONT
 	 */
 	protected TextStyle getTypeDeclarationTextStyle() {
 		IPreferenceStore ps = LActivator.getInstance().getPreferenceStore();
 		RGB color = PreferenceConverter.getColor(ps,PreferenceConstants.P_TYPE_DECLARATION_TEXT_COLOR); 
+		FontData fd = PreferenceConverter.getFontData(ps, PreferenceConstants.P_TYPE_DECLARATION_TEXT_FONT);
 		TextStyle textStyle = new TextStyle();
 		textStyle.setColor(color);
-		textStyle.setStyle(SWT.ITALIC);
+		textStyle.setFontData(fd);
 		return textStyle;
 	}
 
@@ -175,34 +171,28 @@ public class LOutlineTreeProvider extends DefaultOutlineTreeProvider {
 
 	/* 
 	 * Constant declaration styler
-	 * TODO move to properties sheet
-	 * P_CONSTANT_DECLARATION_TEXT_COLOR
-	 * P_CONSTANT_DECLARATION_TEXT_FONT
 	 */
 	protected TextStyle getConstantDeclarationTextStyle() {
 		IPreferenceStore ps = LActivator.getInstance().getPreferenceStore();
 		RGB color = PreferenceConverter.getColor(ps,PreferenceConstants.P_CONSTANT_DECLARATION_TEXT_COLOR); 
+		FontData fd = PreferenceConverter.getFontData(ps, PreferenceConstants.P_CONSTANT_DECLARATION_TEXT_FONT);
 		TextStyle textStyle = new TextStyle();
 		textStyle.setColor(color);
-		// textStyle.setColor(new RGB(153,0,76)); // burgundy
-		textStyle.setStyle(SWT.ITALIC);
+		textStyle.setFontData(fd);
 		return textStyle;
 	}
 
 	/*
 	 * Rule text styler
 	 * Reused for several elements currently
-	 * TODO move to properties sheet
-	 * P_RULE_TEXT_COLOR
-	 * P_RULE_TEXT_FONT
 	 */
 	protected TextStyle getRuleTextStyle() {
 		IPreferenceStore ps = LActivator.getInstance().getPreferenceStore();
 		RGB color = PreferenceConverter.getColor(ps,PreferenceConstants.P_RULE_TEXT_COLOR); 
+		FontData fd = PreferenceConverter.getFontData(ps, PreferenceConstants.P_RULE_TEXT_FONT);
 		TextStyle textStyle = new TextStyle();
 		textStyle.setColor(color);
-		// textStyle.setColor(new RGB(32,32,32)); // dark gray
-		textStyle.setStyle(SWT.ITALIC);
+		textStyle.setFontData(fd);
 		return textStyle;
 	}
 
@@ -230,16 +220,14 @@ public class LOutlineTreeProvider extends DefaultOutlineTreeProvider {
 
 	/*
 	 * Conditional text styler
-	 * P_CONDITIONAL_TEXT_COLOR
-	 * P_CONDITIONAL_TEXT_STU:E
 	 */
 	protected TextStyle getConditionalTextStyle() {
 		IPreferenceStore ps = LActivator.getInstance().getPreferenceStore();
 		RGB color = PreferenceConverter.getColor(ps,PreferenceConstants.P_CONDITIONAL_TEXT_COLOR); 
+		FontData fd = PreferenceConverter.getFontData(ps, PreferenceConstants.P_CONDITIONAL_TEXT_FONT);
 		TextStyle textStyle = new TextStyle();
 		textStyle.setColor(color);
-		// textStyle.setColor(new RGB(255,128,0)); // orange
-		textStyle.setStyle(SWT.ITALIC);
+		textStyle.setFontData(fd);
 		return textStyle;
 	}
 

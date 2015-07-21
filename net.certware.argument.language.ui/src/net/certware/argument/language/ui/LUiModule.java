@@ -29,7 +29,7 @@ import com.google.inject.name.Names;
  */
 public class LUiModule extends net.certware.argument.language.ui.AbstractLUiModule {
 
-	// image key, temporary until moved into main repo
+	// image key, temporary until moved into main repository
 	public static final String L_CERTWARE_IMAGE = "L_CERTWARE_IMAGE"; //$NON-NLS-1$
 	
 	public LUiModule(AbstractUIPlugin plugin) {
@@ -37,7 +37,7 @@ public class LUiModule extends net.certware.argument.language.ui.AbstractLUiModu
 		
 		// load CertWare image descriptor as place-holder
 		// normally acquire this from the core UI plugin
-		IPath path = new Path("icons/obj16/certware.gif");
+		IPath path = new Path("icons/obj16/certware.gif"); //$NON-NLS-1$
 		URL url = FileLocator.find(plugin.getBundle(),path,null);
 		ImageDescriptor desc = ImageDescriptor.createFromURL(url);
 		plugin.getImageRegistry().put(L_CERTWARE_IMAGE,desc);
@@ -50,15 +50,15 @@ public class LUiModule extends net.certware.argument.language.ui.AbstractLUiModu
 	 */
 	public void configureFilterOperationsContribution(Binder binder) {
 		binder.bind(IOutlineContribution.class).annotatedWith(
-				Names.named("FilterRuleContribution"))
+				Names.named("FilterRuleContribution")) //$NON-NLS-1$
 				.to(FilterRuleContribution.class);
 		
 		binder.bind(IOutlineContribution.class).annotatedWith(
-				Names.named("FilterTypeDeclarationContribution"))
+				Names.named("FilterTypeDeclarationContribution")) //$NON-NLS-1$
 				.to(FilterTypeDeclarationContribution.class);
 		
-		binder.bind(IOutlineContribution.class).annotatedWith(
-				Names.named("FilterConstantDeclarationContribution"))
+		binder.bind(IOutlineContribution.class).annotatedWith( 
+				Names.named("FilterConstantDeclarationContribution")) //$NON-NLS-1$
 				.to(FilterConstantDeclarationContribution.class);
 	}
 	

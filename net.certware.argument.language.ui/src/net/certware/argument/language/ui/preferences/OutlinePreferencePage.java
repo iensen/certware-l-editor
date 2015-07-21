@@ -24,7 +24,7 @@ public class OutlinePreferencePage extends FieldEditorPreferencePage implements 
 	public OutlinePreferencePage() {
 		super(GRID);
 		setPreferenceStore(LActivator.getInstance().getPreferenceStore());
-		setDescription("Sets preferences for the L Language editor's outline view");
+		setDescription(Messages.OutlinePreferencePage_0);
 		this.setImageDescriptor( LActivator.getInstance().getImageRegistry().getDescriptor(LUiModule.L_CERTWARE_IMAGE));
 	}
 
@@ -36,29 +36,29 @@ public class OutlinePreferencePage extends FieldEditorPreferencePage implements 
 	 */
 	public void createFieldEditors() {
 		addField(new ColorFieldEditor(PreferenceConstants.P_SET_EXPRESSION_TEXT_COLOR,
-				"Set expression color &foreground:", getFieldEditorParent()));
+				Messages.OutlinePreferencePage_1, getFieldEditorParent()));
 		addField(new FontFieldEditor(PreferenceConstants.P_SET_EXPRESSION_TEXT_FONT, 
-				"Set expression text &style:", getFieldEditorParent()));
+				Messages.OutlinePreferencePage_2, getFieldEditorParent()));
 
 		addField(new ColorFieldEditor(PreferenceConstants.P_TYPE_DECLARATION_TEXT_COLOR,
-				"Type declaration color &foreground:", getFieldEditorParent()));
+				Messages.OutlinePreferencePage_3, getFieldEditorParent()));
 		addField(new FontFieldEditor(PreferenceConstants.P_TYPE_DECLARATION_TEXT_FONT, 
-				"Type declaration text &style:", getFieldEditorParent()));
+				Messages.OutlinePreferencePage_4, getFieldEditorParent()));
 
 		addField(new ColorFieldEditor(PreferenceConstants.P_CONSTANT_DECLARATION_TEXT_COLOR,
-				"Constant declaration color &foreground:", getFieldEditorParent()));
+				Messages.OutlinePreferencePage_5, getFieldEditorParent()));
 		addField(new FontFieldEditor(PreferenceConstants.P_CONSTANT_DECLARATION_TEXT_FONT, 
-				"Constant declaration text &style:", getFieldEditorParent()));
+				Messages.OutlinePreferencePage_6, getFieldEditorParent()));
 
 		addField(new ColorFieldEditor(PreferenceConstants.P_RULE_TEXT_COLOR,
-				"Rule text color &foreground:", getFieldEditorParent()));
+				Messages.OutlinePreferencePage_7, getFieldEditorParent()));
 		addField(new FontFieldEditor(PreferenceConstants.P_RULE_TEXT_FONT, 
-				"Rule text &style:", getFieldEditorParent()));
+				Messages.OutlinePreferencePage_8, getFieldEditorParent()));
 
 		addField(new ColorFieldEditor(PreferenceConstants.P_CONDITIONAL_TEXT_COLOR,
-				"Conditional statement color &foreground:", getFieldEditorParent()));
+				Messages.OutlinePreferencePage_9, getFieldEditorParent()));
 		addField(new FontFieldEditor(PreferenceConstants.P_CONDITIONAL_TEXT_FONT, 
-				"Conditional statement &style:", getFieldEditorParent()));
+				Messages.OutlinePreferencePage_10, getFieldEditorParent()));
 
 	}
 

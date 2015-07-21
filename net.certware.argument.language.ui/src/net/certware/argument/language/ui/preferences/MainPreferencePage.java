@@ -8,7 +8,7 @@ public class MainPreferencePage extends LanguageRootPreferencePage {
 	protected void createFieldEditors() {
 		super.createFieldEditors();
 		IntegerFieldEditor levelFieldEditor = 
-				new IntegerFieldEditor("outlineLevel","Default open depth", getFieldEditorParent()); //$NON-NLS-1$
+				new IntegerFieldEditor("outlineLevel",Messages.MainPreferencePage_0, getFieldEditorParent()); //$NON-NLS-1$
 		levelFieldEditor.setPreferenceStore(doGetPreferenceStore());
 		addField(levelFieldEditor);
 	}
