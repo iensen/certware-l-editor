@@ -83,7 +83,7 @@
         <page
             class="net.certware.argument.language.ui.LExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
             id="net.certware.argument.language.L"
-            name="L">
+            name="L Language">
             <keywordReference id="net.certware.argument.language.ui.keyword_L"/>
         </page>
         <page
@@ -394,6 +394,24 @@
             class="net.certware.argument.language.ui.LExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
             extensions="L">
     </provider>
+  </extension>
+  <extension
+        point="org.eclipse.ui.preferencePages">
+     <page
+           category="net.certware.argument.language.L"
+           class="net.certware.argument.language.ui.preferences.OutlinePreferencePage"
+           id="net.certware.argument.language.L.outline"
+           name="Outline View">
+        <keywordReference
+              id="net.certware.argument.language.ui.keyword_L">
+        </keywordReference>
+     </page>
+  </extension>
+  <extension
+        point="org.eclipse.core.runtime.preferences">
+     <initializer
+           class="net.certware.argument.language.ui.preferences.OutlinePreferenceInitializer">
+     </initializer>
   </extension>
 
 </plugin>
