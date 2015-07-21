@@ -6,11 +6,14 @@ package net.certware.argument.language.ui.outline;
 
 import net.certware.argument.language.l.AndSentence;
 import net.certware.argument.language.l.BasicTerm;
+import net.certware.argument.language.l.CardinalityConstraint;
 import net.certware.argument.language.l.ConstantDeclaration;
 import net.certware.argument.language.l.FunctionalTerm;
 import net.certware.argument.language.l.GroundTerm;
+import net.certware.argument.language.l.MaybeLiteral;
 import net.certware.argument.language.l.OrSentence;
 import net.certware.argument.language.l.Program;
+import net.certware.argument.language.l.Rule;
 import net.certware.argument.language.l.Set;
 import net.certware.argument.language.l.SetExpression;
 import net.certware.argument.language.l.Statement;
@@ -156,6 +159,17 @@ public class LOutlineTreeProvider extends DefaultOutlineTreeProvider {
 		return textStyle;
 	}
 
+	/*
+	 * Cardinality constraint text, outline only
+	 */
+	public Object _text(CardinalityConstraint constraint) {
+		StringBuffer sb = new StringBuffer(Messages.LOutlineTreeProvider_11);
+		StyledString style = new StyledString(sb.toString(),
+				stylerFactory.
+				createXtextStyleAdapterStyler(getConstraintTextStyle()));
+		return style;
+	}
+	
 	/* 
 	 * Constant declaration text, outline only
 	 */
@@ -183,6 +197,19 @@ public class LOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	}
 
 	/*
+	 * Maybe literal text styler
+	 */
+	protected TextStyle getMaybeTextStyle() {
+		IPreferenceStore ps = LActivator.getInstance().getPreferenceStore();
+		RGB color = PreferenceConverter.getColor(ps,PreferenceConstants.P_MAYBE_TEXT_COLOR); 
+		FontData fd = PreferenceConverter.getFontData(ps, PreferenceConstants.P_MAYBE_TEXT_FONT);
+		TextStyle textStyle = new TextStyle();
+		textStyle.setColor(color);
+		textStyle.setFontData(fd);
+		return textStyle;
+	}
+
+	/*
 	 * Rule text styler
 	 * Reused for several elements currently
 	 */
@@ -195,7 +222,7 @@ public class LOutlineTreeProvider extends DefaultOutlineTreeProvider {
 		textStyle.setFontData(fd);
 		return textStyle;
 	}
-
+	
 	/*
 	 * And sentence text
 	 */
@@ -232,6 +259,19 @@ public class LOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	}
 
 	/*
+	 * Constraint text styler
+	 */
+	protected TextStyle getConstraintTextStyle() {
+		IPreferenceStore ps = LActivator.getInstance().getPreferenceStore();
+		RGB color = PreferenceConverter.getColor(ps,PreferenceConstants.P_CONSTRAINT_TEXT_COLOR); 
+		FontData fd = PreferenceConverter.getFontData(ps, PreferenceConstants.P_CONSTRAINT_TEXT_FONT);
+		TextStyle textStyle = new TextStyle();
+		textStyle.setColor(color);
+		textStyle.setFontData(fd);
+		return textStyle;
+	}
+	
+	/*
 	 * Terms text
 	 */
 	protected Object _text(Terms terms) {
@@ -265,6 +305,17 @@ public class LOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	}
 
 	/*
+	 * Maybe literal text
+	 */
+	protected Object _text(MaybeLiteral m) {
+		StringBuffer sb = new StringBuffer(Messages.LOutlineTreeProvider_12);
+		StyledString style = new StyledString(sb.toString(),
+				stylerFactory.
+				createXtextStyleAdapterStyler(getMaybeTextStyle()));
+		return style;
+	}
+	
+	/*
 	 * Program text
 	 */
 	protected Object _text(Program p) {
@@ -275,6 +326,18 @@ public class LOutlineTreeProvider extends DefaultOutlineTreeProvider {
 		return style;
 	}
 
+	/**
+	 * Rule text
+	 */
+	protected Object _text(Rule r) {
+		StringBuffer sb = new StringBuffer(Messages.LOutlineTreeProvider_10);
+		StyledString style = new StyledString(sb.toString(),
+				stylerFactory.
+				createXtextStyleAdapterStyler(getRuleTextStyle()));
+		return style;
+		
+	}
+	
 	/*
 	 * Statement text
 	 */

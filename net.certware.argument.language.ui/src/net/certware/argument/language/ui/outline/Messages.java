@@ -18,6 +18,9 @@ public class Messages extends NLS {
 	public static String FilterConstantDeclarationContribution_4;
 	public static String LOutlineTreeProvider_0;
 	public static String LOutlineTreeProvider_1;
+	public static String LOutlineTreeProvider_10;
+	public static String LOutlineTreeProvider_11;
+	public static String LOutlineTreeProvider_12;
 	public static String LOutlineTreeProvider_2;
 	public static String LOutlineTreeProvider_3;
 	public static String LOutlineTreeProvider_4;

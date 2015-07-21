@@ -40,12 +40,20 @@ public class OutlinePreferenceInitializer extends AbstractPreferenceInitializer 
 		store.setDefault(PreferenceConstants.P_CONSTANT_DECLARATION_TEXT_FONT, defaultFont);
 
 		PreferenceConverter.setDefault(store,
+				PreferenceConstants.P_MAYBE_TEXT_COLOR, new RGB(32,32,32)); // gray
+		store.setDefault(PreferenceConstants.P_MAYBE_TEXT_FONT, defaultFont);
+
+		PreferenceConverter.setDefault(store,
 				PreferenceConstants.P_RULE_TEXT_COLOR, new RGB(32,32,32)); // gray
 		store.setDefault(PreferenceConstants.P_RULE_TEXT_FONT, defaultFont);
 
 		PreferenceConverter.setDefault(store,
 				PreferenceConstants.P_CONDITIONAL_TEXT_COLOR, new RGB(255,128,0)); // orange
 		store.setDefault(PreferenceConstants.P_CONDITIONAL_TEXT_FONT, defaultFont);
+
+		PreferenceConverter.setDefault(store,
+				PreferenceConstants.P_CONSTRAINT_TEXT_COLOR, new RGB(255,128,0)); // orange
+		store.setDefault(PreferenceConstants.P_CONSTRAINT_TEXT_FONT, defaultFont);
 
 		// main page
 		store.setDefault(PreferenceConstants.P_OUTLINE_LEVEL, 3);

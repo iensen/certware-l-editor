@@ -34,4 +34,14 @@ public class LProposalProvider extends AbstractLProposalProvider {
 		String proposal = "{ limit .. limit }"; //$NON-NLS-1$
 		acceptor.accept(createCompletionProposal(proposal,context));
 	}
+	
+	/**
+	 * Provides a cardinality constraint proposal.
+	 */
+	public void complete_CardinalityConstraint(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+		super.complete_CardinalityConstraint(model, ruleCall, context, acceptor);
+		String proposal = "bound <= | { atom } | <= bound"; //$NON-NLS-1$
+		acceptor.accept(createCompletionProposal(proposal,context));
+	}
+	
 }

@@ -54,11 +54,20 @@ public class OutlinePreferencePage extends FieldEditorPreferencePage implements 
 				Messages.OutlinePreferencePage_7, getFieldEditorParent()));
 		addField(new FontFieldEditor(PreferenceConstants.P_RULE_TEXT_FONT, 
 				Messages.OutlinePreferencePage_8, getFieldEditorParent()));
+		addField(new ColorFieldEditor(PreferenceConstants.P_MAYBE_TEXT_COLOR,
+				Messages.OutlinePreferencePage_11, getFieldEditorParent()));
+		addField(new FontFieldEditor(PreferenceConstants.P_MAYBE_TEXT_FONT, 
+				Messages.OutlinePreferencePage_12, getFieldEditorParent()));
 
 		addField(new ColorFieldEditor(PreferenceConstants.P_CONDITIONAL_TEXT_COLOR,
 				Messages.OutlinePreferencePage_9, getFieldEditorParent()));
 		addField(new FontFieldEditor(PreferenceConstants.P_CONDITIONAL_TEXT_FONT, 
 				Messages.OutlinePreferencePage_10, getFieldEditorParent()));
+		addField(new ColorFieldEditor(PreferenceConstants.P_CONSTRAINT_TEXT_COLOR,
+				Messages.OutlinePreferencePage_13, getFieldEditorParent()));
+		addField(new FontFieldEditor(PreferenceConstants.P_CONSTRAINT_TEXT_FONT, 
+				Messages.OutlinePreferencePage_14, getFieldEditorParent()));
+		
 
 	}
 
