@@ -10,6 +10,7 @@ import net.certware.argument.language.ui.outline.FilterConstantDeclarationContri
 import net.certware.argument.language.ui.outline.FilterRuleContribution;
 import net.certware.argument.language.ui.outline.FilterTypeDeclarationContribution;
 import net.certware.argument.language.ui.outline.LOutlinePage;
+import net.certware.argument.language.ui.outline.TypedOutlineNodeComparator;
 import net.certware.argument.language.ui.preferences.MainPreferencePage;
 
 import org.eclipse.core.runtime.FileLocator;
@@ -19,6 +20,7 @@ import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.eclipse.ui.views.contentoutline.IContentOutlinePage;
 import org.eclipse.xtext.ui.editor.outline.actions.IOutlineContribution;
+import org.eclipse.xtext.ui.editor.outline.impl.OutlineFilterAndSorter.IComparator;
 import org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage;
 
 import com.google.inject.Binder;
@@ -76,5 +78,14 @@ public class LUiModule extends net.certware.argument.language.ui.AbstractLUiModu
 	 */
 	public Class<? extends IContentOutlinePage> bindIContentOutlinePage() {
 		return LOutlinePage.class;
+	}
+	
+	/**
+	 * Bind outline sort comparator.
+	 * @return sort node comparator
+	 */
+	@Override
+	public Class<? extends IComparator> bindOutlineFilterAndSorter$IComparator() {
+		return TypedOutlineNodeComparator.class;
 	}
 }
