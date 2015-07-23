@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link net.certware.argument.language.l.impl.ConstantDeclarationImpl#getId <em>Id</em>}</li>
+ *   <li>{@link net.certware.argument.language.l.impl.ConstantDeclarationImpl#getName <em>Name</em>}</li>
  *   <li>{@link net.certware.argument.language.l.impl.ConstantDeclarationImpl#getCv <em>Cv</em>}</li>
  * </ul>
  * </p>
@@ -31,24 +31,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ConstantDeclarationImpl extends StatementImpl implements ConstantDeclaration
 {
   /**
-   * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getId()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected static final String ID_EDEFAULT = null;
+  protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getId()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected String id = ID_EDEFAULT;
+  protected String name = NAME_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getCv() <em>Cv</em>}' containment reference.
@@ -86,9 +86,9 @@ public class ConstantDeclarationImpl extends StatementImpl implements ConstantDe
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getId()
+  public String getName()
   {
-    return id;
+    return name;
   }
 
   /**
@@ -96,12 +96,12 @@ public class ConstantDeclarationImpl extends StatementImpl implements ConstantDe
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setId(String newId)
+  public void setName(String newName)
   {
-    String oldId = id;
-    id = newId;
+    String oldName = name;
+    name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, LPackage.CONSTANT_DECLARATION__ID, oldId, id));
+      eNotify(new ENotificationImpl(this, Notification.SET, LPackage.CONSTANT_DECLARATION__NAME, oldName, name));
   }
 
   /**
@@ -178,8 +178,8 @@ public class ConstantDeclarationImpl extends StatementImpl implements ConstantDe
   {
     switch (featureID)
     {
-      case LPackage.CONSTANT_DECLARATION__ID:
-        return getId();
+      case LPackage.CONSTANT_DECLARATION__NAME:
+        return getName();
       case LPackage.CONSTANT_DECLARATION__CV:
         return getCv();
     }
@@ -196,8 +196,8 @@ public class ConstantDeclarationImpl extends StatementImpl implements ConstantDe
   {
     switch (featureID)
     {
-      case LPackage.CONSTANT_DECLARATION__ID:
-        setId((String)newValue);
+      case LPackage.CONSTANT_DECLARATION__NAME:
+        setName((String)newValue);
         return;
       case LPackage.CONSTANT_DECLARATION__CV:
         setCv((GroundArithmeticTerm)newValue);
@@ -216,8 +216,8 @@ public class ConstantDeclarationImpl extends StatementImpl implements ConstantDe
   {
     switch (featureID)
     {
-      case LPackage.CONSTANT_DECLARATION__ID:
-        setId(ID_EDEFAULT);
+      case LPackage.CONSTANT_DECLARATION__NAME:
+        setName(NAME_EDEFAULT);
         return;
       case LPackage.CONSTANT_DECLARATION__CV:
         setCv((GroundArithmeticTerm)null);
@@ -236,8 +236,8 @@ public class ConstantDeclarationImpl extends StatementImpl implements ConstantDe
   {
     switch (featureID)
     {
-      case LPackage.CONSTANT_DECLARATION__ID:
-        return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+      case LPackage.CONSTANT_DECLARATION__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case LPackage.CONSTANT_DECLARATION__CV:
         return cv != null;
     }
@@ -255,8 +255,8 @@ public class ConstantDeclarationImpl extends StatementImpl implements ConstantDe
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (id: ");
-    result.append(id);
+    result.append(" (name: ");
+    result.append(name);
     result.append(')');
     return result.toString();
   }

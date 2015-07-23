@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link net.certware.argument.language.l.impl.TypedVariableImpl#getType <em>Type</em>}</li>
+ *   <li>{@link net.certware.argument.language.l.impl.TypedVariableImpl#getName <em>Name</em>}</li>
  *   <li>{@link net.certware.argument.language.l.impl.TypedVariableImpl#getVar <em>Var</em>}</li>
  * </ul>
  * </p>
@@ -31,24 +31,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class TypedVariableImpl extends BasicTermImpl implements TypedVariable
 {
   /**
-   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected static final String TYPE_EDEFAULT = null;
+  protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected String type = TYPE_EDEFAULT;
+  protected String name = NAME_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getVar() <em>Var</em>}' containment reference.
@@ -86,9 +86,9 @@ public class TypedVariableImpl extends BasicTermImpl implements TypedVariable
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getType()
+  public String getName()
   {
-    return type;
+    return name;
   }
 
   /**
@@ -96,12 +96,12 @@ public class TypedVariableImpl extends BasicTermImpl implements TypedVariable
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setType(String newType)
+  public void setName(String newName)
   {
-    String oldType = type;
-    type = newType;
+    String oldName = name;
+    name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, LPackage.TYPED_VARIABLE__TYPE, oldType, type));
+      eNotify(new ENotificationImpl(this, Notification.SET, LPackage.TYPED_VARIABLE__NAME, oldName, name));
   }
 
   /**
@@ -178,8 +178,8 @@ public class TypedVariableImpl extends BasicTermImpl implements TypedVariable
   {
     switch (featureID)
     {
-      case LPackage.TYPED_VARIABLE__TYPE:
-        return getType();
+      case LPackage.TYPED_VARIABLE__NAME:
+        return getName();
       case LPackage.TYPED_VARIABLE__VAR:
         return getVar();
     }
@@ -196,8 +196,8 @@ public class TypedVariableImpl extends BasicTermImpl implements TypedVariable
   {
     switch (featureID)
     {
-      case LPackage.TYPED_VARIABLE__TYPE:
-        setType((String)newValue);
+      case LPackage.TYPED_VARIABLE__NAME:
+        setName((String)newValue);
         return;
       case LPackage.TYPED_VARIABLE__VAR:
         setVar((Variable)newValue);
@@ -216,8 +216,8 @@ public class TypedVariableImpl extends BasicTermImpl implements TypedVariable
   {
     switch (featureID)
     {
-      case LPackage.TYPED_VARIABLE__TYPE:
-        setType(TYPE_EDEFAULT);
+      case LPackage.TYPED_VARIABLE__NAME:
+        setName(NAME_EDEFAULT);
         return;
       case LPackage.TYPED_VARIABLE__VAR:
         setVar((Variable)null);
@@ -236,8 +236,8 @@ public class TypedVariableImpl extends BasicTermImpl implements TypedVariable
   {
     switch (featureID)
     {
-      case LPackage.TYPED_VARIABLE__TYPE:
-        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+      case LPackage.TYPED_VARIABLE__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case LPackage.TYPED_VARIABLE__VAR:
         return var != null;
     }
@@ -255,8 +255,8 @@ public class TypedVariableImpl extends BasicTermImpl implements TypedVariable
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (type: ");
-    result.append(type);
+    result.append(" (name: ");
+    result.append(name);
     result.append(')');
     return result.toString();
   }

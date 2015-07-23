@@ -2,6 +2,7 @@
  */
 package net.certware.argument.language.l;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,7 +20,7 @@ package net.certware.argument.language.l;
  * @model
  * @generated
  */
-public interface Variable extends QuantifiedTerm
+public interface Variable extends EObject
 {
   /**
    * Returns the value of the '<em><b>Identifier</b></em>' attribute.

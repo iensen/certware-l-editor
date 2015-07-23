@@ -122,23 +122,23 @@ public class LGrammarAccess extends AbstractGrammarElementFinder {
 	public class TypedVariableElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TypedVariable");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cTypeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cTypeLIDTerminalRuleCall_0_0 = (RuleCall)cTypeAssignment_0.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameLIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
 		private final Assignment cVarAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cVarVariableParserRuleCall_1_0 = (RuleCall)cVarAssignment_1.eContents().get(0);
 		
 		//TypedVariable:
-		//	type=LID var=Variable;
+		//	name=LID var=Variable;
 		public ParserRule getRule() { return rule; }
 
-		//type=LID var=Variable
+		//name=LID var=Variable
 		public Group getGroup() { return cGroup; }
 
-		//type=LID
-		public Assignment getTypeAssignment_0() { return cTypeAssignment_0; }
+		//name=LID
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 
 		//LID
-		public RuleCall getTypeLIDTerminalRuleCall_0_0() { return cTypeLIDTerminalRuleCall_0_0; }
+		public RuleCall getNameLIDTerminalRuleCall_0_0() { return cNameLIDTerminalRuleCall_0_0; }
 
 		//var=Variable
 		public Assignment getVarAssignment_1() { return cVarAssignment_1; }
@@ -708,47 +708,90 @@ public class LGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class QuantifiedTermElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "QuantifiedTerm");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cQuantifierParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final RuleCall cLIDTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final RuleCall cVariableParserRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cUniversalQuantifiedTermParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cExistentialQuantifiedTermParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//// 1.6 Quantified Terms, 1.14.1 Terms
-		//QuantifiedTerm:
-		//	Quantifier LID Variable?;
+		//QuantifiedTerm: // Quantifier LID (Variable)?  mrb changed to scope on type ID
+		//// Quantifier id=[TypeId] (var=Variable)? // okay with Quantifier rule
+		//// ('every' name=[TypeId]) | 
+		//// ('some' name=[TVar])
+		//	UniversalQuantifiedTerm | ExistentialQuantifiedTerm;
 		public ParserRule getRule() { return rule; }
 
-		//Quantifier LID Variable?
-		public Group getGroup() { return cGroup; }
+		//// Quantifier LID (Variable)?  mrb changed to scope on type ID
+		//// Quantifier id=[TypeId] (var=Variable)? // okay with Quantifier rule
+		//// ('every' name=[TypeId]) | 
+		//// ('some' name=[TVar])
+		//UniversalQuantifiedTerm | ExistentialQuantifiedTerm
+		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//Quantifier
-		public RuleCall getQuantifierParserRuleCall_0() { return cQuantifierParserRuleCall_0; }
+		//// Quantifier LID (Variable)?  mrb changed to scope on type ID
+		//// Quantifier id=[TypeId] (var=Variable)? // okay with Quantifier rule
+		//// ('every' name=[TypeId]) | 
+		//// ('some' name=[TVar])
+		//UniversalQuantifiedTerm
+		public RuleCall getUniversalQuantifiedTermParserRuleCall_0() { return cUniversalQuantifiedTermParserRuleCall_0; }
 
-		//LID
-		public RuleCall getLIDTerminalRuleCall_1() { return cLIDTerminalRuleCall_1; }
-
-		//Variable?
-		public RuleCall getVariableParserRuleCall_2() { return cVariableParserRuleCall_2; }
+		//ExistentialQuantifiedTerm
+		public RuleCall getExistentialQuantifiedTermParserRuleCall_1() { return cExistentialQuantifiedTermParserRuleCall_1; }
 	}
 
-	public class QuantifierElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Quantifier");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Keyword cEveryKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
-		private final Keyword cSomeKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
+	public class UniversalQuantifiedTermElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "UniversalQuantifiedTerm");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cEveryKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final CrossReference cNameTypeIdCrossReference_1_0 = (CrossReference)cNameAssignment_1.eContents().get(0);
+		private final RuleCall cNameTypeIdLIDTerminalRuleCall_1_0_1 = (RuleCall)cNameTypeIdCrossReference_1_0.eContents().get(1);
 		
-		//Quantifier:
-		//	"every" | "some";
+		//UniversalQuantifiedTerm:
+		//	"every" name=[TypeId|LID];
 		public ParserRule getRule() { return rule; }
 
-		//"every" | "some"
-		public Alternatives getAlternatives() { return cAlternatives; }
+		//"every" name=[TypeId|LID]
+		public Group getGroup() { return cGroup; }
 
 		//"every"
 		public Keyword getEveryKeyword_0() { return cEveryKeyword_0; }
 
+		//name=[TypeId|LID]
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//[TypeId|LID]
+		public CrossReference getNameTypeIdCrossReference_1_0() { return cNameTypeIdCrossReference_1_0; }
+
+		//LID
+		public RuleCall getNameTypeIdLIDTerminalRuleCall_1_0_1() { return cNameTypeIdLIDTerminalRuleCall_1_0_1; }
+	}
+
+	public class ExistentialQuantifiedTermElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ExistentialQuantifiedTerm");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cSomeKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final CrossReference cNameTVarCrossReference_1_0 = (CrossReference)cNameAssignment_1.eContents().get(0);
+		private final RuleCall cNameTVarIDTerminalRuleCall_1_0_1 = (RuleCall)cNameTVarCrossReference_1_0.eContents().get(1);
+		
+		//ExistentialQuantifiedTerm:
+		//	"some" name=[TVar];
+		public ParserRule getRule() { return rule; }
+
+		//"some" name=[TVar]
+		public Group getGroup() { return cGroup; }
+
 		//"some"
-		public Keyword getSomeKeyword_1() { return cSomeKeyword_1; }
+		public Keyword getSomeKeyword_0() { return cSomeKeyword_0; }
+
+		//name=[TVar]
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//[TVar]
+		public CrossReference getNameTVarCrossReference_1_0() { return cNameTVarCrossReference_1_0; }
+
+		//ID
+		public RuleCall getNameTVarIDTerminalRuleCall_1_0_1() { return cNameTVarIDTerminalRuleCall_1_0_1; }
 	}
 
 	public class TermElements extends AbstractParserRuleElementFinder {
@@ -757,6 +800,9 @@ public class LGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cBasicTermParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cQuantifiedTermParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
+		////Quantifier: // mrb removed for explicit scope disambiguation in QuantifiedTerm rule above
+		////	'every' | 'some'
+		////;
 		//// 1.7 Terms, 1.14.1 Terms
 		//Term:
 		//	BasicTerm | QuantifiedTerm;
@@ -812,8 +858,8 @@ public class LGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ConstantDeclaration");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cConstKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cIdAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cIdLIDTerminalRuleCall_1_0 = (RuleCall)cIdAssignment_1.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameLIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cEqualsSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cCvAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cCvGroundArithmeticTermParserRuleCall_3_0 = (RuleCall)cCvAssignment_3.eContents().get(0);
@@ -821,22 +867,22 @@ public class LGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//// 1.14.2, 1.3 Constant Declaration
 		//ConstantDeclaration:
-		//	"const" id=LID "=" // (cv=NumericConstant | iv=INT | av=ArithmeticTerm )
+		//	"const" name=LID "=" // (cv=NumericConstant | iv=INT | av=ArithmeticTerm )
 		//	cv=GroundArithmeticTerm ".";
 		public ParserRule getRule() { return rule; }
 
-		//"const" id=LID "=" // (cv=NumericConstant | iv=INT | av=ArithmeticTerm )
+		//"const" name=LID "=" // (cv=NumericConstant | iv=INT | av=ArithmeticTerm )
 		//cv=GroundArithmeticTerm "."
 		public Group getGroup() { return cGroup; }
 
 		//"const"
 		public Keyword getConstKeyword_0() { return cConstKeyword_0; }
 
-		//id=LID
-		public Assignment getIdAssignment_1() { return cIdAssignment_1; }
+		//name=LID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 
 		//LID
-		public RuleCall getIdLIDTerminalRuleCall_1_0() { return cIdLIDTerminalRuleCall_1_0; }
+		public RuleCall getNameLIDTerminalRuleCall_1_0() { return cNameLIDTerminalRuleCall_1_0; }
 
 		//"="
 		public Keyword getEqualsSignKeyword_2() { return cEqualsSignKeyword_2; }
@@ -852,33 +898,50 @@ public class LGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getFullStopKeyword_4() { return cFullStopKeyword_4; }
 	}
 
+	public class TypeIdElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TypeId");
+		private final Assignment cNameAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cNameLIDTerminalRuleCall_0 = (RuleCall)cNameAssignment.eContents().get(0);
+		
+		//// 1.5 Type Declarations, 1.14.3 Type Declarations
+		//// mrb added type ID so we can use it in scoping rules
+		//TypeId:
+		//	name=LID;
+		public ParserRule getRule() { return rule; }
+
+		//name=LID
+		public Assignment getNameAssignment() { return cNameAssignment; }
+
+		//LID
+		public RuleCall getNameLIDTerminalRuleCall_0() { return cNameLIDTerminalRuleCall_0; }
+	}
+
 	public class TypeDeclarationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TypeDeclaration");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cTypeKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cIdAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cIdLIDTerminalRuleCall_1_0 = (RuleCall)cIdAssignment_1.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameTypeIdParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cEqualsSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cExpAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cExpSetExpressionParserRuleCall_3_0 = (RuleCall)cExpAssignment_3.eContents().get(0);
 		private final Keyword cFullStopKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		//// 1.5 Type Declarations, 1.14.3 Type Declarations
 		//TypeDeclaration:
-		//	"type" id=LID "=" exp=SetExpression ".";
+		//	"type" name=TypeId "=" exp=SetExpression ".";
 		public ParserRule getRule() { return rule; }
 
-		//"type" id=LID "=" exp=SetExpression "."
+		//"type" name=TypeId "=" exp=SetExpression "."
 		public Group getGroup() { return cGroup; }
 
 		//"type"
 		public Keyword getTypeKeyword_0() { return cTypeKeyword_0; }
 
-		//id=LID
-		public Assignment getIdAssignment_1() { return cIdAssignment_1; }
+		//name=TypeId
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 
-		//LID
-		public RuleCall getIdLIDTerminalRuleCall_1_0() { return cIdLIDTerminalRuleCall_1_0; }
+		//TypeId
+		public RuleCall getNameTypeIdParserRuleCall_1_0() { return cNameTypeIdParserRuleCall_1_0; }
 
 		//"="
 		public Keyword getEqualsSignKeyword_2() { return cEqualsSignKeyword_2; }
@@ -1076,15 +1139,18 @@ public class LGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cVarVariableParserRuleCall_0_0 = (RuleCall)cVarAssignment_0.eContents().get(0);
 		private final Keyword cInKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cIdAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cIdLIDTerminalRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
+		private final CrossReference cIdTypeIdCrossReference_2_0 = (CrossReference)cIdAssignment_2.eContents().get(0);
+		private final RuleCall cIdTypeIdLIDTerminalRuleCall_2_0_1 = (RuleCall)cIdTypeIdCrossReference_2_0.eContents().get(1);
 		
-		//TVar:
-		//	var=Variable "in" id=LID;
+		//TVar: // var=Variable 'in' id=LID // mrb updated for scope additions
+		//	var=Variable "in" id=[TypeId|LID];
 		public ParserRule getRule() { return rule; }
 
-		//var=Variable "in" id=LID
+		//// var=Variable 'in' id=LID // mrb updated for scope additions
+		//var=Variable "in" id=[TypeId|LID]
 		public Group getGroup() { return cGroup; }
 
+		//// var=Variable 'in' id=LID // mrb updated for scope additions
 		//var=Variable
 		public Assignment getVarAssignment_0() { return cVarAssignment_0; }
 
@@ -1094,11 +1160,14 @@ public class LGrammarAccess extends AbstractGrammarElementFinder {
 		//"in"
 		public Keyword getInKeyword_1() { return cInKeyword_1; }
 
-		//id=LID
+		//id=[TypeId|LID]
 		public Assignment getIdAssignment_2() { return cIdAssignment_2; }
 
+		//[TypeId|LID]
+		public CrossReference getIdTypeIdCrossReference_2_0() { return cIdTypeIdCrossReference_2_0; }
+
 		//LID
-		public RuleCall getIdLIDTerminalRuleCall_2_0() { return cIdLIDTerminalRuleCall_2_0; }
+		public RuleCall getIdTypeIdLIDTerminalRuleCall_2_0_1() { return cIdTypeIdLIDTerminalRuleCall_2_0_1; }
 	}
 
 	public class SetAdditionElements extends AbstractParserRuleElementFinder {
@@ -1968,10 +2037,12 @@ public class LGrammarAccess extends AbstractGrammarElementFinder {
 	private final GroundTermsElements pGroundTerms;
 	private final GroundTermElements pGroundTerm;
 	private final QuantifiedTermElements pQuantifiedTerm;
-	private final QuantifierElements pQuantifier;
+	private final UniversalQuantifiedTermElements pUniversalQuantifiedTerm;
+	private final ExistentialQuantifiedTermElements pExistentialQuantifiedTerm;
 	private final TermElements pTerm;
 	private final TermsElements pTerms;
 	private final ConstantDeclarationElements pConstantDeclaration;
+	private final TypeIdElements pTypeId;
 	private final TypeDeclarationElements pTypeDeclaration;
 	private final LimitElements pLimit;
 	private final SetElements pSet;
@@ -2040,10 +2111,12 @@ public class LGrammarAccess extends AbstractGrammarElementFinder {
 		this.pGroundTerms = new GroundTermsElements();
 		this.pGroundTerm = new GroundTermElements();
 		this.pQuantifiedTerm = new QuantifiedTermElements();
-		this.pQuantifier = new QuantifierElements();
+		this.pUniversalQuantifiedTerm = new UniversalQuantifiedTermElements();
+		this.pExistentialQuantifiedTerm = new ExistentialQuantifiedTermElements();
 		this.pTerm = new TermElements();
 		this.pTerms = new TermsElements();
 		this.pConstantDeclaration = new ConstantDeclarationElements();
+		this.pTypeId = new TypeIdElements();
 		this.pTypeDeclaration = new TypeDeclarationElements();
 		this.pLimit = new LimitElements();
 		this.pSet = new SetElements();
@@ -2184,7 +2257,7 @@ public class LGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//TypedVariable:
-	//	type=LID var=Variable;
+	//	name=LID var=Variable;
 	public TypedVariableElements getTypedVariableAccess() {
 		return pTypedVariable;
 	}
@@ -2349,8 +2422,11 @@ public class LGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// 1.6 Quantified Terms, 1.14.1 Terms
-	//QuantifiedTerm:
-	//	Quantifier LID Variable?;
+	//QuantifiedTerm: // Quantifier LID (Variable)?  mrb changed to scope on type ID
+	//// Quantifier id=[TypeId] (var=Variable)? // okay with Quantifier rule
+	//// ('every' name=[TypeId]) | 
+	//// ('some' name=[TVar])
+	//	UniversalQuantifiedTerm | ExistentialQuantifiedTerm;
 	public QuantifiedTermElements getQuantifiedTermAccess() {
 		return pQuantifiedTerm;
 	}
@@ -2359,16 +2435,29 @@ public class LGrammarAccess extends AbstractGrammarElementFinder {
 		return getQuantifiedTermAccess().getRule();
 	}
 
-	//Quantifier:
-	//	"every" | "some";
-	public QuantifierElements getQuantifierAccess() {
-		return pQuantifier;
+	//UniversalQuantifiedTerm:
+	//	"every" name=[TypeId|LID];
+	public UniversalQuantifiedTermElements getUniversalQuantifiedTermAccess() {
+		return pUniversalQuantifiedTerm;
 	}
 	
-	public ParserRule getQuantifierRule() {
-		return getQuantifierAccess().getRule();
+	public ParserRule getUniversalQuantifiedTermRule() {
+		return getUniversalQuantifiedTermAccess().getRule();
 	}
 
+	//ExistentialQuantifiedTerm:
+	//	"some" name=[TVar];
+	public ExistentialQuantifiedTermElements getExistentialQuantifiedTermAccess() {
+		return pExistentialQuantifiedTerm;
+	}
+	
+	public ParserRule getExistentialQuantifiedTermRule() {
+		return getExistentialQuantifiedTermAccess().getRule();
+	}
+
+	////Quantifier: // mrb removed for explicit scope disambiguation in QuantifiedTerm rule above
+	////	'every' | 'some'
+	////;
 	//// 1.7 Terms, 1.14.1 Terms
 	//Term:
 	//	BasicTerm | QuantifiedTerm;
@@ -2392,7 +2481,7 @@ public class LGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// 1.14.2, 1.3 Constant Declaration
 	//ConstantDeclaration:
-	//	"const" id=LID "=" // (cv=NumericConstant | iv=INT | av=ArithmeticTerm )
+	//	"const" name=LID "=" // (cv=NumericConstant | iv=INT | av=ArithmeticTerm )
 	//	cv=GroundArithmeticTerm ".";
 	public ConstantDeclarationElements getConstantDeclarationAccess() {
 		return pConstantDeclaration;
@@ -2403,8 +2492,19 @@ public class LGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// 1.5 Type Declarations, 1.14.3 Type Declarations
+	//// mrb added type ID so we can use it in scoping rules
+	//TypeId:
+	//	name=LID;
+	public TypeIdElements getTypeIdAccess() {
+		return pTypeId;
+	}
+	
+	public ParserRule getTypeIdRule() {
+		return getTypeIdAccess().getRule();
+	}
+
 	//TypeDeclaration:
-	//	"type" id=LID "=" exp=SetExpression ".";
+	//	"type" name=TypeId "=" exp=SetExpression ".";
 	public TypeDeclarationElements getTypeDeclarationAccess() {
 		return pTypeDeclaration;
 	}
@@ -2474,8 +2574,8 @@ public class LGrammarAccess extends AbstractGrammarElementFinder {
 		return getTVarsAccess().getRule();
 	}
 
-	//TVar:
-	//	var=Variable "in" id=LID;
+	//TVar: // var=Variable 'in' id=LID // mrb updated for scope additions
+	//	var=Variable "in" id=[TypeId|LID];
 	public TVarElements getTVarAccess() {
 		return pTVar;
 	}

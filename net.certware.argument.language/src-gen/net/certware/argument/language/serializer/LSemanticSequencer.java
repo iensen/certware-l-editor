@@ -12,6 +12,7 @@ import net.certware.argument.language.l.Bound;
 import net.certware.argument.language.l.BuiltInAtom;
 import net.certware.argument.language.l.CardinalityConstraint;
 import net.certware.argument.language.l.ConstantDeclaration;
+import net.certware.argument.language.l.ExistentialQuantifiedTerm;
 import net.certware.argument.language.l.GroundAddition;
 import net.certware.argument.language.l.GroundArithmeticLiteral;
 import net.certware.argument.language.l.GroundMultiplication;
@@ -33,7 +34,9 @@ import net.certware.argument.language.l.TVar;
 import net.certware.argument.language.l.TVars;
 import net.certware.argument.language.l.Terms;
 import net.certware.argument.language.l.TypeDeclaration;
+import net.certware.argument.language.l.TypeId;
 import net.certware.argument.language.l.TypedVariable;
+import net.certware.argument.language.l.UniversalQuantifiedTerm;
 import net.certware.argument.language.l.Variable;
 import net.certware.argument.language.l.pAndSentence;
 import net.certware.argument.language.l.pOrSentence;
@@ -171,6 +174,14 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				if(context == grammarAccess.getConstantDeclarationRule() ||
 				   context == grammarAccess.getStatementRule()) {
 					sequence_ConstantDeclaration(context, (ConstantDeclaration) semanticObject); 
+					return; 
+				}
+				else break;
+			case LPackage.EXISTENTIAL_QUANTIFIED_TERM:
+				if(context == grammarAccess.getExistentialQuantifiedTermRule() ||
+				   context == grammarAccess.getQuantifiedTermRule() ||
+				   context == grammarAccess.getTermRule()) {
+					sequence_ExistentialQuantifiedTerm(context, (ExistentialQuantifiedTerm) semanticObject); 
 					return; 
 				}
 				else break;
@@ -378,6 +389,12 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
+			case LPackage.TYPE_ID:
+				if(context == grammarAccess.getTypeIdRule()) {
+					sequence_TypeId(context, (TypeId) semanticObject); 
+					return; 
+				}
+				else break;
 			case LPackage.TYPED_VARIABLE:
 				if(context == grammarAccess.getBasicTermRule() ||
 				   context == grammarAccess.getTermRule() ||
@@ -386,10 +403,16 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
-			case LPackage.VARIABLE:
+			case LPackage.UNIVERSAL_QUANTIFIED_TERM:
 				if(context == grammarAccess.getQuantifiedTermRule() ||
 				   context == grammarAccess.getTermRule() ||
-				   context == grammarAccess.getVariableRule()) {
+				   context == grammarAccess.getUniversalQuantifiedTermRule()) {
+					sequence_UniversalQuantifiedTerm(context, (UniversalQuantifiedTerm) semanticObject); 
+					return; 
+				}
+				else break;
+			case LPackage.VARIABLE:
+				if(context == grammarAccess.getVariableRule()) {
 					sequence_Variable(context, (Variable) semanticObject); 
 					return; 
 				}
@@ -535,19 +558,35 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (id=LID cv=GroundArithmeticTerm)
+	 *     (name=LID cv=GroundArithmeticTerm)
 	 */
 	protected void sequence_ConstantDeclaration(EObject context, ConstantDeclaration semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LPackage.Literals.CONSTANT_DECLARATION__ID) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LPackage.Literals.CONSTANT_DECLARATION__ID));
+			if(transientValues.isValueTransient(semanticObject, LPackage.Literals.CONSTANT_DECLARATION__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LPackage.Literals.CONSTANT_DECLARATION__NAME));
 			if(transientValues.isValueTransient(semanticObject, LPackage.Literals.CONSTANT_DECLARATION__CV) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LPackage.Literals.CONSTANT_DECLARATION__CV));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getConstantDeclarationAccess().getIdLIDTerminalRuleCall_1_0(), semanticObject.getId());
+		feeder.accept(grammarAccess.getConstantDeclarationAccess().getNameLIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getConstantDeclarationAccess().getCvGroundArithmeticTermParserRuleCall_3_0(), semanticObject.getCv());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=[TVar|ID]
+	 */
+	protected void sequence_ExistentialQuantifiedTerm(EObject context, ExistentialQuantifiedTerm semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, LPackage.Literals.EXISTENTIAL_QUANTIFIED_TERM__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LPackage.Literals.EXISTENTIAL_QUANTIFIED_TERM__NAME));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getExistentialQuantifiedTermAccess().getNameTVarIDTerminalRuleCall_1_0_1(), semanticObject.getName());
 		feeder.finish();
 	}
 	
@@ -780,7 +819,7 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (var=Variable id=LID)
+	 *     (var=Variable id=[TypeId|LID])
 	 */
 	protected void sequence_TVar(EObject context, TVar semanticObject) {
 		if(errorAcceptor != null) {
@@ -792,7 +831,7 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getTVarAccess().getVarVariableParserRuleCall_0_0(), semanticObject.getVar());
-		feeder.accept(grammarAccess.getTVarAccess().getIdLIDTerminalRuleCall_2_0(), semanticObject.getId());
+		feeder.accept(grammarAccess.getTVarAccess().getIdTypeIdLIDTerminalRuleCall_2_0_1(), semanticObject.getId());
 		feeder.finish();
 	}
 	
@@ -817,18 +856,18 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (id=LID exp=SetExpression)
+	 *     (name=TypeId exp=SetExpression)
 	 */
 	protected void sequence_TypeDeclaration(EObject context, TypeDeclaration semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LPackage.Literals.TYPE_DECLARATION__ID) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LPackage.Literals.TYPE_DECLARATION__ID));
+			if(transientValues.isValueTransient(semanticObject, LPackage.Literals.TYPE_DECLARATION__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LPackage.Literals.TYPE_DECLARATION__NAME));
 			if(transientValues.isValueTransient(semanticObject, LPackage.Literals.TYPE_DECLARATION__EXP) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LPackage.Literals.TYPE_DECLARATION__EXP));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getTypeDeclarationAccess().getIdLIDTerminalRuleCall_1_0(), semanticObject.getId());
+		feeder.accept(grammarAccess.getTypeDeclarationAccess().getNameTypeIdParserRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getTypeDeclarationAccess().getExpSetExpressionParserRuleCall_3_0(), semanticObject.getExp());
 		feeder.finish();
 	}
@@ -836,19 +875,51 @@ public class LSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (type=LID var=Variable)
+	 *     name=LID
+	 */
+	protected void sequence_TypeId(EObject context, TypeId semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, LPackage.Literals.TYPE_ID__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LPackage.Literals.TYPE_ID__NAME));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getTypeIdAccess().getNameLIDTerminalRuleCall_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=LID var=Variable)
 	 */
 	protected void sequence_TypedVariable(EObject context, TypedVariable semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, LPackage.Literals.TYPED_VARIABLE__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LPackage.Literals.TYPED_VARIABLE__TYPE));
+			if(transientValues.isValueTransient(semanticObject, LPackage.Literals.TYPED_VARIABLE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LPackage.Literals.TYPED_VARIABLE__NAME));
 			if(transientValues.isValueTransient(semanticObject, LPackage.Literals.TYPED_VARIABLE__VAR) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LPackage.Literals.TYPED_VARIABLE__VAR));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getTypedVariableAccess().getTypeLIDTerminalRuleCall_0_0(), semanticObject.getType());
+		feeder.accept(grammarAccess.getTypedVariableAccess().getNameLIDTerminalRuleCall_0_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getTypedVariableAccess().getVarVariableParserRuleCall_1_0(), semanticObject.getVar());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=[TypeId|LID]
+	 */
+	protected void sequence_UniversalQuantifiedTerm(EObject context, UniversalQuantifiedTerm semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, LPackage.Literals.UNIVERSAL_QUANTIFIED_TERM__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, LPackage.Literals.UNIVERSAL_QUANTIFIED_TERM__NAME));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getUniversalQuantifiedTermAccess().getNameTypeIdLIDTerminalRuleCall_1_0_1(), semanticObject.getName());
 		feeder.finish();
 	}
 	

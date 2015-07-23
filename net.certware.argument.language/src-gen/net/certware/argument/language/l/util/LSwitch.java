@@ -98,8 +98,6 @@ public class LSwitch<T> extends Switch<T>
       {
         Variable variable = (Variable)theEObject;
         T result = caseVariable(variable);
-        if (result == null) result = caseQuantifiedTerm(variable);
-        if (result == null) result = caseTerm(variable);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -193,6 +191,24 @@ public class LSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case LPackage.UNIVERSAL_QUANTIFIED_TERM:
+      {
+        UniversalQuantifiedTerm universalQuantifiedTerm = (UniversalQuantifiedTerm)theEObject;
+        T result = caseUniversalQuantifiedTerm(universalQuantifiedTerm);
+        if (result == null) result = caseQuantifiedTerm(universalQuantifiedTerm);
+        if (result == null) result = caseTerm(universalQuantifiedTerm);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case LPackage.EXISTENTIAL_QUANTIFIED_TERM:
+      {
+        ExistentialQuantifiedTerm existentialQuantifiedTerm = (ExistentialQuantifiedTerm)theEObject;
+        T result = caseExistentialQuantifiedTerm(existentialQuantifiedTerm);
+        if (result == null) result = caseQuantifiedTerm(existentialQuantifiedTerm);
+        if (result == null) result = caseTerm(existentialQuantifiedTerm);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case LPackage.TERM:
       {
         Term term = (Term)theEObject;
@@ -215,6 +231,13 @@ public class LSwitch<T> extends Switch<T>
         ConstantDeclaration constantDeclaration = (ConstantDeclaration)theEObject;
         T result = caseConstantDeclaration(constantDeclaration);
         if (result == null) result = caseStatement(constantDeclaration);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case LPackage.TYPE_ID:
+      {
+        TypeId typeId = (TypeId)theEObject;
+        T result = caseTypeId(typeId);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -771,6 +794,38 @@ public class LSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Universal Quantified Term</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Universal Quantified Term</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseUniversalQuantifiedTerm(UniversalQuantifiedTerm object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Existential Quantified Term</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Existential Quantified Term</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseExistentialQuantifiedTerm(ExistentialQuantifiedTerm object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Term</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -814,6 +869,22 @@ public class LSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseConstantDeclaration(ConstantDeclaration object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Type Id</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Type Id</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTypeId(TypeId object)
   {
     return null;
   }

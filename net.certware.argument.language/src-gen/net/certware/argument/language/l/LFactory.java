@@ -158,6 +158,24 @@ public interface LFactory extends EFactory
   QuantifiedTerm createQuantifiedTerm();
 
   /**
+   * Returns a new object of class '<em>Universal Quantified Term</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Universal Quantified Term</em>'.
+   * @generated
+   */
+  UniversalQuantifiedTerm createUniversalQuantifiedTerm();
+
+  /**
+   * Returns a new object of class '<em>Existential Quantified Term</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Existential Quantified Term</em>'.
+   * @generated
+   */
+  ExistentialQuantifiedTerm createExistentialQuantifiedTerm();
+
+  /**
    * Returns a new object of class '<em>Term</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -183,6 +201,15 @@ public interface LFactory extends EFactory
    * @generated
    */
   ConstantDeclaration createConstantDeclaration();
+
+  /**
+   * Returns a new object of class '<em>Type Id</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Type Id</em>'.
+   * @generated
+   */
+  TypeId createTypeId();
 
   /**
    * Returns a new object of class '<em>Type Declaration</em>'.

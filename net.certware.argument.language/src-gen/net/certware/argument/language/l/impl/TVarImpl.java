@@ -4,6 +4,7 @@ package net.certware.argument.language.l.impl;
 
 import net.certware.argument.language.l.LPackage;
 import net.certware.argument.language.l.TVar;
+import net.certware.argument.language.l.TypeId;
 import net.certware.argument.language.l.Variable;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -42,24 +43,14 @@ public class TVarImpl extends MinimalEObjectImpl.Container implements TVar
   protected Variable var;
 
   /**
-   * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+   * The cached value of the '{@link #getId() <em>Id</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getId()
    * @generated
    * @ordered
    */
-  protected static final String ID_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getId()
-   * @generated
-   * @ordered
-   */
-  protected String id = ID_EDEFAULT;
+  protected TypeId id;
 
   /**
    * <!-- begin-user-doc -->
@@ -135,7 +126,27 @@ public class TVarImpl extends MinimalEObjectImpl.Container implements TVar
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getId()
+  public TypeId getId()
+  {
+    if (id != null && id.eIsProxy())
+    {
+      InternalEObject oldId = (InternalEObject)id;
+      id = (TypeId)eResolveProxy(oldId);
+      if (id != oldId)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, LPackage.TVAR__ID, oldId, id));
+      }
+    }
+    return id;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TypeId basicGetId()
   {
     return id;
   }
@@ -145,9 +156,9 @@ public class TVarImpl extends MinimalEObjectImpl.Container implements TVar
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setId(String newId)
+  public void setId(TypeId newId)
   {
-    String oldId = id;
+    TypeId oldId = id;
     id = newId;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, LPackage.TVAR__ID, oldId, id));
@@ -182,7 +193,8 @@ public class TVarImpl extends MinimalEObjectImpl.Container implements TVar
       case LPackage.TVAR__VAR:
         return getVar();
       case LPackage.TVAR__ID:
-        return getId();
+        if (resolve) return getId();
+        return basicGetId();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -201,7 +213,7 @@ public class TVarImpl extends MinimalEObjectImpl.Container implements TVar
         setVar((Variable)newValue);
         return;
       case LPackage.TVAR__ID:
-        setId((String)newValue);
+        setId((TypeId)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -221,7 +233,7 @@ public class TVarImpl extends MinimalEObjectImpl.Container implements TVar
         setVar((Variable)null);
         return;
       case LPackage.TVAR__ID:
-        setId(ID_EDEFAULT);
+        setId((TypeId)null);
         return;
     }
     super.eUnset(featureID);
@@ -240,26 +252,9 @@ public class TVarImpl extends MinimalEObjectImpl.Container implements TVar
       case LPackage.TVAR__VAR:
         return var != null;
       case LPackage.TVAR__ID:
-        return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+        return id != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (id: ");
-    result.append(id);
-    result.append(')');
-    return result.toString();
   }
 
 } //TVarImpl

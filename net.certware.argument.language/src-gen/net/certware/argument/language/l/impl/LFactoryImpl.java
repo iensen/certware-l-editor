@@ -79,9 +79,12 @@ public class LFactoryImpl extends EFactoryImpl implements LFactory
       case LPackage.GROUND_TERMS: return createGroundTerms();
       case LPackage.GROUND_TERM: return createGroundTerm();
       case LPackage.QUANTIFIED_TERM: return createQuantifiedTerm();
+      case LPackage.UNIVERSAL_QUANTIFIED_TERM: return createUniversalQuantifiedTerm();
+      case LPackage.EXISTENTIAL_QUANTIFIED_TERM: return createExistentialQuantifiedTerm();
       case LPackage.TERM: return createTerm();
       case LPackage.TERMS: return createTerms();
       case LPackage.CONSTANT_DECLARATION: return createConstantDeclaration();
+      case LPackage.TYPE_ID: return createTypeId();
       case LPackage.TYPE_DECLARATION: return createTypeDeclaration();
       case LPackage.LIMIT: return createLimit();
       case LPackage.SET: return createSet();
@@ -290,6 +293,28 @@ public class LFactoryImpl extends EFactoryImpl implements LFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public UniversalQuantifiedTerm createUniversalQuantifiedTerm()
+  {
+    UniversalQuantifiedTermImpl universalQuantifiedTerm = new UniversalQuantifiedTermImpl();
+    return universalQuantifiedTerm;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ExistentialQuantifiedTerm createExistentialQuantifiedTerm()
+  {
+    ExistentialQuantifiedTermImpl existentialQuantifiedTerm = new ExistentialQuantifiedTermImpl();
+    return existentialQuantifiedTerm;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Term createTerm()
   {
     TermImpl term = new TermImpl();
@@ -316,6 +341,17 @@ public class LFactoryImpl extends EFactoryImpl implements LFactory
   {
     ConstantDeclarationImpl constantDeclaration = new ConstantDeclarationImpl();
     return constantDeclaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TypeId createTypeId()
+  {
+    TypeIdImpl typeId = new TypeIdImpl();
+    return typeId;
   }
 
   /**

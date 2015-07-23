@@ -77,11 +77,11 @@ Workflow {
     		//}
     		fragment = org.eclipse.xtext.generator.validation.JavaValidatorFragment {}
     
-    		// old scoping and exporting API
+    		// old scoping and exporting API: simple names, no index, dependencies ignored
     		// fragment = scoping.ImportURIScopingFragment auto-inject {}
     		// fragment = exporting.SimpleNamesFragment auto-inject {}
     
-    		// scoping and exporting API
+    		// new scoping and exporting API: qualified names, uses index, dependencies honored
     		fragment = scoping.ImportNamespacesScopingFragment auto-inject {}
     		fragment = exporting.QualifiedNamesFragment auto-inject {}
     		fragment = builder.BuilderIntegrationFragment auto-inject {}

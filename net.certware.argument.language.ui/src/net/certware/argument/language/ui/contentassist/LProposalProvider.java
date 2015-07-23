@@ -43,5 +43,7 @@ public class LProposalProvider extends AbstractLProposalProvider {
 		String proposal = "bound <= | { atom } | <= bound"; //$NON-NLS-1$
 		acceptor.accept(createCompletionProposal(proposal,context));
 	}
+
+	}
 	
-}
+

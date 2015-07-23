@@ -5,6 +5,7 @@ package net.certware.argument.language.l.impl;
 import net.certware.argument.language.l.LPackage;
 import net.certware.argument.language.l.SetExpression;
 import net.certware.argument.language.l.TypeDeclaration;
+import net.certware.argument.language.l.TypeId;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -21,7 +22,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link net.certware.argument.language.l.impl.TypeDeclarationImpl#getId <em>Id</em>}</li>
+ *   <li>{@link net.certware.argument.language.l.impl.TypeDeclarationImpl#getName <em>Name</em>}</li>
  *   <li>{@link net.certware.argument.language.l.impl.TypeDeclarationImpl#getExp <em>Exp</em>}</li>
  * </ul>
  * </p>
@@ -31,24 +32,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class TypeDeclarationImpl extends StatementImpl implements TypeDeclaration
 {
   /**
-   * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+   * The cached value of the '{@link #getName() <em>Name</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getId()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected static final String ID_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getId()
-   * @generated
-   * @ordered
-   */
-  protected String id = ID_EDEFAULT;
+  protected TypeId name;
 
   /**
    * The cached value of the '{@link #getExp() <em>Exp</em>}' containment reference.
@@ -86,9 +77,9 @@ public class TypeDeclarationImpl extends StatementImpl implements TypeDeclaratio
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getId()
+  public TypeId getName()
   {
-    return id;
+    return name;
   }
 
   /**
@@ -96,12 +87,37 @@ public class TypeDeclarationImpl extends StatementImpl implements TypeDeclaratio
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setId(String newId)
+  public NotificationChain basicSetName(TypeId newName, NotificationChain msgs)
   {
-    String oldId = id;
-    id = newId;
+    TypeId oldName = name;
+    name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, LPackage.TYPE_DECLARATION__ID, oldId, id));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LPackage.TYPE_DECLARATION__NAME, oldName, newName);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(TypeId newName)
+  {
+    if (newName != name)
+    {
+      NotificationChain msgs = null;
+      if (name != null)
+        msgs = ((InternalEObject)name).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LPackage.TYPE_DECLARATION__NAME, null, msgs);
+      if (newName != null)
+        msgs = ((InternalEObject)newName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LPackage.TYPE_DECLARATION__NAME, null, msgs);
+      msgs = basicSetName(newName, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, LPackage.TYPE_DECLARATION__NAME, newName, newName));
   }
 
   /**
@@ -162,6 +178,8 @@ public class TypeDeclarationImpl extends StatementImpl implements TypeDeclaratio
   {
     switch (featureID)
     {
+      case LPackage.TYPE_DECLARATION__NAME:
+        return basicSetName(null, msgs);
       case LPackage.TYPE_DECLARATION__EXP:
         return basicSetExp(null, msgs);
     }
@@ -178,8 +196,8 @@ public class TypeDeclarationImpl extends StatementImpl implements TypeDeclaratio
   {
     switch (featureID)
     {
-      case LPackage.TYPE_DECLARATION__ID:
-        return getId();
+      case LPackage.TYPE_DECLARATION__NAME:
+        return getName();
       case LPackage.TYPE_DECLARATION__EXP:
         return getExp();
     }
@@ -196,8 +214,8 @@ public class TypeDeclarationImpl extends StatementImpl implements TypeDeclaratio
   {
     switch (featureID)
     {
-      case LPackage.TYPE_DECLARATION__ID:
-        setId((String)newValue);
+      case LPackage.TYPE_DECLARATION__NAME:
+        setName((TypeId)newValue);
         return;
       case LPackage.TYPE_DECLARATION__EXP:
         setExp((SetExpression)newValue);
@@ -216,8 +234,8 @@ public class TypeDeclarationImpl extends StatementImpl implements TypeDeclaratio
   {
     switch (featureID)
     {
-      case LPackage.TYPE_DECLARATION__ID:
-        setId(ID_EDEFAULT);
+      case LPackage.TYPE_DECLARATION__NAME:
+        setName((TypeId)null);
         return;
       case LPackage.TYPE_DECLARATION__EXP:
         setExp((SetExpression)null);
@@ -236,29 +254,12 @@ public class TypeDeclarationImpl extends StatementImpl implements TypeDeclaratio
   {
     switch (featureID)
     {
-      case LPackage.TYPE_DECLARATION__ID:
-        return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+      case LPackage.TYPE_DECLARATION__NAME:
+        return name != null;
       case LPackage.TYPE_DECLARATION__EXP:
         return exp != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (id: ");
-    result.append(id);
-    result.append(')');
-    return result.toString();
   }
 
 } //TypeDeclarationImpl

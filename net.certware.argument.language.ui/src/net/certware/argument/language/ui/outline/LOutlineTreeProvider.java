@@ -139,7 +139,7 @@ public class LOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	public Object _text(TypeDeclaration typeDeclaration) {
 		StringBuffer sb = new StringBuffer(Messages.LOutlineTreeProvider_1);
 		sb.append(' ');
-		sb.append(typeDeclaration.getId());
+		sb.append(typeDeclaration.getName().getName());
 		StyledString style = new StyledString(sb.toString(),
 				stylerFactory.
 				createXtextStyleAdapterStyler(getTypeDeclarationTextStyle()));
@@ -176,7 +176,7 @@ public class LOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	public Object _text(ConstantDeclaration constantDeclaration) {
 		StringBuffer sb = new StringBuffer(Messages.LOutlineTreeProvider_2);
 		sb.append(' ');
-		sb.append(constantDeclaration.getId());
+		sb.append(constantDeclaration.getName());
 		StyledString style = new StyledString(sb.toString(),
 				stylerFactory.
 				createXtextStyleAdapterStyler(getConstantDeclarationTextStyle()));

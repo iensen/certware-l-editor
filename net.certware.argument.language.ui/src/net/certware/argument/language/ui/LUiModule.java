@@ -19,6 +19,7 @@ import org.eclipse.core.runtime.Path;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.eclipse.ui.views.contentoutline.IContentOutlinePage;
+import org.eclipse.xtext.ui.editor.hyperlinking.DefaultHyperlinkDetector;
 import org.eclipse.xtext.ui.editor.outline.actions.IOutlineContribution;
 import org.eclipse.xtext.ui.editor.outline.impl.OutlineFilterAndSorter.IComparator;
 import org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage;
@@ -88,4 +89,19 @@ public class LUiModule extends net.certware.argument.language.ui.AbstractLUiModu
 	public Class<? extends IComparator> bindOutlineFilterAndSorter$IComparator() {
 		return TypedOutlineNodeComparator.class;
 	}
+	
+	/**
+	 * Bind hyperlink detector.
+	 */
+	public Class<? extends DefaultHyperlinkDetector> bindDefaultHyperlinkDetector() {
+		// return LLinkDetector.class;
+		return DefaultHyperlinkDetector.class;
+	}
+	
+	/**
+	 * Bind hyperlink helper.
+	 */
+//	public Class<? extends IHyperlinkHelper> bindIHyperlinkHelper() {
+//		return LLinkHelper.class;
+//	}
 }

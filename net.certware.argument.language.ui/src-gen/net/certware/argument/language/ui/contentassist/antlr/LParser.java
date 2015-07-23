@@ -47,7 +47,7 @@ public class LParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGroundPrimaryAccess().getAlternatives(), "rule__GroundPrimary__Alternatives");
 					put(grammarAccess.getGroundArithmeticLiteralAccess().getAlternatives(), "rule__GroundArithmeticLiteral__Alternatives");
 					put(grammarAccess.getGroundTermAccess().getAlternatives(), "rule__GroundTerm__Alternatives");
-					put(grammarAccess.getQuantifierAccess().getAlternatives(), "rule__Quantifier__Alternatives");
+					put(grammarAccess.getQuantifiedTermAccess().getAlternatives(), "rule__QuantifiedTerm__Alternatives");
 					put(grammarAccess.getTermAccess().getAlternatives(), "rule__Term__Alternatives");
 					put(grammarAccess.getSetMultiplicationAccess().getAlternatives_1_1(), "rule__SetMultiplication__Alternatives_1_1");
 					put(grammarAccess.getSetPrimaryAccess().getAlternatives(), "rule__SetPrimary__Alternatives");
@@ -80,7 +80,8 @@ public class LParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBasicTermsAccess().getGroup_1(), "rule__BasicTerms__Group_1__0");
 					put(grammarAccess.getGroundTermsAccess().getGroup(), "rule__GroundTerms__Group__0");
 					put(grammarAccess.getGroundTermsAccess().getGroup_1(), "rule__GroundTerms__Group_1__0");
-					put(grammarAccess.getQuantifiedTermAccess().getGroup(), "rule__QuantifiedTerm__Group__0");
+					put(grammarAccess.getUniversalQuantifiedTermAccess().getGroup(), "rule__UniversalQuantifiedTerm__Group__0");
+					put(grammarAccess.getExistentialQuantifiedTermAccess().getGroup(), "rule__ExistentialQuantifiedTerm__Group__0");
 					put(grammarAccess.getTermsAccess().getGroup(), "rule__Terms__Group__0");
 					put(grammarAccess.getTermsAccess().getGroup_1(), "rule__Terms__Group_1__0");
 					put(grammarAccess.getConstantDeclarationAccess().getGroup(), "rule__ConstantDeclaration__Group__0");
@@ -120,7 +121,7 @@ public class LParser extends AbstractContentAssistParser {
 					put(grammarAccess.getProgramAccess().getStatementsAssignment(), "rule__Program__StatementsAssignment");
 					put(grammarAccess.getNumericConstantAccess().getValueAssignment(), "rule__NumericConstant__ValueAssignment");
 					put(grammarAccess.getVariableAccess().getIdentifierAssignment(), "rule__Variable__IdentifierAssignment");
-					put(grammarAccess.getTypedVariableAccess().getTypeAssignment_0(), "rule__TypedVariable__TypeAssignment_0");
+					put(grammarAccess.getTypedVariableAccess().getNameAssignment_0(), "rule__TypedVariable__NameAssignment_0");
 					put(grammarAccess.getTypedVariableAccess().getVarAssignment_1(), "rule__TypedVariable__VarAssignment_1");
 					put(grammarAccess.getAdditionAccess().getRhsAssignment_1_2(), "rule__Addition__RhsAssignment_1_2");
 					put(grammarAccess.getMultiplicationAccess().getRhsAssignment_1_2(), "rule__Multiplication__RhsAssignment_1_2");
@@ -144,11 +145,14 @@ public class LParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBasicTermsAccess().getCdrAssignment_1_1(), "rule__BasicTerms__CdrAssignment_1_1");
 					put(grammarAccess.getGroundTermsAccess().getCarAssignment_0(), "rule__GroundTerms__CarAssignment_0");
 					put(grammarAccess.getGroundTermsAccess().getCdrAssignment_1_1(), "rule__GroundTerms__CdrAssignment_1_1");
+					put(grammarAccess.getUniversalQuantifiedTermAccess().getNameAssignment_1(), "rule__UniversalQuantifiedTerm__NameAssignment_1");
+					put(grammarAccess.getExistentialQuantifiedTermAccess().getNameAssignment_1(), "rule__ExistentialQuantifiedTerm__NameAssignment_1");
 					put(grammarAccess.getTermsAccess().getCarAssignment_0(), "rule__Terms__CarAssignment_0");
 					put(grammarAccess.getTermsAccess().getCdrAssignment_1_1(), "rule__Terms__CdrAssignment_1_1");
-					put(grammarAccess.getConstantDeclarationAccess().getIdAssignment_1(), "rule__ConstantDeclaration__IdAssignment_1");
+					put(grammarAccess.getConstantDeclarationAccess().getNameAssignment_1(), "rule__ConstantDeclaration__NameAssignment_1");
 					put(grammarAccess.getConstantDeclarationAccess().getCvAssignment_3(), "rule__ConstantDeclaration__CvAssignment_3");
-					put(grammarAccess.getTypeDeclarationAccess().getIdAssignment_1(), "rule__TypeDeclaration__IdAssignment_1");
+					put(grammarAccess.getTypeIdAccess().getNameAssignment(), "rule__TypeId__NameAssignment");
+					put(grammarAccess.getTypeDeclarationAccess().getNameAssignment_1(), "rule__TypeDeclaration__NameAssignment_1");
 					put(grammarAccess.getTypeDeclarationAccess().getExpAssignment_3(), "rule__TypeDeclaration__ExpAssignment_3");
 					put(grammarAccess.getLimitAccess().getCvAssignment(), "rule__Limit__CvAssignment");
 					put(grammarAccess.getSetAccess().getLhsAssignment_0(), "rule__Set__LhsAssignment_0");

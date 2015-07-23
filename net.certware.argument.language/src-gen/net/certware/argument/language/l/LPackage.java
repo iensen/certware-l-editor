@@ -92,7 +92,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getTerm()
    * @generated
    */
-  int TERM = 15;
+  int TERM = 17;
 
   /**
    * The number of structural features of the '<em>Term</em>' class.
@@ -151,25 +151,6 @@ public interface LPackage extends EPackage
   int NUMERIC_CONSTANT_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link net.certware.argument.language.l.impl.QuantifiedTermImpl <em>Quantified Term</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see net.certware.argument.language.l.impl.QuantifiedTermImpl
-   * @see net.certware.argument.language.l.impl.LPackageImpl#getQuantifiedTerm()
-   * @generated
-   */
-  int QUANTIFIED_TERM = 14;
-
-  /**
-   * The number of structural features of the '<em>Quantified Term</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int QUANTIFIED_TERM_FEATURE_COUNT = TERM_FEATURE_COUNT + 0;
-
-  /**
    * The meta object id for the '{@link net.certware.argument.language.l.impl.VariableImpl <em>Variable</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -186,7 +167,7 @@ public interface LPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VARIABLE__IDENTIFIER = QUANTIFIED_TERM_FEATURE_COUNT + 0;
+  int VARIABLE__IDENTIFIER = 0;
 
   /**
    * The number of structural features of the '<em>Variable</em>' class.
@@ -195,7 +176,7 @@ public interface LPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VARIABLE_FEATURE_COUNT = QUANTIFIED_TERM_FEATURE_COUNT + 1;
+  int VARIABLE_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link net.certware.argument.language.l.impl.TypedVariableImpl <em>Typed Variable</em>}' class.
@@ -208,13 +189,13 @@ public interface LPackage extends EPackage
   int TYPED_VARIABLE = 4;
 
   /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
+   * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TYPED_VARIABLE__TYPE = BASIC_TERM_FEATURE_COUNT + 0;
+  int TYPED_VARIABLE__NAME = BASIC_TERM_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Var</b></em>' containment reference.
@@ -532,6 +513,81 @@ public interface LPackage extends EPackage
   int GROUND_TERMS_FEATURE_COUNT = GROUND_FUNCTIONAL_TERM_FEATURE_COUNT + 2;
 
   /**
+   * The meta object id for the '{@link net.certware.argument.language.l.impl.QuantifiedTermImpl <em>Quantified Term</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see net.certware.argument.language.l.impl.QuantifiedTermImpl
+   * @see net.certware.argument.language.l.impl.LPackageImpl#getQuantifiedTerm()
+   * @generated
+   */
+  int QUANTIFIED_TERM = 14;
+
+  /**
+   * The number of structural features of the '<em>Quantified Term</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUANTIFIED_TERM_FEATURE_COUNT = TERM_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link net.certware.argument.language.l.impl.UniversalQuantifiedTermImpl <em>Universal Quantified Term</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see net.certware.argument.language.l.impl.UniversalQuantifiedTermImpl
+   * @see net.certware.argument.language.l.impl.LPackageImpl#getUniversalQuantifiedTerm()
+   * @generated
+   */
+  int UNIVERSAL_QUANTIFIED_TERM = 15;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UNIVERSAL_QUANTIFIED_TERM__NAME = QUANTIFIED_TERM_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Universal Quantified Term</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UNIVERSAL_QUANTIFIED_TERM_FEATURE_COUNT = QUANTIFIED_TERM_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link net.certware.argument.language.l.impl.ExistentialQuantifiedTermImpl <em>Existential Quantified Term</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see net.certware.argument.language.l.impl.ExistentialQuantifiedTermImpl
+   * @see net.certware.argument.language.l.impl.LPackageImpl#getExistentialQuantifiedTerm()
+   * @generated
+   */
+  int EXISTENTIAL_QUANTIFIED_TERM = 16;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXISTENTIAL_QUANTIFIED_TERM__NAME = QUANTIFIED_TERM_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Existential Quantified Term</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXISTENTIAL_QUANTIFIED_TERM_FEATURE_COUNT = QUANTIFIED_TERM_FEATURE_COUNT + 1;
+
+  /**
    * The meta object id for the '{@link net.certware.argument.language.l.impl.TermsImpl <em>Terms</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -539,7 +595,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getTerms()
    * @generated
    */
-  int TERMS = 16;
+  int TERMS = 18;
 
   /**
    * The feature id for the '<em><b>Car</b></em>' containment reference.
@@ -576,7 +632,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getStatement()
    * @generated
    */
-  int STATEMENT = 40;
+  int STATEMENT = 43;
 
   /**
    * The number of structural features of the '<em>Statement</em>' class.
@@ -595,16 +651,16 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getConstantDeclaration()
    * @generated
    */
-  int CONSTANT_DECLARATION = 17;
+  int CONSTANT_DECLARATION = 19;
 
   /**
-   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONSTANT_DECLARATION__ID = STATEMENT_FEATURE_COUNT + 0;
+  int CONSTANT_DECLARATION__NAME = STATEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Cv</b></em>' containment reference.
@@ -625,6 +681,34 @@ public interface LPackage extends EPackage
   int CONSTANT_DECLARATION_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
 
   /**
+   * The meta object id for the '{@link net.certware.argument.language.l.impl.TypeIdImpl <em>Type Id</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see net.certware.argument.language.l.impl.TypeIdImpl
+   * @see net.certware.argument.language.l.impl.LPackageImpl#getTypeId()
+   * @generated
+   */
+  int TYPE_ID = 20;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_ID__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Type Id</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_ID_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link net.certware.argument.language.l.impl.TypeDeclarationImpl <em>Type Declaration</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -632,16 +716,16 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getTypeDeclaration()
    * @generated
    */
-  int TYPE_DECLARATION = 18;
+  int TYPE_DECLARATION = 21;
 
   /**
-   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TYPE_DECLARATION__ID = STATEMENT_FEATURE_COUNT + 0;
+  int TYPE_DECLARATION__NAME = STATEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Exp</b></em>' containment reference.
@@ -669,7 +753,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getLimit()
    * @generated
    */
-  int LIMIT = 19;
+  int LIMIT = 22;
 
   /**
    * The feature id for the '<em><b>Cv</b></em>' containment reference.
@@ -697,7 +781,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getSetExpression()
    * @generated
    */
-  int SET_EXPRESSION = 22;
+  int SET_EXPRESSION = 25;
 
   /**
    * The number of structural features of the '<em>Set Expression</em>' class.
@@ -716,7 +800,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getSet()
    * @generated
    */
-  int SET = 20;
+  int SET = 23;
 
   /**
    * The feature id for the '<em><b>Lhs</b></em>' attribute.
@@ -753,7 +837,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getRange()
    * @generated
    */
-  int RANGE = 21;
+  int RANGE = 24;
 
   /**
    * The feature id for the '<em><b>Lhs</b></em>' containment reference.
@@ -790,7 +874,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getSetConstruct()
    * @generated
    */
-  int SET_CONSTRUCT = 23;
+  int SET_CONSTRUCT = 26;
 
   /**
    * The feature id for the '<em><b>Lhs</b></em>' containment reference.
@@ -827,7 +911,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getTVars()
    * @generated
    */
-  int TVARS = 24;
+  int TVARS = 27;
 
   /**
    * The feature id for the '<em><b>Car</b></em>' containment reference.
@@ -864,7 +948,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getTVar()
    * @generated
    */
-  int TVAR = 25;
+  int TVAR = 28;
 
   /**
    * The feature id for the '<em><b>Var</b></em>' containment reference.
@@ -876,7 +960,7 @@ public interface LPackage extends EPackage
   int TVAR__VAR = 0;
 
   /**
-   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * The feature id for the '<em><b>Id</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -901,7 +985,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getSentence()
    * @generated
    */
-  int SENTENCE = 30;
+  int SENTENCE = 33;
 
   /**
    * The number of structural features of the '<em>Sentence</em>' class.
@@ -920,7 +1004,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getSentenceExpr()
    * @generated
    */
-  int SENTENCE_EXPR = 31;
+  int SENTENCE_EXPR = 34;
 
   /**
    * The number of structural features of the '<em>Sentence Expr</em>' class.
@@ -939,7 +1023,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getSentenceLiteral()
    * @generated
    */
-  int SENTENCE_LITERAL = 32;
+  int SENTENCE_LITERAL = 35;
 
   /**
    * The number of structural features of the '<em>Sentence Literal</em>' class.
@@ -958,7 +1042,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getAtom()
    * @generated
    */
-  int ATOM = 26;
+  int ATOM = 29;
 
   /**
    * The number of structural features of the '<em>Atom</em>' class.
@@ -977,7 +1061,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getPredicateAtom()
    * @generated
    */
-  int PREDICATE_ATOM = 27;
+  int PREDICATE_ATOM = 30;
 
   /**
    * The feature id for the '<em><b>Fid</b></em>' attribute.
@@ -1014,7 +1098,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getHead()
    * @generated
    */
-  int HEAD = 39;
+  int HEAD = 42;
 
   /**
    * The number of structural features of the '<em>Head</em>' class.
@@ -1033,7 +1117,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getMaybeLiteral()
    * @generated
    */
-  int MAYBE_LITERAL = 35;
+  int MAYBE_LITERAL = 38;
 
   /**
    * The number of structural features of the '<em>Maybe Literal</em>' class.
@@ -1052,7 +1136,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getBasicPredicateAtom()
    * @generated
    */
-  int BASIC_PREDICATE_ATOM = 28;
+  int BASIC_PREDICATE_ATOM = 31;
 
   /**
    * The feature id for the '<em><b>Fid</b></em>' attribute.
@@ -1089,7 +1173,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getBuiltInAtom()
    * @generated
    */
-  int BUILT_IN_ATOM = 29;
+  int BUILT_IN_ATOM = 32;
 
   /**
    * The feature id for the '<em><b>Lhs</b></em>' containment reference.
@@ -1135,7 +1219,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getpSentence()
    * @generated
    */
-  int PSENTENCE = 33;
+  int PSENTENCE = 36;
 
   /**
    * The number of structural features of the '<em>pSentence</em>' class.
@@ -1154,7 +1238,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getpSentenceLiteral()
    * @generated
    */
-  int PSENTENCE_LITERAL = 34;
+  int PSENTENCE_LITERAL = 37;
 
   /**
    * The number of structural features of the '<em>pSentence Literal</em>' class.
@@ -1173,7 +1257,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getCardinalityConstraint()
    * @generated
    */
-  int CARDINALITY_CONSTRAINT = 36;
+  int CARDINALITY_CONSTRAINT = 39;
 
   /**
    * The feature id for the '<em><b>Lhs</b></em>' containment reference.
@@ -1219,7 +1303,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getBound()
    * @generated
    */
-  int BOUND = 37;
+  int BOUND = 40;
 
   /**
    * The feature id for the '<em><b>Av</b></em>' containment reference.
@@ -1247,7 +1331,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getRule()
    * @generated
    */
-  int RULE = 38;
+  int RULE = 41;
 
   /**
    * The feature id for the '<em><b>Head</b></em>' containment reference.
@@ -1293,7 +1377,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getAddition()
    * @generated
    */
-  int ADDITION = 41;
+  int ADDITION = 44;
 
   /**
    * The feature id for the '<em><b>Minus</b></em>' attribute.
@@ -1348,7 +1432,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getMultiplication()
    * @generated
    */
-  int MULTIPLICATION = 42;
+  int MULTIPLICATION = 45;
 
   /**
    * The feature id for the '<em><b>Minus</b></em>' attribute.
@@ -1403,7 +1487,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getGroundAddition()
    * @generated
    */
-  int GROUND_ADDITION = 43;
+  int GROUND_ADDITION = 46;
 
   /**
    * The feature id for the '<em><b>Minus</b></em>' attribute.
@@ -1458,7 +1542,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getGroundMultiplication()
    * @generated
    */
-  int GROUND_MULTIPLICATION = 44;
+  int GROUND_MULTIPLICATION = 47;
 
   /**
    * The feature id for the '<em><b>Minus</b></em>' attribute.
@@ -1513,7 +1597,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getSetAddition()
    * @generated
    */
-  int SET_ADDITION = 45;
+  int SET_ADDITION = 48;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1550,7 +1634,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getSetMultiplication()
    * @generated
    */
-  int SET_MULTIPLICATION = 46;
+  int SET_MULTIPLICATION = 49;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1587,7 +1671,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getOrSentence()
    * @generated
    */
-  int OR_SENTENCE = 47;
+  int OR_SENTENCE = 50;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1624,7 +1708,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getAndSentence()
    * @generated
    */
-  int AND_SENTENCE = 48;
+  int AND_SENTENCE = 51;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1661,7 +1745,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getpOrSentence()
    * @generated
    */
-  int POR_SENTENCE = 49;
+  int POR_SENTENCE = 52;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1698,7 +1782,7 @@ public interface LPackage extends EPackage
    * @see net.certware.argument.language.l.impl.LPackageImpl#getpAndSentence()
    * @generated
    */
-  int PAND_SENTENCE = 50;
+  int PAND_SENTENCE = 53;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1812,15 +1896,15 @@ public interface LPackage extends EPackage
   EClass getTypedVariable();
 
   /**
-   * Returns the meta object for the attribute '{@link net.certware.argument.language.l.TypedVariable#getType <em>Type</em>}'.
+   * Returns the meta object for the attribute '{@link net.certware.argument.language.l.TypedVariable#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Type</em>'.
-   * @see net.certware.argument.language.l.TypedVariable#getType()
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see net.certware.argument.language.l.TypedVariable#getName()
    * @see #getTypedVariable()
    * @generated
    */
-  EAttribute getTypedVariable_Type();
+  EAttribute getTypedVariable_Name();
 
   /**
    * Returns the meta object for the containment reference '{@link net.certware.argument.language.l.TypedVariable#getVar <em>Var</em>}'.
@@ -2088,6 +2172,48 @@ public interface LPackage extends EPackage
   EClass getQuantifiedTerm();
 
   /**
+   * Returns the meta object for class '{@link net.certware.argument.language.l.UniversalQuantifiedTerm <em>Universal Quantified Term</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Universal Quantified Term</em>'.
+   * @see net.certware.argument.language.l.UniversalQuantifiedTerm
+   * @generated
+   */
+  EClass getUniversalQuantifiedTerm();
+
+  /**
+   * Returns the meta object for the reference '{@link net.certware.argument.language.l.UniversalQuantifiedTerm#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Name</em>'.
+   * @see net.certware.argument.language.l.UniversalQuantifiedTerm#getName()
+   * @see #getUniversalQuantifiedTerm()
+   * @generated
+   */
+  EReference getUniversalQuantifiedTerm_Name();
+
+  /**
+   * Returns the meta object for class '{@link net.certware.argument.language.l.ExistentialQuantifiedTerm <em>Existential Quantified Term</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Existential Quantified Term</em>'.
+   * @see net.certware.argument.language.l.ExistentialQuantifiedTerm
+   * @generated
+   */
+  EClass getExistentialQuantifiedTerm();
+
+  /**
+   * Returns the meta object for the reference '{@link net.certware.argument.language.l.ExistentialQuantifiedTerm#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Name</em>'.
+   * @see net.certware.argument.language.l.ExistentialQuantifiedTerm#getName()
+   * @see #getExistentialQuantifiedTerm()
+   * @generated
+   */
+  EReference getExistentialQuantifiedTerm_Name();
+
+  /**
    * Returns the meta object for class '{@link net.certware.argument.language.l.Term <em>Term</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2140,15 +2266,15 @@ public interface LPackage extends EPackage
   EClass getConstantDeclaration();
 
   /**
-   * Returns the meta object for the attribute '{@link net.certware.argument.language.l.ConstantDeclaration#getId <em>Id</em>}'.
+   * Returns the meta object for the attribute '{@link net.certware.argument.language.l.ConstantDeclaration#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Id</em>'.
-   * @see net.certware.argument.language.l.ConstantDeclaration#getId()
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see net.certware.argument.language.l.ConstantDeclaration#getName()
    * @see #getConstantDeclaration()
    * @generated
    */
-  EAttribute getConstantDeclaration_Id();
+  EAttribute getConstantDeclaration_Name();
 
   /**
    * Returns the meta object for the containment reference '{@link net.certware.argument.language.l.ConstantDeclaration#getCv <em>Cv</em>}'.
@@ -2162,6 +2288,27 @@ public interface LPackage extends EPackage
   EReference getConstantDeclaration_Cv();
 
   /**
+   * Returns the meta object for class '{@link net.certware.argument.language.l.TypeId <em>Type Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Type Id</em>'.
+   * @see net.certware.argument.language.l.TypeId
+   * @generated
+   */
+  EClass getTypeId();
+
+  /**
+   * Returns the meta object for the attribute '{@link net.certware.argument.language.l.TypeId#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see net.certware.argument.language.l.TypeId#getName()
+   * @see #getTypeId()
+   * @generated
+   */
+  EAttribute getTypeId_Name();
+
+  /**
    * Returns the meta object for class '{@link net.certware.argument.language.l.TypeDeclaration <em>Type Declaration</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2172,15 +2319,15 @@ public interface LPackage extends EPackage
   EClass getTypeDeclaration();
 
   /**
-   * Returns the meta object for the attribute '{@link net.certware.argument.language.l.TypeDeclaration#getId <em>Id</em>}'.
+   * Returns the meta object for the containment reference '{@link net.certware.argument.language.l.TypeDeclaration#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Id</em>'.
-   * @see net.certware.argument.language.l.TypeDeclaration#getId()
+   * @return the meta object for the containment reference '<em>Name</em>'.
+   * @see net.certware.argument.language.l.TypeDeclaration#getName()
    * @see #getTypeDeclaration()
    * @generated
    */
-  EAttribute getTypeDeclaration_Id();
+  EReference getTypeDeclaration_Name();
 
   /**
    * Returns the meta object for the containment reference '{@link net.certware.argument.language.l.TypeDeclaration#getExp <em>Exp</em>}'.
@@ -2374,15 +2521,15 @@ public interface LPackage extends EPackage
   EReference getTVar_Var();
 
   /**
-   * Returns the meta object for the attribute '{@link net.certware.argument.language.l.TVar#getId <em>Id</em>}'.
+   * Returns the meta object for the reference '{@link net.certware.argument.language.l.TVar#getId <em>Id</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Id</em>'.
+   * @return the meta object for the reference '<em>Id</em>'.
    * @see net.certware.argument.language.l.TVar#getId()
    * @see #getTVar()
    * @generated
    */
-  EAttribute getTVar_Id();
+  EReference getTVar_Id();
 
   /**
    * Returns the meta object for class '{@link net.certware.argument.language.l.Atom <em>Atom</em>}'.
@@ -3018,12 +3165,12 @@ public interface LPackage extends EPackage
     EClass TYPED_VARIABLE = eINSTANCE.getTypedVariable();
 
     /**
-     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TYPED_VARIABLE__TYPE = eINSTANCE.getTypedVariable_Type();
+    EAttribute TYPED_VARIABLE__NAME = eINSTANCE.getTypedVariable_Name();
 
     /**
      * The meta object literal for the '<em><b>Var</b></em>' containment reference feature.
@@ -3246,6 +3393,42 @@ public interface LPackage extends EPackage
     EClass QUANTIFIED_TERM = eINSTANCE.getQuantifiedTerm();
 
     /**
+     * The meta object literal for the '{@link net.certware.argument.language.l.impl.UniversalQuantifiedTermImpl <em>Universal Quantified Term</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see net.certware.argument.language.l.impl.UniversalQuantifiedTermImpl
+     * @see net.certware.argument.language.l.impl.LPackageImpl#getUniversalQuantifiedTerm()
+     * @generated
+     */
+    EClass UNIVERSAL_QUANTIFIED_TERM = eINSTANCE.getUniversalQuantifiedTerm();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference UNIVERSAL_QUANTIFIED_TERM__NAME = eINSTANCE.getUniversalQuantifiedTerm_Name();
+
+    /**
+     * The meta object literal for the '{@link net.certware.argument.language.l.impl.ExistentialQuantifiedTermImpl <em>Existential Quantified Term</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see net.certware.argument.language.l.impl.ExistentialQuantifiedTermImpl
+     * @see net.certware.argument.language.l.impl.LPackageImpl#getExistentialQuantifiedTerm()
+     * @generated
+     */
+    EClass EXISTENTIAL_QUANTIFIED_TERM = eINSTANCE.getExistentialQuantifiedTerm();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXISTENTIAL_QUANTIFIED_TERM__NAME = eINSTANCE.getExistentialQuantifiedTerm_Name();
+
+    /**
      * The meta object literal for the '{@link net.certware.argument.language.l.impl.TermImpl <em>Term</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3292,12 +3475,12 @@ public interface LPackage extends EPackage
     EClass CONSTANT_DECLARATION = eINSTANCE.getConstantDeclaration();
 
     /**
-     * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CONSTANT_DECLARATION__ID = eINSTANCE.getConstantDeclaration_Id();
+    EAttribute CONSTANT_DECLARATION__NAME = eINSTANCE.getConstantDeclaration_Name();
 
     /**
      * The meta object literal for the '<em><b>Cv</b></em>' containment reference feature.
@@ -3306,6 +3489,24 @@ public interface LPackage extends EPackage
      * @generated
      */
     EReference CONSTANT_DECLARATION__CV = eINSTANCE.getConstantDeclaration_Cv();
+
+    /**
+     * The meta object literal for the '{@link net.certware.argument.language.l.impl.TypeIdImpl <em>Type Id</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see net.certware.argument.language.l.impl.TypeIdImpl
+     * @see net.certware.argument.language.l.impl.LPackageImpl#getTypeId()
+     * @generated
+     */
+    EClass TYPE_ID = eINSTANCE.getTypeId();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TYPE_ID__NAME = eINSTANCE.getTypeId_Name();
 
     /**
      * The meta object literal for the '{@link net.certware.argument.language.l.impl.TypeDeclarationImpl <em>Type Declaration</em>}' class.
@@ -3318,12 +3519,12 @@ public interface LPackage extends EPackage
     EClass TYPE_DECLARATION = eINSTANCE.getTypeDeclaration();
 
     /**
-     * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Name</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TYPE_DECLARATION__ID = eINSTANCE.getTypeDeclaration_Id();
+    EReference TYPE_DECLARATION__NAME = eINSTANCE.getTypeDeclaration_Name();
 
     /**
      * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
@@ -3484,12 +3685,12 @@ public interface LPackage extends EPackage
     EReference TVAR__VAR = eINSTANCE.getTVar_Var();
 
     /**
-     * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Id</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TVAR__ID = eINSTANCE.getTVar_Id();
+    EReference TVAR__ID = eINSTANCE.getTVar_Id();
 
     /**
      * The meta object literal for the '{@link net.certware.argument.language.l.impl.AtomImpl <em>Atom</em>}' class.

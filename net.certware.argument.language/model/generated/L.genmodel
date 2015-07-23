@@ -18,7 +18,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//Variable/identifier"/>
     </genClasses>
     <genClasses ecoreClass="L.ecore#//TypedVariable">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//TypedVariable/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//TypedVariable/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//TypedVariable/var"/>
     </genClasses>
     <genClasses ecoreClass="L.ecore#//ArithmeticTerm">
@@ -50,17 +50,26 @@
     </genClasses>
     <genClasses ecoreClass="L.ecore#//GroundTerm"/>
     <genClasses ecoreClass="L.ecore#//QuantifiedTerm"/>
+    <genClasses ecoreClass="L.ecore#//UniversalQuantifiedTerm">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference L.ecore#//UniversalQuantifiedTerm/name"/>
+    </genClasses>
+    <genClasses ecoreClass="L.ecore#//ExistentialQuantifiedTerm">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference L.ecore#//ExistentialQuantifiedTerm/name"/>
+    </genClasses>
     <genClasses ecoreClass="L.ecore#//Term"/>
     <genClasses ecoreClass="L.ecore#//Terms">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//Terms/car"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//Terms/cdr"/>
     </genClasses>
     <genClasses ecoreClass="L.ecore#//ConstantDeclaration">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//ConstantDeclaration/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//ConstantDeclaration/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//ConstantDeclaration/cv"/>
     </genClasses>
+    <genClasses ecoreClass="L.ecore#//TypeId">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//TypeId/name"/>
+    </genClasses>
     <genClasses ecoreClass="L.ecore#//TypeDeclaration">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//TypeDeclaration/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//TypeDeclaration/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//TypeDeclaration/exp"/>
     </genClasses>
     <genClasses ecoreClass="L.ecore#//Limit">
@@ -85,7 +94,7 @@
     </genClasses>
     <genClasses ecoreClass="L.ecore#//TVar">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference L.ecore#//TVar/var"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute L.ecore#//TVar/id"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference L.ecore#//TVar/id"/>
     </genClasses>
     <genClasses ecoreClass="L.ecore#//Atom"/>
     <genClasses ecoreClass="L.ecore#//PredicateAtom">

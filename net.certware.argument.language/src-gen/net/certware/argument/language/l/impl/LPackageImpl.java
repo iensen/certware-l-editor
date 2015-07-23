@@ -14,6 +14,7 @@ import net.certware.argument.language.l.Bound;
 import net.certware.argument.language.l.BuiltInAtom;
 import net.certware.argument.language.l.CardinalityConstraint;
 import net.certware.argument.language.l.ConstantDeclaration;
+import net.certware.argument.language.l.ExistentialQuantifiedTerm;
 import net.certware.argument.language.l.FunctionalTerm;
 import net.certware.argument.language.l.GroundAddition;
 import net.certware.argument.language.l.GroundArithmeticLiteral;
@@ -49,7 +50,9 @@ import net.certware.argument.language.l.TVars;
 import net.certware.argument.language.l.Term;
 import net.certware.argument.language.l.Terms;
 import net.certware.argument.language.l.TypeDeclaration;
+import net.certware.argument.language.l.TypeId;
 import net.certware.argument.language.l.TypedVariable;
+import net.certware.argument.language.l.UniversalQuantifiedTerm;
 import net.certware.argument.language.l.Variable;
 import net.certware.argument.language.l.pAndSentence;
 import net.certware.argument.language.l.pOrSentence;
@@ -181,6 +184,20 @@ public class LPackageImpl extends EPackageImpl implements LPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass universalQuantifiedTermEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass existentialQuantifiedTermEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass termEClass = null;
 
   /**
@@ -196,6 +213,13 @@ public class LPackageImpl extends EPackageImpl implements LPackage
    * @generated
    */
   private EClass constantDeclarationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass typeIdEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -576,7 +600,7 @@ public class LPackageImpl extends EPackageImpl implements LPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTypedVariable_Type()
+  public EAttribute getTypedVariable_Name()
   {
     return (EAttribute)typedVariableEClass.getEStructuralFeatures().get(0);
   }
@@ -836,6 +860,46 @@ public class LPackageImpl extends EPackageImpl implements LPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getUniversalQuantifiedTerm()
+  {
+    return universalQuantifiedTermEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getUniversalQuantifiedTerm_Name()
+  {
+    return (EReference)universalQuantifiedTermEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getExistentialQuantifiedTerm()
+  {
+    return existentialQuantifiedTermEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getExistentialQuantifiedTerm_Name()
+  {
+    return (EReference)existentialQuantifiedTermEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getTerm()
   {
     return termEClass;
@@ -886,7 +950,7 @@ public class LPackageImpl extends EPackageImpl implements LPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getConstantDeclaration_Id()
+  public EAttribute getConstantDeclaration_Name()
   {
     return (EAttribute)constantDeclarationEClass.getEStructuralFeatures().get(0);
   }
@@ -906,6 +970,26 @@ public class LPackageImpl extends EPackageImpl implements LPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getTypeId()
+  {
+    return typeIdEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTypeId_Name()
+  {
+    return (EAttribute)typeIdEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getTypeDeclaration()
   {
     return typeDeclarationEClass;
@@ -916,9 +1000,9 @@ public class LPackageImpl extends EPackageImpl implements LPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTypeDeclaration_Id()
+  public EReference getTypeDeclaration_Name()
   {
-    return (EAttribute)typeDeclarationEClass.getEStructuralFeatures().get(0);
+    return (EReference)typeDeclarationEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1106,9 +1190,9 @@ public class LPackageImpl extends EPackageImpl implements LPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTVar_Id()
+  public EReference getTVar_Id()
   {
-    return (EAttribute)tVarEClass.getEStructuralFeatures().get(1);
+    return (EReference)tVarEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1663,7 +1747,7 @@ public class LPackageImpl extends EPackageImpl implements LPackage
     createEAttribute(variableEClass, VARIABLE__IDENTIFIER);
 
     typedVariableEClass = createEClass(TYPED_VARIABLE);
-    createEAttribute(typedVariableEClass, TYPED_VARIABLE__TYPE);
+    createEAttribute(typedVariableEClass, TYPED_VARIABLE__NAME);
     createEReference(typedVariableEClass, TYPED_VARIABLE__VAR);
 
     arithmeticTermEClass = createEClass(ARITHMETIC_TERM);
@@ -1700,6 +1784,12 @@ public class LPackageImpl extends EPackageImpl implements LPackage
 
     quantifiedTermEClass = createEClass(QUANTIFIED_TERM);
 
+    universalQuantifiedTermEClass = createEClass(UNIVERSAL_QUANTIFIED_TERM);
+    createEReference(universalQuantifiedTermEClass, UNIVERSAL_QUANTIFIED_TERM__NAME);
+
+    existentialQuantifiedTermEClass = createEClass(EXISTENTIAL_QUANTIFIED_TERM);
+    createEReference(existentialQuantifiedTermEClass, EXISTENTIAL_QUANTIFIED_TERM__NAME);
+
     termEClass = createEClass(TERM);
 
     termsEClass = createEClass(TERMS);
@@ -1707,11 +1797,14 @@ public class LPackageImpl extends EPackageImpl implements LPackage
     createEReference(termsEClass, TERMS__CDR);
 
     constantDeclarationEClass = createEClass(CONSTANT_DECLARATION);
-    createEAttribute(constantDeclarationEClass, CONSTANT_DECLARATION__ID);
+    createEAttribute(constantDeclarationEClass, CONSTANT_DECLARATION__NAME);
     createEReference(constantDeclarationEClass, CONSTANT_DECLARATION__CV);
 
+    typeIdEClass = createEClass(TYPE_ID);
+    createEAttribute(typeIdEClass, TYPE_ID__NAME);
+
     typeDeclarationEClass = createEClass(TYPE_DECLARATION);
-    createEAttribute(typeDeclarationEClass, TYPE_DECLARATION__ID);
+    createEReference(typeDeclarationEClass, TYPE_DECLARATION__NAME);
     createEReference(typeDeclarationEClass, TYPE_DECLARATION__EXP);
 
     limitEClass = createEClass(LIMIT);
@@ -1737,7 +1830,7 @@ public class LPackageImpl extends EPackageImpl implements LPackage
 
     tVarEClass = createEClass(TVAR);
     createEReference(tVarEClass, TVAR__VAR);
-    createEAttribute(tVarEClass, TVAR__ID);
+    createEReference(tVarEClass, TVAR__ID);
 
     atomEClass = createEClass(ATOM);
 
@@ -1846,7 +1939,6 @@ public class LPackageImpl extends EPackageImpl implements LPackage
 
     // Add supertypes to classes
     basicTermEClass.getESuperTypes().add(this.getTerm());
-    variableEClass.getESuperTypes().add(this.getQuantifiedTerm());
     typedVariableEClass.getESuperTypes().add(this.getBasicTerm());
     arithmeticTermEClass.getESuperTypes().add(this.getBasicTerm());
     arithmeticTermEClass.getESuperTypes().add(this.getGroundArithmeticTerm());
@@ -1855,6 +1947,8 @@ public class LPackageImpl extends EPackageImpl implements LPackage
     groundFunctionalTermEClass.getESuperTypes().add(this.getGroundTerm());
     groundTermsEClass.getESuperTypes().add(this.getGroundFunctionalTerm());
     quantifiedTermEClass.getESuperTypes().add(this.getTerm());
+    universalQuantifiedTermEClass.getESuperTypes().add(this.getQuantifiedTerm());
+    existentialQuantifiedTermEClass.getESuperTypes().add(this.getQuantifiedTerm());
     termsEClass.getESuperTypes().add(this.getFunctionalTerm());
     constantDeclarationEClass.getESuperTypes().add(this.getStatement());
     typeDeclarationEClass.getESuperTypes().add(this.getStatement());
@@ -1898,7 +1992,7 @@ public class LPackageImpl extends EPackageImpl implements LPackage
     initEAttribute(getVariable_Identifier(), ecorePackage.getEString(), "identifier", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(typedVariableEClass, TypedVariable.class, "TypedVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getTypedVariable_Type(), ecorePackage.getEString(), "type", null, 0, 1, TypedVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTypedVariable_Name(), ecorePackage.getEString(), "name", null, 0, 1, TypedVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTypedVariable_Var(), this.getVariable(), null, "var", null, 0, 1, TypedVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(arithmeticTermEClass, ArithmeticTerm.class, "ArithmeticTerm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1935,6 +2029,12 @@ public class LPackageImpl extends EPackageImpl implements LPackage
 
     initEClass(quantifiedTermEClass, QuantifiedTerm.class, "QuantifiedTerm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+    initEClass(universalQuantifiedTermEClass, UniversalQuantifiedTerm.class, "UniversalQuantifiedTerm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getUniversalQuantifiedTerm_Name(), this.getTypeId(), null, "name", null, 0, 1, UniversalQuantifiedTerm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(existentialQuantifiedTermEClass, ExistentialQuantifiedTerm.class, "ExistentialQuantifiedTerm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getExistentialQuantifiedTerm_Name(), this.getTVar(), null, "name", null, 0, 1, ExistentialQuantifiedTerm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(termEClass, Term.class, "Term", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(termsEClass, Terms.class, "Terms", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1942,11 +2042,14 @@ public class LPackageImpl extends EPackageImpl implements LPackage
     initEReference(getTerms_Cdr(), this.getTerm(), null, "cdr", null, 0, -1, Terms.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(constantDeclarationEClass, ConstantDeclaration.class, "ConstantDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getConstantDeclaration_Id(), ecorePackage.getEString(), "id", null, 0, 1, ConstantDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getConstantDeclaration_Name(), ecorePackage.getEString(), "name", null, 0, 1, ConstantDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getConstantDeclaration_Cv(), this.getGroundArithmeticTerm(), null, "cv", null, 0, 1, ConstantDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(typeIdEClass, TypeId.class, "TypeId", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTypeId_Name(), ecorePackage.getEString(), "name", null, 0, 1, TypeId.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(typeDeclarationEClass, TypeDeclaration.class, "TypeDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getTypeDeclaration_Id(), ecorePackage.getEString(), "id", null, 0, 1, TypeDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTypeDeclaration_Name(), this.getTypeId(), null, "name", null, 0, 1, TypeDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTypeDeclaration_Exp(), this.getSetExpression(), null, "exp", null, 0, 1, TypeDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(limitEClass, Limit.class, "Limit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1972,7 +2075,7 @@ public class LPackageImpl extends EPackageImpl implements LPackage
 
     initEClass(tVarEClass, TVar.class, "TVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getTVar_Var(), this.getVariable(), null, "var", null, 0, 1, TVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTVar_Id(), ecorePackage.getEString(), "id", null, 0, 1, TVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTVar_Id(), this.getTypeId(), null, "id", null, 0, 1, TVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(atomEClass, Atom.class, "Atom", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

@@ -50,29 +50,29 @@ public interface TVar extends EObject
   void setVar(Variable value);
 
   /**
-   * Returns the value of the '<em><b>Id</b></em>' attribute.
+   * Returns the value of the '<em><b>Id</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Id</em>' attribute isn't clear,
+   * If the meaning of the '<em>Id</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Id</em>' attribute.
-   * @see #setId(String)
+   * @return the value of the '<em>Id</em>' reference.
+   * @see #setId(TypeId)
    * @see net.certware.argument.language.l.LPackage#getTVar_Id()
    * @model
    * @generated
    */
-  String getId();
+  TypeId getId();
 
   /**
-   * Sets the value of the '{@link net.certware.argument.language.l.TVar#getId <em>Id</em>}' attribute.
+   * Sets the value of the '{@link net.certware.argument.language.l.TVar#getId <em>Id</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Id</em>' attribute.
+   * @param value the new value of the '<em>Id</em>' reference.
    * @see #getId()
    * @generated
    */
-  void setId(String value);
+  void setId(TypeId value);
 
 } // TVar

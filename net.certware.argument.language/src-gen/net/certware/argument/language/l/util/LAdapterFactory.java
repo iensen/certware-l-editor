@@ -150,6 +150,16 @@ public class LAdapterFactory extends AdapterFactoryImpl
         return createQuantifiedTermAdapter();
       }
       @Override
+      public Adapter caseUniversalQuantifiedTerm(UniversalQuantifiedTerm object)
+      {
+        return createUniversalQuantifiedTermAdapter();
+      }
+      @Override
+      public Adapter caseExistentialQuantifiedTerm(ExistentialQuantifiedTerm object)
+      {
+        return createExistentialQuantifiedTermAdapter();
+      }
+      @Override
       public Adapter caseTerm(Term object)
       {
         return createTermAdapter();
@@ -163,6 +173,11 @@ public class LAdapterFactory extends AdapterFactoryImpl
       public Adapter caseConstantDeclaration(ConstantDeclaration object)
       {
         return createConstantDeclarationAdapter();
+      }
+      @Override
+      public Adapter caseTypeId(TypeId object)
+      {
+        return createTypeIdAdapter();
       }
       @Override
       public Adapter caseTypeDeclaration(TypeDeclaration object)
@@ -577,6 +592,36 @@ public class LAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link net.certware.argument.language.l.UniversalQuantifiedTerm <em>Universal Quantified Term</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see net.certware.argument.language.l.UniversalQuantifiedTerm
+   * @generated
+   */
+  public Adapter createUniversalQuantifiedTermAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link net.certware.argument.language.l.ExistentialQuantifiedTerm <em>Existential Quantified Term</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see net.certware.argument.language.l.ExistentialQuantifiedTerm
+   * @generated
+   */
+  public Adapter createExistentialQuantifiedTermAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link net.certware.argument.language.l.Term <em>Term</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -617,6 +662,21 @@ public class LAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createConstantDeclarationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link net.certware.argument.language.l.TypeId <em>Type Id</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see net.certware.argument.language.l.TypeId
+   * @generated
+   */
+  public Adapter createTypeIdAdapter()
   {
     return null;
   }

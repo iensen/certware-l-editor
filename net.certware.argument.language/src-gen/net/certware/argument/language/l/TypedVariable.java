@@ -11,7 +11,7 @@ package net.certware.argument.language.l;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link net.certware.argument.language.l.TypedVariable#getType <em>Type</em>}</li>
+ *   <li>{@link net.certware.argument.language.l.TypedVariable#getName <em>Name</em>}</li>
  *   <li>{@link net.certware.argument.language.l.TypedVariable#getVar <em>Var</em>}</li>
  * </ul>
  * </p>
@@ -23,30 +23,30 @@ package net.certware.argument.language.l;
 public interface TypedVariable extends BasicTerm
 {
   /**
-   * Returns the value of the '<em><b>Type</b></em>' attribute.
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Type</em>' attribute isn't clear,
+   * If the meaning of the '<em>Name</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Type</em>' attribute.
-   * @see #setType(String)
-   * @see net.certware.argument.language.l.LPackage#getTypedVariable_Type()
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see net.certware.argument.language.l.LPackage#getTypedVariable_Name()
    * @model
    * @generated
    */
-  String getType();
+  String getName();
 
   /**
-   * Sets the value of the '{@link net.certware.argument.language.l.TypedVariable#getType <em>Type</em>}' attribute.
+   * Sets the value of the '{@link net.certware.argument.language.l.TypedVariable#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Type</em>' attribute.
-   * @see #getType()
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
    * @generated
    */
-  void setType(String value);
+  void setName(String value);
 
   /**
    * Returns the value of the '<em><b>Var</b></em>' containment reference.

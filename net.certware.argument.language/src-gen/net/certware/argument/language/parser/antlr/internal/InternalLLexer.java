@@ -685,11 +685,11 @@ public class InternalLLexer extends Lexer {
         try {
             int _type = RULE_LID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3471:10: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3471:12: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3554:10: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3554:12: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
             matchRange('a','z'); 
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3471:21: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3554:21: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop1:
             do {
                 int alt1=2;
@@ -738,11 +738,11 @@ public class InternalLLexer extends Lexer {
         try {
             int _type = RULE_UID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3473:10: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3473:12: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3556:10: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3556:12: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
             matchRange('A','Z'); 
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3473:21: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3556:21: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -791,10 +791,10 @@ public class InternalLLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3475:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3475:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3558:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3558:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3475:11: ( '^' )?
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3558:11: ( '^' )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -803,7 +803,7 @@ public class InternalLLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3475:11: '^'
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3558:11: '^'
                     {
                     match('^'); 
 
@@ -821,7 +821,7 @@ public class InternalLLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3475:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3558:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop4:
             do {
                 int alt4=2;
@@ -870,10 +870,10 @@ public class InternalLLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3477:10: ( ( '0' .. '9' )+ )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3477:12: ( '0' .. '9' )+
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3560:10: ( ( '0' .. '9' )+ )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3560:12: ( '0' .. '9' )+
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3477:12: ( '0' .. '9' )+
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3560:12: ( '0' .. '9' )+
             int cnt5=0;
             loop5:
             do {
@@ -887,7 +887,7 @@ public class InternalLLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3477:13: '0' .. '9'
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3560:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -919,10 +919,10 @@ public class InternalLLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3479:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3479:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3562:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3562:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3479:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3562:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -940,10 +940,10 @@ public class InternalLLexer extends Lexer {
             }
             switch (alt8) {
                 case 1 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3479:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3562:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3479:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3562:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop6:
                     do {
                         int alt6=3;
@@ -959,7 +959,7 @@ public class InternalLLexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3479:21: '\\\\' .
+                    	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3562:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -967,7 +967,7 @@ public class InternalLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3479:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3562:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -992,10 +992,10 @@ public class InternalLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3479:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3562:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3479:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3562:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop7:
                     do {
                         int alt7=3;
@@ -1011,7 +1011,7 @@ public class InternalLLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3479:54: '\\\\' .
+                    	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3562:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1019,7 +1019,7 @@ public class InternalLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3479:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3562:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1062,12 +1062,12 @@ public class InternalLLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3481:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3481:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3564:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3564:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3481:24: ( options {greedy=false; } : . )*
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3564:24: ( options {greedy=false; } : . )*
             loop9:
             do {
                 int alt9=2;
@@ -1092,7 +1092,7 @@ public class InternalLLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3481:52: .
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3564:52: .
             	    {
             	    matchAny(); 
 
@@ -1122,12 +1122,12 @@ public class InternalLLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3483:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3483:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3566:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3566:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3483:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3566:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop10:
             do {
                 int alt10=2;
@@ -1140,7 +1140,7 @@ public class InternalLLexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3483:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3566:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1160,7 +1160,7 @@ public class InternalLLexer extends Lexer {
                 }
             } while (true);
 
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3483:40: ( ( '\\r' )? '\\n' )?
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3566:40: ( ( '\\r' )? '\\n' )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1169,9 +1169,9 @@ public class InternalLLexer extends Lexer {
             }
             switch (alt12) {
                 case 1 :
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3483:41: ( '\\r' )? '\\n'
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3566:41: ( '\\r' )? '\\n'
                     {
-                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3483:41: ( '\\r' )?
+                    // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3566:41: ( '\\r' )?
                     int alt11=2;
                     int LA11_0 = input.LA(1);
 
@@ -1180,7 +1180,7 @@ public class InternalLLexer extends Lexer {
                     }
                     switch (alt11) {
                         case 1 :
-                            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3483:41: '\\r'
+                            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3566:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1212,10 +1212,10 @@ public class InternalLLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3485:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3485:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3568:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3568:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3485:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3568:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt13=0;
             loop13:
             do {
@@ -1269,8 +1269,8 @@ public class InternalLLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3487:16: ( . )
-            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3487:18: .
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3570:16: ( . )
+            // ../net.certware.argument.language/src-gen/net/certware/argument/language/parser/antlr/internal/InternalL.g:3570:18: .
             {
             matchAny(); 
 

@@ -57,8 +57,6 @@ public class LSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if(ruleCall.getRule() == grammarAccess.getLIDRule())
 			return getLIDToken(semanticObject, ruleCall, node);
-		else if(ruleCall.getRule() == grammarAccess.getQuantifierRule())
-			return getQuantifierToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
@@ -70,17 +68,6 @@ public class LSyntacticSequencer extends AbstractSyntacticSequencer {
 		if (node != null)
 			return getTokenText(node);
 		return "";
-	}
-	
-	/**
-	 * Quantifier:
-	 * 	'every' | 'some'
-	 * ;
-	 */
-	protected String getQuantifierToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "every";
 	}
 	
 	@Override

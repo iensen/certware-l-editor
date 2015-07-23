@@ -53,7 +53,7 @@ Variable:
 ;
 
 TypedVariable:
-	type=LID var=Variable	
+	name=LID var=Variable	
 ;
 
 // our version of a left-factored equivalent of the recursive grammar from the spec
@@ -137,12 +137,24 @@ GroundTerm:
 
 // 1.6 Quantified Terms, 1.14.1 Terms
 QuantifiedTerm:
-	Quantifier LID (Variable)?
+	// Quantifier LID (Variable)?  mrb changed to scope on type ID
+	// Quantifier id=[TypeId] (var=Variable)? // okay with Quantifier rule
+	// ('every' name=[TypeId]) | 
+	// ('some' name=[TVar])
+	UniversalQuantifiedTerm | ExistentialQuantifiedTerm
 ;
 
-Quantifier:
-	'every' | 'some'
+UniversalQuantifiedTerm:
+	'every' name=[TypeId|LID]
 ;
+
+ExistentialQuantifiedTerm:
+	'some' name=[TVar]
+;
+
+//Quantifier: // mrb removed for explicit scope disambiguation in QuantifiedTerm rule above
+//	'every' | 'some'
+//;
 
 // 1.7 Terms, 1.14.1 Terms
 Term:
@@ -156,7 +168,7 @@ Terms:
 
 // 1.14.2, 1.3 Constant Declaration
 ConstantDeclaration:
-	'const' id=LID 
+	'const' name=LID 
 	'=' 
 	// (cv=NumericConstant | iv=INT | av=ArithmeticTerm )
 	cv=GroundArithmeticTerm 
@@ -167,8 +179,13 @@ ConstantDeclaration:
 
 
 // 1.5 Type Declarations, 1.14.3 Type Declarations
+// mrb added type ID so we can use it in scoping rules
+TypeId:
+	name=LID
+;
+
 TypeDeclaration:
-	'type' id=LID '=' exp=SetExpression '.' 
+	'type' name=TypeId '=' exp=SetExpression '.' 
 ;
 
 Limit:
@@ -199,7 +216,8 @@ TVars:
 ;     
 
 TVar:
-	var=Variable 'in' id=LID
+	// var=Variable 'in' id=LID // mrb updated for scope additions
+	var=Variable 'in' id=[TypeId|LID]
 ;
 
 SetAddition returns SetExpression:

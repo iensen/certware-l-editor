@@ -11,7 +11,7 @@ package net.certware.argument.language.l;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link net.certware.argument.language.l.TypeDeclaration#getId <em>Id</em>}</li>
+ *   <li>{@link net.certware.argument.language.l.TypeDeclaration#getName <em>Name</em>}</li>
  *   <li>{@link net.certware.argument.language.l.TypeDeclaration#getExp <em>Exp</em>}</li>
  * </ul>
  * </p>
@@ -23,30 +23,30 @@ package net.certware.argument.language.l;
 public interface TypeDeclaration extends Statement
 {
   /**
-   * Returns the value of the '<em><b>Id</b></em>' attribute.
+   * Returns the value of the '<em><b>Name</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Id</em>' attribute isn't clear,
+   * If the meaning of the '<em>Name</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Id</em>' attribute.
-   * @see #setId(String)
-   * @see net.certware.argument.language.l.LPackage#getTypeDeclaration_Id()
-   * @model
+   * @return the value of the '<em>Name</em>' containment reference.
+   * @see #setName(TypeId)
+   * @see net.certware.argument.language.l.LPackage#getTypeDeclaration_Name()
+   * @model containment="true"
    * @generated
    */
-  String getId();
+  TypeId getName();
 
   /**
-   * Sets the value of the '{@link net.certware.argument.language.l.TypeDeclaration#getId <em>Id</em>}' attribute.
+   * Sets the value of the '{@link net.certware.argument.language.l.TypeDeclaration#getName <em>Name</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Id</em>' attribute.
-   * @see #getId()
+   * @param value the new value of the '<em>Name</em>' containment reference.
+   * @see #getName()
    * @generated
    */
-  void setId(String value);
+  void setName(TypeId value);
 
   /**
    * Returns the value of the '<em><b>Exp</b></em>' containment reference.

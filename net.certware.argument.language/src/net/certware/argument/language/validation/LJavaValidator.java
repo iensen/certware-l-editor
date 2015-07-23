@@ -11,8 +11,10 @@ import net.certware.argument.language.l.LPackage;
 import net.certware.argument.language.l.Program;
 import net.certware.argument.language.l.Range;
 import net.certware.argument.language.l.Rule;
+import net.certware.argument.language.l.Sentence;
 import net.certware.argument.language.l.TVar;
 import net.certware.argument.language.l.TypeDeclaration;
+import net.certware.argument.language.l.TypeId;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.EcoreUtil2;
@@ -51,12 +53,12 @@ public class LJavaValidator extends net.certware.argument.language.validation.Ab
 	
 	/**
 	 * Check type variable refers to defined type.
-	 * @param tvar
+	 * @param tvar typed variable
 	 * @category error if type variable refers to undefined type
 	 */
 	@Check public void checkTypeVariableRefersToDefinedType(TVar tvar) {
 		boolean found = false;
-		String id = tvar.getId();
+		String id = tvar.getId().getName();
 		if ( id.isEmpty() ) // premature test, bail out
 			return;
 
@@ -65,7 +67,9 @@ public class LJavaValidator extends net.certware.argument.language.validation.Ab
 				EcoreUtil2.getAllContentsOfType(program, TypeDeclaration.class);
 		
 		for ( TypeDeclaration td : typeDeclarations ) {
-			if ( td.getId().equals( id )) {
+			TypeId typeId = td.getName();
+			
+			if ( typeId.getName().equals(id)) {
 				found = true;
 				break;
 			}
@@ -88,6 +92,21 @@ public class LJavaValidator extends net.certware.argument.language.validation.Ab
 			if ( rule.eIsSet(LPackage.Literals.RULE__BODY) == false ) {
 				error(Messages.getString("LJavaValidator.3"), //$NON-NLS-1$
 						LPackage.Literals.RULE__BODY);
+			}
+		}
+	}
+	
+	/**
+	 * Check that rule RHS bodies ultimately are found to have LHS heads.
+	 * @param rule rule to check
+	 */
+	@Check public void checkRuleBodyCompletedWithHeads(Rule rule) {
+		//System.err.println("rule " + rule.getHead().toString());
+		if ( rule.eIsSet(LPackage.Literals.RULE__BODY) == true ) {
+			Sentence sentence = rule.getBody();
+			//System.err.println("rule body " + sentence.toString());
+			for ( EObject eo : sentence.eContents() ) {
+				//System.err.println("item " + eo);
 			}
 		}
 	}
