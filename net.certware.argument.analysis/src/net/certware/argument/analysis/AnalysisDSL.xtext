@@ -8,7 +8,7 @@ generate analysisDSL "http://www.certware.net/argument/analysis/AnalysisDSL"
 
 
 // first rule must be a parser rule
-// an output file consists of some number of lines followed by SAFISFIABLE or UNSATISFIABLE keyword
+// an output file consists of some number of lines followed by SATISFIABLE or UNSATISFIABLE keyword
 // we assume the output file is scanned as ASCII text but it need not be stored this way
 Output:
 	lines += Line+ (SATISFIABLE | UNSATISFIABLE)
