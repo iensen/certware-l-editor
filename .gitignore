@@ -10,6 +10,7 @@
 
 # Package Files #
 *.jar
+!sparc.jar
 *.war
 *.ear
 
